@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # 演算體驗
 
 請依照以下檔案中的步驟操作： *演算體驗* 圖表可確保呈現體驗所需的所有必要任務都以正確順序執行。
+
+>[!NOTE]
+>
+>若您已在「 」期間啟用「自動頁面載入請求」 [設定自動頁面載入請求步驟](/help/dev/patterns/initialize-sdk.md#automatic) 在 *初始化SDK* ，您可以略過此活動，除非您想要呼叫Adobe Target SDK來使用地區位置請求轉譯其他體驗。
 
 >[!TIP]
 >
@@ -90,7 +94,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.3：以人氣為基礎的條件 {#popularity}
 
-根據您網站上的專案整體人氣或使用者最喜愛或檢視次數最多的類別、品牌、型別等內的專案人氣提供建議。
+根據您的網站上專案的整體人氣或根據訪客最喜愛或檢視次數最多的類別、品牌、型別等內的專案人氣提供建議。
 
 +++檢視詳細資料
 
@@ -107,7 +111,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 **需要實體引數**
 
 * `entity.categoryId` 或「人氣」的「專案屬性」（如果條件是以目前或專案屬性為基礎）。
-* 所有網站中檢視次數最多/銷售最多的專案，均不得傳遞任何專案。
+* 所有網站中的「檢視次數最多/銷售最高」量度不需傳遞任何專案。
 
 **讀數**
 
@@ -168,7 +172,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.6：自訂條件 {#custom}
 
-根據您上傳的自訂檔案提出建議
+根據您上傳的自訂檔案提出建議。
 
 +++檢視詳細資料
 
@@ -222,7 +226,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 * [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您也可以使用建立產品摘要來完成此步驟。 [!DNL Target] 更新產品目錄的UI [!DNL Recommendations].
+您也可以透過建立完成此步驟 [產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} 使用 [!DNL Target] 更新產品目錄的UI [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.11：引發頁面載入請求 {#fire}
 
-此步驟會觸發 [!DNL Delivery API] 呼叫方式 `execute` > `pageLoad` 要求中的裝載。 此 `getOffers()` 方法擷取體驗和 `applyOffers()` 呈現頁面上的體驗。 呈現在中編寫的體驗需要pageLoad請求 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)。
+此步驟會觸發 [!DNL Delivery API] 呼叫方式 `execute` > `pageLoad` 要求中的裝載。 此 `getOffers()` 方法擷取體驗和 `applyOffers()` 呈現頁面上的體驗。 此 `pageLoad` 呈現在中編寫的體驗需要請求 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)。
 
 +++檢視詳細資料
 
