@@ -4,10 +4,10 @@ description: 檢視主機清單，協助您加入允許清單 [!DNL Adobe Target
 title: 如何加入允許清單 [!DNL Target] 邊緣節點？
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ Edge是按地理區域分配服務的架構，可確保請求內容的最終使�
 >
 >[!DNL Adobe Target] 基礎結構正在更新，想要加入允許清單位址的客戶必須使用這兩組IP。 若未這麼做，將會影響使用伺服器端或混合實作的客戶，這些實作中用於擷取體驗的Target API呼叫源自於設定為使用允許清單之防火牆後的網路內。
 >
->此更新將按照以下排程進行：
->
->* 5月22-26日：歐洲、中東和非洲(EMEA)區域
->* 5月22-26日：亞太(APAC)區域
->* 6月6-10日：美洲區域
+>全部Edge4 *x* 下表所列地址預計於2023年8月9日更新。
 
 ## 網路位址轉譯(NAT) IP位址 [!DNL Target] 邊緣
 
