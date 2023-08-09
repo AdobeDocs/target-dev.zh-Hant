@@ -4,9 +4,9 @@ description: 使用行動裝置預覽連結來為行動應用程式活動執行�
 title: 如何在中使用行動裝置預覽連結 [!DNL Target] 行動裝置？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 51%
    * **iOs**：如需為iOS設定URL配置的詳細資訊，請參閱 [為您的應用程式定義自訂URL配置](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} (位於Apple開發人員網站)。
    * **Android**：如需為Android設定URL配置的詳細資訊，請參閱 [建立應用程式內容的深層連結](https://developer.android.com/training/app-links/deep-linking){target=_blank} Android開發人員網站上的資訊。
 
-1. **設定 `collectLaunchInfo` API**
+1. **設定 `collectLaunchInfo` API （僅限i0S）**
 
    如需詳細資訊，請參閱 [視覺預覽](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} 在 *Adobe Target* 在 *[!DNL Adobe Experience Platform Mobile SDK]* 檔案。
 
