@@ -4,10 +4,10 @@ description: 使用行動裝置預覽連結來為行動應用程式活動執行�
 title: 如何在中使用行動裝置預覽連結 [!DNL Target] 行動裝置？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 57%
 
 ## 必要條件
 
-1. **使用支援的 SDK 版本:** 行動裝置預覽功能需要在您的對應應用程式中下載並安裝適當的 Adobe Mobile SDK 4.14 (或更新版本) 版本。
+1. **使用支援的SDK版本：** 行動裝置預覽功能需要您下載適當版本的Adobe Mobile SDK，並安裝在您對應的應用程式中。
 
    如需下載適當SDK的說明，請參閱 [目前SDK版本](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} 在 *[!DNL Adobe Experience Platform Mobile SDK]* 檔案。
 
