@@ -4,10 +4,10 @@ description: 瞭解如何 [!DNL Adobe Target] 遵守適用的資料隱私權法�
 title: Target如何處理隱私權問題，包括PII？
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: d9ac5bab3a09cf49b2178a62c06eebe733b9048d
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 47%
+source-wordcount: '865'
+ht-degree: 39%
 
 ---
 
@@ -38,6 +38,14 @@ Adobe已開發「設計的隱私權」設定，使用者可將其啟用以進行
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] 會收到完整IP位址並根據指定加以模糊化（如果設定為最後一個八位元或整個IP）。 [!DNL Target] 然後只會在目前工作階段期間將模糊化的IP位址保留在記憶體中。
+
+### 使用時資料流層級IP模糊化 [!DNL Adobe Experience Platform Web SDK]
+
+使用時 [!DNL Platform Web SDK] （23.4版或更新版本），資料流層級IP模糊化設定的優先順序高於中設定的任何IP模糊化選項。 [!DNL Target]. 例如，如果資料流層級IP模糊化選項設為 [!UICONTROL 完整] 和 [!DNL Target] IP模糊化選項設為 [!UICONTROL 最後一個八位元模糊化]， [!DNL Target] 接收完全模糊化的IP。 因為中的IP模糊化 [!DNL Target] 發生在地理位置查詢之前，資料流層級IP模糊化設定沒有影響。
+
+在資料流層級設定IP模糊化後，您的資料透過Edge Network，請求會進入 [!DNL Target] 和 [!DNL Adobe Audience Manager] (AAM)僅包含模糊化的IP，而任何以使用者端IP為基礎的邏輯都會受到資料流層級IP模糊化選項的影響。 中設定的任何IP模糊化 [!DNL Target] 或AAM套用至已模糊化的IP。
+
+如需詳細資訊，請參閱 [!UICONTROL IP模糊化] 在 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} 在 *[!DNL Adobe Experience Platfrom]Datastreams指南*.
 
 ## 地域劃分
 
