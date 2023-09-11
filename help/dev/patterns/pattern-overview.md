@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -25,16 +25,16 @@ ht-degree: 0%
 
 1. 適用於的使用者端SDK [!DNL Adobe Target] 和 [!DNL Experience Cloud ID Service]
 1. [!DNL Target Delivery API] 呼叫
-1. ECID贏取呼叫
+1. [!UICONTROL EXPERIENCE CLOUDID] (ECID)贏取呼叫
 1. 大量設定檔更新API和 [!DNL Customer Attributes] (CA)服務
 1. 設定檔資料擷取自客戶的資料來源至 [!DNL Target] 設定檔存放區
-1. 收集設定檔/行為資料，並決定要向一般使用者顯示的體驗
+1. 收集設定檔和行為資料，並決定要向訪客顯示的體驗
 1. 體驗在頁面上呈現
 1. at.js會呈現頁面上的體驗
 
-每個陣列都由不同的零件組成。 每個部分都對應至貴機構的關鍵實施需求 [!DNL Target] 實作。
+每個模式都包含不同零件，每個零件都對應至您的關鍵實作需求 [!DNL Target] 實作。
 
-本指南的個別頁面會說明每個零件。 例如， [[!DNL Recommendations] 使用at.js的實作模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) 包含下列頁面：
+本指南中會以個別主題說明每個部分。 例如， [[!DNL Recommendations] 使用at.js的實作模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) 包含下列主題：
 
 * 初始化SDK
 * 設定資料彙集
