@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ ht-degree: 0%
 
 每個陣列都由不同的零件組成。 每個部分都對應至貴機構的關鍵實施需求 [!DNL Target] 實作。
 
-本指南的個別頁面會詳細說明每個部分。 例如， [!DNL Target] 實施模式包含下列頁面：
+本指南的個別頁面會說明每個零件。 例如， [[!DNL Recommendations] 使用at.js的實作模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) 包含下列頁面：
 
 * 初始化SDK
-* 豐富設定檔
+* 設定資料彙集
 * 演算體驗
 * 通知 [!DNL Target]
 
