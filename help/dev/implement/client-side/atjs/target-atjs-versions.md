@@ -4,9 +4,9 @@ description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js J
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
+source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
 workflow-type: tm+mt
-source-wordcount: '4603'
+source-wordcount: '4635'
 ht-degree: 73%
 
 ---
@@ -25,7 +25,12 @@ ht-degree: 73%
 >
 >您應該升級至其中一個1的最新版本。*x* 或2。*x* 取得錯誤修正與安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
-中的標籤 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱 [擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *標籤總覽* 指南。
+中的標籤 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱 [擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *標籤總覽* 指南。6+
+
+## at.js 2.10.3 版 (2023 年 9 月 12 日)
+
+* 修正錯誤觸發的問題 `at-content-rendering-succeeded` 未轉譯任何選件時的自訂事件。 正確的事件， `at-content-rendering-no-offers`，現在已觸發。
+* 已新增 `eventToken` 和 `responseTokens` 至的錯誤物件 `at-content-rendering-failed` 自訂事件。
 
 ## at.js 版本 2.10.2 (2023 年 3 月 7 日)
 
@@ -300,7 +305,7 @@ at.js 1.6.1 版包含下列增強功能和修正:
 * 變更導致在重新導向頁面重新授權重新導向活動時，有例外情況。(TNT-30532)
 * 修正正確要求逾時無法自 getOffer() API 要求傳播的問題。(TNT-30498)
 * 修正 at.js 1.6.0 在使用檔案通訊協定時，無法儲存 Cookie 的問題。(TNT-30454)
-* 修正使用時，並非所有體驗都隨重新導向而傳送的問題 [!DNL Analytics for Target] (A4T)。 (TNT-30444)
+* 修正以下問題，使用時，並非所有體驗都隨重新導向傳送 [!DNL Analytics for Target] (A4T)。 (TNT-30444)
 * 修正造成頁面在「 」後面隱藏的問題。 [!DNL Target] 呼叫成功。 (TNT-30358)
 
 at.js 1.6.0 版包含下列增強功能和修正:
