@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -54,7 +54,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![載入訪客API SDK圖表](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![載入訪客API SDK圖表](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -90,7 +90,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![設定客戶ID](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![設定客戶ID](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -117,7 +117,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![設定自動頁面載入請求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![設定自動頁面載入請求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -146,7 +146,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![設定忽隱忽現的處理圖](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![設定忽隱忽現的處理圖](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -179,7 +179,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![資料對應圖表](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![資料對應圖表](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -399,7 +399,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![遠端資料對應圖表](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![遠端資料對應圖表](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -427,7 +427,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![載入Adobe Target Web SDK圖表](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![載入Adobe Target Web SDK圖表](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **必要條件**
 
