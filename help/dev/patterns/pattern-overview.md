@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ff9f626fcc8f4bfaa3305d6c8c8ba890c1b7e47f
+source-git-commit: 8707fb55d66cb7a28d311a03c749acb1a1d79cf8
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -21,53 +21,41 @@ ht-degree: 0%
 
 * [[!DNL Recommendations] 使用at.js的實作模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-## 為新模式提供建議
+## 建議新模式的構想或現有模式的修正
 
-此 [!DNL Target] 團隊計畫為各種架構、平台和整合建立實施模式。
+此 [!DNL Target] 團隊計畫為各種架構、平台和整合建立實施模式。 該團隊也歡迎改善現有模式的建議。
 
-若要建議新模式，請使用 **意見回饋選項** 功能說明。
+若要協助專案團隊建立新模式或改善現有模式，請使用 **意見回饋選項** 功能位於所有文章底部 *[!DNL Adobe Experience League]*.
 
-1. 捲動至本文底部，顯示意見選項強制回應視窗。
+1. 若要就新模式提供建議，請捲動至本文底部以顯示意見選項強制回應視窗。
+
+   或 
+
+   若要建議改善或更正現有模式，請捲動至適當文章的底部，以顯示「意見回饋選項」強制回應視窗。
 
    ![Experience League中的意見回饋選項模型](/help/dev/patterns/assets/feedback-options.png)
 
-1. 按一下 **[!UICONTROL 詳細的意見回饋選項]**，然後按一下 **[!UICONTROL 回報問題]**.
+   >[!TIP]
+   >
+   >您必須登入 `github.com` 在中開啟問題 [!DNL Experience League]. 如果您是第一次開啟問題，請檢閱貢獻准則與行為準則指示。
 
-   您必須登入 `github.com` 在中開啟問題 [!DNL Experience League]. 如果您是第一次開啟問題，請檢閱貢獻准則與行為準則指示。
+1. （視條件而定）若要建議新模式的構想或現有模式的改進，請按一下 **[!UICONTROL 詳細的意見回饋選項]**，然後按一下 **[!UICONTROL 回報問題]**.
 
-1. 提供意見回饋的標題，然後使用文字方塊來建議新模式。
+   1. 提供標題，然後在文字方塊中輸入註解。
 
-1. 按一下 **[!UICONTROL 提交新問題]** 完成後。
+   1. 按一下 **[!UICONTROL 提交新問題]** 完成後。
 
-此 [!DNL Target] 團隊可以使用此功能與您溝通，以收集其他資訊或取得進一步的說明（如有必要）。
+1. （視條件而定）若要編輯現有模式的文章，請按一下 **[!UICONTROL 建議編輯]**，然後按一下 **[!UICONTROL 編輯]** 圖示（鉛筆圖示）。
 
->[!NOTE]
->
->內部 [!DNL Adobe] 員工可使用 *的實作模式 [!DNL Adobe Target] 實施* wiki ，以取得如何貢獻設計模式的詳細資訊。 請遵循上方和 [!DNL Target] 團隊可提供wiki的連結。
+   1. 使用Markdown語法進行編輯。
 
-## 協助改善現有模式
+   1. 按一下 **[!UICONTROL 認可變更]** 完成後。
 
-若要建議改善或更正現有模式，請使用 **意見回饋選項** 中的適當文章底部功能 [!DNL Experience League].
-
-1. 捲動至適當文章的底部，以顯示意見選項強制回應視窗。
-
-   ![Experience League中的意見回饋選項模型](/help/dev/patterns/assets/feedback-options-2.png)
-
-1. 按一下 **[!UICONTROL 詳細的意見回饋選項]**，然後按一下 **[!UICONTROL 回報問題]**.
-
-   您必須登入 `github.com` 在中開啟問題 [!DNL Experience League]. 如果您是第一次開啟問題，請檢閱貢獻准則與行為準則指示。
-
-1. 提供意見回饋的標題，然後使用文字方塊來建議文章的改善或改正。
-
-1. （視條件而定）您也可以按一下 **[!UICONTROL 建議編輯]**，然後按一下「編輯」圖示（鉛筆圖示）以直接編輯頁面。
-
-1. 按一下 **[!UICONTROL 提交新問題]** 完成後。
-
-此 [!DNL Target] 然後團隊可以在發佈前檢閱您的編輯。
+此 [!DNL Target] 團隊可以檢閱您的評論或編輯內容，並使用此功能與您溝通，以收集其他資訊或取得進一步的說明（如有必要）。
 
 >[!NOTE]
 >
->內部 [!DNL Adobe] 員工可使用 *的實作模式 [!DNL Adobe Target] 實施* wiki，以取得如何編輯設計模式的詳細資訊。 請遵循上方和 [!DNL Target] 團隊可提供wiki的連結。
+>[!DNL Adobe] 員工可使用 *的實作模式 [!DNL Adobe Target] 實施* wiki ，以取得如何貢獻設計模式的詳細資訊。 請依照上述指示，要求連結及 [!DNL Target] 團隊可提供內部連結 [!DNL Adobe] Wiki。
 
 
 
