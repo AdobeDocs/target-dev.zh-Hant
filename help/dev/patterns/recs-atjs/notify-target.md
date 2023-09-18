@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 8fae7e18f555e6b549e0b9c486be73e3483dac86
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 ![通知Target](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## 引發 [!DNL Adobe Target] 追蹤API
+## 4.1：引發 [!DNL Adobe Target] 追蹤API
 
 此步驟可協助您確定所有必須傳送至的事件 [!DNL Target] 使用傳送 `trackEvent` 方法。
 
 +++查看詳細資料
 
-![Fire Adobe Target追蹤API圖表](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
+![Fire Adobe Target追蹤API圖表](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 您傳送訂單轉換屬性，如 *必要條件* 一節。 mbox的名稱並不重要，但轉換後會使用 `orderConfirmPage`.
 
