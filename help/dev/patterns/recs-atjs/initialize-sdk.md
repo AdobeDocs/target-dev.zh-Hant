@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
+source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1790'
 ht-degree: 8%
 
 ---
@@ -179,7 +179,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![資料對應圖表](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
+![資料對應圖表](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -399,7 +399,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![遠端資料對應圖表](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
+![遠端資料對應圖表](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **必要條件**
 
@@ -427,7 +427,7 @@ ht-degree: 8%
 
 +++查看詳細資料
 
-![載入Adobe Target Web SDK圖表](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
+![載入Adobe Target at.js圖表](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **必要條件**
 
