@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ ht-degree: 7%
 
 at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才有意義： [!UICONTROL 自動頁面載入要求] 已啟用。 此選項會隱藏整個HTML內文，同時從擷取體驗 [!DNL Target]. 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
 
-下圖中的步驟編號與下列區段相對應。
+>[!NOTE]
+>
+>下圖中的步驟編號與下列區段相對應。 步驟編號沒有特定順序，也不會反映中採取的步驟順序。 [!DNL Target] UI。
 
 ![演算體驗圖表](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
