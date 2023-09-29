@@ -4,11 +4,9 @@ description: 請確定轉譯體驗所需的所有步驟皆以正確順序執行�
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.1：促銷活動 {#promotion}
 
-新增提示的專案並控制其在您的Target Recommendations中的放置位置 [設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+透過選擇中的前端或後端促銷活動，新增促銷專案並控制其在建議設計中的放置位置 [!DNL Target] UI。
 
 +++查看詳細資料
 
@@ -65,6 +63,10 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 **需要實體引數**
 
 * 使用「依屬性促銷」選項時，必須傳遞促銷活動中的專案屬性。
+
+**讀數**
+
+* [新增促銷活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 +++
 
 [返回此頁面頂端的圖表。](#diagram)
+
+繼續進行步驟4： [通知Target](/help/dev/patterns/recs-atjs/notify-target.md).

@@ -4,11 +4,9 @@ description: 確定所有需要追蹤的事件 [!DNL Target] 會使用trackEvent
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ ht-degree: 1%
    * `productPurchaseId`：隨訂單購買的產品ID。 請使用逗號分隔多個產品。
    * `orderTotal`：購買的訂單總計。
    * `orderId`：購買的訂單ID。
+
+  下圖顯示 [規則 [!DNL tags] 在 [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} 應該只在 [!UICONTROL 確認] 頁面。
+
+  ![動作設定頁面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * 如果您正在追蹤購物車新增的事件，請傳送 `cartIds` 作為引數。 可以傳遞產品ID的逗號分隔清單 `cardIds`.
 

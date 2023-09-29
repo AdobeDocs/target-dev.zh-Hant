@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target 開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 54%
@@ -206,7 +206,7 @@ ht-degree: 54%
       + [模型API](/help/dev/administer/models-api/models-api-overview.md)
    + [ADOBE ADMIN CONSOLE API](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
    + [Adobe Experience Platform Edge Network伺服器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
-+ 實作模式 {#implementation-patterns} {#hidden}
++ 實作模式 {#implementation-patterns}
    + [實作模式概觀](/help/dev/patterns/pattern-overview.md)
    + 使用at.js的Recommendations實作模式 {#atjs}
       + [使用at.js的Recommendations實作模式概覽](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
