@@ -3,10 +3,10 @@ title: 使用create方法初始化Java SDK
 description: 瞭解如何使用create方法初始化Java SDK並例項化 [!UICONTROL TargetClient] 以呼叫 [!DNL Adobe Target] 用於實驗與個人化體驗。
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 18%
+source-wordcount: '462'
+ht-degree: 17%
 
 ---
 
@@ -44,6 +44,9 @@ ClientConfigBuilder ClientConfig.builder()
 | socketTimeout | 數字 | 無 | 10000 | 所有請求的通訊端逾時（以毫秒為單位） |
 | maxConnectionsPerHost | 數字 | 無 | 100 | 每個專案的最大連線數 [!DNL Target] 主機 |
 | maxConnectionsTotal | 數字 | 無 | 200 | 最大連線數（包含全部） [!DNL Target] 主機 |
+| connectionTtlMs | 數字 | 無 | -1 | 總存留時間(TTL)定義持續連線的最大存留時間（以毫秒為單位）。 依預設，連線將無限期地保持連線 |
+| idleConnectionValidationMs | 數字 | 無 | 1000 | 持續連線在重複使用之前重新驗證的非使用時間（毫秒） |
+| evictIdleConnectionsAfterSecs | 數字 | 無 | 20 | 從連線集區收回閒置連線的時間（秒） |
 | enableRetries | 布林值 | 無 | true | 通訊端逾時的自動重試（最多4次） |
 | logRequests | 布林值 | 無 | false | 記錄 [!DNL Target] 偵錯中的要求與回應 |
 | Logrequestatus | 布林值 | 無 | false | 記錄 [!DNL Target] 回應時間、狀態和URL |
