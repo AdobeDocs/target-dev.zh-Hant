@@ -4,9 +4,9 @@ description: 瞭解如何使用實作模式
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 * [[!DNL Recommendations] 使用at.js的實作模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-這些實施模式旨在著重做什麼、何時做，以及應在何處做，而非如何做。 詳細的流程圖表可協助您瞭解作業順序，而相關檔案的連結會提供內容說明和逐步指示。
+這些實作模式著重於要做什麼、何時做，以及應在何處做。 詳細的流程圖表可協助您瞭解作業順序，而相關檔案的連結會提供內容說明和逐步指示。
 
 ## 建議新模式的構想或現有模式的修正
 
