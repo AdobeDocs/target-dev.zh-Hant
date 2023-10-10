@@ -4,9 +4,9 @@ description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js J
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
+source-git-commit: 45b5c44370476f27bba7077d5379d7742e87a90a
 workflow-type: tm+mt
-source-wordcount: '4635'
+source-wordcount: '4662'
 ht-degree: 73%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 73%
 >您應該升級至其中一個1的最新版本。*x* 或2。*x* 取得錯誤修正與安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
 中的標籤 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱 [擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *標籤總覽* 指南。6+
+
+## at.js 2.11.0 版 (2023 年 10 月 10 日)
+
+* 新增設定自訂的支援 [!DNL Adobe Experience Platform] (AEP) `sandboxId` 和 `sandboxName` 在 `targetGlobalSettings`，此資訊會傳遞至上的傳送API `getOffer/getOffers` 呼叫。
+* 鏈結的陰影DOM修正 `:eq()` 在選取器中。
 
 ## at.js 2.10.3 版 (2023 年 9 月 12 日)
 
