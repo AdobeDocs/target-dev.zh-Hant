@@ -4,10 +4,10 @@ description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js J
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: eb82f6a0d0165d73c1c40917c96e09c8bdddf647
+source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 73%
+source-wordcount: '4697'
+ht-degree: 72%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 73%
 ## at.js 2.11.2 版 (2023 年 10 月 26 日)
 
 * 修正自訂事件所傳送的回應Token不一致的問題。
+
+## at.js 2.11.1 版 (2023 年 10 月 13 日)
+
+* 修正了在執行at.js的頁面處於怪異模式時，造成無法攔截錯誤的問題。
 
 ## at.js 2.11.0 版 (2023 年 10 月 10 日)
 
