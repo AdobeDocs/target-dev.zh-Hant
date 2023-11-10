@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
    * *api_charter* 在此範例中列為位置名稱
    * 會指定entity.id，因為此推薦是根據內容相似度，而內容相似度需要傳遞目前的專案索引鍵至Target。
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-請記得正確設定查詢引數。 例如，請務必指定 `{{CLIENT_CODE}}` 視需要。 &lt;!— Q：在更新的呼叫語法中，entity.id會列為profileParameter，而不是像舊版一樣列為mboxParameter。 ---> &lt;! — 問：舊影像 ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) 舊的隨附文字： 「請注意，此建議是根據內容相似產品，以及透過mboxParameters傳送的entity.id。」 —>
+請記得正確設定查詢引數。 例如，請務必指定 `{{CLIENT_CODE}}` 視需要。 &lt;!— Q：在更新的呼叫語法中，entity.id會列為profileParameter，而非mboxParameter （與舊版相同）。 ---> &lt;! — 問：舊影像 ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) 舊的隨附文字： 「請注意，此建議是根據內容相似產品，以及透過mboxParameters傳送的entity.id。」 —>
      ![client-code3](assets/client-code3.png)
 1. 傳送要求。 這會針對以下專案執行： *api_charter* 位置，已在上面執行有效建議，並使用您的JSON設計定義，這將輸出建議實體清單。
 1. 根據JSON設計接收回應。
@@ -97,22 +97,22 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
 
 大部分情況下，建議會在Adobe Target UI中設定，然後透過Target API使用或存取，原因如以上各節所述。 這種UI-API協調很常見。 不過，有時使用者可能想要透過API執行所有動作，包括設定以及結果的使用。 雖然不太常見，但使用者完全可以設定、執行、 *和* 完全使用API來利用建議的結果。
 
-我們在 [較早的區段](manage-catalog.md) 如何管理Adobe Target Recommendations實體並在伺服器端傳送。 同樣地， [Adobe Developer Console](https://developer.adobe.com/console/home) 可讓您管理條件、促銷活動、集合和設計範本，而無須登入Adobe Target。 您可能會找到所有Recommendations API的完整清單 [此處](http://developers.adobetarget.com/api/recommendations/)，以下提供摘要以供參考。
+我們在 [較早的區段](manage-catalog.md) 如何管理Adobe Target Recommendations實體並在伺服器端傳送。 同樣地， [Adobe Developer Console](https://developer.adobe.com/console/home) 可讓您管理條件、促銷活動、集合和設計範本，而無須登入Adobe Target。 您可能會找到所有Recommendations API的完整清單 [此處](https://developer.adobe.com/target/administer/recommendations-api/)，以下提供摘要以供參考。
 
 | 資源 | 詳細資料 |
 | --- | --- |
-| [集合](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | 清單、建立、取得、編輯和刪除集合。 |
-| [條件](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | 列出並取得條件。 |
-| [設計](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | 列出、建立、取得、編輯、刪除及驗證設計。 |
-| [實體](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | 儲存、刪除和取得實體。 |
-| [促銷活動](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | 列出、建立、取得、編輯和刪除促銷活動。 |
-| [類別條件](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | 清單、建立、取得、編輯和刪除類別條件。 |
-| [自訂條件](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | 列出、建立、取得、編輯和刪除自訂條件。 |
-| [專案條件](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | 列出、建立、取得、編輯和刪除專案條件。 |
-| [人氣條件](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | 列出、建立、取得、編輯和刪除熱門程度條件。 |
-| [設定檔屬性條件](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | 列出、建立、取得、編輯和刪除設定檔屬性條件。 |
-| [最近條件](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | 列出、建立、取得、編輯和刪除最近使用的條件。 |
-| [序列條件](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | 清單、建立、取得、編輯和刪除序列條件。 |
+| [集合](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | 清單、建立、取得、編輯和刪除集合。 |
+| [條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | 列出並取得條件。 |
+| [設計](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | 列出、建立、取得、編輯、刪除及驗證設計。 |
+| [實體](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | 儲存、刪除和取得實體。 |
+| [促銷活動](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | 列出、建立、取得、編輯和刪除促銷活動。 |
+| [類別條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | 清單、建立、取得、編輯和刪除類別條件。 |
+| [自訂條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | 列出、建立、取得、編輯和刪除自訂條件。 |
+| [專案條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | 列出、建立、取得、編輯和刪除專案條件。 |
+| [人氣條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | 列出、建立、取得、編輯和刪除熱門程度條件。 |
+| [設定檔屬性條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | 列出、建立、取得、編輯和刪除設定檔屬性條件。 |
+| [最近條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | 列出、建立、取得、編輯和刪除最近使用的條件。 |
+| [序列條件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | 清單、建立、取得、編輯和刪除序列條件。 |
 
 ## 參考檔案
 

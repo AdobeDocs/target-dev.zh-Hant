@@ -5,9 +5,9 @@ description: 如何實作和管理  [!DNL Adobe Target]  並使用其 API 和 SD
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 1d834edf4da94614e3a4be665ebd97399439ec98
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '481'
 ht-degree: 12%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 12%
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：擷取 [!UICONTROL A/B測試] 和 [!UICONTROL Automated Personalization] 活動報表資料。
 
-[**[!DNL Target Recommendations API]**](http://developers.adobetarget.com/api/recommendations/)：使用 [!DNL Target Recommendations] API。
+[**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/)：使用 [!DNL Target Recommendations] API。
 
 [**[!DNL Target Models API]**](administer/models-api/models-api-overview.md)：管理封鎖清單以定義中使用的功能 [!DNL Target] 機器學習模型。
 
