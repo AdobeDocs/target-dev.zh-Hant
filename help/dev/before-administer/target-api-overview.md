@@ -3,9 +3,9 @@ title: Adobe Target API概觀
 description: 不同Adobe Target API的概觀，包括傳送API、報表API、管理員API、設定檔API、建議API，以及Postman集合的連結。
 exl-id: bf886103-36af-4061-b8be-2fe645f45ff3
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Adobe Target API可依型別分組：管理員、設定檔、傳送和報告。
 
 | API型別 | 讓您能夠執行的動作 | 下載連 | 其他實用連結 |
 | --- | --- | --- |--- |
-| [管理](../administer/admin-api/admin-api-overview-new.md) | 建立、修改和刪除活動、對象、選件和其他物件(包括Recommendations實體、條件、設計等)。 Recommendations API是一種Admin API。) | <UL><li>[Target管理員API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postman集合](https://developers.adobetarget.com/api/recommendations/#section/Postman)</li></UL> | [使用Recommendations API](../before-administer/recs-api/overview.md) |
+| [管理](../administer/admin-api/admin-api-overview-new.md) | 建立、修改和刪除活動、對象、選件和其他物件(包括Recommendations實體、條件、設計等)。 Recommendations API是一種Admin API。) | <UL><li>[Target管理員API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postman集合](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [使用Recommendations API](../before-administer/recs-api/overview.md) |
 | 個人資料 | 擷取及修改儲存在Adobe Target中的使用者設定檔。 | [Target設定檔API Postman集合](https://developers.adobetarget.com/api/#profiles) |  |
 | [傳送](../implement/delivery-api/overview.md) | 從Target擷取最佳化和個人化的內容，以傳送給一般使用者。 | [Target傳送API Postman集合](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
 | [報告](../administer/admin-api/admin-api-overview-new.md) | 匯出活動結果和其他報告結果。 | 報告API包含在 [Target管理員API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection). |  |

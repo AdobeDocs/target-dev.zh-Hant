@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 同時確保您符合 [使用Recommendations API的需求](/help/dev/before-administer/recs-api/overview.md#prerequisites)，您已瞭解如何 [產生存取權杖](/help/dev/before-administer/configure-authentication.md) 使用JWT驗證流程以使用 [!DNL Adobe Target] 管理API (位於 [Adobe Developer Console](https://developer.adobe.com/console/home).
 
-您現在可以使用 [RECOMMENDATIONS API](https://developers.adobetarget.com/api/recommendations/) 新增、更新或刪除建議目錄中的專案。 與其他Adobe Target Admin API一樣，Recommendations API需要驗證。
+您現在可以使用 [RECOMMENDATIONS API](https://developer.adobe.com/target/administer/recommendations-api/) 新增、更新或刪除建議目錄中的專案。 與其他Adobe Target Admin API一樣，Recommendations API需要驗證。
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ ht-degree: 2%
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-繼續進行之前，請先取得 [Recommendations Postman集合](https://developers.adobetarget.com/api/recommendations/#section/Postman).
+繼續進行之前，請先取得 [Recommendations Postman集合](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## 使用儲存實體API建立和更新專案
 
-若要使用API （而非CSV產品摘要或產品頁面上引發的Target請求）填入您的Recommendations產品資料庫，請使用 [儲存實體API](https://developers.adobetarget.com/api/recommendations/#operation/saveEntities). 此請求會在單一Target環境中新增或更新專案。 語法為：
+若要使用API （而非CSV產品摘要或產品頁面上引發的Target請求）填入您的Recommendations產品資料庫，請使用 [儲存實體API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). 此請求會在單一Target環境中新增或更新專案。 語法為：
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -124,7 +124,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 ## 使用取得實體API取得專案詳細資料
 
-若要擷取現有專案的詳細資訊，請使用 [取得實體API](https://developers.adobetarget.com/api/recommendations/#operation/getEntity). 語法為：
+若要擷取現有專案的詳細資訊，請使用 [取得實體API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity). 語法為：
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
@@ -163,7 +163,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
 ## 使用Delete Entities API刪除專案
 
-若要從目錄中移除專案，請使用 [刪除實體API](https://developers.adobetarget.com/api/recommendations/#operation/deleteEntities). 語法為：
+若要從目錄中移除專案，請使用 [刪除實體API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities). 語法為：
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]

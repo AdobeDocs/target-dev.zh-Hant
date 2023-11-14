@@ -4,9 +4,9 @@ description: 瞭解如何實作 [!UICONTROL Recommendations] 中的活動 [!DNL 
 title: 如何實作 [!UICONTROL Recommendations] 活動？
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 29%
 | 方法 | 內容 | 使用時機 | 其他資訊 |
 | --- | --- | --- | --- |
 | 目錄摘要 | 排程每天上傳和擷取摘要(CSV、Google產品XML或Analytics產品分類)。 | 用於一次傳送多個專案的相關資訊。 用於傳送不常變更的資訊。 | 另請參閱 [動態消息](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| 實體API | 呼叫API以傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱 [實體API開發人員檔案](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| 實體API | 呼叫API以傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱 [實體API開發人員檔案](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | 傳遞頁面上的更新 | 在頁面上使用JavaScript或使用傳送API，傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 另請參閱 [專案檢視/產品頁面](#item-views-or-product-pages) 底下。 |
 
 大部分客戶至少應實作一個摘要。 然後，您可以選擇使用Entities API或頁面上的方法，以經常變更的屬性或專案更新來補充您的摘要。

@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 3%
+source-wordcount: '339'
+ht-degree: 2%
 
 ---
 
@@ -47,4 +47,4 @@ Target管理員API需要 [Adobe驗證設定](../configure-authentication.md). �
 | 資源 | 詳細資料 |
 | --- | --- |
 | Postman | 取得 [Postman應用程式](https://www.postman.com/downloads/) 適用於您的作業系統。 Postman basic可免費建立帳戶。 雖然在一般情況下使用Adobe Target API不需要使用，但Postman可簡化API工作流程，而Adobe Target提供多個Postman集合來協助執行其API並瞭解其運作方式。 本指南的其餘部分假設您具備Postman的工作知識。 如需協助，請參考 [Postman檔案](https://learning.getpostman.com/). |
-| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<UL><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developers.adobetarget.com/api/recommendations/)</li></UL> |
+| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<UL><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

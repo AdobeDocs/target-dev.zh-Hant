@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 建立自訂條件
 
-若要使用建立自訂條件 [建立自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/createCriteriaCustom)，語法為：
+若要使用建立自訂條件 [建立自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)，語法為：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. 新增您的 **內文** 作為 **原始** 定義自訂條件CSV檔案位置的JSON。 使用中提供的範例 [建立自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom) 檔案作為範本，提供您的 `environmentId` 和其他值。 在此範例中，我們使用LAST_PURCHASED作為索引鍵。
+1. 新增您的 **內文** 作為 **原始** 定義自訂條件CSV檔案位置的JSON。 使用中提供的範例 [建立自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) 檔案作為範本，提供您的 `environmentId` 和其他值。 在此範例中，我們使用LAST_PURCHASED作為索引鍵。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ## 清單自訂條件
 
-若要擷取所有自訂條件的清單及各條件的詳細資訊，請使用 [清單自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom). 語法為：
+若要擷取所有自訂條件的清單及各條件的詳細資訊，請使用 [清單自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). 語法為：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 編輯自訂條件
 
-若要變更自訂條件定義的詳細資訊，請使用 [編輯自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/updateCriteriaCustom). 語法為：
+若要變更自訂條件定義的詳細資訊，請使用 [編輯自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). 語法為：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 
 ## 取得自訂條件
 
-若要檢視特定自訂條件的自訂條件詳細資料，請使用 [取得自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/getCriteriaCustom). 語法為：
+若要檢視特定自訂條件的自訂條件詳細資料，請使用 [取得自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). 語法為：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 ## 刪除自訂條件
 
-使用先前所述的條件ID，使用 [刪除自訂條件API](https://developers.adobetarget.com/api/recommendations/#operation/deleteCriteriaCustom). 語法為：
+使用先前所述的條件ID，使用 [刪除自訂條件API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). 語法為：
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

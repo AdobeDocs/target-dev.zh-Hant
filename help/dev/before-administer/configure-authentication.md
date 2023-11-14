@@ -3,9 +3,9 @@ title: 如何設定驗證 [!DNL Adobe Target] API
 description: 如何產生與成功互動所需的驗證權杖 [!DNL Adobe Target] API？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 | 資源 | 詳細資料 |
 | --- | --- |
 | Postman | 為了成功完成這些步驟，請取得 [Postman應用程式](https://www.postman.com/downloads/) 適用於您的作業系統。 Postman basic可免費建立帳戶。 雖然並非必要專案才能使用 [!DNL Adobe Target] API一般而言，Postman可讓API工作流程更容易，並且 [!DNL Adobe Target] 提供多個Postman集合，以協助執行其API並瞭解其運作方式。 本指南的其餘部分假設您具備Postman的工作知識。 如需協助，請參閱 [Postman檔案](https://learning.getpostman.com/). |
-| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## 建立Adobe I/O專案
 
