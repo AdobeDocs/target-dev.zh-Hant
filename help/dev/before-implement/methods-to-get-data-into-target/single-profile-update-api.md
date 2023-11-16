@@ -4,9 +4,9 @@ description: 將資料匯入 [!DNL Target] 使用單一設定檔更新API。
 title: 如何將資料帶入 [!DNL Target] 使用單一設定檔更新API？
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '204'
 ht-degree: 35%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 35%
 
 只更新設定檔。無法為潛在使用者建立設定檔 [!DNL Target] 尚未檢視。
 
-更新通常在1小時內發生，但可能需要長達24小時的時間才會反映。
+更新通常在一小時內發生，但可能需要長達24小時的時間才會反映。
 
 ## 程式碼範例
 

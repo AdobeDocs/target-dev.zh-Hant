@@ -4,10 +4,10 @@ description: 將資料匯入 [!DNL Target] 使用大量設定檔更新API。
 title: 如何將資料帶入 [!DNL Target] 是否要使用大量設定檔更新API？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 60%
+source-wordcount: '404'
+ht-degree: 57%
 
 ---
 
@@ -41,6 +41,8 @@ CRM 或其他內部系統中儲存關於訪客的實用資料 (您希望持續�
 ## 注意事項
 
 批次檔的大小必須小於 50 MB。此外，每次上傳的總列數不得超過 500,000 列。
+
+更新通常在一小時內發生，但可能需要長達24小時的時間才會反映
 
 在 24 小時期間內，不限制後續批次中可上傳的列數。不過，在上班時間可以節流汲取程序，以確保其他程序的執行效率。
 
