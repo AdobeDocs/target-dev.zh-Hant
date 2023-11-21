@@ -4,9 +4,9 @@ description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js J
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
+source-git-commit: ccb87e1217b754b2d496308da35998882cbe2fb1
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4712'
 ht-degree: 72%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 72%
 >您應該升級至其中一個1的最新版本。*x* 或2。*x* 取得錯誤修正與安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
 中的標籤 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱 [擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *標籤總覽* 指南。6+
+
+## at.js 2.11.3版（2023年11月21日）
+
+* 修正無法傳送回應權杖的問題 `at-content-rendering-failed` 事件。
 
 ## at.js 2.11.2 版 (2023 年 10 月 26 日)
 
