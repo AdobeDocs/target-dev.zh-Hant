@@ -4,7 +4,7 @@ description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js J
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: ccb87e1217b754b2d496308da35998882cbe2fb1
+source-git-commit: 09ecaa3be954fe5a002e09a422ceeb7a4ed0750a
 workflow-type: tm+mt
 source-wordcount: '4712'
 ht-degree: 72%
