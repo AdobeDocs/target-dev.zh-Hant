@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target 開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 54%
+ht-degree: 55%
 
 ---
 
@@ -32,8 +32,8 @@ ht-degree: 54%
       + [頁面中設定檔屬性](before-implement/methods-to-get-data-into-target/in-page-profile-attributes.md)
       + [指令碼設定檔屬性](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
       + [資料提供者](before-implement/methods-to-get-data-into-target/data-providers.md)
-      + [大量設定檔更新 API](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
-      + [單一設定檔更新 API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
+      + [大量設定檔更新API](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
+      + [單一設定檔更新API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [客戶屬性](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [設定檔 API 設定](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
    + [Target 安全性概覽](before-implement/target-security-overview.md)
@@ -209,10 +209,10 @@ ht-degree: 54%
 + 實作模式 {#implementation-patterns}
    + [實作模式概觀](/help/dev/patterns/pattern-overview.md)
    + 使用at.js的Recommendations實作模式 {#atjs}
-      + [使用at.js的Recommendations實作模式概覽](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
-      + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-      + [設定資料彙集](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [演算體驗](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [使用 at.js 的 Recommendations 實作模式概觀](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [初始化 SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [設定資料收集](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [呈現體驗](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [通知Target](/help/dev/patterns/recs-atjs/notify-target.md)
 
 
