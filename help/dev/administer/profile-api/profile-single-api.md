@@ -3,9 +3,9 @@ title: Adobe Target單一設定檔更新API
 description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 單一設定檔更新API] 將單一訪客的設定檔資料傳送至 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: dcff5d2eb8740420a9f9cf488474c3bca1628567
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '386'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 4%
 * 更新通常在一小時內發生，但可能需要長達24小時的時間才會反映。
 
   如果您必須傳送更多更新，或需要在較短的時間範圍內處理更新，請考慮透過使用者端更新（偏好設定）或透過 [!DNL Adobe Target] 伺服器端 [傳送API](/help/dev/implement/delivery-api/overview.md).
+
+* 此 [!UICONTROL 單一設定檔更新API] 是伺服器對伺服器API，並非設計用於網頁中。 若要從您的網頁更新訪客設定檔，您可以使用 [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) 函式或 [傳送API](/help/dev/implement/delivery-api/overview.md).
 
 ## 格式
 
