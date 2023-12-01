@@ -4,10 +4,10 @@ description: 將資料匯入 [!DNL Target] 使用單一設定檔更新API。
 title: 如何將資料帶入 [!DNL Target] 使用 [!UICONTROL 單一設定檔更新API]？
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 此 [!UICONTROL 單一設定檔更新API] 和通常用於必須針對在尚未實作的管道中發生的交易進行更新時 [!DNL Target]. 例如，您想要更新執行某些離線動作之單一訪客的設定檔。 動作包括聯絡客服中心、提供貸款、在商店中使用忠誠卡、存取資訊站等。
 
-如需詳細資訊，請參閱：
+## 資源:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

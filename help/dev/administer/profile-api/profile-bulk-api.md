@@ -3,9 +3,9 @@ title: Adobe Target大量設定檔更新API
 description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 大量設定檔更新API] 將多位訪客的設定檔資料傳送至 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -24,6 +24,11 @@ ht-degree: 9%
 >[!NOTE]
 >
 >的第2版(v2) [!UICONTROL 大量設定檔更新API] 是目前版本。 不過， [!DNL Target] 仍支援版本1 (v1)。
+
+## 大量設定檔更新API的優點
+
+* 設定檔屬性的數量不限。
+* 透過網站傳送的設定檔屬性可以透過API更新，反之亦然。
 
 ## 注意事項
 
