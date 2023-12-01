@@ -5,10 +5,10 @@ description: 如何實作和管理  [!DNL Adobe Target]  並使用其 API 和 SD
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 12%
+source-wordcount: '477'
+ht-degree: 13%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 12%
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md)：使用 [!DNL Adobe Target] 管理API以管理屬性、活動、受眾、選件、屬性、報表、mbox、主機、環境等。
 
-[**[!DNL Target Profile API]**](https://developers.adobetarget.com/api/#profiles)：擷取 [!DNL Adobe Target] 使用者設定檔資訊。
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md)：擷取 [!DNL Adobe Target] 使用者設定檔資訊。
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：擷取 [!UICONTROL A/B測試] 和 [!UICONTROL Automated Personalization] 活動報表資料。
 
