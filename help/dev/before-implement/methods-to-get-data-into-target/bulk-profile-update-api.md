@@ -4,10 +4,10 @@ description: 將資料匯入 [!DNL Target] 使用 [!UICONTROL 大量設定檔更
 title: 如何將資料帶入 [!DNL Target] 使用 [!UICONTROL 大量設定檔更新API]？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 4%
+source-wordcount: '286'
+ht-degree: 5%
 
 ---
 
@@ -17,9 +17,11 @@ ht-degree: 4%
 
 使用 [!UICONTROL 大量設定檔更新API]，您可以方便的以設定檔引數的形式傳送詳細的訪客設定檔資料給許多使用者 [!DNL Target] 來自任何外部來源。 外部來源可能包括客戶關係管理(CRM)或銷售點(POS)系統，這些通常無法在網頁上使用。
 
+對比 [!UICONTROL 大量設定檔更新API] 使用 [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md).
+
 ## [!UICONTROL 客戶屬性] 與 [!UICONTROL 大量設定檔更新API]
 
-此選項類似於 [!UICONTROL 客戶屬性] 但有一些差異：
+此選項類似於 [[!UICONTROL 客戶屬性]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md) 但有一些差異：
 
 * [!UICONTROL 客戶屬性] 使用FTP上傳。此 [!UICONTROL 目標大量設定檔更新API] 使用HTTPPOSTAPI。
 * [!UICONTROL 客戶屬性] 資料可與以下專案共用： [!DNL Analytics]. 此 [!UICONTROL 大量設定檔更新] 只能用於 [!DNL Target].
@@ -31,6 +33,8 @@ ht-degree: 4%
 * 您無法在 `mbox3rdPartyID` 中傳送下列字元: 加號 (+) 和正斜線 (/)。
 
 ## 資源
+
+如需詳細資訊，請參閱：
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
