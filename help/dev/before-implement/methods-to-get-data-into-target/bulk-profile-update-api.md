@@ -4,10 +4,10 @@ description: 將資料匯入 [!DNL Target] 使用 [!UICONTROL 大量設定檔更
 title: 如何將資料帶入 [!DNL Target] 使用 [!UICONTROL 大量設定檔更新API]？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 30%
+source-wordcount: '421'
+ht-degree: 23%
 
 ---
 
@@ -44,12 +44,10 @@ ht-degree: 30%
 * 批次檔的大小必須小於 50 MB。此外，每次上傳的總列數不得超過 500,000 列。
 * 更新通常在一小時內發生，但可能需要長達24小時的時間才會反映。
 * 您可以上傳後續批次中超過24小時期間的一或多列數量沒有限制。 不過，在上班時間可以節流汲取程序，以確保其他程序的執行效率。
-* 對相同的 採用連續 [V2 批次更新呼叫](https://developers.adobetarget.com/api/#updating-profiles)`thirdPartyIds`，且其中不需使用 mbox 呼叫，會覆寫第一次批次更新呼叫所更新的屬性。
+* 對相同的，在之間不使用mbox呼叫的連續V2批次更新呼叫 `thirdPartyIds` 覆寫在第一次批次更新呼叫中更新的屬性。
 
-## 程式碼範例
+## 資源
 
-請參閱[更新設定檔](https://developers.adobetarget.com/api/#updating-profiles)。
-
-### 相關資訊的連結
-
-[更新設定檔](https://developers.adobetarget.com/api/#updating-profiles)
+* [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
+* [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
+* [[!DNL Adobe Target Bulk Profile Update API]](/help/dev/administer/profile-api/profile-bulk-api.md)
