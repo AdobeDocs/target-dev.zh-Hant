@@ -4,9 +4,9 @@ description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
@@ -25,3 +25,5 @@ ht-degree: 1%
 
 * [單一設定檔更新 API](/help/dev/administer/profile-api/profile-single-api.md)
 * [透過批次大量更新設定檔](/help/dev/administer/profile-api/profile-bulk-api.md)
+
+您可以在此處找到舊版設定檔API檔案： [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
