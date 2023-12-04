@@ -3,10 +3,10 @@ title: Adobe Target大量設定檔更新API
 description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 大量設定檔更新API] 將多位訪客的設定檔資料傳送至 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 9%
+source-wordcount: '727'
+ht-degree: 8%
 
 ---
 
@@ -54,14 +54,14 @@ batch=pcId, param1, param2, param3, param4 123, value1 124, value1,,, value4 125
 * 批次檔的大小必須小於 50 MB。此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
 * 您可以傳送多個檔案。 不過，您一天內傳送之所有檔案的總列數，每個使用者端不應超過100萬列。
 * 您上傳的屬性數量沒有限制。 不過，設定檔的整體大小（包括系統資料）不應超過2000 KB。 [!DNL Adobe] 建議您將少於1000 KB的儲存空間用於設定檔屬性。
-* 參數和值會區分大小寫。 
+* 引數和值區分大小寫。
 
 ## HTTPPOST要求
 
 向發出HTTPPOST請求 [!DNL Target] 邊緣伺服器來處理檔案。 以下是使用curl命令為batch.txt檔案提出的HTTPPOST請求範例：
 
 ``````
-curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate
+curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
 ``````
 
 其中:
