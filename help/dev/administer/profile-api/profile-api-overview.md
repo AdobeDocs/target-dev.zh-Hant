@@ -1,17 +1,17 @@
 ---
-title: Adobe Target設定檔API概述
+title: 更新設定檔
 description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 [!DNL Target].
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profile APIs overview]
+# 更新設定檔
 
 使用者個人資料包含網頁訪客的人口統計和行為資訊，例如年齡、性別、購買的產品、上次造訪時間等。 [!DNL Adobe Target] 使用此資訊為每位訪客提供個人化內容。
 
