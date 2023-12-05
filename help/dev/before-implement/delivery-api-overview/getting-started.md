@@ -4,9 +4,9 @@ description: 如何使用 [!UICONTROL Adobe Target傳送API]？
 keywords: 傳送api
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,3 @@ curl -X POST \
 1. 建立 [!DNL Target] 活動(A/B、XT、AP或Recommendations) [表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) 或 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 1. 使用傳送API針對 [!DNL Target] 在步驟2中建立的活動。
 1. 向訪客呈現體驗。
-
-## Postman集合 {#postman}
-
-Postman是應用程式，可讓您輕鬆引發API呼叫。 [此Postman集合](https://run.pstmn.io/button.svg) 包含傳送API呼叫的範例。

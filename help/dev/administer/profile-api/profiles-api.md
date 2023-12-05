@@ -3,9 +3,9 @@ title: Adobe Target設定檔API
 description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 289299a52e5611c0da341f313aa4a447fcf3666a
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '104'
 ht-degree: 1%
 
 ---
@@ -13,14 +13,6 @@ ht-degree: 1%
 # [!DNL Adobe Target Profiles API] 概述
 
 [!DNL Adobe Target] 為每個個別使用者建立和維護設定檔。 此設定檔儲存在 [!DNL Target] 邊緣叢集，並在每次造訪後即時更新。
-
-## 設定檔 [!DNL Postman] 集合
-
-[!DNL Postman] 是可讓您輕鬆引發API呼叫的應用程式。 這個 [!DNL Postman] 集合包含所有 [!DNL Profile API] 呼叫。 按一下 [在Postman中執行](https://www.getpostman.com/collections/ec7376f9028977ccaa99){target=_blank} 以匯入設定檔API集合。
-
-## 舊版設定檔API檔案。
-
-您可以在此處找到舊版設定檔API檔案： [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
 
 ## 的結構 [!DNL Target] 設定檔
 

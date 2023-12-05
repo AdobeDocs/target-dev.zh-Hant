@@ -3,7 +3,7 @@ title: 擷取設定檔
 description: 瞭解如何使用Adobe Target設定檔API來擷取訪客資料，以便用於 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -39,13 +39,13 @@ http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?
 以下範例顯示使用擷取設定檔的要求格式 `thirdPartyId`：
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 取代 `<your-client-code>` 和 `your-thirdpartyid` 並引發GET要求。 以下是使用的設定檔擷取呼叫範例 [!UICONTROL thirdpartyid]：
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 進行此呼叫時， [!DNL Target] 會先嘗試在邊緣請求中所述的叢集中找出設定檔，或設定檔所在的任何位置並傳回內容。 設定檔內容會以JSON格式傳回。
