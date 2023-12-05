@@ -3,10 +3,10 @@ title: Adobe Target大量設定檔更新API
 description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 大量設定檔更新API] 將多位訪客的設定檔資料傳送至 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
+source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 9%
+source-wordcount: '824'
+ht-degree: 8%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 9%
 * 批次檔的大小必須小於 50 MB。此外，每次上傳的總列數不得超過 500,000 列。
 * 您可以上傳後續批次中超過24小時期間的一或多列數量沒有限制。 不過，在上班時間可以節流汲取程序，以確保其他程序的執行效率。
 * 對相同的thirdPartyIds採用連續v2批次更新呼叫，且其中不需使用mbox呼叫，會覆寫第一次批次更新呼叫所更新的屬性。
+* [!DNL Adobe] 不保證100%的批次設定檔資料都會上線並保留在Target中，因此可用於目標定位。 在目前的設計中，小部分資料（最多佔大型生產批次的0.1%）有可能不會上線或保留。
 
 ## 批次檔案
 
