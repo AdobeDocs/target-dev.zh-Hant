@@ -4,10 +4,10 @@ description: 使用時，應考慮哪些注意事項和已知限制 [!UICONTROL 
 keywords: 傳送api
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 7%
+source-wordcount: '138'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 7%
 
 * 「 」沒有驗證 [!DNL Target] 傳送API。
 * 本 API 不會處理 Cookie 或重新導向呼叫。
-* 支援 [!UICONTROL Automated Personalization] (AP)和 [!UICONTROL Recommendations] 活動：此API有兩個擷取內容的模式：執行和預先擷取模式。 預先擷取模式只能用於 [!UICONTROL AB測試] 和 [!UICONTROL 體驗鎖定] (XT)活動。 請勿將預先擷取模式用於 [!UICONTROL Automated Personalization] (AP)， [!UICONTROL 自動分配]， [!UICONTROL 自動鎖定目標]，或 [!UICONTROL Recommendations] 活動型別。
 * HTTP/1.1和HTTP/2標頭名稱不區分大小寫，但HTTP/2會強制使用小寫標頭名稱。 如需詳細資訊，請參閱 [超文字傳輸通訊協定第2版(HTTP/2)檔案](https://www.rfc-editor.org/rfc/rfc7540#section-8.1.2){target=_blank}.
 
   如果您使用引導訪客通過新負載平衡器基礎結構的端點，其連線會自動升級為HTTP/2。 此升級程式會將請求標頭轉換為小寫標頭，以免被視為格式錯誤。

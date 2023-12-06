@@ -3,16 +3,28 @@ title: 擷取設定檔
 description: 瞭解如何使用Adobe Target設定檔API來擷取訪客資料，以便用於 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: ee53a8f0210480d9b70dc77a3a5cd8d92d2f2e3d
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
 # 更新設定檔
 
-A [!DNL Target] 有兩種方式可擷取設定檔：使用 `tntid` 或 `thirdPartyId`.
+A [!DNL Target] 有三種方式可擷取設定檔：使用 `[!DNL Experience Cloud Visitor ID]` (`ECID`)， `tntid` 或 `thirdPartyId`.
+
+## 使用 [!DNL Experience Cloud Visitor ID] (ECID)
+
+您可以根據以下專案擷取設定檔： `ECID`. HTTP方法必須GET。
+
+URL看起來像下面的範例：
+
+```
+https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
+```
+
+取代 `<clientCode>` 與您的 [!DNL Target] [!UICONTROL 使用者端代碼] 和 `<ECID>` 與您的 [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID])。
 
 ## 使用tntid
 
@@ -24,7 +36,7 @@ A [!DNL Target] 有兩種方式可擷取設定檔：使用 `tntid` 或 `thirdPar
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-取代 `<your-client-code>` 和 `your-tnt-id` 並引發GET要求。 以下是使用的設定檔擷取呼叫範例 `tntid`；
+取代 `<your-client-code>` 和 `your-tnt-id` 並引發GET要求。 以下是使用的設定檔擷取呼叫範例 `tntid`：
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
