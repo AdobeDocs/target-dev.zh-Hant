@@ -4,10 +4,10 @@ description: 使用 [!UICONTROL targetGlobalSettings()] 的函式 [!DNL Adobe Ta
 title: 如何使用 [!UICONTROL targetGlobalSettings()] 功能？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 19%
+source-wordcount: '2568'
+ht-degree: 17%
 
 ---
 
@@ -18,6 +18,18 @@ ht-degree: 19%
 ## 設定
 
 您可以覆寫下列設定:
+
+### aepSandboxId
+
+* **類型:** 字串
+* **預設值**： null
+* **說明**：用於傳送的可選引數 [!DNL Adobe Experience Platform] 要共用的沙箱ID [!DNL Adobe Experience Platform] 在非預設沙箱中建立的目的地，具有 [!DNL Target]. 如果 `aepSandboxId` 為非空值， `aepSandboxName` 也必須提供。
+
+### aepSandboxName
+
+* **類型:** 字串
+* **預設值**： null
+* **說明**：用於傳送的可選引數 [!DNL Adobe Experience Platform] 要共用的沙箱名稱 [!DNL Adobe Experience Platform] 在非預設沙箱中建立的目的地，具有 [!DNL Target]. 如果 `aepSandboxName` 為非空值， `aepSandboxId` 也必須提供。
 
 ### artifectlocation
 
@@ -31,7 +43,7 @@ ht-degree: 19%
 * **預設值**：內文{不透明度： 0 }
 * **說明**：僅用於 `globalMboxAutocreate === true` 將閃爍的機會最小化。
 
-  如需詳細資訊，請參閱 [at.js 處理忽隱忽現情況的方式](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)。
+  如需詳細資訊，請參閱 [at.js處理忽隱忽現情況的方式](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ### bodyHidingEnabled
 
@@ -92,7 +104,7 @@ ht-degree: 19%
 
   僅使用伺服器端作為預設設定，表示所有決定都是在 [!DNL Target] 邊緣網路，其中涉及封鎖伺服器呼叫。 此方法可能會增加延遲，但也有顯著的好處，例如讓您能夠套用 [!DNL Target]的機器學習功能包括 [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)， [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)，以及 [自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) 活動。
 
-  此外，使用增強您的個人化體驗 [!DNL Target]的使用者設定檔會跨工作階段和管道儲存，可為您的業務帶來強大的成果。
+  此外，使用增強您的個人化體驗 [!DNL Target]的使用者設定檔會跨工作階段和管道儲存，可為您的業務提供強大的成果。
 
   最後，伺服器端僅可讓您使用Adobe Experience Cloud，並微調可透過Audience Manager和Adobe Analytics區段鎖定的對象。
 
@@ -174,7 +186,7 @@ ht-degree: 19%
 * **預設值**： true （從at.js版本1.6.2開始）
 * **說明**：指示我們是否應該使用 `<clientCode>.tt.omtrdc.net` 網域或 `mboxedge<clusterNumber>.tt.omtrdc.net` 網域。
 
-  如果此值為 true，則會將 `mboxedge<clusterNumber>.tt.omtrdc.net` 網域儲存至 Cookie. 目前未使用 [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本時。如果您有此問題，請考慮 [更新at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) 更新至支援的版本。
+  如果此值為true， `mboxedge<clusterNumber>.tt.omtrdc.net` 網域將會儲存至Cookie。 目前未使用 [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本時。如果您有此問題，請考慮 [更新at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) 更新至支援的版本。
 
 ### overrideMboxEdgeServerTimeout
 
@@ -284,7 +296,7 @@ window.targetGlobalSettings = {
 | 名稱 | 字串 | 提供者的名稱。 |
 | version | 字串 | 提供者版本。此機碼將用於提供者演進。 |
 | timeout | 數字 | 如果這是網路要求，則代表提供者逾時。此機碼為選用。 |
-| provider | 函數 | 包括提供者資料擷取邏輯的函數。<p>函數有單一必要參數: `callback`。callback 參數為函數，僅應該在成功擷取資料或發生錯誤時叫用。<p>callback 預期兩個參數:<ul><li>error: 指出是否發生錯誤。如果各項都正常，則此參數應該設為 null。</li><li>params： JSON物件，代表將在下列檔案中傳送的引數： [!DNL Target] 要求。</li></ul> |
+| provider | 函數 | 包括提供者資料擷取邏輯的函數。<p>函式有單一必要引數： `callback`. callback 參數為函數，僅應該在成功擷取資料或發生錯誤時叫用。<p>callback 預期兩個參數:<ul><li>error: 指出是否發生錯誤。如果各項都正常，則此參數應該設為 null。</li><li>params： JSON物件，代表將在下列檔案中傳送的引數： [!DNL Target] 要求。</li></ul> |
 
 下列範例顯示的資料提供者正在使用同步執行:
 
