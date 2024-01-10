@@ -4,9 +4,9 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 大量設定檔�
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
+source-git-commit: 3d90616b0a920abea380d4cfcd1227eafde86adb
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 8%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 8%
 ## 注意事項
 
 * 批次檔的大小必須小於 50 MB。此外，每次上傳的總列數不得超過 500,000 列。
+* 更新通常在一小時內發生，但可能需要長達24小時的時間才會反映。
 * 您可以上傳後續批次中超過24小時期間的一或多列數量沒有限制。 不過，在上班時間可以節流汲取程序，以確保其他程序的執行效率。
 * 對相同的thirdPartyIds採用連續v2批次更新呼叫，且其中不需使用mbox呼叫，會覆寫第一次批次更新呼叫所更新的屬性。
 * [!DNL Adobe] 不保證100%的批次設定檔資料都會上線並保留在Target中，因此可用於目標定位。 在目前的設計中，小部分資料（最多佔大型生產批次的0.1%）有可能不會上線或保留。
