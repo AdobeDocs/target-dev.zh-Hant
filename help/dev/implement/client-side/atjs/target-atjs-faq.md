@@ -4,10 +4,10 @@ description: 閱讀有關下列專案的常見問題解答： [!DNL Adobe Target
 title: 關於at.js有哪些常見問答？
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2897'
-ht-degree: 50%
+source-wordcount: '2938'
+ht-degree: 39%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 50%
 
 關於的常見問題解答 [!DNL Adobe Target] at.js JavaScript資料庫。
 
-## 使用 at.js 或 mbox.js 各有何優點?
+## 使用at.js或mbox.js各有何優點？
 
-at.js程式庫會取代mbox.js。 不再支援mbox.js資料庫。 然而，對於大多數人來說，at.js 的優點多於 mbox.js。
+at.js程式庫會取代mbox.js。 不再支援mbox.js資料庫。 不過，對於大多數人來說，at.js的優點多於mbox.js。
 
-除了眾多優點以外，at.js 還能改進 Web 實施的頁面載入時間、改進安全性，以及為單頁應用程式提供更好的實施選項。
+除了眾多優點以外，at.js還能改進Web實施的頁面載入時間、改進安全性，以及為單頁應用程式提供更好的實施選項。
 
 下圖比較使用 mbox.js 或 at.js 的頁面載入效能。
 
@@ -29,9 +29,9 @@ at.js程式庫會取代mbox.js。 不再支援mbox.js資料庫。 然而，對�
 
 如上圖所示，使用mbox.js時，頁面內容要等到 [!DNL Target] 呼叫完成。 使用 at.js 時，頁面內容在 [!DNL Target] 呼叫起始時就開始載入，不會等到呼叫完成。
 
-## at.js 和 mbox.js 對頁面載入時間有何影響?
+## at.js和mbox.js對頁面載入時間有何影響？
 
-許多客戶和顧問都想要知道 at.js 和 mbox.js 對頁面載入時間的影響，尤其是在比較新使用者和再度訪問的使用者時。可惜，有關 at.js 或 mbox.js 如何影響頁面載入時間，由於每一個客戶的實施不同，很難測量和提出具體數字。
+許多客戶和顧問都想要瞭解at.js和mbox.js對頁面載入時間的影響，尤其是在比較新使用者和再度訪問的使用者時。 可惜，有關at.js或mbox.js如何影響頁面載入時間，由於每個客戶的實施不同，很難測量和提出具體數字。
 
 不過，如果頁面上存在訪客API， [!DNL Target] 更能瞭解at.js和mbox.js對頁面載入時間有何影響。
 
@@ -69,9 +69,9 @@ at.js程式庫會取代mbox.js。 不再支援mbox.js資料庫。 然而，對�
 
 ## 從舊版 at.js 升級為版本 1.0.0 之後，為什麼我發現回應時間好像變慢了?
 
-at.js 1.0.0 版本以及更新版本會平行觸發所有請求。舊版會循序執行請求，亦即請求會放入佇列中，且 [!DNL Target] 會等待第一個要求完成，再繼續下一個要求。
+at.js 1.0.0版和更新版本會平行觸發所有請求。 舊版會循序執行請求，亦即請求會放入佇列中，且 [!DNL Target] 會等待第一個要求完成，再繼續下一個要求。
 
-舊版 at.js 執行請求的方式易於發生所謂的「線頭阻塞」。在at.js 1.0.0和更新版本中， [!DNL Target] 已切換至平行請求執行。
+舊版at.js執行請求的方式易於發生所謂的「線頭阻塞」。 在at.js 1.0.0和更新版本中， [!DNL Target] 已切換至平行請求執行。
 
 舉例來說，如果您檢查at.js 0.9.1的網路標籤瀑布圖，您將會在下個步驟中看到 [!DNL Target] 前一個請求完成時才會開始請求。 at.js 1.0.0和更新版本就不是這個序列，所有要求基本上是同時開始。
 
@@ -118,29 +118,29 @@ at.js 1.0.0版可載入 [!DNL Target] 非同步處理程式庫。
 
 ## at.js是否與 [!DNL Adobe Experience Manager] 整合(Experience Manager)？
 
-[!DNL Adobe Experience Manager] 6.2 具有 FP-11577 (或更新版本) 現在支援 at.js 實作與其 [!UICONTROL Adobe Target Cloud Services] 整合。
+[!DNL Adobe Experience Manager] 6.2具有FP-11577 （或更新版本）現在支援at.js實施及其 [!UICONTROL Adobe TargetCloud Service] 整合。
 
-## 使用 at.js 時如何防止頁面載入忽隱忽現?
+## 使用at.js時如何防止頁面載入忽隱忽現？
 
-[!DNL Target] 提供幾個方法來防止頁面載入忽隱忽現: 如需詳細資訊，請參閱[使用 at.js 防止忽隱忽現情形](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)。
+[!DNL Target] 提供數種防止頁面載入忽隱忽現的方法。 如需詳細資訊，請參閱[使用 at.js 防止忽隱忽現情形](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)。
 
-## at.js 的檔案大小多大?
+## at.js的檔案大小多大？
 
 at.js 檔案下載後大約 109 KB。不過，因為大部分伺服器會自動壓縮檔案，使檔案變小，at.js 在伺服器上壓縮 (使用 GZIP 或其他方法) 和當使用者造訪您的網站而載入時，大約是 34 KB。您安裝 at.js 的伺服器上的壓縮設定，就決定實際壓縮大小。
 
-## at.js 為何比 mbox.js 還大?
+## at.js為何比mbox.js還大？
 
-at.js 實施使用單一程式庫 (at.js)，而 mbox.js 實施實際上使用兩個程式庫 (mbox.js 和 Target.js)。所以，at.js 要同時與 mbox.js *和* `target.js` 一起比較才公平。比較兩個版本的 gzip 大小，at.js 1.2 版是 34 KB，而 mbox.js 63 版是 26.2 KB。
+at.js實作使用單一資料庫(at.js)，而mbox.js實作實際上使用兩個資料庫（mbox.js和target.js）。 所以，at.js 要同時與 mbox.js *和* `target.js` 一起比較才公平。比較兩個版本的 gzip 大小，at.js 1.2 版是 34 KB，而 mbox.js 63 版是 26.2 KB。
 
 at.js 較大，因為它執行的 DOM 剖析比 mbox.js 多很多。這有必要，因為 at.js 在 JSON 回應中是取得「原始」資料，必須轉換成有意義的資料。使用的mbox.js `document.write()` 而所有剖析均由瀏覽器完成。
 
 儘管檔案較大，但我們的測試指出 at.js 的頁面載入比 mbox.js 更快。此外，在安全性方面，at.js較優秀，因為不會動態載入額外檔案，或使用 `document.write`.
 
-## at.js 中有 jQuery 嗎? 因為我的網站上已有 jQuery，我可以移除 at.js 的這部分嗎?
+## at.js 中有 jQuery 嗎? 因為我的網站上已有jQuery，我可以移除at.js的這部分嗎？
 
 at.js目前使用部分的jQuery，因此您在at.js頂端會看到MIT授權通知。 jQuery 不公開，不會干擾您在頁面上已有的 jQuery 程式庫 (可能是不同版本)。恕不支援移除 at.js 內的 jQuery 程式碼。
 
-## at.js 支援 Safari 和設為 x-only 的跨網域嗎?
+## at.js支援Safari和設為x-only的跨網域嗎？
 
 否，如果跨網域設為x-only且Safari已停用第三方Cookie，則mbox.js和at.js會設定停用的Cookie，而且不會針對該特定使用者端的網域執行任何mbox要求。
 
@@ -160,9 +160,9 @@ at.js目前使用部分的jQuery，因此您在at.js頂端會看到MIT授權通�
 
 ## 為什麼在我的網頁上 mbox 不會觸發?
 
-[!DNL Target] 客戶有時使用雲端型例項搭配 [!DNL Target] 進行測試或簡單的概念證明用途。這些網域和許多其他網域均屬於[公用字尾清單](https://publicsuffix.org/list/public_suffix_list.dat)。
+[!DNL Target] 客戶有時會使用雲端型例項搭配 [!DNL Target] 用於測試或簡單的概念證明用途。 這些網域和許多其他網域均屬於[公用字尾清單](https://publicsuffix.org/list/public_suffix_list.dat)。
 
-如果您使用這些網域，則現代瀏覽器不會儲存Cookie，除非您自訂 `cookieDomain` 使用targetGlobalSettings()進行設定。 如需詳細資訊，請參閱[使用雲端型例項搭配  [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)。
+如果您使用這些網域，則現代瀏覽器不會儲存Cookie，除非您自訂 `cookieDomain` 使用targetGlobalSettings()進行設定。 如需詳細資訊，請參閱 [使用雲端型例項搭配 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## 使用 at.js 時，可以將 IP 位址用作 Cookie 網域嗎?
 
@@ -196,15 +196,15 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 
 ## 為何會看到警告訊息，例如「動作缺少選取器」?
 
-這些訊息與at.js功能無關。 at.js 程式庫會嘗試報告 DOM 中找不到的任何事物。
+這些訊息與at.js功能無關。 at.js程式庫會嘗試報告DOM中找不到的任何事物。
 
 如果您看到此警告訊息，以下為可能的根本原因:
 
 * 頁面正在動態建立，且at.js找不到元素。
 * 頁面建置速度緩慢（因為網路速度緩慢），且at.js在DOM中找不到選取器。
 * 執行活動的頁面結構已變更。如果您在可視化體驗撰寫器 (VEC) 中重新開啟活動，應該會看到警告訊息。更新活動，以便找到所有必要的元素。
-* 基礎頁面是單頁應用程式 (SPA) 的一部分，或頁面包含的元素出現在頁面很下方，而 at.js「選取器輪詢機制」找不到這些元素。提高 `selectorsPollingTimeout` 或許有用。如需詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
-* 任何點擊追蹤量度會嘗試將本身新增至每個頁面，而不論設定此量度的 URL。雖然無害，但此狀況會導致這些訊息大量出現。
+* 基礎頁面是單頁應用程式(SPA)的一部分，或頁面包含的元素出現在頁面很下方，而at.js「選取器輪詢機制」找不到這些元素。 提高 `selectorsPollingTimeout` 或許有用。如需詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
+* 任何點擊追蹤量度會嘗試將本身新增至每個頁面，而不論設定此量度的 URL。此狀況雖然無害但會顯示許多這類訊息。
 
   為了獲得最佳結果，請下載並使用 [最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). 如需如何下載at.js的詳細資訊，請參閱 [使用下載at.js [!DNL Target] 介面](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) 中的區段 [*如何部署at.js* > *實作 [!DNL Target] 不使用標籤管理程式*](how-to-deployatjs/implement-target-without-a-tag-manager.md) 文章。
 
@@ -214,7 +214,7 @@ tt.omtrdc.net是Adobe EDGE網路的網域名稱，用來接收所有伺服器呼
 
 ## 為何at.js不一律使用HttpOnly和Secure Cookie標幟？
 
-HttpOnly 只能透過伺服器端編碼來設定。[!DNL Target]Mbox 之類的 Cookie 是透過 JavaScript 編碼來建立與儲存，因此 無法使用 HttpOnly Cookie 旗標。[!DNL Target][!DNL Target] 啟用跨網域時，不會針對從伺服器端設定的第三方Cookie使用set HttpOnly。
+HttpOnly 只能透過伺服器端編碼來設定。[!DNL Target] Cookie （例如mbox）是透過JavaScript程式碼建立及儲存的，因此 [!DNL Target] 無法使用HttpOnly Cookie標幟。 [!DNL Target] 啟用跨網域時，不會針對從伺服器端設定的第三方Cookie使用set HttpOnly。
 
 Secure 只有在頁面是經由 HTTPS 來載入時，能透過 JavaScript 設定。如果頁面一開始是透過 HTTP 載入，JavaScript 無法設定此旗標。此外，如果使用Secure標幟，則Cookie僅可在HTTPS頁面上使用。 對於透過HTTPS載入的頁面， [!DNL Target] 設定Secure和SameSite=None屬性。
 
@@ -248,7 +248,7 @@ Secure 只有在頁面是經由 HTTPS 來載入時，能透過 JavaScript 設定
 
 ## at.js 觸發網路要求的頻率為何?
 
-[!DNL Target] 會在伺服器端執行其所有決策。這表示 at.js 會在每次頁面重新載入或叫用 at.js 公用 API 時，觸發網路要求。
+[!DNL Target] 會在伺服器端執行其所有決策。 這表示 at.js 會在每次頁面重新載入或叫用 at.js 公用 API 時，觸發網路要求。
 
 ## 在最好的情況下，我們能否期望使用者在隱藏、取代，和顯示內容方面，不會受到任何頁面載入上的可見影響?
 
@@ -264,7 +264,7 @@ at.js會試圖長時間避免預先隱藏HTMLBODY或其他DOM元素，但這取�
 1. 在 [!DNL Target] 已收到回應， [!DNL Target] 會擷取CSS選取器。
 1. 使用CSS選取器， [!DNL Target] 建立STYLE標籤以預先隱藏將自訂的DOM元素。
 1. 移除預先隱藏 STYLE 的 HTML BODY。
-1. [!DNL Target] 開始進行 DOM 元素的輪詢。
+1. [!DNL Target] 開始輪詢DOM元素。
 1. 如果找到DOM元素， [!DNL Target] 套用DOM變更，並移除元素預先隱藏STYLE。
 1. 如果找不到DOM元素，全域逾時會取消隱藏這些元素，以避免頁面損毀。
 
@@ -296,4 +296,8 @@ at.js 需要 HTML 5 doctype。
 
 `<!DOCTYPE html>`
 
-HTML 5 doctype 可確保頁面以標準模式載入。使用怪異模式載入時，會停用 at.js 所根據的某些 JS API。[!DNL Target]在怪異模式下， 會停用 at.js。
+HTML 5 doctype 可確保頁面以標準模式載入。使用怪異模式載入時，會停用 at.js 所根據的某些 JS API。[!DNL Target] 在Quirks模式中停用at.js。
+
+## at.js是否適用於Ionic應用程式環境。
+
+此實作從未進行過測試，因為at.js的用途並非在非Web環境中運作。 [!DNL Adobe] 建議其 [行動實作適用的SDK](/help/dev/implement/mobile/overview.md).
