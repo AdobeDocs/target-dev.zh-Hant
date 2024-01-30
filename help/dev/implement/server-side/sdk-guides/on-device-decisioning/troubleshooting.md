@@ -3,9 +3,9 @@ title: 裝置上決策疑難排解
 description: 瞭解如何疑難排解 [!UICONTROL 裝置上決策]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 ## 3.確認 [!UICONTROL 裝置上決策] *規則成品* 已根據定義的輪詢間隔擷取和快取。
 
-1. 等候輪詢間隔的持續時間（預設為5分鐘），並確定SDK正在擷取成品。 將會輸出相同的終端機記錄。
+1. 等候輪詢間隔的持續時間（預設為20分鐘），並確定SDK正在擷取成品。 將會輸出相同的終端機記錄。
 
    此外，資訊來自[!DNL Target]追蹤應該輸出到終端機，並附上規則成品的詳細資訊。
 
