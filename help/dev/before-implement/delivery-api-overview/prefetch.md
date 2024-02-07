@@ -4,9 +4,9 @@ description: 如何在中使用預先擷取 [!UICONTROL Adobe Target傳送API]�
 keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
+source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ curl -X POST \
 
 [[!UICONTROL 目標的Adobe Analytics]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一種跨解決方案的整合，可讓您根據以下專案建立活動： [!DNL Analytics] 轉換量度和受眾區段。
 
-下列程式碼片段是來自預先擷取mbox的回應，其中包含 `clickTrack` 要通知的量度 [!DNL Analytics] 已點按優惠方案的時間：
+下列程式碼片段是預先擷取包含下列專案的mbox所產生的回應： `clickTrack` 要通知的量度 [!DNL Analytics] 已點按優惠方案的時間：
 
 ```
 {
