@@ -4,9 +4,9 @@ description: 與Experience Cloud、Audience Manager整合的整合
 keywords: 傳送api，伺服器端，伺服器端，整合， audience manager， aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '417'
 ht-degree: 4%
 
 ---
@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-如需TargetRequestUtils.java的詳細資訊，請參閱 [公用程式方法(Java)](https://experienceleague.corp.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
+有關詳細資訊 `TargetRequestUtils.java`，請參閱 [公用程式方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
