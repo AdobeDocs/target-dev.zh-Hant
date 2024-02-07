@@ -4,9 +4,9 @@ description: 如何在中使用預先擷取 [!UICONTROL Adobe Target傳送API]�
 keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,51 @@ curl -X POST \
 ```
 
 在回應中，您會看到 `content` 包含向使用者顯示特定體驗的欄位 `mbox`. 在伺服器上快取時，此功能非常有用，這樣當使用者在工作階段中與您的網頁或行動應用程式互動並造訪時， `mbox` 在應用程式的任何特定頁面上，可以從快取中提供體驗，而不是製作另一個 [!UICONTROL Adobe Target傳送API] 呼叫。 但是，當體驗從傳遞至使用者時 `mbox`， a `notification` 會透過傳送API呼叫傳送，以便進行曝光記錄。 這是因為 `prefetch` 會快取呼叫，這表示使用者在該時間尚未看到體驗 `prefetch` 呼叫發生。 為了進一步瞭解 `notification` 程式，請參閱 [通知](notifications.md).
+
+## 使用時具有clickTrack量度的預先擷取mbox [!UICONTROL 目標分析] (A4T)
+
+[[!UICONTROL 目標的Adobe Analytics]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一種跨解決方案的整合，可讓您根據以下專案建立活動： [!DNL Analytics] 轉換量度和受眾區段。
+
+下列程式碼片段可讓您預先擷取包含的mbox `clickTrack` 要通知的量度 [!DNL Analytics] 已點按優惠方案的時間：
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>mbox的預先擷取包含 [!DNL Analytics] 僅限合格活動的裝載。 預先擷取尚未合格活動的成功量度會導致報告不一致。
 
 ## 預先擷取檢視
 
