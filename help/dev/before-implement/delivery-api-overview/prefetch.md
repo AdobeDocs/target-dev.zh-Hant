@@ -4,9 +4,9 @@ description: 如何在中使用預先擷取 [!UICONTROL Adobe Target傳送API]�
 keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 使用者端（例如行動應用程式和伺服器）可在工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免多次呼叫 [!UICONTROL Adobe Target傳送API].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 在 `prefetch` 欄位，新增一或多個 `mboxes` 您想要在工作階段中，為訪客預先擷取至少一次。 預先擷取這些資料之後 `mboxes`，您會收到下列回應：
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ curl -X POST \
 
 下列程式碼片段是預先擷取包含下列專案的mbox所產生的回應： `clickTrack` 要通知的量度 [!DNL Analytics] 已點按優惠方案的時間：
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ curl -X POST \
 
 ## 預先擷取檢視
 
-檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，VEC已透過傳送API建立AB和XT活動，並修改於 [SPA的檢視](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) 現在可以預先擷取。
+檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC已建立 [[!UICONTROL A/B測試]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活動與修改 [SPA的檢視](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) 現在可以預先擷取。
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-上述範例呼叫將會預先擷取透過SPA VEC為AB和XT活動建立的所有檢視，以便針對網頁顯示 `channel`. 在呼叫中請注意，我們要從訪客所在的AB或XT活動中預先擷取所有檢視 `tntId`：`84e8d0e211054f18af365d65f45e902b.28_131` 正在造訪 `url`：`https://target.enablementadobe.com/react/demo/#/` 符合「 」資格。
+上述範例呼叫會預先擷取透過SPA VEC為建立的所有檢視 [!UICONTROL A/B測試] 和要針對網頁顯示的XT活動 `channel`. 請注意，呼叫會預先擷取所有的 [!UICONTROL A/B測試] 或訪客具有的XT活動 `tntId`：`84e8d0e211054f18af365d65f45e902b.28_131` 正在造訪 `url`：`https://target.enablementadobe.com/react/demo/#/` 符合「 」資格。
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ curl -X POST \
 }
 ```
 
-在 `content` 回應的欄位，備註中繼資料，例如 `type`， `selector`， `cssSelector`、和 `content`，可在使用者造訪您的頁面時，用來呈現體驗給一般使用者。 請注意 `prefetched` 如有必要，可以快取內容並轉譯給使用者。
+在 `content` 回應的欄位，備註中繼資料，例如 `type`， `selector`， `cssSelector`、和 `content`，可在使用者造訪您的頁面時，用來呈現體驗給訪客。 請注意 `prefetched` 如有必要，可以快取內容並轉譯給使用者。
