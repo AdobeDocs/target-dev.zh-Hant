@@ -4,28 +4,28 @@ description: 如何在中使用預先擷取 [!UICONTROL Adobe Target傳送API]�
 keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # 預先擷取
 
-預先擷取可讓行動應用程式和伺服器等使用者端透過一次請求，為多個mbox或檢視擷取內容、在本地快取，並在稍後通知 [!DNL Target] 使用者造訪這些mbox或檢視時。
+預先擷取可讓行動應用程式和伺服器等使用者端透過一次請求，為多個mbox或檢視擷取內容、在本地快取，並在稍後通知 [!DNL Target] 訪客造訪這些mbox或檢視時。
 
 使用預先擷取時，請務必熟悉下列詞語：
 
 | 欄位名稱 | 說明 |
 | --- | --- |
-| `prefetch` | 應擷取但不應標示為已瀏覽的mbox和檢視清單。 此 [!DNL Target] Edge傳回 `eventToke`n代表預先擷取陣列中存在的每個mbox或檢視。 |
+| `prefetch` | 應擷取但不應標示為已瀏覽的mbox和檢視清單。 此 [!DNL Target] Edge傳回 `eventToken` 預先擷取陣列中存在的每個mbox或檢視。 |
 | `notifications` | 先前預先擷取且應標示為已瀏覽的mbox和檢視清單。 |
 | `eventToken` | 預先擷取內容時傳回的雜湊加密權杖。 此Token應傳回 [!DNL Target] 在 `notifications` 陣列。 |
 
 ## 預先擷取Mbox
 
-行動應用程式和伺服器等使用者端可在工作階段中，為特定使用者預先擷取多個mbox，並將其快取，以避免多次呼叫 [!UICONTROL Adobe Target傳送API].
+使用者端（例如行動應用程式和伺服器）可在工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免多次呼叫 [!UICONTROL Adobe Target傳送API].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-在 `prefetch` 欄位，新增一或多個 `mboxes` 您想要一次預先擷取工作階段中的使用者。 一旦您為那些預先擷取 `mboxes` 您會收到下列回應：
+在 `prefetch` 欄位，新增一或多個 `mboxes` 您想要在工作階段中，為訪客預先擷取至少一次。 預先擷取這些資料之後 `mboxes`，您會收到下列回應：
 
 ```
 {
@@ -120,9 +120,9 @@ curl -X POST \
 }
 ```
 
-在回應中，您會看到 `content` 包含向使用者顯示特定體驗的欄位 `mbox`. 在伺服器上快取時，此功能非常有用，這樣當使用者在工作階段中與您的網頁或行動應用程式互動並造訪時， `mbox` 在應用程式的任何特定頁面上，可以從快取中提供體驗，而不是製作另一個 [!UICONTROL Adobe Target傳送API] 呼叫。 但是，當體驗從傳遞至使用者時 `mbox`， a `notification` 會透過傳送API呼叫傳送，以便進行曝光記錄。 這是因為 `prefetch` 會快取呼叫，這表示使用者在該時間尚未看到體驗 `prefetch` 呼叫發生。 為了進一步瞭解 `notification` 程式，請參閱 [通知](notifications.md).
+在回應中，您會看到 `content` 包含要向特定訪客顯示的體驗的欄位 `mbox`. 若要讓訪客在工作階段中與您的網頁或行動應用程式互動並造訪 `mbox` 在應用程式的任何特定頁面上，可以從快取中提供體驗，而不是製作另一個 [!UICONTROL Adobe Target傳送API] 呼叫。 不過，當體驗從傳遞至訪客時 `mbox`， a `notification` 會透過傳送API呼叫傳送，以便進行曝光記錄。 這是因為 `prefetch` 會快取呼叫，這表示訪客在呼叫快取時未曾看到體驗。 `prefetch` 呼叫發生。 若要進一步瞭解 `notification` 程式，請參閱 [通知](notifications.md).
 
-## 使用時具有clickTrack量度的預先擷取mbox [!UICONTROL 目標分析] (A4T)
+## 使用預先擷取mbox `clickTrack` 使用時的量度 [!UICONTROL 目標分析] (A4T)
 
 [[!UICONTROL 目標的Adobe Analytics]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一種跨解決方案的整合，可讓您根據以下專案建立活動： [!DNL Analytics] 轉換量度和受眾區段。
 
