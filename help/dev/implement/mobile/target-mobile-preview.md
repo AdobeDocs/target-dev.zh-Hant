@@ -4,10 +4,10 @@ description: 使用行動裝置預覽連結來為行動應用程式活動執行�
 title: 如何在中使用行動裝置預覽連結 [!DNL Adobe Target] 行動裝置？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 27%
 
 行動裝置預覽功能可讓您在啟動行動應用程式活動之前，完整測試這些活動。
 
-## 必要條件
+## 必備條件
 
 1. **使用支援的SDK版本：** 行動裝置預覽功能需要您下載並安裝適當版本的 [!DNL Adobe Mobile SDK] （在您對應的應用程式中）。
 
@@ -38,25 +38,25 @@ ht-degree: 27%
 
 ## 產生預覽連結
 
-1. 在 [!DNL Target] UI，按一下 **[!UICONTROL 更多選項]** 圖示（垂直省略符號），然後選取「 」 **[!UICONTROL 建立行動裝置預覽連結]**.
+1. 在 [!DNL Target] UI，按一下 **[!UICONTROL More Options]** 圖示（垂直省略符號），然後選取「 」 **[!UICONTROL Create Mobile Preview Link]**.
 
    ![替代影像](assets/mobile-preview-create.png)
 
-1. 選取您要預覽的活動，然後按一下 **[!UICONTROL 產生行動裝置預覽連結]**.
+1. 選取您要預覽的活動，然後按一下 **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >您只能選取表單式 [!UICONTROL A/B測試] 和 [!UICONTROL 體驗鎖定] (XT)活動。
+   >您只能選取表單式 [!UICONTROL A/B Test] 和 [!UICONTROL Experience Targeting] (XT)活動。
 
    ![替代影像](assets/mobile-preview-select-activities.png)
 
 1. 指定您應用程式的 URL 配置。
 
-   此URL配置必須與iOS或Android應用程式中存在的URL配置相同。 如有必要，請分別對iOS和Android重複此程式。
+   URL配置必須與iOS或Android應用程式中存在的URL配置相同。 如有必要，請分別對iOS和Android重複此程式。
 
    ![替代影像](assets/mobile-preview-enter-url-scheme.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「產生行動裝置預覽連結」]**，然後複製連結。
+1. 按一下 **[!UICONTROL Generate Mobile Preview Link]**，然後複製連結。
 
    ![替代影像](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ ht-degree: 27%
 
    |![預覽深層連結 1](assets/mobile-preview-open-deeplink.png)|![預覽深層連結 2](assets/mobile-preview-open-app.png)|
 
-   您的應用程式隨即開啟並啟動 [!DNL Target] [!UICONTROL 行動裝置預覽模式].
+   您的應用程式隨即開啟並啟動 [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. 選取您要查看的體驗組合，然後按一下&#x200B;**[!UICONTROL 「啟動體驗」]**。
+1. 選取您要檢視的體驗組合，然後按一下 **[!UICONTROL Launch Experiences]**.
 
    |![行動裝置預覽 1](assets/mobile-preview-experience-selection-1.png)|![行動裝置預覽 2](assets/mobile-preview-experience-result-1-france.png)|![行動裝置預覽 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![行動裝置預覽 4](assets/mobile-preview-experience-selection-2.png)|![行動裝置預覽 5](assets/mobile-preview-experience-result-2-aus.png)|![行動裝置預覽 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 限制
 
-* 按一下&#x200B;**[!UICONTROL 「啟動體驗」]**&#x200B;按鈕之後，必須重新載入檢視新內容才會顯示。最容易的方式是切換至不同畫面，然後回到您預期會發生變更的畫面。
+* 檢視必須再次載入，新內容才能在 **[!UICONTROL Launch Experiences]** 已按一下按鈕。 最容易的方式是切換至不同畫面，然後回到您預期會發生變更的畫面。
 * Android 早於 API-19 (KitKat) 的版本不支援行動裝置預覽。
