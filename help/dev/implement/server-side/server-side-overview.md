@@ -4,16 +4,22 @@ description: 瞭解 [!DNL Adobe Target] 伺服器端傳送API、SDK和 [!DNL Tar
 title: 我可以在何處瞭解 [!DNL Target] 伺服器端傳送API和SDK？
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 14%
+source-wordcount: '569'
+ht-degree: 13%
 
 ---
 
 # 伺服器端：實作 [!DNL Target]
 
 相關資訊 [!DNL Adobe Target] 伺服器端傳送API、SDK和 [!DNL Target Recommendations] API。
+
+>[!NOTE]
+>
+>如果您的實作使用at.js和 [!DNL AppMeasurement] 在使用者端，您應使用 [!UICONTROL Target Delivery API] 以及伺服器端SDK，將於下文討論。
+>
+>如果您的實施使用 [!UICONTROL Adobe Experience Platform Web SDK]，您應使用 [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 下列程序會發生在 [!DNL Target] 的伺服器端實作中:
 
@@ -60,7 +66,7 @@ ht-degree: 14%
 * 傳遞 **機器學習(ML)驅動的個人化體驗** 對於使用者，無論使用者與您的企業進行互動的頻道或裝置。
 * **與Adobe Experience Cloud緊密整合** 產品，例如 **Adobe Analytics**， **Adobe Audience Manager**，以及 **Experience CloudID服務** 從伺服器端。
 
-請參閱 [快速入門](sdk-guides/getting-started/getting-started.md) 頁面以瞭解如何透過以下方式執行簡單的功能標幟使用案例 [裝置上決策](sdk-guides/on-device-decisioning/overview.md).
+請參閱 [快速入門](sdk-guides/getting-started/getting-started.md) 頁面以瞭解如何透過執行簡單的功能標幟使用案例 [裝置上決策](sdk-guides/on-device-decisioning/overview.md).
 
 請檢視我們的 [範例應用程式](sdk-guides/sample-apps/sample-apps.md) 玩得開心！
 
