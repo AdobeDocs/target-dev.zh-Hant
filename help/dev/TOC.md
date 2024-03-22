@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: 49b6572c0d414ab304712691c97794bb0b1e3781
+source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 45%
@@ -22,7 +22,7 @@ ht-degree: 45%
       + [隱私權與資料保護規範](before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)
       + [Target Cookie](before-implement/privacy/cookie-behavior.md)
       + [刪除 Target Cookie](before-implement/privacy/cookie-deleting.md)
-      + [第三方Cookie淘汰對Target (at.js)的影響](/help/dev/before-implement/privacy/third_party_cookie_deprecation)
+      + [第三方Cookie淘汰對Target (at.js)的影響](/help/dev/before-implement/privacy/third-party-cookie-deprecation.md)
       + [Google Chrome SameSite Cookie 原則](before-implement/privacy/google-chrome-samesite-cookie-policies.md)
       + [Apple 智慧型追蹤預防 (ITP) 2.x](before-implement/privacy/apple-itp-2x.md)
       + [內容安全性政策 (CSP)](before-implement/privacy/content-security-policy.md)
