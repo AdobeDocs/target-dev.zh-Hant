@@ -4,10 +4,10 @@ description: 瞭解如何實作 [!DNL Adobe Target] 對於使用者端Web，使�
 title: 如何實作 [!DNL Target] 適用於使用者端Web
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2d2a593df661c7e6c6e6384af6042e8aa4575fdb
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 30%
+source-wordcount: '207'
+ht-degree: 28%
 
 ---
 
@@ -24,3 +24,6 @@ ht-degree: 30%
 * [[!DNL Target] at.js JavaScript資料庫](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
 
   at.js JavaScript程式庫改善Web實施的頁面載入時間、改善安全性，以及為單頁應用程式提供更好的實施選項。 如果您選擇移轉至at.js，請參閱 [At.js如何運作](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) 和 [[!DNL Adobe Target] 技能培養：開發人員聊天、將Adobe Target的mbox.js遷移到at.js](https://seminars.adobeconnect.com/ptdo6mfo6qn6/?proto=true).
+
+
+另請參閱 [比較at.js程式庫與Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/adobe-target/web-sdk-atjs-comparison){target=_blank} 以瞭解這兩種實作方法之間的差異。
