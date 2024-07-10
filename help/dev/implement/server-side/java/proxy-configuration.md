@@ -3,9 +3,9 @@ title: 在中實作Proxy設定 [!DNL Adobe Target] Java SDK
 description: 瞭解如何在中設定TargetClient proxy設定 [!DNL Adobe Target] Java SDK.
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
@@ -41,3 +41,17 @@ ClientConfig clientConfig = ClientConfig.builder()
     .build();
 TargetClient targetClient = TargetClient.create(clientConfig);
 ```
+
+## 裝置上決策
+
+對於擷取規則成品的請求，應將Proxy設定為不快取回應。 不過，如果無法針對該要求設定Proxy的快取機制，請使用設定選項作為繞過Proxy層級快取的因應措施。 此因應措施新增 `Authorization` 帶有空字串值的標頭傳送至規則請求，應向Proxy指出不應快取回應。
+
+若要啟用此因應措施，請設定下列專案：
+
+```java {line-numbers="true"}
+ClientConfig.builder()
+    .shouldArtifactRequestBypassProxyCache(true)
+    .build();
+```
+
+
