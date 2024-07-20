@@ -1,25 +1,25 @@
 ---
 keywords: adobe.target.sendNotifications， sendNotifications， sendnotifications，傳送通知，通知， at.js，函式，函式， $9
-description: 使用 [!UICONTROL adobe.target.sendNotifications()] ，將通知傳送至 [!DNL Target] 呈現體驗時採用的Edge [!UICONTROL applyOffer](s)。 (at.js.2.1 +)
+description: 使用at.js的[!UICONTROL adobe.target.sendNotifications()]，在體驗呈現時傳送通知給 [!DNL Target] edge，而不使用[!UICONTROL applyOffer]。 (at.js.2.1 +)
 title: 如何使用adobe.target.sendNotifications()函式？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 84%
+source-wordcount: '640'
+ht-degree: 83%
 
 ---
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-此函式傳送通知至 [!DNL Target] 在不使用的情況下呈現體驗時進行Edge `[!UICONTROL adobe.target.applyOffer()]` 或 `[!UICONTROL adobe.target.applyOffers()]`.
+此函式會在體驗呈現時傳送通知給[!DNL Target]邊緣，而不需要使用`[!UICONTROL adobe.target.applyOffer()]`或`[!UICONTROL adobe.target.applyOffers()]`。
 
 >[!NOTE]
 >
 >此函數已在 at.js 2.1.0 中推出，且將適用於 2.1.0 以上的任何版本。
 
-| 機碼 | 類型 | 必要? | 說明 |
+| 索引鍵 | 類型 | 必要? | 說明 |
 | --- | --- | --- | --- |
 | consumerId | 字串 | 無 | 如果未提供，預設值為用戶端的全域 mbox。此機碼可用來產生用於 A4T 整合的補充資料 ID。 |
 | 請求 | 物件 | 是 | 請參閱下方的「要求」表格。 |
@@ -48,7 +48,7 @@ ht-degree: 84%
 | Request > notifications > timestamp | 數字`<int64>` | 是 |  | 自 UNIX 紀元以來經過時間之通知的時間戳記 (以毫秒為單位)。 |
 | Request > notifications > tokens | 字串陣列 | 是 |  | 根據通知類型，顯示內容或點擊選取器的 Token 清單。 |
 | Request > notifications > mbox | 物件 | 無 |  | mbox 的通知。 |
-| Request > notifications > mbox > name | 字串 | 無 | 不允許使用任何空白值。<p>允許的字元: 請參閱此表格後的備註。 | mBox 名稱。 |
+| Request > notifications > mbox > name | 字串 | 無 | 不允許使用任何空白值。<p>允許的字元：請參閱此表格後的備註。 | mBox 名稱。 |
 | Request > notifications > mbox > state | 字串 | 無 |  | mbox 狀態 Token。 |
 | Request > notifications > view | 物件 | 無 |  |  |
 | Request > notifications > view > id | 整數 `<int64>` | 無 |  | 檢視 ID。透過檢視 API 建立檢視時，已指派給檢視的 ID。 |
@@ -56,7 +56,7 @@ ht-degree: 84%
 | Request > notifications > view > key | 字串 | 無 | `<=` 512 個字元。 | 檢視金鑰。已透過 API 使用檢視設定的金鑰。 |
 | Request > notifications > view > state | 字串 | 無 |  | 檢視狀態 Token。 |
 
-**注意**：下列字元為 *非* 允許用於 `Request > notifications > mbox > name`：
+**注意**： `Request > notifications > mbox > name`不允許&#x200B;*下列字元*：
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->如果您使用 [!DNL Adobe Analytics]， `[!UICONTROL getOffers()]` 僅具有預先擷取和 `[!UICONTROL sendNotifications()]`，則 [!DNL Analytics] 請求必須在以下時間後觸發： `[!UICONTROL sendNotifications()]` 「 」執行。 其目的在於確保產生的SDID `[!UICONTROL sendNotifications()]` 符合傳送至的SDID [!DNL Analytics] 和 [!DNL Target].
+>如果您使用[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]`且僅具有預先擷取，而且使用`[!UICONTROL sendNotifications()]`，則必須在執行`[!UICONTROL sendNotifications()]`之後觸發[!DNL Analytics]要求。 其目的在於確保`[!UICONTROL sendNotifications()]`產生的SDID符合傳送給[!DNL Analytics]和[!DNL Target]的SDID。

@@ -1,25 +1,25 @@
 ---
 keywords: 實作、實作、設定、設定、指令碼設定檔屬性
-description: 將資料匯入 [!DNL Target] 使用指令碼設定檔屬性。
-title: 如何將資料帶入 [!DNL Target] 使用指令碼設定檔屬性？
+description: 使用指令碼設定檔屬性將資料匯入 [!DNL Target] 。
+title: 如何使用指令碼設定檔屬性將資料帶入 [!DNL Target] ？
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '283'
+ht-degree: 74%
 
 ---
 
 # 指令碼設定檔屬性
 
-指令碼設定檔屬性是在 [!DNL Adobe Target] 解決方案。 值取決於每次伺服器呼叫在 Target 的伺服器上執行 JavaScript 片段。
+指令碼設定檔屬性是在[!DNL Adobe Target]解決方案中定義的名稱/值組。 值取決於每次伺服器呼叫在 Target 的伺服器上執行 JavaScript 片段。
 
 使用者撰寫較小的程式碼片段，在每次 mbox 呼叫時執行，以及在評估訪客的對象和活動成員資格之前執行。
 
 ## 格式
 
-指令碼設定檔屬性是在 Target 的「對象」區段中建立。任何屬性名稱都是有效的，而值是由所撰寫的JavaScript函式的結果。 [!DNL Target] 使用者。 在 Target 中，屬性名稱開頭自動加上 &quot;user.&quot; in [!DNL Target] 以區別於頁面內設定檔屬性。
+指令碼設定檔屬性是在 Target 的「對象」區段中建立。任何屬性名稱都有效，且值是[!DNL Target]使用者所撰寫的JavaScript函式的結果。 在 Target 中，屬性名稱開頭自動加上 &quot;user.&quot; （在[!DNL Target]中），以區別它們與頁面內設定檔屬性。
 
 程式碼片段以 Rhino JS 語言撰寫，可參考 Token 和其他值。
 

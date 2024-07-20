@@ -1,18 +1,18 @@
 ---
 title: 自動下載、儲存和更新裝置上決策規則成品
-description: 瞭解如何在初始化時使用裝置上決策規則成品 [!DNL Adobe Target] SDK.
+description: 瞭解如何在初始化 [!DNL Adobe Target] SDK時使用裝置上決策規則成品。
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# 透過自動下載、儲存和更新規則成品 [!DNL Adobe Target] SDK
+# 透過[!DNL Adobe Target] SDK自動下載、儲存和更新規則成品
 
-當您能夠初始化 [!DNL Adobe Target] SDK可在您初始化並啟動網頁伺服器的同時啟動。 規則成品將由 [!DNL Adobe Target] SDK並快取至記憶體中，然後網站伺服器應用程式才會開始處理請求。 一旦您的網頁應用程式啟動並執行，所有 [!DNL Adobe Target] 將使用記憶體中的規則成品來執行決定。 快取的規則成品將會根據 `pollingInterval` 您可以在SDK初始化步驟中指定。
+此方法最適合您在初始化[!DNL Adobe Target] SDK的同時初始化Web伺服器並啟動它。 規則成品將由[!DNL Adobe Target] SDK下載並快取到記憶體中，然後您的Web伺服器應用程式才會開始提供要求。 一旦您的Web應用程式啟動並執行，所有[!DNL Adobe Target]決定都將使用記憶體中的規則成品來執行。 快取的規則成品將會根據您在SDK初始化步驟期間指定的`pollingInterval`更新。
 
 ## 步驟摘要
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!BEGINTABS]
 
->[!TAB npm]
+>[!TAB NPM]
 
 ```javascript {line-numbers="true"}
 npm i @adobe/target-nodejs-sdk -P
@@ -92,10 +92,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 使用者端和organizationId都可從下列位置擷取： [!DNL Adobe Target] 瀏覽至 **[!UICONTROL 管理]** > **[!UICONTROL 實施]**，如下所示。
+1. 使用者端和organizationId均可透過導覽至「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**」從[!DNL Adobe Target]擷取，如下所示。
 
-   &lt;! — 插入image-client-code.png —>
-   ![Target中「管理」下的「實作」頁面](assets/asset-rule-artifact-3.png)
+   &lt;！ — 插入image-client-code.png —>
+   在Target](assets/asset-rule-artifact-3.png)中管理下的![實作頁面
 
 ## 3.儲存和使用規則成品
 
@@ -146,9 +146,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->在上述程式碼範例中， `TargetClient` 物件包含記憶體內部規則成品的參考。 當您使用此物件來叫用標準SDK方法時，它會使用記憶體中的規則成品來決策。 如果您的應用程式結構化，以致於您必須在初始化並接聽使用者端請求的檔案以外的檔案中呼叫SDK方法，而且如果這些檔案無法存取TargetClient物件，則您可以下載JSON裝載並將其儲存在本機JSON檔案中，以便在其他需要初始化SDK的檔案上使用。 這將在下一節中關於以下內容進行說明 [使用JSON裝載下載規則成品](rule-artifact-json.md).
+>在上述程式碼範例中，`TargetClient`物件包含記憶體內部規則成品的參考。 當您使用此物件來叫用標準SDK方法時，它會使用記憶體中的規則成品來決策。 如果您的應用程式結構化，以致於您必須在初始化並接聽使用者端請求的檔案以外的檔案中呼叫SDK方法，而且如果這些檔案無法存取TargetClient物件，則您可以下載JSON裝載並將其儲存在本機JSON檔案中，以便在其他需要初始化SDK的檔案上使用。 有關使用JSON裝載[下載規則成品](rule-artifact-json.md)的下一節將對此進行說明。
 
-以下是初始化 [!DNL Adobe Target] SDK.
+以下是初始化[!DNL Adobe Target] SDK後啟動網頁應用程式的範例。
 
 >[!BEGINTABS]
 

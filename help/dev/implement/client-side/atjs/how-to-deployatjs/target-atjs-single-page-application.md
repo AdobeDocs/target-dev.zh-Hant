@@ -1,13 +1,13 @@
 ---
 keywords: 單頁應用程式實作，實作單頁應用程式， spa， at.js 2.x， at.js，單頁應用程式，單頁應用程式， spa， SPA，單頁應用程式實作
-description: 瞭解如何使用 [!DNL Adobe Target] at.js 2.x實作 [!DNL Target] 適用於單頁應用程式(SPA)。
-title: 我可以實作嗎 [!DNL Target] 適用於單頁應用程式(SPA)？
+description: 瞭解如何使用 [!DNL Adobe Target] at.js 2.x為單頁應用程式(SPA)實作 [!DNL Target] 。
+title: 我可以針對單頁應用程式(SPA)實作 [!DNL Target] 嗎？
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '2770'
-ht-degree: 60%
+source-wordcount: '2728'
+ht-degree: 58%
 
 ---
 
@@ -25,9 +25,9 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 * 顯著改善網站使用者體驗，因為可透過快取立即顯示選件，而不會發生傳統伺服器呼叫造成的時間延遲。
 * 簡單的單行程式碼和一次性開發人員設定，讓行銷人員可透過 VEC 在 SPA 上建立和執行 A/B 和體驗目標鎖定 (XT) 活動。
 
-## [!DNL Adobe Target] 檢視和單頁應用程式
+## [!DNL Adobe Target]個檢視和單頁應用程式
 
-此 [!DNL Adobe Target] SPA適用的VEC充分利用「檢視」的新概念：視覺元素的邏輯組合，共同構成SPA體驗。 因此，SPA 可以視為根據使用者互動轉換檢視，而不是轉換 URL。檢視通常可代表整個網站或網站內的分組視覺元素。
+適用於SPA的[!DNL Adobe Target] VEC充分利用「檢視」的新概念：視覺化元素的邏輯群組，共同構成SPA體驗。 因此，SPA 可以視為根據使用者互動轉換檢視，而不是轉換 URL。檢視通常可代表整個網站或網站內的分組視覺元素。
 
 為了進一步說明檢視，讓我們瀏覽這個在React中實作的假想線上電子商務網站，並探索一些檢視範例。 按一下底下的連結，在新的瀏覽器分頁中開啓此網站。
 
@@ -35,7 +35,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 ![首頁](assets/home.png)
 
-導覽至首頁時，可以馬上看到宣傳復活節特賣活動的主圖影像，以及網站上販售的最新產品。在這個案例中，檢視可定義為整個首頁。請記下這點，因為我們將在「實作」中更深入說明 [!DNL Adobe Target] 檢視下方的區段。
+導覽至首頁時，可以馬上看到宣傳復活節特賣活動的主圖影像，以及網站上販售的最新產品。在這個案例中，檢視可定義為整個首頁。請記下這點，因為我們將在下面的「實作[!DNL Adobe Target]檢視」一節中更深入說明。
 
 **連結： [產品網站](https://target.enablementadobe.com/react/demo/#/products)**
 
@@ -51,7 +51,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 我們決定按一下「載入更多」按鈕，探索這個網站上的更多產品。在此情況下，網站 URL 不會變更。但此處的檢視只能呈現上圖中的第二列產品。該檢視的名稱可為「PRODUCTS-PAGE-2」。
 
-**連結： [簽出](https://target.enablementadobe.com/react/demo/#/checkout)**
+**連結： [結帳](https://target.enablementadobe.com/react/demo/#/checkout)**
 
 ![結帳頁面](assets/checkout.png)
 
@@ -61,33 +61,33 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 假設現在行銷人員想執行 A/B 測試，以瞭解當選取「快捷配送」時，相較於讓這兩種配送選項的按鈕均保持藍色，按鈕從藍色變為紅色是否能增加轉換次數。
 
-## 實作 [!DNL Adobe Target] 檢視
+## 實作[!DNL Adobe Target]檢視
 
-現在我們已涵蓋 [!DNL Adobe Target] 檢視是，我們可以在以下位置運用此概念： [!DNL Target] 讓行銷人員透過VEC在SPA上執行A/B和XT測試。 進行測試需要一次性開發人員設定。以下逐一說明設定步驟。
+我們已在上文中介紹[!DNL Adobe Target]次檢視，現在可以在[!DNL Target]中運用此概念，讓行銷人員透過VEC在SPA上執行A/B和XT測試。 進行測試需要一次性開發人員設定。以下逐一說明設定步驟。
 
 1. 安裝 at.js 2。*x*。
 
-   首先，我們需要安裝at.js 2.*x*.這個at.js版本是針對SPA所開發。 舊版at.js不支援 [!DNL Adobe Target] 檢視和適用於SPA的VEC。
+   首先，我們需要安裝at.js 2.*x* 使用供跨網域追蹤功能時。 這個at.js版本是針對SPA所開發。 舊版at.js不支援[!DNL Adobe Target]檢視和適用於SPA的VEC。
 
-   下載at.js 2.*x* 透過 [!DNL Adobe Target] UI位於 **[!UICONTROL 管理]** > **[!UICONTROL 實施]**. at.js 2.*x* 也可以透過中的標籤部署 [!DNL Adobe Experience Platform].
+   下載at.js 2.透過&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;中的[!DNL Adobe Target] UI *x*。 at.js 2.*x*&#x200B;也可以透過[!DNL Adobe Experience Platform]中的標籤進行部署。
 
-1. 實作at.js 2.*x* 函式， `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` 在您的網站上。
+1. 實作at.js 2.*x*&#x200B;函式，`[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)`在您網站上。
 
-   定義您要執行A/B或XT測試的SPA的檢視後，請實作at.js 2.*x* `triggerView()` 函式中，檢視作為引數傳入。 這麼做可讓行銷人員針對已定義檢視，使用 VEC 設計和執行的 A/B 和 XT 測試。如果沒有針對這些檢視定義 `triggerView()` 函數，VEC 將無法偵測檢視，進而導致行銷人員無法使用 VEC 來設計和執行 A/B 和 XT 測試。
+   定義您要執行A/B或XT測試的SPA的檢視後，請實作at.js 2.*x* `triggerView()`函式，其檢視已傳入做為引數。 這麼做可讓行銷人員針對已定義檢視，使用 VEC 設計和執行的 A/B 和 XT 測試。如果沒有針對這些檢視定義 `triggerView()` 函數，VEC 將無法偵測檢視，進而導致行銷人員無法使用 VEC 來設計和執行 A/B 和 XT 測試。
 
    >[!NOTE]
    >
-   >如需at.js的檢視支援， [viewsEnabled](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#viewsenbabled) 必須設定為true，否則會停用所有檢視功能。
+   >如需at.js的檢視支援，[viewsEnabled](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#viewsenbabled)必須設定為true，否則所有檢視功能都會停用。
 
    **`adobe.target.triggerView(viewName, options)`**
 
    | 參數 | 類型 | 必要? | 驗證 | 說明 |
    | --- | --- | --- | --- | --- |
-   | viewName | 字串 | 是 | 1. 尾端無空格。<br />2.不得空白。<br />3.所有頁面的檢視名稱都不得重複。<br />4.**警告**: 檢視名稱的開頭或結尾不能為「`/`」。這是因為客戶通常會從 URL 路徑中擷取檢視名稱。對我們來說，「home」和「`/home`」是不一樣的。<br />5.**警告**: 同一個檢視不應使用 `{page: true}` 選項連續觸發多次。 | 傳入任何名稱作為要代表檢視的字串類型。此檢視名稱會顯示在 VEC 的&#x200B;**[!UICONTROL 「修改」]**&#x200B;面板中，供行銷人員建立動作和執行 A/B 與 XT 活動。 |
+   | viewName | 字串 | 是 | 1. 尾端無空格。<br />2.不得空白。<br />3.所有頁面的檢視名稱都不得重複。<br />4.**警告**: 檢視名稱的開頭或結尾不能為「`/`」。這是因為客戶通常會從 URL 路徑中擷取檢視名稱。對我們來說，「home」和「`/home`」是不一樣的。<br />5.**警告**: 同一個檢視不應使用 `{page: true}` 選項連續觸發多次。 | 傳入任何名稱作為要代表檢視的字串類型。此檢視名稱會顯示在VEC的&#x200B;**[!UICONTROL Modifications]**&#x200B;面板中，供行銷人員建立動作和執行其A/B和XT活動。 |
    | options | 物件 | 無 |  |  |
-   | options > page | 布林值 | 無 |  | **TRUE:** 頁面的預設值為 true。當 `page=true`，會傳送通知至 Edge 伺服器以增加曝光計數。<br />**FALSE**: 當 `page=false`，不會傳送通知以增加曝光計數。只有當您想重新呈現頁面上含有某個選件的元件時，才應使用此項目。 |
+   | options > page | 布林值 | 無 |  | **TRUE:** 頁面的預設值為 true。當 `page=true`，會傳送通知至 Edge 伺服器以增加曝光計數。<br />**FALSE**：當`page=false`時，將不會傳送通知以增加曝光計數。 只有當您想重新呈現頁面上含有某個選件的元件時，才應使用此項目。 |
 
-   現在，讓我們來看看一些使用範例，瞭解如何叫用 `triggerView()` 函式在React中針對我們的假想電子商務SPA：
+   現在，讓我們來看看一些使用範例，瞭解如何在React中叫用假設性的電子商務SPA的`triggerView()`函式：
 
    **連結： [主網站](https://target.enablementadobe.com/react/demo/#/)**
 
@@ -149,7 +149,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
  }
 ```
 
-**連結： [簽出](https://target.enablementadobe.com/react/demo/#/checkout)**
+**連結： [結帳](https://target.enablementadobe.com/react/demo/#/checkout)**
 
 ![react 結帳](assets/react6.png)
 
@@ -203,7 +203,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 | 5 | [!DNL Target] 會根據 URL 要求參數和個人資料，決定可針對目前頁面和未來檢視傳回哪些活動和體驗給訪客。 |
 | 6 | 目標內容會傳回至頁面，選擇性地包括其他個人化的個人資料值。<br />目前頁面上目標內容會儘快出現，不會有忽隱忽現的預設內容。<br />針對在瀏覽器中快取的使用者 SPA 動作顯示檢視的目標內容，以便在透過 `triggerView()` 觸發檢視時立刻套用，不需額外的伺服器呼叫。 |
 | 7 | Analytics 資料傳送至「資料收集」伺服器。 |
-| 8 | 目標資料符合 [!DNL Analytics] 資料會透過SDID傳遞並處理至 [!DNL Analytics] 報告儲存體。<br />之後，您就可以在兩個專案中檢視Analytics資料 [!DNL Analytics] 和 [!DNL Target] via [!DNL Analytics] 的 [!DNL Target] (A4T)報表。 |
+| 8 | 目標資料透過SDID符合[!DNL Analytics]資料，且已處理至[!DNL Analytics]報表儲存體。然後就可以在[!DNL Target] (A4T)報表的[!DNL Analytics]與[!DNL Target]中，透過[!DNL Analytics]檢視<br />分析資料。 |
 
 現在，SPA 上只要是有實作 `triggerView()` 的位置，系統都會從快取擷取檢視和動作並向使用者顯示，不需要伺服器呼叫。`triggerView()` 也會對 [!DNL Target] 後端發出通知要求，以便增加和記錄曝光計數。
 
@@ -216,7 +216,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 | 3 | 目標內容會儘快出現，不會有忽隱忽現的預設內容。 |
 | 4 | 通知要求會傳送至 [!DNL Target] 個人資料存放區，以計算活動中的訪客數和增加量度。 |
 | 5 | Analytics 資料傳送至資料收集伺服器。 |
-| 6 | Target 資料會透過 SDID 來比對 [!DNL Analytics] 資料，然後經過處理放入 [!DNL Analytics] 報表儲存體中。[!DNL Analytics] 然後可以在兩個中檢視資料 [!DNL Analytics] 和 [!DNL Target] 透過A4T報表。 |
+| 6 | 目標資料透過SDID與[!DNL Analytics]資料相符，並處理至[!DNL Analytics]報表儲存體。 然後就可以透過A4T報表在[!DNL Analytics]和[!DNL Target]中檢視[!DNL Analytics]資料。 |
 
 ## 單一頁面應用程式可視化體驗撰寫器
 
@@ -226,9 +226,9 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 >
 >適用於 SPA 的 VEC 與您用於一般網頁的 VEC 完全相同，不過當您開啟實作了 `triggerView()` 的單頁應用程式時，會提供一些額外功能讓您使用。
 
-## 使用 TriggerView，確保 A4T 可搭配 at.js 2.x 和 SPA 正常運作
+## 使用TriggerView，確保A4T可搭配at.js 2.x和SPA正常運作
 
-若要確保 [ for ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) 可搭配 at.js 2.x 正常運作，請務必在 Target 要求和 Analytics 要求中傳送相同的 SDID。[!DNL Target][!DNL Analytics]
+若要確保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)可搭配at.js 2.x正常運作，請務必在[!DNL Target]要求和[!DNL Analytics]要求中傳送相同的SDID。
 
 SPA 相關最佳實務如下:
 
@@ -271,13 +271,13 @@ document.addEventListener("at-view-end", function(e) {
 >
 >您必須觸發 `at-view-start` 和 `at-view-end` 事件。這些事件不是 at.js 自訂事件的一部分。
 
-雖然這些範例使用JavaScript程式碼，但如果您使用標籤管理員(例如 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md).
+雖然這些範例使用JavaScript程式碼，但如果您使用標籤管理員(例如[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤)，這一切都能簡化。
 
 如果您按照上述步驟進行，您應該能擁有適用於 SPA 的健全 A4T 解決方案。
 
 ## 實作最佳實務
 
-at.js 2.x API可讓您自訂 [!DNL Target] 實作有許多種方式，但在此過程中，務必要遵循正確的作業順序。
+at.js 2.x API可讓您以多種方式自訂您的[!DNL Target]實作，但在此過程中務必要遵循正確的作業順序。
 
 下列資訊說明在瀏覽器中首次載入單頁應用程式時，以及之後發生的任何檢視變更必須遵循的作業順序。
 
@@ -286,22 +286,22 @@ at.js 2.x API可讓您自訂 [!DNL Target] 實作有許多種方式，但在此�
 | 步驟 | Action | 詳細資料 |
 | --- | --- | --- |
 | 1 | 載入訪客API JS | 此程式庫負責將ECID指派給訪客。 此ID稍後由網頁上的其他Adobe解決方案使用。 |
-| 2 | 載入at.js 2.x | at.js 2.x會載入您用來實作的所有必要API [!DNL Target] 要求和檢視。 |
-| 3 | 執行 [!DNL Target] 請求 | 如果您有資料層，建議您載入傳送至所需的關鍵資料 [!DNL Target] 執行之前 [!DNL Target] 要求。 這可讓您使用 `targetPageParams` 以包含您要用於定位的任何資料。<P>時間 `pageLoadEnabled` 和 `viewsEnabled` 在中設為true [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)， at.js會自動要求所有VEC [!DNL Target] 步驟2提供的選件。<P>請注意 `getOffers` 也可用來在頁面載入後取得VEC選件。 若要這麼做，請確認請求包含 `execute>pageLoad` 和 `prefetch>views` 在API呼叫中。 |
-| 4 | 呼叫 `triggerView()` | 因為 [!DNL Target] 您在步驟3起始的請求可傳回「頁面載入」執行和「檢視」的體驗，請確保 `triggerView()` 是在以下專案之後呼叫： [!DNL Target] 會傳回要求，並完成將選件套用至快取。 每個檢視只可執行此步驟一次。 |
-| 5 | 呼叫 [!DNL Analytics] 頁面檢視信標 | 此信標會將與步驟3和4相關聯的SDID傳送至 [!DNL Analytics] 用於資料彙整。 |
-| 6 | 撥打其他電話 `triggerView({"page": false})` | 這是SPA架構的選用步驟，可能會重新呈現頁面上的特定元件，而不會發生檢視變更。 在此類情況下，請務必叫用此API，以確保 [!DNL Target] 在SPA架構重新轉譯元件後，會重新套用體驗。 您可以不限次數地執行此步驟，以確保 [!DNL Target] 體驗會保留在您的SPA檢視中。 |
+| 2 | 載入at.js 2.x | at.js 2.x載入您用來實作[!DNL Target]要求與檢視的所有必要API。 |
+| 3 | 執行[!DNL Target]要求 | 如果您有資料層，建議您在執行[!DNL Target]要求之前，先載入傳送至[!DNL Target]所需的關鍵資料。 這可讓您使用`targetPageParams`來包含您要用於定位的任何資料。<P>當[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)中的`pageLoadEnabled`和`viewsEnabled`設定為true時，at.js會在步驟2中自動要求您使用所有VEC [!DNL Target]選件。<P>請注意，頁面載入後，`getOffers`也可用來取得VEC選件。 若要這麼做，請確定請求在API呼叫中包含`execute>pageLoad`和`prefetch>views`。 |
+| 4 | 撥打`triggerView()` | 由於您在步驟3起始的[!DNL Target]要求可能會傳回頁面載入執行與檢視的體驗，請確定在傳回[!DNL Target]要求之後呼叫`triggerView()`，並完成將選件套用至快取。 每個檢視只可執行此步驟一次。 |
+| 5 | 呼叫[!DNL Analytics]頁面檢視信標 | 此信標會將與步驟3和4相關聯的SDID傳送至[!DNL Analytics]以進行資料拼接。 |
+| 6 | 撥打其他`triggerView({"page": false})` | 這是SPA架構的選用步驟，可能會重新呈現頁面上的特定元件，而不會發生檢視變更。 在這種情況下，請務必叫用此API，以確保在SPA架構重新轉譯元件後重新套用[!DNL Target]體驗。 您可以不限次數地執行此步驟，以確保[!DNL Target]個體驗持續保留在您的SPA檢視中。 |
 
 ### SPA檢視變更的作業順序（無全頁重新載入）
 
 | 步驟 | Action | 詳細資料 |
 | --- | --- | --- |
-| 1 | 呼叫 `visitor.resetState()` | 此API可確保在載入新檢視時為其重新產生SDID。 |
-| 2 | 呼叫 `getOffers()` API | 如果此檢視變更有可能讓目前的訪客符合更多資格，此為選用步驟 [!DNL Target] 活動或取消其活動的資格。 此時，您也可以選擇傳送其他資料至 [!DNL Target] 以啟用進一步的鎖定目標功能。 |
-| 3 | 呼叫 `triggerView()` | 如果您已執行步驟2，則必須等待 [!DNL Target] 請先要求並套用選件至快取，再執行此步驟。 每個檢視只可執行此步驟一次。 |
-| 4 | 呼叫 `triggerView()` | 如果您尚未執行步驟2，則可以在完成步驟1後立即執行此步驟。 如果您已執行步驟2和步驟3，則應該略過此步驟。 每個檢視只可執行此步驟一次。 |
-| 5 | 呼叫 [!DNL Analytics] 頁面檢視信標 | 此信標會將與步驟2、3和4相關聯的SDID傳送至 [!DNL Analytics] 用於資料彙整。 |
-| 6 | 撥打其他電話 `triggerView({"page": false})` | 這是SPA架構的選用步驟，可能會重新呈現頁面上的特定元件，而不會發生檢視變更。 在此類情況下，請務必叫用此API，以確保 [!DNL Target] 在SPA架構重新轉譯元件後，會重新套用體驗。 您可以不限次數地執行此步驟，以確保 [!DNL Target] 體驗會保留在您的SPA檢視中。 |
+| 1 | 撥打`visitor.resetState()` | 此API可確保在載入新檢視時為其重新產生SDID。 |
+| 2 | 呼叫`getOffers()` API以更新快取 | 如果此檢視變更有可能讓目前的訪客符合更多[!DNL Target]活動的資格或讓他們失去活動的資格，則可以選擇執行此步驟。 此時，您也可以選擇傳送其他資料給[!DNL Target]，以啟用進一步的鎖定目標功能。 |
+| 3 | 撥打`triggerView()` | 如果您已執行步驟2，則必須等候[!DNL Target]要求並套用選件至快取，才能執行此步驟。 每個檢視只可執行此步驟一次。 |
+| 4 | 撥打`triggerView()` | 如果您尚未執行步驟2，則可以在完成步驟1後立即執行此步驟。 如果您已執行步驟2和步驟3，則應該略過此步驟。 每個檢視只可執行此步驟一次。 |
+| 5 | 呼叫[!DNL Analytics]頁面檢視信標 | 此信標會將與步驟2、3和4相關聯的SDID傳送至[!DNL Analytics]以進行資料拼接。 |
+| 6 | 撥打其他`triggerView({"page": false})` | 這是SPA架構的選用步驟，可能會重新呈現頁面上的特定元件，而不會發生檢視變更。 在這種情況下，請務必叫用此API，以確保在SPA架構重新轉譯元件後重新套用[!DNL Target]體驗。 您可以不限次數地執行此步驟，以確保[!DNL Target]個體驗持續保留在您的SPA檢視中。 |
 
 ## 訓練影片
 
@@ -317,10 +317,10 @@ at.js 2.x API可讓您自訂 [!DNL Target] 實作有許多種方式，但在此�
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-另請參閱 [在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html) 以取得詳細資訊。
+如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
 
-### 在中使用適用於SPA的VEC [!DNL Adobe Target]
+### 在[!DNL Adobe Target]中使用適用於SPA的VEC
 
 >[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-另請參閱 [在Adobe Target中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html) 以取得詳細資訊。
+如需詳細資訊，請參閱[在Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC)。

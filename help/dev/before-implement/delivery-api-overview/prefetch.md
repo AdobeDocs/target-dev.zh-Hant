@@ -1,31 +1,31 @@
 ---
 title: Adobe Target傳送API預先擷取
-description: 如何在中使用預先擷取 [!UICONTROL Adobe Target傳送API]？
+description: 如何在[!UICONTROL Adobe Target Delivery API]中使用預先擷取？
 keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # 預先擷取
 
-預先擷取可讓行動應用程式和伺服器等使用者端透過一次請求，為多個mbox或檢視擷取內容、在本地快取，並在稍後通知 [!DNL Target] 訪客造訪這些mbox或檢視時。
+預先擷取可讓行動應用程式和伺服器等使用者端在一個要求中擷取多個mbox或檢視的內容、在本地快取，並在訪客造訪這些mbox或檢視時通知[!DNL Target]。
 
 使用預先擷取時，請務必熟悉下列詞語：
 
 | 欄位名稱 | 說明 |
 | --- | --- |
-| `prefetch` | 應擷取但不應標示為已瀏覽的mbox和檢視清單。 此 [!DNL Target] Edge傳回 `eventToken` 預先擷取陣列中存在的每個mbox或檢視。 |
+| `prefetch` | 應擷取但不應標示為已瀏覽的mbox和檢視清單。 [!DNL Target] Edge會針對預先擷取陣列中存在的每個mbox或檢視傳回`eventToken`。 |
 | `notifications` | 先前預先擷取且應標示為已瀏覽的mbox和檢視清單。 |
-| `eventToken` | 預先擷取內容時傳回的雜湊加密權杖。 此Token應傳回 [!DNL Target] 在 `notifications` 陣列。 |
+| `eventToken` | 預先擷取內容時傳回的雜湊加密權杖。 此Token應傳回`notifications`陣列中的[!DNL Target]。 |
 
 ## 預先擷取Mbox
 
-使用者端（例如行動應用程式和伺服器）可在工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免多次呼叫 [!UICONTROL Adobe Target傳送API].
+使用者端（例如行動應用程式和伺服器）可以在一個工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免對[!UICONTROL Adobe Target Delivery API]發出多次呼叫。
 
 ```shell shell-session
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-在 `prefetch` 欄位，新增一或多個 `mboxes` 您想要在工作階段中，為訪客預先擷取至少一次。 預先擷取這些資料之後 `mboxes`，您會收到下列回應：
+在`prefetch`欄位中，針對工作階段中的訪客，新增一或多個您想要預先擷取至少一次的`mboxes`。 預先擷取這些`mboxes`後，您會收到下列回應：
 
 ```JSON {line-numbers="true"}
 {
@@ -120,13 +120,13 @@ curl -X POST \
 }
 ```
 
-在回應中，您會看到 `content` 包含要向特定訪客顯示的體驗的欄位 `mbox`. 若要讓訪客在工作階段中與您的網頁或行動應用程式互動並造訪 `mbox` 在應用程式的任何特定頁面上，可以從快取中提供體驗，而不是製作另一個 [!UICONTROL Adobe Target傳送API] 呼叫。 不過，當體驗從傳遞至訪客時 `mbox`， a `notification` 會透過傳送API呼叫傳送，以便進行曝光記錄。 這是因為 `prefetch` 會快取呼叫，這表示訪客在呼叫快取時未曾看到體驗。 `prefetch` 呼叫發生。 若要進一步瞭解 `notification` 程式，請參閱 [通知](notifications.md).
+在回應中，您會看到包含要向訪客顯示特定`mbox`之體驗的`content`欄位。 快取到您的伺服器上時，這非常有用，這樣當訪客在工作階段中與您的網頁或行動應用程式互動，並在您應用程式的任何特定頁面上造訪`mbox`時，可以從快取中提供體驗，而不是進行另一個[!UICONTROL Adobe Target Delivery API]呼叫。 不過，當體驗從`mbox`傳遞至訪客時，會透過傳送API呼叫傳送`notification`，以進行曝光記錄。 這是因為已快取`prefetch`個呼叫的回應，這表示訪客在發生`prefetch`呼叫時尚未看到體驗。 若要進一步瞭解`notification`程式，請參閱[通知](notifications.md)。
 
-## 使用預先擷取mbox `clickTrack` 使用時的量度 [!UICONTROL 目標分析] (A4T)
+## 使用[!UICONTROL Analytics for Target] (A4T)時具有`clickTrack`個量度的預先擷取mbox
 
-[[!UICONTROL 目標的Adobe Analytics]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一種跨解決方案的整合，可讓您根據以下專案建立活動： [!DNL Analytics] 轉換量度和受眾區段。
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。
 
-下列程式碼片段是預先擷取包含下列專案的mbox所產生的回應： `clickTrack` 要通知的量度 [!DNL Analytics] 已點按優惠方案的時間：
+下列程式碼片段是預先擷取包含`clickTrack`個量度的mbox的回應，以通知[!DNL Analytics]已點按選件：
 
 ```JSON {line-numbers="true"}
 {
@@ -165,11 +165,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->mbox的預先擷取包含 [!DNL Analytics] 僅限合格活動的裝載。 預先擷取尚未合格活動的成功量度會導致報告不一致。
+>mbox的預先擷取僅包含合格活動的[!DNL Analytics]裝載。 預先擷取尚未合格活動的成功量度會導致報告不一致。
 
 ## 預先擷取檢視
 
-檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC已建立 [[!UICONTROL A/B測試]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活動與修改 [SPA的檢視](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) 現在可以預先擷取。
+檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC建立的[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}和[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活動現在可以預先擷取SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的[檢視上有修改。
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +199,7 @@ curl -X POST \
 }'
 ```
 
-上述範例呼叫會預先擷取透過SPA VEC為建立的所有檢視 [!UICONTROL A/B測試] 和要針對網頁顯示的XT活動 `channel`. 請注意，呼叫會預先擷取所有的 [!UICONTROL A/B測試] 或訪客具有的XT活動 `tntId`：`84e8d0e211054f18af365d65f45e902b.28_131` 正在造訪 `url`：`https://target.enablementadobe.com/react/demo/#/` 符合「 」資格。
+上述範例呼叫會預先擷取透過SPA VEC為[!UICONTROL A/B Test]建立的所有檢視，以及要針對網頁`channel`顯示的XT活動。 請注意，呼叫會預先擷取有`tntId`：`84e8d0e211054f18af365d65f45e902b.28_131`的訪客造訪`url`：`https://target.enablementadobe.com/react/demo/#/`時符合資格的[!UICONTROL A/B Test]或XT活動的所有檢視。
 
 ```JSON  {line-numbers="true"}
 {
@@ -280,4 +280,4 @@ curl -X POST \
 }
 ```
 
-在 `content` 回應的欄位，備註中繼資料，例如 `type`， `selector`， `cssSelector`、和 `content`，可在使用者造訪您的頁面時，用來呈現體驗給訪客。 請注意 `prefetched` 如有必要，可以快取內容並轉譯給使用者。
+在回應的`content`欄位中，備註中繼資料，例如`type`、`selector`、`cssSelector`和`content`，這些中繼資料用於在使用者造訪您的頁面時，將體驗呈現給訪客。 請注意，必要時可以快取`prefetched`內容並轉譯給使用者。

@@ -1,36 +1,36 @@
 ---
 title: Adobe Target管理API總覽
-description: 概述 [!DNL Adobe Target Admin API]
+description: ' [!DNL Adobe Target Admin API]的總覽'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Target管理員API總覽
 
-本文提供瞭解和使用所需的背景資訊概觀 [!DNL Adobe Target Admin API]s成功。 以下內容假設您瞭解如何 [設定驗證](../configure-authentication.md) 的 [!DNL Adobe Target Admin API]s.
+本文提供成功瞭解及使用[!DNL Adobe Target Admin API]所需的背景資訊概觀。 下列內容假設您瞭解如何[設定[!DNL Adobe Target Admin API]的驗證](../configure-authentication.md)。
 
 >[!NOTE]
 >
->如果您想要管理 [!DNL Target] 透過UI，請參閱 [的管理區段 *Adobe Target商業從業者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理區段。
 >
->管理員API和設定檔API通常是整體參照（「管理員和設定檔API」），但也可能單獨參照（「管理員API」和「設定檔API」）。 Recommendations API是 [!DNL Target] 管理API。
+>管理員API和設定檔API通常是整體參照（「管理員和設定檔API」），但也可能單獨參照（「管理員API」和「設定檔API」）。 Recommendations API是[!DNL Target] Admin API的特定實作。
 
 ## 開始之前
 
-在所有為提供的程式碼範例中， [管理API](../../administer/admin-api/admin-api-overview-new.md)，取代 {tenant} 使用您的租使用者值， `your-bearer-token` 使用您使用JWT和產生的存取權杖 `your-api-key` 使用的API金鑰 [Adobe Developer Console](https://developer.adobe.com/console/home). 如需有關租戶和JWT的詳細資訊，請參閱如何操作的文章 [設定驗證](../configure-authentication.md) 用於Adobe [!DNL Target] 管理API。
+在為[Admin API](../../administer/admin-api/admin-api-overview-new.md)提供的所有程式碼範例中，將{tenant}取代為您的租使用者值，`your-bearer-token`取代為您使用JWT產生的存取權杖，將`your-api-key`取代為您從[Adobe Developer Console](https://developer.adobe.com/console/home)取得的API金鑰。 如需有關租使用者和JWT的詳細資訊，請參閱有關如何為Adobe[!DNL Target]管理員API [設定驗證](../configure-authentication.md)的文章。
 
 ## 版本設定
 
 所有API都有相關版本。 請務必提供您要使用之正確版本的API。
 
-如果請求包含裝載(POST或PUT)，則 `Content-Type` 請求的標頭用於指定版本。
+如果要求包含裝載(POST或PUT)，則會使用要求的`Content-Type`標頭來指定版本。
 
-如果請求不包含裝載(GET、DELETE或OPTIONS)，則 `Accept` 標頭用於指定版本。
+如果要求不包含裝載(GET、DELETE或OPTIONS)，則會使用`Accept`標頭來指定版本。
 
 如果未提供版本，呼叫將預設為V1 (application/vnd.adobe.target.v1+json)。
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 管理Postman集合
 
-Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理員API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection) 包含需要使用「活動」、「對象」、「選件」、「報表」、「Mbox」和「環境」驗證的所有Target Admin API呼叫
+Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection)包含需要使用「活動」、「對象」、「選件」、「報表」、「Mbox」及「環境」進行驗證的所有Target Admin API呼叫
 
 ## 回應代碼
 
@@ -64,11 +64,11 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 
 | 狀態  | 含義 | 說明 |
 | --- | --- | --- |
-| 200 | [確定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
-| 400 | [Bad Request](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Bad Request. 請求中提供的資料很可能無效。 |  |
+| 200 | [確定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | 確定 |  |
+| 400 | [錯誤請求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 錯誤請求。 請求中提供的資料很可能無效。 |  |
 | 401 | [未獲授權](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允許使用者執行此作業。 |  |
-| 403 | [已禁止](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止存取此資源。 |  |
-| 404 | [找不到](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |  |
+| 403 | [禁止存取](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止存取此資源。 |  |
+| 404 | 找不到[](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |  |
 
 ## 活動
 
@@ -78,7 +78,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 * [體驗鎖定 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
 * [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
 * [自動個人化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多變數測試 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 批次更新
 
@@ -102,7 +102,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 
 #### 許可權與節流
 
-為了執行批次API動作，基礎使用者必須至少擁有「編輯者」許可權（針對每個個別作業，若需要使用者擁有的額外許可權，則個別作業將失敗）。 常見的節流策略會套用至批次API動作，就像每個作業都是個別執行一樣。
+為了執行批次API動作，基礎使用者必須至少擁有「編輯者」許可權（針對每個個別作業，若需要使用者擁有的其他許可權，該個別作業將失敗）。 常見的節流策略會套用至批次API動作，就像每個作業都是個別執行一樣。
 
 當所有作業都完成時，批次處理完成，作業可能成功(2xx statusCode)、失敗（4xx、5xx狀態代碼）或因相依性作業失敗或已略過，而略過。
 
@@ -110,7 +110,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 
 | 屬性 | 說明 | 限制 | 預設值 |
 | --- | --- | --- | --- |
-| body | HTTP批次作業的內文。 將會在POST和PUT以外的所有動作中忽略。 可參考先前批次動作的ID，例如：「offerId」：「{operationIdResponse：」0}&quot;， &quot;segmentId&quot;： &quot;{operationIdResponse：1}&quot; | 應為有效的JSON；若參考operationIdResponse，則參考的operationId回應應為有效的ID，且該動作上的方法應POST | 空白物件 {} |  |
+| 內文 | HTTP批次作業的內文。 將會在POST和PUT以外的所有動作中忽略。 可參考先前批次動作的ID，例如：「offerId」：「{operationIdResponse：0}」、「segmentId」：「{operationIdResponse：1}」 | 應為有效的JSON；若參考operationIdResponse，則參考的operationId回應應為有效的ID，且該動作上的方法應POST | 空白物件{} |  |
 | dependsOnOperationIds | 條件約束ID的清單，可保證目前的作業只有在指定的作業順利完成時才執行。 可用於實現作業的鏈結。 | 最多允許255個操作；只允許唯一值；應指向陣列中的有效operationId；不允許循環相依性 |  |  |
 | 標頭 | 要連同特定操作一起傳送的鍵值標頭陣列。 如果批次API的驗證已透過「授權」標頭執行，其也將針對個別作業複製。 | 陣列中允許的標頭數上限為50 | Content-Type： application/json |  |
 | 標題 — >名稱 | 標頭名稱 | 與其他標頭名稱之間應是唯一的。 rfc的標頭不區分大小寫，否則值會相互覆寫。 |  |  |
@@ -118,7 +118,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 | 方法 | 要使用的HTTP方法。 可用選項：GET、POST、PUT、PATCH、DELETE | 僅允許GET、POST、PUT、PATCH、DELETE方法 |  |  |
 | operationId | 作業ID，用來識別其他作業中的作業，以取得回應和參考結果。 | 在其他作業中是唯一的；值介於0到255之間 |  |  |
 | 操作 | 要在批次中執行的作業清單。 順序不相關。 | 最多允許256個操作 |  |  |
-| relativeUrl | 管理員rest API的相對URL，「/admin/rest/」之後的部分。 可以包含查詢字串引數，例如： &quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以參照含有來自先前批次動作ID的URL，例如： &quot;/v1/offers/{operationIdResponse：0}「。 若傳送查詢引數，引數必須經過URL編碼。 | 應該以/ （相對）開頭；僅支援新的有效JSON API；如果是relativeURL無效，則會傳回特定操作的404回應；如果引用operationIdResponse，則引用的operationId回應應為有效的ID，且該動作上的方法應為POST |  |  |
+| relativeUrl | 管理員rest API的相對URL，「/admin/rest/」之後的部分。 可以包含查詢字串引數，例如： &quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以參照包含先前批次動作ID的URL，例如： &quot;/v1/offers/{operationIdResponse：0}&quot;。 若傳送查詢引數，引數必須經過URL編碼。 | 應該以/ （相對）開頭；僅支援新的有效JSON API；如果是relativeURL無效，則會傳回特定操作的404回應；如果引用operationIdResponse，則引用的operationId回應應為有效的ID，且該動作上的方法應為POST |  |  |
 
 #### 範例要求物件
 
@@ -154,7 +154,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 這個 [Target管理�
 | 標頭 | 要作為特定操作的回應傳送的鍵值標頭陣列。 |  |
 | 標題 — >名稱 | 標頭名稱 |  |
 | 標題 — >值 | 標頭值 |  |
-| body | HTTP批次回應作業的內文 |  |
+| 內文 | HTTP批次回應作業的內文 |  |
 
 #### 範例回應物件
 

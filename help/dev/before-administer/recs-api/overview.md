@@ -8,19 +8,19 @@ author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
 source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '330'
 ht-degree: 2%
 
 ---
 
 # Adobe Recommendations API總覽
 
-與Recommendations相關的API包括 [管理API](../../before-administer/target-api-overview.md) 可讓您：
+與Recommendations相關的API包括[管理員API](../../before-administer/target-api-overview.md)，可讓您：
 
 * 管理建議產品或內容的目錄
 * 管理您的Recommendations演演算法和活動
 
-使用目標 [傳送API](../../implement/delivery-api/overview.md) 透過Recommendations，您也可以：
+搭配Recommendations使用Target [傳送API](../../implement/delivery-api/overview.md)，您也可以：
 
 * 擷取JSON、HTML或XML物件中的建議，以便這些建議可在網頁、行動裝置、電子郵件、物聯網(IOT)和其他管道中顯示。
 
@@ -36,9 +36,9 @@ ht-degree: 2%
 
 本指南適用對象為Target API或Recommendations API的新手開發人員。
 
-## 必要條件 {#prerequisites}
+## 必備條件 {#prerequisites}
 
-Target管理員API需要 [Adobe驗證設定](../configure-authentication.md). 使用Recommendations API之前，請確定您已設定此專案。
+Target管理員API需要[Adobe驗證設定](../configure-authentication.md)。 使用Recommendations API之前，請確定您已設定此專案。
 
 ## 資源
 
@@ -46,5 +46,5 @@ Target管理員API需要 [Adobe驗證設定](../configure-authentication.md). �
 
 | 資源 | 詳細資料 |
 | --- | --- |
-| Postman | 取得 [Postman應用程式](https://www.postman.com/downloads/) 適用於您的作業系統。 Postman basic可免費建立帳戶。 雖然在一般情況下使用Adobe Target API不需要使用，但Postman可簡化API工作流程，而Adobe Target提供多個Postman集合來協助執行其API並瞭解其運作方式。 本指南的其餘部分假設您具備Postman的工作知識。 如需協助，請參考 [Postman檔案](https://learning.getpostman.com/). |
-| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<UL><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |
+| Postman | 取得您作業系統的[Postman應用程式](https://www.postman.com/downloads/)。 Postman basic可免費建立帳戶。 雖然在一般情況下使用Adobe Target API不需要使用，但Postman可簡化API工作流程，而Adobe Target提供多個Postman集合來協助執行其API並瞭解其運作方式。 本指南的其餘部分假設您具備Postman的工作知識。 如需協助，請參考[Postman檔案](https://learning.getpostman.com/)。 |
+| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<UL><li>[Adobe I/O的Github](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

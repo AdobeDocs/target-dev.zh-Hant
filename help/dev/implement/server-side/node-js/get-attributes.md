@@ -1,11 +1,11 @@
 ---
-title: 如何在中使用非同步請求 [!DNL Adobe Target] Node.js SDK
-description: 瞭解如何 [!DNL Target] Node.js SDK支援非同步請求，這可以將有效目標時間減少為零。
+title: 如何在 [!DNL Adobe Target] Node.js SDK中使用非同步要求
+description: 瞭解 [!DNL Target] Node.js SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '112'
 ht-degree: 18%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 ## 說明
 
-`[!UICONTROL getAttributes()]` 用於擷取實驗和個人化體驗 [!DNL Target] 和擷取屬性值。
+`[!UICONTROL getAttributes()]`是用來從[!DNL Target]擷取實驗與個人化體驗，以及擷取屬性值。
 
 ## 方法
 
@@ -33,13 +33,13 @@ TargetClient.getAttributes(mboxNames: Array, options: Object): Promise
 
 ## Promise
 
-此 `Promise` 傳回者 `TargetClient.getAttributes()` 使用下列方法解析物件：
+`TargetClient.getAttributes()`傳回的`Promise`會使用下列方法解析物件：
 
 | 方法 | 傳回類型 | 說明 |
 | --- | --- | --- |
 | getValue(mboxName， key) | 任何 | 傳回指定mbox名稱和屬性索引鍵的值 |
 | asObject(mboxName) | 物件 | 傳回具有索引鍵值配對的簡單json物件 |
-| getResponse() | [getOffers回應](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 傳回通常由傳回的回應物件 `getOffers` |
+| getResponse() | [getOffers回應](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 傳回`getOffers`通常會傳回的回應物件 |
 
 ## 範例
 

@@ -1,38 +1,38 @@
 ---
 keywords: 實作， javascript資料庫， js， atjs，裝置上決策，裝置上決策，支援的功能， $8
-description: 瞭解支援哪些功能 [!UICONTROL 裝置上決策].
+description: 瞭解[!UICONTROL on-device decisioning]支援哪些功能。
 title: 裝置上決策支援哪些功能
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
 source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 10%
+source-wordcount: '478'
+ht-degree: 12%
 
 ---
 
-# 支援的功能 [!UICONTROL 裝置上決策]
+# [!UICONTROL on-device decisioning]支援的功能
 
-此 [!DNL Adobe Target] JS SDK讓客戶可靈活選擇資料的效能與最新狀態，以便做出決策。 換言之，如果透過機器學習提供最相關且最吸引人的個人化內容對您而言至關重要，則應進行即時伺服器呼叫。 但是，當效能較為重要時，就應該做出裝置上及記憶體中的決策。 的 [!UICONTROL 裝置上決策] 若要使用，請參閱以下列出所支援功能的章節。
+[!DNL Adobe Target] JS SDK讓客戶可靈活選擇資料的效能與最新狀態，以便做出決策。 換言之，如果透過機器學習提供最相關且最吸引人的個人化內容對您而言至關重要，則應進行即時伺服器呼叫。 但是，當效能較為重要時，就應該做出裝置上及記憶體中的決策。 若要讓[!UICONTROL on-device decisioning]運作，請參閱下列區段，其中列出支援的功能。
 
 ## 支援的活動類型
 
-下表指出其 [活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) 建立者： [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)支援或不支援 [!UICONTROL 裝置上決策].
+下表指出哪些[活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)是由[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)或[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)所建立，支援[!UICONTROL on-device decisioning]或不支援。
 
 | 活動類型 | 支援? |
 | --- | --- |
 | [A/B 測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | 是 |
-| [自動分配](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | 無 |
-| [自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![Premium](../../../assets/premium.png) | 否 |
+| [自動分配](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | 否 |
+| [自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![進階版](../../../assets/premium.png) | 否 |
 | [多變數測試](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html) (MVT) | 否 |
 | [體驗鎖定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) | 是 |
-| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![Premium](../../../assets/premium.png) | 無 |
-| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![Premium](../../../assets/premium.png) | 否 |
-| [使用目標分析(Analytics)的活動](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T) | 是 |
+| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![進階版](../../../assets/premium.png) | 否 |
+| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![進階版](../../../assets/premium.png) | 否 |
+| 使用Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T)的[活動 | 是 |
 
 ## 對象目標定位
 
-下表指出支援或不支援的對象規則 [!UICONTROL 裝置上決策].
+下表指出[!UICONTROL on-device decisioning]支援或不支援的對象規則。
 
 | 對象規則 | 支援? |
 | --- | --- |
@@ -46,11 +46,11 @@ ht-degree: 10%
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| Adobe Experience Cloud受眾<P>([!DNL Audiences from Adobe Analytics], [!DNL Adobe Audience Manager], 和 [!DNL Adobe Experience Manager]) | 否 |
+| Adobe Experience Cloud受眾<P>（[!DNL Audiences from Adobe Analytics]、[!DNL Adobe Audience Manager]和[!DNL Adobe Experience Manager]） | 否 |
 
-### 的地理目標定位 [!UICONTROL 裝置上決策]
+### [!UICONTROL on-device decisioning]的地理定位
 
-為了將延遲維持在最小 [!UICONTROL 裝置上決策] 活動包含以地理為基礎的對象，Adobe建議您在呼叫中提供地理值， [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). 在請求的內容中設定Geo物件。 這表示透過瀏覽器判斷每位訪客所在位置。 例如，您可以使用您設定的服務執行IP對地理位置的查詢。 有些託管提供者(例如Google Cloud)會透過每個中的自訂標題提供此功能 `HttpServletRequest`.
+若要針對具有地理型對象的[!UICONTROL on-device decisioning]活動維持最低延遲度，Adobe建議您在[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)的呼叫中自行提供地理值。 在請求的內容中設定Geo物件。 這表示透過瀏覽器判斷每位訪客所在位置。 例如，您可以使用您設定的服務執行IP對地理位置的查詢。 某些託管提供者(例如Google Cloud)會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -72,7 +72,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-不過，如果您無法在伺服器上執行IP對地理位置的查詢，但您仍想要執行 [!UICONTROL 裝置上決策] 的 [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) 如果請求包含以地理為基礎的對象，這也受到支援。 此方法的缺點在於它使用遠端IP對地理的查詢，這會為每個查詢增加延遲 `getOffers` 呼叫。 此延遲應低於 `getOffers` 使用伺服器端決策呼叫，因為它點選了位在伺服器附近的CDN。 在要求SDK擷取訪客IP位址之地理位置的內容中，僅提供地理物件的「ipAddress」欄位。 如果提供「ipAddress」以外的任何其他欄位， [!DNL Target] SDK不會擷取地理位置中繼資料以進行解析。
+不過，如果您無法在伺服器上執行IP對地理的查詢，但您仍想要對包含地理型受眾的[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)要求執行[!UICONTROL on-device decisioning]，也支援此功能。 此方法的缺點在於它使用遠端IP對地理的查閱，這會增加每個`getOffers`呼叫的延遲。 此延遲應低於具有伺服器端決策的`getOffers`呼叫，因為它會點選位於伺服器附近的CDN。 在要求SDK擷取訪客IP位址之地理位置的內容中，僅提供地理物件的「ipAddress」欄位。 如果提供除了「ipAddress」之外的任何其他欄位，[!DNL Target] SDK將不會擷取地理位置中繼資料以進行解析。
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -92,7 +92,7 @@ window.adobe.target.getOffers({
 
 ### 配置方法
 
-下表指出支援或不支援的配置方法 [!UICONTROL 裝置上決策].
+下表指出[!UICONTROL on-device decisioning]支援或不支援的配置方法。
 
 | 配置方法 | 支援? |
 | --- | --- |

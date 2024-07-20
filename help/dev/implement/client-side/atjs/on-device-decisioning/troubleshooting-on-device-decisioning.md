@@ -1,23 +1,23 @@
 ---
 keywords: 實作， javascript程式庫， js， atjs，裝置上決策，裝置上決策， at.js，裝置上，裝置上，疑難排解，疑難排解，實作2
-description: 瞭解如何疑難排解 [!UICONTROL 裝置上決策] 使用at.js資料庫。
-title: 如何使用at.js JavaScript程式庫疑難排解裝置上決策？
+description: 瞭解如何使用at.js資料庫來疑難排解[!UICONTROL on-device decisioning]。
+title: 如何透過at.js JavaScript程式庫疑難排解裝置上決策？
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-# 疑難排除 [!UICONTROL 裝置上決策] 適用於at.js
+# 疑難排解at.js的[!UICONTROL on-device decisioning]
 
-完成下列步驟以進行疑難排解 [!UICONTROL 裝置上決策] 在 [!UICONTROL Adobe Target] 使用at.js JavaScript資料庫：
+完成下列步驟，使用at.js JavaScript程式庫疑難排解[!UICONTROL Adobe Target]中的[!UICONTROL on-device decisioning]：
 
 ## 步驟1：啟用at.js的主控台記錄檔
 
-附加URL引數 `mboxDebug=1` 啟用at.js，以在瀏覽器的主控台中列印訊息。
+附加URL引數`mboxDebug=1`可讓at.js在瀏覽器的主控台中列印訊息。
 
 所有訊息都包含「AT：」前置詞，以便於概觀。 為確保成功載入成品，您的主控台記錄應包含類似下列的訊息：
 
@@ -30,7 +30,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 （按一下影像可展開至完整寬度。）
 
-![含有成品訊息的主控台記錄](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "含有成品訊息的主控台記錄"){zoomable=&quot;yes&quot;}
+![含有成品訊息的主控台記錄檔](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "含有成品訊息的主控台記錄檔"){zoomable="yes"}
 
 ## 步驟2：驗證瀏覽器網路標籤中的規則成品下載
 
@@ -44,11 +44,11 @@ AT: LD.ArtifactProvider artifact received - status=200
 
    此外，您可以依「/delivery|rules.json/」篩選，以顯示所有Target呼叫和成品rules.json。
 
-   ![Google Chrome中的網路索引標籤](assets/rule-json.png)
+   Google Chrome中的![網路索引標籤](assets/rule-json.png)
 
 ## 步驟3：使用at.js自訂事件驗證規則成品下載
 
-at.js資料庫會傳送兩個新的自訂事件來支援 [!UICONTROL 裝置上決策].
+at.js資料庫會傳送兩個新的自訂事件來支援[!UICONTROL on-device decisioning]。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

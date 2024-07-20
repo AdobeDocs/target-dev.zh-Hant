@@ -1,19 +1,19 @@
 ---
 keywords: 安全性, 安全性做法
-description: 了解 用於增強您的資料和 Adobe [!DNL Adobe Target] 體驗安全性的程序。
+description: 瞭解Adobe用來強化資料和 [!DNL Adobe Target] 體驗安全性的程式。
 title: Target如何處理我資料的安全性？
 feature: Privacy & Security
 exl-id: f24c8b0d-8039-4e07-9ecf-de5a7adebce7
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 94%
+source-wordcount: '147'
+ht-degree: 69%
 
 ---
 
-# [!DNL Target] 安全性概覽
+# [!DNL Target]安全性總覽
 
-Adobe 為了加強資料和 [!DNL Adobe Target] 體驗的安全性，而實作的深度方法與安全性程序的相關資訊。
+有關Adobe為了增強您的資料和[!DNL Adobe Target]體驗的安全性而實作的深入方法和安全性程式的資訊。
 
 在 Adobe，我們很嚴肅看待數位體驗的安全性。在我們的內部軟體開發及作業程序和工具中，安全性做法已有深厚基礎，我們的跨職能團隊也都恪遵安全性做法，以防止、偵測及緊急因應各種事件。
 

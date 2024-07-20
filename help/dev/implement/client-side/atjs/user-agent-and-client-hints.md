@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -175,7 +175,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 ### at.js 2.9.0 版 (或更新)
 
-從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並傳送至Target，當 `getOffer/getOffers()` 稱為。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行對象細分或使用設定檔指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
+從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並會在呼叫`getOffer/getOffers()`時傳送至Target。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行對象細分或使用設定檔指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### 伺服器端 SDK
 
-如需如何透過伺服器端SDK傳遞使用者端提示的詳細資訊，請參閱 [使用者端提示](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) 「伺服器端實作」說明檔案底下。
+如需如何透過伺服器端SDK傳遞使用者端提示的詳細資訊，請參閱伺服器端實作檔案中的[使用者端提示](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints)。

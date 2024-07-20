@@ -6,8 +6,8 @@ feature: at.js
 role: Developer
 source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
 workflow-type: tm+mt
-source-wordcount: '1596'
-ht-degree: 60%
+source-wordcount: '1580'
+ht-degree: 53%
 
 ---
 
@@ -17,19 +17,19 @@ Cookie 的行為取決於其屬於第一方 Cookie、具有第一方 Cookie 的�
 
 >[!NOTE]
 >
->本主題包含 `mboxSession` 和 `mboxPC` 的相關資訊。實作最佳實務建議您不要使用Cookie資料連結或儲存敏感資訊： `mboxSession` 或 `mboxPC`.
+>本主題包含 `mboxSession` 和 `mboxPC` 的相關資訊。實作最佳實務建議您不要使用Cookie資料連結或儲存敏感資訊： `mboxSession`或`mboxPC`。
 
-另請參閱 [刪除Target Cookie](/help/dev/before-implement/privacy/cookie-deleting.md).
+另請參閱[刪除Target Cookie](/help/dev/before-implement/privacy/cookie-deleting.md)。
 
 ## 何時使用第一方或第三方 Cookie
 
-您的網站設定會決定您要使用何種 Cookie。嘗試瞭解第一方與第三方 Cookie 時，建議先瞭解 Target 的運作方式。請參閱 [Adobe Target 運作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)，以瞭解詳細資訊。
+您的網站設定會決定您要使用何種 Cookie。嘗試瞭解第一方與第三方 Cookie 時，建議先瞭解 Target 的運作方式。如需詳細資訊，請參閱[Adobe Target的運作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
 
 cookie 有三種主要的使用狀況:
 
 1. 單一網域。
 
-   所有測試都會在單一高階網域中進行(`www.domain.com`， `store.domain.com`， `anysub.domain.com`，依此類推)。
+   所有測試都在一個頂層網域（`www.domain.com`、`store.domain.com`、`anysub.domain.com`等）中進行。
 
    方法：僅使用第一方Cookie （預設）。
 
@@ -41,7 +41,7 @@ cookie 有三種主要的使用狀況:
    * 僅啟用協力廠商（很少見，但優點在於可將mbox Cookie排除在網域之外）。
    * 僅啟用第一方 Cookie，並在跨網域時傳遞 `mboxSession` 參數。
 
-     此 `mboxSession` 引數必須傳遞至登陸頁面，並從JavaScript程式庫(Adobe Experience Platform Web SDK或at.js)參考。 該頁面不能是中繼重新導向器頁面。
+     `mboxSession`引數必須傳遞至登陸頁面，並從JavaScript資料庫(Adobe Experience Platform Web SDK或at.js)參考。 該頁面不能是中繼重新導向器頁面。
 
 1. 您只會在第三方網站上使用 adbox 或 Flashbox。
 
@@ -57,9 +57,9 @@ cookie 有三種主要的使用狀況:
 
 ## 第一方 Cookie 行為
 
-第一方 Cookie 儲存在 clientdomain.com，其中 `clientdomain` 為您的網域。
+第一方Cookie儲存在clientdomain.com中，其中`clientdomain`為您的網域。
 
-JavaScript程式庫會產生 `mboxSession ID` 並將其儲存在Target Cookie中。 第一個mbox回應會包含選件，以及用於儲存 `mboxPC ID` 由應用程式產生，位於mbox Cookie中。
+JavaScript程式庫會產生一個`mboxSession ID`並將其儲存於Target Cookie中。 第一個mbox回應會包含選件和JavaScript，以將應用程式產生的`mboxPC ID`儲存在mbox Cookie中。
 
 >[!NOTE]
 >
@@ -67,9 +67,9 @@ JavaScript程式庫會產生 `mboxSession ID` 並將其儲存在Target Cookie中
 
 ## 第三方 Cookie 行為
 
-第三方 Cookie 儲存在 clientcode.tt.omtrdc.net，而第一方 Cookie 儲存在 clientdomain.com，其中 `clientdomain` 為您的網域。
+第三方Cookie儲存在clientcode.tt.omtrdc.net中，而第一方Cookie儲存在clientdomain.com中，其中`clientdomain`為您的網域。
 
-JavaScript程式庫會產生 `mboxSession ID`. 第一個位置請求會傳回 HTTP 回應標頭，此標頭會嘗試設定名為 `mboxSession` 和 `mboxPC` 的第三方 Cookie，之後會傳回附有額外參數 (`mboxXDomainCheck=true`) 的重新導向請求。
+JavaScript程式庫產生`mboxSession ID`。 第一個位置請求會傳回 HTTP 回應標頭，此標頭會嘗試設定名為 `mboxSession` 和 `mboxPC` 的第三方 Cookie，之後會傳回附有額外參數 (`mboxXDomainCheck=true`) 的重新導向請求。
 
 若瀏覽器接受第三方 Cookie，則重新導向請求會包含這些 Cookie 並傳回選件。
 
@@ -77,17 +77,17 @@ JavaScript程式庫會產生 `mboxSession ID`. 第一個位置請求會傳回 HT
 
 >[!NOTE]
 >
->如未封鎖第三方 cookie，則會設置 demdex.net cookie。
+>若未封鎖第三方Cookie，則會設定demdex.net Cookie。
 
 ## 第三方和第一方 Cookie 行為
 
-第三方 Cookie 儲存在 clientcode.tt.omtrdc.net，而第一方 Cookie 儲存在 clientdomain.com，其中 `clientdomain` 為您的網域。
+第三方Cookie儲存在clientcode.tt.omtrdc.net中，而第一方Cookie儲存在clientdomain.com中，其中`clientdomain`為您的網域。
 
-JavaScript程式庫會產生 `mboxSession ID`. 第一個位置請求會傳回 HTTP 回應標頭，此標頭會嘗試設定名為 `mboxSession` 和 `mboxPC` 的第三方 Cookie，之後會傳回附有額外參數 (`mboxXDomainCheck=true`) 的重新導向請求。
+JavaScript程式庫產生`mboxSession ID`。 第一個位置請求會傳回 HTTP 回應標頭，此標頭會嘗試設定名為 `mboxSession` 和 `mboxPC` 的第三方 Cookie，之後會傳回附有額外參數 (`mboxXDomainCheck=true`) 的重新導向請求。
 
 若瀏覽器接受第三方 Cookie，則重新導向請求會包含這些 Cookie 並傳回選件。
 
-部分瀏覽器會拒絕第三方 Cookie。如果第三方 Cookie 被封鎖，第一方 Cookie 仍會運作。Target會嘗試設定第三方Cookie，如果無法設定，則Target只能追蹤使用者端的特定網域。 如果第三方Cookie遭到封鎖，則跨網域追蹤無法運作，除非 `mboxSession` 會附加在跨網域的連結中。 在這種情況下會設定另一個第一方 Cookie，並與之前的網域第一方 Cookie 同步。
+部分瀏覽器會拒絕第三方 Cookie。如果第三方 Cookie 被封鎖，第一方 Cookie 仍會運作。Target會嘗試設定第三方Cookie，如果無法設定，則Target只能追蹤使用者端的特定網域。 如果第三方Cookie遭到封鎖，則跨網域追蹤無法運作，除非在跨網域的連結中附加`mboxSession`。 在這種情況下會設定另一個第一方 Cookie，並與之前的網域第一方 Cookie 同步。
 
 ## Cookie 設定
 
@@ -96,7 +96,7 @@ Cookie 具有各種預設設定。如有需要，您可以變更這些設定，�
 | 設定 | 資訊 |
 |--- |--- |
 | Cookie 名稱 | mbox。 |
-| Cookie 網域 | 您從中提供內容的第一層與第二層網域。因為是從您公司的網域提供，所以Cookie是第一方Cookie。<br />範例: `mycompany.com`. |
+| Cookie 網域 | 您從中提供內容的第一層與第二層網域。因為是從您公司的網域提供，所以Cookie是第一方Cookie。<br />範例： `mycompany.com`。 |
 | 伺服器網域 | `clientcode.tt.omtrdc.net`，使用您帳戶的用戶端代碼。 |
 | Cookie 持續時間 | Cookie會保留在訪客的瀏覽器上，從上次登入起兩週。 您無法變更 Cookie 持續時間。 |
 | P3P 原則 | 此 Cookie 會依大部分瀏覽器中預設設定的要求，以 P3P 原則進行發佈。P3P原則會向瀏覽器指出誰正在提供Cookie及資訊的使用方式。 |
@@ -117,7 +117,7 @@ Cookie會保留各種值，以管理訪客體驗行銷活動的方式：
 | Cookie | 詳細資料 |
 |--- |--- |
 | 第一方網域 | 適用於Target客戶的標準實作。 「mbox」Cookie 設定在客戶的網域中。 |
-| 第三方追蹤 | 對於 Target 和 Adobe Audience Manager (AAM) 中的公告和鎖定目標使用案例，第三方追蹤很重要。第三方追蹤需要跨網站指令碼技術。Target 使用 `clientcode.tt.omtrd.net` 網域中設定的兩個 Cookie:「mboxSession」和「mboxPC」。 |
+| 第三方追蹤 | 對於Target和Adobe Audience Manager (AAM)中的廣告和鎖定目標使用案例，第三方追蹤很重要。 第三方追蹤需要跨網站指令碼技術。 Target 使用 `clientcode.tt.omtrd.net` 網域中設定的兩個 Cookie:「mboxSession」和「mboxPC」。 |
 **Apple 採用什麼方法?**
 
 從 Apple: 
@@ -130,11 +130,11 @@ Cookie會保留各種值，以管理訪客體驗行銷活動的方式：
 |--- |--- |
 | 智慧型追蹤預防 | 如需詳細資訊，請參閱 WebKit Open Source Web Browser Engine 網站上的[智慧型追蹤預防](https://webkit.org/blog/7675/intelligent-tracking-prevention/)。 |
 | Cookie | Safari 如何處理 Cookie:<ul><li>使用者直接存取的網域上不存在的第三方 Cookie 永不儲存。這不是新的行為。Safari 尚不支援第三方 Cookie。</li><li>使用者直接存取的網域上所設定的第三方 Cookie 會在 24 小時後清除。</li><li>如果第一方網域已分類為跨網站追蹤使用者，則會在 30 天後清除第一方 Cookie。在線上將使用者送往不同網域的大型公司可能會發生此問題。Apple尚未明確這些網域究竟如何分類，或網域如何判斷這些網域是否已分類為跨網站追蹤使用者。</li></ul> |
-| 使用「機器學習」來辨別跨網站的網域 | 從 Apple:<br />機器學習分類器：機器學習模型用來分類哪些私人控制的最上層網域可以根據收集的統計資料，而跨網站追蹤使用者。 從各種收集的統計資料中，有三個向量出現強烈訊號，表示應該根據目前的追蹤實務來分類: 一些唯一網域下的子資源、一些唯一網域下的子範圍，以及重新導向到的一些唯一網域。資料收集和分類全都在裝置上進行。<br />但是，如果使用者與 `example.com` 做為最上層網域（通常稱為第一方網域），「智慧型追蹤預防」會將此視為訊號，認為使用者對此網站有興趣，並依此時間表來暫時調整其行為：<br />如果使用者與 `example.com` 過去24小時，其Cookie在以下情況下可供使用： `example.com` 是第三方。 此作法允許「在Y上以我的X帳戶登入」登入情境。<ul><li>當作最上層網域來造訪的網域不受影響。 例如，OKTA 網站</li><li>跨多個唯一網域來識別作為目前頁面之子網域或子範圍的網域。</li></ul> |
+| 使用「機器學習」來辨別跨網站的網域 | 來自Apple：<br />機器學習分類器：機器學習模型用來根據收集的統計資料，分類哪些私人控制的最上層網域可以跨網站追蹤使用者。 從各種收集的統計資料中，有三個向量出現強烈訊號，表示應該根據目前的追蹤實務來分類: 一些唯一網域下的子資源、一些唯一網域下的子範圍，以及重新導向到的一些唯一網域。資料收集和分類全都在裝置上進行。<br />但是，如果使用者與當作最上層網域的`example.com`互動（通常稱為第一方網域），「智慧型追蹤預防」會將此視為訊號，認為使用者對此網站有興趣，並依此時間表來暫時調整其行為：<br />如果使用者在過去24小時與`example.com`互動，則其Cookie在`example.com`是第三方時可用。 此作法允許「在Y上以我的X帳戶登入」登入情境。<ul><li>當作最上層網域來造訪的網域不受影響。 例如，OKTA 網站</li><li>識別跨多個唯一網域之目前頁面的子網域或子框架的網域。</li></ul> |
 
-**Adobe如何受影響？**
+**Adobe受到什麼影響？**
 
 | 受影響的功能 | 詳細資料 |
 |--- |--- |
 | 支援選擇退出 | Apple 的 WebKit 追蹤變更會暫停選擇退出支援。<br />Target 選擇退出會在 `clientcode.tt.omtrdc.net` 網域中使用 Cookie。如需更多詳細資料，請參閱[隱私](/help/dev/before-implement/privacy/privacy.md)。<br />Target 支援兩種選擇退出:<ul><li>由用戶端決定 (用戶端管理選擇退出連結)。</li><li>透過 Adobe 讓所有客戶的使用者退出所有 Target 功能。</li></ul>兩種方法都使用第三方 Cookie。 |
-| Target 活動 | 客戶可以選擇 [設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) （最長90天）。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則Safari訪客的行為在Target的以下區域中會受到影響：<br />**[!UICONTROL 目標報表&#x200B;]**：如果Safari使用者進入活動，30天後回訪並轉換，則該使用者會計為兩個訪客和一次轉換。<br />對於使用 Analytics 作為報表來源 (A4T) 的活動，也同樣是此行為。<br />**[!UICONTROL 設定檔與活動成員資格]**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於採用第三方 Cookie 實作或第一方和第三方 Cookie 實作的帳戶，Target 在 Safari 中沒有作用。這不是新的行為。Safari已不允許第三方Cookie一段時間。</li></ul><br />**[!UICONTROL 建議&#x200B;]**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在Target中將設定檔存留期設為30天或更少。 此限制可確保在Safari和所有其他瀏覽器中以類似方式追蹤使用者。 |
+| Target 活動 | 客戶可以為其Target帳戶選擇其[設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) （最長90天）。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則在Target的下列區域中，Safari訪客的行為會受影響： <br />**[!UICONTROL Target reports]**：如果Safari使用者進入活動，30天之後回訪，然後轉換，則該使用者會計為兩個訪客和一次轉換。<br />對於使用Analytics作為報表來源(A4T)的活動，此行為是相同的。<br />**[!UICONTROL Profile & activity membership]**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於採用第三方 Cookie 實作或第一方和第三方 Cookie 實作的帳戶，Target 在 Safari 中沒有作用。這不是新的行為。Safari已不允許第三方Cookie一段時間。</li></ul><br />**[!UICONTROL Suggestions]**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在Target中將設定檔存留期設為30天或更少。 此限制可確保在Safari和所有其他瀏覽器中以類似方式追蹤使用者。 |

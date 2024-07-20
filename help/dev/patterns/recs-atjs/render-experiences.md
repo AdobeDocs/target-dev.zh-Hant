@@ -4,20 +4,21 @@ description: 請確定轉譯體驗所需的所有步驟皆以正確順序執行�
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 4%
 
 ---
 
 # 演算體驗
 
-請依照以下檔案中的步驟操作： *演算體驗* 圖表可確保呈現體驗所需的所有必要任務都以正確順序執行。
+請依照&#x200B;*轉譯器體驗*&#x200B;圖表中的步驟來確保轉譯器體驗所需的所有必要工作都以正確的順序執行。
 
 >[!NOTE]
 >
->若您已在「 」期間啟用「自動頁面載入請求」 [設定自動頁面載入請求步驟](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) 在 *初始化SDK* ，您可以略過此活動，除非您想要呼叫Adobe Target SDK來使用地區位置請求轉譯其他體驗。
+>如果您在&#x200B;*初始化SDK*&#x200B;中的[設定自動頁面載入要求步驟](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic)期間啟用了自動頁面載入要求，除非您想要呼叫Adobe Target SDK以使用地區位置要求呈現其他體驗，否則可以略過此活動。
 
 >[!TIP]
 >
@@ -25,11 +26,11 @@ ht-degree: 7%
 
 ## 演算體驗圖表 {#diagram}
 
-at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才有意義： [!UICONTROL 自動頁面載入要求] 已啟用。 此選項會隱藏整個HTML內文，同時從擷取體驗 [!DNL Target]. 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
+at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automatic Page Load Request]時才有意義。 此選項會隱藏整個HTML內文，同時從[!DNL Target]擷取體驗。 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
 
 >[!NOTE]
 >
->下圖中的步驟編號與下列區段相對應。 步驟編號沒有特定順序，也不會反映中採取的步驟順序。 [!DNL Target] UI。
+>下圖中的步驟編號與下列區段相對應。 步驟編號沒有特定順序，也不會反映建立活動時在[!DNL Target] UI中採取的步驟順序。
 
 ![演算體驗圖表](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
@@ -50,7 +51,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.1：促銷活動 {#promotion}
 
-透過選擇中的前端或後端促銷活動，新增促銷專案並控制其在建議設計中的放置位置 [!DNL Target] UI。
+建立活動時，在[!DNL Target] UI中選擇「前面」或「後面」促銷活動，以新增促銷專案並控制其在建議設計中的放置位置。
 
 +++查看詳細資料
 
@@ -78,11 +79,11 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 +++查看詳細資料
 
-**可用條件**
+**可用的條件**
 
-* [!UICONTROL 瀏覽過這些專案、也瀏覽了其他專案的使用者]
-* [!UICONTROL 瀏覽過這些專案、但購買了其他專案的使用者]
-* [!UICONTROL 購買了此專案、也購買了其他專案的使用者]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
 **需要實體引數**
 
@@ -102,24 +103,24 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 +++查看詳細資料
 
-**可用條件**
+**可用的條件**
 
-* [!UICONTROL 全網站檢視次數最多]
-* [!UICONTROL 依類別檢視次數最多]
-* [!UICONTROL 依專案屬性檢視次數最多]
-* [!UICONTROL 全網站最暢銷商品]
-* [!UICONTROL 依類別排名的最暢銷商品]
-* [!UICONTROL 依專案屬性排名的最暢銷商品]
-* [!UICONTROL 依Analytics量度排名最前]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
 **需要實體引數**
 
-* `entity.categoryId` 或「人氣」的「專案屬性」（如果條件是以目前或專案屬性為基礎）。
+* 如果條件是以目前或專案屬性為基礎，則為`entity.categoryId`或人氣的專案屬性。
 * 所有網站中的「檢視次數最多/銷售最高」量度不需傳遞任何專案。
 
 **讀數**
 
-* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [以熱門程度為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -131,12 +132,12 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 +++查看詳細資料
 
-**可用條件**
+**可用的條件**
 
-* [!UICONTROL 瀏覽過此項目、也瀏覽了其他項目的使用者]
-* [!UICONTROL 瀏覽過此項目、但購買了其他項目的使用者]
-* [!UICONTROL 購買了此項目、也購買了其他項目的使用者]
-* [!UICONTROL 具有類似屬性的專案]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
 **需要實體引數**
 
@@ -145,7 +146,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 **讀數**
 
-* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* 以[專案為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -157,10 +158,10 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 +++查看詳細資料
 
-**可用條件**
+**可用的條件**
 
-* [!UICONTROL 最近查看的項目]
-* [!UICONTROL 為您推薦]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
 **需要實體引數**
 
@@ -168,7 +169,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 **讀數**
 
-* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [以使用者為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -180,13 +181,13 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 +++查看詳細資料
 
-**可用條件**
+**可用的條件**
 
-* [!UICONTROL 自訂演演算法]
+* [!UICONTROL Custom algorithm]
 
 **需要實體引數**
 
-`entity.id` 或當作自訂演演算法索引鍵使用的屬性
+`entity.id`或用作自訂演演算法索引鍵的屬性
 
 **讀數**
 
@@ -216,13 +217,13 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 **讀數**
 
-* [是否可以動態地排除實體？ ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [我可以動態排除實體嗎？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
 [返回此頁面頂端的圖表。](#diagram)
 
-## 3.9：提供實體屬性以更新產品目錄 [!DNL Recommendations] {#entity-attributes}
+## 3.9：提供實體屬性以更新[!DNL Recommendations]的產品目錄 {#entity-attributes}
 
 +++查看詳細資料
 
@@ -230,7 +231,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 * [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您也可以透過建立完成此步驟 [產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} 使用 [!DNL Target] 更新產品目錄的UI [!DNL Recommendations].
+您也可以使用[!DNL Target] UI建立[產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}，以更新[!DNL Recommendations]的產品目錄，進而完成此步驟。
 
 +++
 
@@ -240,7 +241,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 提供上述任何Recommendations條件中，作為包含規則索引鍵所使用的設定檔屬性。
 
-+++ 查看詳細資料
++++ 檢視詳細資料
 
 **讀數**
 
@@ -252,15 +253,15 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.11：引發頁面載入請求 {#fire}
 
-此步驟會觸發 [!DNL Delivery API] 呼叫方式 `execute` > `pageLoad` 要求中的裝載。 此 `getOffers()` 方法擷取體驗和 `applyOffers()` 呈現頁面上的體驗。 此 `pageLoad` 呈現在中編寫的體驗需要請求 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)。
+此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)中編寫的體驗。
 
 +++查看詳細資料
 
-![引發頁面載入請求圖表](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![引發頁面載入要求圖表](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **必要條件**
 
-* 所有資料對應都必須使用 `targetPageParams` 函式。
+* 必須使用`targetPageParams`函式完成所有資料對應。
 
 **讀數**
 
@@ -269,7 +270,7 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 **動作**
 
-* 使用 `getOffers` 和 `applyOffers` 使用頁面載入請求API呼叫擷取體驗的方法。
+* 使用`getOffers`和`applyOffers`方法，以使用頁面載入請求API呼叫來擷取體驗。
 
 +++
 
@@ -277,15 +278,15 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 ## 3.12：引發地區位置要求(#location)
 
-此步驟會觸發 [!DNL Delivery API] 呼叫方式 `execute` > `mboxes` 要求中的裝載。 此 `getOffers` 方法擷取體驗和 `applyOffers` 將體驗呈現至頁面。 您可以在「 」下方傳送多個mbox `execute` > `mboxes` 裝載。
+此步驟會在其要求中觸發具有`execute` > `mboxes`裝載的[!DNL Delivery API]呼叫。 `getOffers`方法會擷取體驗，而`applyOffers`會將體驗呈現至頁面。 您可以在`execute` > `mboxes`裝載下傳送多個mbox。
 
 +++查看詳細資料
 
-![引發地區位置請求圖表](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
+![引發區域位置要求圖表](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 
 **必要條件**
 
-* 所有資料對應都必須使用 `targetPageParams` 函式。
+* 必須使用`targetPageParams`函式完成所有資料對應。
 
 **讀數**
 
@@ -294,10 +295,10 @@ at.js提供的自動現成閃爍處理功能只有當您具備以下條件時才
 
 **動作**
 
-* 使用 `getOffers` 和 `applyOffers` 使用頁面載入請求API呼叫擷取體驗的方法。
+* 使用`getOffers`和`applyOffers`方法，以使用頁面載入請求API呼叫來擷取體驗。
 
 +++
 
 [返回此頁面頂端的圖表。](#diagram)
 
-繼續進行步驟4： [通知Target](/help/dev/patterns/recs-atjs/notify-target.md).
+繼續步驟4：[通知目標](/help/dev/patterns/recs-atjs/notify-target.md)。

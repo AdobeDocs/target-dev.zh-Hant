@@ -1,12 +1,12 @@
 ---
-title: 如何在中使用非同步請求 [!DNL Adobe Target] Python SDK
-description: 瞭解如何 [!DNL Target] Python SDK支援非同步要求，因此可將有效目標時間減少為零。
+title: 如何在 [!DNL Adobe Target] Python SDK中使用非同步要求
+description: 瞭解 [!DNL Target] Python SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 14%
+source-wordcount: '123'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 ## 說明
 
-`get_attributes()` 用於擷取實驗和個人化體驗 [!DNL Target] 和擷取屬性值。
+`get_attributes()`是用來從[!DNL Target]擷取實驗與個人化體驗，以及擷取屬性值。
 
 
 ## 方法
@@ -29,18 +29,18 @@ target_client_instance.get_attributes(mbox_names, options)
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| mbox名稱(_N) | 清單[str] | 是 | 無 | mbox名稱清單 |
-| options | dict | 否 | 無 | 與使用的選項相同 [取得優惠方案](get-offers.md) |
+| mbox_names | 清單[str] | 是 | 無 | mbox名稱清單 |
+| options | dict | 否 | 無 | 與[取得選件](get-offers.md)使用的選項相同 |
 
 ## 屬性提供者
 
-此 `AttributesProvider` 傳回者 `target_client.get_attributes()` 有以下方法：
+`target_client.get_attributes()`傳回的`AttributesProvider`具有下列方法：
 
 | 方法 | 傳回類型 | 說明 |
 | --- | --- | --- |
 | get_value(mbox_name， key) | any | 傳回指定mbox名稱和屬性索引鍵的值 |
 | as_object(mbox_name) | dict | 傳回具有索引鍵值配對的簡單json物件 |
-| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | 傳回通常由傳回的回應物件 `get_offers` |
+| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | 傳回`get_offers`通常會傳回的回應物件 |
 
 ## 範例
 

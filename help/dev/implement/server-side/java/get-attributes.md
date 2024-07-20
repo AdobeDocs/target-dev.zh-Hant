@@ -1,6 +1,6 @@
 ---
-title: 使用getAttributes於 [!DNL Adobe Target] 搭配Java SDK
-description: 瞭解如何使用getAttributes()來擷取實驗和個人化體驗，從 [!DNL Target] 和擷取屬性值。
+title: 透過Java SDK在 [!DNL Adobe Target] 中使用getAttributes
+description: 瞭解如何使用getAttributes()從 [!DNL Target] 擷取實驗性和個人化體驗，並擷取屬性值。
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 ## 說明
 
-`getAttributes()` 用於擷取實驗和個人化體驗 [!DNL Target] 和擷取屬性值。
+`getAttributes()`是用來從[!DNL Target]擷取實驗與個人化體驗，以及擷取屬性值。
 
 ## 方法
 
@@ -28,13 +28,13 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | 是 | 無 | 使用的相同Target請求 [取得優&#x200B;惠](get-offers.md) |
+| targetRequest | TargetDeliveryRequest | 是 | 無 | 與[取得選件{&#x200B;1}使用的目標要求相同](get-offers.md) |
 | mboxNames | var-args陣列 | 否 | 無 | mbox名稱的變數陣列 |
 
 
 ## 結果
 
-一個 `Attributes` 物件傳回自 `TargetClient.getAttributes()` 方法如下：
+從`TargetClient.getAttributes()`傳回的`Attributes`物件具有以下方法：
 
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |

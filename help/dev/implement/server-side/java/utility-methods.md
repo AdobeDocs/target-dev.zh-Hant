@@ -1,5 +1,5 @@
 ---
-title: 在中使用公用程式方法 [!DNL Adobe Target] Java SDK
+title: 在 [!DNL Adobe Target] Java SDK中使用公用程式方法
 description: 瞭解如何使用helper方法，這些方法可跨控制器重複使用，並可移至個別的公用程式類別。
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec

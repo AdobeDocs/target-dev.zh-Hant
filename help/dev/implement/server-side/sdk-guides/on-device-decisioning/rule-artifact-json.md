@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!BEGINTABS]
 
->[!TAB npm]
+>[!TAB NPM]
 
 ```javascript {line-numbers="true"}
 npm i @adobe/target-nodejs-sdk -P
@@ -113,9 +113,9 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 使用者端和 `organizationId` 可以從中擷取 [!DNL Adobe Target]瀏覽至 **[!UICONTROL 管理]** > **[!UICONTROL 實施]**，如下所示。
+1. 使用者端和`organizationId`均可透過導覽至&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;從[!DNL Adobe Target]擷取，如下所示。
 
-   &lt;! — 插入image-client-code.png —>
+   &lt;！ — 插入image-client-code.png —>
    ![替代影像](assets/asset-rule-artifact-3.png)
 
 ## 3.儲存並回覆JSON裝載
@@ -162,7 +162,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->透過初始化 [!DNL Adobe Target]透過JSON裝載的SDK，您的伺服器已準備好立即提供要求與裝置上決策活動，因為 [!DNL Adobe Target]SDK不需要等待規則成品下載完成。
+>透過JSON裝載初始化[!DNL Adobe Target]SDK，您的伺服器即可立即使用裝置上決策活動提供要求，因為[!DNL Adobe Target]SDK不需要等候規則成品下載。
 
 以下範例示範JSON裝載初始化功能。
 

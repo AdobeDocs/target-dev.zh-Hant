@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 核心原則概觀
 
-[!DNL Adobe Target] 根據幾個核心原則操作，這些原則對於執行有效的實驗或個人化活動至關重要。 這些原則包括：
+[!DNL Adobe Target]根據幾個核心原則運作，這些原則對於執行有效的實驗或個人化活動非常重要，需要瞭解。 這些原則包括：
 
 * [使用者識別與分組](user-identification-and-bucketing.md)
 

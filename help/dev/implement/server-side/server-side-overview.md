@@ -11,15 +11,15 @@ ht-degree: 13%
 
 ---
 
-# 伺服器端：實作 [!DNL Target]
+# 伺服器端：實作[!DNL Target]
 
-相關資訊 [!DNL Adobe Target] 伺服器端傳送API、SDK和 [!DNL Target Recommendations] API。
+有關[!DNL Adobe Target]伺服器端傳送API、SDK和[!DNL Target Recommendations] API的資訊。
 
 >[!NOTE]
 >
->如果您的實作使用at.js和 [!DNL AppMeasurement] 在使用者端，您應使用 [!UICONTROL Target Delivery API] 以及伺服器端SDK，將於下文討論。
+>如果您的實作在使用者端使用at.js和[!DNL AppMeasurement]，您應使用下述的[!UICONTROL Target Delivery API]和伺服器端SDK。
 >
->如果您的實施使用 [!UICONTROL Adobe Experience Platform Web SDK]，您應使用 [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>如果您的實作使用[!UICONTROL Adobe Experience Platform Web SDK]，您應該使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 下列程序會發生在 [!DNL Target] 的伺服器端實作中:
 
@@ -32,7 +32,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->首次訪客只能在使用者端上初始化。 首次訪客 *無法* 在伺服器端初始化。 這是因為ECID，其取決於協力廠商Demdex Cookie，因此需要透過訪客API.js在涉及瀏覽器的實施上進行初始化。
+>首次訪客只能在使用者端上初始化。 無法在伺服器端初始化首次訪客&#x200B;**。 這是因為ECID，其取決於協力廠商Demdex Cookie，因此需要透過訪客API.js在涉及瀏覽器的實施上進行初始化。
 
 以下章節提供有關各種伺服器端API和SDK的詳細資訊：
 
@@ -42,7 +42,7 @@ ht-degree: 13%
 
 `/rest/v1/delivery`
 
-透過 [!DNL Target] 傳送API時，您可以：
+透過[!DNL Target]傳遞API，您可以：
 
 * 跨網路(包括SPA)和行動裝置頻道，以及非瀏覽器型IoT裝置（例如連線電視、資訊站或店內數位熒幕）提供體驗。
 * 從任何可進行HTTP/s呼叫的伺服器端平台或應用程式提供體驗。
@@ -52,26 +52,26 @@ ht-degree: 13%
 
 ## 伺服器端SDK
 
-此 [!DNL Adobe Target] 伺服器端SDK檔案可協助您實作 [!DNL Target] 在您選擇的語言中。
+[!DNL Adobe Target]伺服器端SDK檔案可協助您在伺服器上以您選擇的語言實作[!DNL Target]。
 
 * [Node.js](node-js/overview.md)
 * [Java](java/overview.md)
 * [.NET](net/overview.md)
 * [Python](python/overview.md)
 
-到 [!DNL Adobe Target]的伺服器端SDK，您可以：
+透過[!DNL Adobe Target]的伺服器端SDK，您可以：
 
-* 執行並執行 **功能標幟**， **轉出**、和 **A/B實驗** 在 **幾乎零延遲**.
-* 傳遞體驗，跨越 **網頁**，包括 **SPA**、和 **行動裝置頻道**&#x200B;以及非瀏覽器型 **物聯網(IoT)裝置** 例如連線電視、資訊站或店內數位熒幕。
-* 傳遞 **機器學習(ML)驅動的個人化體驗** 對於使用者，無論使用者與您的企業進行互動的頻道或裝置。
-* **與Adobe Experience Cloud緊密整合** 產品，例如 **Adobe Analytics**， **Adobe Audience Manager**，以及 **Experience CloudID服務** 從伺服器端。
+* 在&#x200B;**幾乎零延遲**&#x200B;處執行並執行&#x200B;**功能標幟**、**轉出**&#x200B;和&#x200B;**A/B實驗**。
+* 透過&#x200B;**網頁**&#x200B;提供體驗，包括&#x200B;**SPA**&#x200B;和&#x200B;**行動頻道**，以及非瀏覽器型的&#x200B;**物聯網(IoT)裝置**，例如連線電視、資訊站或店內數位熒幕。
+* 無論使用者與您的企業使用哪個管道或裝置，都將&#x200B;**機器學習(ML)驅動的個人化體驗**&#x200B;傳遞給使用者。
+* **從伺服器端順暢地整合Adobe Experience Cloud**&#x200B;產品，例如&#x200B;**Adobe Analytics**、**Adobe Audience Manager**&#x200B;以及&#x200B;**Experience CloudID服務**。
 
-請參閱 [快速入門](sdk-guides/getting-started/getting-started.md) 頁面以瞭解如何透過執行簡單的功能標幟使用案例 [裝置上決策](sdk-guides/on-device-decisioning/overview.md).
+請參閱[快速入門](sdk-guides/getting-started/getting-started.md)頁面，瞭解如何透過[裝置上決策](sdk-guides/on-device-decisioning/overview.md)執行簡單的功能標幟使用案例。
 
-請檢視我們的 [範例應用程式](sdk-guides/sample-apps/sample-apps.md) 玩得開心！
+檢視我們的[範例應用程式](sdk-guides/sample-apps/sample-apps.md)，享受樂趣和玩樂！
 
 ## [!DNL Target Recommendations] API
 
-連結： [Target Recommendations API](https://developers.adobetarget.com/api/recommendations) 和 [Adobe Recommendations API概觀](../../before-administer/recs-api/overview.md).
+連結： [目標Recommendations API](https://developers.adobetarget.com/api/recommendations)和[Adobe Recommendations API總覽](../../before-administer/recs-api/overview.md)。
 
-Recommendations API可讓您以程式設計方式與 [!DNL Target] recommendations伺服器。 這些API可與一系列應用程式棧疊整合，以執行您通常透過執行的功能 [!DNL Target] 使用者介面。
+Recommendations API可讓您以程式設計方式與[!DNL Target]推薦伺服器互動。 這些API可與一系列應用程式棧疊整合，以執行您通常透過[!DNL Target]使用者介面執行的功能。

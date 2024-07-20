@@ -1,11 +1,11 @@
 ---
-title: 如何在中使用非同步請求 [!DNL Adobe Target] Python SDK
-description: 瞭解如何 [!DNL Target] Python SDK支援非同步要求，因此可將有效目標時間減少為零。
+title: 如何在 [!DNL Adobe Target] Python SDK中使用非同步要求
+description: 瞭解 [!DNL Target] Python SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '133'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ get_attributes(mbox_names, options)
 
 ## 範例
 
-使用 `asyncio` Python 3.9+中的模組非同步/等待可能如下所示：
+在Python 3.9+中使用`asyncio`模組非同步/等待的範例應用程式可能如下所示：
 
 ### Python
 
@@ -52,4 +52,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-此範例假設您使用Python 3.9+。 如果使用舊版Python，您仍然可以透過傳入來傳送非同步請求 `options.callback` 至 `get_offers`. 如需有關使用回呼或非同步/等待的非同步執行的詳細資訊，請參閱範例Flask應用程式。 [此處](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).
+此範例假設您使用Python 3.9+。 如果使用舊版Python，您仍可將`options.callback`傳入`get_offers`以傳送非同步要求。 如需有關使用回呼或非同步/等待的非同步執行的詳細資訊，請參閱範例Flask應用程式[這裡](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py)。

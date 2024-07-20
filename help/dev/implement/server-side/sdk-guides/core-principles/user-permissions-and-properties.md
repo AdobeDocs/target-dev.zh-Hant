@@ -1,18 +1,18 @@
 ---
 title: 使用者許可權和屬性
-description: 此 [!DNL Target] SDK包含使用者許可權和屬性支援。
+description: ' [!DNL Target] SDK包含使用者許可權和屬性的支援。'
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # 使用者許可權和屬性
 
-此 [!DNL Target] SDK包含使用者許可權和屬性支援。 如果您不熟悉如何 [!DNL Adobe Target] 透過工作區和屬性處理企業許可權，您可以在中閱讀更多相關資訊 [企業使用者許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant).
+[!DNL Target] SDK包含對使用者許可權和屬性的支援。 如果您不熟悉[!DNL Adobe Target]如何透過工作區和屬性處理企業許可權，您可以在[企業使用者許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)中閱讀更多相關資訊。
 
 使用者端可以使用屬性代號，方法有兩種。
 
@@ -50,7 +50,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## getOffers呼叫中的附帶屬性權杖
 
-屬性代號也可以在個別中指定 `getOffers` 呼叫。 這可透過將屬性物件新增到請求來完成。 以此方式指定的屬性代號會優先於設定中設定的一個屬性。
+也可以在個別`getOffers`呼叫中指定屬性代號。 這可透過將屬性物件新增到請求來完成。 以此方式指定的屬性代號會優先於設定中設定的一個屬性。
 
 >[!BEGINTABS]
 

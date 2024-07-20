@@ -1,32 +1,32 @@
 ---
 title: 事件追蹤
-description: 使用 [!DNL Adobe Target]的事件追蹤功能，能夠有效地測量對您的業務和使用案例而言最重要的量度。
+description: 使用 [!DNL Adobe Target]的事件追蹤功能，有效測量對您的業務與使用案例而言最重要的量度。
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
 # 事件追蹤
 
-使用 [!DNL Adobe Target]的事件追蹤功能，能夠有效地測量對您的業務和使用案例而言最重要的量度。 追蹤事件是衡量實驗或個人化活動是否成功的關鍵，因為它們可告訴您哪些變數或體驗是成功或失敗。 瞭解此資訊有助於您瞭解使用者如何與您的產品互動，或在不斷變化的環境中發展。
+使用[!DNL Adobe Target]的事件追蹤功能，有效測量對您的業務與使用案例而言最重要的量度。 追蹤事件是衡量實驗或個人化活動是否成功的關鍵，因為它們可告訴您哪些變數或體驗是成功或失敗。 瞭解此資訊有助於您瞭解使用者如何與您的產品互動，或在不斷變化的環境中發展。
 
-若要透過追蹤事件 [!DNL Adobe Target]的SDK，請遵循此兩步驟程式：
+若要透過[!DNL Adobe Target]的SDK追蹤事件，請遵循此兩步驟程式：
 
-1. 安裝SDK並部署會將事件傳送至的程式碼 [!DNL Adobe Target].
+1. 安裝SDK並部署會將事件傳送至[!DNL Adobe Target]的程式碼。
 
-1. 建立並啟用 [!DNL Adobe Target] 在UI中具有目標量度的活動。
+1. 在UI中建立並啟用具有目標量度的[!DNL Adobe Target]活動。
 
    ![替代影像](./assets/report-settings.png)
 
 ## 目標量度和事件
 
-下表定義您可以定義並使用測量的目標和事件組合 [!DNL Target] 活動，使用 [!DNL Target]的報告功能：
+下表定義了目標與事件的組合，您可以使用[!DNL Target]的報告功能，透過[!DNL Target]活動來定義與測量：
 
-| 主要目標 | Event |
+| 主要目標 | 事件 |
 | --- | --- |
 | 轉換 | 已檢視頁面、已檢視mbox，以及按一下mbox |
 | 收入 | 已檢視mbox並按一下mbox |
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ## 閱聽的觸發方式
 
-Target SDK會呼叫基礎 [傳送API](/help/dev/implement/delivery-api/overview.md). 當具有必要引數的執行物件位於請求本身中時，曝光會自動遞增以用於合格活動。 自動增加曝光次數的SDK方法為：
+Target SDK會呼叫基礎[傳送API](/help/dev/implement/delivery-api/overview.md)。 當具有必要引數的執行物件位於請求本身中時，曝光會自動遞增以用於合格活動。 自動增加曝光次數的SDK方法為：
 
 * getOffers()
 * getAttributes()
@@ -43,7 +43,7 @@ Target SDK會呼叫基礎 [傳送API](/help/dev/implement/delivery-api/overview.
 >
 >在要求中傳遞預先擷取物件時，對於具有預先擷取物件內mbox的活動，曝光不會自動增加。
 
-此 `sendNotifications` 方法可用來手動傳送事件至 [!DNL Adobe Target] 並觸發曝光次數。
+`sendNotifications`方法可用來手動將事件傳送至[!DNL Adobe Target]並觸發曝光。
 
 >[!BEGINTABS]
 
@@ -67,13 +67,13 @@ ResponseStatus TargetClient.sendNotifications(TargetDeliveryRequest request)
 
 ### 已檢視頁面或Mbox
 
-此範例先使用取得Target mbox選件 `getOffers`. 接著，系統會根據該mbox選件，以通知來建構要求。
+此範例先使用`getOffers`取得Target mbox選件。 接著，系統會根據該mbox選件，以通知來建構要求。
 
-通知 `type` 屬性已設為 `display`.
+通知`type`屬性設定為`display`。
 
 若要指出已檢視頁面，在通知裝載中指定位址物件非常重要。 請務必適當地設定URL。
 
-針對mbox，您必須在通知物件上設定mbox屬性，並根據 `targetResult`.
+針對mbox，您必須在通知物件上設定mbox屬性，並根據`targetResult`中的選項陣列提供代號陣列。
 
 >[!BEGINTABS]
 
@@ -184,11 +184,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### 已按一下Mbox
 
-此範例先使用取得Target mbox選件 `getOffers`. 接著，系統會根據該mbox選件，以通知來建構要求。
+此範例先使用`getOffers`取得Target mbox選件。 接著，系統會根據該mbox選件，以通知來建構要求。
 
-通知 `type` 屬性已設為 `click`.
+通知`type`屬性設定為`click`。
 
-您必須設定 `mbox` 屬性，並根據 `targetResult`.
+您必須在通知物件上設定`mbox`屬性，並根據`targetResult`中的量度陣列提供權杖陣列。
 
 >[!BEGINTABS]
 
@@ -304,11 +304,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### 已檢視的檢視
 
-此範例先使用取得目標檢視 `getOffers`. 然後它會根據這些檢視建構包含通知的請求。
+此範例先使用`getOffers`取得目標檢視。 然後它會根據這些檢視建構包含通知的請求。
 
-通知 `type` 屬性已設為 `display`.
+通知`type`屬性設定為`display`。
 
-針對檢視，您必須設定 `view` 屬性，並根據targetResult中的選項陣列提供一組代號。
+針對檢視，您必須在通知物件上設定`view`屬性，並根據targetResult中的選項陣列提供一組代號。
 
 >[!BEGINTABS]
 
@@ -414,11 +414,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### 按一下檢視
 
-此範例先使用取得目標檢視 `getOffers`. 然後它會根據這些檢視建構包含通知的請求。
+此範例先使用`getOffers`取得目標檢視。 然後它會根據這些檢視建構包含通知的請求。
 
-通知 `type` 屬性已設為 `click`.
+通知`type`屬性設定為`click`。
 
-您必須設定 `view` 屬性，並根據targetResult中的量度陣列提供一組代號。
+您必須在通知物件上設定`view`屬性，並根據targetResult中的量度陣列提供權杖陣列。
 
 >[!BEGINTABS]
 

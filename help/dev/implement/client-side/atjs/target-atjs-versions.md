@@ -1,13 +1,13 @@
 ---
 keywords: at.js版本、at.js版本、發行說明
-description: 檢視每個版本變更的詳細資料 [!DNL Adobe Target] at.js JavaScript資料庫。
+description: 檢視 [!DNL Adobe Target] at.js JavaScript程式庫每個版本中變更的詳細資料。
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 source-git-commit: 9999c1b5f603e6607bd81f6ad6a06a7f74e76acb
 workflow-type: tm+mt
-source-wordcount: '4926'
-ht-degree: 63%
+source-wordcount: '4904'
+ht-degree: 64%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 63%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Target] 同時支援at.js 1.*x* 和 at.js 2 中的 Hide Body 和 Show Body 呼叫。*x*。
+>[!DNL Adobe Target]同時支援at.js 1。*x* 和 at.js 2 中的 Hide Body 和 Show Body 呼叫。*x*。
 >
->at.js 1.*x* 已進入維護模式。 此 [!DNL Target] Team會在必要時發行錯誤修正和安全修補程式。
+>at.js 1.*x*&#x200B;已進入維護模式。 [!DNL Target]團隊會在必要時發行錯誤修正和安全性修補程式。
 >
->此 [!DNL Target] 團隊提供at.js 2的完整支援。*x* 和會持續發行錯誤修正、安全性修補程式、功能和效能最佳化。
+>[!DNL Target]團隊提供at.js 2的完整支援。*x*&#x200B;和持續發行錯誤修正、安全性修補程式、功能和效能最佳化。
 >
->您應該升級至其中一個1的最新版本。*x* 或2。*x* 取得錯誤修正與安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
+>您應該升級至其中一個1的最新版本。*x*&#x200B;或2。*x*&#x200B;以取得錯誤修正和安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
-中的標籤 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱 [擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *標籤總覽* 指南。6+
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱&#x200B;*標籤總覽*&#x200B;指南中的[擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。6+
 
 ## at.js 2.11.4版（2024年1月24日）
 
@@ -33,7 +33,7 @@ ht-degree: 63%
 
 ## at.js 2.11.3版（2023年11月21日）
 
-* 修正無法傳送回應權杖的問題 `at-content-rendering-failed` 事件。
+* 修正無法在`at-content-rendering-failed`個事件上傳送回應Token的問題。
 
 ## at.js 2.11.2版（2023年10月26日）
 
@@ -45,13 +45,13 @@ ht-degree: 63%
 
 ## at.js 2.11.0版（2023年10月10日）
 
-* 新增設定自訂的支援 [!DNL Adobe Experience Platform] (AEP) `sandboxId` 和 `sandboxName` 在 `targetGlobalSettings`，此資訊會傳遞至上的傳送API `getOffer/getOffers` 呼叫。
-* 鏈結的陰影DOM修正 `:eq()` 在選取器中。
+* 新增在`targetGlobalSettings`中設定自訂[!DNL Adobe Experience Platform] (AEP) `sandboxId`和`sandboxName`的支援，這些在`getOffer/getOffers`呼叫時傳遞至傳遞API。
+* 在選取器中鏈結`:eq()`的陰影DOM修正。
 
 ## at.js 2.10.3版（2023年9月12日）
 
-* 修正錯誤觸發的問題 `at-content-rendering-succeeded` 未轉譯任何選件時的自訂事件。 正確的事件， `at-content-rendering-no-offers`，現在已觸發。
-* 已新增 `eventToken` 和 `responseTokens` 至的錯誤物件 `at-content-rendering-failed` 自訂事件。
+* 修正在未轉譯任何選件時錯誤觸發`at-content-rendering-succeeded`自訂事件的問題。 現在已觸發正確的事件`at-content-rendering-no-offers`。
+* 已新增`eventToken`和`responseTokens`至`at-content-rendering-failed`自訂事件的錯誤物件。
 
 ## at.js 版本 2.10.2 (2023 年 3 月 7 日)
 
@@ -73,7 +73,7 @@ ht-degree: 63%
 
 ## at.js 2.8.1 版 (2022 年 1 月 28 日)
 
-* 固定 `pageLoad` 在裝置上決策(ODD)混合執行模式中未對應到target-global-mbox。
+* 修正`pageLoad`在裝置上決策(ODD)混合執行模式中未對應到target-global-mbox的問題。
 * 已修正 mbox 要求的分析詳細資料問題。
 * 已升級 dev 相依項目，修正安全漏洞。
 
@@ -91,8 +91,8 @@ ht-degree: 63%
 
 此版本包含下列變更：
 
-* 已移除 `reactor-window` 和 `reactor-document` Adobe Experience Platform Launch模組，確保Platform launch建置可為擁有以下條件的客戶正常運作： `window.default` 或 `document-default` 設定。
-* at.js 1.8.3現在明確設定 `Samesite=None` 和 `Secure` 以確保正確設定協力廠商網域Cookie。
+* 已移除`reactor-window`和`reactor-document` Adobe Experience Platform Launch模組，以確保已設定`window.default`或`document-default`的客戶的Platform launch組建可正常運作。
+* at.js 1.8.3現在明確設定`Samesite=None`和`Secure`，以確保協力廠商網域Cookie已正確設定。
 
 ## at.js 2.6.1 (2021 年 8 月 16 日)
 
@@ -103,10 +103,10 @@ ht-degree: 63%
 * 當 at.js 設定 `secureOnly` 設為 `true` 時，為 Cookie 新增安全屬性。
 * 現在可以在使用 `triggerView()` 時使用回應 Token。
 * 修正了與 `CONTENT_RENDERING_NO_OFFERS` 事件相關的問題。現在，只要沒有從 [!DNL Target] 傳回內容，就會正確觸發此事件。
-* [!UICONTROL 目標分析] 使用時，會正確傳回(A4T)點選量度詳細資料 `prefetch` 要求。
+* 使用 `prefetch` 請求時會正確傳回 [!UICONTROL Analytics for Target] (A4T) 點擊量度詳細資料。
 * UUID 產生不再使用 `Math.random()`，但須依賴 `window.crypto`。
 * `sessionId` Cookie 過期在每次網路呼叫時會正確延長。
-* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並遵循 `viewsEnabled` 設定。 設定 `viewsEnabled` 至 `false` 值現在會停用 `triggerView()` 函式。 另請參閱 [初始頁面載入的作業順序](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
+* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的[作業順序。
 
 ## at.js 2.5.0 （2021年5月13日）
 
@@ -135,7 +135,7 @@ ht-degree: 63%
 
 此 at.js 版本為維護版本，包含下列修正：
 
-* 修正了與mbox點選追蹤和A4T相關的問題。 按0n下， [!DNL Target] 使用正確的mbox和mbox引數引發傳遞API呼叫。 但是，SDID不符合以下專案中的專案： [!DNL Analytics] 呼叫，因此沒有點選拼接和轉換。 (TNT-38372)
+* 修正了與mbox點選追蹤和A4T相關的問題。 在0n點按下，[!DNL Target]使用正確的mbox和mbox引數引發傳遞API呼叫。 但是，SDID與[!DNL Analytics]呼叫中的SDID不符，因此沒有點選拼接和轉換。 (TNT-38372)
 
 ## at.js 2.3.2 (2020 年 7 月 24 日)
 
@@ -155,27 +155,27 @@ ht-degree: 63%
 
 * 透過 [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) 將 `deviceIdLifetime` 設定設為可覆寫。(TNT-36349)
 * 修正使用 CNAME 和 Edge Override (at.js 2) 時的問題。*x* 可能會錯誤建立伺服器網域，導致請 [!DNL Target] 請求失敗。(TNT-35065)
-* 修正使用時發生的問題 [!DNL Target] 擴充功能v2和 [!UICONTROL Adobe Analytics Launch] 副檔名， [!DNL Target] 已延遲 [!DNL Analytics] `sendBeacon` 呼叫。 (TNT-36407、TNT-35990、TNT-36000)
+* 修正使用[!DNL Target]擴充功能v2和[!UICONTROL Adobe Analytics Launch]擴充功能時，[!DNL Target]延遲[!DNL Analytics] `sendBeacon`呼叫的問題。 (TNT-36407、TNT-35990、TNT-36000)
 
 ## at.js 2.3.0版（2020年3月25日）
 
 此 at.js 版本為維護版本，包含下列增強功能和修正：
 
-* 套用傳遞時，支援在附加至頁面DOM的SCRIPT和STYLE標籤上設定內容安全性原則Nonce [!DNL Target] 選件。 客戶可以設定 `targetGlobalSettings.cspScriptNonce` 和 `targetGlobalSettings.cspStyleNonce` 以便at.js可以在套用的選件上設定對應的指令碼和樣式標籤nonce。 另請參閱  [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) 以取得更多詳細資料。
+* 支援在套用傳遞的[!DNL Target]選件時，在附加至頁面DOM的SCRIPT和STYLE標籤上設定內容安全性原則Nonce。 客戶可以設定`targetGlobalSettings.cspScriptNonce`和`targetGlobalSettings.cspStyleNonce`，讓at.js可以在套用的優惠方案上設定對應的指令碼和樣式標籤Nonce。 如需詳細資訊，請參閱[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
 * 修正使用Google Tag Manager部署的Google Closure編譯器編譯at.js時的問題。
-* 將來自的at.js檢查Cookie重新命名 `check` 至 `at_check` 以避免與客戶的實作發生衝突。
+* 將at.js檢查Cookie從`check`重新命名為`at_check`，以避免與客戶的實作發生衝突。
 
 ## at.js 1.8.1版（2020年3月25日）
 
 此 at.js 版本為維護版本，包含下列增強功能和修正：
 
-* 將來自的at.js檢查Cookie重新命名 `check` 至 `at_check` 以避免與客戶的實作發生衝突。
+* 將at.js檢查Cookie從`check`重新命名為`at_check`，以避免與客戶的實作發生衝突。
 
 ## at.js 2.2.0版（2019年10月10日）
 
 此at.js版本包含下列增強功能和修正：
 
-* 修正點選追蹤未回報中的轉換的問題 [!DNL Analytics for Target] (A4T)時機 [!DNL Adobe Analytics] 頁面元素上沒有程式碼。
+* 修正當頁面元素上不存在[!DNL Adobe Analytics]程式碼時，點選追蹤未回報[!DNL Analytics for Target] (A4T)中轉換的問題。
 * 已改善在網頁上同時使用Experience CloudID服務(ECID) v4.4和at.js 2.2時的效能。
 * 之前，ECID 曾進行兩次封鎖呼叫，之後 at.js 才能擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
 * 修正預先擷取的檢視處理錯誤，其中來自預設選件的事件權杖未包含在已傳送通知中。
@@ -184,7 +184,7 @@ ht-degree: 63%
 >
 >請將您的ECID擴充功能升級至v4.4，以運用此效能增強功能。
 
-* at.js 2.2版也提供名為 `serverState`. 此設定可在的混合整合時用來最佳化頁面效能 [!DNL Target] 已實作。 混合整合意指您在使用者端上同時使用at.js v2.2+和傳送API或 [!DNL Target] 伺服器端的SDK提供體驗。 `serverState` 讓at.js v2.2+能夠直接從伺服器端擷取並傳回至使用者端的內容套用體驗，做為所提供頁面的一部分。 如需詳細資訊，請參閱下列「serverState」： [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
+* at.js 2.2版也提供名為`serverState`的新設定。 當實施[!DNL Target]的混合整合時，此設定可用於最佳化頁面效能。 混合整合意指您在使用者端上同時使用at.js v2.2+和伺服器端的傳送API或[!DNL Target] SDK來傳送體驗。 `serverState`讓at.js v2.2+能夠直接從伺服器端擷取並傳回至使用者端的內容套用體驗，做為所提供頁面的一部分。 如需詳細資訊，請參閱[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate)中的「serverState」。
 
 ## at.js 1.8.0版（2019年10月10日）
 
@@ -223,9 +223,9 @@ ht-degree: 63%
 
 * **符合 CSP 產業標準**: at.js 不再使用 eval() 執行 JavaScript。
 
-* **使用者端分析記錄**：讓客戶完全掌控要以何種方式將分析資料傳送至 [!DNL Adobe Analytics]，無論是在使用者端或伺服器端。
+* **使用者端分析記錄**：無論是在使用者端或伺服器端，皆可讓客戶完全掌控要以何種方式將分析資料傳送至[!DNL Adobe Analytics]。
 
-  如需詳細資訊，請參閱 [使用者端 [!DNL Analytics] 記錄](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side).
+  如需詳細資訊，請參閱[使用者端 [!DNL Analytics] 記錄](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)。
 
 * **傳送通知**: 可讓開發人員在透過體驗的程式碼 (而不是透過 `applyOffer()` 或 `applyOffers()`) 呈現體驗時傳送通知。
 
@@ -240,7 +240,7 @@ ht-degree: 63%
 (括號內的問題編號供 Adobe 內部使用。)
 
 * 修正 DOM 輪詢程式碼中導致某些客戶遇到 JavaScript 例外狀況的的競爭條件。(TNT-31869)
-* 呈現的視圖已與點擊追蹤事件處理常式脫鉤的通知。最初， [!DNL Target] 如果屬於某個演算後檢視的點選事件處理常式無法附加，則不會傳送通知。 [!DNL Target] 現在會傳送檢視通知，即使找不到點按元素亦然。 (TNT-31969)
+* 呈現的視圖已與點擊追蹤事件處理常式脫鉤的通知。起初，如果屬於已轉譯檢視的點選事件處理常式無法附加，則[!DNL Target]不會傳送通知。 [!DNL Target]現在會傳送檢視通知，即使找不到點按專案亦然。 (TNT-31969)
 * 修正導致 request-succeeded 事件重新導向標幟一律設為 true 的問題。(TNT-31907)
 * 修正導致 VEC 重新排列動作記錄為成功 (甚至在元素遺失時) 的問題。(TNT-31924)
 * 修正導致某些客戶的通知不包含企業權限屬性 Token 的問題。(TNT-31999)
@@ -279,7 +279,7 @@ at.js 2.x 引進以下新函數:
 
 >[!NOTE]
 >
->如果您需要Adobe選擇加入支援， [一般資料保護規範](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)，您目前必須使用at.js 1.7.0或at.js 2.1.0或更新版本。
+>如果您需要[一般資料保護規範](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)的Adobe選擇加入支援，目前必須使用at.js 1.7.0或at.js 2.1.0或更新版本。
 
 ## at.js 版本 1.7.0
 
@@ -287,7 +287,7 @@ at.js 1.7.0 提供 Adobe 選擇加入支援。「Adobe 選擇加入」是簡化 
 
 如需 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規範 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)。
 
-此版本也修正了以下問題 [!DNL Target] 可能會使用來自重新導向URL的引數覆寫重新導向URL引數。
+此版本也修正[!DNL Target]可能將重新導向URL引數覆寫為來自重新導向URL之引數的問題。
 
 >[!NOTE]
 >
@@ -326,12 +326,12 @@ at.js 1.6.1 版包含下列增強功能和修正:
 * 變更導致在重新導向頁面重新授權重新導向活動時，有例外情況。(TNT-30532)
 * 修正正確要求逾時無法自 getOffer() API 要求傳播的問題。(TNT-30498)
 * 修正 at.js 1.6.0 在使用檔案通訊協定時，無法儲存 Cookie 的問題。(TNT-30454)
-* 修正以下問題，使用時，並非所有體驗都隨重新導向傳送 [!DNL Analytics for Target] (A4T)。 (TNT-30444)
-* 修正造成頁面在「 」後面隱藏的問題。 [!DNL Target] 呼叫成功。 (TNT-30358)
+* 修正使用[!DNL Analytics for Target] (A4T)時，並非所有體驗都隨重新導向傳送的問題。 (TNT-30444)
+* 修正在[!DNL Target]呼叫成功後隱藏頁面的問題。 (TNT-30358)
 
 at.js 1.6.0 版包含下列增強功能和修正:
 
-* 重新導向選件現在會自動在 [!UICONTROL 目標分析] (A4T)整合。 已移除用戶端解決方案。(TNT-30247)
+* [!UICONTROL Analytics for Target] (A4T)整合現在會自動支援重新導向選件。 已移除用戶端解決方案。(TNT-30247)
 * 現在預設啟用用戶端 Edge 路由傳送。(TNT-30261)
 * 修正動作間有相依性時，進行可視化體驗撰寫器 (VEC) 動作的問題。(TNT-30248)
 
@@ -342,7 +342,7 @@ at.js 版本 1.5.0 現已可用。
 * `at-request-succeeded` 事件的詳細資訊內含重新導向旗標。這個旗標是用來判斷頁面是否會重新導向至其他 URL。如果您想知道該 URL，請訂閱 `at-content-rendering-redirect`。(TNT-29834)
 * 修正 `window.targetGlobalSettings.enabled` 在執行階段例外設為 false 時會失敗的問題。(TNT-29829)
 * 修正使用自訂程式碼觸發全域 mbox 要求，以及使用主體隱藏時，造成頁面在可視化體驗撰寫器 (VEC) 載入失敗的問題。(TNT-29795)
-* 新增對 `screenOrientation`、`devicePixelRatio` 和 `webGLRenderer` 的支援。這些新 [!DNL Target] 要求引數可用於iPhone X和其他新型裝置偵測。 如需詳細資訊，請參閱[行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。(TNT-29781)
+* 新增對 `screenOrientation`、`devicePixelRatio` 和 `webGLRenderer` 的支援。這些新的[!DNL Target]要求引數用於iPhone X和其他新型裝置偵測。 如需詳細資訊，請參閱[行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。(TNT-29781)
 * 修正偶爾未傳送 Adobe Audience Manager (AAM) 位置提示的問題。(TNT-29695)
 * 若瀏覽器支援 at.js 1.5.0，at.js 1.5.0 會切換為 MutationObserver 進行選取器輪詢。at.js 1.0.0 以前的版本使用 MutationObserver polyfill，已證實會造成問題。為避免 polyfill 問題，版本 1.5.0 使用下列虛擬程式碼，決定要使用哪個排程機制:
 
@@ -367,16 +367,16 @@ at.js 1.3.0 版現已可用。
    * CONTENT_RENDERING_NO_OFFERS
    * CONTENT_RENDERING_REDIRECT
 
-  如需詳細資訊，請參閱 [at.js自訂事件](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md).
+  如需詳細資訊，請參閱[at.js自訂事件](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md)。
 
 * 您可以使用來自資料提供者的其他參數來擴大 at.js 要求。資料提供者應新增至 `window.targetGlobalSettings` 下的 `dataProviders key`。
 
   如需詳細資訊，請參閱[資料提供者](atjs-functions/targetglobalsettings.md#data-providers)。
 
-* at.js 要求現在使用 GET，但是當 URL 大小超過 2048 字元時，它會切換為使用 POST。有一個名為 `urlSizeLimit` 的新屬性，您可以在必要時增加大小限制。此變更允許 [!DNL Target] 使用相同技巧將at.js與AppMeasurement對齊。
-* [!DNL Target] 現在強制執行 `mbox` 鍵入 `adobe.target.applyOffer(options)` 函式中。 此金鑰在過去為必要，但 [!DNL Target] 現在強制使用以確保 [!DNL Target] 已正確驗證，且客戶已正確使用函式。
+* at.js 要求現在使用 GET，但是當 URL 大小超過 2048 字元時，它會切換為使用 POST。有一個名為 `urlSizeLimit` 的新屬性，您可以在必要時增加大小限制。此變更允許[!DNL Target]將at.js與使用相同技術的AppMeasurement對齊。
+* [!DNL Target]現在強制使用`adobe.target.applyOffer(options)`函式中的`mbox`機碼。 此機碼在過去是必要的，但現在[!DNL Target]強制使用它以確保[!DNL Target]有正確的驗證，且客戶正確地使用函式。
 * at.js 已改善事件和點擊追蹤功能。at.js 使用 `navigator.sendBeacon()` 來傳送事件追蹤資料，並將在不支援 `navigator.sendBeacon()` 時退回同步 XHR。此次遞補主要影響 Internet Explorer 10 和 11 與一些版本的 Safari。Safari 將在近期的 iOS 11.3 版本中新增對 `navigator.sendBeacon()` 的支援。
-* at.js 現在可以呈現選件，即便頁面是在背景索引標籤中開啟亦然。部分 [!DNL Target] 客戶在下列情況下遇到問題 `requestAnimationFrame()` 已停用，因為背景標籤的瀏覽器節流行為。
+* at.js 現在可以呈現選件，即便頁面是在背景索引標籤中開啟亦然。有些[!DNL Target]客戶遇到`requestAnimationFrame()`因背景標籤的瀏覽器節流行為而停用時的問題。
 * 此版本新增了許多效能改善，包括檢查 Chrome CPU 設定檔時較短的呼叫堆疊。
 * at.js 1.3.0 不再支援 Microsoft Internet Explorer 9 上的內容傳送如需詳細資訊，請參閱[支援的瀏覽器](/help/dev/before-implement/supported-browsers.md)。今後，所有要求會透過 `XMLHttpRequest` 執行，具有 CORS 支援而不沒有 JSONP 要求。此變更大幅改善安全性。
 
@@ -384,14 +384,14 @@ at.js 1.3.0 版現已可用。
 
 at.js 版本 1.2.3 現已可用。
 
-* 新增 JSON 選件的支援。只有在使用表單式體驗撰寫器建立的活動中才支援 JSON 選件。目前使用 JSON 選件的唯一方式是透過直接 API 呼叫。另請參閱 [建立JSON選件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html).
+* 新增 JSON 選件的支援。只有在使用表單式體驗撰寫器建立的活動中才支援 JSON 選件。目前使用 JSON 選件的唯一方式是透過直接 API 呼叫。請參閱[建立JSON選件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)。
 
 ## at.js 版本 1.2.2
 
 at.js 版本 1.2.2 現已可用。
 
-* 修正以下情況時，傳回JavaScript錯誤的問題： [!DNL Target] 程式庫已使用QUIRKS模式載入頁面上。 (TNT-28312)
-* 修正導致下列問題的因素： [!DNL Target] 點選追蹤以中斷 [!DNL Analytics] 資料收集呼叫。 (TNT-28261)
+* 修正當[!DNL Target]程式庫使用QUIRKS模式載入頁面時，傳回JavaScript錯誤的問題。 (TNT-28312)
+* 修正造成[!DNL Target]點選追蹤中斷[!DNL Analytics]個資料收集呼叫的問題。 (TNT-28261)
 * 已修正當 `getOffer() params` 傳回空白字串時，造成 `targetPageParams()` 失敗的問題。(TNT-28359)
 * 已修正使用僅 x 產生工作階段 ID 的問題。(TNT-28361)
 
@@ -399,17 +399,17 @@ at.js 版本 1.2.2 現已可用。
 
 at.js 版本 1.2.1 現已可用。
 
-* 已修正在具有target=&quot;_blank&quot;的連結上點選追蹤被禁止時的問題 [!DNL Target] ，即可在新標籤中開啟連結。
+* 已修正在具有target=&quot;_blank&quot;的連結上點選追蹤防止[!DNL Target]在新索引標籤中開啟連結的問題。
 
 ## at.js 版本 1.2.0
 
 at.js版本1.2現在已包括多數錯誤修正的維護版本形式提供。
 
 * 已修正防止點擊追蹤特殊大小寫的預設動作的問題。(TNT-28089)
-* 已修正在具有的連結上點選追蹤時的問題 `target="_blank"` 已防止 [!DNL Target] ，即可在新標籤中開啟連結。 (TNT-28072)
+* 修正在具有`target="_blank"`的連結上點選追蹤防止[!DNL Target]在新索引標籤中開啟連結的問題。 (TNT-28072)
 * 可以用作 Cookie 網域的 IP 位址。(TNT-28002)
 * 已修正在具有全域 mbox 或其他地區 mbox 的重新導向選件中造成閃爍的問題。(TNT-27978)
-* 修正中的問題 [!UICONTROL 體驗鎖定] 在瀏覽和撰寫之間切換時，VEC中的活動設定會失敗。 (TNT-27942)
+* 修正在瀏覽和撰寫之間切換時， VEC內的[!UICONTROL Experience Targeting]活動設定失敗的問題。 (TNT-27942)
 * 已修正點擊追蹤元素閃爍樣式類別上的不正確處理。(TNT-27896)
 * 已修正造成全域 mbox 參數變得與所有 mbox 參數混合的問題。(TNT-27846)
 * 進行變更以確保at.js已正確處理Handlebars、Mustache和其他使用者端範本資料庫。 (TNT-27831)
@@ -440,7 +440,7 @@ at.js 版本 1.0 中包括下列增強功能和修正:
 * 在活動傳遞期間的自訂事件 Bug/錯誤報表。
 * 修正 Microsoft Internet Explorer 11 中的效能問題。
 * `getOffer()` 函數在部分網站上發生錯誤的修正。
-* 載入 [!DNL Target] 非同步處理程式庫。 如需詳細資訊，請參閱 [at.js 常見問題](/help/dev/implement/client-side/atjs/target-atjs-faq.md)。
+* 以非同步方式載入[!DNL Target]資料庫。 如需詳細資訊，請參閱 [at.js 常見問題](/help/dev/implement/client-side/atjs/target-atjs-faq.md)。
 
 ## at.js 版本 0.9.7
 
@@ -456,15 +456,15 @@ at.js版本0.9.7中包括下列增強功能和修正：
 
 at.js版本0.9.6中包括下列增強功能和修正：
 
-* 重新導向選件支援 A4T。下載和安裝at.js版本0.9.6之後，您可以在使用的活動中使用重新導向選件 [!UICONTROL Adobe Analytics作為Target的報表來源] (A4T)。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向選件 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
-* 在at.js 0.9.6之前，當頁面上存在訪客API，而且 `visitorApiTimeout` 設定太積極主動， [!DNL Target] 可能會遇到「 」中未傳送任何MCID資料的情況。 [!DNL Target] 要求。 這可能在使用 A4T 時導致 [!DNL Analytics] 中的問題，例如散亂的點擊。
+* 重新導向選件支援 A4T。下載並安裝at.js 0.9.6版後，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活動中使用重新導向選件。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向選件 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
+* 在at.js 0.9.6之前，當頁面上存在訪客API，且`visitorApiTimeout`設定太積極時，可能會發生[!DNL Target]在[!DNL Target]要求中未傳送任何MCID資料的情況。 這可能在使用 A4T 時導致 [!DNL Analytics] 中的問題，例如散亂的點擊。
 
-  at.js 0.9.6已變更此行為，即使 `visitorApiTimeout` 設為1毫秒， [!DNL Target] 將嘗試收集SDID、追蹤伺服器和客戶ID資料，並將這些資料傳送至 [!DNL Target] 要求。
+  at.js 0.9.6已變更此行為，即便`visitorApiTimeout`設為假設1毫秒，[!DNL Target]將嘗試收集SDID、追蹤伺服器和客戶ID資料，並在[!DNL Target]要求中傳送那些資料。
 
 * 已新增 `selectorsPollingTimeout` 設定。如需詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
 * 來自 `getOffer()` () 的回應格式已變更。如需詳細資訊，請參閱 [adobe.target.getOffer(options)](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)。
 * 已針對不支援的 `<!DOCTYPE>` 宣告新增主控台記錄。
-* 修正以下問題： [!DNL Target Classic] 將多個預設選件傳遞至單一mbox時，外掛程式未正確套用。 (TGT-22664)
+* 修正將多個預設選件傳遞至單一mbox時，[!DNL Target Classic]外掛程式未正確套用的問題。 (TGT-22664)
 * 改善兩個字母上層網域(TLD)的Cookie設定，以確保為這些網域（例如， test.no、 autodrives.ca等）正確設定mbox Cookie。
 * 用於擷取儲存 Cookie 時應該使用的上層網域的演算法在 at.js 版本 0.9.6 中已變更。因為此變更，無法將 Cookie 儲存至使用 IP 的位址。大部分時候，IP 位址是用於測試用途，但做為解決辦法，您可以使用 DNS 項目或調整本機機器上的主機檔案。
 * 已修正當屬性為字串值而非整數時移動和重新排列動作的處理。
@@ -475,7 +475,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 * mbox名稱現在可以包含特殊字元，包括&amp;符號(&amp;)。
 
-  如需允許的特殊字元清單，請參閱 [at.js設定](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
+  如需允許的特殊字元清單，請參閱[at.js設定](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)。
 
 * 已新增 `secureOnly` 設定，指出 at.js 是否應該僅使用 HTTPS 或根據頁面通訊協定，允許在 HTTP 與 HTTPS 之間切換。這是進階的設定，預設值為 False 並且可透過 `targetGlobalSettings` 覆寫。
 * 「舊版瀏覽器支援」選項可在at.js版本0.9.3和更早版本中取得。 此選項已在 at.js 版本 0.9.4 中移除。
@@ -492,9 +492,9 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 **日期:** 2016 年 9 月 21 日
 
-* 已新增 `optoutEnabled` 設定，以啟用或停用裝置圖表選擇退出。如果此設定設為 `true`，並且訪客選擇退出追蹤，訪客的瀏覽器將不會進行任何 mbox 呼叫。裝置圖表目前處於 Beta 版。此設定設為 `false` 預設值，但必須設定為 `true` 如果您使用裝置圖表。
+* 已新增 `optoutEnabled` 設定，以啟用或停用裝置圖表選擇退出。如果此設定設為 `true`，並且訪客選擇退出追蹤，訪客的瀏覽器將不會進行任何 mbox 呼叫。裝置圖表目前處於 Beta 版。此設定預設會設為`false`，但如果您使用裝置圖表，則必須設為`true`。
 * 已針對通知機制新增 `CustomEvent` 支援。之前，您無法透過標準 DOM API (例如 `document.addEventListener()`) ()) 來使用 at.js 事件通知機制。現在您可以使用 `document.addEventListener()` 來訂閱 at.js 事件，例如要求事件和內容呈現事件。
-* 已修正關於可視化體驗撰寫器 (VEC) 選件建立的問題。在此版本之前， [!DNL Target] 只有在所有選取器都相符時，才會隱藏和取消隱藏選取器。 在at.js 0.9.2中 [!DNL Target] 在選取器符合時立即取消隱藏選取器。
+* 已修正關於可視化體驗撰寫器 (VEC) 選件建立的問題。在此版本之前，[!DNL Target]只在所有選取器都相符時隱藏和取消隱藏選取器。 在at.js 0.9.2中，[!DNL Target]會在選取器符合時便加以取消隱藏。
 
 ## at.js 版本 0.9.1
 
@@ -502,11 +502,11 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 * 為訪客ID服務提供at.js逾時，其與服務本身的逾時無關。
 * 更正0.9.0中影響在某些頁面上使用at.js和在其他頁面上使用mbox.js （現已被取代）實施的問題。
-* 如果您使用 [!DNL Adobe Analytics] 如果您使用mbox.js 61版（或更新版本）或at.js 0.9.1版（或更新版本），則作為活動的報表來源，不需在活動建立期間指定追蹤伺服器。 at.js 程式庫會自動傳送追蹤伺服器值給 [!DNL Target]。 在活動建立期間，您可以將「目標與設定」頁面上的「追蹤伺服器」欄位保留空白。
+* 如果您使用[!DNL Adobe Analytics]作為活動的報表來源，若您使用的是mbox.js 61版（或更新版本）或at.js 0.9.1版（或更新版本），則不需要在活動建立期間指定追蹤伺服器。 at.js 程式庫會自動傳送追蹤伺服器值給 [!DNL Target]。 在活動建立期間，您可以將「目標與設定」頁面上的「追蹤伺服器」欄位保留空白。
 
 ## at.js 版本 0.9.0
 
-**[!DNL Target]發行版本：** 16.6.1
+**[!DNL Target]版本：** 16.6.1
 
 **日期:** 2016 年 6 月 23 日
 
@@ -526,7 +526,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 * 新 `targetGlobalSettings()` API 方法。
 
-  您可以覆寫at.js資料庫中的設定，而非在 [!DNL Target Standard/Premium] UI或使用REST API。
+  您可以覆寫at.js資料庫中的設定，而非在[!DNL Target Standard/Premium] UI中或使用REST API進行設定。
 
 ## at.js 版本 0.8.0
 
@@ -534,7 +534,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 這是at.js資料庫的第一個官方版本。
 
-at.js是新的實作程式庫，適用於 [!DNL Target] 專為典型Web實作和單頁應用程式而設計。
+at.js是適用於[!DNL Target]的新實作程式庫，專為典型Web實作和單頁應用程式而設計。
 
 at.js 取代了 實施的 mbox.js。[!DNL Adobe Target]
 
@@ -545,6 +545,6 @@ at.js 包含 target.js 所附元件，因此不再需要呼叫 target.js。
 實施 at.js 時，請注意以下事項:
 
 * 不支援 Internet Explorer 8 版之前的舊版。
-* 非同步實施表示舊版整合，例如 [!UICONTROL 要SiteCatalyst的Test&amp;Target] 外掛程式可能無法運作。
-* [!DNL Target] 不支援參考mbox.js物件與方法的外掛程式。
+* 非同步實施表示舊版整合（例如[!UICONTROL Test&Target to SiteCatalyst]外掛程式）可能無法運作。
+* 不支援參考mbox.js物件與方法的[!DNL Target]外掛程式。
 * 所有對 [!DNL Target] 的呼叫都是透過 XMLHTTPRequest，而內容是透過 JSON 傳回。

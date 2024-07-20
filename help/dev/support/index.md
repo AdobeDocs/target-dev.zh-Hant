@@ -3,8 +3,8 @@ title: 支援 — Adobe Analytics
 description: 這是Adobe Analytics的支援頁面
 source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 8%
+source-wordcount: '92'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 與社群專家和Adobe人員展開討論並提供支援。
 
-[Experience League](https://adobe.io)
+[Experience league](https://adobe.io)
 
 適用於整個社群的Tutorials和影片。
 

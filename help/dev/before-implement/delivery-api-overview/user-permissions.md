@@ -7,14 +7,14 @@ exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 # 使用者許可權(Premium)
 
-[!DNL Adobe] 可讓客戶在使用Adobe Target時管理其使用者的許可權。 為了成功 [!UICONTROL Adobe Target傳送API] 呼叫，具有正確許可權的Token必須在API呼叫中傳遞。 為了進一步瞭解使用者許可權以及如何擷取權杖造訪 [本檔案](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+[!DNL Adobe]可讓客戶在使用Adobe Target時管理其使用者的許可權。 為了成功進行[!UICONTROL Adobe Target Delivery API]呼叫，必須在API呼叫中傳遞具有正確許可權的Token。 若要深入瞭解使用者許可權及如何擷取Token，請瀏覽[本檔案](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
 
 ```
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
     }'
 ```
 
-擁有對應的Token後，請將其傳遞至 `property` -> `token` 執行每個API呼叫時。 如果 `property` -> `token` 並未在每個API呼叫中傳遞，您將不會取得任何 `content` 從Adobe Target回來。
+擁有對應的Token後，請針對每個API呼叫將其傳遞至`property` -> `token`。 如果未在每個API呼叫中傳遞`property` -> `token`，您將無法從Adobe Target取得任何`content`。
 
 ```
 {
@@ -71,4 +71,4 @@ curl -X POST \
 }
 ```
 
-如上所示，無須傳遞 `property` -> `token`，您將無法取回任何內容。 如果您期望從API呼叫取得內容，但並未從回應中擷取任何內容，很可能是因為  `property` -> `token` 未提供，或傳遞時沒有正確的許可權。
+如上所示，若未傳遞`property` -> `token`，您將無法取得任何內容。 如果您期望從API呼叫取得內容，但並未從回應中擷取任何內容，很可能是因為未提供`property` -> `token`，或傳遞內容時沒有正確的許可權。

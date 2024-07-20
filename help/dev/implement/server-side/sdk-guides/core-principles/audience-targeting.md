@@ -1,12 +1,12 @@
 ---
 title: 對象目標定位
-description: 受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target] 現成可支援多種強大的對象鎖定功能。
+description: 受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target] 現成可支援多種強大的對象目標定位功能。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 17%
+source-wordcount: '702'
+ht-degree: 22%
 
 ---
 
@@ -14,11 +14,12 @@ ht-degree: 17%
 
 ## 總覽
 
-受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target] 現成可支援多種強大的對象鎖定功能。 下列屬性適用於 [對象目標定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)：
+受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target]現成可支援多種強大的受眾目標定位功能。 下列屬性適用於[對象目標定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)：
 
-### [!DNL Target] 資料庫
+### [!DNL Target]資料庫
 
-如需詳細資訊，請參閱 [[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html).&#x200B;URL
+如需詳細資訊，請參閱[[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html)。
+&#x200B;URL
 * 從Bing反向連結
 * Chrome瀏覽器
 * Firefox瀏覽器
@@ -35,7 +36,8 @@ ht-degree: 17%
 
 ### 地理
 
-如需詳細資訊，請參閱 [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html).「&#x200B;&#x200B;」
+如需詳細資訊，請參閱[地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)。
+「&#x200B;&#x200B;」
 * 國家/地區
 * 狀態
 * 城市
@@ -47,7 +49,7 @@ ht-degree: 17%
 
 ### 網路
 
-如需詳細資訊，請參閱 [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html).
+如需詳細資訊，請參閱[網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)。
 
 * ISP
 * 網域名稱
@@ -69,13 +71,13 @@ ht-degree: 17%
 
 ### 自訂
 
-如需詳細資訊，請參閱 [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html).
+如需詳細資訊，請參閱[自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)。
 
 * 任何索引鍵/值組
 
 ### 作業系統
 
-如需詳細資訊，請參閱 [作業系統](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html).
+如需詳細資訊，請參閱[作業系統](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html)。
 
 * Linux
 * Macintosh
@@ -83,7 +85,7 @@ ht-degree: 17%
 
 ### 網頁
 
-如需詳細資訊，請參閱 [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html).
+如需詳細資訊，請參閱[網站頁面](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)。
 
 * 目前頁面
 * 上一頁
@@ -92,7 +94,7 @@ ht-degree: 17%
 
 ### 瀏覽器
 
-如需詳細資訊，請參閱 [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html).
+如需詳細資訊，請參閱[瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)。
 
 * 類型
 * 語言
@@ -100,13 +102,13 @@ ht-degree: 17%
 
 ### 訪客設定檔
 
-如需詳細資訊，請參閱 [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
+如需詳細資訊，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 * 任何索引鍵/值組，持續存在
 
 ### 流量來源
 
-如需詳細資訊，請參閱 [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html).
+如需詳細資訊，請參閱[流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)。
 
 * 來自 Baidu
 * 從 Bing
@@ -124,11 +126,11 @@ ht-degree: 17%
 
 ## 使用者端提示
 
-[!DNL Adobe Target] 需要使用者端提示才能正確劃分瀏覽器、作業系統和行動對象屬性，以及某些設定檔指令碼例項。 如需詳細背景資訊，請參閱 [使用者代理和使用者端提示](../../../client-side/atjs/user-agent-and-client-hints.md).
+[!DNL Adobe Target]需要使用者端提示才能正確劃分瀏覽器、作業系統和行動對象屬性，以及某些設定檔指令碼例項。 如需詳細背景資訊，請參閱[使用者代理程式和使用者端提示](../../../client-side/atjs/user-agent-and-client-hints.md)。
 
-### 如何將使用者端提示傳遞至 [!DNL Adobe Target]
+### 如何將使用者端提示傳遞至[!DNL Adobe Target]
 
-從Node.js SDK v2.4.0和Java SDK v2.3.0開始，使用者端提示可以傳送至 [!DNL Target] via `getOffers()` 呼叫。 使用者端提示應包含在 `request.context` 物件以及使用者代理程式。
+從Node.js SDK v2.4.0和Java SDK v2.3.0開始，使用者端提示可以透過`getOffers()`呼叫傳送至[!DNL Target]。 `request.context`物件上應包含使用者端提示和使用者代理。
 
 >[!BEGINTABS]
 
@@ -198,18 +200,18 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 | [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
 | [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
 | [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
-| [自訂參數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
+| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
 | [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
 | [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
 | [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受眾 | 否 |
+| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
 
 ### 裝置上決策的地理定位
 
-為了維持裝置上決策活動具有地理型對象幾乎零延遲的狀態，Adobe建議您自己在呼叫中提供地理值， `getOffers`. 若要這麼做，請設定 `Geo` 中的物件 `Context` 請求的。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 有些託管提供者(例如Google Cloud)會透過每個中的自訂標題提供此功能 `HttpServletRequest`.
+為了維持具有地理型對象的裝置上決策活動幾乎零延遲，Adobe建議您在`getOffers`呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者(例如Google Cloud)會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
 
 >[!BEGINTABS]
 
@@ -268,7 +270,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-不過，如果您無法對伺服器執行IP對地理位置的查詢，但您仍想要對執行裝置上決策 `getOffers` 如果請求包含以地理為基礎的對象，這也受到支援。 此方法的缺點在於它將使用遠端IP對地理的查詢，這會為每個查詢增加延遲 `getOffers` 呼叫。 此延遲應低於遠端 `getOffers` 呼叫，因為它點選了位在伺服器附近的CDN。 您必須 **僅限** 提供 `ipAddress` 中的欄位 `Geo` 中的物件 `Context` ，以便SDK擷取您使用者IP位址的地理位置。 如果除了任何其他欄位 `ipAddress` 「 」提供的 [!DNL Target] SDK不會擷取地理位置中繼資料以進行解析。
+不過，如果您無法在伺服器上執行IP對地理的查詢，但您仍想要對包含地理型受眾的`getOffers`要求執行裝置上決策，則也支援此功能。 此方法的缺點在於它將使用遠端IP對地理的查閱，這會增加每個`getOffers`呼叫的延遲。 此延遲應低於遠端`getOffers`呼叫，因為它點選了位於伺服器附近的CDN。 您必須&#x200B;**僅**&#x200B;在請求`Context`的`Geo`物件中提供`ipAddress`欄位，SDK才能擷取您使用者IP位址的地理位置。 如果提供除了`ipAddress`之外的任何其他欄位，[!DNL Target] SDK將不會擷取地理位置中繼資料以進行解析。
 
 >[!BEGINTABS]
 
@@ -325,11 +327,11 @@ public class TargetRequestUtils {
 | [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
 | [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 是 |
 | [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 是 |
-| [自訂參數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
+| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
 | [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
 | [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
 | [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 是 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 是 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受眾 | 是 |
+| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 是 |

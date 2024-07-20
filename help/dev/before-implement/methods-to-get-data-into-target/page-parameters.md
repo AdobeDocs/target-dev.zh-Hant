@@ -1,13 +1,13 @@
 ---
 keywords: 實作，實施，設定，設定，頁面引數
-description: 將資料匯入 [!DNL Target] 使用頁面引數。
-title: 如何將資料帶入 [!DNL Target] 使用頁面引數？
+description: 使用頁面引數將資料匯入 [!DNL Target] 。
+title: 如何使用頁面引數將資料匯入 [!DNL Target] ？
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 38%
+source-wordcount: '369'
+ht-degree: 32%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 38%
 
 頁面引數（也稱為「mbox引數」）是直接透過頁面程式碼傳入的名稱/值組，不會儲存在訪客的設定檔中以供日後使用。
 
-頁面引數對於傳送頁面資料至很有用 [!DNL Adobe Target] 這些資料不需要儲存在訪客的設定檔中，以供日後鎖定目標使用。 這些值改用來說明頁面，或使用者在特定頁面上採取的動作。
+頁面引數可用來將不需要與訪客的設定檔儲存以供未來鎖定目標使用的頁面資料傳送至[!DNL Adobe Target]。 這些值改用來說明頁面，或使用者在特定頁面上採取的動作。
 
 ## 格式
 
-頁面引數傳遞至 [!DNL Target] 透過伺服器呼叫，以字串名稱/值配對形式提供。 參數名稱和值可自訂 (但有一些「保留名稱」是特定用途)。
+頁面引數會透過伺服器呼叫以字串名稱/值配對的形式傳遞至[!DNL Target]。 參數名稱和值可自訂 (但有一些「保留名稱」是特定用途)。
 
 以下是頁面引數的一些範例
 
@@ -30,25 +30,25 @@ ht-degree: 38%
 ## 範例使用案例
 
 * **產品頁面**：傳送已檢視之特定產品的相關資訊(此方法為Recommendations的運作方式)
-* **訂單詳細資料**：傳送訂單ID、orderTotal等供收集訂單
-* **類別相關性**[!DNL Target]: 將類別檢視資訊傳送至 ，以瞭解使用者與特定網站類別的相關性
+* **訂單詳細資料**：傳送訂單識別碼、orderTotal等供收集訂單
+* **類別相關性**：將類別檢視資訊傳送至[!DNL Target]，以瞭解使用者與特定網站類別的相關性
 * **第三方資料**: 傳送來自第三方資料來源的資訊，例如，天氣鎖定目標提供者、帳戶資料 (例如 DemandBase)、人口統計資料 (例如 Experian) 及其他。
 
 ## 方法的優點
 
-資料傳送到 [!DNL Target] 而且可在呼叫其來源資料的相同伺服器上即時使用。
+資料會即時傳送至[!DNL Target]，並可在相同伺服器呼叫資料所傳入的資料時使用。
 
 ## 注意事項
 
 * 需要頁面程式碼更新 (直接或透過標記管理系統)。
 * 如果資料必須在後續的頁面/伺服器呼叫上用於定位，則必須將其轉譯為設定檔指令碼。
-* 查詢字串僅可包含符合[網際網路工程任務小組 (IETF) 標準](https://www.ietf.org/rfc/rfc3986.txt)的字元。
+* 查詢字串只能包含符合[網際網路工程任務小組(IETF)標準](https://www.ietf.org/rfc/rfc3986.txt)的字元。
 
-  除了IETF網站上提到的字元以外， [!DNL Target] 允許在查詢字串中包含下列字元：
+  除了在IETF網站上提到的字元外，[!DNL Target]還允許在查詢字串中包含下列字元：
 
   ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers=&quot;true&quot;}
 
-  除此之外的字元都必須經過 URL 編碼。此標準指定了下列格式( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) )，如下所示：
+  除此之外的字元都必須經過 URL 編碼。此標準指定了下列格式( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) )，如下圖所示：
 
   ![替代影像](assets/ietf1.png)
 

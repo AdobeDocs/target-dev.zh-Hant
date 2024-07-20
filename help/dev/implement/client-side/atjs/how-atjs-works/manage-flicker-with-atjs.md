@@ -1,31 +1,31 @@
 ---
 keywords: 忽隱忽現， at.js，實作，非同步，非同步，同步， $8
-description: 瞭解at.js和 [!DNL Target] 在頁面或應用程式載入期間防止忽隱忽現（預設內容在被活動內容取代之前暫時顯示）。
+description: 瞭解at.js和 [!DNL Target] 如何在頁面或應用程式載入期間防止忽隱忽現（預設內容在被活動內容取代之前暫時顯示）。
 title: at.js如何管理忽隱忽現的情形？
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 63%
+source-wordcount: '699'
+ht-degree: 57%
 
 ---
 
 # At.js 處理忽隱忽現情況的方式
 
-關於如何 [!DNL Adobe Target] at.js JavaScript程式庫可防止頁面或應用程式載入期間忽隱忽現。
+有關[!DNL Adobe Target] at.js JavaScript資料庫如何在頁面或應用程式載入期間防止忽隱忽現的資訊。
 
 忽隱忽現是指預設內容在換成活動內容之前短暫顯示給訪客。忽隱忽現不理想，因為可能造成訪客混淆。
 
 ## 使用自動建立的全域mbox
 
-若您在設定 at.js 時啟用了[「自動建立全域 Mbox」](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md)設定，at.js 會透過變更頁面載入時的不透明度設定，來處理忽隱忽現的情形。at.js載入時，會將元素的不透明度設定變更為「0」，`<body>`讓訪客一開始無法看到頁面。在來自的回應之後 [!DNL Target] 收到 — 或如果發生錯誤，則 [!DNL Target] 偵測到要求 — at.js會將不透明度重設為「1」。 這種做法可確保訪客只能在活動內容套用之後才看得到頁面。
+若您在設定 at.js 時啟用了[「自動建立全域 Mbox」](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md)設定，at.js 會透過變更頁面載入時的不透明度設定，來處理忽隱忽現的情形。at.js載入時，會將`<body>`元素的不透明度設定變更為「0」，使訪客一開始無法看到頁面。 收到來自[!DNL Target]的回應之後，或偵測到[!DNL Target]要求的錯誤時，at.js會將不透明度重設為「1」。 這種做法可確保訪客只能在活動內容套用之後才看得到頁面。
 
-如果您在設定 at.js 時啟用此設定，則 at.js 會將 HTML BODY 樣式不透明度設定為 0。在來自的回應之後 [!DNL Target] ，at.js會將HTML主體不透明度重設為1。
+如果您在設定 at.js 時啟用此設定，則 at.js 會將 HTML BODY 樣式不透明度設定為 0。收到來自[!DNL Target]的回應後，at.js會將HTMLBODY不透明度重設為1。
 
 將不透明度設為 0，可隱藏頁面內容以避免忽隱忽現的情形發生，但瀏覽器仍會輸出頁面，並載入 CSS、影像等所有必要資產。
 
-如果 `opacity: 0` 在您的實作中無法運作，您也可以透過自訂「 」來管理忽隱忽現的情形 `bodyHiddenStyle` 並將其設為 `body {visibility:hidden !important}`. 您可以使用以下其中一項 `body {opacity:0 !important}` 或 `body {visibility:hidden !important}`，適合您特定環境的專案。
+如果`opacity: 0`在您的實作中無法運作，您也可以透過自訂`bodyHiddenStyle`並將其設定為`body {visibility:hidden !important}`來管理忽隱忽現的問題。 您可以使用最適合您特定環境的`body {opacity:0 !important}`或`body {visibility:hidden !important}`。
 
 下圖顯示 js 1.*x* 和 at.js 2.x。
 
@@ -33,13 +33,13 @@ ht-degree: 63%
 
 （按一下影像可展開至完整寬度。）
 
-![Target流程： at.js頁面載入要求](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target流程： at.js頁面載入要求"){zoomable=&quot;yes&quot;}
+![Target流程： at.js頁面載入要求](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target流程： at.js頁面載入要求"){zoomable="yes"}
 
 **at.js 1.*x***
 
 （按一下影像可展開至完整寬度。）
 
-![Target流程：自動建立的全域mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "目標流程：自動建立的全域mbox"){zoomable=&quot;yes&quot;}
+![目標流程：自動建立的全域mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "目標流程：自動建立的全域mbox"){zoomable="yes"}
 
 如需 `bodyHiddenStyle` 覆寫的詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 63%
 
 非同步載入 at.js 可有效避免讓瀏覽器無法呈現；不過，此技術可能導致網頁上忽隱忽現。
 
-您可以使用預先隱藏的程式碼片段來避免忽隱忽現，此片段要等到 Target 將相關的 HTML 元素個人化之後才可見。
+您可以使用預先隱藏的程式碼片段來避免忽隱忽現情形，此片段要等到Target將相關的HTML元素個人化之後才可見。
 
 at.js可非同步載入，直接內嵌於頁面或透過標籤管理員(例如Adobe Experience Platform Launch)進行。
 

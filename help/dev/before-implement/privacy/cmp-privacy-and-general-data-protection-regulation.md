@@ -6,8 +6,8 @@ feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '2374'
-ht-degree: 64%
+source-wordcount: '2329'
+ht-degree: 62%
 
 ---
 
@@ -31,8 +31,8 @@ Adobe Experience Cloud為資料控管者提供GDPR完備的API，可讓資料控
 如需詳細資訊，請參閱：
 
 * [AdobePrivacy Service概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html)
-* [Privacy Service API指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html)
-* [Privacy Service UI總覽](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html)
+* [Privacy ServiceAPI指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html)
+* [Privacy ServiceUI總覽](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html)
 
 ## 加州消費者隱私保護法 (CCPA) 總覽
 
@@ -53,7 +53,7 @@ Adobe Experience Cloud為資料控管者提供GDPR完備的API，可讓資料控
 
 ## Adobe Target和Adobe Experience Platform選擇加入
 
-Target透過Adobe Experience Platform中的標籤支援選擇加入功能，可協助支援您的同意管理策略。 選擇加入功能可讓客戶控制觸發 Target 標記的方法和時機。也可選擇透過Adobe Experience Platform預先核准Target標籤。 若要啟用在Target at.js資料庫中使用選擇加入的功能，您應使用 `targetGlobalSettings` 並新增 `optinEnabled=true` 設定。 在Adobe Experience Platform中，以擴充功能安裝檢視，從GDPR選擇加入下拉式清單中選取「啟用」。 另請參閱 [使用Adobe Experience Platform實作Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 以取得更多詳細資料。
+Target透過Adobe Experience Platform中的標籤支援選擇加入功能，可協助支援您的同意管理策略。 選擇加入功能可讓客戶控制觸發 Target 標記的方法和時機。也可選擇透過Adobe Experience Platform預先核准Target標籤。 若要啟用在Target at.js資料庫中使用選擇加入的功能，您應該使用`targetGlobalSettings`並新增`optinEnabled=true`設定。 在Adobe Experience Platform中，以擴充功能安裝檢視，從GDPR選擇加入下拉式清單中選取「啟用」。 如需詳細資訊，請參閱[使用Adobe Experience Platform實作Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)。
 
 下列程式碼片段會向您示範如何啟用 `optinEnabled=true` 設定:
 
@@ -71,7 +71,7 @@ window.targetGlobalSettings = {
 
 使用「選擇加入」時，該考慮三種情況:
 
-1. **Target標籤會透過Adobe Experience Platform預先核准（或資料主體先前核准的Target）：** Target標籤不會為同意保留，並會如預期運作。
+1. **已透過Adobe Experience Platform預先核准Target標籤（或資料主體先前核准的Target）：** Target標籤不會為同意保留，且會如預期運作。
 1. **Target 標記「不會」預先核准且 `bodyHidingEnabled` 為「FALSE」:** Target 標記僅在向客戶取得同意後觸發。取得同意前，僅可使用預設內容。收到同意後，系統會呼叫 Target，資料主體 (訪客) 即可使用個人化內容。由於知情同意前只能使用預設內容，因此使用適當的策略很重要，例如蓋住頁面任何部分的啟動顯示畫面或可個人化的內容。 此程序可確保資料主體 (訪客) 的體驗保持一致。
 1. **Target 標記「不會」預先核准且 `bodyHidingEnabled` 為「TRUE」:** Target 標記僅在向客戶取得同意後觸發。取得同意前，僅可使用預設內容。但由於 `bodyHidingEnabled` 設為 True，`bodyHiddenStyle` 會指定在觸發 Target 標記前隱藏的頁面內容 (或資料主體拒絕選擇加入，而顯示預設內容)。根據預設，`bodyHiddenStyle` 設定為 `body { opacity:0;}`，這會隱藏 HTML 內文標記。 Adobe 建議的頁面設定如下，以便將頁面內容放入一個容器，並將知情同意管理程式對話框放入另一個容器，即可隱藏頁面的整個內文，而不是知情同意管理程式對話框。 這項設定會將 Target 設定為只隱藏頁面內容容器。請參閱 [Privacy Service 總覽](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)。
 
@@ -119,7 +119,7 @@ Experience Cloud解決方案（包括Target）的所有GDPR和CCPA要求，都�
 
 ### Adobe會讓客戶刪除哪些資訊來回應資料主體/使用者要求？
 
-有關 Target 中的個別訪客資訊會包含在 Target 訪客設定檔中。Target可讓客戶刪除與其訪客設定檔中之ID相關的所有資料。 如需Target儲存的設定檔資料範例，請參閱 [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
+有關 Target 中的個別訪客資訊會包含在 Target 訪客設定檔中。Target可讓客戶刪除與其訪客設定檔中之ID相關的所有資料。 如需Target儲存的設定檔資料範例，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 不會識別特定個人的彙總或匿名資料 (例如報告資料)，或與特定個人不相關的資料 (例如內容資料)，則不在使用者刪除要求的範圍之內。
 
@@ -131,15 +131,15 @@ Target 支援下列 ID 類型，以便找出客戶設定檔:
 
 | 使用者 ID | 命名空間 ID 類型 | 命名空間 ID | 定義 |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID，先前稱為訪客 ID 或 Experience Cloud ID。 您可以使用 JavaScript API 找到此 ID (請參閱下方的詳細資料)。 |
-| TnT ID/Cookie ID(TNTID) | Standard | 9 | 在訪客的瀏覽器中設為Cookie的目標識別碼。 您可以使用 JavaScript API 找到此 ID (請參閱下方的詳細資料)。 |
-| 第三方 ID/CRM ID(THIRDPARTYID) | Target 專用 | 不適用 | 此情況為您向 Target 提供您的 CRM 或客戶的其他唯一識別碼資訊。 |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID，先前稱為訪客ID或Experience CloudID。 您可以使用 JavaScript API 找到此 ID (請參閱下方的詳細資料)。 |
+| TnT ID / Cookie ID(TNTID) | Standard | 9 | 在訪客的瀏覽器中設為Cookie的目標識別碼。 您可以使用 JavaScript API 找到此 ID (請參閱下方的詳細資料)。 |
+| 第三方ID / CRM ID (THIRDPARTYID) | Target 專用 | 不適用 | 此情況為您向 Target 提供您的 CRM 或客戶的其他唯一識別碼資訊。 |
 
 >[!NOTE]
 >
 >雖然Target對第一方和第三方跨網域Cookie均有支援，但只建議將第一方Target Cookie用於GDPR和CCPA。
 
-###  Target 如何處理同意管理?
+### Target如何處理同意管理？
 
 GDPR 和 CCPA 不會改變您必須取得同意的時間，而是改變您取得同意的方式。 每個客戶的知情同意策略會依據其資料收集和使用做法以及其隱私權政策而定。 不支援GDPR和CCPA的同意管理，也不應透過Target達成。
 
@@ -147,11 +147,11 @@ Adobe 目前並未提供同意管理解決方案，但市場中已開發各種�
 
 Target透過Adobe Experience Platform支援選擇加入功能，可支援您的同意管理策略。 選擇加入功能可讓客戶控制觸發 Target 標記的方法和時機。也可選擇透過Adobe Experience Platform預先核准Target標籤。 建議使用Adobe Experience Platform管理選擇加入。 Adobe Experience Platform中有更精細的控制功能，可在Target引發前隱藏選取的頁面元素，可能利於用於知情同意策略的一部分。
 
-如需有關GDPR、CCPA和Adobe Experience Platform的詳細資訊，請參閱 [Adobe隱私權JavaScript程式庫和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). 另請參閱上面的 *Adobe Target 和 Adobe Experience Platform 選擇加入*&#x200B;一節。
+如需GDPR、CCPA和Adobe Experience Platform的詳細資訊，請參閱[Adobe隱私權JavaScript資料庫和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)。 另請參閱上面的 *Adobe Target 和 Adobe Experience Platform 選擇加入*&#x200B;一節。
 
 ### `AdobePrivacy.js` 會將資訊提交至 GDPR API 嗎？
 
-AdobePrivacy.js *不會*&#x200B;將此資訊提交至 API。此動作必須由客戶來執行。本程式庫僅會提供儲存在該特定訪客所使用之瀏覽器中的 ID。
+AdobePrivacy.js *不會*&#x200B;將此資訊提交至API。 此動作必須由客戶來執行。本程式庫僅會提供儲存在該特定訪客所使用之瀏覽器中的 ID。
 
 ### `removeIdentities` 會移除哪些內容？
 
@@ -204,9 +204,9 @@ AdobePrivacy.js *不會*&#x200B;將此資訊提交至 API。此動作必須由�
 
 | 要求狀態 | Target 回應訊息 | 藍本 |
 |--- |--- |--- |
-| 正在處理 | 正在處理 | Target 已收到 GDPR 或 CCPA 要求，且正在處理中。 |
+| 處理中 | 處理中 | Target 已收到 GDPR 或 CCPA 要求，且正在處理中。 |
 | 完成 | 不適用 - 公司環境不適用 | GDPR 或 CCPA 要求中的 IMS ID 未對應到任何 Target 用戶端。<br />某些公司有多個 IMS ID。 在布建Target的地方提交IMS ID。 |
-| 完成 | 不適用 - 使用者環境不適用 | Target 設定檔存放區中沒有在 GDPR 或 CCPA 要求中提供的特定訪客或資料主體的 ID。<br />如果您嘗試提交Target不支援的名稱空間ID型別（請參閱上面所述的支援的ID），也會傳回這樣的結果。 |
+| 完成 | 不適用 - 使用者環境不適用 | Target 設定檔存放區中沒有在 GDPR 或 CCPA 要求中提供的特定訪客或資料主體的 ID。<br />如果您嘗試提交Target不支援的名稱空間ID型別（請參閱上面所述的支援的ID），也會傳回此結果。 |
 | 錯誤 | 錯誤訊息 (詳細資訊會視錯誤類型而定) | 擷取或刪除要求的資料主體個人資料時發生錯誤。<br />因應存取要求上傳至 Azure 時發生錯誤。 |
 
 ### Target 針對存取要求傳送至 GDPR API 的回應是什麼?

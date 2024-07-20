@@ -1,27 +1,28 @@
 ---
 title: Adobe Target設定檔API
-description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 [!DNL Target].
+description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 [!DNL Target]。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
+exl-id: 480cbbbe-4822-48c3-80d4-53628dee57b0
+source-git-commit: e2462d12cf58ab5a588c13a96df5e6abafb9d675
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profiles API] 概述
+# [!DNL Adobe Target Profiles API]總覽
 
-[!DNL Adobe Target] 為每個個別使用者建立和維護設定檔。 此設定檔儲存在 [!DNL Target] 邊緣叢集，並在每次造訪後即時更新。
+[!DNL Adobe Target]會為每個個別使用者建立和維護設定檔。 此設定檔儲存在[!DNL Target]邊緣叢集上，並在每次造訪後即時更新。
 
-## 的結構 [!DNL Target] 設定檔
+## [!DNL Target]設定檔的結構
 
 Target設定檔包含下列物件：
 
 | 物件 | 詳細資料 |
 | --- | --- |
-| `clientcode` | 此 [!DNL Target] 與設定檔相關聯的使用者端代碼。 |
-| `visitorId` | 設定檔的識別碼。 這可以是 `tntid`， `thirdpartyid`，或 `marketingcloudvisitorid`. |
+| `clientcode` | 與設定檔相關聯的[!DNL Target]使用者端代碼。 |
+| `visitorId` | 設定檔的識別碼。 這可以是`tntid`、`thirdpartyid`或`marketingcloudvisitorid`。 |
 | `modifiedAt` | 設定檔上次更新的時間戳記。 |
 | `profileAttributes` | 該個別設定檔上所有儲存為索引鍵/值組的設定檔屬性清單。 |
 

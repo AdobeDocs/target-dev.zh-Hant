@@ -1,27 +1,27 @@
 ---
 keywords: 全域mbox引數， targetPageParams，查詢字串，陣列， json， dtm
-description: 瞭解如何使用 [!UICONTROL targetPageParams] 函式來傳遞其他目標定位或內容資訊至 [!DNL Adobe Target] 全域mbox。
+description: 瞭解如何使用[!UICONTROL targetPageParams]函式將其他目標定位或內容資訊傳遞至 [!DNL Adobe Target] 全域mbox。
 title: 如何將引數傳遞至全域mbox？
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 63%
+source-wordcount: '370'
+ht-degree: 61%
 
 ---
 
 # 傳遞參數至全域 mbox
 
-JavaScript `targetPageParams` 函式用於將引數傳遞至中的全域mbox [!DNL Adobe Target]. 在任何要傳遞其他目標/內容資訊的情境中，都需要此專案 [!DNL Target].
+JavaScript `targetPageParams`函式是用來傳遞引數至[!DNL Adobe Target]中的全域mbox。 在任何要傳遞其他目標/內容資訊至[!DNL Target]的案例中都需要此專案。
 
 例如，在「建議」活動中，使用參數來代表目前正在檢視的產品或類別。
 
-呼叫JavaScript函式的程式碼必須位於頁面上的全域mbox之前，無論全域mbox是作為at.js的一部分引發，還是手動納入頁面程式碼中。
+呼叫JavaScript函式的程式碼必須位於頁面上的全域mbox之前，無論全域mbox是以at.js的一部分引發，還是手動納入頁面程式碼中。
 
 >[!NOTE]
 >
->如果您想要將引數新增至頁面上的所有mbox，而不只是新增至全域mbox，請使用 [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 函式。
+>如果您想要將引數新增至頁面上的所有mbox，而不只是新增至全域mbox，請使用[targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md)函式。
 
 您可以透過下列任何方式，利用 `target-global-mbox` 函數將參數傳入 `targetPageParams()`:
 
@@ -88,7 +88,7 @@ p1=v1&p2=v2&p3=hello%20world
 
 ## JSON
 
-JSON 是傳遞參數的強大方式。[!DNL Target] 使用 JSON 物件索引鍵將複雜的結構平扁化為簡單參數。
+JSON 是傳遞參數的強大方式。[!DNL Target]使用JSON物件索引鍵，將複雜的結構平面化為簡單的引數。
 
 ```json {line-numbers="true"}
 <!--window.-->targetPageParams = function() { 

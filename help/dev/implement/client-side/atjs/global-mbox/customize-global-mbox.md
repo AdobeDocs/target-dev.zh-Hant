@@ -1,23 +1,23 @@
 ---
 keywords: 全域mbox，自訂全域mbox，編輯at.js， at.js，實作at.js
-description: 瞭解如何在上自訂適用於at.js的全域mbox [!UICONTROL 管理]-[!UICONTROL 實施] 頁面位置 [!DNL Adobe Target].
+description: 瞭解如何在 [!DNL Adobe Target]的[!UICONTROL Administration]-[!UICONTROL Implementation]頁面上自訂at.js的全域mbox。
 title: 如何自訂全域mbox？
 feature: at.js
 exl-id: f7809c3d-6e77-4bbe-8da3-4ab0a448c801
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 17%
+source-wordcount: '205'
+ht-degree: 18%
 
 ---
 
 # 自訂全域 mbox
 
-可協助您自訂的資訊 [!DNL Adobe Target] 適用於at.js的全域mbox。
+可協助您為at.js自訂[!DNL Adobe Target]全域mbox的資訊。
 
-1. 按一下「**[!UICONTROL 管理]** > 「**[!UICONTROL 實施]**」。
+1. 按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
 
-1. 停用 **[!UICONTROL 已啟用頁面載入（自動建立全域mbox）]**，然後新增您想要用來傳送活動之自訂全域mbox的名稱 [!DNL Target].
+1. 停用&#x200B;**[!UICONTROL Page load enabled (Auto create global mbox)]**，然後新增您要用來從[!DNL Target]傳送活動的自訂全域mbox的名稱。
 
 >[!WARNING]
 >
@@ -29,15 +29,15 @@ ht-degree: 17%
 
 1. 在您的網站上實作at.js資料庫。
 
-   另請參閱 [如何部署at.js](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md) 以取得詳細資訊。
+   如需詳細資訊，請參閱[如何部署at.js](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)。
 
 1. 計算您的發行轉變所需的時間。
 
-   當您準備就緒時 [!DNL Target] 若要在日後開始針對所有活動使用您的全域mbox，您可以繼續進行此步驟。
+   當您準備好要[!DNL Target]開始將您的全域mbox用於未來所有活動時，您可以繼續進行此步驟。
 
    更新自訂全域 mbox 的名稱以符合以上的步驟 2 中使用的名稱。
 
 
 >[!WARNING]
 >
->您帳戶中的所有活動都會與此mbox同步。 確認您的網站上存在全域mbox，讓活動可繼續運作。 請務必編輯並重新儲存使用建立的受影響活動。 [!UICONTROL 視覺化體驗撰寫器] (VEC)與此mbox同步。 不需要重新儲存在中建立的活動 [!UICONTROL 表單式體驗撰寫器] 或透過API。
+>您帳戶中的所有活動都會與此mbox同步。 確認您的網站上存在全域mbox，讓活動可繼續運作。 請務必編輯並重新儲存使用與此mbox同步的[!UICONTROL Visual Experience Composer] (VEC)所建立的受影響活動。 不需要重新儲存在[!UICONTROL Form-Based Experience Composer]中或透過API建立的活動。

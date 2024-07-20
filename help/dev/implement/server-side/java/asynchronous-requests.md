@@ -1,6 +1,6 @@
 ---
-title: 如何在中使用非同步請求 [!DNL Adobe Target] Java SDK
-description: 瞭解如何 [!DNL Target] Java SDK支援非同步請求，這可以將有效目標時間減少為零。
+title: 如何在 [!DNL Adobe Target] Java SDK中使用非同步要求
+description: 瞭解 [!DNL Target] Java SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 說明
 
-伺服器端整合的好處之一，就是您可以使用平行處理功能，在伺服器端利用龐大的頻寬和運算資源。 [!DNL Target] Java SDK支援非同步請求，這可以將有效目標時間減少為零。
+伺服器端整合的好處之一，就是您可以使用平行處理功能，在伺服器端利用龐大的頻寬和運算資源。 [!DNL Target] Java SDK支援非同步要求，因此可將有效目標時間減少為零。
 
 ## 支援的方法
 
@@ -28,7 +28,7 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## 範例
 
-範例 `Spring` 應用程式控制器可能如下所示：
+範例`Spring`應用程式控制器可能如下所示：
 
 ### 範例控制器
 
@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-此範例假設您擁有 [已初始化SDK](initialize-sdk.md) 作為彈簧豆子，而您擁有 [公用程式方法](utility-methods.md) 可用。
+此範例假設您已[將SDK](initialize-sdk.md)初始化為spring bean，且您有[可用的公用程式方法](utility-methods.md)。
 
-此 [!DNL Target] 在以下日期之前觸發請求： `simulateIO` 而且在執行時，目標結果也應準備就緒。 即使不是如此，在大多數情況下您還是可以節省大量成本。
+[!DNL Target]要求是在`simulateIO`之前觸發，且在執行時，目標結果也應準備就緒。 即使不是如此，在大多數情況下您還是可以節省大量成本。

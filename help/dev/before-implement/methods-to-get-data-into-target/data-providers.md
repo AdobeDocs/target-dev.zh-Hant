@@ -1,19 +1,19 @@
 ---
 keywords: 實作，實施，設定，設定，資料提供者
-description: 將資料匯入 [!DNL Target] 使用資料提供者。
-title: 如何將資料帶入 [!DNL Target] 使用資料提供者？
+description: 使用資料提供者將資料匯入 [!DNL Target] 。
+title: 如何使用資料提供者將資料帶入 [!DNL Target] ？
 feature: Implementation
 exl-id: 9971bd96-f736-4965-afe2-b4901c12d006
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 53%
+source-wordcount: '287'
+ht-degree: 55%
 
 ---
 
 # 資料提供者
 
-資料提供者這項功能可讓您輕鬆將資料從第三方傳遞至 [!DNL Adobe Target].
+資料提供者是一項功能，可讓您輕鬆將資料從第三方傳遞至[!DNL Adobe Target]。
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ ht-degree: 53%
 
 ## 方法的優點
 
-此設定可讓客戶收集來自協力廠商資料提供者（例如Demandbase、BlueKai和自訂服務）的資料，並將資料傳遞至 [!DNL Target] 作為全域mbox請求中的mbox引數。
+此設定可讓客戶收集來自協力廠商資料提供者（例如Demandbase、BlueKai和自訂服務）的資料，並在全域mbox要求中以mbox引數的形式傳遞資料至[!DNL Target]。
 
 它透過非同步和同步要求，以支援來自多個提供者的資料收集。
 
@@ -39,7 +39,7 @@ ht-degree: 53%
 
 ## 注意事項
 
-如果資料提供者新增至 `window.targetGlobalSettings.dataProviders` 非同步執行，則會並行執行。 訪客API要求會與新增至的函式並行執行 `window.targetGlobalSettings.dataProviders` 允許最小等待時間。
+如果新增至`window.targetGlobalSettings.dataProviders`的資料提供者非同步，則會並行執行。 訪客API要求與新增至`window.targetGlobalSettings.dataProviders`的函式並行執行，以允許最低的等待時間。
 
 at.js不會嘗試快取資料。 如果資料提供者擷取資料一次，則資料提供者應該確定已將該資料快取，並且當叫用該提供者函數時，可做為第二個叫用的快取資料。
 

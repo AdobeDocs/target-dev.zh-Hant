@@ -1,11 +1,11 @@
 ---
-title: 傳送顯示或按一下通知至 [!DNL Adobe Target] 使用.NET SDK
-description: 瞭解如何使用sendNotifications()傳送顯示通知或按一下通知至 [!DNL Adobe Target] 用於測量和報表。
+title: 使用.NET SDK傳送顯示或按一下通知給 [!DNL Adobe Target]
+description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 724e787c-af53-4152-8b20-136f7b5452e1
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '231'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 ## 說明
 
-`SendNotifications()` 用於傳送顯示或點按通知至 [!DNL Adobe Target] 用於測量和報表。
+`SendNotifications()`是用來傳送顯示或點選通知給[!DNL Adobe Target]以進行測量和報告。
 
 >[!NOTE]
 >
->當 `Execute` 具有必要引數的物件位於請求本身內，曝光將自動遞增以符合活動資格。
+>當具有必要引數的`Execute`物件位於請求本身中時，曝光將自動遞增以符合活動資格。
 
 會自動增加曝光次數的SDK方法為：
 
 * `GetOffers()`
 * `GetAttributes()`
 
-當 `Prefetch` 物件是在要求內傳遞，曝光次數不會針對內有mbox的活動自動遞增 `Prefetch` 物件。 `SendNotifications()` 必須用於預先擷取的體驗，以增加曝光次數和轉換次數。
+當在要求中傳遞`Prefetch`物件時，曝光次數不會自動遞增到具有`Prefetch`物件中mbox的活動。 `SendNotifications()`必須用於預先擷取的體驗，以增加曝光次數和轉換次數。
 
 ## 方法
 
@@ -37,7 +37,7 @@ TargetDeliveryResponse TargetClient.SendNotifications(TargetDeliveryRequest requ
 
 ## 範例
 
-首先，讓我們建立 [!UICONTROL Target傳送API] 要求預先擷取的內容 `home` 和 `product1` mbox。
+首先，讓我們建置[!UICONTROL Target Delivery API]要求，以預先擷取`home`和`product1` mbox的內容。
 
 ### \.NET
 
@@ -56,7 +56,7 @@ var targetDeliveryRequest = new TargetDeliveryRequest.Builder()
 var targetResponse = targetClient.GetOffers(targetDeliveryRequest);
 ```
 
-成功的回應將包含 [!DNL Target Delivery API] 回應物件，其中包含所要求mbox的預先擷取內容。 範例 `targetResponse.Response` 物件可能顯示如下：
+成功的回應將包含[!DNL Target Delivery API]回應物件，其中包含要求mbox的預先擷取內容。 範例`targetResponse.Response`物件可能顯示如下：
 
 ### \.NET
 
@@ -114,7 +114,7 @@ var targetResponse = targetClient.GetOffers(targetDeliveryRequest);
 }
 ```
 
-請注意 `mbox` 名稱和 `state` 欄位，以及 `eventToken` 欄位，位於每個欄位 [!DNL Target] 內容選項。 這些應於以下位置提供： `SendNotifications()` 每個內容選項一顯示，立即要求。 假設 `product1` mbox已顯示在非瀏覽器裝置上。 通知要求會顯示如下：
+記下每個[!DNL Target]內容選項中的`mbox`名稱和`state`欄位，以及`eventToken`欄位。 每個內容選項一顯示，即應在`SendNotifications()`請求中提供這些選項。 假設`product1` mbox已顯示在非瀏覽器裝置上。 通知要求會顯示如下：
 
 ### \.NET
 
@@ -131,7 +131,7 @@ var mboxNotificationRequest = new TargetDeliveryRequest.Builder()
     .Build();
 ```
 
-請注意，我們已納入與對應的mbox狀態和事件權杖 [!DNL Target] 在預先擷取回應中傳遞的選件。 建立通知請求後，我們可以將其傳送到 [!DNL Target] 透過 `SendNotifications()` API方法：
+請注意，我們已在預先擷取回應中納入對應至已傳遞[!DNL Target]選件的mbox狀態和事件權杖。 建立通知要求後，我們可以透過`SendNotifications()` API方法將其傳送至[!DNL Target]：
 
 ### \.NET
 

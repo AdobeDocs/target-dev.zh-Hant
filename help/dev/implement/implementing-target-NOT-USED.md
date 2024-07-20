@@ -21,7 +21,7 @@ ht-degree: 34%
 | 區域 | 詳細資料 |
 | --- | --- |
 | [實作之前](/help/dev/before-implement/) | 包含適用於開發人員的文章，包括<ul><li>開發人員實作專屬資訊</li><li>隱私權考量事項</li><li>Cookie的相關資訊</li><li>可用來將資料傳入Target的各種方法清單</li><li>安全性考量</li><li>TLS （傳輸層安全性）加密的相關資訊</li><li>有關規範名稱(CNAME)支援的資訊</li></ul> |
-| [用戶端 Web 實作](/help/dev/implement/client-side/overview.md) | 有關實作Adobe Target使用者端的資訊，包括Target JavaScript程式庫的相關資訊：<ul><li>[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)</li><li>[Target at.js JavaScript資料庫](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)</li></ul> |
+| [用戶端 Web 實作](/help/dev/implement/client-side/overview.md) | 有關實作Adobe Target使用者端的資訊，包括Target JavaScript資料庫的相關資訊：<ul><li>[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)</li><li>[Target at.js JavaScript資料庫](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)</li></ul> |
 | [行動應用程式實作](/help/dev/implement/mobile/) | 有關Target如何根據使用者行為和行動內容來協助測試、個人化和最佳化行動應用程式體驗的資訊。 |
 | [伺服器端實作](/help/dev/implement/server-side/server-side-overview.md) | Target伺服器端傳送API、SDK和Target Recommendations API的相關資訊。 |
 | [混合實施](/help/dev/implement/hybrid/) | 有關Target用於個人化的獨特混合部署模型（混合使用者端和伺服器端實作）的資訊。 |
