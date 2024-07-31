@@ -4,7 +4,7 @@ description: 瞭解Target Cookie行為（第一方Cookie、具有第一方Cookie
 title: 我可以在哪裡找到有關Target Cookie的資訊？
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ Cookie會保留各種值，以管理訪客體驗行銷活動的方式：
 |--- |--- |
 | 第一方網域 | 適用於Target客戶的標準實作。 「mbox」Cookie 設定在客戶的網域中。 |
 | 第三方追蹤 | 對於Target和Adobe Audience Manager (AAM)中的廣告和鎖定目標使用案例，第三方追蹤很重要。 第三方追蹤需要跨網站指令碼技術。 Target 使用 `clientcode.tt.omtrd.net` 網域中設定的兩個 Cookie:「mboxSession」和「mboxPC」。 |
+
 **Apple 採用什麼方法?**
 
 從 Apple: 

@@ -4,7 +4,7 @@ description: 瞭解 [!DNL Target] Cookie行為（第一方Cookie、具有第一�
 title: 我可以在哪裡找到 [!DNL Target] Cookie的相關資訊？
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 50%
@@ -120,6 +120,7 @@ Cookie會保留各種值，以管理訪客體驗行銷活動的方式：
 |--- |--- |
 | 第一方網域 | [!DNL Target]客戶的標準實作。 「mbox」Cookie 設定在客戶的網域中。 |
 | 第三方追蹤 | 協力廠商追蹤對於[!DNL Target]和[!DNL Adobe Audience Manager] (AAM)中的廣告和鎖定目標使用案例很重要。 第三方追蹤需要跨網站指令碼技術。 [!DNL Target]使用在`clientcode.tt.omtrd.net`網域中設定的兩個Cookie：「mboxSession」和「mboxPC」。 |
+
 **Apple 採用什麼方法?**
 
 從 Apple: 
