@@ -252,7 +252,7 @@ at.js 2.*x* 使用新的 API，我們稱之為「傳送 API」。若要針對at.
 
 ### at.js 中的全域 mbox 名稱仍重要嗎?
 
-客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為 [!DNL Target] UI 中顯示的全域 mbox 名稱。這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、設定檔指令碼，以及使用全域 mbox 名稱建立對象。強烈建議您確認也已在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**&#x200B;頁面上設定相同的全域mbox名稱(若您仍有頁面使用at.js 1.*x*，如下列圖例所示。
+客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為 [!DNL Target] UI 中顯示的全域 mbox 名稱。這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、設定檔指令碼，以及使用全域 mbox 名稱建立客群。強烈建議您確認也已在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**&#x200B;頁面上設定相同的全域mbox名稱(若您仍有頁面使用at.js 1.*x*，如下列圖例所示。
 
 ![修改 at.js 對話方塊](../assets/modify-atjs.png)
 
@@ -306,7 +306,7 @@ at.js 2.*x* 使用新的 API，我們稱之為「傳送 API」。若要針對at.
 
 ### 支援全域 mbox 名稱
 
-客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為輸入的全域 mbox 名稱。這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、設定檔指令碼，以及建立鎖定全域 mbox 為目標的對象。
+客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為輸入的全域 mbox 名稱。這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、設定檔指令碼，以及建立鎖定全域 mbox 為目標的客群。
 
 ### 以下 at.js 自訂事件適用於 `triggerView()`，還是僅適用於 `applyOffer()` 或 `applyOffers()`?
 
@@ -368,7 +368,7 @@ at.js 2.*x* 使用新的 API，我們稱之為「傳送 API」。若要針對at.
 | 類型 | 支援? |
 | --- | --- |
 | [!UICONTROL Analytics for Target] (A4T) | 是 |
-| 對象 | 是 |
+| 客群 | 是 |
 | 客戶屬性 | 是 |
 | AEM 體驗片段 | 是 |
 | [Adobe Experience Platform擴充功能](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | 是 |

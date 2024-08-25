@@ -136,7 +136,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 以下 Target 使用案例需要用戶端提示：
 
-### 對象屬性
+### 客群屬性
 
 如果您使用Target對象和使用任何以下的對象屬性，Target會要求使用者端提示以執行正確的分段：
 
@@ -175,7 +175,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 ### at.js 2.9.0 版 (或更新)
 
-從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並會在呼叫`getOffer/getOffers()`時傳送至Target。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行對象細分或使用設定檔指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
+從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並會在呼叫`getOffer/getOffers()`時傳送至Target。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行客群細分或使用設定檔指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };

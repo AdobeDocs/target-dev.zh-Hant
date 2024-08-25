@@ -32,7 +32,7 @@ ht-degree: 2%
 * 使用Recommendations API設定和管理自訂條件
 * 瞭解如何搭配傳送API使用Recommendations，以在非HTML裝置中使用建議結果
 
-## 對象
+## 客群
 
 本指南適用對象為Target API或Recommendations API的新手開發人員。
 

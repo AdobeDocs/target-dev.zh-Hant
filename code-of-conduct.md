@@ -1,8 +1,8 @@
 ---
 source-git-commit: e042b6bfd6c0036b3689cf87f5b2ab5306ce0781
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 100%
+source-wordcount: '427'
+ht-degree: 96%
 
 ---
 # Adobe 行為準則
@@ -48,4 +48,5 @@ ht-degree: 100%
 
 ## 歸屬
 
-本行為準則改編自 [Contributor Covenant](https://contributor-covenant.org) 1.4 版 ([https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/))
+本行為準則改編自[貢獻者公約](https://contributor-covenant.org) 1.4版。
+可在[https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)取得

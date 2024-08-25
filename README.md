@@ -1,8 +1,8 @@
 ---
 source-git-commit: e042b6bfd6c0036b3689cf87f5b2ab5306ce0781
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 95%
+source-wordcount: '401'
+ht-degree: 89%
 
 ---
 # 投稿文章
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### 來自 Adobe 員工的重大修改
 
-如果您是 Adobe Experience Cloud 解決方案的技術文件工程師、專案經理或產品團隊的開發人員，且工作內容為參與或撰寫技術文件，您應使用 `https://git.corp.adobe.com/AdobeDocs` 上的私有存放庫。
+若您是Adobe Experience Cloud解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用`https://git.corp.adobe.com/AdobeDocs`的私人存放庫。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 

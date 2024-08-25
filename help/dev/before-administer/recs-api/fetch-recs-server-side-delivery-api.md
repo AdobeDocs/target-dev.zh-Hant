@@ -76,7 +76,7 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 回應包括索引鍵ID以及建議實體的實體ID。
 
-以這種方式搭配使用Delivery API與Recommendations，可讓您在非HTML裝置上向訪客顯示建議之前，先執行其他步驟。 例如，您可以在顯示最終結果之前，從傳送API取得回應，從其他系統（例如CMS、PIM或電子商務平台）執行實體屬性詳細資訊（詳細目錄、價格、評等專案）的額外即時查詢。
+以這種方式搭配使用Delivery API與Recommendations，可讓您在非HTML裝置上向訪客顯示建議之前，先執行其他步驟。 例如，您可以在顯示最終結果之前，從傳送API取得回應，從其他系統(例如CMS、PIM或電子商務平台)執行實體屬性詳細資訊（詳細目錄、價格、評等專案）的額外即時查詢。
 
 使用本指南中概述的方法，您可以取得任何應用程式來利用Target的回應，提供個人化建議！
 

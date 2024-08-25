@@ -8,11 +8,11 @@ exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
 source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
 source-wordcount: '398'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# [!DNL Adobe Target]開發人員指南
+# [!DNL Adobe Target] 開發人員指南
 
 **（[檢視 [!DNL Target] 檔案更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
