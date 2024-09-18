@@ -4,9 +4,9 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '829'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ batch=pcId,param1,param2,param3,param4
 * 如果您使用[!UICONTROL Bulk Profile Update API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。
 * 批次檔的大小必須小於 50 MB。此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
 * 您可以傳送多個檔案。 不過，您一天內傳送之所有檔案的總列數，每個使用者端不應超過100萬列。
-* 您上傳的屬性數量沒有限制。 不過，設定檔的整體大小（包括系統資料）不應超過2000 KB。 [!DNL Adobe]建議您為設定檔屬性使用少於1000 KB的儲存空間。
+* 您可以上傳的屬性數目沒有限制。 不過，外部設定檔資料的總計大小不得超過64 KB，其中包括客戶屬性、設定檔API、In-Mbox設定檔引數以及設定檔指令碼輸出。
 * 引數和值區分大小寫。
 
 ## HTTPPOST要求

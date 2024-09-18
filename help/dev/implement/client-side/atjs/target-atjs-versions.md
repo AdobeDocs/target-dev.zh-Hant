@@ -4,10 +4,10 @@ description: 檢視 [!DNL Adobe Target] at.js JavaScript程式庫每個版本中
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 9999c1b5f603e6607bd81f6ad6a06a7f74e76acb
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '4904'
-ht-degree: 64%
+source-wordcount: '4967'
+ht-degree: 63%
 
 ---
 
@@ -25,7 +25,16 @@ ht-degree: 64%
 >
 >您應該升級至其中一個1的最新版本。*x*&#x200B;或2。*x*&#x200B;以取得錯誤修正和安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
-[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱&#x200B;*標籤總覽*&#x200B;指南中的[擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。6+
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱&#x200B;*標籤總覽*&#x200B;指南中的[擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+
+## at.js 2.11.6版（2024年9月29日）
+
+* 已修正導致[!DNL Target]無法在[!UICONTROL Visual Experience Composer] (VEC)或[!UICONTROL Form-Based Experience Composer]內以重新導向選件正確運作的問題。
+
+## at.js 2.11.5版（2024年8月14日）
+
+* 實作快取，以進行Cookie讀取和寫入作業，減少重複、高成本的字串剖析和操作額外負荷。
+* 已實作較新的URL Search Params API （在可用時），因為它比手動剖析和處理字串更快。
 
 ## at.js 2.11.4版（2024年1月24日）
 
