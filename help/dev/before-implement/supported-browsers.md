@@ -4,10 +4,10 @@ description: 瞭解哪些網際網路瀏覽器 [!DNL Adobe Target] 支援其介�
 title: ' [!DNL Target] 支援哪些瀏覽器？'
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 26%
+source-wordcount: '380'
+ht-degree: 23%
 
 ---
 
@@ -38,6 +38,7 @@ ht-degree: 26%
 
 請注意下列事項：
 
+* [!DNL Adobe Experience Platform Web SDK]的設計可在最新版本的[!DNL Google Chrome]、[!DNL Safari]、[!DNL Firefox]和[!DNL Microsoft Edge Chromium]中以最佳方式運作。 您可能無法在這些舊版的瀏覽器或已棄用的瀏覽器（例如[!DNL Internet Explorer]）上使用某些功能。
 * 針對at.js實作，[!DNL Target]會在舊版Internet Explorer中並可能在以上所列瀏覽器的舊版本中顯示預設內容。
 * Internet Explorer會將所有未知的元素（例如自訂元素）視為相同的元素型別。 因此，傳送不適用於自訂元素。
 * [!DNL Target]會在以上未列出的瀏覽器以及使用[怪異模式](https://en.wikipedia.org/wiki/Quirks_mode)的瀏覽器中顯示預設內容。 at.js 需要可呈現標準模式的 doctype，例如: `<!DOCTYPE html>`。
