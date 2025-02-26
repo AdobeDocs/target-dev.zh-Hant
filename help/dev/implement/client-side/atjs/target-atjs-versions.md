@@ -4,9 +4,9 @@ description: 檢視 [!DNL Adobe Target] at.js JavaScript程式庫每個版本中
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
+source-wordcount: '4994'
 ht-degree: 63%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 63%
 >您應該升級至其中一個1的最新版本。*x*&#x200B;或2。*x*&#x200B;以取得錯誤修正和安全性修補程式，以解決在對應主要版本的先前次要版本中發現的問題。
 
 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱&#x200B;*標籤總覽*&#x200B;指南中的[擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+
+## at.js 2.11.7版（2025年2月26日）
+
+* 修正無法使用`localStorage`時的遙測記錄。 遙測導致某些客戶在其瀏覽器中停用`localStorage`的問題。
 
 ## at.js 2.11.6版（2024年9月29日）
 
@@ -94,13 +98,13 @@ ht-degree: 63%
 
 此版本包含下列增強功能：
 
-* 新增 [Web 元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)的支援。在自訂元素及其內部元素上建立和測試個人化體驗和選件，必須有此版本的 at.js。此功能包含在 [!DNL Target Standard/Premium] 21.10.5 版。
+* 新增 [Web 元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)的支援。在自訂元素及其內部元素上建立和測試個人化體驗和產品建議，必須有此版本的 at.js。此功能包含在 [!DNL Target Standard/Premium] 21.10.5 版。
 
 ## at.js 1.8.3 （2021年9月21日）
 
 此版本包含下列變更：
 
-* 已移除`reactor-window`和`reactor-document` Adobe Experience Platform Launch模組，以確保已設定`window.default`或`document-default`的客戶的Platform launch組建可正常運作。
+* 已移除`reactor-window`和`reactor-document` Adobe Experience Platform Launch模組，以確保已設定`window.default`或`document-default`的客戶能正確使用Platform Launch組建。
 * at.js 1.8.3現在明確設定`Samesite=None`和`Secure`，以確保協力廠商網域Cookie已正確設定。
 
 ## at.js 2.6.1 (2021 年 8 月 16 日)
@@ -185,7 +189,7 @@ ht-degree: 63%
 此at.js版本包含下列增強功能和修正：
 
 * 修正當頁面元素上不存在[!DNL Adobe Analytics]程式碼時，點選追蹤未回報[!DNL Analytics for Target] (A4T)中轉換的問題。
-* 已改善在網頁上同時使用Experience CloudID服務(ECID) v4.4和at.js 2.2時的效能。
+* 已改善在網頁上同時使用Experience Cloud ID Service (ECID) v4.4和at.js 2.2時的效能。
 * 之前，ECID 曾進行兩次封鎖呼叫，之後 at.js 才能擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
 * 修正預先擷取的檢視處理錯誤，其中來自預設選件的事件權杖未包含在已傳送通知中。
 
@@ -199,7 +203,7 @@ ht-degree: 63%
 
 此at.js版本包含下列增強功能和修正：
 
-* 已改善在網頁上同時使用Experience CloudID服務(ECID) v4.4和at.js 1.8時的效能。
+* 已改善在網頁上同時使用Experience Cloud ID Service (ECID) v4.4和at.js 1.8時的效能。
 * 之前，ECID 曾進行兩次封鎖呼叫，之後 at.js 才能擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
 
 >[!NOTE]
@@ -213,12 +217,12 @@ ht-degree: 63%
 (括號內的問題編號供 Adobe 內部使用。)
 
 * 修正在可視化體驗撰寫器 (VEC) 的目標與設定頁面上使用點擊追蹤量度時，導致多個指標引發的問題。(TNT-32812)
-* 修正導致 `triggerView()` 無法多次呈現選件的問題。(TNT-32780)
+* 修正導致 `triggerView()` 無法多次呈現產品建議的問題。(TNT-32780)
 * 修正 `triggerView()` 的問題，確保要求包含 Marketing Cloud ID (MCID) 資訊。(TNT-32776)
 * 修正在即使沒有已儲存的視圖時，仍阻止 `triggerView()` 通知引發的問題。(TNT-32614)
 * 修正由於使用 decodeURIcomponent 而導致錯誤的問題，在 URL 包含故障的查詢字串參數時會造成問題。(TNT-32710)
 * 在透過 `Navigator.sendBeacon()` API 傳送的傳送要求內容中，指標標幟現已設定為「true」。(TNT-32683)
-* 修正 Recommendations 選件無法在一些客戶的網站上顯示的問題。客戶可以看到傳送API呼叫中的選件內容，但網站上未套用該選件。 (TNT-32680)
+* 修正推薦產品建議無法在一些客戶的網站上顯示的問題。客戶可以看到傳送API呼叫中的選件內容，但網站上未套用該選件。 (TNT-32680)
 * 修正導致多個體驗中點擊追蹤無法如運期般運作的問題。(TNT-32644)
 * 修正在無法呈現第一個量度後，阻止 at.js 套用第二個量度的問題。(TNT-32628)
 * 修正使用 `targetPageParams` 函數傳送 `mbox3rdPartyId` 時發生的問題，導致要求裝載無法出現於查詢參數或要求裝載中。(TNT-32613)
@@ -268,8 +272,8 @@ at.js 2.x 提供豐富的功能組合，讓貴公司能以新世代用戶端技�
 
 以下是幾個使用 at.js 2.x 特有 (舊版未提供) 的優點:
 
-* 可以在頁面載入時將所有選件加入快取，把多次伺服器呼叫減少為一次。
-* 大幅改善一般使用者在網站上的體驗，因為選件能透過快取立即顯示，避免傳統伺服器呼叫引發的延遲時間。
+* 可以在頁面載入時將所有產品建議加入快取，把多次伺服器呼叫減少為一次。
+* 大幅改善一般使用者在網站上的體驗，因為產品建議能透過快取立即顯示，避免傳統伺服器呼叫引發的延遲時間。
 * 只要編寫一行程式碼以及請開發人員設定一次，行銷人員就能透過單一頁面應用程式上的可視化體驗撰寫器 (VEC) 建立及執行 A/B 和體驗 (XT) 活動。
 
 at.js 2.x 引進以下新函數:
@@ -306,14 +310,14 @@ at.js 1.7.0 提供 Adobe 選擇加入支援。「Adobe 選擇加入」是簡化 
 
 at.js 1.6.4 維護版本解決下列問題:
 
-* 修正 Microsoft Internet Explorer 11 中導致套用重複選件的競爭條件顯現。
+* 修正 Microsoft Internet Explorer 11 中導致套用重複產品建議的競爭條件顯現。
 
 ## at.js 版本 1.6.3
 
 at.js 1.6.3 包含下列修正和增強功能:
 
 * 從現在開始，當選取器含有開頭為數字、兩個連字號或連字號加數字 (如 #-123) 的 ID 或 CSS 類別時，將會逸出 CSS。(TNT-31061)
-* 修正 at.js 1.6.2 導入的問題，亦即將來自不同活動的可視化體驗撰寫器 (VEC) 選件套用至同一個 CSS 選取器時，不會遵守活動優先順序。(TNT-31052)
+* 修正 at.js 1.6.2 導入的問題，亦即將來自不同活動的可視化體驗撰寫器 (VEC) 產品建議套用至同一個 CSS 選取器時，不會遵守活動優先順序。(TNT-31052)
 * 修正在缺少承諾原生支援的環境中讓承諾逾時時發生的問題。(TNT-30974)
 * 系統現在能透過內容呈現失敗事件正確擷取問題及回報。先前，系統可能會將 JavaScript 回報為成功執行，即使情況並非如此。(TNT-30599)
 
@@ -385,7 +389,7 @@ at.js 1.3.0 版現已可用。
 * at.js 要求現在使用 GET，但是當 URL 大小超過 2048 字元時，它會切換為使用 POST。有一個名為 `urlSizeLimit` 的新屬性，您可以在必要時增加大小限制。此變更允許[!DNL Target]將at.js與使用相同技術的AppMeasurement對齊。
 * [!DNL Target]現在強制使用`adobe.target.applyOffer(options)`函式中的`mbox`機碼。 此機碼在過去是必要的，但現在[!DNL Target]強制使用它以確保[!DNL Target]有正確的驗證，且客戶正確地使用函式。
 * at.js 已改善事件和點擊追蹤功能。at.js 使用 `navigator.sendBeacon()` 來傳送事件追蹤資料，並將在不支援 `navigator.sendBeacon()` 時退回同步 XHR。此次遞補主要影響 Internet Explorer 10 和 11 與一些版本的 Safari。Safari 將在近期的 iOS 11.3 版本中新增對 `navigator.sendBeacon()` 的支援。
-* at.js 現在可以呈現選件，即便頁面是在背景索引標籤中開啟亦然。有些[!DNL Target]客戶遇到`requestAnimationFrame()`因背景標籤的瀏覽器節流行為而停用時的問題。
+* at.js 現在可以呈現產品建議，即便頁面是在背景索引標籤中開啟亦然。有些[!DNL Target]客戶遇到`requestAnimationFrame()`因背景標籤的瀏覽器節流行為而停用時的問題。
 * 此版本新增了許多效能改善，包括檢查 Chrome CPU 設定檔時較短的呼叫堆疊。
 * at.js 1.3.0 不再支援 Microsoft Internet Explorer 9 上的內容傳送如需詳細資訊，請參閱[支援的瀏覽器](/help/dev/before-implement/supported-browsers.md)。今後，所有要求會透過 `XMLHttpRequest` 執行，具有 CORS 支援而不沒有 JSONP 要求。此變更大幅改善安全性。
 
@@ -393,7 +397,7 @@ at.js 1.3.0 版現已可用。
 
 at.js 版本 1.2.3 現已可用。
 
-* 新增 JSON 選件的支援。只有在使用表單式體驗撰寫器建立的活動中才支援 JSON 選件。目前使用 JSON 選件的唯一方式是透過直接 API 呼叫。請參閱[建立JSON選件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)。
+* 新增 JSON 產品建議的支援。只有在使用表單式體驗撰寫器建立的活動中才支援 JSON 產品建議。目前使用 JSON 產品建議的唯一方式是透過直接 API 呼叫。請參閱[建立JSON選件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)。
 
 ## at.js 版本 1.2.2
 
@@ -417,12 +421,12 @@ at.js版本1.2現在已包括多數錯誤修正的維護版本形式提供。
 * 已修正防止點擊追蹤特殊大小寫的預設動作的問題。(TNT-28089)
 * 修正在具有`target="_blank"`的連結上點選追蹤防止[!DNL Target]在新索引標籤中開啟連結的問題。 (TNT-28072)
 * 可以用作 Cookie 網域的 IP 位址。(TNT-28002)
-* 已修正在具有全域 mbox 或其他地區 mbox 的重新導向選件中造成閃爍的問題。(TNT-27978)
+* 已修正在具有全域 mbox 或其他地區 mbox 的重新導向產品建議中造成閃爍的問題。(TNT-27978)
 * 修正在瀏覽和撰寫之間切換時， VEC內的[!UICONTROL Experience Targeting]活動設定失敗的問題。 (TNT-27942)
 * 已修正點擊追蹤元素閃爍樣式類別上的不正確處理。(TNT-27896)
 * 已修正造成全域 mbox 參數變得與所有 mbox 參數混合的問題。(TNT-27846)
 * 進行變更以確保at.js已正確處理Handlebars、Mustache和其他使用者端範本資料庫。 (TNT-27831)
-* 進行變更以確保 `sdidParamExpiry` 已正確初始化，並傳遞至訪客 API。這是已新增至 `at.js 1.1.0` 的迴歸。先前的at.js版本不受影響。 這只會影響使用重新導向選件和 A4T 的用戶端。(TNT-27791)
+* 進行變更以確保 `sdidParamExpiry` 已正確初始化，並傳遞至訪客 API。這是已新增至 `at.js 1.1.0` 的迴歸。先前的at.js版本不受影響。 這只會影響使用重新導向產品建議和 A4T 的用戶端。(TNT-27791)
 * 進行變更以確保會執行 `SCRIPT`，而無論使用的類型屬性為何。(TNT-27865)
 
 ## at.js 版本 1.1.0
@@ -457,7 +461,7 @@ at.js 版本 1.0 中包括下列增強功能和修正:
 
 at.js版本0.9.7中包括下列增強功能和修正：
 
-* 修正與可視化體驗撰寫器 (VEC) 中的 `insertAfter` 和 `insertBefore` 動作遺漏資產金鑰相關的問題。這些問題與從視覺選件移轉至選件範本有關。
+* 修正與可視化體驗撰寫器 (VEC) 中的 `insertAfter` 和 `insertBefore` 動作遺漏資產金鑰相關的問題。這些問題與從視覺產品建議移轉至產品建議範本有關。
 
 ## at.js 版本 0.9.6
 
@@ -465,7 +469,7 @@ at.js版本0.9.7中包括下列增強功能和修正：
 
 at.js版本0.9.6中包括下列增強功能和修正：
 
-* 重新導向選件支援 A4T。下載並安裝at.js 0.9.6版後，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活動中使用重新導向選件。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向選件 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
+* 重新導向產品建議支援 A4T。下載並安裝at.js 0.9.6版後，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活動中使用重新導向選件。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向產品建議 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
 * 在at.js 0.9.6之前，當頁面上存在訪客API，且`visitorApiTimeout`設定太積極時，可能會發生[!DNL Target]在[!DNL Target]要求中未傳送任何MCID資料的情況。 這可能在使用 A4T 時導致 [!DNL Analytics] 中的問題，例如散亂的點擊。
 
   at.js 0.9.6已變更此行為，即便`visitorApiTimeout`設為假設1毫秒，[!DNL Target]將嘗試收集SDID、追蹤伺服器和客戶ID資料，並在[!DNL Target]要求中傳送那些資料。
@@ -494,7 +498,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 **日期:** 2016 年 10 月 10 日
 
 * 當 at.js 設定中停用舊版瀏覽器時，請確保在 Microsoft Internet Explorer 11 中觸發 mbox 呼叫。
-* 確保在動態遠端選件失敗 (例如，如果 URL 不正確並傳回 404 錯誤) 時會轉譯預設內容。
+* 確保在動態遠端產品建議失敗 (例如，如果 URL 不正確並傳回 404 錯誤) 時會轉譯預設內容。
 * 當 DOM 中找不到 VEC 點擊追蹤選取器時確保元素快速顯示。
 
 ## at.js 版本 0.9.2
@@ -503,7 +507,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 * 已新增 `optoutEnabled` 設定，以啟用或停用裝置圖表選擇退出。如果此設定設為 `true`，並且訪客選擇退出追蹤，訪客的瀏覽器將不會進行任何 mbox 呼叫。裝置圖表目前處於 Beta 版。此設定預設會設為`false`，但如果您使用裝置圖表，則必須設為`true`。
 * 已針對通知機制新增 `CustomEvent` 支援。之前，您無法透過標準 DOM API (例如 `document.addEventListener()`) ()) 來使用 at.js 事件通知機制。現在您可以使用 `document.addEventListener()` 來訂閱 at.js 事件，例如要求事件和內容呈現事件。
-* 已修正關於可視化體驗撰寫器 (VEC) 選件建立的問題。在此版本之前，[!DNL Target]只在所有選取器都相符時隱藏和取消隱藏選取器。 在at.js 0.9.2中，[!DNL Target]會在選取器符合時便加以取消隱藏。
+* 已修正關於可視化體驗撰寫器 (VEC) 產品建議建立的問題。在此版本之前，[!DNL Target]只在所有選取器都相符時隱藏和取消隱藏選取器。 在at.js 0.9.2中，[!DNL Target]會在選取器符合時便加以取消隱藏。
 
 ## at.js 版本 0.9.1
 
@@ -519,7 +523,7 @@ at.js版本0.9.6中包括下列增強功能和修正：
 
 **日期:** 2016 年 6 月 23 日
 
-* 修正使用 VEC 選件時白色畫面的問題。使用at.js的任何人應該升級至這個新版本。
+* 修正使用 VEC 產品建議時白色畫面的問題。使用at.js的任何人應該升級至這個新版本。
 * 新 `registerExtension` API。
 
   這個新API可讓開發人員存取at.js中使用的特定jQuery模組，以為資料庫開發擴充功能（亦稱為外掛程式）。 此變更有一些隱含意義。這只會影響使用這些功能的使用者:
