@@ -3,7 +3,7 @@ title: 初始化 [!DNL Adobe Target] Java SDK以記錄要求
 description: 瞭解如何在 [!DNL Adobe Target] Java SDK中記錄請求。
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 4%
@@ -21,7 +21,7 @@ ht-degree: 4%
 | `logRequests` | 記錄整個要求內文及回應內文。 |
 | `logRequestStatus` | 記錄請求的url、狀態以及回應時間。 |
 
-[!DNL Target] Java SDK使用`slf4j`記錄。 您必須提供記錄器的實作，例如`java.util.logging`、`logback`和`log4j`。 如需詳細資訊，請參閱[http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html)。 所有記錄都將在`debug`中列印。
+[!DNL Target] Java SDK使用`slf4j`記錄。 您必須提供記錄器的實作，例如`java.util.logging`、`logback`和`log4j`。 如需詳細資訊，請參閱[https://www.slf4j.org/manual.html](https://www.slf4j.org/manual.html)。 所有記錄都將在`debug`中列印。
 
 ## 範例
 

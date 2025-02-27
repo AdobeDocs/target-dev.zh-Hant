@@ -1,27 +1,27 @@
 ---
-title: 如何使用傳送API擷取Recommendations
+title: 如何使用傳送API擷取建議
 description: 本文會引導開發人員完成使用Adobe Target Delivery API擷取建議內容所需的步驟。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1286'
 ht-degree: 1%
 
 ---
 
-# 使用傳送API擷取Recommendations
+# 使用傳送API擷取建議
 
-Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，也可用於非HTML型體驗，包括應用程式、熒幕、主控台、電子郵件、資訊站和其他顯示裝置。 換言之，當無法使用Target資料庫和JavaScript時，[Target傳送API](/help/dev/implement/delivery-api/overview.md)仍可讓您存取所有的Target功能，以提供個人化的體驗。
+Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應，也可用於非HTML型體驗，包括應用程式、熒幕、主控台、電子郵件、資訊站和其他顯示裝置。 換言之，當無法使用Target資料庫和JavaScript時，[Target傳送API](/help/dev/implement/delivery-api/overview.md)仍可讓您存取所有的Target功能，以提供個人化的體驗。
 
 >[!NOTE]
 >
 >請求包含實際建議（建議產品或專案）的內容時，請使用Target Delivery API。
 
-若要擷取建議，請使用適當的內容資訊傳送Adobe Target傳送APIPOST呼叫，其中可能包括使用者ID （用於設定檔特定建議，例如使用者最近檢視的專案）、相關mbox名稱、mbox引數、設定檔引數或其他屬性。 回應將包含JSON或HTML格式的建議entity.ids （並可能包含其他實體資料），這些資料隨後可顯示在裝置中。
+若要擷取建議，請使用適當的內容資訊傳送Adobe Target傳送API POST呼叫，其中可能包括使用者ID （用於設定檔特定建議，例如使用者最近檢視的專案）、相關mbox名稱、mbox引數、設定檔引數或其他屬性。 回應將包含JSON或HTML格式的建議entity.ids （並可能包含其他實體資料），這些資料隨後可顯示在裝置中。
 
 適用於Adobe Target的[傳送API](/help/dev/implement/delivery-api/overview.md)會公開標準Target請求提供的所有現有功能。
 
@@ -35,7 +35,7 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
 
 若要使用「傳送API」來傳送Target體驗（包括建議），請執行下列步驟：
 
-1. 使用表單式撰寫器（而非視覺化體驗撰寫器）建立Target活動(A/B、XT、AP或Recommendations)。
+1. 使用表單式撰寫器（而非視覺化體驗撰寫器）建立Target活動（A/B、XT、AP或Recommendations）。
 1. 使用傳送API針對您剛建立的Target活動所產生的請求，取得回應。
 
 &lt;！ — 問：為何需要執行這兩個步驟？ 如果您有為mbox定義的表單式建議，有中同時具有傳送API步驟以擷取結果又有什麼好處？ 為什麼不能讓表單式記錄將結果傳送到目的地裝置……?? 答：請參閱以下使用案例……這是您想要「攔截」暫止結果，以便在顯示結果之前執行更多作業的時間。 例如，庫存水準的即時比較。 —>
@@ -76,7 +76,7 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 回應包括索引鍵ID以及建議實體的實體ID。
 
-以這種方式搭配使用Delivery API與Recommendations，可讓您在非HTML裝置上向訪客顯示建議之前，先執行其他步驟。 例如，您可以在顯示最終結果之前，從傳送API取得回應，從其他系統(例如CMS、PIM或電子商務平台)執行實體屬性詳細資訊（詳細目錄、價格、評等專案）的額外即時查詢。
+以這種方式搭配建議使用傳送API，可讓您在非HTML裝置上向訪客顯示建議之前，先執行其他步驟。 例如，您可以在顯示最終結果之前，從傳送API取得回應，從其他系統(例如CMS、PIM或電子商務平台)執行實體屬性詳細資訊（詳細目錄、價格、評等專案）的額外即時查詢。
 
 使用本指南中概述的方法，您可以取得任何應用程式來利用Target的回應，提供個人化建議！
 
@@ -86,18 +86,16 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
 
 | 資源 | 詳細資料 |
 | --- | --- |
-| [Adobe Target隨處 — 實作伺服器端或物聯網中](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit 2019實驗室針對運用Adobe Target伺服器端API的React應用程式提供實作體驗。 |
-| 在沒有AdobeSDK的行動應用程式中[Adobe Target](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | 本指南會說明如何在行動應用程式中設定Adobe Target，而不安裝Adobe SDK。 此解決方案使用Tealium SDK Webview與遠端命令模組傳送及接收對Adobe訪客API (Experience Cloud)與Adobe Target API的請求。 |
-| [在Experience Platform Launch及實作Target API中設定Target擴充功能](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | 在Experience Platform Launch中設定Target擴充功能、將Target擴充功能新增至您的應用程式，以及實作Target API以要求活動、預先擷取選件和進入視覺預覽模式的步驟。 |
-| [Adobe Target節點使用者端](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | 開放原始碼Target Node.js SDK v1.0 |
+| [在Experience Platform Launch中設定Target擴充功能並實作Target API](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | 在Experience Platform Launch中設定Target擴充功能、將Target擴充功能新增至您的應用程式，以及實作Target API以要求活動、預先擷取選件和進入視覺預覽模式的步驟。 |
+| [Adobe Target節點使用者端](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | 開放來源Target Node.js SDK v1.0 |
 | [伺服器端概述](../../implement/server-side/server-side-overview.md) | Adobe Target伺服器端傳送API、伺服器端批次傳送API、Node.js SDK和Adobe Target Recommendations API的相關資訊。 |
-| [電子郵件中的Adobe Campaign Content Recommendations](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | 說明如何透過Adobe Campaign中的Adobe Target和Adobe I/O Runtime運用電子郵件中的內容建議的部落格。 |
+| [電子郵件中的Adobe Campaign內容建議](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | 說明如何透過Adobe Campaign中的Adobe Target和Adobe I/O Runtime運用電子郵件中的內容建議的部落格。 |
 
 ## 使用API管理Recommendations設定
 
 大部分情況下，建議會在Adobe Target UI中設定，然後透過Target API使用或存取，原因如以上各節所述。 這種UI-API協調很常見。 不過，有時使用者可能想要透過API執行所有動作，包括設定以及結果的使用。 雖然不太常見，但使用者完全可以使用API來設定、執行&#x200B;*和*&#x200B;並善用建議的結果。
 
-我們在[先前的](manage-catalog.md)章節中瞭解了如何管理Adobe Target Recommendations實體並傳遞至伺服器端。 同樣地，[Adobe Developer Console](https://developer.adobe.com/console/home)可讓您管理條件、促銷活動、集合和設計範本，而不需要登入Adobe Target。 [此處](https://developer.adobe.com/target/administer/recommendations-api/)提供所有Recommendations API的完整清單，但此處提供摘要以供參考。
+我們在[先前的](manage-catalog.md)章節中瞭解了如何管理Adobe Target Recommendations實體並在伺服器端傳送它們。 同樣地，[Adobe Developer Console](https://developer.adobe.com/console/home)可讓您管理條件、促銷活動、集合和設計範本，而不需要登入Adobe Target。 [此處](https://developer.adobe.com/target/administer/recommendations-api/)提供所有Recommendations API的完整清單，但此處提供摘要以供參考。
 
 | 資源 | 詳細資料 |
 | --- | --- |
@@ -117,11 +115,11 @@ Adobe Target和Adobe Target Recommendations API可用來傳送網頁的回應，
 ## 參考檔案
 
 * [Adobe Target Delivery API檔案](/help/dev/implement/delivery-api/overview.md)
-* [將 Recommendations 與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
+* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## 摘要與評論
 
 恭喜！完成本指南後，您已瞭解如何：
-* [使用Recommendations API管理您的目錄](manage-catalog.md)
+* [使用Recommendations API管理目錄](manage-catalog.md)
 * [使用Recommendations API管理自訂條件](manage-custom-criteria.md)
-* [搭配Recommendations使用傳送API](fetch-recs-server-side-delivery-api.md)
+* [搭配建議使用傳送API](fetch-recs-server-side-delivery-api.md)
