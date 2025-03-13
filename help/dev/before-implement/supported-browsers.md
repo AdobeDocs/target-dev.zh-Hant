@@ -4,10 +4,10 @@ description: 瞭解哪些網際網路瀏覽器 [!DNL Adobe Target] 支援其介�
 title: ' [!DNL Target] 支援哪些瀏覽器？'
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 23%
+source-wordcount: '421'
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,24 @@ ht-degree: 23%
 
 [!DNL Target]介面支援下列瀏覽器和裝置：
 
+>[!NOTE]
+>
+>Target支援所列各瀏覽器的最新版本，且最新版本會減去1。
+
+
 | 裝置類型 | 瀏覽器版本 |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome （最新，最新 — 1）</li><li>Mozilla Firefox （最新，最新 — 1）</li></ul> |
-| Mac | <ul><li>Firefox （最新，最新 — 1）</li><li>Chrome （最新，最新–1）</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## 視覺化編輯需求
+
+若要在[!UICONTROL Visual Experience Composer] (VEC)中以可靠的方式開啟、製作及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL Enhanced Experience Composer (EEC)]。
+
+>[!NOTE]
+>
+>[!DNL Google Chrome]和[!DNL Microsoft Edge]目前是唯一支援[!DNL Adobe Target]網頁視覺化編輯的瀏覽器。
+
 
 ## 內容傳遞
 
