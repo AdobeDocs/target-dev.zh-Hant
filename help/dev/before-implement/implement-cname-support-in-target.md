@@ -4,7 +4,7 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中實�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 31d7de17530c14a392cbeef777937c07a214e07a
+source-git-commit: dd99cf1753e4fa5033ee463b79a31c6eddcd02b5
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -98,7 +98,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 1. 將此Bash函式複製並貼到您的終端機中，或將函式貼到您的Bash啟動指令碼檔案中（通常是`~/.bash_profile`或`~/.bashrc`），以便該函式可在終端機工作階段中使用：
 
    ```
-      function adobeTargetCnameValidation {
+   function adobeTargetCnameValidation {
      local hostname="$1"
      if [ -z "$hostname" ]; then
        echo "ERROR: no hostname specified"
@@ -242,7 +242,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
    如果實作準備就緒，您會看到如下所示的輸出。 重要的一點是，所有驗證狀態行都顯示`✅`而非`🚫`。 每個Target Edge CNAME分片都應該顯示`CN=target.example.com`，這符合要求的憑證上的主要主機名稱（憑證上的其他SAN主機名稱不會列印在此輸出中）。
 
    ```
-      $ adobeTargetCnameValidation 
+      $ adobeTargetCnameValidation
     target.example.com==========================================================Adobe Target CNAME implementation validation for hostname target.example.com:
     ✅ target.example.com passes DNS CNAME validation
     ✅ target.example.com passes TLS and HTTP response validation for region IRL1
@@ -274,7 +274,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
     *  expire date: Feb 20 23:59:59 2026 GMT
     *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com==========================================================  For additional TLS/SSL validation, see SSL Shopper:    🔎  https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com  To check DNS propagation around the world, see whatsmydns.net:    🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
-        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
+        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com
    ```
 
 >[!NOTE]
