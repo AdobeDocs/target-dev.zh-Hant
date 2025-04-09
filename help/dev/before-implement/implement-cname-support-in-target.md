@@ -4,9 +4,9 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中實�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: a36826202c5baa47f95a88c7b29c0d114901e6fa
+source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 
 ### 我的CNAME實作使用什麼金鑰型別和憑證簽章演演算法？
 
-所有憑證預設為RSA SHA-256，金鑰則為RSA 2048位元。 目前不支援大於2048位元的金鑰大小。
+所有憑證預設為RSA SHA-256，金鑰則為RSA 2048位元。 應透過[!UICONTROL Customer Care]明確要求大於2048位元的金鑰大小。
 
 ### 如何驗證我的CNAME實作準備好進行流量？
 
