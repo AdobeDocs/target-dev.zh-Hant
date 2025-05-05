@@ -61,7 +61,7 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端[!DNL Analytics]使用狀況下的[!DNL Analytics]承載 |
 | trace |  | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
+| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 ## 範例

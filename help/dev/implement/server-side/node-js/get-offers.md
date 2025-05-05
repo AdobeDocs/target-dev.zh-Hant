@@ -52,7 +52,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | 物件 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 物件 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 陣列 | 使用使用者端Analytics時的Analytics裝載 |
-| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?)的清單。 |
+| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant&)的清單。 |
 | trace | 陣列 | 所有請求mbox/檢視的彙總追蹤資料 |
 | 狀態 | 物件 | 包含回應狀態的物件。 |
 | 決策方法 | 字串 | 決定要使用的決策方法（[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、伺服器端、混合式） |

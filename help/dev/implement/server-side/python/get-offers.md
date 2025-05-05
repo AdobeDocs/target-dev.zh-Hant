@@ -51,7 +51,7 @@ target_client_instance.get_offers(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端Analytics使用狀況下的Analytics裝載 |
 | trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
+| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 用來將資料傳回瀏覽器的`target_cookie`和`target_location_hint_cookie`物件具有以下結構：

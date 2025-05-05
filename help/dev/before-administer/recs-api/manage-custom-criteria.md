@@ -17,7 +17,7 @@ ht-degree: 0%
 
 有時Recommendations提供的演演算法無法呈現您想要促銷的特定專案。 在這種情況下，自訂條件提供了一種方法，可讓您為指定的關鍵專案或類別傳送一組特定的建議專案。
 
-若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
+若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
+>使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
 
 閱讀上述警告並熟悉如何建立後續無法從UI刪除的新自訂條件後，才可繼續下列步驟。
 

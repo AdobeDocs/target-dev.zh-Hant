@@ -49,7 +49,7 @@ ht-degree: 1%
    * `orderTotal`：購買的訂單總計。
    * `orderId`：購買的訂單識別碼。
 
-  下圖顯示 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html){target=_blank}中 [!DNL tags] 的規則，此規則僅應在[!UICONTROL Confirmation]頁面上觸發。
+  下圖顯示 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}中 [!DNL tags] 的規則，此規則僅應在[!UICONTROL Confirmation]頁面上觸發。
 
   ![動作設定頁面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 **讀數**
 
 * [adobe.target.trackEvent()方法](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* 購物車型條件的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* 購物車型條件的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hant#cart-based){target=_blank}
 
 **動作**
 

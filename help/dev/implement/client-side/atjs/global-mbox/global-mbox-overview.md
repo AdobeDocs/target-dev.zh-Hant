@@ -24,6 +24,6 @@ ht-degree: 62%
 | 一般 mbox 通常會以 `<DIV>` 標籤包住內容。 | 全域 mbox 為「空白」，不會包住任何內容。 |
 | 只來自一個活動的內容可以透過一般 mbox 來傳送。 | 來自多個活動的內容可以透過傳給全域 mbox 的一個回應來傳送。 |
 
-如果透過全域mbox或多個一般mbox傳遞多個活動，Target [會決定傳遞活動（或多個活動）至網頁的優先順序](https://experienceleague.adobe.com/docs/target/using/activities/priority.html)。
+如果透過全域mbox或多個一般mbox傳遞多個活動，Target [會決定傳遞活動（或多個活動）至網頁的優先順序](https://experienceleague.adobe.com/docs/target/using/activities/priority.html?lang=zh-Hant)。
 
 使用 [!DNL Target] 函式，可將其他頁面層級資料連同全域 mbox 一起傳送至 `[!UICONTROL targetPageParams]`。這類似於 mbox 參數功能。如需詳細資訊，請參閱[將參數傳遞至全域 mbox](/help/dev/implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)。

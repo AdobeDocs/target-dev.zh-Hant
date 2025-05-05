@@ -124,7 +124,7 @@ curl -X POST \
 
 ## 使用[!UICONTROL Analytics for Target] (A4T)時具有`clickTrack`個量度的預先擷取mbox
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant){target=_blank} (A4T)是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。
 
 下列程式碼片段是預先擷取包含`clickTrack`個量度的mbox的回應，以通知[!DNL Analytics]已點按選件：
 
@@ -169,7 +169,7 @@ curl -X POST \
 
 ## 預先擷取檢視
 
-檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC建立的[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}和[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活動現在可以預先擷取SPA[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的檢視上有修改。
+檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC建立的[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant){target=_blank}和[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant){target=_blank} (X)T活動現在可以預先擷取SPA[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的檢視上有修改。
 
 ```shell  {line-numbers="true"}
 curl -X POST \

@@ -28,7 +28,7 @@ AdBox 廣告與重新導向程式可結合任何種類的活動使用。下表�
 
 ## 安全性最佳實務
 
-請注意，使用「重新導向程式」，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，我們建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主機。
+請注意，使用「重新導向程式」，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，我們建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hant#allowlist)的主機。
 
 ## 限制
 

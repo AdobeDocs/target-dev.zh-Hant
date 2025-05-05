@@ -21,7 +21,7 @@ ht-degree: 3%
 | `tntID` | `tntId`是使用者[!DNL Target]中的主要識別碼。 您可以提供此ID，或如果請求未包含此ID，[!DNL Target]將自動產生此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的使用者識別碼，您可以透過每次呼叫傳送該識別碼。 使用者登入公司網站時，公司通常會建立ID，此ID會連結至訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`用於合併和共用不同Adobe解決方案之間的資料。 與Adobe Analytics和Adobe Audience Manager整合需要marketingCloudVisitorId。 |
-| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每位訪客的已驗證狀態。 |
+| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)以及每位訪客的已驗證狀態。 |
 
 ## [!DNL Target]識別碼(tntID)
 
@@ -233,7 +233,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 客戶ID (customerIds)
 
-[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)可新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
+[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)可新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
 
 | 驗證狀態 | 使用者狀態 |
 | --- | --- |
@@ -311,11 +311,11 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-上述範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html??lang=zh-Hant)的別名。
+上述範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=zh-Hant&?lang=zh-Hant)的別名。
 
 ## 合併的設定檔
 
-您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，[!DNL Adobe Target]將維護所有這些ID的對應，並將其釘選到訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
+您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，[!DNL Adobe Target]將維護所有這些ID的對應，並將其釘選到訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hant)。
 
 >[!BEGINTABS]
 

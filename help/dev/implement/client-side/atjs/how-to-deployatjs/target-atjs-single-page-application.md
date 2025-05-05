@@ -220,7 +220,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 ## 單一頁面應用程式可視化體驗撰寫器
 
-安裝 at.js 2.x 並將 `triggerView()` 新增至您的網站後，請使用 VEC 執行 A/B 和 XT 活動。如需詳細資訊，請參閱[單頁應用程式 (SPA) 可視化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)。
+安裝 at.js 2.x 並將 `triggerView()` 新增至您的網站後，請使用 VEC 執行 A/B 和 XT 活動。如需詳細資訊，請參閱[單頁應用程式 (SPA) 可視化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=zh-Hant)。
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 ## 使用TriggerView，確保A4T可搭配at.js 2.x和SPA正常運作
 
-若要確保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)可搭配at.js 2.x正常運作，請務必在[!DNL Target]要求和[!DNL Analytics]要求中傳送相同的SDID。
+若要確保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) (A4T)可搭配at.js 2.x正常運作，請務必在[!DNL Target]要求和[!DNL Analytics]要求中傳送相同的SDID。
 
 SPA 相關最佳實務如下:
 
@@ -311,16 +311,16 @@ at.js 2.x API可讓您以多種方式自訂您的[!DNL Target]實作，但在此
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
+如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
 ### 在 SPA 中實作 at.js 2.x
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
+如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)。
 
 ### 在[!DNL Adobe Target]中使用適用於SPA的VEC
 
 >[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-如需詳細資訊，請參閱[在Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC)。
+如需詳細資訊，請參閱[在Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC)。

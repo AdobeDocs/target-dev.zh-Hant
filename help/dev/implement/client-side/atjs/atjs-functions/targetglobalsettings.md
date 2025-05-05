@@ -102,7 +102,7 @@ ht-degree: 18%
 
   僅伺服器端是預設的決策方法，可在您的Web屬性上實作和部署at.js 2.5以上版本時立即使用。
 
-  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活動。
+  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant)活動。
 
   此外，使用[!DNL Target]的使用者設定檔來增強您的個人化體驗（此設定檔會跨工作階段和管道儲存），可為您的業務提供強大的成果。
 
@@ -284,8 +284,8 @@ window.targetGlobalSettings = {
 
 | 影片 | 說明 |
 |--- |--- |
-| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
-| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | 實作詳細資料和範例，說明如何使用Adobe[!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
+| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
+| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 實作詳細資料和範例，說明如何使用Adobe[!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
 
 `window.targetGlobalSettings.dataProviders` 設定是資料提供者的陣列。
 

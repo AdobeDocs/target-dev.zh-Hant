@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # 適用於at.js的[!UICONTROL On-device decisioning]
 
-從2.5.0版開始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]可讓您在瀏覽器上快取[A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)和[體驗鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT)活動，以執行記憶體內部決策，而不會封鎖對[!DNL Adobe Target]Edge Network的網路要求。
+從2.5.0版開始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]可讓您在瀏覽器上快取[A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)和[體驗鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant) (XT)活動，以執行記憶體內部決策，而不會封鎖對[!DNL Adobe Target]Edge Network的網路要求。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 4%
 * **提供超快的決策和體驗。**&#x200B;在記憶體中及瀏覽器上執行分組和決策，以避免封鎖網路要求。
 * **增強應用程式效能。**&#x200B;執行實驗並向您的客戶和使用者提供個人化，而不會損害一般使用者體驗。
 * **提升Google網站品質分數。**&#x200B;由於決策是在記憶體中進行，請改善您線上業務的Google網站品質分數，讓消費者更容易發現它。
-* **向即時分析學習。**&#x200B;透過[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)報告即時取得您活動績效的深入分析。 A4T可讓您在關鍵時刻樞紐分析策略。
+* **向即時分析學習。**&#x200B;透過[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) (A4T)報告即時取得您活動績效的深入分析。 A4T可讓您在關鍵時刻樞紐分析策略。
 
 ## 支援的功能
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
 僅伺服器端是預設的決策方法，可在您的Web屬性上實作和部署at.js 2.5.0+時立即使用。
 
-僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活動。
+僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant)活動。
 
 此外，使用[!DNL Target]的使用者設定檔來增強您的個人化體驗（此設定檔會跨工作階段和管道儲存），可為您的業務提供強大的成果。
 
@@ -72,7 +72,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?)擷取Experience Cloud的訪客ID。 |
+| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant&)擷取Experience Cloud的訪客ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />   也能使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js資料庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | 提出頁面載入請求，包含所有已設定的引數，例如（ECID、客戶ID、自訂引數、使用者設定檔等）。 |
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取Experience Cloud的訪客ID。 |
+| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | at.js程式庫會要求從最接近訪客的Akamai CDN擷取JSON規則成品。 |
@@ -138,7 +138,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取Experience Cloud的訪客ID。 |
+| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | at.js程式庫會解譯JSON規則成品並在記憶體中執行決定以擷取體驗。 |
@@ -173,7 +173,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取Experience Cloud的訪客ID。 |
+| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | 向[!DNL Adobe Target]Edge Network提出頁面載入請求，包括已設定的所有引數，例如（ECID、客戶ID、自訂引數、使用者設定檔等）。 |
@@ -203,7 +203,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取Experience Cloud的訪客ID。 |
+| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | 系統會要求擷取體驗。 |
@@ -223,7 +223,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用「裝置上決策」切換。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用「裝置上決策」切換。
 
 1. 按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**。
 1. 在&#x200B;**[!UICONTROL Account details]**&#x200B;下方，將&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換滑至「開啟」位置。

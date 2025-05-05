@@ -19,7 +19,7 @@ ht-degree: 0%
 當使用「裝置上」作為決策方法時，會在訪客首次載入網頁時下載成品。 任何需要在第一個頁面載入時發生的活動資格（無快取），都只有在成品完全下載後才會發生。 您可以遵循某些最佳實務，以確保新的匿名訪客可快速取得活動資格。
 
 * 停用不在成品中的具有「裝置上」功能的活動。
-* 如果您有Target Premium，可以使用[屬性/工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)為不同的工作區建立不同的成品檔案。
+* 如果您有Target Premium，可以使用[屬性/工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)為不同的工作區建立不同的成品檔案。
 * 如果您的成品檔案由於合法原因變得非常大，您可以使用「混合」決策方法。 此方法可讓您平行下載成品，所有Target API呼叫都會線上上進行，直到下載成品為止。 請閱讀以下「混合」決策模式的最佳實務區段，以進一步瞭解此方法。
 * 如果您有單頁應用程式(SPA)，[!DNL Adobe]建議您先載入並初始化at.js，然後再於第一個頁面載入期間載入應用程式的主要JavaScript檔案。 此方法可更早啟動成品下載，提供更快速的體驗呈現。
 

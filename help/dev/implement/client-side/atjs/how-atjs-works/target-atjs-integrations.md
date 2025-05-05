@@ -21,12 +21,12 @@ ht-degree: 52%
 
 | 整合 | 詳細資料 |
 |--- |--- |
-| [!UICONTROL Analytics for Target] (A4T) | 請參閱 [Adobe Analytics 做為 Adobe Target (A4T) 的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)。 |
-| [!UICONTROL Profiles & Audiences] (P&amp;A) | 請參閱&#x200B;*核心服務使用手冊*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html??lang=zh-Hant)。 |
-| [!UICONTROL Experience Cloud ID Service] | 請參閱 [Adobe Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html)。 |
+| [!UICONTROL Analytics for Target] (A4T) | 請參閱 [Adobe Analytics 做為 Adobe Target (A4T) 的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)。 |
+| [!UICONTROL Profiles & Audiences] (P&amp;A) | 請參閱&#x200B;*核心服務使用手冊*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html?lang=zh-Hant&?lang=zh-Hant)。 |
+| [!UICONTROL Experience Cloud ID Service] | 請參閱 [Adobe Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)。 |
 | [!UICONTROL Tags in Adobe Experience Platform] | [!UICONTROL Tags in Adobe Experience Platform]是新一代[!DNL Adobe]標籤管理功能。 [!UICONTROL Tags]可讓客戶透過簡單的方式部署及管理必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。 請參閱[使用Adobe Experience Platform](../how-to-deployatjs/implement-target-using-adobe-launch.md)實作 [!DNL Target] 。 |
-| [!UICONTROL Adobe Experience Manager] (AEM)Cloud Service | [!UICONTROL AEM Cloud Service]可讓您在AEM工作流程中建立[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting]活動。 支援at.js (含[!UICONTROL Adobe Experience Manager] 6.2 (含FP-11577 （或更新版本）)。 如需詳細資訊，請參閱[與 [!DNL Adobe Target]整合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)，並選取您的AEM版本。 |
-| [!UICONTROL AEM Experience Fragments] | 在[!DNL Target]活動的AEM中建立的體驗片段，可讓您將AEM的易用性和威力，結合[!DNL Target]中強大的自動化智慧(AI)和機器學習(ML)功能，以大規模測試並個人化體驗。  AEM 將您的所有內容和資產集中在一個中央位置，以支援您的個人化策略。AEM 可讓您在一個位置中輕鬆地為桌上型電腦、平板電腦和行動裝置建立內容，不必撰寫程式碼。不需要為每個裝置建立頁面，AEM會自動根據您的內容調整每個體驗。  請參閱 [AEM 體驗片段](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html)。 |
+| [!UICONTROL Adobe Experience Manager] (AEM)Cloud Service | [!UICONTROL AEM Cloud Service]可讓您在AEM工作流程中建立[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting]活動。 支援at.js (含[!UICONTROL Adobe Experience Manager] 6.2 (含FP-11577 （或更新版本）)。 如需詳細資訊，請參閱[與 [!DNL Adobe Target]整合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)，並選取您的AEM版本。 |
+| [!UICONTROL AEM Experience Fragments] | 在[!DNL Target]活動的AEM中建立的體驗片段，可讓您將AEM的易用性和威力，結合[!DNL Target]中強大的自動化智慧(AI)和機器學習(ML)功能，以大規模測試並個人化體驗。  AEM 將您的所有內容和資產集中在一個中央位置，以支援您的個人化策略。AEM 可讓您在一個位置中輕鬆地為桌上型電腦、平板電腦和行動裝置建立內容，不必撰寫程式碼。不需要為每個裝置建立頁面，AEM會自動根據您的內容調整每個體驗。  請參閱 [AEM 體驗片段](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=zh-Hant)。 |
 
 ## 不支援的整合
 

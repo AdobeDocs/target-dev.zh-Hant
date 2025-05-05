@@ -43,8 +43,8 @@ Target Standard客戶可以套用五個屬性，[!DNL Target Premium]客戶可�
 
 ## 程式碼範例
 
-在[建立客戶屬性來源及上傳資料檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html)中可以找到詳細資料。
+在[建立客戶屬性來源及上傳資料檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=zh-Hant)中可以找到詳細資料。
 
 ### 相關資訊的連結
 
-[建立客戶屬性來源及上傳資料檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html)。
+[建立客戶屬性來源及上傳資料檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=zh-Hant)。

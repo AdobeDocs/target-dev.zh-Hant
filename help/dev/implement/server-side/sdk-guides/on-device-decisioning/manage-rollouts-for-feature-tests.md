@@ -30,7 +30,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用[!UICONTROL On-Device Decisioning]切換功能。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用[!UICONTROL On-Device Decisioning]切換功能。
 
 啟用[!UICONTROL On-Device Decisioning]切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
 

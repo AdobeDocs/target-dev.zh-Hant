@@ -21,7 +21,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
-> [!DNL Adobe Experience Platform Launch] 已經過品牌重塑，現在是 [!DNL Adobe Experience Platform] 中的一套資料彙集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)，以取得術語變更的彙總參考資料。
+> [!DNL Adobe Experience Platform Launch] 已經過品牌重塑，現在是 [!DNL Adobe Experience Platform] 中的一套資料彙集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=zh-Hant)，以取得術語變更的彙總參考資料。
 
 * **[實作 [!DNL Target] 不使用標籤管理員](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)**：您可以實作[!DNL Target]而不使用標籤管理員（例如，[!DNL Adobe Experience Platform]中的標籤）。
 * **使用協力廠商標籤管理員實作[!DNL Target]**： Adobe Experience Platform中的[標籤是實作[!DNL Target]的偏好方法；不過，您也可以使用協力廠商標籤管理員實作[!DNL Target]，包括Tealium、Ensighten和Google標籤。 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)如需使用Launch的好處清單，請參閱[使用 [!DNL Adobe Target] 擴充功能實作at.js的優點](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md#advantages-of-implementing-atjs-using-the-target-extension)。

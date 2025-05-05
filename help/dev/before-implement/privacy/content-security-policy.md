@@ -37,7 +37,7 @@ Adobe不會在「adobe.tt.omtrdc.net」指向的[!DNL Adobe Target]邊緣伺服�
 
 ### 我要如何允許或防止我的網站被內嵌為iFrame在外部網域下？
 
-若要允許[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)將您的網站內嵌於iFrame中，必須在您的網頁伺服器設定上變更CSP （若已設定）。 必須將[!DNL Adobe]個網域列入白名單並進行設定。
+若要允許[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant){target=_blank} (VEC)將您的網站內嵌於iFrame中，必須在您的網頁伺服器設定上變更CSP （若已設定）。 必須將[!DNL Adobe]個網域列入白名單並進行設定。
 
 基於安全考量，您可能會想要防止網站被內嵌為iFrame在外部網域之下。
 

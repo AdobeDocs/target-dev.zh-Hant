@@ -24,7 +24,7 @@ ht-degree: 22%
 
 *目標位置*&#x200B;又稱為 mbox。應用程式中識別的位置可供測試或個人化 (例如，主畫面的歡迎訊息)。測試建立程序期間會識別這些位置。
 
-*[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)*&#x200B;是使用者執行的動作，可識別特定活動是否成功（例如註冊、購物、訂票等）。
+*[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)*&#x200B;是使用者執行的動作，可識別特定活動是否成功（例如註冊、購物、訂票等）。
 
 ![替代影像](assets/mobile-target-location.png)
 

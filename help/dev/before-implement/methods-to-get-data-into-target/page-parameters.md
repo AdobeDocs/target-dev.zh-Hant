@@ -68,8 +68,8 @@ targetPageParams (將參數附加至頁面上的全域 mbox):
 
 ## 相關資訊的連結
 
-建議: [根據頁面類型實作](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
+建議: [根據頁面類型實作](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=zh-Hant)
 
 訂單確認: [追蹤轉換](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-類別相關性: [類別相關性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)
+類別相關性: [類別相關性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=zh-Hant)

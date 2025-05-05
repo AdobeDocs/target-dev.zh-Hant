@@ -26,7 +26,7 @@ ht-degree: 43%
 搭配iOS和Android Mobile SDK使用預先擷取方法時，請考量下列限制：
 
 * 預先擷取內容不會在跨啟動之間持續有效。只要應用程式仍然存在，或直到呼叫 `clearPrefetchCache()` 方法為止，則會快取預先擷取內容。
-* [!UICONTROL Auto-Allocate]和[!UICONTROL Auto-Target]流量配置方法、[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動[&#128279;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)中的建議選件不支援預先擷取功能。
+* [!UICONTROL Auto-Allocate]和[!UICONTROL Auto-Target]流量配置方法、[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動[&#128279;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=zh-Hant)中的建議選件不支援預先擷取功能。
 
 如需詳細資訊，包括預先提取方法、公用類別和程式碼範例，請參閱:
 

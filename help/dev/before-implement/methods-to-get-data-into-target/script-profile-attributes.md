@@ -54,4 +54,4 @@ user.purchase_recency: var dayInMillis = 3600 * 24 * 1000; if (mbox.name
 
 ### 相關資訊的連結
 
-[設定檔指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)
+[設定檔指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)

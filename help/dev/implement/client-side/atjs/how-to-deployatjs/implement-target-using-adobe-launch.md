@@ -17,15 +17,15 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是[!DNL Adobe Experience Platform]中的一套資料彙集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是[!DNL Adobe Experience Platform]中的一套資料彙集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=zh-Hant&)，以取得術語變更的彙總參考資料。
 
 下表列出您可取得詳細資訊的各種來源：
 
 | 資源 | 詳細資料 |
 |--- |--- |
-| [新增Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html#implement-solutions) | 本教學課程提供逐步指示，說明如何在含有[!DNL Adobe Experience Platform]標籤的網站中實作[!DNL Target]。 主題包括新增 at.js JavaScript 資料庫、觸發全域 mbox、新增參數以及與其他解決方案整合。本文是大規模教學課程的一部分，說明如何實作Adobe Experience Platform和其他Adobe Experience Cloud解決方案。 |
-| [快速入門手冊](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html) | 關於部署及管理提供客戶體驗必需的相關分析、行銷和廣告標籤資訊。 |
-| [Adobe [!DNL Target] 延伸總覽](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html) | 有關使用[!DNL Adobe Experience Platform]實作[!DNL Target]的資訊。 |
+| [新增Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=zh-Hant#implement-solutions) | 本教學課程提供逐步指示，說明如何在含有[!DNL Adobe Experience Platform]標籤的網站中實作[!DNL Target]。 主題包括新增 at.js JavaScript 資料庫、觸發全域 mbox、新增參數以及與其他解決方案整合。本文是大規模教學課程的一部分，說明如何實作Adobe Experience Platform和其他Adobe Experience Cloud解決方案。 |
+| [快速入門手冊](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=zh-Hant) | 關於部署及管理提供客戶體驗必需的相關分析、行銷和廣告標籤資訊。 |
+| [Adobe [!DNL Target] 延伸總覽](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=zh-Hant) | 有關使用[!DNL Adobe Experience Platform]實作[!DNL Target]的資訊。 |
 
 ## 使用[!DNL Target]擴充功能實作at.js的優點
 

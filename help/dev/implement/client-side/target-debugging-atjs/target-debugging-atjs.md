@@ -17,7 +17,7 @@ ht-degree: 7%
 
 您可以快速檢視程式庫組態、檢查要求以確定您的自訂引數正確傳遞、開啟主控台記錄，以及停用所有[!DNL Target]要求。 驗證至[!DNL Experience Cloud]，您可以使用功能強大的Mbox追蹤工具來檢查您的活動和對象資格以及訪客設定檔。
 
-檢閱[Adobe Experience Cloud Debugger總覽](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank}。
+檢閱[Adobe Experience Cloud Debugger總覽](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=zh-Hant){target=_blank}。
 
 ## 訓練影片
 

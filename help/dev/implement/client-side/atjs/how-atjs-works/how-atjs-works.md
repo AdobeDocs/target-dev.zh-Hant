@@ -15,13 +15,13 @@ ht-degree: 66%
 
 若要在用戶端實作 [!DNL Adobe Target]，您必須使用 at.js JavaScript 程式庫。
 
-在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。瀏覽器會決定要顯示哪個體驗，然後顯示其內容。在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，建立您的測試和個人化體驗。
+在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。瀏覽器會決定要顯示哪個體驗，然後顯示其內容。在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，建立您的測試和個人化體驗。
 
 ## 什麼是 at.js?
 
 at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.js 程式庫可加快網頁實作的頁面載入速度，並為單頁應用程式提供更好的實作選項。 at.js 為建議的實作程式庫，且經常更新功能。我們建議所有客戶實作或移轉至[最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
-如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)。
+如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hant#libraries)。
 
 在下圖所示的[!DNL Target]實作中，已實作下列Adobe Experience Cloud解決方案： [!DNL Analytics]、Target和[!DNL Audience Manager]。 此外，已實作下列[!DNL Experience Cloud]個核心服務： [!DNL Adobe Experience Platform]、[!UICONTROL Audiences]和[!UICONTROL Visitor ID Service]。
 
@@ -74,7 +74,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
+如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
 ## at.js 1.x 圖表
 

@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須擁有&#x200B;**[!UICONTROL Admin]**&#x200B;或&#x200B;**[!UICONTROL Approver]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換功能。
+>您必須擁有&#x200B;**[!UICONTROL Admin]**&#x200B;或&#x200B;**[!UICONTROL Approver]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換功能。
 
 啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生[規則成品](../on-device-decisioning/rule-artifact-overview.md)。
 
@@ -388,6 +388,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >您必須有&#x200B;**[!UICONTROL Approver]**&#x200B;或&#x200B;**[!UICONTROL Publisher]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能執行此步驟。
+   >您必須有&#x200B;**[!UICONTROL Approver]**&#x200B;或&#x200B;**[!UICONTROL Publisher]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)才能執行此步驟。
 
    ![替代影像](assets/asset-activate.png)

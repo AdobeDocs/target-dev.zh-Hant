@@ -56,13 +56,13 @@ ht-degree: 64%
 
    >[!WARNING]
    >
-   >請注意，有了重新導向程式，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，Adobe建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主機。
+   >請注意，有了重新導向程式，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，Adobe建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hant#allowlist)的主機。
 
 1. 驗證重新導向程式。
    1. *安全性最佳實務*：確定重新導向程式中使用的網域已加入允許清單，如上所述。 如果您使用未列入允許清單的網域，Adobe會封鎖對該網域的任何呼叫，以防止惡意行為者使用重新導向器重新導向至潛在的惡意網域。
    2. 請將「重新導向程式 URL」插入到瀏覽器中，然後重新整理。
    3. 登入您的帳戶，重新整理您的 mbox 清單，然後確認新的「重新導向程式」是否已列為 mbox。
-1. 如果要測試某個廣告的不同目的地，請分別為每個版本建立[重新導向選件](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html)。
+1. 如果要測試某個廣告的不同目的地，請分別為每個版本建立[重新導向選件](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=zh-Hant)。
 1. 建立促銷活動。
 
    請參閱[非 JavaScript 型實作](/help/dev/implement/email/overview.md)，以瞭解符合您目標的正確設定。

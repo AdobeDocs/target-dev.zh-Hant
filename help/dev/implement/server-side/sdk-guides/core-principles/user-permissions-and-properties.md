@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 使用者許可權和屬性
 
-[!DNL Target] SDK包含對使用者許可權和屬性的支援。 如果您不熟悉[!DNL Adobe Target]如何透過工作區和屬性處理企業許可權，您可以在[企業使用者許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)中閱讀更多相關資訊。
+[!DNL Target] SDK包含對使用者許可權和屬性的支援。 如果您不熟悉[!DNL Adobe Target]如何透過工作區和屬性處理企業許可權，您可以在[企業使用者許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)中閱讀更多相關資訊。
 
 使用者端可以使用屬性代號，方法有兩種。
 

@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-如需`TargetRequestUtils.java`的詳細資訊，請參閱[公用程式方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
+如需`TargetRequestUtils.java`的詳細資訊，請參閱[公用程式方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=zh-Hant){target=_blank}

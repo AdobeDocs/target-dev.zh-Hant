@@ -29,7 +29,7 @@ ht-degree: 42%
 
 Adobe 會分階段將客戶轉移至 TLS 1.2。對於那些已經符合 1.2 規範之網域的使用者，我們會將其轉移至 TLS 1.2，無需進行任何變更。大部分的客戶網域已支援TLS 1.2；不過，如果您的網域不支援TLS 1.2，我們會像今天一樣將這些網域保留在TLS 1.1上（直到2020年3月）。
 
-在此移轉階段，您應該不會遇到任何問題。如果VEC已停止載入先前正常運作的網站，請[開啟Client Care票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)，說明移轉作業可能為背後原因。
+在此移轉階段，您應該不會遇到任何問題。如果VEC已停止載入先前正常運作的網站，請[開啟Client Care票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant&#reference_ACA3391A00EF467B87930A450050077C)，說明移轉作業可能為背後原因。
 
 然而，如果您是使用TSL 1.1但不支援TLS 1.2的客戶之一，則您應規劃網域/基礎架構到TLS 1.2的移動。我們將繼續支援TLS 1.1通訊協定，直到2020年3月1日。 自2020年3月1日起，[!DNL Target]將不支援透過增強體驗撰寫器功能用於VEC的TLS 1.1通訊協定。
 

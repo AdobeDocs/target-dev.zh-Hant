@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的管理區段。
+>如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=zh-Hant)的管理區段。
 >
 >管理員API和設定檔API通常是整體參照（「管理員和設定檔API」），但也可能單獨參照（「管理員API」和「設定檔API」）。 Recommendations API是[!DNL Target] Admin API的特定實作。
 
@@ -74,11 +74,11 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 
 活動可讓您測試或個人化使用者的內容。 活動可為下列其中一種型別：
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [體驗鎖定 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
-* [自動個人化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)
+* [體驗鎖定 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant)
+* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=zh-Hant)
+* [自動個人化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
+* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hant)
 
 ## 批次更新
 

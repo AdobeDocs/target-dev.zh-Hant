@@ -42,9 +42,9 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 ## 使用表單式體驗撰寫器建立建議
 
-若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
+若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)。
 
-1. 首先，建立並儲存JSON型設計以用於您的建議。 如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的相關檔案。 在此範例中，設計名為&#x200B;*簡單JSON。*
+1. 首先，建立並儲存JSON型設計以用於您的建議。 如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hant)的相關檔案。 在此範例中，設計名為&#x200B;*簡單JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，導覽至&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然後選取&#x200B;**[!UICONTROL Form]**。
@@ -54,7 +54,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 1. 選取屬性，然後按一下&#x200B;**[!UICONTROL Next]**。
 1. 定義您想要使用者收到建議回應的位置。 下列範例使用名為&#x200B;*api_charter*&#x200B;的位置。 選取您先前建立且名為&#x200B;*簡單JSON.*的JSON型設計
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用傳送API來擷取結果。
+1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hant)，您可以使用傳送API來擷取結果。
 
 ## 使用傳送API
 
@@ -116,7 +116,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 ## 參考檔案
 
 * [Adobe Target Delivery API檔案](/help/dev/implement/delivery-api/overview.md)
-* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
+* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hant)
 
 ## 摘要與評論
 

@@ -42,7 +42,7 @@ at.js 會產生一個工作階段 ID 並將其儲存於 Cookie 中。第一個�
 
 ### 何時使用第一方或第三方 Cookie
 
-您的網站設定會決定您要使用何種 Cookie。嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe Target] ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
+您的網站設定會決定您要使用何種 Cookie。嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe Target] ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hant)。
 
 cookie 有三種主要的使用狀況:
 
@@ -155,4 +155,4 @@ Cookie 具有各種預設設定。您可以視需要變更這些設定，但不�
 | 受影響的功能 | 詳細資料 |
 |--- |--- |
 | 支援選擇退出 | Apple 的 WebKit 追蹤變更會暫停選擇退出支援。<P>[!DNL Target]選擇退出在`clientcode.tt.omtrdc.net`網域中使用Cookie。 如需更多詳細資料，請參閱[隱私](/help/dev/before-implement/privacy/privacy.md)。<P>[!DNL Target]支援兩種選擇退出：<ul><li>由用戶端決定 (用戶端管理選擇退出連結)。</li><li>一個透過Adobe，可讓使用者退出所有客戶的所有[!DNL Target]功能。</li></ul>兩種方法都使用第三方 Cookie。 |
-| [!DNL Target]個活動 | 客戶可以為其[!DNL Target]帳戶選擇其[設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) — 最長90天。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則Safari訪客的行為將在[!DNL Target]的以下區域中受到影響：<P>**[!DNL Target]報告**：如果Safari使用者進入活動，30天後回訪，然後轉換，則該使用者會計為兩個訪客和一次轉換。<P>對於使用[!DNL Analytics]作為報表來源(A4T)的活動，此行為是相同的。<P>**設定檔與活動成員資格**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於使用第三方Cookie實作或第一方和第三方Cookie實作的帳戶，[!DNL Target]在Safari中無法運作。 請注意，這不是新的行為。Safari 暫時還不允許第三方 Cookie。</li></ul><P>**建議**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在[!DNL Target]中將設定檔存留期設為30天或更少。 這樣可確保在 Safari 和所有其他瀏覽器中以類似方式追蹤使用者。 |
+| [!DNL Target]個活動 | 客戶可以為其[!DNL Target]帳戶選擇其[設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=zh-Hant) — 最長90天。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則Safari訪客的行為將在[!DNL Target]的以下區域中受到影響：<P>**[!DNL Target]報告**：如果Safari使用者進入活動，30天後回訪，然後轉換，則該使用者會計為兩個訪客和一次轉換。<P>對於使用[!DNL Analytics]作為報表來源(A4T)的活動，此行為是相同的。<P>**設定檔與活動成員資格**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於使用第三方Cookie實作或第一方和第三方Cookie實作的帳戶，[!DNL Target]在Safari中無法運作。 請注意，這不是新的行為。Safari 暫時還不允許第三方 Cookie。</li></ul><P>**建議**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在[!DNL Target]中將設定檔存留期設為30天或更少。 這樣可確保在 Safari 和所有其他瀏覽器中以類似方式追蹤使用者。 |

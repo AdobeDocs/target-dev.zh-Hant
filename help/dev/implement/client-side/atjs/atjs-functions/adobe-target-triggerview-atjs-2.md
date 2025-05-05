@@ -72,7 +72,7 @@ adobe.target.getOffers({
 
 ## 範例： `triggerView()`與[!UICONTROL Adobe Visual Editing Helper extension]的最佳相容性
 
-使用[AdobeVisual Editing Helper擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}時，請考量下列事項：
+使用[AdobeVisual Editing Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}時，請考量下列事項：
 
 由於[!DNL Googl]e針對[!DNL Chrome]擴充功能新增了V3資訊清單原則，[!UICONTROL Visual Editing Helper extension]必須等候`DOMContentLoaded`事件，才能在VEC中載入[!DNL Target]資料庫。 此延遲可能會導致網頁在編寫程式庫準備就緒前引發`triggerView()`呼叫，導致檢視未在載入時填入。
 

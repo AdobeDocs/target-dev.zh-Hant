@@ -71,11 +71,11 @@ ht-degree: 2%
 
 **讀數**
 
-* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hant){target=_blank}
 
 **考量事項**
 
-* 傳遞實體屬性的替代方法是更新[!DNL Target] UI中的產品目錄，以使用[Recommendations產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}。
+* 傳遞實體屬性的替代方法是更新[!DNL Target] UI中的產品目錄，以使用[Recommendations產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hant){target=_blank}。
 * 傳遞實體屬性僅適用於資料層中有產品目錄資料的頁面。
 * 在任何呼叫中傳遞`entity.event.detailsOnly=true`引數都具有優先權。
 

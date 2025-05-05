@@ -15,7 +15,7 @@ ht-degree: 62%
 
 此函數會觸發要求以報告使用者動作，例如點擊和轉換。它不會在回應中傳遞活動。
 
-然後這些事件追蹤 mbox 呼叫可以用來定義活動中的量度。如需詳細資訊，請參閱[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)和[追蹤轉換](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
+然後這些事件追蹤 mbox 呼叫可以用來定義活動中的量度。如需詳細資訊，請參閱[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)和[追蹤轉換](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
 
 以下是 API 詳細資料:
 

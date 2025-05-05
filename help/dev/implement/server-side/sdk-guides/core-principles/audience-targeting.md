@@ -14,11 +14,11 @@ ht-degree: 22%
 
 ## 總覽
 
-受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target]現成可支援多種強大的受眾目標定位功能。 下列屬性適用於[對象目標定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)：
+受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target]現成可支援多種強大的受眾目標定位功能。 下列屬性適用於[對象目標定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=zh-Hant)：
 
 ### [!DNL Target]資料庫
 
-如需詳細資訊，請參閱[[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html)。
+如需詳細資訊，請參閱[[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hant)。
 &#x200B;URL
 * 從Bing反向連結
 * Chrome瀏覽器
@@ -36,7 +36,7 @@ ht-degree: 22%
 
 ### 地理
 
-如需詳細資訊，請參閱[地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)。
+如需詳細資訊，請參閱[地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant)。
 「&#x200B;&#x200B;」
 * 國家/地區
 * 狀態
@@ -49,7 +49,7 @@ ht-degree: 22%
 
 ### 網路
 
-如需詳細資訊，請參閱[網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)。
+如需詳細資訊，請參閱[網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hant)。
 
 * ISP
 * 網域名稱
@@ -57,7 +57,7 @@ ht-degree: 22%
 
 ### 行動
 
-如需詳細資訊，請參閱[行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。
+如需詳細資訊，請參閱[行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hant)。
 
 * 裝置行銷名稱
 * 裝置型號
@@ -71,13 +71,13 @@ ht-degree: 22%
 
 ### 自訂
 
-如需詳細資訊，請參閱[自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)。
+如需詳細資訊，請參閱[自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hant)。
 
 * 任何索引鍵/值組
 
 ### 作業系統
 
-如需詳細資訊，請參閱[作業系統](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html)。
+如需詳細資訊，請參閱[作業系統](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hant)。
 
 * Linux
 * Macintosh
@@ -85,7 +85,7 @@ ht-degree: 22%
 
 ### 網頁
 
-如需詳細資訊，請參閱[網站頁面](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)。
+如需詳細資訊，請參閱[網站頁面](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hant)。
 
 * 目前頁面
 * 上一頁
@@ -94,7 +94,7 @@ ht-degree: 22%
 
 ### 瀏覽器
 
-如需詳細資訊，請參閱[瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)。
+如需詳細資訊，請參閱[瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hant)。
 
 * 類型
 * 語言
@@ -102,13 +102,13 @@ ht-degree: 22%
 
 ### 訪客設定檔
 
-如需詳細資訊，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
+如需詳細資訊，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant)。
 
 * 任何索引鍵/值組，持續存在
 
 ### 流量來源
 
-如需詳細資訊，請參閱[流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)。
+如需詳細資訊，請參閱[流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant)。
 
 * 來自 Baidu
 * 從 Bing
@@ -120,7 +120,7 @@ ht-degree: 22%
 
 ### 時間段
 
-如需詳細資訊，請參閱[時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html)。
+如需詳細資訊，請參閱[時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant)。
 
 * 開始日期/結束日期
 
@@ -197,17 +197,17 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 
 | 對象規則 | 裝置上決策 |
 | --- | --- |
-| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
-| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
-| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
-| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
-| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
-| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
-| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
-| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
-| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
-| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
+| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant) | 是 |
+| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hant) | 否 |
+| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hant) | 否 |
+| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hant) | 是 |
+| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hant) | 是 |
+| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hant) | 是 |
+| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hant) | 是 |
+| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 否 |
+| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 否 |
+| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
+| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
 
 ### 裝置上決策的地理定位
 
@@ -324,14 +324,14 @@ public class TargetRequestUtils {
 
 | 對象規則 | 伺服器端決策 |
 | --- | --- |
-| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
-| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 是 |
-| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 是 |
-| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
-| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
-| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
-| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
-| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 是 |
-| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 是 |
-| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 是 |
+| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant) | 是 |
+| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hant) | 是 |
+| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hant) | 是 |
+| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hant) | 是 |
+| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hant) | 是 |
+| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hant) | 是 |
+| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hant) | 是 |
+| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 是 |
+| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 是 |
+| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
+| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 是 |

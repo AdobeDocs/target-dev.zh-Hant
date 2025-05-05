@@ -29,7 +29,7 @@ JavaScript `targetPageParams`函式是用來傳遞引數至[!DNL Adobe Target]�
 * JSON 物件
 * 以 &amp; 符號區隔的清單
 
-使用這三個方法來驗證是否正確傳遞參數。您可以使用 [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html) 來驗證參數傳遞。
+使用這三個方法來驗證是否正確傳遞參數。您可以使用 [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=zh-Hant) 來驗證參數傳遞。
 
 在將全域 mbox 新增至頁面之前，您必須定義 JavaScript 函式。名稱必須是 `targetPageParams`。
 

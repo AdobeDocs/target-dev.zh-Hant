@@ -294,7 +294,7 @@ at.js 2.*x* 使用新的 API，我們稱之為「傳送 API」。若要針對at.
 
 若要針對at.js v2.10或更新版本使用跨網域追蹤，您可以執行下列其中一項作業：
 
-1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html??lang=zh-Hant)和at.js 2.*x*。ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。安裝 ECID 資料庫 v4.3.0+ 和 at.js 2.*x* 後，您將能建立橫跨多個唯一網域的活動以及追蹤使用者的活動。請務必注意，此功能僅適用於工作階段過期之後。
+1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=zh-Hant&?lang=zh-Hant)和at.js 2.*x*。ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。安裝 ECID 資料庫 v4.3.0+ 和 at.js 2.*x* 後，您將能建立橫跨多個唯一網域的活動以及追蹤使用者的活動。請務必注意，此功能僅適用於工作階段過期之後。
 
 1. 如果您有at.js v2.10或更新版本，您不必安裝ECID程式庫，而是可以在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;的[!DNL Target] UI中啟用跨網域設定。 （或者，您可以在at.js程式碼中將&#x200B;_crossDomain_&#x200B;選項設為&#x200B;_enabled_。）
 
@@ -405,7 +405,7 @@ at.js 2.*x* 使用新的 API，我們稱之為「傳送 API」。若要針對at.
 
 ## 回應 Token
 
-at.js 2.*x*，就像 at.js 1.*x*，使用自訂事件 `at-request-succeeded` 來呈現回應 Token。如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)。
+at.js 2.*x*，就像 at.js 1.*x*，使用自訂事件 `at-request-succeeded` 來呈現回應 Token。如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)。
 
 ## at.js 1.將&#x200B;*x*&#x200B;引數新增至at.js 2.*x*&#x200B;裝載對應
 
@@ -428,7 +428,7 @@ at.js 2.*x*，就像 at.js 1.*x*，使用自訂事件 `at-request-succeeded` 來
 
 (at.js 1.*x* 參數)
 
-用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)。
+用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)。
 
 ```json {line-numbers="true"}
 {
@@ -772,4 +772,4 @@ at.js 2.*x*&#x200B;增強了Adobe[!DNL Target]對SPA的支援，並與其他Expe
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-請參閱[瞭解at.js 2.*x*&#x200B;運作](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)以取得詳細資訊。
+請參閱[瞭解at.js 2.*x*&#x200B;運作](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)以取得詳細資訊。

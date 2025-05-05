@@ -15,13 +15,13 @@ ht-degree: 89%
 
 ## 有關您對 Adobe 內容的參與
 
-請參閱[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)
+請參閱[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)
 
 視您的身分和您要參與的變更種類，投稿方式會有所不同:
 
 ### 微幅修改
 
-如果您出於善意要提出微幅更新，請前往文章，然後按一下文章中的&#x200B;**「編輯」**&#x200B;連結，以前往文章的 GitHub 來源。接著，即可使用 GitHub UI 來提出更新。請參閱一般的[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)以瞭解詳情。
+如果您出於善意要提出微幅更新，請前往文章，然後按一下文章中的&#x200B;**「編輯」**&#x200B;連結，以前往文章的 GitHub 來源。接著，即可使用 GitHub UI 來提出更新。請參閱一般的[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)以瞭解詳情。
 
 您在此存放庫中對文件和程式碼範例所提交的微幅更正或說明，皆受 Adobe 使用條款保障。
 
@@ -43,7 +43,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 社群投稿人以使用 GitHub UI 來進行基本編輯，或取用存放庫來進行重大投稿。
 
-請參閱[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)以瞭解詳情。
+請參閱[Adobe 文件投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)以瞭解詳情。
 
 ## 如何利用 Markdown 來將主題格式化
 

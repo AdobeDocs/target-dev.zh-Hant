@@ -19,7 +19,7 @@ ht-degree: 39%
 
 整個帳戶僅支援一個全域 mbox。
 
-您可以在活動中新增 URL 規則，以限制執行活動的位置。如需詳細資訊，請參閱[在類似頁面上包含相同體驗](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html)。
+您可以在活動中新增 URL 規則，以限制執行活動的位置。如需詳細資訊，請參閱[在類似頁面上包含相同體驗](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=zh-Hant)。
 
 您也可以使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)傳遞頁面上的引數，然後在[!UICONTROL Visual Experience Composer] (VEC)的「設定URL」區段中選取引數，或在[!UICONTROL Form-Based Experience Composer]中將引數新增為「細分」。
 
