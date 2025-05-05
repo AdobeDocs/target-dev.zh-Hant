@@ -123,7 +123,7 @@ ht-degree: 62%
 * 使用 `prefetch` 請求時會正確傳回 [!UICONTROL Analytics for Target] (A4T) 點擊量度詳細資料。
 * UUID 產生不再使用 `Math.random()`，但須依賴 `window.crypto`。
 * `sessionId` Cookie 過期在每次網路呼叫時會正確延長。
-* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的[作業順序。
+* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的作業順序。
 
 ## at.js 2.5.0 （2021年5月13日）
 

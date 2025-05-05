@@ -17,7 +17,7 @@ ht-degree: 10%
 
 您可使用下列方法部署 at.js:
 
-* 使用Adobe Experience Platform ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)**中的標籤**[&#x200B;實作 [!DNL Target] ： [!DNL Adobe Experience Platform]中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
+* 使用Adobe Experience Platform [&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)**中的標籤**&#x200B;實作 [!DNL Target] ： [!DNL Adobe Experience Platform]中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 
 >[!NOTE]
 >

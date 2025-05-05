@@ -175,7 +175,7 @@ app.listen(3000, function () {
 
 #### Java
 
-此範例使用Java Web架構](https://spring.io/)的[spring。
+此範例使用Java Web架構[&#128279;](https://spring.io/)的spring。
 
 >[!BEGINTABS]
 

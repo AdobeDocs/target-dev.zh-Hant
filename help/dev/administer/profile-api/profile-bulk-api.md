@@ -43,13 +43,13 @@ ht-degree: 8%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -71,9 +71,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]部邊緣伺服器發出HTTPPOST要求，以處理檔案。 以下是使用curl命令為batch.txt檔案提出的HTTPPOST請求範例：
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 其中:
 

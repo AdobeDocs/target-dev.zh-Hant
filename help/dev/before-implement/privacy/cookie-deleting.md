@@ -39,7 +39,7 @@ ht-degree: 3%
 
 1. 按一下&#x200B;**[!UICONTROL Firefox]**&#x200B;功能表> **[!UICONTROL Preferences]**。
 1. 按一下「**[!UICONTROL Privacy and Security]**」標籤。
-1. 在**Cookie和網站資料*&#x200B;底下，按一下&#x200B;**[!UICONTROL Manage Data]**。
+1. 在&#x200B;**Cookie和網站資料*&#x200B;底下，按一下&#x200B;**&#x200B;[!UICONTROL Manage Data]**。
 1. 選取`adobe.com`網站，然後按一下&#x200B;**[!UICONTROL Remove Selected]**。
 
 >[!WARNING]

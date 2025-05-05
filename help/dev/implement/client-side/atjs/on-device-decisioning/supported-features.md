@@ -28,7 +28,7 @@ ht-degree: 12%
 | [體驗鎖定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) | 是 |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![進階版](../../../assets/premium.png) | 否 |
 | [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![進階版](../../../assets/premium.png) | 否 |
-| 使用Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T)的[活動 | 是 |
+| 使用Analytics for Target[&#128279;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T)的活動 | 是 |
 
 ## 對象目標定位
 

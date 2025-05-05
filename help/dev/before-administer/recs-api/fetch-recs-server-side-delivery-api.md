@@ -62,12 +62,13 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**值。
+1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**&#x200B;值。
    ![client-code.png](assets/client-code.png)
 1. 取得使用者端代碼後，請建構您的傳送API呼叫。 以下範例以[傳送API Postman集合](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;開始，並進行相關修改。 例如：
    * 已從&#x200B;**內文**&#x200B;移除&#x200B;**瀏覽器**&#x200B;和&#x200B;**位址**&#x200B;物件，因為非HTML使用案例不需要它們
    * 此範例中將&#x200B;*api_charter*&#x200B;列為位置名稱
    * 會指定entity.id，因為此推薦是根據內容相似度，而內容相似度需要傳遞目前的專案索引鍵至Target。
+
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 請記得正確設定查詢引數。 例如，請務必視需要指定`{{CLIENT_CODE}}`。 &lt;！— Q：在更新的呼叫語法中，entity.id會列為profileParameter，而非mboxParameter （與舊版相同）。 —> &lt;！ — 問：舊影像![server-side-create-recs-post.png](assets/server-side-create-recs-post.png)舊的隨附文字： 「請注意，此建議是以透過mboxParameters傳送的entity.id為基礎的內容類似產品為基礎。」 —>
      ![client-code3](assets/client-code3.png)

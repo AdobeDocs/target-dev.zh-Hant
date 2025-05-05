@@ -1,6 +1,6 @@
 ---
 keywords: 伺服器端，伺服器端， sdk， sdk，裝置上，決策，裝置上， ondevice，零延遲，延遲，近零， node.js，伺服器端3
-description: 瞭解如何使用[!UICONTROL [!UICONTROL on-device decisioning]在伺服器上快取 [!DNL Target] A/B和MVT活動，以便在幾乎零延遲的情況下執行記憶體內部決策。
+description: 瞭解如何使用[!UICONTROL on-device decisioning]在伺服器上快取 [!DNL Target] A/B和MVT活動，以便在幾乎零延遲的情況下執行記憶體內部決策。
 title: 什麼是裝置上決策？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649

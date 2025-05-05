@@ -95,7 +95,7 @@ npm i @adobe/target-nodejs-sdk -P
 1. 使用者端和organizationId均可透過導覽至「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**」從[!DNL Adobe Target]擷取，如下所示。
 
    &lt;！ — 插入image-client-code.png —>
-   在Target](assets/asset-rule-artifact-3.png)中管理下的![實作頁面
+   在Target![&#128279;](assets/asset-rule-artifact-3.png)中管理下的實作頁面
 
 ## 3.儲存和使用規則成品
 

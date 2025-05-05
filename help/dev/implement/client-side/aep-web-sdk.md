@@ -30,7 +30,7 @@ ht-degree: 8%
 
 ### 從at.js 2.[!DNL Target]*x*&#x200B;至[!DNL Platform Web SDK]
 
-瞭解如何從at.js 2.[!DNL Target]*x*&#x200B;與[!DNL Adobe Experience Platform Web SDK]搭配此教學課程[](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)。
+瞭解如何從at.js 2.[!DNL Target]*x*&#x200B;與[!DNL Adobe Experience Platform Web SDK]搭配此教學課程[&#128279;](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)。
 
 ## 建議文件
 

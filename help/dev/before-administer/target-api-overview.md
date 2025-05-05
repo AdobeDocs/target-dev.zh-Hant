@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Target API總覽
 
-本文主要說明不同的Target API，然後再著重說明「管理員」和「設定檔API」的特定需求。 如果您想要透過UI管理Target，請參閱&#x200B;*Adobe Target商業使用手冊*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理區段。
+本文主要說明不同的Target API，然後再著重說明「管理員」和「設定檔API」的特定需求。 如果您想要透過UI管理Target，請參閱&#x200B;*Adobe Target商業使用手冊*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的管理區段。
 
 ## API型別
 

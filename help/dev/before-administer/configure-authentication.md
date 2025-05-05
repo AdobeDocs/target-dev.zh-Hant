@@ -40,9 +40,9 @@ ht-degree: 0%
 
 ## 建立Adobe I/O專案
 
-在此區段中，您將存取[!DNL Adobe Developer Console]並建立[!DNL Adobe Target]的專案。 如需詳細資訊，請參考專案](https://developer.adobe.com/developer-console/docs/guides/projects/)上的[檔案。
+在此區段中，您將存取[!DNL Adobe Developer Console]並建立[!DNL Adobe Target]的專案。 如需詳細資訊，請參考專案[&#128279;](https://developer.adobe.com/developer-console/docs/guides/projects/)上的檔案。
 
-&lt;！—(1. 根據有關驗證](https://developer.adobe.com/developer-console/docs/guides/authentication/)的[檔案產生您的私密金鑰和公開憑證。 // [//]： # （如[的&#x200B;**步驟1**&#x200B;中所述）如何設定AdobeIO：驗證 — 逐步進行](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步驟1後，請返回本指南並繼續執行以下步驟2。//此步驟的結果應該是建立`private.key`檔案和`certificate_pub.crt`檔案。 產生這兩個檔案之後，請回到本指南。)—>
+&lt;！—(1. 根據有關驗證[&#128279;](https://developer.adobe.com/developer-console/docs/guides/authentication/)的檔案產生您的私密金鑰和公開憑證。 // [//]： # （如[的&#x200B;**步驟1**&#x200B;中所述）如何設定AdobeIO：驗證 — 逐步進行](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步驟1後，請返回本指南並繼續執行以下步驟2。//此步驟的結果應該是建立`private.key`檔案和`certificate_pub.crt`檔案。 產生這兩個檔案之後，請回到本指南。)—>
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html)層級存取權。
 

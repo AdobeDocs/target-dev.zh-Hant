@@ -28,7 +28,7 @@ ht-degree: 45%
 * 瞭解客戶的業務目標
 * 瞭解客戶的最佳化目標
 
-下載[](assets/business-rfi.docx)商業要求資訊文件。
+下載[&#128279;](assets/business-rfi.docx)商業要求資訊文件。
 
 ## [!DNL Adobe Target]技術要求資訊
 
@@ -39,4 +39,4 @@ ht-degree: 45%
 * 瞭解技術平台和任何限制
 * 瞭解與人員和程序有關的技術環境。
 
-下載[](assets/technical-rfi.docx)技術要求資訊文件。
+下載[&#128279;](assets/technical-rfi.docx)技術要求資訊文件。

@@ -23,6 +23,6 @@ ht-degree: 38%
 
 **問題:** 如果您使用這些網域，新式瀏覽器不會儲存 Cookie。
 
-at.js JavaScript程式庫會使用Cookie來追蹤使用者，以確保[！DNL [!DNL Target]]一律呈現一致的體驗。 如果[!DNL Target] JavaScript程式庫無法儲存Cookie，Target請求會停用。
+at.js JavaScript程式庫會使用Cookie來追蹤使用者，以確保[!DNL [!DNL Target]]一律呈現一致的體驗。 如果[!DNL Target] JavaScript程式庫無法儲存Cookie，Target請求會停用。
 
 **解決方案:**&#x200B;如果您想要搭配「公用尾碼清單」上包含的網域來使用雲端式例項，最佳做法是自訂 `cookieDomain` 設定。如需詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
