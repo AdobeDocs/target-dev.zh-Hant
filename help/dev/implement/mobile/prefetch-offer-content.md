@@ -30,5 +30,5 @@ ht-degree: 43%
 
 如需詳細資訊，包括預先提取方法、公用類別和程式碼範例，請參閱:
 
-* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html)。
-* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html)。
+* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=zh-Hant)。
+* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=zh-Hant)。

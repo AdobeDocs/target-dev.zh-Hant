@@ -25,7 +25,7 @@ ht-degree: 29%
 
 1. 將[!DNL Adobe Mobile Services SDK]新增至您的應用程式。
 
-   您可以在[「核心實施和生命週期」](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html)下找到說明。
+   您可以在[「核心實施和生命週期」](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html?lang=zh-Hant)下找到說明。
 
 1. 新增用戶端代碼、逾時和啟用 SSL。
 
