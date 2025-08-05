@@ -1,5 +1,5 @@
 ---
-title: '[!DNL  Adobe Experience Platform Web SDK]的單頁應用程式實作'
+title: '[!DNL &#x200B; Adobe Experience Platform Web SDK]的單頁應用程式實作'
 description: 瞭解如何使用 [!DNL Adobe Experience Platform Web SDK]建立 [!DNL Target]的單頁應用程式(SPA)實作。
 keywords: target；adobe target；xdm檢視；檢視；單頁應用程式；SPA；SPA生命週期；使用者端；AB測試；AB；體驗鎖定目標；XT；VEC
 feature: AEP Web SDK
