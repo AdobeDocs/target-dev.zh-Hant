@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: c963a070a7a4c5e7dc2915eb5ac7d60895340705
+source-git-commit: ac13e0dd7f67de50b77778921c90a95f12c2b9e4
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 45%
+source-wordcount: '769'
+ht-degree: 44%
 
 ---
 
@@ -13,12 +13,12 @@ ht-degree: 45%
 # Adobe Target開發人員指南 {#developer}
 
 + [Adobe Target開發人員指南](overview.md)
-+ 快速入門{#implementation}
++ 入門 {#implementation}
    + 實作之前 {#before-implement}
       + [實作之前](before-implement/considerations-before-you-implement-target.md)
       + [準備實作 Target](before-implement/prepare-to-implement-target.md)
-   + 隱私權與安全性{#privacy}
-      + [隱私權概覽](before-implement/privacy/privacy.md)
+   + 隱私權與安全性 {#privacy}
+      + [隱私權概觀](before-implement/privacy/privacy.md)
       + [隱私權與資料保護規範](before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)
       + [Target Cookie](before-implement/privacy/cookie-behavior.md)
       + [刪除 Target Cookie](before-implement/privacy/cookie-deleting.md)
@@ -28,26 +28,28 @@ ht-degree: 45%
       + [內容安全性政策 (CSP)](before-implement/privacy/content-security-policy.md)
       + [允許清單 Target 邊緣節點](before-implement/privacy/allowlist-edges.md)
    + 將資料傳入 Target 的方法 {#methods}
-      + [方法概覽](before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md)
+      + [方法概觀](before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md)
       + [頁面參數](before-implement/methods-to-get-data-into-target/page-parameters.md)
-      + [頁面中設定檔屬性](before-implement/methods-to-get-data-into-target/in-page-profile-attributes.md)
-      + [指令碼設定檔屬性](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
+      + [頁面中輪廓屬性](before-implement/methods-to-get-data-into-target/in-page-profile-attributes.md)
+      + [指令碼輪廓屬性](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
       + [資料提供者](before-implement/methods-to-get-data-into-target/data-providers.md)
       + [大量設定檔更新API](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
       + [單一設定檔更新API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [客戶屬性](before-implement/methods-to-get-data-into-target/customer-attributes.md)
-      + [設定檔 API 設定](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target 安全性總覽](before-implement/target-security-overview.md)
+      + [輪廓 API 設定](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
+   + [Target 安全性概觀](before-implement/target-security-overview.md)
    + [受支援的瀏覽器](before-implement/supported-browsers.md)
    + [TLS (傳輸層安全性) 加密變更](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME 與 Adobe Target](before-implement/implement-cname-support-in-target.md)
-+ 使用者端實作{#client-side}
-   + [概覽：為用戶端 Web 實作 Target](implement/client-side/overview.md)
-   + [Adobe Experience Platform Web SDK實作概觀](implement/client-side/aep-web-sdk.md)
-   + at.js 實施{#at-js-implementation}
++ 使用者端實施 {#client-side}
+   + [概觀: 為用戶端 Web 實作 Target](implement/client-side/overview.md)
+   + Adobe Experience Platform Web SDK {#web-sdk}
+      + [Adobe Experience Platform Web SDK實作概觀](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
+      + [使用Adobe Target和Web SDK進行個人化](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
+   + at.js 實作 {#at-js-implementation}
       + [at.js概覽](implement/client-side/atjs/how-atjs-works/overview.md)
       + at.js 如何運作 {#at-js}
-         + [at.js 運作方式概覽](implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
+         + [at.js 運作方式概觀](implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
          + [At.js 處理忽隱忽現情況的方式](implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
          + [at.js 整合](implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
       + 如何部署 at.js {#deploy-at-js}
@@ -57,12 +59,12 @@ ht-degree: 45%
          + [使用動態標籤管理員 (DTM) 實作 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
          + [實作適用於單頁應用程式 (SPA) 的 Target](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
       + 裝置上決策 {#on-device-decisioning}
-         + [裝置上決策概覽](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
+         + [裝置上決策概觀](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
          + [支援的功能](implement/client-side/atjs/on-device-decisioning/supported-features.md)
          + [規則成品](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
          + [疑難排解](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
       + at.js 函數 {#functions-overview}
-         + [at.js 函數概覽](implement/client-side/atjs/atjs-functions/atjs-functions.md)
+         + [at.js 函數概觀](implement/client-side/atjs/atjs-functions/atjs-functions.md)
          + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
          + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
          + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
@@ -85,30 +87,30 @@ ht-degree: 45%
       + [at.js Cookie](implement/client-side/atjs/atjs-cookies.md)
    + [使用者代理和使用者端提示](implement/client-side/atjs/user-agent-and-client-hints.md)
    + 瞭解全域 mbox {#global-mbox}
-      + [了解全域 mbox 概覽](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
+      + [了解全域 mbox 概觀](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
       + [自訂全域 mbox](implement/client-side/atjs/global-mbox/customize-global-mbox.md)
       + [使用來自舊版實作的全域 mbox](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
       + [傳遞參數給全域 mbox](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
       + [全域 mbox 常見問答](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
-+ 伺服器端實作{#server-side}
-   + [伺服器端：實作 Target 概覽](implement/server-side/server-side-overview.md)
++ 伺服器端實作 {#server-side}
+   + [伺服器端：實作 Target 概觀](implement/server-side/server-side-overview.md)
    + [Target SDK快速入門](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [範例應用程式](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
    + [從 Target 舊版 API 轉變為 Adobe I/O](implement/server-side/transition-from-target-classic-apis.md)
-   + 核心原則{#core-principles}
+   + 核心原則 {#core-principles}
       + [核心原則概觀](implement/server-side/sdk-guides/core-principles/overview.md)
       + [使用者ID和分組](implement/server-side/sdk-guides/core-principles/user-identification-and-bucketing.md)
       + [對象目標定位](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
       + [事件追蹤](implement/server-side/sdk-guides/core-principles/event-tracking.md)
       + [使用者許可權和屬性](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
-   + 整合{#integration}
+   + 整合 {#integration}
       + [整合概述](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
-      + [Experience CloudID服務(ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
+      + [Experience Cloud ID服務(ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Analytics for Target (A4T) 報告](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM 區段](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
-   + 裝置上決策{#on-device-decisioning}
-      + [裝置上決策概覽](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + 規則成品{#rule-artifact}
+   + 裝置上決策 {#on-device-decisioning}
+      + [裝置上決策概觀](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
+      + 規則成品 {#rule-artifact}
          + [規則成品概觀](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [透過Adobe Target SDK下載](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [透過JSON裝載下載](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -120,8 +122,8 @@ ht-degree: 45%
       + [支援的功能概述](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [裝置上決策疑難排解](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [最佳實務](implement/server-side/sdk-guides/best-practices/best-practices.md)
-   + Node.js SDK參考{#node-js}
-      + [Node.js SDK概覽](implement/server-side/node-js/overview.md)
+   + Node.js SDK參考 {#node-js}
+      + [Node.js SDK概觀](implement/server-side/node-js/overview.md)
       + [安裝Node.js SDK](implement/server-side/node-js/install-sdk.md)
       + [初始化Node.js SDK](implement/server-side/node-js/initialize-sdk.md)
       + [取得選件(Node.js)](implement/server-side/node-js/get-offers.md)
@@ -130,21 +132,21 @@ ht-degree: 45%
       + [SDK事件(Node.js)](implement/server-side/node-js/sdk-events.md)
       + [記錄器(Node.js)](implement/server-side/node-js/logger.md)
       + [Proxy設定(Node.js)](implement/server-side/node-js/proxy-configuration.md)
-   + Java SDK參考{#java}
-      + [Java SDK總覽](implement/server-side/java/overview.md)
+   + Java SDK參考 {#java}
+      + [Java SDK概觀](implement/server-side/java/overview.md)
       + [安裝Java SDK](implement/server-side/java/install-sdk.md)
       + [初始化Java SDK](implement/server-side/java/initialize-sdk.md)
       + [取得選件(Java)](implement/server-side/java/get-offers.md)
       + [取得屬性(Java)](implement/server-side/java/get-attributes.md)
       + [傳送通知(Java)](implement/server-side/java/send-notifications.md)
-      + [SDK事件(Java)](implement/server-side/java/sdk-events.md)
+      + [SDK Events (Java)](implement/server-side/java/sdk-events.md)
       + [Logger (Java)](implement/server-side/java/logger.md)
       + [非同步請求(Java)](implement/server-side/java/asynchronous-requests.md)
       + [Proxy設定(Java)](implement/server-side/java/proxy-configuration.md)
       + [自訂HTTP使用者端設定(Java)](implement/server-side/java/custom-http-client.md)
       + [公用程式方法(Java)](implement/server-side/java/utility-methods.md)
-   + .NET SDK參考{#net}
-      + [.NET SDK總覽](implement/server-side/net/overview.md)
+   + .NET SDK參考 {#net}
+      + [.NET SDK概觀](implement/server-side/net/overview.md)
       + [安裝.Net SDK](implement/server-side/net/install-sdk.md)
       + [初始化.NET SDK](implement/server-side/net/initialize-sdk.md)
       + [取得選件(.NET)](implement/server-side/net/get-offers.md)
@@ -152,8 +154,8 @@ ht-degree: 45%
       + [傳送通知(.NET)](implement/server-side/net/send-notifications.md)
       + [SDK事件(.NET)](implement/server-side/net/sdk-events.md)
       + [非同步要求(.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Python SDK參考{#python}
-      + [Python SDK總覽](implement/server-side/python/overview.md)
+   + Python SDK參考 {#python}
+      + [Python SDK概觀](implement/server-side/python/overview.md)
       + [安裝Python SDK](implement/server-side/python/install-sdk.md)
       + [初始化Python SDK](implement/server-side/python/initialize-sdk.md)
       + [取得選件(Python)](implement/server-side/python/get-offers.md)
@@ -165,21 +167,21 @@ ht-degree: 45%
 + [混合實施](implement/hybrid/hybrid-overview.md)
 + [Recommendations實施](implement/recommendations/recommendations.md)
 + [Recommendations實作Beta版](/help/dev/implement/recommendations/recommendations-beta.md)
-+ 行動應用程式實作{#mobile-apps}
-   + [適用於行動應用程式的 Target 概覽](implement/mobile/overview.md)
++ 行動應用程式實施 {#mobile-apps}
+   + [適用於行動應用程式的 Target 概觀](implement/mobile/overview.md)
    + [Target 行動裝置預覽](implement/mobile/target-mobile-preview.md)
    + [使用定位服務](implement/mobile/use-location-service.md)
    + [適用於行動應用程式的 Target 常見問答](implement/mobile/mobile-faq.md)
-   + [透過Web檢視在原生應用程式中使用AEP Mobile SDK實作Target](/help/dev/implement/mobile/native-app.md)
-+ 電子郵件實作{#implement-email}
-   + [電子郵件：實作 Target 概覽](implement/email/overview.md)
+   + [透過AEP Mobile SDK，在具有Web檢視的原生應用程式中實作Target](/help/dev/implement/mobile/native-app.md)
++ 電子郵件實作 {#implement-email}
+   + [電子郵件：實作 Target 概觀](implement/email/overview.md)
    + [為影像建立 Adbox](implement/email/testing-content-with-the-adbox.md)
    + [測試電子郵件影像 Adbox](implement/email/testing-email-image-adbox.md)
    + [使用重導程式](implement/email/working-with-redirectors.md)
-+ API指南{#api}
++ API指南 {#api}
    + [Target API總覽](/help/dev/before-administer/target-api-overview.md)
    + [設定Target API的驗證](/help/dev/before-administer/configure-authentication.md)
-   + 傳遞API指南{#delivery-api}
+   + 傳送API指南 {#delivery-api}
       + [傳送API總覽](/help/dev/implement/delivery-api/overview.md)
       + [與傳送API互動的SDK](/help/dev/before-implement/delivery-api-overview/sdks.md)
       + [快速入門](/help/dev/before-implement/delivery-api-overview/getting-started.md)
@@ -203,20 +205,20 @@ ht-degree: 45%
       + [大量設定檔更新API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [報告 API](/help/dev/administer/reporting-api/reporting-api.md)
    + Recommendations API {#recommendations-api}
-      + [Recommendations API總覽](before-administer/recs-api/overview.md)
+      + [Recommendations API概覽](before-administer/recs-api/overview.md)
       + [使用API管理您的目錄](before-administer/recs-api/manage-catalog.md)
       + [管理自訂條件](before-administer/recs-api/manage-custom-criteria.md)
-      + [搭配Recommendations使用傳送API](before-administer/recs-api/fetch-recs-server-side-delivery-api.md)
-      + [RECOMMENDATIONS API](/help/dev/administer/recommendations-api/recommendations-api.md)
+      + [搭配建議使用傳送API](before-administer/recs-api/fetch-recs-server-side-delivery-api.md)
+      + [Recommendations API](/help/dev/administer/recommendations-api/recommendations-api.md)
    + 模型API {#models-api}
       + [模型API （加入封鎖清單）概觀](before-administer/models-api.md)
       + [模型API](/help/dev/administer/models-api/models-api-overview.md)
    + [ADOBE ADMIN CONSOLE API](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
-   + [Adobe Experience PlatformEdge Network伺服器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
-+ 實作模式{#implementation-patterns}
+   + [Adobe Experience Platform Edge Network伺服器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
++ 實作模式 {#implementation-patterns}
    + [實作模式概觀](/help/dev/patterns/pattern-overview.md)
-   + 使用at.js的Recommendations實作模式 {#atjs}
-      + [使用at.js的Recommendations實作模式概覽](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+   + 使用at.js的Recommendations實施模式 {#atjs}
+      + [使用at.js的Recommendations實施模式概覽](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [設定資料彙集](/help/dev/patterns/recs-atjs/data-collection.md)
       + [演算體驗](/help/dev/patterns/recs-atjs/render-experiences.md)
