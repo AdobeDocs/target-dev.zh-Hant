@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target] 開發人員指南
 
-**（[檢視 [!DNL Target] 檔案更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
+**（[檢視 [!DNL Target] 檔案更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=zh-Hant){target=_blank}）**
 
 此&#x200B;*[!DNL Adobe Target]開發人員指南*&#x200B;為[!DNL Target]開發人員提供資源和指南，包括實施和管理[!DNL Target]的API和SDK檔案。
 
@@ -24,9 +24,9 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target]商務從業者指南&#x200B;*](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant){target=_blank}
 >
->* [*[!DNL Adobe Target]教學課程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html){target=_blank}
+>* [*[!DNL Adobe Target]教學課程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hant){target=_blank}
 >
->如需版本資訊，請參閱[商業從業者指南](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}中的&#x200B;*[!DNL Adobe Target]Target發行說明（最新）*。
+>如需版本資訊，請參閱[商業從業者指南](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hant){target=_blank}中的&#x200B;*[!DNL Adobe Target]Target發行說明（最新）*。
 
 ## 實作快速入門
 
@@ -86,7 +86,7 @@ ht-degree: 6%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/)：透過Adobe「使用者管理」和「使用者同步API」來管理使用者和產品權益。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：將[!DNL Adobe Experience Platform Edge Network Server] API用於各種資料收集、個人化、廣告和行銷使用案例。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hant)：將[!DNL Adobe Experience Platform Edge Network Server] API用於各種資料收集、個人化、廣告和行銷使用案例。
 
 ## 資源
 
@@ -98,6 +98,6 @@ ht-degree: 6%
 * [Target實作](./before-implement/prepare-to-implement-target.md)
 * [Target管理](./before-administer/target-api-overview.md)
 * [Adobe Target開發檔案GitHub存放庫](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target發行說明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
+* [Adobe Target發行說明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hant)
 * [Adobe Target商業使用手冊](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant)
 
