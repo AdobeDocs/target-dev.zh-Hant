@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: 777feec0cd9b2bd6a9c7167acf1371fa1184af89
+source-git-commit: 8f24ffe82e16de0dbbd86d3baf0e76d826a98a9a
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 43%
