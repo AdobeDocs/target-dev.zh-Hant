@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 存取回應Token
 
-從[!DNL Adobe Target]傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，這些是有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應權杖可在[!DNL Target]使用者介面中設定。
+從[!DNL Adobe Target]傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)，這些是有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應權杖可在[!DNL Target]使用者介面中設定。
 
 若要存取任何個人化內容，請在傳送事件時提供回呼函式。 SDK從伺服器收到成功回應後，就會呼叫此回呼。 您的回呼提供了一個`result`物件，其中可能包含包含任何傳回的個人化內容的`propositions`屬性。 以下是提供回呼函式的範例。
 
@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-在此範例中，`result.propositions` （如果存在）是包含與事件相關之個人化主張的陣列。 如需有關[內容的詳細資訊，請參閱](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)呈現個人化內容`result.propositions.`
+在此範例中，`result.propositions` （如果存在）是包含與事件相關之個人化主張的陣列。 如需有關[內容的詳細資訊，請參閱](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)呈現個人化內容`result.propositions.`
 
 假設您想從網頁SDK自動轉譯的所有主張中收集所有活動名稱，並將其推入單一陣列。 然後，您可以將單一陣列傳送給第三方。 在此案例中：
 

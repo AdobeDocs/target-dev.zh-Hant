@@ -14,13 +14,13 @@ ht-degree: 4%
 
 `mbox3rdPartyId`中的[!DNL Adobe Target]是您公司的訪客ID，例如您公司的忠誠度計畫的會員ID。
 
-當訪客登入某個公司的網站時，該公司通常會建立ID，此ID會連結至該訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 [了解更多](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
+當訪客登入某個公司的網站時，該公司通常會建立ID，此ID會連結至該訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 [了解更多](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hant#)
 
 ## 如何搭配`mbox3rdPartyId`使用[!DNL Platform Web SDK]
 
 ### 步驟1：設定`Target Third Party ID Namespace`
 
-使用您要用作mbox第三方ID的ID名稱空間，在您的`Target Third Party ID Namespace`資料流[中設定](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)。 [進一步瞭解ID名稱空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+使用您要用作mbox第三方ID的ID名稱空間，在您的`Target Third Party ID Namespace`資料流[中設定](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)。 [進一步瞭解ID名稱空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant)
 
 ![Experience Platform UI顯示Target協力廠商ID名稱空間欄位。](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
