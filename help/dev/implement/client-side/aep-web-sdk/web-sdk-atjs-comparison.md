@@ -814,7 +814,7 @@ alloy("configure", {
 }
 ```
 
-接著，裝載可透過[!DNL Analytics]轉送至[!DNL  Data Insertion API]。
+接著，裝載可透過[!DNL Analytics]轉送至[!DNL &#x200B; Data Insertion API]。
 
 範例2：在每個`getOffers`函式中進行設定：
 
