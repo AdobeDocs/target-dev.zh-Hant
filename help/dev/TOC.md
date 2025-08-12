@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
-source-git-commit: 8f24ffe82e16de0dbbd86d3baf0e76d826a98a9a
+source-git-commit: b1b0424bfe61fb8b4e88723e6bb2c565d75f8351
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 43%
+source-wordcount: '827'
+ht-degree: 41%
 
 ---
 
@@ -169,6 +169,10 @@ ht-degree: 43%
       + [非同步請求(Python)](implement/server-side/python/asynchronous-requests.md)
       + [記錄器(Python)](implement/server-side/python/logger.md)
 + [混合實施](implement/hybrid/hybrid-overview.md)
++ 具Experience Platform SDK的Analytics for Target (A4T) {#a4t}
+   + [Experience Platform Web SDK中的Adobe Analytics for Target (A4T)登入](/help/dev/implement/a4t/overview-a4t.md)
+   + [Experience Platform Web SDK中A4T資料的使用者端記錄](/help/dev/implement/a4t/client-side-logging.md)
+   + [Experience Platform Web SDK中A4T資料的伺服器端記錄](/help/dev/implement/a4t/server-side-a4t.md)
 + [Recommendations實施](implement/recommendations/recommendations.md)
 + [Recommendations實作Beta版](/help/dev/implement/recommendations/recommendations-beta.md)
 + 行動應用程式實施 {#mobile-apps}
