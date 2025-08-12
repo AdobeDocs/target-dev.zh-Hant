@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # [!DNL Experience Platform Web SDK]中A4T資料的使用者端記錄
 
-[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)的Adobe Analytics資料。
+[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)的Adobe Analytics資料。
 
-使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動將資料傳送至Analytics，則應啟用此選項。
+使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hant)手動將資料傳送至Analytics，則應啟用此選項。
 
 >[!NOTE]
 >
->使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)執行此工作的方法目前正在開發中，將於不久的將來提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)執行此工作的方法目前正在開發中，將於不久的將來提供。
 
 本文介紹為[!DNL Platform Web SDK]設定使用者端A4T記錄的步驟，並提供常見使用案例的實施範例。
 
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 本教學課程假設您熟悉有關使用[!DNL Platform Web SDK]進行個人化目的的基本概念和程式。 如果您需要簡介，請檢閱下列檔案：
 
-* [設定網頁SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
-* [正在傳送事件](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [呈現個人化內容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [設定網頁SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/configure/overview)
+* [正在傳送事件](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [呈現個人化內容](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 設定[!DNL Analytics]使用者端記錄 {#set-up-client-side-logging}
 
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 ### 啟用[!DNL Analytics]使用者端記錄 {#enable-analytics-client-side-logging}
 
-若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[!DNL Adobe Analytics]資料流[中的](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)設定。
+若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[!DNL Adobe Analytics]資料流[中的](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)設定。
 
 ![已停用Analytics資料流設定](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### 從SDK擷取[!DNL A4T]資料並將其傳送到[!DNL Analytics] {#a4t-to-analytics}
 
-為了讓此報告方法正常運作，您必須傳送從[!DNL A4T]點選中的[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL Analytics]相關資料。
+為了讓此報告方法正常運作，您必須傳送從[!DNL A4T]點選中的[`sendEvent`](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL Analytics]相關資料。
 
 當[!DNL Target] Edge計算主張回應時，它會檢查是否已啟用[!DNL Analytics]使用者端記錄（例如，在您的資料流中是否已停用[!DNL Analytics]）。 如果啟用使用者端記錄，則系統會在回應中為每個主張新增[!DNL Analytics]權杖。
 
@@ -225,7 +225,7 @@ ht-degree: 0%
 
 ### [!UICONTROL Form-Based Experience Composer]個活動 {#form-based-composer}
 
-您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活動的建議執行。
+您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)活動的建議執行。
 
 當您請求特定決定範圍的建議時，傳回的建議包含其適當的[!DNL Analytics]權杖。 最佳實務是鏈結[!DNL Experience Platform Web SDK] `sendEvent`命令並重複處理傳回的主張，以便在同時收集[!DNL Analytics]權杖時執行這些建議。
 
@@ -465,7 +465,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] (VEC)活動 {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)編寫的選件。
+[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)編寫的選件。
 
 >[!NOTE]
 >
