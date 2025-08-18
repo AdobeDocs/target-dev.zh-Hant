@@ -1,19 +1,19 @@
 ---
-title: 與Experience Cloud A4T報表整合
-description: 與Experience Cloud、A4T報表、Analytics for Target整合的整合
+title: 與Experience Cloud A4T報告整合
+description: 與Experience Cloud、A4T報告、Analytics for Target整合的整合
 keywords: 傳送api，伺服器端，伺服器端，整合， a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: cbae0f1758fb0dee4837e8c237f8617ecb46eb25
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 7%
+source-wordcount: '372'
+ht-degree: 6%
 
 ---
 
-# Analytics for Target (A4T) 報告
+# [!UICONTROL Analytics for Target] (A4T)報告
 
-[!DNL Adobe Target]支援裝置上決策和伺服器端Target活動的A4T報告。 啟用A4T報表時有兩個設定選項：
+[!DNL Adobe Target]支援裝置上決策和伺服器端[!DNL Target]活動的A4T報告。 啟用A4T報表時有兩個設定選項：
 
 * [!DNL Adobe Target]自動將分析裝載轉送至[!DNL Adobe Analytics]，或
 * 使用者向[!DNL Adobe Target]要求分析裝載。 （[!DNL Adobe Target]會將[!DNL Adobe Analytics]裝載傳回給呼叫者。）
@@ -25,9 +25,9 @@ ht-degree: 7%
 ## 先決條件
 
 1. 在[!DNL Adobe Target] UI中設定活動，將[!DNL Adobe Analytics]設為報表來源，並確定已啟用A4T帳戶。
-1. API使用者會產生Adobe Marketing Cloud訪客ID，並確保此ID在執行Target請求時可供使用。
+1. API使用者會產生Adobe [!UICONTROL Marketing Cloud Visitor ID]，並確保此ID在執行[!DNL Target]要求時可供使用。
 
-## [!DNL Adobe Target]自動轉送分析裝載
+## [!DNL Adobe Target]自動轉送[!DNL Analytics]裝載
 
 如果提供了以下識別碼，[!DNL Adobe Target]可以自動將分析裝載轉送至[!DNL Adobe Analytics]：
 
@@ -115,7 +115,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 使用者從[!DNL Adobe Target]擷取分析裝載
 
-使用者可以擷取特定mbox的[!DNL Adobe Analytics]裝載，然後透過[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)傳送給[!DNL Adobe Analytics]。 觸發[!DNL Adobe Target]要求時，請將`client_side`傳遞至要求中的`logging`欄位。 如果在使用Analytics作為報表來源的活動中存在指定的mbox，則會傳回裝載。
+使用者可以擷取特定mbox的[!DNL Adobe Analytics]裝載，然後透過[!DNL Adobe Analytics]資料插入API[傳送給](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)。 觸發[!DNL Adobe Target]要求時，請將`client_side`傳遞至要求中的`logging`欄位。 如果指定的mbox存在於使用[!DNL Analytics]作為報表來源的活動中，則此要求會傳回裝載。
 
 >[!BEGINTABS]
 
@@ -191,10 +191,10 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 指定`logging = client_side`後，您將會在mbox欄位中接收裝載。
 
-如果來自Target的回應在`analytics -> payload`屬性中包含任何內容，請將其轉寄給[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何處理此承載。 您可使用下列格式，在GET要求中完成此作業：
+如果來自[!DNL Target]的回應在`analytics -> payload`屬性中包含任何內容，請將它轉寄給[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何處理此承載。 您可在GET請求中，使用下列格式完成此作業：
 
 ```
-https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
+https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_ver}/{session}?pe=tnt&tnta={payload}&c.&a.&target.&sessionId={sessionId}&.target&.a&.c&mid={mid}
 ```
 
 ### 查詢字串引數和變數
@@ -202,8 +202,12 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | 欄位名稱 | 必要 | 說明 |
 | --- | --- | --- |
 | `rsid` | 是 | 報表套裝 ID |
+| `content_type_num` | 是 | 一律設為&quot;0&quot; |
+| `code_ver` | 是 | 一律設為「MOBILE-1.0」 |
+| `session` | 是 | 一律設為&quot;0&quot; |
 | `pe` | 是 | 頁面事件。 一律設為`tnt` |
-| `tnta` | 是 | Target伺服器在`analytics -> payload -> tnta`中傳回的分析裝載 |
+| `tnta` | 是 | [!DNL Analytics]中的[!DNL Target]伺服器傳回的`analytics -> payload -> tnta`裝載 |
+| `sessionId` | 是 | 進行中工作階段的[!DNL Target]工作階段識別碼 |
 | `mid` | 是 | Marketing Cloud 訪客 ID |
 
 ### 必要的標頭值
@@ -214,6 +218,14 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 
 ### 範例A4T資料插入HTTP Get呼叫
 
+非URL編碼版本的可讀性（格式不用於API呼叫）：
+
 ```
-https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0|2&mid=2304820394812039
+https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0/0?tnta=253236:0:0|0,253236:0:0|2,253236:0:0|1,253613:0:0|0,253613:0:0|2,253613:0:0|1&c.&a.&target.&sessionId=45c08980-f4b9-4e11-96db-067d58e49f74&.target&.a&.c&pe=tnt&mid=69170113867710665996968872592584719577
+```
+
+URL編碼版本（用於API呼叫的格式）：
+
+```
+https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0/0?tnta=253236%3A0%3A0%7C0%2C253236%3A0%3A0%7C2%2C253236%3A0%3A0%7C1%2C253613%3A0%3A0%7C0%2C253613%3A0%3A0%7C2%2C253613%3A0%3A0%7C1&c.%26a.%26target.%26sessionId=45c08980-f4b9-4e11-96db-067d58e49f74%26.target%26.a%26.c&pe=tnt&mid=69170113867710665996968872592584719577 
 ```
