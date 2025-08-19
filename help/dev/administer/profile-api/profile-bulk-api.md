@@ -4,10 +4,10 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->[!UICONTROL Bulk Profile Update API]的版本2 (v2)是目前的版本。 不過，[!DNL Target]仍支援版本1 (v1)。
+>[!DNL Bulk Profile Update API]的版本2 (v2)是目前的版本。 不過，[!DNL Target]仍持續支援版本1 (v1)。
+>
+>* **不依賴`PCID`的獨立實作，請使用版本2**：如果您的[!DNL Target]實作使用[!DNL Experience Cloud ID] (ECID)作為匿名訪客的設定檔識別碼之一，您不得使用`pcId`作為版本2 (v2)批次檔案中的金鑰。 將`pcId`與[!DNL Bulk Profile Update API]的版本2搭配使用，是針對不依賴[!DNL Target]的獨立的`ECID`實作。
+>
+>* **依賴`thirdPartID`的實作，使用版本1**：如果您想要在批次檔案中使用`ECID`做為金鑰，使用`pcId`進行設定檔識別的實作應使用API版本1 (v1)。 如果您的實作使用`thirdPartyId`來識別設定檔，則建議使用`thirdPartyId`作為索引鍵的第2版(v2)。
 
-## 大量設定檔更新API的優點
+## [!UICONTROL Bulk Profile Update API]的優點
 
 * 設定檔屬性的數量不限。
 * 透過網站傳送的設定檔屬性可以透過API更新，反之亦然。
@@ -43,13 +47,13 @@ ht-degree: 8%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -61,19 +65,19 @@ batch=pcId,param1,param2,param3,param4
 * 第一個標頭應該是`pcId`或`thirdPartyId`。 不支援[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]產生的訪客ID。 `thirdPartyId`是使用者端應用程式所指定的ID，它是透過mbox呼叫傳遞至[!DNL Target]做為`mbox3rdPartyId`。 它必須在這裡稱為`thirdPartyId`。
 * 基於安全理由，您在批次檔案中指定的引數和值必須使用UTF-8進行URL編碼。 引數和值可以轉送至其他邊緣節點，以透過HTTP請求處理。
 * 引數只能使用`paramName`格式。 引數在[!DNL Target]中顯示為`profile.paramName`。
-* 如果您使用[!UICONTROL Bulk Profile Update API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。
+* 如果您使用[!UICONTROL Bulk Profile Update API] v2，則不需要為每個`pcId`指定所有引數值。 已為`pcId`中找不到的任何`mbox3rdPartyId`或[!DNL Target]建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。
 * 批次檔的大小必須小於 50 MB。此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
 * 您可以傳送多個檔案。 不過，您一天內傳送之所有檔案的總列數，每個使用者端不應超過100萬列。
 * 您可以上傳的屬性數目沒有限制。 不過，外部設定檔資料的總計大小不得超過64 KB，其中包括客戶屬性、設定檔API、In-Mbox設定檔引數以及設定檔指令碼輸出。
 * 引數和值區分大小寫。
 
-## HTTPPOST要求
+## HTTP POST要求
 
-向[!DNL Target]部邊緣伺服器發出HTTPPOST要求，以處理檔案。 以下是使用curl命令為batch.txt檔案提出的HTTPPOST請求範例：
+向[!DNL Target]個邊緣伺服器發出HTTP POST要求以處理檔案。 以下為使用curl命令建立batch.txt檔案的HTTP POST要求範例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中:
 
@@ -81,7 +85,7 @@ BATCH.TXT是檔案名稱。 CLIENTCODE是[!DNL Target]使用者端代碼。
 
 如果您不知道使用者端代碼，請在[!DNL Target]使用者介面中按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。 使用者端代碼會顯示在[!UICONTROL Account Details]區段中。
 
-### Inspect的回應
+### 檢查回應
 
 設定檔API會傳回批次的提交狀態以進行處理，連結「batchStatus」底下至顯示特定批次工作整體狀態的其他URL。
 
