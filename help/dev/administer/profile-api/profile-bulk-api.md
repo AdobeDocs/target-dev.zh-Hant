@@ -4,7 +4,7 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
+source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 >
 >[!DNL Bulk Profile Update API]的版本2 (v2)是目前的版本。 不過，[!DNL Target]仍持續支援版本1 (v1)。
 >
->* **不依賴`PCID`的獨立實作，請使用版本2**：如果您的[!DNL Target]實作使用[!DNL Experience Cloud ID] (ECID)作為匿名訪客的設定檔識別碼之一，您不得使用`pcId`作為版本2 (v2)批次檔案中的金鑰。 將`pcId`與[!DNL Bulk Profile Update API]的版本2搭配使用，是針對不依賴[!DNL Target]的獨立的`ECID`實作。
+>* **不依賴`ECID`的獨立實作，請使用版本2**：如果您的[!DNL Target]實作使用[!DNL Experience Cloud ID] (ECID)作為匿名訪客的設定檔識別碼之一，您不得使用`pcId`作為版本2 (v2)批次檔案中的金鑰。 將`pcId`與[!DNL Bulk Profile Update API]的版本2搭配使用，是針對不依賴[!DNL Target]的獨立的`ECID`實作。
 >
 >* **依賴`thirdPartID`的實作，使用版本1**：如果您想要在批次檔案中使用`ECID`做為金鑰，使用`pcId`進行設定檔識別的實作應使用API版本1 (v1)。 如果您的實作使用`thirdPartyId`來識別設定檔，則建議使用`thirdPartyId`作為索引鍵的第2版(v2)。
 
@@ -47,13 +47,13 @@ ht-degree: 7%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +75,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]個邊緣伺服器發出HTTP POST要求以處理檔案。 以下為使用curl命令建立batch.txt檔案的HTTP POST要求範例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中:
 
