@@ -276,7 +276,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
     *到期日期： Feb 20 23✅59 2026 GMT
     *頒發者： C=US； O=US digiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:*主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== 
      [edge shard： SYD-pool.data.adobedc.net] =====
-    *過期日期： Feb0233{359 2026 GMT✅*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+    *過期日期： Feb0233&lbrace;359 2026 GMT✅*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     *主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== :59: [edge shard： VA-pool.data.adobedc.net] =====
     *到期日期：Feb 20 23
     59 2026 GMT✅*發行者：C=US；O=DigiCert Inc；CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
@@ -285,7 +285,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
     59 2026 GMT✅*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 20 CA1
     *主體： C=US； ST l=San Jose； O=Adobe Systems Incorporated； CN=target.example.com==========================================================有關其他TLS/SSL驗證，請參閱SSL購物者：    :59: https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com若要檢查全球的DNS傳播，請參閱whatsmydns.net：    
      DNS A記錄：     https://whatsmydns.net/#A/target.example.com
-     DNS CNAME記錄： https://whatsmydns.net/#CNAME/target.example.com🔎&quot;&#39;🔎+++
+     +++DNS CNAME記錄： https://whatsmydns.net/#CNAME/target.example.com🔎&quot;&#39;🔎
     🔎
     
     
