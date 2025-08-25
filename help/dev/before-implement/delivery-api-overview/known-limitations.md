@@ -4,10 +4,10 @@ description: 使用[!UICONTROL Adobe Target Delivery API]時，應考慮哪些�
 keywords: 傳送api
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
-source-git-commit: 413b16ed0b098de6914558fa29b9ca59aaba958e
+source-git-commit: 94a4122244065384f487ca9a29dfa1b414168cb8
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 3%
+source-wordcount: '145'
+ht-degree: 6%
 
 ---
 
@@ -22,15 +22,3 @@ ht-degree: 3%
   如果您使用引導訪客通過新負載平衡器基礎結構的端點，其連線會自動升級為HTTP/2。 此升級程式會將請求標頭轉換為小寫標頭，以免被視為格式錯誤。
 
   如果客戶的程式庫設為尋找區分大小寫（尤其是非小寫）的請求/回應標頭，則此問題可能會成為客戶的問題。
-
-* 透過[!DNL Recommendations]更新您的[!UICONTROL Catalog] [!DNL Delivery API]時請小心。 [!DNL Delivery API]是公開的，因此請避免使用它來填入建議目錄中的可點按專案。 這樣做可能會引入失效的內容並汙染您的目錄。
-
-  **最佳實務**：
-
-  僅使用[!DNL Delivery API]來更新符合下列條件的目錄屬性：
-   * 經常變更（例如價格、庫存量）。
-   * 遵循可在您的網站上輕鬆驗證的預定義格式。
-   * 請勿將其用於新增或修改可點按專案或其他未經驗證的內容。
-   * 如有需要，您可以透過傳送API請求客戶支援以停用目錄更新。
-
-  如需詳細資訊，請參閱[[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}檔案。
