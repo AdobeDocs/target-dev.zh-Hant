@@ -4,10 +4,10 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中實�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
+source-git-commit: 17caf4e54d2efa372ebc6f3916f120a37d39d4a5
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 0%
+source-wordcount: '1169'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
    >
    >此步驟完成前，Adobe的憑證授權單位DigiCert無法核發憑證。 因此，在此步驟完成之前，Adobe無法完成您的CNAME實作要求。
 
-1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant&#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
@@ -96,6 +96,8 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 使用以下命令集(在macOS或Linux命令列終端機中，使用bash和curl >=7.49)：
 
 1. 將此Bash函式複製並貼到您的終端機中，或將函式貼到您的Bash啟動指令碼檔案中（通常是`~/.bash_profile`或`~/.bashrc`），以便該函式可在終端機工作階段中使用：
+
+   +++ 檢視詳細資料
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -241,51 +243,53 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
    }
    ```
 
+   +++
+
 1. 貼上此命令（將`target.example.com`取代為您的主機名稱）：
 
-   ```adobeTargetCnameValidation target.example.com```
+   `adobeTargetCnameValidation target.example.com`
 
-如果實作準備就緒，您會看到如下所示的輸出。 重要的一點是，所有驗證狀態行都顯示`✅`而非`🚫`。 每個Target Edge CNAME分片都應該顯示`CN=target.example.com`，這符合要求的憑證上的主要主機名稱（憑證上的其他SAN主機名稱不會列印在此輸出中）。
+   如果實作準備就緒，您會看到如下所示的輸出。 重要的一點是，所有驗證狀態行都顯示`✅`而非`🚫`。 每個Target Edge CNAME分片都應該顯示`CN=target.example.com`，這符合要求的憑證上的主要主機名稱（憑證上的其他SAN主機名稱不會列印在此輸出中）。
 
-    +++檢視詳細資料
-    
-    &quot;&#39;bash {line-numbers=&quot;true&quot;}
-    $ adobeTargetCnameValidation
-    target.example.com=====================================Adobe Target CNAME實作驗證主機名稱target.example.com：
-    ✅ target.example.com通過DNS CNAME驗證
-    ✅ target.example.comtarget.example.com通過TLS和HTTP回應驗證IRL1
-    ✅區域IND1
-    ✅的TLS和HTTP響應驗證target.example.com通過區域SIN
-    ✅的TLS和HTTP響應驗證target.example.com通過區域OR
-    ✅的TLS和HTTP響應驗證target.example.com通過區域SYD
-    ✅的TLS和HTTP響應驗證target.example.com通過區域VA
-    ✅的TLS和HTTP響應驗證target.example.comtarget.example.com target.example.com target.example.com target.example.com target.example.com target.example.com target.example.com target.example.com通過區域TYO的分片驗證：===== 
-    ✅ [edge shard： IRL1-pool.data.adobedc.net] =====✅*過期日期： Feb 20 23
-    59 2026 GMT:59:*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    *主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== 
-     [edge shard： IND1-pool.data.adobedc.net] =====✅*過期日期： Feb 20 23
-    59 2026 GMT:59:*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 202202020 CA CN=target.example.com===== 
-     [edge shard： SIN-pool.data.adobedc.net] =====
-    *到期日期： Feb 20 23✅59 2026 GMT
-    *頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global Cert tls RSA SHA256 2020 CA1:59:*主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== 
-     [edge shard： OR-pool.data.adobedc.net] =====
-    *到期日期： Feb 20 23✅59 2026 GMT
-    *頒發者： C=US； O=US digiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:*主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== 
-     [edge shard： SYD-pool.data.adobedc.net] =====
-    *過期日期： Feb0233&lbrace;359 2026 GMT✅*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    *主題： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== :59: [edge shard： VA-pool.data.adobedc.net] =====
-    *到期日期：Feb 20 23
-    59 2026 GMT✅*發行者：C=US；O=DigiCert Inc；CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    *主題：C=US；ST=California；L=San Jose；O=Adobe Systems Incorporated；CN TARGET=target.example.com===== :59: [edge shard： TYO-pool.data.adobedc.net] =====
-    *過期日期： Feb 20 23
-    59 2026 GMT✅*頒發者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 20 CA1
-    *主體： C=US； ST l=San Jose； O=Adobe Systems Incorporated； CN=target.example.com==========================================================有關其他TLS/SSL驗證，請參閱SSL購物者：    :59: https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com若要檢查全球的DNS傳播，請參閱whatsmydns.net：    
-     DNS A記錄：     https://whatsmydns.net/#A/target.example.com
-     +++DNS CNAME記錄： https://whatsmydns.net/#CNAME/target.example.com🔎&quot;&#39;🔎
-    🔎
-    
-    
-    
++++ 檢視詳細資料
+
+```bash {line-numbers="true"}
+  $ adobeTargetCnameValidation 
+  target.example.com==========================================================Adobe Target CNAME implementation validation for hostname target.example.com:
+  ✅ target.example.com passes DNS CNAME validation
+  ✅ target.example.com passes TLS and HTTP response validation for region IRL1
+  ✅ target.example.com passes TLS and HTTP response validation for region IND1
+  ✅ target.example.com passes TLS and HTTP response validation for region SIN
+  ✅ target.example.com passes TLS and HTTP response validation for region OR
+  ✅ target.example.com passes TLS and HTTP response validation for region SYD
+  ✅ target.example.com passes TLS and HTTP response validation for region VA
+  ✅ target.example.com passes TLS and HTTP response validation for region TYO
+  ✅ target.example.com passes shard validation for the following 7 edge shards:===== ✅ target.example.com [edge shard: IRL1-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: IND1-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: SIN-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: OR-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: SYD-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: VA-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: TYO-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com==========================================================  For additional TLS/SSL validation, see SSL Shopper:    🔎  https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com  To check DNS propagation around the world, see whatsmydns.net:    🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
+      🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
+```
+
++++
 
 >[!NOTE]
 >
