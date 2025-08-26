@@ -4,7 +4,7 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中實�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: d803ee9ddb58c73e089e938773ba264e03ef9b1b
+source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >此步驟完成前，Adobe的憑證授權單位DigiCert無法核發憑證。 因此，在此步驟完成之前，Adobe無法完成您的CNAME實作要求。
 
-1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant&#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
