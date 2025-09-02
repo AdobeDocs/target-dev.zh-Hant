@@ -4,7 +4,7 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中實�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
+source-git-commit: 4f28018a55d484f45ebbbce319d580450d3db68b
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,12 +31,13 @@ ht-degree: 1%
    >
    >此步驟完成前，Adobe的憑證授權單位DigiCert無法核發憑證。 因此，在此步驟完成之前，Adobe無法完成您的CNAME實作要求。
 
-1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant&#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的Adobe客戶服務票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
    * SSL憑證購買者(強烈建議Adobe，請參閱常見問題集)： Adobe/客戶
    * 如果客戶購買憑證（也稱為「自帶憑證」，BYOC），請填寫以下其他詳細資料：
+
       * 憑證組織（範例：範例Company Inc）：
       * 憑證組織單位（選用，例如：行銷）：
       * 憑證國家/地區（範例：美國）：
@@ -306,3 +307,4 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 
 * 有CNAME和at.js 1.x時，QA模式沒有粘性，因為它是以協力廠商Cookie為基礎。 因應措施是將預覽引數新增到您導覽到的每個URL中。 有CNAME和at.js 2.x時，QA模式會很粘滯。
 * 使用CNAME時，[!DNL Target]呼叫的Cookie標頭大小更有可能增加。 Adobe建議將Cookie大小維持在8 KB以下。
+
