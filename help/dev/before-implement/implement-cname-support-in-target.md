@@ -19,7 +19,7 @@ ht-degree: 1%
 ## 在[!DNL Target]中要求CNAME支援
 
 1. 決定您的SSL憑證所需的主機名稱清單（請參閱底下的常見問題集）。
-1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/zh-hant/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
