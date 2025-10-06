@@ -5,9 +5,9 @@ title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-source-git-commit: 0f00e3d781500ebdf2ad176bf074acca852256b7
+source-git-commit: c9f6bf53ee8a9d6808191bbe7d014d31a9d80829
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 ## 在[!DNL Target]中要求CNAME支援
 
 1. 決定您的SSL憑證所需的主機名稱清單（請參閱底下的常見問題集）。
-1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/zh-hant/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
@@ -96,7 +96,7 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 
 ### 我的CNAME實作使用什麼金鑰型別和憑證簽章演演算法？
 
-所有憑證預設為RSA SHA-256，金鑰則為RSA 2048位元。 目前不支援大於2048位元的金鑰大小。
+所有憑證預設為RSA SHA-256，金鑰則為RSA 2048位元。 應透過客戶服務明確要求大於2048位元的金鑰大小。
 
 ### 如何驗證我的CNAME實作準備好進行流量？
 
@@ -104,165 +104,148 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 
 1. 將此Bash函式複製並貼到您的終端機中，或將函式貼到您的Bash啟動指令碼檔案中（通常是`~/.bash_profile`或`~/.bashrc`），以便該函式可在終端機工作階段中使用：
 
-   ```
-   function adobeTargetCnameValidation {
-     local hostname="$1"
-     if [ -z "$hostname" ]; then
-       echo "ERROR: no hostname specified"
-       return 1
-     fi
-   
-     local service="Adobe Target CNAME implementation"
-     local edges="31 32 34 35 36 37 38"
-     local edgeDomain="tt.omtrdc.net"
-     local edgeFormat="mboxedge%d%s.$edgeDomain"
-     local shardFormat="-alb%02d"
-     local shards=5
-     local shardsFoundCount=0
-     local shardsFound
-     local shardsFoundOutput
-     local curlRegex="subject:.*CN=|expire date:|issuer:"
-     local curlValidation="SSL certificate verify ok"
-     local curlResponseValidation='"OK"'
-     local curlEndpoint="/uptime?mboxClient=uptime3"
-     local url="https://$hostname$curlEndpoint"
-     local sslLabsUrl="https://ssllabs.com/ssltest/analyze.html?hideResults=on&latest&d=$hostname"
-     local success="✅"
-     local failure="🚫"
-     local info="🔎"
-     local rule="="
-     local horizontalRule="$(seq ${COLUMNS:-30} | xargs printf "$rule%.0s")"
-     local miniRule="$(seq 5 | xargs printf "$rule%.0s")"
-     local curlVersion="$(curl --version | head -1 | cut -d' ' -f2 )"
-     local curlVersionRequired=">=7.49"
-     local edgeCount="$(wc -w <<< "$edges" | tr -d ' ')"
-     local edge
-     local shard
-     local currEdgeShard
-     local dnsOutput
-     local cnameExists
-     local endToEndTestSucceeded
-     local curlResult
-   
-     for shard in $(seq $shards); do
-       if [ "$shardsFoundCount" -eq 0 ]; then
-         for edge in $edges; do
-           if [ "$shard" -eq 1 ]; then
-             currEdgeShard="$(printf "$edgeFormat" "$edge" "")"
-           else
-             currEdgeShard="$(
-               printf "$edgeFormat" "$edge" "$(
-                 printf -- "$shardFormat" "$shard"
-               )"
-             )"
-           fi
-           curlResult="$(curl -vsm20 --connect-to "$hostname:443:$currEdgeShard:443" "$url" 2>&1)"
-           if grep -q "$curlValidation" <<< "$curlResult"; then
-             shardsFound+=" $currEdgeShard"
-             if grep -q "$curlResponseValidation" <<< "$curlResult"; then
-               shardsFoundCount=$((shardsFoundCount+1))
-               shardsFoundOutput+="\n\n$miniRule $success $hostname [edge shard: $currEdgeShard] $miniRule\n"
-             else
-               shardsFoundOutput+="\n\n$miniRule $failure $hostname [edge shard: $currEdgeShard] $miniRule\n"
-             fi
-             shardsFoundOutput+="$(grep -E "$curlRegex" <<< "$curlResult" | sort)"
-             if ! grep -q "$curlResponseValidation" <<< "$curlResult"; then
-               shardsFoundOutput+="\nERROR: unexpected HTTP response from this shard using $url"
-             fi
-           fi
-         done
-       fi
-     done
-   
-     echo
-     echo "$horizontalRule"
-     echo
-     echo "$service validation for hostname $hostname:"
-     dnsOutput="$(dig -t CNAME +short "$hostname" 2>&1)"
-     if grep -qFi ".$edgeDomain" <<< "$dnsOutput"; then
-       echo "$success $hostname passes DNS CNAME validation"
-       cnameExists=true
-     else
-       echo -n "$failure $hostname FAILED DNS CNAME validation -- "
-       if [ -n "$dnsOutput" ]; then
-         echo -e "$dnsOutput is not in the subdomain $edgeDomain"
-       else
-         echo "required DNS CNAME record pointing to <random-string>.$edgeDomain not found"
-       fi
-     fi
-   
-     curlResult="$(curl -vsm20 "$url" 2>&1)"
-     if grep -q "$curlValidation" <<< "$curlResult"; then
-       if grep -q "$curlResponseValidation" <<< "$curlResult"; then
-         echo -en "$success $hostname passes TLS and HTTP response validation"
-         if [ -n "$cnameExists" ]; then
-           echo
-         else
-           echo " -- the DNS CNAME is not pointing to the correct subdomain for ${service}s with Adobe-managed certificates" \
-             "(bring-your-own-certificate implementations don't have this requirement), but this test passes as configured"
-         fi
-         endToEndTestSucceeded=true
-       else
-         echo -n "$failure $hostname FAILED HTTP response validation --" \
-           "unexpected response from $url -- "
-         if [ -n "$cnameExists" ]; then
-           echo "DNS is NOT pointing to the correct shard, notify Adobe Client Care"
-         else
-           echo "the required DNS CNAME record is missing, see above"
-         fi
-       fi
-     else
-   
-       echo -n "$failure $hostname FAILED TLS validation -- "
-       if [ -n "$cnameExists" ]; then
-         echo "DNS is likely NOT pointing to the correct shard or there's a validation issue with the certificate or" \
-           "protocols, see curl output below and optionally SSL Labs ($sslLabsUrl):"
-         echo ""
-         echo "$horizontalRule"
-         echo "$curlResult" | sed 's/^/    /g'
-         echo "$horizontalRule"
-         echo ""
-       else
-         echo "the required DNS CNAME record is missing, see above"
-       fi
-     fi
-   
-     if [ "$shardsFoundCount" -ge "$edgeCount" ]; then
-       echo -n "$success $hostname passes shard validation for the following $shardsFoundCount edge shards:"
-       echo -e "$shardsFoundOutput"
-       echo
-   
-       if [ -n "$cnameExists" ] && [ -n "$endToEndTestSucceeded" ]; then
-         echo "$horizontalRule"
-         echo ""
-         echo "  For additional TLS/SSL validation, including detailed browser/client support,"
-         echo "  see SSL Labs (click the first IP address if prompted):"
-         echo ""
-         echo "    $info  $sslLabsUrl"
-         echo ""
-         echo "  To check DNS propagation around the world, see whatsmydns.net:"
-         echo ""
-         echo "    $info  DNS A records:     https://whatsmydns.net/#A/$hostname"
-         echo "    $info  DNS CNAME record:  https://whatsmydns.net/#CNAME/$hostname"
-       fi
-     else
-       echo -n "$failure $hostname FAILED shard validation -- shards found: $shardsFoundCount," \
-         "expected: $edgeCount"
-       if bc -l <<< "$(cut -d. -f1,2 <<< "$curlVersion") $curlVersionRequired" 2>/dev/null | grep -q 0; then
-         echo -n " -- insufficient curl version installed: $curlVersion, but this script requires curl version" \
-           "$curlVersionRequired because it uses the curl --connect-to flag to bypass DNS and directly test" \
-           "each Adobe Target edge shards' SNI confirguation for $hostname"
-       fi
-       if [ -n "$shardsFoundOutput" ]; then
-         echo -e ":\n$shardsFoundOutput"
-       fi
-       echo
-     fi
-     echo
-     echo "$horizontalRule"
-     echo
-   }
-   ```
+```
+function adobeTargetCnameValidation {
+  local hostname="$1"
+  
+  if [ -z "$hostname" ]; then
+    echo "ERROR: no hostname specified"
+    return 1
+  fi
+  
+  local service="Adobe Target CNAME implementation"
+  local edges="41 42 44 45 46 47 48"
+  local edgeDomain="tt.omtrdc.net"
+  local edgeFormat="mboxedge%d%s.$edgeDomain"
+  local poolDomain="pool.data.adobedc.net"
+  local shards=5
+  local shardsFoundCount=0
+  local shardsFound=""
+  local shardsFoundOutput=""
+  local curlRegex="subject:.*CN=|expire date:|issuer:"
+  local curlValidation="SSL certificate verify ok"
+  local curlResponseValidation='"OK"'
+  local curlEndpoint="/uptime?mboxClient=uptime3"
+  local url="https://$hostname$curlEndpoint"
+  local sslShopperUrl="https://www.sslshopper.com/ssl-checker.html#hostname=$hostname"
+  local success="✅"
+  local failure="🚫"
+  local info="🔎"
+  local rule="="
+  local horizontalRule="$(seq ${COLUMNS:-30} | xargs printf "$rule%.0s")"
+  local miniRule="$(seq 5 | xargs printf "$rule%.0s")"
+  local curlVersion="$(curl --version | head -1 | cut -d' ' -f2)"
+  local curlVersionRequired=7.49
+  local edgeCount="$(wc -w <<< "$edges" | tr -d ' ')"
+  local cnameExists=""
+  local endToEndTestSucceeded=""
+  
+  for region in IRL1 IND1 SIN OR SYD VA TYO; do
+    local currShard="${region}-${poolDomain}"
+    local curlResult="$(curl -vsm20 --connect-to "$hostname:443:$currShard:443" "$url" 2>&1)"
+    
+    if grep -q "$curlValidation" <<< "$curlResult"; then
+      shardsFound+=" $currShard"
+      
+      if grep -q "$curlResponseValidation" <<< "$curlResult"; then
+        shardsFoundCount=$((shardsFoundCount+1))
+        shardsFoundOutput+="\n\n$miniRule $success $hostname [edge shard: $currShard] $miniRule\n"
+      else
+        shardsFoundOutput+="\n\n$miniRule $failure $hostname [edge shard: $currShard] $miniRule\n"
+      fi
+      
+      shardsFoundOutput+="$(grep -E "$curlRegex" <<< "$curlResult" | sort)"
+      
+      if ! grep -q "$curlResponseValidation" <<< "$curlResult"; then
+        shardsFoundOutput+="\nERROR: unexpected HTTP response from this shard using $url"
+      fi
+    fi
+  done
+  
+  echo
+  echo "$horizontalRule"
+  echo
+  echo "$service validation for hostname $hostname:"
+  
+  local dnsOutput="$(dig -t CNAME +short "$hostname" 2>&1)"
+  if grep -qFi ".$edgeDomain" <<< "$dnsOutput"; then
+    echo "$success $hostname passes DNS CNAME validation"
+    cnameExists=true
+  else
+    echo -n "$failure $hostname FAILED DNS CNAME validation -- "
+    if [ -n "$dnsOutput" ]; then
+      echo -e "$dnsOutput is not in the subdomain $edgeDomain"
+    else
+      echo "required DNS CNAME record pointing to <target-client-code>.$edgeDomain not found"
+    fi
+  fi
+  
+  for region in IRL1 IND1 SIN OR SYD VA TYO; do
+    local curlResult="$(curl -vsm20 --connect-to "$hostname:443:${region}-pool.data.adobedc.net:443" "https://$hostname$curlEndpoint" 2>&1)"
+    
+    if grep -q "$curlValidation" <<< "$curlResult"; then
+      if grep -q "$curlResponseValidation" <<< "$curlResult"; then
+        echo -en "$success $hostname passes TLS and HTTP response validation for region $region"
+        if [ -n "$cnameExists" ]; then
+          echo
+        else
+          echo " -- the DNS CNAME is not pointing to the correct subdomain for ${service}s with Adobe-managed certificates" \
+            "(bring-your-own-certificate implementations don't have this requirement), but this test passes as configured"
+        fi
+        endToEndTestSucceeded=true
+      else
+        echo -n "$failure $hostname FAILED HTTP response validation for region $region --" \
+          "unexpected response from $url -- "
+        if [ -n "$cnameExists" ]; then
+          echo "DNS is NOT pointing to the correct shard, notify Adobe Client Care"
+        else
+          echo "the required DNS CNAME record is missing, see above"
+        fi
+      fi
+    else
+      echo -n "$failure $hostname FAILED TLS validation for region $region -- "
+      if [ -n "$cnameExists" ]; then
+        echo "DNS is likely NOT pointing to the correct shard or there's a validation issue with the certificate or" \
+          "protocols, see curl output below and optionally SSL Shopper ($sslShopperUrl):"
+        echo ""
+        echo "$horizontalRule"
+        echo "$curlResult" | sed 's/^/    /g'
+        echo "$horizontalRule"
+        echo ""
+      else
+        echo "the required DNS CNAME record is missing, see above"
+      fi
+    fi
+  done
+  
+  if [ "$shardsFoundCount" -ge "$edgeCount" ]; then
+    echo -n "$success $hostname passes shard validation for the following $shardsFoundCount edge shards:"
+    echo -e "$shardsFoundOutput"
+    echo
+    
+    if [ -n "$cnameExists" ] && [ -n "$endToEndTestSucceeded" ]; then
+      echo "$horizontalRule"
+      echo ""
+      echo "  For additional TLS/SSL validation, see SSL Shopper:"
+      echo ""
+      echo "    $info  $sslShopperUrl"
+      echo ""
+      echo "  To check DNS propagation around the world, see whatsmydns.net:"
+      echo ""
+      echo "    $info  DNS A records:     https://whatsmydns.net/#A/$hostname"
+      echo "    $info  DNS CNAME record:  https://whatsmydns.net/#CNAME/$hostname"
+    fi
+  else
+    echo -n "$failure $hostname FAILED shard validation -- shards found: $shardsFoundCount," \
+      "expected: $edgeCount"
+    echo ""
+  fi
+  
+  echo
+  echo "$horizontalRule"
+  echo
+}  
+```
 
 1. 貼上此命令（將`target.example.com`取代為您的主機名稱）：
 
@@ -272,69 +255,72 @@ Apple智慧型追蹤預防(ITP) 2.3版匯入了CNAME遮蔽緩解功能，此功�
 
    如果實作準備就緒，您會看到如下所示的輸出。 重要的一點是，所有驗證狀態行都顯示`✅`而非`🚫`。 每個[!DNL Target]邊緣CNAME分片都應該顯示`CN=target.example.com`，這符合要求的憑證上的主要主機名稱（憑證上的其他SAN主機名稱不會列印在此輸出中）。
 
-   ```
-   $ adobeTargetCnameValidation target.example.com
-   
-   ==========================================================
-   
-   Adobe Target CNAME implementation validation for hostname target.example.com:
-   ✅ target.example.com passes DNS CNAME validation
-   ✅ target.example.com passes TLS and HTTP response validation
-   ✅ target.example.com passes shard validation for the following 7 edge shards:
-   
-   ===== ✅ target.example.com [edge shard: mboxedge31-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge32-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge34-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge35-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge36-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge37-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ===== ✅ target.example.com [edge shard: mboxedge38-alb02.tt.omtrdc.net] =====
-   *  expire date: Jul 22 23:59:59 2022 GMT
-   *  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
-   *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
-   
-   ==========================================================
-   
-     For additional TLS/SSL validation, including detailed browser/client support,
-     see SSL Labs (click the first IP address if prompted):
-   
-       🔎  https://ssllabs.com/ssltest/analyze.html?hideResults=on&latest&d=target.example.com
-   
-     To check DNS propagation around the world, see whatsmydns.net:
-   
-       🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
-       🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com
-   
-   ==========================================================
-   ```
+```
+$ adobeTargetCnameValidation target.example.com
 
-   >[!NOTE]
-   >
-   >如果此驗證命令在DNS驗證時失敗，但您已進行必要的DNS變更，則可能需要等待DNS更新完全傳播。 DNS記錄具有相關的[TTL （存留時間）](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)，它指定這些記錄的DNS回覆的快取到期時間。 因此，您可能需要至少等待TTL的時間。 您可以使用`dig target.example.com`命令或[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)來查詢您特定的TTL。 若要檢查全球的DNS傳播，請參閱[whatsmydns.net](https://whatsmydns.net/#CNAME)。
+==========================================================
+
+Adobe Target CNAME implementation validation for hostname target.example.com:
+✅ target.example.com passes DNS CNAME validation
+✅ target.example.com passes TLS and HTTP response validation for region IRL1
+✅ target.example.com passes TLS and HTTP response validation for region IND1
+✅ target.example.com passes TLS and HTTP response validation for region SIN
+✅ target.example.com passes TLS and HTTP response validation for region OR
+✅ target.example.com passes TLS and HTTP response validation for region SYD
+✅ target.example.com passes TLS and HTTP response validation for region VA
+✅ target.example.com passes TLS and HTTP response validation for region TYO
+✅ target.example.com passes shard validation for the following 7 edge shards:
+
+===== ✅ target.example.com [edge shard: IRL1-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: IND1-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: SIN-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: OR-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: SYD-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: VA-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+===== ✅ target.example.com [edge shard: TYO-pool.data.adobedc.net] =====
+*  expire date: Feb 20 23:59:59 2026 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
+
+==========================================================  
+
+For additional TLS/SSL validation, see SSL Shopper:
+
+    🔎  https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com  
+
+To check DNS propagation around the world, see whatsmydns.net:
+
+    🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
+    🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
+```
+
+>[!NOTE]
+>
+>如果此驗證命令在DNS驗證時失敗，但您已進行必要的DNS變更，則可能需要等待DNS更新完全傳播。 DNS記錄具有相關的[TTL （存留時間）](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)，它指定這些記錄的DNS回覆的快取到期時間。 因此，您可能需要至少等待TTL的時間。 您可以使用`dig target.example.com`命令或[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)來查詢您特定的TTL。 若要檢查全球的DNS傳播，請參閱[whatsmydns.net](https://whatsmydns.net/#CNAME)。
 
 ### 如何使用具有 CNAME 的退出連結
 
