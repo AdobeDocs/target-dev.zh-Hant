@@ -17,7 +17,7 @@ ht-degree: 5%
 >
 >瞭解如何使用[!DNL Target]將Target從at.js 2.x移轉至Experience Platform Web SDK[!DNL Experience Platform Web SDK]教學課程，將您的[實作移轉至](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=zh-Hant)。
 >
->瞭解如何透過[!DNL Target]使用Web SDK實作Adobe Experience Cloud[教學課程來第一次實作](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hant)的部分。
+>瞭解如何透過[!DNL Target]使用Web SDK實作Adobe Experience Cloud[教學課程來第一次實作](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hant)的部分。
 
 下列功能已經過測試，目前在[!DNL Target]中支援：
 

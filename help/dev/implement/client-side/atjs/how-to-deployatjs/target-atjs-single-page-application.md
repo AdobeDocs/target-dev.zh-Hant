@@ -311,13 +311,13 @@ at.js 2.x API可讓您以多種方式自訂您的[!DNL Target]實作，但在此
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
 ### 在 SPA 中實作 at.js 2.x
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)。
 
 ### 在[!DNL Adobe Target]中使用適用於SPA的VEC
 

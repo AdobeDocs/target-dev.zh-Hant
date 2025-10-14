@@ -21,7 +21,7 @@ ht-degree: 66%
 >
 >[適用於行動應用程式的Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是支援行動應用程式中[!DNL Adobe Experience Cloud]解決方案和服務的建議解決方案。
 
-此區段包括可用作您的應用程式範本的樣本代碼。此區段中的樣本包含 iOS 的代碼。Android 適用相同的模式。您可以在[適用於Experience Cloud解決方案的Android SDK 4.x ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=zh-Hant)指南中找到Android的特定語法。
+此區段包括可用作您的應用程式範本的樣本代碼。此區段中的樣本包含 iOS 的代碼。Android 適用相同的模式。您可以在[適用於Experience Cloud解決方案的Android SDK 4.x &#x200B;](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=zh-Hant)指南中找到Android的特定語法。
 
 >[!NOTE]
 >

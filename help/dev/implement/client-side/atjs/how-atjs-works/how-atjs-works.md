@@ -74,7 +74,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
 ## at.js 1.x 圖表
 

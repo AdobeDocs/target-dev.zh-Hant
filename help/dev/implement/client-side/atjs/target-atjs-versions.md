@@ -302,7 +302,7 @@ at.js 2.x 引進以下新函數:
 
 at.js 1.7.0 提供 Adobe 選擇加入支援。「Adobe 選擇加入」是簡化 Adobe 解決方案與同意管理平台整合的方法。
 
-如需 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規範 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)。
+如需 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規範 &#x200B;](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)。
 
 此版本也修正[!DNL Target]可能將重新導向URL引數覆寫為來自重新導向URL之引數的問題。
 

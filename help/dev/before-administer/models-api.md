@@ -14,7 +14,7 @@ ht-degree: 2%
 
 模型API （也稱為Blocklist API）可讓使用者檢視和管理機器學習模型中用於[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活動的功能清單。 如果使用者想排除模型用於AP或AT活動的功能，他們可以使用模型API將該功能新增到「封鎖清單」。
 
-**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
+**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
 
 封鎖清單可依活動（活動層級）定義，或針對[!DNL Target]帳戶（全域層級）內的所有活動定義。
 
