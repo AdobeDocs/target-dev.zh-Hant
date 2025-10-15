@@ -17,7 +17,7 @@ ht-degree: 62%
 
 ## 隱私權與一般資料保護規範 (GDPR) 總覽
 
-自 2018 年 5 月 25 日起，歐盟的 GDPR 已正式生效。 如需有關此規範對您有何意義的詳細資訊，請參閱 [GDPR 和您的企業](https://business.adobe.com/privacy/general-data-protection-regulation.html)。
+自 2018 年 5 月 25 日起，歐盟的 GDPR 已正式生效。 如需有關此規範對您有何意義的詳細資訊，請參閱 [GDPR 和您的企業](https://business.adobe.com/tw/privacy/general-data-protection-regulation.html)。
 
 當 Adobe 提供軟體和服務給企業時，Adobe 為了提供這些服務，會以資料處理者的角色處理和儲存任何個人資料。身為資料處理者，Adobe 會根據貴公司的權限和指示 (例如，依照您與 Adobe 的合約規定) 處理個人資料。
 
