@@ -4,10 +4,10 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
+source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 7%
+source-wordcount: '1078'
+ht-degree: 6%
 
 ---
 
@@ -49,13 +49,13 @@ ht-degree: 7%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]個邊緣伺服器發出HTTP POST要求以處理檔案。 以下為使用curl命令建立batch.txt檔案的HTTP POST要求範例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中:
 
@@ -144,3 +144,25 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
     <failedUpdates>0</failedUpdates>
 </response>
 ```
+
+## 說明如何處理[!DNL Bulk Profile Update API]中的空白值
+
+使用[!DNL Target] [!DNL Bulk Profile Update API] （v1或v2）時，請務必瞭解系統如何處理空的引數或屬性值。
+
+### 預期行為
+
+為現有引數或屬性傳送空白值（「」、null或缺少欄位）不會重設或刪除設定檔存放區中的這些值。 這是刻意設計。
+
+忽略空白值： API會在處理期間篩選掉空白值，以避免不必要或無意義的更新。
+
+**不清除現有資料**：如果引數已經有值，傳送空白值會維持不變。
+
+**略過僅限空白的批次**：如果批次只包含空白或Null值，則會完全忽略該批次，並且不會套用任何更新。
+
+### 其他附註
+
+此行為同時適用於[!DNL Bulk Profile Update API]的v1和v2。
+
+嘗試傳送空白值來清除或移除屬性沒有效果。
+
+已規劃為未來版本的API (v3)支援明確屬性移除，但目前尚未提供。
