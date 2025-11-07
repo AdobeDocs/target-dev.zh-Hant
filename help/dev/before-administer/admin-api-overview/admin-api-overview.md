@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 開始之前
 
-在為[Admin API](../../administer/admin-api/admin-api-overview-new.md)提供的所有程式碼範例中，將{tenant}取代為您的租使用者值，`your-bearer-token`取代為您使用JWT產生的存取權杖，將`your-api-key`取代為您從[Adobe Developer Console](https://developer.adobe.com/console/home)取得的API金鑰。 如需有關租使用者和JWT的詳細資訊，請參閱有關如何為Adobe [ Admin API ](../configure-authentication.md)設定驗證[!DNL Target]的文章。
+在為[Admin API](../../administer/admin-api/admin-api-overview-new.md)提供的所有程式碼範例中，將{tenant}取代為您的租使用者值，`your-bearer-token`取代為您使用JWT產生的存取權杖，將`your-api-key`取代為您從[Adobe Developer Console](https://developer.adobe.com/console/home)取得的API金鑰。 如需有關租使用者和JWT的詳細資訊，請參閱有關如何為Adobe [&#x200B; Admin API &#x200B;](../configure-authentication.md)設定驗證[!DNL Target]的文章。
 
 ## 版本設定
 
@@ -68,7 +68,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 | 400 | [錯誤請求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 錯誤請求。 請求中提供的資料很可能無效。 |
 | 401 | [未獲授權](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允許使用者執行此作業。 |
 | 403 | [禁止存取](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止存取此資源。 |
-| 404 | 找不到[](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
+| 404 | 找不到[&#128279;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
 
 ## 活動
 

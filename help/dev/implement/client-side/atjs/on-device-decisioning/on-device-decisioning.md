@@ -262,7 +262,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 ### 全域設定
 
-您可以為所有[!DNL Target]個決定設定預設決定方法。 各種決策方法是僅限伺服器端、僅限裝置上及混合。 在[!DNL Target] UI中選取的決策方法已在`window.targetGlobalSettings`欄位下的`decisioningMethod`中設定。 深入瞭解`decisioningMethod`targetGlobalSettings()[中的](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)。
+您可以為所有[!DNL Target]個決定設定預設決定方法。 各種決策方法是僅限伺服器端、僅限裝置上及混合。 在[!DNL Target] UI中選取的決策方法已在`window.targetGlobalSettings`欄位下的`decisioningMethod`中設定。 深入瞭解`decisioningMethod`targetGlobalSettings() [中的](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)。
 
 ```javascript {line-numbers="true"}
 <head> 
@@ -282,7 +282,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 ### 自訂設定
 
-如果您在`decisioningMethod`中設定`window.targetGlobalSettings`，但想要根據您的使用案例覆寫每個`decisioningMethod`決定的[!DNL Adobe Target]，您可以在At.js2.5.0+的`decisioningMethod`getOffers()[呼叫中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)來執行此程式。
+如果您在`decisioningMethod`中設定`window.targetGlobalSettings`，但想要根據您的使用案例覆寫每個`decisioningMethod`決定的[!DNL Adobe Target]，您可以在At.js2.5.0+的`decisioningMethod`getOffers() [呼叫中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)來執行此程式。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 

@@ -62,7 +62,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**值。
+1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**&#x200B;值。
    ![client-code.png](assets/client-code.png)
 1. 取得使用者端代碼後，請建構您的傳送API呼叫。 以下範例以&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;傳送API Postman集合[中提供的](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)開始，並進行相關修改。 例如：
    * 已從&#x200B;**內文**&#x200B;移除&#x200B;**瀏覽器**&#x200B;和&#x200B;**位址**&#x200B;物件，因為非HTML使用案例不需要它們
