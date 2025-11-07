@@ -33,8 +33,8 @@ Apple ITP 2.x會在以下方面影響[!DNL Target]：
 | --- | --- |
 | 獨特訪客計數可能會增加 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），您可能會看到來自Safari瀏覽器的不重複訪客增加。 如果您的訪客在七天後(ITP 2.1)或一天後（ITP 2.2和ITP 2.3）重新造訪網域，[!DNL Target]會強制將新的[!DNL Target] Cookie放在您的網域上，來取代過期的Cookie。 即使是相同的使用者，新的 [!DNL Target] Cookie 會將其轉譯為新的獨特訪客。 |
 | 縮短 [!DNL Target] 活動的回顧期 | [!DNL Target] 活動的訪客輪廓可能已針對決策功能縮短回顧期間。系統會運用 [!DNL Target] Cookie 來識別訪客，並針對個人化儲存使用者輪廓屬性。鑑於[!DNL Target] Cookie可以在七天(ITP 2.1)或一天（ITP 2.2和2.3）後於Safari上過期，繫結至已永久刪除[!DNL Target] Cookie的使用者設定檔資料無法用於決策。 |
-| 基於 3rdPartyID 的輪廓指令碼 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），基於3rdPartyID Cookie的[個人資料指令碼](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)將在過期時停止運作。 |
-| iOS 裝置內的 QA/Preview URL | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），[QA/預覽URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)將在過期時停止運作，因為這些URL是以3rdPartyID Cookie為基礎。 |
+| 基於 3rdPartyID 的輪廓指令碼 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），基於3rdPartyID Cookie的[個人資料指令碼](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant)將在過期時停止運作。 |
+| iOS 裝置內的 QA/Preview URL | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），[QA/預覽URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hant)將在過期時停止運作，因為這些URL是以3rdPartyID Cookie為基礎。 |
 
 ## 我目前的 [!DNL Target] 實施是否會受到影響?
 

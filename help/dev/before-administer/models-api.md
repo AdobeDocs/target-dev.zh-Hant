@@ -14,7 +14,7 @@ ht-degree: 2%
 
 模型API （也稱為Blocklist API）可讓使用者檢視和管理機器學習模型中用於[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活動的功能清單。 如果使用者想排除模型用於AP或AT活動的功能，他們可以使用模型API將該功能新增到「封鎖清單」。
 
-**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
+**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
 
 封鎖清單可依活動（活動層級）定義，或針對[!DNL Target]帳戶（全域層級）內的所有活動定義。
 
@@ -100,7 +100,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >若要尋找您的活動識別碼，請導覽至[!DNL Target] UI中的活動清單。 按一下感興趣的活動。 活動ID會顯示在產生的「活動概覽」頁面內文中，以及該頁面的URL結尾處。
 
-**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中檢視這些好記的名稱。
+**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hant)中檢視這些好記的名稱。
 
 **[!UICONTROL internalName]**&#x200B;是功能的實際識別碼。 [!DNL Target]也建立了它，但無法變更。 這是您需要參考的值，以識別要加入封鎖清單的功能。
 
