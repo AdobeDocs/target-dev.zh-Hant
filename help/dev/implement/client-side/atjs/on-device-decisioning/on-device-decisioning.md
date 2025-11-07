@@ -4,7 +4,7 @@ description: 瞭解如何使用at.js程式庫執行[!UICONTROL on-device decisio
 title: 裝置上決策如何與at.js JavaScript程式庫搭配運作？
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '3478'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # 適用於at.js的[!UICONTROL On-device decisioning]
 
-從2.5.0版開始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]可讓您在瀏覽器上快取[A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)和[體驗鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant) (XT)活動，以執行記憶體內部決策，而不會封鎖對[!DNL Adobe Target]Edge Network的網路要求。
+從2.5.0版開始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]可讓您在瀏覽器上快取[A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)和[體驗鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT)活動，以執行記憶體內部決策，而不會封鎖對[!DNL Adobe Target] Edge Network的網路要求。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 4%
 * **提供超快的決策和體驗。**&#x200B;在記憶體中及瀏覽器上執行分組和決策，以避免封鎖網路要求。
 * **增強應用程式效能。**&#x200B;執行實驗並向您的客戶和使用者提供個人化，而不會損害一般使用者體驗。
 * **提升Google網站品質分數。**&#x200B;由於決策是在記憶體中進行，請改善您線上業務的Google網站品質分數，讓消費者更容易發現它。
-* **向即時分析學習。**&#x200B;透過[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) (A4T)報告即時取得您活動績效的深入分析。 A4T可讓您在關鍵時刻樞紐分析策略。
+* **向即時分析學習。**&#x200B;透過[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)報告即時取得您活動績效的深入分析。 A4T可讓您在關鍵時刻樞紐分析策略。
 
 ## 支援的功能
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 * 對象目標定位
 * 配置方法
 
-如需詳細資訊，請參閱[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支援功能。
+如需詳細資訊，請參閱[的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援功能。
 
 ## [!UICONTROL on-device decisioning]如何運作？
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
 僅伺服器端是預設的決策方法，可在您的Web屬性上實作和部署at.js 2.5.0+時立即使用。
 
-僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant)活動。
+僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[建議](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活動。
 
 此外，使用[!DNL Target]的使用者設定檔來增強您的個人化體驗（此設定檔會跨工作階段和管道儲存），可為您的業務提供強大的成果。
 
@@ -72,7 +72,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant&)擷取Experience Cloud的訪客ID。 |
+| 1 | Experience Cloud訪客ID是從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?)擷取。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />   也能使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js資料庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | 提出頁面載入請求，包含所有已設定的引數，例如（ECID、客戶ID、自訂引數、使用者設定檔等）。 |
@@ -81,7 +81,7 @@ ht-degree: 4%
 | 7 | 從已上線[!DNL Target]活動中決定體驗之後，就會選取產生的內容。 |
 | 8 | at.js資料庫會隱藏頁面上與必須轉譯之體驗相關聯的對應元素。 |
 | 9 | at.js程式庫會顯示內文，以便載入頁面的其餘部分以供訪客檢視。 |
-| 10 | at.js資料庫會操控DOM來轉譯[!DNL Target]Edge Network中的體驗。 |
+| 10 | at.js資料庫會操作DOM來轉譯[!DNL Target] Edge Network中的體驗。 |
 | 11 | 體驗會針對訪客呈現。 |
 | 12 | 載入整個網頁。 |
 | 13 | Analytics 資料傳送至「資料收集」伺服器。 |
@@ -93,9 +93,9 @@ ht-degree: 4%
 
 [!UICONTROL On-device decisioning]能以極快的速度提供您的體驗和個人化活動，因為決定是由包含您所有符合[!UICONTROL on-device decisioning]資格的活動的快取規則成品所做。
 
-若要進一步瞭解哪些活動符合[!UICONTROL on-device decisioning]的資格，請參閱[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支援功能。
+若要進一步瞭解哪些活動符合[!UICONTROL on-device decisioning]的資格，請參閱[中的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援功能。
 
-只有在需要Target做出決定的所有頁面中，效能高度關鍵時，才應使用此決策方法。 此外，請記住，選取此決策方法時，不會傳遞或執行您不符合[!UICONTROL on-device decisioning]資格的[!DNL Target]活動。 at.js資料庫2.5.0+已設定為僅尋找快取規則成品以做出決策。
+只有在需要Target做出決定的所有頁面中，效能高度關鍵時，才應使用此決策方法。 此外，請記住，選取此決策方法時，不會傳遞或執行您不符合[!DNL Target]資格的[!UICONTROL on-device decisioning]活動。 at.js資料庫2.5.0+已設定為僅尋找快取規則成品以做出決策。
 
 下圖說明您的訪客、瀏覽器、at.js 2.5.0+和Akamai CDN之間的互動情形。 Akamai CDN會在訪客首次造訪時快取規則成品。 新訪客第一次造訪頁面時，必須從Akamai CDN下載JSON規則成品，才能在訪客的瀏覽器上在本機快取。 下載JSON規則成品後，會立即作出決定，而不會封鎖網路呼叫。 以下流程圖會擷取新訪客。
 
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
+| 1 | Experience Cloud訪客ID是從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | at.js程式庫會要求從最接近訪客的Akamai CDN擷取JSON規則成品。 |
@@ -138,7 +138,7 @@ ht-degree: 4%
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
+| 1 | Experience Cloud訪客ID是從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | at.js程式庫會解譯JSON規則成品並在記憶體中執行決定以擷取體驗。 |
@@ -157,7 +157,7 @@ ht-degree: 4%
 
 JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服器端活動或[!UICONTROL on-device decisioning]活動。 此決定方法可確保您要快速傳送的活動是透過[!UICONTROL on-device decisioning]完成，而針對需要更強大ML驅動個人化的活動，這些活動是透過[!DNL Adobe Target] Edge網路完成。
 
-下圖說明對於首次造訪您頁面的新訪客，您的訪客、瀏覽器、at.js 2.5.0+、Akamai CDN與[!DNL Adobe Target]Edge Network之間的互動情形。 此圖表的摘要在於，透過[!DNL Adobe Target] Edge網路進行決定時，JSON規則成品是以非同步方式下載。
+下圖說明新訪客首次造訪您頁面時，您的訪客、瀏覽器、at.js 2.5.0+、Akamai CDN與[!DNL Adobe Target] Edge Network之間的互動情形。 此圖表的摘要在於，透過[!DNL Adobe Target] Edge網路進行決定時，JSON規則成品是以非同步方式下載。
 
 此方法可確保成品（可包含許多活動）的大小不會對決策的延遲產生負面影響。 同步下載JSON規則成品並在之後進行決策也可能會對延遲產生不利影響且可能不一致。 因此，混合決定方法是一種最佳實務建議，可一律為新訪客的決定發出伺服器端呼叫，而且會並行快取JSON規則成品。 對於任何後續的頁面造訪和回訪，決策是透過JSON規則成品從快取和記憶體中做出的。
 
@@ -173,18 +173,18 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
+| 1 | Experience Cloud訪客ID是從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
-| 4 | 向[!DNL Adobe Target]Edge Network提出頁面載入請求，包括已設定的所有引數，例如（ECID、客戶ID、自訂引數、使用者設定檔等）。 |
+| 4 | 向[!DNL Adobe Target] Edge Network提出頁面載入請求，包括所有已設定的引數，例如（ECID、客戶ID、自訂引數、使用者設定檔等）。 |
 | 5 | 同時，at.js會要求從最接近訪客的Akamai CDN擷取JSON規則成品。 |
-| 6 | ([!DNL Adobe Target]個Edge Network)設定檔指令碼執行，然後注入設定檔存放區。 設定檔存放區會從對象資料庫中要求合格對象(例如，從Adobe Analytics、Adobe Audience Manager等共用的對象)。 |
+| 6 | ([!DNL Adobe Target] Edge Network)執行設定檔指令碼，然後注入設定檔存放區。 設定檔存放區會從對象資料庫中要求合格對象(例如，從Adobe Analytics、Adobe Audience Manager等共用的對象)。 |
 | 7 | Akamai CDN會以JSON規則成品回應。 |
 | 8 | 設定檔存放區用於對象資格和分組以篩選活動。 |
 | 9 | 從已上線[!DNL Target]活動中決定體驗之後，就會選取產生的內容。 |
 | 10 | at.js資料庫會隱藏頁面上與必須轉譯之體驗相關聯的對應元素。 |
 | 11 | at.js程式庫會顯示內文，以便載入頁面的其餘部分以供訪客檢視。 |
-| 12 | at.js資料庫會操控DOM來轉譯[!DNL Target]Edge Network中的體驗。 |
+| 12 | at.js資料庫會操作DOM來轉譯[!DNL Target] Edge Network中的體驗。 |
 | 13 | 體驗會針對訪客呈現。 |
 | 14 | 載入整個網頁。 |
 | 15 | Analytics資料傳送至「資料收集」伺服器。 目標資料會透過SDID來比對Analytics資料，然後經過處理放入Analytics報表儲存體中。 然後就可以在Analytics和[!DNL Target]中，透過[!UICONTROL Analytics for Target] (A4T)報表來檢視Analytics資料。 |
@@ -203,7 +203,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 | 步驟 | 說明 |
 | --- | --- |
-| 1 | 已從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)擷取Experience Cloud的訪客ID。 |
+| 1 | Experience Cloud訪客ID是從[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)擷取。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<br />也可以使用頁面上實作的選擇性預先隱藏程式碼片段，以非同步方式載入at.js程式庫。 |
 | 3 | at.js資料庫會隱藏內文以防止閃爍。 |
 | 4 | 系統會要求擷取體驗。 |
@@ -223,7 +223,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用「裝置上決策」切換。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用「裝置上決策」切換。
 
 1. 按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**。
 1. 在&#x200B;**[!UICONTROL Account details]**&#x200B;下方，將&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換滑至「開啟」位置。
@@ -231,7 +231,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
    ![[!UICONTROL On-device decisioning]切換](assets/on-device-decisioning-toggle.png)
 
    如果您啟用[!UICONTROL on-device decisioning]，則會顯示「將所有現有的[!UICONTROL on-device decisioning]合格活動包含在成品中」選項。
-1. （視條件而定）如果您希望所有符合[!UICONTROL on-device decisioning]資格的即時[!DNL Target]活動自動納入成品中，請將切換滑至「開啟」位置。
+1. （視條件而定）如果您希望所有符合[!DNL Target]資格的即時[!UICONTROL on-device decisioning]活動自動納入成品中，請將切換滑至「開啟」位置。
 
    若將此切換保持關閉，表示您必須重新建立並啟動任何[!UICONTROL on-device decisioning]活動，才能將其包含在產生的規則成品中。 換言之，在開啟裝置上決策切換開關之前處於即時狀態的任何活動都不會納入規則成品中。
 
@@ -262,7 +262,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 ### 全域設定
 
-您可以為所有[!DNL Target]個決定設定預設決定方法。 各種決策方法是僅限伺服器端、僅限裝置上及混合。 在[!DNL Target] UI中選取的決策方法已在`decisioningMethod`欄位下的`window.targetGlobalSettings`中設定。 深入瞭解[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)中的`decisioningMethod`。
+您可以為所有[!DNL Target]個決定設定預設決定方法。 各種決策方法是僅限伺服器端、僅限裝置上及混合。 在[!DNL Target] UI中選取的決策方法已在`window.targetGlobalSettings`欄位下的`decisioningMethod`中設定。 深入瞭解`decisioningMethod`targetGlobalSettings()[中的](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)。
 
 ```javascript {line-numbers="true"}
 <head> 
@@ -282,7 +282,7 @@ JSON規則成品包含中繼資料，以通知at.js mbox是否正在執行伺服
 
 ### 自訂設定
 
-如果您在`window.targetGlobalSettings`中設定`decisioningMethod`，但想要根據您的使用案例覆寫每個[!DNL Adobe Target]決定的`decisioningMethod`，您可以在At.js2.5.0+的[getOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)呼叫中指定`decisioningMethod`來執行此程式。
+如果您在`decisioningMethod`中設定`window.targetGlobalSettings`，但想要根據您的使用案例覆寫每個`decisioningMethod`決定的[!DNL Adobe Target]，您可以在At.js2.5.0+的`decisioningMethod`getOffers()[呼叫中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)來執行此程式。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -334,6 +334,6 @@ Target代表您符合[!UICONTROL on-device decisioning]資格的活動，可作�
 
    首次JSON規則成品產生最多可能需要10分鐘。
 
-1. 建立並啟用[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援的活動型別，並確認其符合[!UICONTROL on-device decisioning]的資格。
+1. 建立並啟用[支援的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)活動型別，並確認其符合[!UICONTROL on-device decisioning]的資格。
 1. 透過at.js設定UI將&#x200B;**[!UICONTROL Decisioning Method]**&#x200B;設定為&#x200B;**[!UICONTROL "Hybrid"]**&#x200B;或&#x200B;**[!UICONTROL "On-device only"]**。
 1. 下載At.js 2.5.0+並部署至您的頁面。

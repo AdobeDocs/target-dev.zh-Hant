@@ -1,9 +1,9 @@
 ---
 title: 訂閱 [!DNL Adobe Target] Python SDK中的事件
-description: 瞭解如何使用[!UICONTROL OnDeviceDecisioningHandler]物件訂閱Python SDK中發生的各種事件。
+description: 瞭解如何使用[!UICONTROL OnDeviceDecisioningHandler]物件來訂閱Python SDK中發生的各種事件。
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 說明
 
-當[初始化SDK](initialize-sdk.md)時，`options["events"]` dict為具有事件名稱索引鍵和回呼函式值的選用物件。 可用來訂閱SDK內發生的各種事件。 例如，`client_ready`事件可與SDK準備好進行方法呼叫時將叫用的回呼函式搭配使用。
+當[初始化SDK](initialize-sdk.md)時，`options["events"]` dict為具有事件名稱索引鍵和回呼函式值的選用物件。 它可用來訂閱SDK內發生的各種事件。 例如，`client_ready`事件可與回呼函式搭配使用，當SDK準備好進行方法呼叫時，將會叫用該回呼函式。
 
 呼叫`callback`函式時，會傳入事件物件。 每個事件都有一個與事件名稱相對應的`type`，有些事件還包含其他屬性以及相關資訊。
 
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 | 事件名稱（型別） | 說明 | 其他事件屬性 |
 | --- | --- | --- |
-| client_ready | 已在下載成品且SDK已準備好進行get_offers呼叫時發出。 建議使用時 | 裝置上決策方法。 | 無 |
+| client_ready | 已在下載成品且SDK已準備好進行get_offers呼叫時發出。 使用裝置上決策方法時建議使用。 | 無 |
 | artifact_download_succeeded | 每次下載新成品時發出。 | artifact_payload， artifact_location |
 | artifact_download_failed | 每當成品無法下載時發出。 | artifact_location，錯誤 |
 

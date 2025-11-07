@@ -4,7 +4,7 @@ description: 瞭解Adobe Target如何使用使用者代理和使用者端提示�
 title: 使用者代理和用戶端提示
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -144,11 +144,11 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 * 作業系統
 * 行動
 
-### 設定檔指令碼
+### 輪廓指令碼
 
-如果您使用設定檔指令碼和參照 `user.browser` 屬性 (指使用者代理)，您可能需要更新設定檔指令碼才能同時查看一個或多個用戶端提示。 您還可使用`user.clientHint('sec-ch-ua-xxxxx')` 功能來存取任何用戶端提示。 用戶端提示標題的名稱必須全為小寫。
+如果您使用輪廓指令碼和參照 `user.browser` 屬性 (指使用者代理)，您可能需要更新輪廓指令碼才能同時查看一個或多個用戶端提示。 您還可使用`user.clientHint('sec-ch-ua-xxxxx')` 功能來存取任何用戶端提示。 用戶端提示標題的名稱必須全為小寫。
 
-下例顯示如何在設定檔指令碼中正確檢測 Windows 作業系統：
+下例顯示如何在輪廓指令碼中正確檢測 Windows 作業系統：
 
 ```
 "return (((user.browser != null) && (user.browser.indexOf(\"Windows\") > -1)) || " + 
@@ -175,7 +175,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 ### at.js 2.9.0 版 (或更新)
 
-從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並會在呼叫`getOffer/getOffers()`時傳送至Target。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行客群細分或使用設定檔指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
+從at.js 2.9.0版開始，使用者代理使用者端提示會從瀏覽器自動收集，並會在呼叫`getOffer/getOffers()`時傳送至Target。 依預設，at.js 只會收集「低平均資訊量」的用戶端提示。 如果根據前面章節中被歸類為「高平均資訊量」的資訊來執行客群細分或使用輪廓指令碼，您需要設定 at.js 以便透過 `targetGlobalSettings` 從瀏覽器收集「高平均資訊量」的用戶端提示。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };

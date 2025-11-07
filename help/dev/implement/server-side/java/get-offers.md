@@ -3,7 +3,7 @@ title: 使用Java SDK時，請在 [!DNL Adobe Target] 中使用getOffers()
 description: 瞭解如何使用getOffers()執行決定並從 [!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 13%
@@ -43,7 +43,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 | 名稱 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | 上下文 | 上下文 | 是 | 指定要求的內容 |
-| sessionId |  | 字串 | 無 | 用於連結多個[!DNL Target]請求 |
+| sessionId | 字串 | 無 | 用於連結多個[!DNL Target]請求 |
 |  thirdPartyId | 字串 | 無 | 您公司可透過每次呼叫傳送之使用者的識別碼 |
 | Cookie | 清單 | 否 | 相同使用者的先前[!DNL Target]個要求中傳回的Cookie清單。 |
 | customerIds | 地圖 | 否 | 客戶ID採用與VisitorId相容的格式 |
@@ -71,7 +71,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 
 ## 回應
 
-`TargetClient.getOffers(`傳回的`TargetDeliveryResponse`具有以下結構：
+`TargetDeliveryResponse`傳回的`TargetClient.getOffers(`具有以下結構：
 
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 | value | 字串 | Cookie值，該值將會轉換為字串 |
 | maxAge | 數字 | maxAge選項可方便您設定相對於目前時間（以秒為單位）的過期時間 |
 
-您不必擔心Cookie會過期。 Target會在SDK內處理maxAge。
+您不必擔心Cookie會過期。 Target會在SDK中處理maxAge。
 
 ## 範例
 

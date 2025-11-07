@@ -2,7 +2,7 @@
 title: 與Experience Cloud整合
 description: 與Experience Cloud整合
 keywords: 傳送api
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 如果提供了以下識別碼，Adobe Target可以自動透過伺服器端轉送analytics裝載至Adobe Analytics：
 
 1. `supplementalDataId` — 用於在Adobe Analytics和Adobe Target之間拼接的ID
-1. `trackingServer` -AdobeAnalytics伺服器為了讓Adobe Target和Adobe Analytics能正確地將資料彙整在一起，相同的`supplementalDataId`需要傳遞給Adobe Target和Adobe Analytics。
+1. `trackingServer` - Adobe Analytics伺服器為了讓Adobe Target和Adobe Analytics能正確地將資料彙整在一起，相同的`supplementalDataId`需要傳遞給Adobe Target和Adobe Analytics。
 
 ```
 curl -X POST \
@@ -176,7 +176,7 @@ curl -X POST \
 }
 ```
 
-如果來自Target的回應在`analytics` -> `payload`屬性中包含任何內容，請將其轉寄給Adobe Analytics。 Analytics知道如何處理此裝載。 您可使用下列格式，在GET要求中完成此作業：
+如果來自Target的回應在`analytics` -> `payload`屬性中包含任何內容，請將其轉寄給Adobe Analytics。 Analytics知道如何處理此裝載。 您可在GET請求中，使用下列格式完成此作業：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | 是 | 報表套裝 ID |
 | `pe` | 是 | 頁面事件。 一律設為`tnt` |
 | `tnta` | 是 | Target伺服器在`analytics` -> `payload` -> `tnta`中傳回的分析裝載 |
-| `mid` | Marketing Cloud 訪客 ID |
+| `mid` | Marketing Cloud 訪客 ID |  |
 
 ### 必要的標頭值
 
@@ -211,7 +211,7 @@ Adobe Audience Manager (AAM)區段也可以透過Adobe Target Delivery API運用
 | --- | --- | --- |
 | `locationHint` | 是 | DCS位置提示用於決定要點選哪個AAM DCS端點以擷取設定檔。 必須>= 1。 |
 | `marketingCloudVisitorId` | 是 | Marketing Cloud 訪客 ID |
-| `blob` | 是 | AAM Blob可用來傳送其他資料給AAM。 不得空白且大小&lt;= 1024。 |
+| `blob` | 是 | AAM Blob可用來傳送其他資料至AAM。 不得空白且大小&lt;= 1024。 |
 
 ```
 curl -X POST \

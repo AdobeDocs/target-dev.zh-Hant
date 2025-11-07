@@ -1,9 +1,9 @@
 ---
 title: 使用create方法初始化Python SDK
-description: 瞭解如何使用create方法初始化Python SDK並將[!UICONTROL TargetClient]例項化，以呼叫 [!DNL Adobe Target] 進行實驗與個人化體驗。
+description: 瞭解如何使用create方法初始化Python SDK並將[!UICONTROL TargetClient]例項化，以呼叫 [!DNL Adobe Target] 進行實驗和個人化體驗。
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 17%
@@ -32,9 +32,9 @@ TargetClient.create(options)
 | 使用者端 | str | 是 | 無 | [!UICONTROL Adobe Target client ID] |
 | organization_id | str | 是 | 無 | [!UICONTROL Experience Cloud Organization ID] |
 | timeout | int | 否 | 3000 | 逾時（毫秒） |
-| server_domain | str | 否 | `client.tt.omtrdc.net` |  | 覆寫預設主機名稱 |
+| server_domain | str | 否 | `client.tt.omtrdc.net` | 覆寫預設主機名稱 |
 | secure | 布林值 | 否 | true | 取消設定以強制執行HTTP配置 |
-| logger | 物件 | 否 | 資訊記錄器 |  | 取代預設的INFO記錄器 |
+| logger | 物件 | 否 | 資訊記錄器 | 取代預設的INFO記錄器 |
 | target_location_hint | str | 否 | 無 | [!DNL Target]位置提示 |
 | property_token | str | 否 | 無 | [!DNL Target]屬性權杖。 若在此處指定，所有get_offers呼叫都會使用此值。 |
 | decisioning_method | str | 否 | 伺服器端 | 決定要使用的決策方法（[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、伺服器端、混合式） |

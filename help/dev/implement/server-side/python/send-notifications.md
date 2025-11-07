@@ -1,9 +1,9 @@
 ---
-title: 使用Python SDK傳送顯示或按一下通知給 [!DNL Adobe Target]
+title: '使用Python SDK傳送顯示或按一下通知給 [!DNL Adobe Target] '
 description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 >
 >當具有必要引數的`execute`物件位於請求本身中時，曝光將自動遞增以符合活動資格。
 
-會自動增加曝光次數的SDK方法為：
+會自動增加曝光次數的SDK方法如下：
 
 * `get_offers()`
 * `get_attributes()`
@@ -60,8 +60,8 @@ target_client.send_notifications(options)
 | target_cookie | dict | [!DNL Target] Cookie |
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端[!DNL Analytics]使用狀況下的[!DNL Analytics]承載 |
-| trace |  | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
+| trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
+| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 ## 範例
@@ -155,7 +155,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-請注意，我們已在預先擷取回應中納入對應至已傳遞[!DNL Target]選件的mbox狀態和事件權杖。 建立通知要求後，我們可以透過`send_notifications()` API方法將其傳送至[!DNL Target]：
+請注意，我們已在預先擷取回應中納入對應至已傳遞[!DNL Target]選件的mbox狀態和事件權杖。 建立通知要求後，我們可以透過[!DNL Target] API方法將其傳送至`send_notifications()`：
 
 ### Python
 
