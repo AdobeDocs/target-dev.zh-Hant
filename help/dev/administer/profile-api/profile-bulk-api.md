@@ -4,9 +4,9 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 892de7c241a165b55a5cf85ce8f472ad8e200ac3
+source-git-commit: c2300ad6affdf3c1028e5c52ccaceb577a289227
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1056'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ ht-degree: 6%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -69,7 +69,6 @@ batch=pcId,param1,param2,param3,param4
 * 引數只能使用`paramName`格式。 引數在[!DNL Target]中顯示為`profile.paramName`。
 * 如果您使用[!UICONTROL Bulk Profile Update API] v2，則不需要為每個`pcId`指定所有引數值。 已為`pcId`中找不到的任何`mbox3rdPartyId`或[!DNL Target]建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。 如需詳細資訊，請參閱下列[中的 [!DNL Bulk Profile Update API]](#empty)處理空白值。
 * 批次檔的大小必須小於 50 MB。此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
-* 您可以傳送多個檔案。 不過，您一天內傳送之所有檔案的總列數，每個使用者端不應超過100萬列。
 * 您可以上傳的屬性數目沒有限制。 不過，外部設定檔資料的總計大小不得超過64 KB，其中包括客戶屬性、設定檔API、In-Mbox設定檔引數以及設定檔指令碼輸出。
 * 引數和值區分大小寫。
 
@@ -77,9 +76,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]個邊緣伺服器發出HTTP POST要求以處理檔案。 以下為使用curl命令建立batch.txt檔案的HTTP POST要求範例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中:
 
