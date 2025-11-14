@@ -4,7 +4,7 @@ description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: c2300ad6affdf3c1028e5c52ccaceb577a289227
+source-git-commit: 23cbece45828cf057594445b010a353d865d36ed
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 6%
@@ -49,13 +49,13 @@ ht-degree: 6%
 
 若要大量更新設定檔資料，請建立批次檔案。 批次檔案是文字檔，其值由逗號分隔，類似於以下範例檔案。
 
-``` ```
+```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+```
 
 >[!NOTE]
 >
@@ -76,9 +76,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]個邊緣伺服器發出HTTP POST要求以處理檔案。 以下為使用curl命令建立batch.txt檔案的HTTP POST要求範例：
 
-``` ```
+```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+```
 
 其中:
 
