@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -32,13 +32,15 @@ ht-degree: 1%
 
 此步驟可協助您確保必須傳送至[!DNL Target]的所有事件都是使用`trackEvent`方法傳送。
 
-+++查看詳細資料
++++檢視詳細資料
 
 ![引發Adobe Target追蹤API圖表](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 您傳送下方&#x200B;*必要條件*&#x200B;一節中所述的訂單轉換屬性。 mbox的名稱並不重要，但轉換是使用`orderConfirmPage`。
 
 您不需要在此呼叫中包含訂單轉換屬性。 這些呼叫最好能記錄成功量度，這些量度可在主要轉換事件之前被視為迷你轉換事件。 `CardIds`必須包含在以`Add to Cart`事件為基礎的購物車型建議中。
+
++++
 
 **必要條件**
 
@@ -49,7 +51,7 @@ ht-degree: 1%
    * `orderTotal`：購買的訂單總計。
    * `orderId`：購買的訂單識別碼。
 
-  下圖顯示 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}中 [!DNL tags] 的規則，此規則僅應在[!UICONTROL Confirmation]頁面上觸發。
+  下圖顯示[&#x200B; [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}規則，此規則只應在[!UICONTROL Confirmation]頁面上觸發。
 
   ![動作設定頁面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
