@@ -1,15 +1,14 @@
 ---
-keywords: Recommendations，設定，偏好設定，垂直產業，篩選不相容的條件，預設主機群組，縮圖基底url，建議api token，
-description: 瞭解如何在 [!DNL Adobe Target]中實作[!UICONTROL Recommendations]活動。
+keywords: Recommendations、設定、偏好設定、垂直產業、篩選不相容的條件、預設主機群組、縮圖基底URL、建議API Token、
+description: 瞭解如何在[!UICONTROL Recommendations]中實作 [!DNL Adobe Target]活動。
 title: 如何實作[!UICONTROL Recommendations]活動？
 feature: Recommendations
-hidefromtoc: true
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: aa032255222d92aeddd7238922eb450f1b6b93a0
+source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
 workflow-type: tm+mt
 source-wordcount: '1550'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -19,9 +18,9 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->除了本文章之外，[Adobe Target商業從業者指南](https://experienceleague.adobe.com/zh-hant/docs/target/using/target-home){target=_blank}也包含有關[Target Recommendations](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/recommendations){target=_blank}的深入資訊。
+>除了本文章之外，[Adobe Target商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}也包含有關[Target Recommendations](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}的深入資訊。
 
-在[!DNL Adobe Target]中設定第一個[!UICONTROL Recommendations]活動之前，請先完成下列步驟：
+在[!UICONTROL Recommendations]中設定第一個[!DNL Adobe Target]活動之前，請先完成下列步驟：
 
 1. [在您要用來擷取使用者行為並傳遞建議的網頁和行動應用程式介面上實作[!UICONTROL Target]](#implement-target)。
 1. [設定您想要推薦給使用者的產品或內容的[!UICONTROL Recommendations]目錄](#set-up-your-recommendations-catalog)。
@@ -46,7 +45,7 @@ ht-degree: 20%
 
 | 方法 | 內容 | 使用時機 | 其他資訊 |
 | --- | --- | --- | --- |
-| 目錄摘要 | 排程要每天上傳和擷取的摘要（CSV、[!DNL Google]產品XML或[!UICONTROL Analytics Product Classifications]）。 | 用於一次傳送多個專案的相關資訊。 用於傳送不常變更的資訊。 | 請參閱[摘要](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/entities/feeds)。 |
+| 目錄摘要 | 排程要每天上傳和擷取的摘要（CSV、[!DNL Google]產品XML或[!UICONTROL Analytics Product Classifications]）。 | 用於一次傳送多個專案的相關資訊。 用於傳送不常變更的資訊。 | 請參閱[摘要](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)。 |
 | 實體API | 呼叫API以傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱[Entities API開發人員檔案](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 傳遞頁面上的更新 | 使用頁面上的JavaScript或使用傳送API，傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱下方的[專案檢視/產品頁面](#item-views-or-product-pages)。 |
 
@@ -109,7 +108,7 @@ function targetPageParams() {
 }
 ```
 
-如需有關購物車型推薦的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[購物車型](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
+如需有關購物車型推薦的詳細資訊，請參閱[商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)中的&#x200B;*[!DNL Adobe Target]購物車型*。
 
 ### 排除已經在訪客購物車中的項目
 
@@ -127,17 +126,17 @@ function targetPageParams() {
 
 ### 購買/訂單確認頁面
 
-發生購買事件時，請傳遞購買專案的身分。 請參閱[如何部署at.js >實作[!UICONTROL Target]而不使用標籤管理員](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)文章中的[追蹤轉換](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
+發生購買事件時，請傳遞購買專案的身分。 請參閱[如何部署at.js >實作](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)而不使用標籤管理員[文章中的[!UICONTROL Target]追蹤轉換](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)。
 
 ## 4.設定全域排除
 
-排除您絕不建議給訪客使用的全域層級任何專案。 請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[排除專案](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/entities/exclusions)。
+排除您絕不建議給訪客使用的全域層級任何專案。 請參閱[商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)中的&#x200B;*[!DNL Adobe Target]排除專案*。
 
 ## 5.設定[!UICONTROL Recommendations]設定
 
 使用設定來管理您的 [!UICONTROL Recommendations] 實作。
 
-若要存取&#x200B;**[!UICONTROL Recommendations Settings]**&#x200B;選項，請在[!DNL Adobe Experience Cloud]中開啟[!DNL Target]，然後按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]**。
+若要存取&#x200B;**[!UICONTROL Recommendations Settings]**&#x200B;選項，請在[!DNL Target]中開啟[!DNL Adobe Experience Cloud]，然後按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]**。
 
 ![Recommendations設定頁面](/help/dev/implement/recommendations/assets/recs-settings-new.png)
 
@@ -169,7 +168,7 @@ function targetPageParams() {
 
 [!DNL Recommendations]中的條件即為一種規則，用來根據預先決定的一組訪客行為決定要建議的產品或內容。 條件能以熱門趨勢、訪客目前和過去的行為，或類似產品和內容為基礎。 您可以新增多個條件，將多個建議類型彼此測試。
 
-如需詳細資訊，請參閱&#x200B;*Adobe Target商業從業者指南*&#x200B;中的[條件](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
+如需詳細資訊，請參閱[Adobe Target商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}中的&#x200B;*條件*。
 
 [!UICONTROL Criteria]區段中提供下列設定：
 
@@ -190,9 +189,9 @@ function targetPageParams() {
 
 一般來說，最好只顯示相容的條件。不過，如果您想要讓不相容的條件可供活動使用，請勿啟用此選項。
 
-Adobe建議，如果您使用標籤管理解決方案，請停用此選項。
+如果使用標籤管理解決方案，Adobe建議您停用此選項。
 
-如需此選項的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[[!UICONTROL Recommendations]常見問題集](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
+如需此選項的詳細資訊，請參閱[[!UICONTROL Recommendations]商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}中的&#x200B;*[!DNL Adobe Target]常見問題集*。
 
 ### [!UICONTROL Product Catalog]
 
@@ -202,7 +201,7 @@ Adobe建議，如果您使用標籤管理解決方案，請停用此選項。
 
 選取您的預設主機群組。
 
-主機群組可按不同用途，用來區隔目錄中的可用項目。例如，您可以將主機群組用於開發和生產環境、不同品牌或不同地理位置。依照預設，「目錄搜尋」、「集合」和「排除項目」中的預覽結果是根據預設主機群組所產生。(您也可以使用「環境」篩選器，選取不同的主機群組來預覽結果。)依照預設，除非在建立或更新項目時指定環境 ID，否則新增的項目可在所有主機群組中使用。提供的建議取決於要求中指定的主機群組。
+主機群組可按不同用途，用來區隔目錄中的可用項目。例如，您可以將主機群組用於開發和生產環境、不同品牌或不同地理位置。依照預設，「目錄搜尋」、「集合」和「排除項目」中的預覽結果是根據預設主機群組所產生。(您也可以使用「環境」(Environment)篩選條件，選取不同的主機群組來預覽結果。) 依預設，除非在建立或更新專案時指定環境ID，否則新加入的專案可在所有主機群組中使用。 提供的建議取決於要求中指定的主機群組。
 
 如果沒有看見您的產品，請確定您使用正確的主機群組。例如，假設您將建議設定為使用測試環境，並將主機群組設為「測試」，則可能需要在測試環境中重建集合，才會顯示產品。若要查看每個環境中可用的產品，請對每個環境使用「目錄搜尋」。您也可以針對選取的環境（主機群組），預覽[!UICONTROL Recommendations]集合和排除專案的內容。
 
@@ -219,7 +218,7 @@ Adobe建議，如果您使用標籤管理解決方案，請停用此選項。
 * 建立排除專案對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create exclusion]**)
 * 更新排除專案對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)
 
-如需詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[主機](https://experienceleague.adobe.com/zh-hant/docs/target/using/administer/hosts){target=_blank}。
+如需詳細資訊，請參閱[商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}中的&#x200B;*[!DNL Adobe Target]主機*。
 
 #### [!UICONTROL Thumbnail Base]
 
@@ -237,6 +236,6 @@ Adobe建議，如果您使用標籤管理解決方案，請停用此選項。
 
 按一下&#x200B;**[!UICONTROL Add]**&#x200B;以建立新組態、指定組態的名稱、選取想要的設定檔屬性，然後按一下&#x200B;**[!UICONTROL Save]**。
 
-## 6. （選用）使用Admin API管理[!UICONTROL Recommendations]
+## &#x200B;6. （選用）使用Admin API管理[!UICONTROL Recommendations]
 
-請參閱[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)實作指南，瞭解如何設定和使用[!UICONTROL Recommendations]的[!UICONTROL Target]管理和傳遞API。
+請參閱[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)實作指南，瞭解如何設定和使用[!UICONTROL Target]的[!UICONTROL Recommendations]管理和傳遞API。
