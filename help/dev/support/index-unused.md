@@ -1,0 +1,47 @@
+---
+title: 支援 — Adobe Analytics
+description: 這是Adobe Analytics的支援頁面
+source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
+workflow-type: tm+mt
+source-wordcount: '92'
+ht-degree: 6%
+
+---
+
+
+# 支援
+
+瞭解在何處提出問題、報告錯誤、提出功能請求並引發討論。
+
+## 意見反應
+
+您有個地方可以開始討論。
+
+![Adobe Experience Cloud](experience_cloud.png)
+
+### 開發人員論壇
+
+[開始使用](https://adobe.io)
+
+與社群專家和Adobe員工進行公開討論並提供支援。
+
+[Experience league](https://adobe.io)
+
+適用於整個社群的教學課程和影片。
+
+[體驗論壇](https://adobe.io)
+
+可取得協助及協助他人的論壇
+
+## 社群
+
+您有個地方可以加入交談。
+
+![棧疊溢位](stack-overflow.png)
+
+### 棧疊溢位
+
+[探索](https://adobe.io)
+
+使用特定標籤的開發人員問答。
+
