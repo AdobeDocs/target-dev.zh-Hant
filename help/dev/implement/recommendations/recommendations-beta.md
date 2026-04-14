@@ -5,7 +5,7 @@ title: 如何實作[!UICONTROL Recommendations]活動？
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
+source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
 workflow-type: tm+mt
 source-wordcount: '1550'
 ht-degree: 18%
