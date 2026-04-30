@@ -123,7 +123,7 @@ ht-degree: 60%
 * 使用 `prefetch` 請求時會正確傳回 [!UICONTROL Analytics for Target] (A4T) 點擊量度詳細資料。
 * UUID 產生不再使用 `Math.random()`，但須依賴 `window.crypto`。
 * `sessionId` Cookie 過期在每次網路呼叫時會正確延長。
-* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的[作業順序。
+* 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的作業順序。
 
 ## at.js 2.5.0 （2021年5月13日）
 
@@ -302,7 +302,7 @@ at.js 2.x 引進以下新函數:
 
 at.js 1.7.0 提供 Adobe 選擇加入支援。 「Adobe 選擇加入」是簡化 Adobe 解決方案與同意管理平台整合的方法。
 
-如需 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規範 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)。
+如需 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規範 &#x200B;](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (GDPR)。
 
 此版本也修正[!DNL Target]可能將重新導向URL引數覆寫為來自重新導向URL之引數的問題。
 
