@@ -1,6 +1,8 @@
 ---
 cloud: Experience Cloud
 solution: Target
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 product: target
 type: Documentation
 feature-set: Target
@@ -8,16 +10,16 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/target-dev.zh-Hant
 index: true
 role: Developer
-source-git-commit: babe8b1bc7b689eae179249c7e6e1ed25c51d542
+source-git-commit: e8da864f64a2ed8444af59a73fb7a1b12b006aff
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 71%
+source-wordcount: 69
+ht-degree: 0%
 
 ---
 
 
-# 內部使用中繼資料
+# 內部使用的中繼資料
 
-metadata.md 檔案含有存放庫層級中繼資料，這些中繼資料會傳遞到存放庫中的使用者指南 TOC.md 檔案。如果您想要變更任一使用者指南的 metadata.md 內容，請在任何 TOC.md 檔案中變更。
+metadata.md檔案包含存放庫層級中繼資料，這些中繼資料會傳遞至存放庫中的使用手冊TOC.md檔案。 如果您想要變更任何使用手冊的metadata.md內容，請在任何TOC.md檔案中進行變更。
 
 請參閱[中繼資料](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html)，以取得&#x200B;**解決方案**、**產品**&#x200B;和&#x200B;**型別**&#x200B;的有效值清單。
