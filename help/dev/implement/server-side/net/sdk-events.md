@@ -3,9 +3,12 @@ title: 訂閱 [!DNL Adobe Target] .NET SDK中的事件
 description: 瞭解如何使用[!UICONTROL OnDeviceDecisioningHandler]物件來訂閱.NET SDK中發生的各種事件。
 feature: APIs/SDKs
 exl-id: 7578033f-3de5-4d13-9739-46ad1269ec5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oeGknU-pW1-XjVrxn8JNEPoFBF8Gntt-vaVnqjdyTC8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: 120
 ht-degree: 5%
 
 ---

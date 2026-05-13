@@ -3,9 +3,12 @@ title: 如何在 [!DNL Adobe Target] Python SDK中使用非同步要求
 description: 瞭解 [!DNL Target] Python SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: 142
 ht-degree: 4%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 4%
 
 ## 說明
 
-伺服器端整合的好處之一，就是您可以使用平行處理功能，在伺服器端利用龐大的頻寬和運算資源。 [!DNL Target] Python SDK支援非同步要求，因此可將有效目標時間減少為零。
+伺服器端整合的好處之一，就是您可以使用平行處理功能，在伺服器端利用龐大的頻寬和運算資源。[!DNL Target] Python SDK支援非同步請求，這可以將有效目標時間減少為零。
 
 ## 支援的方法
 

@@ -3,9 +3,13 @@ title: Adobe模型API概觀
 description: 模型API的概觀，使用者可透過該API阻擋將功能納入機器學習模型中。
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 2%
 
 模型API （也稱為Blocklist API）可讓使用者檢視和管理機器學習模型中用於[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活動的功能清單。 如果使用者想排除模型用於AP或AT活動的功能，他們可以使用模型API將該功能新增到「封鎖清單」。
 
-**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
+**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
 
 封鎖清單可依活動（活動層級）定義，或針對[!DNL Target]帳戶（全域層級）內的所有活動定義。
 
@@ -100,7 +104,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >若要尋找您的活動識別碼，請導覽至[!DNL Target] UI中的活動清單。 按一下感興趣的活動。 活動ID會顯示在產生的「活動概覽」頁面內文中，以及該頁面的URL結尾處。
 
-**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hant)中檢視這些好記的名稱。
+**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中檢視這些好記的名稱。
 
 **[!UICONTROL internalName]**&#x200B;是功能的實際識別碼。 [!DNL Target]也建立了它，但無法變更。 這是您需要參考的值，以識別要加入封鎖清單的功能。
 
@@ -146,7 +150,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 若要新增功能至封鎖清單，請將請求從GET變更為PUT，並修改請求內文以視需要指定`blockedFeatureSources`或`blockedFeatures`。
 
 * 要求的主體需要`blockedFeatures`或`blockedFeatureSources`。 兩者皆可納入。
-* 將識別自`blockedFeatures`的值填入`internalName`。 請參閱[步驟1](#step1)。
+* 將識別自`internalName`的值填入`blockedFeatures`。 請參閱[步驟1](#step1)。
 * 使用下表中的值填入`blockedFeatureSources`。
 
 請注意，`blockedFeatureSources`指出功能的來源。 為了加入封鎖清單，它們可作為功能群組或類別，讓使用者一次封鎖整組功能。 `blockedFeatureSources`的值符合功能識別碼的前幾個字元（`blockedFeatures`或`internalName`個值）；因此這些值也可能被視為「功能首碼」。
@@ -201,7 +205,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步驟 3](assets/models-api-step-3.png)
 
-請注意，將功能加入封鎖清單後，建議您再次執行[步驟2](#step2)以驗證更新的封鎖清單(GET為封鎖清單)。 確認結果如預期般顯示(確認結果包含最新PUT請求新增的功能)。
+請注意，將功能加入封鎖清單後，建議您再次執行[步驟2](#step2)以驗證更新的封鎖清單（GET為封鎖清單）。 確認結果如預期般顯示（確認結果包含最新PUT請求新增的功能）。
 
 ## 步驟4：（選擇性）解除封鎖 {#step4}
 
@@ -235,7 +239,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步驟 4](assets/models-api-step-4.png)
 
-一如既往，在修改封鎖清單後，建議您再次執行[步驟2](#step2) (GET封鎖清單，以驗證清單是否如預期包含功能)。 在此處的範例中，使用者正在驗證其封鎖清單現在是否為空。
+一如既往，在修改封鎖清單後，建議您再次執行[步驟2](#step2) （GET封鎖清單，以驗證清單是否如預期包含功能）。 在此處的範例中，使用者正在驗證其封鎖清單現在是否為空。
 
 ![步驟4b](assets/models-api-step-4b.png)
 
@@ -282,7 +286,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 問題：上述程式碼範例不是多餘的嗎？
 
-回答：是。 若封鎖的值開頭為「AAM」的功能，同時封鎖來源為「AAM」的所有功能，則是多餘的。 最終結果是所有來源於AAM (Experience Cloud區段)的功能將會遭到封鎖。 因此，如果目標是要封鎖Experience Cloud區段的所有功能，就不需要在上述範例中以「AAM」開頭個別指定某些功能。
+回答：是。 若封鎖的值開頭為「AAM」的功能，同時封鎖來源為「AAM」的所有功能，則是多餘的。 最終結果是所有來源於AAM （Experience Cloud區段）的功能將會遭到封鎖。 因此，如果目標是要封鎖Experience Cloud區段的所有功能，就不需要在上述範例中以「AAM」開頭個別指定某些功能。
 
 最後一個步驟：無論是在活動或全域層級，都建議您在修改封鎖清單後加以驗證，以確保其包含您預期的值。 將`PUT`變更為`GET`以執行此操作。
 

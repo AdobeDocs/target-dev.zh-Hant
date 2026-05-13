@@ -3,9 +3,12 @@ title: 在 [!DNL Adobe Target] Java SDK中使用公用程式方法
 description: 瞭解如何使用helper方法，這些方法可跨控制器重複使用，並可移至個別的公用程式類別。
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/bAifzGxPwAw-N8x4yG-FxbtECVDZSRu0aglSibBZcfk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: 46
 ht-degree: 2%
 
 ---

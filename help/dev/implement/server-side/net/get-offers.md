@@ -3,9 +3,14 @@ title: 使用.NET SDK時，請在 [!DNL Adobe Target] 中使用getOffers()
 description: 瞭解如何使用getOffers()執行決定並從 [!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: 572
 ht-degree: 13%
 
 ---
@@ -42,7 +47,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | --- | --- | --- | --- |
 | 上下文 | 上下文 | 是 | 指定要求的內容 |
 | sessionId | 字串 | 無 | 用於連結多個[!DNL Target]請求 |
-|  thirdPartyId | 字串 | 無 | 您公司可透過每次呼叫傳送之使用者的識別碼 |
+| thirdPartyId | 字串 | 無 | 您公司可透過每次呼叫傳送之使用者的識別碼 |
 | Cookie | 清單 | 否 | 相同使用者的先前[!DNL Target]個要求中傳回的Cookie清單。 |
 | customerIds | 地圖 | 否 | 客戶ID採用與VisitorId相容的格式 |
 | 執行 | ExecuteRequest | 否 | 要執行的PageLoad或mbox要求。 將會立即在伺服器端進行評估 |
@@ -59,7 +64,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | id | VisitorId | 否 | 包含訪客識別碼的物件。 例如： tntId、thirdParyId、mcId、customerIds。 |
 | experienceCloud | Experience Cloud | 否 | 指定與Audience Manager和Analytics的整合。 若未提供，則會使用Cookie自動填入。 |
 | tntId | 字串 | 無 | [!DNL Target]中使用者的主要識別碼。 已從targetCookies擷取。 若未提供，則為自動產生。 |
-| mcId | 字串 | 無 | 用於在不同Adobe解決方案(ECID)之間合併和共用資料。 已從targetCookies擷取。 若未提供，則為自動產生。 |
+| mcId | 字串 | 無 | 用於合併和共用不同Adobe解決方案(ECID)之間的資料。 已從targetCookies擷取。 若未提供，則為自動產生。 |
 | trackingServer | 字串 | 無 | Adobe Analytics伺服器，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地彙整資料。 |
 | trackingServerSecure | 字串 | 無 | [!UICONTROL Adobe Analytics Secure Server]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地將資料彙整在一起。 |
 | 決策方法 | 決策方法 | 否 | 可用於針對裝置上決策明確設定ON_DEVICE或HYBRID決策方法 |
@@ -74,7 +79,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | --- | --- | --- |
 | 請求 | TargetDeliveryRequest&#x200B; | [Target傳送API](/help/dev/implement/delivery-api/overview.md)要求 |
 | 回應 | DeliveryResponse&#x200B; | [目標傳送API](/help/dev/implement/delivery-api/overview.md)*回應 |
-| 狀態  | HttpStatusCode | 回應HTTP狀態代碼 |
+| 狀態 | HttpStatusCode | 回應HTTP狀態代碼 |
 | 訊息 | string | 回應狀態訊息或錯誤訊息 |
 | 位置 | 位置 | [!DNL Target]個位置名稱，包括全域mbox名稱和mbox/檢視，只能使用遠端決策 |
 | GetCookies | 字典 | 傳回此使用者的工作階段中繼資料字典。 此使用者必須在下個[!DNL Target]要求中傳遞。 |

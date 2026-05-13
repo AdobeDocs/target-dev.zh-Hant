@@ -3,34 +3,39 @@ title: Adobe Target管理API總覽
 description: ' [!DNL Adobe Target Admin API]的總覽'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: 1400
 ht-degree: 2%
 
 ---
 
 # Target管理員API總覽
 
-本文提供成功瞭解及使用[!DNL Adobe Target Admin API]所需的背景資訊概觀。 下列內容假設您瞭解如何[設定](../configure-authentication.md)的驗證[!DNL Adobe Target Admin API]。
+本文提供成功瞭解及使用[!DNL Adobe Target Admin API]所需的背景資訊概觀。 下列內容假設您瞭解如何[設定[!DNL Adobe Target Admin API]的驗證](../configure-authentication.md)。
 
 >[!NOTE]
 >
->如果您想要透過UI管理[!DNL Target]，請參閱[Adobe Target商業從業者指南&#x200B;**&#x200B;的](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=zh-Hant)管理區段。
+>如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理區段。
 >
 >管理員API和設定檔API通常是整體參照（「管理員和設定檔API」），但也可能單獨參照（「管理員API」和「設定檔API」）。 Recommendations API是[!DNL Target] Admin API的特定實作。
 
 ## 開始之前
 
-在為[Admin API](../../administer/admin-api/admin-api-overview-new.md)提供的所有程式碼範例中，將{tenant}取代為您的租使用者值，`your-bearer-token`取代為您使用JWT產生的存取權杖，將`your-api-key`取代為您從[Adobe Developer Console](https://developer.adobe.com/console/home)取得的API金鑰。 如需有關租使用者和JWT的詳細資訊，請參閱有關如何為Adobe [&#x200B; Admin API &#x200B;](../configure-authentication.md)設定驗證[!DNL Target]的文章。
+在為[Admin API](../../administer/admin-api/admin-api-overview-new.md)提供的所有程式碼範例中，將{tenant}取代為您的租使用者值，`your-bearer-token`取代為您使用JWT產生的存取權杖，將`your-api-key`取代為您從[Adobe Developer Console](https://developer.adobe.com/console/home)取得的API金鑰。 如需有關租使用者和JWT的詳細資訊，請參閱有關如何為Adobe [!DNL Target] Admin API [設定驗證](../configure-authentication.md)的文章。
 
 ## 版本設定
 
 所有API都有相關版本。 請務必提供您要使用之正確版本的API。
 
-如果要求包含裝載(POST或PUT)，則會使用要求的`Content-Type`標頭來指定版本。
+如果要求包含裝載（POST或PUT），則會使用要求的`Content-Type`標頭來指定版本。
 
-如果請求不包含裝載(GET、DELETE或OPTIONS)，則會使用`Accept`標頭來指定版本。
+如果請求不包含裝載（GET、DELETE或OPTIONS），則會使用`Accept`標頭來指定版本。
 
 如果未提供版本，呼叫將預設為V1 (application/vnd.adobe.target.v1+json)。
 
@@ -62,23 +67,23 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 
 以下是Target管理員API的常見回應代碼。
 
-| 狀態  | 含義 | 說明 |
+| 狀態 | 含義 | 說明 |
 | --- | --- | --- |
 | 200 | [確定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | 確定 |
-| 400 | [錯誤請求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 錯誤請求。 請求中提供的資料很可能無效。 |
+| 400 | [錯誤請求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 錯誤的請求。 請求中提供的資料很可能無效。 |
 | 401 | [未獲授權](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允許使用者執行此作業。 |
 | 403 | [禁止存取](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止存取此資源。 |
-| 404 | 找不到[&#128279;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
+| 404 | 找不到[](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
 
 ## 活動
 
 活動可讓您測試或個人化使用者的內容。 活動可為下列其中一種型別：
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)
-* [體驗鎖定 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant)
-* [推薦](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=zh-Hant)
-* [自動個人化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
-* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hant)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [體驗鎖定 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [推薦](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多變數測試 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 批次更新
 
@@ -92,7 +97,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 
 批次處理可讓您傳遞單一HTTP請求中數個作業的指示。 您也可以指定相關作業之間的相依性（如下節所述）。 TNT將處理每個獨立的作業（可能同時進行），並將依序處理您的相依作業。 完成所有操作後，將傳回整合的回應，並關閉HTTP連線。
 
-批次API採用以JSON陣列表示的邏輯HTTP要求陣列 — 每個要求都有方法(對應至HTTP方法GET/PUT/POST/DELETE等)、relativeUrl （admin/rest/之後URL的部分）、選用標頭陣列（對應至HTTP標頭）和選用內文(適用於POST和PUT要求)。 批次API會傳回以JSON陣列表示的邏輯HTTP回應陣列 — 每個回應都有狀態代碼、選用的標頭陣列和選用的內文（這是JSON編碼字串）。 若要進行批次要求，請建置JSON物件，以說明要執行的各個作業。 允許的最大運算元為256 （從0到255）。
+批次API採用以JSON陣列表示的邏輯HTTP要求陣列 — 每個要求都有方法（對應至HTTP方法GET/PUT/POST/DELETE等）、relativeUrl （admin/rest/之後URL的部分）、選用標頭陣列（對應至HTTP標頭）和選用內文（適用於POST和PUT要求）。 批次API會傳回以JSON陣列表示的邏輯HTTP回應陣列 — 每個回應都有狀態代碼、選用的標頭陣列和選用的內文（這是JSON編碼字串）。 若要進行批次要求，請建置JSON物件，以說明要執行的各個作業。 允許的最大運算元為256 （從0到255）。
 
 指定要求中作業之間的相依性依預設，批次API要求中指定的作業是獨立的 — 它們可以在伺服器上以任意順序執行，而且一個作業中的錯誤不會影響其他作業的執行。
 

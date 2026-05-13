@@ -3,9 +3,14 @@ title: 瞭解裝置上決策規則成品
 description: 瞭解如何使用規則成品，這是 [!DNL Adobe Target] [!UICONTROL on-device decisioning]活動的JSON表示法。
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: 278
 ht-degree: 0%
 
 ---

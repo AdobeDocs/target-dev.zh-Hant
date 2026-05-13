@@ -1,13 +1,19 @@
 ---
 keywords: 行動應用程式，aep sdk，原生應用程式，網頁檢視，原生；swift，adobe experience platform mobile sdk，行動sdk，原生程式碼
 description: 瞭解如何在具有Web檢視的原生應用程式中使用 [!DNL AEP Mobile SDK] 實作 [!DNL Adobe Target] 。
-title: 在使用原生程式碼搭配Web檢視的行動應用程式中實作 [!DNL Adobe Target]
+title: '在使用原生程式碼搭配Web檢視的行動應用程式中實作 [!DNL Adobe Target] '
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: 611
 ht-degree: 0%
 
 ---
@@ -16,11 +22,11 @@ ht-degree: 0%
 
 本文分享在行動應用程式中實作[!DNL Adobe Target]的最佳作法，該應用程式使用原生程式碼，並使用[!DNL Adobe Experience Platform Mobile SDK]搭配Web檢視。
 
-本文使用範例iOS應用程式，使用GitHub存放庫[&#128279;](https://github.com/adobe/aep-sdk-app/){target=_blank}的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}以及以Swift撰寫的[!DNL Target]整合。
+本文使用GitHub存放庫](https://github.com/adobe/aep-sdk-app/){target=_blank}以[Swift撰寫的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}及[!DNL Target]整合範例，作為iOS應用程式。
 
 在真實世界中，您的企業應用程式可能會使用行動應用程式中的網頁檢視。 網頁檢視是使用URL載入網頁的容器。 此容器類似於沒有控制項的瀏覽器視窗。 在iOS中，處理網頁時， Web檢視容器會當作Safari瀏覽器運作。
 
-## 必備條件
+## 先決條件
 
 若要開始使用[!DNL Adobe Experience Platform Mobile SDK]，您必須執行一些先決條件工作。
 
@@ -43,7 +49,7 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-如需`Identity.appendTo`方法的詳細資訊，以及方法使用範例，請參閱&#x200B;*Mobile SDK檔案*&#x200B;中的[Swift >範例](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank}。
+如需`Identity.appendTo`方法的詳細資訊，以及方法使用範例，請參閱&#x200B;*行動SDK檔案*&#x200B;中的[Swift >範例](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank}。
 
 使用`Identity.appendTo`，此URL：
 

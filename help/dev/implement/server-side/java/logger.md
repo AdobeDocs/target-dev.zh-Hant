@@ -3,9 +3,14 @@ title: 初始化 [!DNL Adobe Target] Java SDK以記錄要求
 description: 瞭解如何在 [!DNL Adobe Target] Java SDK中記錄請求。
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
-source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
+TQID: https://experienceleague.adobe.com/xvduuV6cjVJu-yIoaxCvbPE-ZttfEViuM8B7sVczAC0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: 120
 ht-degree: 4%
 
 ---

@@ -4,10 +4,16 @@ description: 瞭解如何指定設定（帳戶詳細資料、實作方法等） 
 title: 我可以不使用標籤管理員實作 [!DNL Target] 嗎？
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 35%
+source-wordcount: 1739
+ht-degree: 33%
 
 ---
 
@@ -56,16 +62,16 @@ ht-degree: 35%
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Page load enabled (Auto-create global mbox)] | 選擇是否將全域 mbox 呼叫內嵌在 at.js 檔案中，以便每次載入頁面時自動觸發。 |
-| [!UICONTROL Global mbox] | 選取全域 mbox 的名稱。依預設，此名稱為 target-global-mbox。<p>對於at.js，mbox名稱中可以使用特殊字元（包括&amp;）。 |
-| [!UICONTROL Timeout (seconds)] | 如果 [!DNL Target] 在已定義的期間內沒有回應內容，伺服器呼叫會逾時，並顯示預設內容。在訪客工作階段期間會繼續嘗試其他呼叫。預設值為 5 秒。<p>at.js程式庫使用`XMLHttpRequest`中的逾時設定。 逾時是在觸發要求時開始，並在[!DNL Target]從伺服器收到回應時停止。 如需詳細資訊，請參閱Mozilla開發人員網路上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在收到回應之前就發生指定的逾時，則會顯示預設內容，而訪客可能算為活動的參與者，因為所有資料收集都發生在[!DNL Target]邊緣。 如果請求到達[!DNL Target]邊緣，訪客即納入計算。<p>設定逾時設定時，請考量下列事項:<ul><li>如果值太低，即使訪客應該算為活動的參與者，使用者還是可能幾乎都看到預設內容。</li><li>如果值太高，而如果您長時間使用本文隱藏，訪客可能會在網頁上看到空白區域或空白頁面。</li></ul>若要充分瞭解 mbox 回應時間，請在瀏覽器的開發人員工具中查看「網路」標籤。您也可以使用第三方 Web 效能監控工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定可確保[!DNL Target]不會為了訪客API回應而等待太久。 此設定和這裡說明的 at.js 逾時設定不影響彼此。 |
-| [!UICONTROL Profile Lifetime] | 此設定會決定訪客設定檔儲存多久。依預設，訪客設定檔會儲存兩週。此設定最多可增加90天。<p>若要變更設定檔存留期設定，請連絡[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant#reference_ACA3391A00EF467B87930A450050077C)。 |
+| [!UICONTROL Page load enabled (Auto-create global mbox)] | 選擇是否將全域 mbox 呼叫嵌入在 at.js 檔案中，以便每次載入頁面時自動觸發。 |
+| [!UICONTROL Global mbox] | 選取全域 mbox 的名稱。 依預設，此名稱為 target-global-mbox。<p>對於at.js，mbox名稱中可以使用特殊字元（包括&amp;）。 |
+| [!UICONTROL Timeout (seconds)] | 如果 [!DNL Target] 在已定義的期間內沒有回應內容，伺服器呼叫會逾時，並顯示預設內容。 在訪客工作階段期間會繼續嘗試其他呼叫。 預設值為 5 秒。<p>at.js程式庫使用`XMLHttpRequest`中的逾時設定。 逾時是在觸發要求時開始，並在[!DNL Target]從伺服器收到回應時停止。 如需詳細資訊，請參閱Mozilla開發人員網路上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在收到回應之前就發生指定的逾時，則會顯示預設內容，而訪客可能算為活動的參與者，因為所有資料收集都發生在[!DNL Target]邊緣。 如果請求到達[!DNL Target]邊緣，訪客即納入計算。<p>設定逾時設定時，請考量下列事項:<ul><li>如果值太低，即使訪客應該算為活動的參與者，使用者還是可能幾乎都看到預設內容。</li><li>如果值太高，而如果您長時間使用本文隱藏，訪客可能會在網頁上看到空白區域或空白頁面。</li></ul>若要充分瞭解 mbox 回應時間，請在瀏覽器的開發人員工具中查看「網路」標籤。 您也可以使用第三方 Web 效能監控工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定可確保[!DNL Target]不會為了訪客API回應而等待太久。 此設定和這裡說明的 at.js 逾時設定不影響彼此。 |
+| [!UICONTROL Profile Lifetime] | 此設定會決定訪客設定檔儲存多久。 依預設，訪客設定檔會儲存兩週。 此設定最多可增加90天。<p>若要變更設定檔存留期設定，請連絡[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)。 |
 
 ### 主要實作方法
 
 >[!NOTE]
 >
->[!DNL Adobe Target]同時支援at.js 1。*x* 和 at.js 2 中的 Hide Body 和 Show Body 呼叫。*x* 使用供跨網域追蹤功能時。 升級至任一主要版本的at.js最新更新，以確保您執行的是支援的版本。
+>[!DNL Adobe Target]同時支援at.js 1.*x*&#x200B;和at.js 2.*x*。 升級至任一主要版本的at.js最新更新，以確保您執行的是支援的版本。
 
 若要下載所需的at.js版本，請按一下適當的「**下載**」按鈕。
 
@@ -73,19 +79,19 @@ ht-degree: 35%
 
 >[!WARNING]
 >
->在變更這些預設設定之前，請先洽詢[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant#reference_ACA3391A00EF467B87930A450050077C)，以免影響您目前的實作。
+>在變更這些預設設定之前，請先洽詢[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)，以免影響您目前的實作。
 
 除了上述設定以外，您也可以使用下列特定的at.js設定：
 
 | 設定 | 說明 |
 |--- |--- |
-| 跨網域 | 針對at.js v1。*x*，藉由選取`enabled` （瀏覽器同時設定第一方和第三方Cookie），指定跨網域功能是`disabled` (僅瀏覽器在您的網域中設定Cookie （第一方Cookie）)、`x only` （僅瀏覽器在Target的網域中設定Cookie）或兩者皆有。 針對at.js v2.10和更新版本，請指定跨網域功能是`enabled` （瀏覽器同時設定第一方和第三方Cookie）還是`disabled` （瀏覽器未設定第三方Cookie）。 |
+| 跨網域 | 針對at.js v1.*x*，藉由選取`enabled` （瀏覽器同時設定第一方和第三方Cookie），指定跨網域功能是`disabled` (瀏覽器在您的網域中設定Cookie （僅限第一方Cookie）)、`x only` （瀏覽器僅在Target的網域中設定Cookie）或兩者皆有。 針對at.js v2.10和更新版本，請指定跨網域功能是`enabled` （瀏覽器同時設定第一方和第三方Cookie）還是`disabled` （瀏覽器未設定第三方Cookie）。 |
 | 自訂資料庫標題 | 新增任何自訂 JavaScript 以包括在資料庫頂端。 |
 | 自訂資料庫頁尾 | 新增任何自訂 JavaScript 以包含在程式庫底部。 |
 
 ### 設定檔API
 
-啟用或停用透過 API 批次更新的驗證，並產生設定檔驗證 Token。
+啟用或停用透過 API 批次更新的驗證，並產生輪廓驗證 Token。
 
 如需詳細資訊，請參閱[設定檔API設定](/help/dev/before-implement/methods-to-get-data-into-target/profile-api-settings.md)。
 
@@ -109,7 +115,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->「舊版瀏覽器支援」選項可在at.js版本0.9.3和更早版本中取得。 at.js 0.9.4 版中移除了此選項。如需 at.js 支援的瀏覽器清單，請參閱[支援的瀏覽器](/help/dev/before-implement/supported-browsers.md)。<p>舊版瀏覽器是指不完全支援 CORS (跨來源資源共用) 的舊型瀏覽器。這些瀏覽器包括 Internet Explorer 瀏覽器 11 版以前的版本，以及 Safari 6 版及更舊版本。如果停用舊版瀏覽器支援，[!DNL Target]就不會在這些瀏覽器的報表中傳送內容或計算訪客。 如果已啟用此選項，建議在舊版瀏覽器上執行品質保證，以確保良好的客戶體驗。
+>「舊版瀏覽器支援」選項可在at.js版本0.9.3和更早版本中取得。 此選項已在 at.js 版本 0.9.4 中移除。 如需at.js支援的瀏覽器清單，請參閱[支援的瀏覽器](/help/dev/before-implement/supported-browsers.md)。<p>舊版瀏覽器是指不完全支援 CORS (跨來源資源共用) 的舊型瀏覽器。 這些瀏覽器包括 Internet Explorer 瀏覽器 11 版以前的版本，以及 Safari 6 版及更舊版本。 如果停用舊版瀏覽器支援，[!DNL Target]就不會在這些瀏覽器的報表中傳送內容或計算訪客。 如果已啟用此選項，建議在舊版瀏覽器上執行品質保證，以確保良好的客戶體驗。
 
 ## 下載 at.js
 
@@ -119,7 +125,7 @@ ht-degree: 35%
 >
 >[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)是實作[!DNL Target]和at.js程式庫的偏好方法。 使用[!DNL Adobe Experience Platform]中的標籤來實作[!DNL Target]時，下列資訊不適用。
 >
->[!DNL Adobe Target]同時支援at.js 1。*x* 和 at.js 2 中的 Hide Body 和 Show Body 呼叫。*x* 使用供跨網域追蹤功能時。 請升級至任一主要版本at.js的最新更新，以確保您執行的是支援的版本。 如需每一個版本有何功能的詳細資訊，請參閱 [at.js 版本詳細資料](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
+>[!DNL Adobe Target]同時支援at.js 1.*x*&#x200B;和at.js 2.*x*。 請升級至任一主要版本at.js的最新更新，以確保您執行的是支援的版本。 如需每一個版本有何功能的詳細資訊，請參閱 [at.js 版本詳細資料](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
 ### 使用[!DNL Target]介面下載at.js
 
@@ -176,7 +182,7 @@ ht-degree: 35%
 
 at.js 應實作於網站上每個頁面的 `<head>` 元素中。
 
-未使用標籤管理程式(例如[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤)的典型[!DNL Target]實作如下所示：
+未使用標籤管理程式（例如[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤）的典型[!DNL Target]實作如下所示：
 
 ```
 <!doctype html> 
@@ -233,19 +239,19 @@ at.js 應實作於網站上每個頁面的 `<head>` 元素中。
 請考量下列重要注意事項:
 
 * 應該使用HTML5 Doctype （例如，`<!doctype html>`）。 不受支援或較舊的doctypes可能會導致[!DNL Target]無法發出請求。
-* 「預先連結」和「預先擷取」可能有助於加速網頁載入。如果您使用這些組態，請確定您將`<client code>`取代為您自己的使用者端代碼，您可從&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;頁面取得此代碼。
-* 如果有資料層，最好在 at.js 載入前，盡可能在網頁的 `<head>` 中詳細定義。此位置提供在[!DNL Target]中使用此資訊進行個人化的最大能力。
+* 「預先連結」和「預先擷取」可能有助於加速網頁載入。 如果您使用這些組態，請確定您將`<client code>`取代為您自己的使用者端代碼，您可從&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;頁面取得此代碼。
+* 如果有資料層，最好在 at.js 載入前，盡可能在網頁的 `<head>` 中詳細定義。 此位置提供在[!DNL Target]中使用此資訊進行個人化的最大能力。
 * 特殊[!DNL Target]函式（例如`targetPageParams()`、`targetPageParamsAll()`、資料提供者和`targetGlobalSettings()`）應在資料層載入後和at.js載入前定義。 或者，這些函式可以儲存在「編輯at.js設定」頁面的「資料庫標題」區段中，並儲存為at.js資料庫本身的一部分。 如需這些函式的詳細資訊，請參閱[at.js函式](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md)。
 * 如果您使用JavaScript協助程式庫（例如jQuery），請在[!DNL Target]之前加入這些程式庫，以便在建置[!DNL Target]體驗時使用這些程式庫的語法和方法。
 * 在網頁的 `<head>` 中加入 at.js。
 
 ## 追蹤轉換
 
-訂購確認 mbox 會記錄關於您的網站上訂單的詳細資料，並允許根據收入和訂單報告。訂購確認 mbox 也可以促進建議演算法，例如「購買了產品 x、也購買了產品 y 的使用者」
+訂購確認 mbox 會記錄關於您的網站上訂單的詳細資料，並允許根據收入和訂單報告。 訂購確認 mbox 也可以促進建議演算法，例如「購買了產品 x、也購買了產品 y 的使用者」
 
 >[!NOTE]
 >
->如果使用者在您的網站上進行購買，Adobe建議您實作訂單確認mbox，即使您對報表使用Analytics for [!DNL Target] (A4T)亦然。
+>如果使用者在您的網站上進行購買，Adobe建議您實作訂購確認mbox，即使您對報表使用Analytics for [!DNL Target] (A4T)亦然。
 
 1. 在訂單詳細資料頁面中，請依照下方的模式插入 mbox 指令檔。
 1. 使用目錄中的動態或靜態值來取代大寫的字母。
@@ -275,6 +281,6 @@ at.js 應實作於網站上每個頁面的 `<head>` 元素中。
 
 | 參數 | 說明 |
 |--- |--- |
-| orderId | 要進行轉換計算之訂單的唯一識別值。<p>`orderId` 必須是唯一的。報表中會忽略重複的訂單。 |
-| orderTotal | 購買貨幣值。<p>請勿傳遞貨幣符號。請使用小數點 (而非逗點) 表示小數值。 |
+| orderId | 要進行轉換計算之訂單的唯一識別值。<p>`orderId` 必須是唯一的。 報表中會忽略重複的訂單。 |
+| orderTotal | 購買貨幣值。<p>請勿傳遞貨幣符號。 請使用小數點 (而非逗點) 表示小數值。 |
 | productPurchasedId (選用) | 訂單中購買之產品 ID 的逗點分隔清單。<p>這些產品 ID 會顯示在稽核報表中，以支援其他報表分析。 |

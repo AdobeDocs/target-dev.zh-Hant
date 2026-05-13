@@ -5,22 +5,28 @@ seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target；a4t；記錄；Web SDK；體驗；平台；
 feature: Implementation
-source-git-commit: 4d4ca7dcffdbaee5770084bd85c3109df0d6a8d4
+exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
+TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: 1139
 ht-degree: 0%
 
 ---
 
 # [!DNL Experience Platform Web SDK]中A4T資料的使用者端記錄
 
-[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)的Adobe Analytics資料。
+[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)的Adobe Analytics資料。
 
-使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hant)手動將資料傳送至Analytics，則應啟用此選項。
+使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動將資料傳送至Analytics，則應啟用此選項。
 
 >[!NOTE]
 >
->使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)執行此工作的方法目前正在開發中，將於不久的將來提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)執行此工作的方法目前正在開發中，將於不久的將來提供。
 
 本文介紹為[!DNL Platform Web SDK]設定使用者端A4T記錄的步驟，並提供常見使用案例的實施範例。
 
@@ -28,23 +34,23 @@ ht-degree: 0%
 
 本教學課程假設您熟悉有關使用[!DNL Platform Web SDK]進行個人化目的的基本概念和程式。 如果您需要簡介，請檢閱下列檔案：
 
-* [設定網頁SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/configure/overview)
-* [正在傳送事件](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [呈現個人化內容](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [設定網頁SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
+* [傳送事件](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [呈現個人化內容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 設定[!DNL Analytics]使用者端記錄 {#set-up-client-side-logging}
 
-下列子節概述如何為您的[!DNL Analytics]實作啟用[!DNL Platform Web SDK]使用者端記錄。
+下列子節概述如何為您的[!DNL Platform Web SDK]實作啟用[!DNL Analytics]使用者端記錄。
 
 ### 啟用[!DNL Analytics]使用者端記錄 {#enable-analytics-client-side-logging}
 
-若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[!DNL Adobe Analytics]資料流[中的](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)設定。
+若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[資料流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中的[!DNL Adobe Analytics]設定。
 
 ![已停用Analytics資料流設定](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### 從SDK擷取[!DNL A4T]資料並將其傳送到[!DNL Analytics] {#a4t-to-analytics}
 
-為了讓此報告方法正常運作，您必須傳送從[!DNL A4T]點選中的[`sendEvent`](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL Analytics]相關資料。
+為了讓此報告方法正常運作，您必須傳送從[!DNL Analytics]點選中的[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL A4T]相關資料。
 
 當[!DNL Target] Edge計算主張回應時，它會檢查是否已啟用[!DNL Analytics]使用者端記錄（例如，在您的資料流中是否已停用[!DNL Analytics]）。 如果啟用使用者端記錄，則系統會在回應中為每個主張新增[!DNL Analytics]權杖。
 
@@ -52,7 +58,7 @@ ht-degree: 0%
 
 ![使用者端記錄流程](/help/dev/implement/a4t/assets/analytics-client-side-logging.png)
 
-下列是啟用`interact`使用者端記錄時[!DNL Analytics]回應的範例。 如果主張是針對具有[!DNL Analytics]報告的活動，它將具有`scopeDetails.characteristics.analyticsToken`屬性。
+下列是啟用[!DNL Analytics]使用者端記錄時`interact`回應的範例。 如果主張是針對具有[!DNL Analytics]報告的活動，它將具有`scopeDetails.characteristics.analyticsToken`屬性。
 
 ```json
 {
@@ -202,7 +208,7 @@ ht-degree: 0%
 }
 ```
 
-來自`scopeDetails.characteristics.analyticsToken`、以及`scopeDetails.characteristics.analyticsDisplayToken` （適用於顯示的內容）和`scopeDetails.characteristics.analyticsClickToken` （適用於點選量度）的所有值都是需要收集的A4T裝載，並包含在`tnta`資料插入API[呼叫中的](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)標籤。
+來自`scopeDetails.characteristics.analyticsToken`、以及`scopeDetails.characteristics.analyticsDisplayToken` （適用於顯示的內容）和`scopeDetails.characteristics.analyticsClickToken` （適用於點選量度）的所有值都是需要收集的A4T裝載，並包含在[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)呼叫中的`tnta`標籤。
 
 >[!IMPORTANT]
 >
@@ -225,11 +231,11 @@ ht-degree: 0%
 
 ### [!UICONTROL Form-Based Experience Composer]個活動 {#form-based-composer}
 
-您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)活動的建議執行。
+您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活動的建議執行。
 
 當您請求特定決定範圍的建議時，傳回的建議包含其適當的[!DNL Analytics]權杖。 最佳實務是鏈結[!DNL Experience Platform Web SDK] `sendEvent`命令並重複處理傳回的主張，以便在同時收集[!DNL Analytics]權杖時執行這些建議。
 
-您可以為`sendEvent`活動範圍觸發[!UICONTROL Form-Based Experience Composer]命令，如下所示：
+您可以為[!UICONTROL Form-Based Experience Composer]活動範圍觸發`sendEvent`命令，如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -419,16 +425,16 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 實作摘要 {#implementation-summary}
 
-總而言之，使用[!UICONTROL Form-Based Experience Composer]套用[!DNL Experience Platform Web SDK]活動時，必須執行下列步驟：
+總而言之，使用[!DNL Experience Platform Web SDK]套用[!UICONTROL Form-Based Experience Composer]活動時，必須執行下列步驟：
 
 1. 傳送擷取[!UICONTROL Form-Based Experience Composer]活動選件的事件；
 1. 將內容變更套用至頁面；
 1. 傳送`decisioning.propositionDisplay`通知事件；
 1. 從SDK回應中收集[!DNL Analytics]顯示權杖，並建構點選[!DNL Analytics]的裝載；
-1. 使用[!DNL Analytics]資料插入API[將裝載傳送至](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)；
+1. 使用[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)將裝載傳送至[!DNL Analytics]；
 1. 若已傳遞的建議中有任何點選量度，則應設定點選接聽程式，以便執行點選時傳送`decisioning.propositionInteract`通知事件。 應設定`onBeforeEventSend`處理常式，以便在攔截`decisioning.propositionInteract`事件時會發生下列動作：
-   1. 正在從[!DNL Analytics]收集點選`xdm._experience.decisioning.propositions`權杖
-   1. 透過[!DNL Analytics]資料插入API[!DNL Analytics]，以收集的[裝載傳送點選](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)點選；
+   1. 正在從`xdm._experience.decisioning.propositions`收集點選[!DNL Analytics]權杖
+   1. 透過[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)，以收集的[!DNL Analytics]裝載傳送點選[!DNL Analytics]點選；
 
 ```javascript
 alloy("sendEvent", {
@@ -465,7 +471,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] (VEC)活動 {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)編寫的選件。
+[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)編寫的選件。
 
 >[!NOTE]
 >
@@ -511,7 +517,7 @@ alloy("sendEvent", {
 
 您可以使用[!DNL Adobe Target]個活動，在頁面上設定不同的量度(手動附加至DOM或自動附加至DOM （VEC編寫的活動）。 這兩種型別都是網頁上延遲的一般使用者互動。
 
-若要解決此問題，最佳實務是使用[!DNL Analytics] `onBeforeEventSend`鉤點收集[!DNL Adobe Experience Platform Web SDK]裝載。 `onBeforeEventSend`連結應使用`configure`命令設定，並反映在透過資料流傳送的所有事件中。
+若要解決此問題，最佳實務是使用`onBeforeEventSend` [!DNL Adobe Experience Platform Web SDK]鉤點收集[!DNL Analytics]裝載。 `onBeforeEventSend`連結應使用`configure`命令設定，並反映在透過資料流傳送的所有事件中。
 
 以下是如何設定`onBeforeEventSent`以觸發[!DNL Analytics]點選的範例：
 

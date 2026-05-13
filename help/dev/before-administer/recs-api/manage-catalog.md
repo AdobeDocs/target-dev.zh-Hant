@@ -1,27 +1,31 @@
 ---
-title: 如何使用API管理您的Recommendations目錄
+title: 如何使用API管理您的建議目錄
 description: 使用Adobe Target API建立、更新、儲存、取得及刪除Recommendations目錄中的實體所需的步驟。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# 使用API管理您的Recommendations目錄
+# 使用API管理您的建議目錄
 
-在確保您符合[使用Recommendations API](/help/dev/before-administer/recs-api/overview.md#prerequisites)的要求時，您已瞭解如何[使用JWT驗證流程來產生存取權杖](/help/dev/before-administer/configure-authentication.md)，以便在[Adobe Developer Console](https://developer.adobe.com/console/home)上使用[!DNL Adobe Target]管理API。
+在確保您符合[使用Recommendations API](/help/dev/before-administer/recs-api/overview.md#prerequisites)的需求時，您已瞭解如何[使用JWT驗證流程產生存取權杖](/help/dev/before-administer/configure-authentication.md)，以在[Adobe Developer Console](https://developer.adobe.com/console/home)上使用[!DNL Adobe Target]管理API。
 
-您現在可以使用[Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)來新增、更新或刪除建議目錄中的專案。 與其他Adobe Target Admin API一樣，Recommendations API需要驗證。
+您現在可以使用[Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)新增、更新或刪除建議目錄中的專案。 和其他Adobe Target Admin API一樣，Recommendations API需要驗證。
 
 >[!NOTE]
 >
->每當您需要重新整理存取權杖以進行驗證時，請傳送&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;請求，因為它會在24小時後過期。 如需指示，請參閱[設定AdobeAPI驗證](../configure-authentication.md)。
+>每當您需要重新整理存取權杖以進行驗證時，請傳送&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;請求，因為它會在24小時後過期。 如需指示，請參閱[設定Adobe API驗證](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -29,7 +33,7 @@ ht-degree: 0%
 
 ## 使用儲存實體API建立和更新專案
 
-若要使用API （而非CSV產品摘要或產品頁面上引發的Target請求）填入您的Recommendations產品資料庫，請使用[儲存實體API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)。 此請求會在單一Target環境中新增或更新專案。 語法為：
+若要使用API （而非CSV產品摘要或產品頁面上引發的Target請求）填入Recommendations產品資料庫，請使用[儲存實體API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)。 此請求會在單一Target環境中新增或更新專案。 語法為：
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -72,7 +76,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 按一下&#x200B;**[!UICONTROL Send]**。 您應會收到下列回應。
+1. 按一下 **[!UICONTROL Send]**。 您應會收到下列回應。
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -149,7 +153,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明確指定任何環境，則取得實體只會嘗試從您的[預設環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hant)取得實體。 如果您想從預設環境以外的任何環境提取，則必須指定環境ID。
+   >如果未明確指定任何環境，則取得實體只會嘗試從您的[預設環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)取得實體。 如果您想從預設環境以外的任何環境提取，則必須指定環境ID。
 
 1. 如有必要，請新增`environmentId`引數，然後重新傳送要求。
 
@@ -199,6 +203,6 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![DeleteEntities6](assets/DeleteEntities7.png)
 
-恭喜！您現在可以使用Recommendations API來建立、更新、刪除及取得目錄中實體的詳細資訊。 在下一節中，您將瞭解如何管理自訂條件。
+恭喜！ 您現在可以使用Recommendations API來建立、更新、刪除及取得有關目錄中實體的詳細資訊。 在下一節中，您將瞭解如何管理自訂條件。
 
 &lt;！— [下堂課「管理自訂條件」>](manage-custom-criteria.md) —>

@@ -1,23 +1,27 @@
 ---
 title: 如何管理自訂條件
-description: 使用Adobe Target API管理、建立、列出、編輯、取得及刪除Adobe Target Recommendations條件所需的步驟。
+description: 使用Adobe Target API來管理、建立、列出、編輯、取得和刪除Adobe Target Recommendations條件所需的步驟。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
 
 # 管理自訂條件
 
-有時Recommendations提供的演演算法無法呈現您想要促銷的特定專案。 在這種情況下，自訂條件提供了一種方法，可讓您為指定的關鍵專案或類別傳送一組特定的建議專案。
+有時，Recommendations提供的演演算法無法呈現您想要促銷的特定專案。 在這種情況下，自訂條件提供了一種方法，可讓您為指定的關鍵專案或類別傳送一組特定的建議專案。
 
-若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
+若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
 
 >[!WARNING]
 >
@@ -31,7 +35,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
+>使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
 
 閱讀上述警告並熟悉如何建立後續無法從UI刪除的新自訂條件後，才可繼續下列步驟。
 
@@ -114,6 +118,6 @@ ht-degree: 0%
 >
 >提醒您，即使條件已刪除，也不會從Target UI中移除，因為它是使用建立自訂條件API所建立。
 
-恭喜！您現在可以使用Recommendations API建立、列出、編輯、刪除自訂條件，以及取得詳細資訊。 在下一節中，您將使用Target Delivery API來擷取建議。
+恭喜！ 您現在可以使用Recommendations API建立、列出、編輯、刪除自訂條件並取得詳細資訊。 在下一節中，您將使用Target Delivery API來擷取建議。
 
-&lt;！—[下堂課「使用伺服器端傳送API擷取Recommendations」>](fetch-recs-server-side-delivery-api.md) —>
+&lt;！— [下堂課「使用伺服器端傳送API擷取建議」>](fetch-recs-server-side-delivery-api.md) —>

@@ -3,10 +3,15 @@ title: 裝置上決策支援哪些功能？
 description: 瞭解如何使用即時伺服器呼叫，透過機器學習來提供最相關且最吸引人的個人化內容。
 feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 13%
+source-wordcount: 710
+ht-degree: 9%
 
 ---
 
@@ -20,18 +25,18 @@ ht-degree: 13%
 
 ## 活動類型
 
-下表指出[!UICONTROL on-device decisioning]支援或不支援使用[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant&)建立的[活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hant)。
+下表指出[!UICONTROL on-device decisioning]支援或不支援使用[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html？)建立的[活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)。
 
 | 活動類型 | 支援 |
 | --- | --- |
-| [A/B 測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant) | 是 |
-| [自動分配](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=zh-Hant) | 無 |
-| [自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant) | 無 |
-| [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) (A4T) | 是 |
-| [多變數測試](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hant) (MVT) | 否 |
-| [體驗鎖定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant) (XT) | 是 |
-| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP) | 無 |
-| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant) | 無 |
+| [A/B 測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | 是 |
+| [自動分配](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | 無 |
+| [自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | 無 |
+| [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) | 是 |
+| [多變數測試](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html) (MVT) | 否 |
+| [體驗鎖定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) | 是 |
+| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) | 無 |
+| [推薦](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) | 無 |
 
 
 ## 對象目標定位
@@ -40,21 +45,21 @@ ht-degree: 13%
 
 | 對象規則 | 裝置上決策 |
 | --- | --- |
-| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant) | 是 |
-| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hant) | 否 |
-| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hant) | 否 |
-| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hant) | 是 |
-| [作業系統 &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hant) | 是 |
-| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hant) | 是 |
-| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hant) | 是 |
-| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 否 |
-| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 否 |
-| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
+| [地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
+| [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
+| [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
+| [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
+| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
+| [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
+| [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
+| [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
+| [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
+| [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
+| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
 
 ### [!UICONTROL on-device decisioning]的地理定位
 
-為了維持具有地理型對象的[!UICONTROL on-device decisioning]活動近乎零延遲，Adobe建議您在`getOffers`的呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者(例如Google Cloud)會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
+為了維持具有地理型對象的[!UICONTROL on-device decisioning]活動近乎零延遲，Adobe建議您在`getOffers`呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者（例如Google Cloud）會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
 
 >[!BEGINTABS]
 
@@ -170,5 +175,5 @@ public class TargetRequestUtils {
 | 配置方法 | 支援 |
 | --- | --- |
 | 手動 | 是 |
-| [自動分配至最佳體驗](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=zh-Hant) | 否 |
-| [針對個人化體驗自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html?lang=zh-Hant) | 否 |
+| [自動分配至最佳體驗](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | 否 |
+| [針對個人化體驗自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html) | 否 |

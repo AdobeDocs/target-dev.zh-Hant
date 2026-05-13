@@ -1,12 +1,17 @@
 ---
 title: '[!DNL Adobe Experience Platform Web SDK]的單頁應用程式實作'
-description: 瞭解如何使用 [!DNL Adobe Experience Platform Web SDK]建立 [!DNL Target]的單頁應用程式(SPA)實作。
+description: 瞭解如何使用 [!DNL Target]建立 [!DNL Adobe Experience Platform Web SDK]的單頁應用程式(SPA)實作。
 keywords: target；adobe target；xdm檢視；檢視；單頁應用程式；SPA；SPA生命週期；使用者端；AB測試；AB；體驗鎖定目標；XT；VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: 1747
 ht-degree: 2%
 
 ---
@@ -27,7 +32,7 @@ ht-degree: 2%
 
 * 可在頁面載入時快取所有產品建議，以減少對單一伺服器呼叫發出的多個伺服器呼叫。
 * 改善網站上的使用者體驗，因為選件會透過快取立即顯示，而不會出現傳統伺服器呼叫造成的延遲時間。
-* 一行程式碼和一次性開發人員設定可讓行銷人員透過SPA上的[!UICONTROL A/B Test] (VEC)建立及執行[!UICONTROL Experience Targeting]和[!UICONTROL Visual Experience Composer] (XT)活動。
+* 一行程式碼和一次性開發人員設定可讓行銷人員透過SPA上的[!UICONTROL Visual Experience Composer] (VEC)建立及執行[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活動。
 
 ## xdm檢視和單頁應用程式
 
@@ -59,9 +64,9 @@ ht-degree: 2%
 
 ## 正在實作[!UICONTROL XDM Views]
 
-在[!UICONTROL XDM Views]中可運用[!DNL Target]，讓行銷人員透過[!UICONTROL Visual Experience Composer]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
+在[!DNL Target]中可運用[!UICONTROL XDM Views]，讓行銷人員透過[!UICONTROL Visual Experience Composer]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
 
-1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/install/overview)。
+1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)。
 2. 決定單頁應用程式中要個人化的所有[!UICONTROL XDM Views]。
 3. 定義[!UICONTROL XDM Views]後，若要傳遞A/B或XT VEC活動，請在您的單頁應用程式中實作`sendEvent()`函式，並將`renderDecisions`設為`true`以及對應的[!UICONTROL XDM View]。 [!UICONTROL XDM View]必須在`xdm.web.webPageDetails.viewName`中傳遞。 此步驟可讓行銷人員運用[!UICONTROL Visual Experience Composer]為這些XDM啟動A/B和XT測試。
 
@@ -92,7 +97,7 @@ ht-degree: 2%
 
 ![瀏覽器視窗中單頁應用程式的範例影像。](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-1.png)
 
-若要在整個主網站上執行A/B測試，必須在將XDM `sendEvent()`設為`viewName`的情況下叫用`home`：
+若要在整個主網站上執行A/B測試，必須在將XDM `viewName`設為`home`的情況下叫用`sendEvent()`：
 
 ```jsx
 function onViewChange() { 
@@ -221,7 +226,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
+>若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
 
 ### [!UICONTROL Modifications]面板
 
@@ -235,8 +240,8 @@ class Checkout extends Component {
 |---|---|
 | 資訊 | 顯示此動作的詳細資料。 |
 | 編輯 | 可讓您直接編輯該動作的屬性。 |
-| 原地複製 | 將動作原地複製至一或多個存在於[!UICONTROL Views]面板上的[!UICONTROL Modifications]，或原地複製至一或多個您已在VEC中瀏覽及導覽到的[!UICONTROL Views]。 動作不一定存在於[!UICONTROL Modifications]面板中。<br/><br/>**注意：**&#x200B;執行原地復製作業後，您必須透過[!UICONTROL View]導覽至VEC中的[!UICONTROL Browse]，才能檢視該原地複製動作的作業是否有效。 如果無法將動作套用至[!UICONTROL View]，您會看到錯誤。 |
-| 移動 | 將動作移動到[!UICONTROL Page Load Event]或[!UICONTROL View]面板中已存在的任何其他[!UICONTROL Modifications]。<br/><br/>**頁面載入事件：**&#x200B;任何對應至頁面載入事件的動作，都會套用到網頁應用程式的初始頁面載入上。 <br/><br/>**注意：**&#x200B;執行移動作業後，您必須透過[!UICONTROL View]導覽至VEC中的[!UICONTROL Browse]，以檢視移動作業是否有效。 如果無法將動作套用至[!UICONTROL View]，請參閱錯誤。 |
+| 原地複製 | 將動作原地複製至一或多個存在於[!UICONTROL Modifications]面板上的[!UICONTROL Views]，或原地複製至一或多個您已在VEC中瀏覽及導覽到的[!UICONTROL Views]。 動作不一定存在於[!UICONTROL Modifications]面板中。<br/><br/>**注意：**&#x200B;進行復製作業後，您必須透過[!UICONTROL Browse]導覽至VEC中的[!UICONTROL View]，以檢視複製動作是否為有效的作業。 如果無法將動作套用至[!UICONTROL View]，您會看到錯誤。 |
+| 移動 | 將動作移動到[!UICONTROL Page Load Event]或[!UICONTROL Modifications]面板中已存在的任何其他[!UICONTROL View]。<br/><br/>**頁面載入事件：**&#x200B;任何對應至頁面載入事件的動作，都會套用到網頁應用程式的初始頁面載入上。 <br/><br/>**注意：**&#x200B;執行移動作業後，您必須透過[!UICONTROL Browse]導覽至VEC中的[!UICONTROL View]，以檢視移動作業是否有效。 如果無法將動作套用至[!UICONTROL View]，請參閱錯誤。 |
 | 刪除 | 刪除動作。 |
 
 ## 使用適用於SPA的VEC範例
@@ -284,6 +289,6 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->在選取[!UICONTROL View]快速運送[!UICONTROL Modifications]選項按鈕之前，「checkout-express」**不會出現在**&#x200B;面板中。 這是因為選取`sendEvent()`快速運送&#x200B;**選項按鈕時會執行**&#x200B;函式，因此在選取選項按鈕之前，VEC不會察覺「checkout-express」[!UICONTROL View]。
+>在選取&#x200B;**快速運送**&#x200B;選項按鈕之前，「checkout-express」[!UICONTROL View]不會出現在[!UICONTROL Modifications]面板中。 這是因為選取&#x200B;**快速運送**&#x200B;選項按鈕時會執行`sendEvent()`函式，因此在選取選項按鈕之前，VEC不會察覺「checkout-express」[!UICONTROL View]。
 
 ![視覺化體驗撰寫器顯示傳遞偏好設定選擇器。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

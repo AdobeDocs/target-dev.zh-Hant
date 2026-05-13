@@ -1,18 +1,23 @@
 ---
 title: 透過JSON裝載下載、儲存和更新裝置上決策規則成品
-description: 如果您的應用程式結構要求SDK在其使用SDK方法的每個檔案上初始化，此方法將最適合您。
+description: 如果應用程式的結構化方式要求SDK在使用SDK方法的每個檔案上初始化，此方法將最適合您。
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e7840a7b-a94f-4256-aed0-4e94b08e157bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # 透過JSON裝載下載、儲存和更新規則成品
 
-如果您的應用程式結構要求SDK在其使用SDK方法的每個檔案上初始化，此方法將最適合您。 在SDK初始化期間，在您的Web應用程式能夠使用規則成品的JSON裝載之前，您應確保已下載JSON裝載且可供您的應用程式使用。
+如果應用程式的結構化方式要求SDK在使用SDK方法的每個檔案上初始化，此方法將最適合您。 在SDK初始化期間，在您的Web應用程式可以使用規則成品的JSON裝載之前，您應該確保已下載JSON裝載且可供您的應用程式使用。
 
 ## 步驟摘要
 
@@ -20,7 +25,7 @@ ht-degree: 0%
 1. 初始化SDK
 1. 儲存和使用JSON裝載
 
-## 1.安裝SDK
+## &#x200B;1. 安裝SDK
 
 >[!BEGINTABS]
 
@@ -42,7 +47,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2.初始化SDK
+## &#x200B;2. 初始化SDK
 
 1. 首先，匯入SDK。 匯入至您可從其中控制伺服器啟動的相同檔案。
 
@@ -118,7 +123,7 @@ npm i @adobe/target-nodejs-sdk -P
    &lt;！ — 插入image-client-code.png —>
    ![替代影像](assets/asset-rule-artifact-3.png)
 
-## 3.儲存並回覆JSON裝載
+## &#x200B;3. 儲存並回覆JSON裝載
 
 您用來儲存JSON裝載的機制取決於您的系統架構。 您可以使用本機檔案、資料庫或記憶體物件快取系統（例如Memcached）。 您必須能夠讀取應用程式中的此JSON以供使用。 在本指南中，我們使用本機檔案作為儲存體。
 
@@ -162,7 +167,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->透過JSON裝載初始化[!DNL Adobe Target]SDK，您的伺服器即可立即使用裝置上決策活動提供要求，因為[!DNL Adobe Target]SDK不需要等候規則成品下載。
+>透過JSON裝載初始化[!DNL Adobe Target]SDK，您的伺服器已準備好立即提供裝置上決策活動的要求，因為[!DNL Adobe Target]SDK不需要等候規則成品下載。
 
 以下範例示範JSON裝載初始化功能。
 

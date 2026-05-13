@@ -4,25 +4,31 @@ description: 使用適用於 [!DNL Adobe Target] at.js JavaScript資料庫的[!U
 title: 如何使用[!UICONTROL adobe.target.applyOffers()]函式？
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 80%
+source-wordcount: 820
+ht-degree: 78%
 
 ---
 
 # [!UICONTROL adobe.target.applyOffers(options)] - at.js 2.x
 
-此函數可讓您套用一個以上由 `adobe.target.getOffers()` 擷取的選件。
+此函數可讓您套用一個以上由 `adobe.target.getOffers()` 擷取的產品建議。
 
 >[!NOTE]
 >
->此函式於at.js 2.*x* 使用供跨網域追蹤功能時。 此函式不適用於at.js版本1。*x* 版本不支援此函數。
+>此函式已在at.js 2.*x*&#x200B;中推出。 此函式不適用於at.js 1.*x*&#x200B;版。
 
 | 索引鍵 | 類型 | 必要? | 說明 |
 | --- | --- | --- | --- |
-| selector | 字串 | 無 | HTML 元素或 CSS 選取器過去會識別 [!DNL Target] 應該放置選件內容的 HTML 元素。如果未提供選取器，[!DNL Target]會假設要使用的HTML元素為HTMLHEAD。 |
-| 回應 | 物件 | 是 | 回應來自 `getOffers()` 的物件。<br />請參閱下方的「要求」表格。 |
+| selector | 字串 | 無 | HTML 元素或 CSS 選取器過去會識別 [!DNL Target] 應該放置產品建議內容的 HTML 元素。 如果未提供選取器，[!DNL Target]會假設要使用的HTML元素為HTML HEAD。 |
+| 回應 | 物件 | 是 | 來自`getOffers()`.<br />的回應物件，請參閱下方的[要求]表格。 |
 
 ## 回應
 
@@ -33,14 +39,14 @@ ht-degree: 80%
 | 欄位名稱 | 說明 |
 | --- | --- |
 | response > prefetch > views > options > content | 請注意，「選項」的內容並無明確定義，且直接取決於選項類型/範本結構。 |
-| response > prefetch > views > options > type | 選項類型。反映「內容」欄位的類型。支援的類型為動作。 |
+| response > prefetch > views > options > type | 選項類型。 反映「內容」欄位的類型。 支援的類型為動作。 |
 | response > prefetch > views > state | 不透明的檢視狀態 Token，該 Token 應隨檢視的顯示通知轉送 |
 | response > prefetch > views > options > responseTokens | 包含處理目前選項時已收集的 `responseTokens` 地圖。 |
 | response > prefetch > views > analytics > payload | 用於使用者端整合的[!DNL Analytics]裝載，套用檢視後應該傳送至[!DNL Analytics]。 |
 | response > prefetch > views > trace | 包含所有追蹤資料的物件，這些資料為各檢視的預先擷取呼叫之追蹤資料。<br />追蹤物件也包含追蹤的版本。<br />追蹤物件也包含目前檢視的詳細資訊。 |
-| response > prefetch > views > options > eventToken | 系統會為每個選項執行事件記錄。應針對每個已套用的選項，將個別事件 Token 新增至通知 Token 清單中。請注意，一個檢視是由多個選項組成。如果所有選項均已套用並顯示，則需要將所有 `eventTokens` 納入通知中。 |
+| response > prefetch > views > options > eventToken | 系統會為每個選項執行事件記錄。 應針對每個已套用的選項，將個別事件 Token 新增至通知 Token 清單中。 請注意，一個檢視是由多個選項組成。 如果所有選項均已套用並顯示，則需要將所有 `eventTokens` 納入通知中。 |
 | response > prefetch > views > name | 人類可讀的檢視名稱。 |
-| response > prefetch > views > metrics | 應監看報告量度並向 [!DNL Target] 通知。目前僅支援點擊量度。當有使用者點擊元素，就應收集適當的 `eventTokens` 並傳送通知。 |
+| response > prefetch > views > metrics | 應監看報告量度並向 [!DNL Target] 通知。 目前僅支援點擊量度。 當有使用者點擊元素，就應收集適當的 `eventTokens` 並傳送通知。 |
 | response > prefetch > views > key | 用於識別檢視的機碼或指紋。 |
 | response > prefetch > views > id | 檢視的 ID。 |
 | response > notifications > id | 通知 ID。 |
@@ -54,7 +60,7 @@ ht-degree: 80%
 | response > execute > mboxes > mbox > trace | 包含個別 mbox 要求之所有追蹤資料的物件。 |
 | response > execute > mboxes > mbox > responseTokens | 包含特定 mbox 要求執行的 `responseTokens` 地圖。 |
 | response > execute > mboxes > mbox > option > content | 請注意，「選項」的內容並無明確定義，且直接取決於選項類型/範本結構。 |
-| response > execute > mboxes > mbox > option > type | 選項類型。反映「內容」欄位的類型。支援的類型為: html、重新導向 、JSON 和動態。 |
+| response > execute > mboxes > mbox > option > type | 選項類型。 反映「內容」欄位的類型。 支援的類型為: html、重新導向 、JSON 和動態。 |
 | response > execute > mboxes > mbox > options | 回應選項。 |
 | response > execute > mboxes > mbox > metrics > eventToken | 點擊事件的 Token。 |
 | response > execute > mboxes > mbox > metrics > type | &quot;click&quot; |
@@ -64,7 +70,7 @@ ht-degree: 80%
 | response > execute > mboxes > mbox > analytics > payload | 用於使用者端整合的[!DNL Analytics]裝載，套用mbox後應該傳送至[!DNL Analytics]。 (請參閱「啟用 A4T 的促銷活動」一節)。 |
 | response > execute > mboxes | 已執行 mbox 的清單。 |
 | response > execute > pageLoad > options > content | 請注意，「選項」的內容並無明確定義，且直接取決於選項類型/範本結構。 |
-| response > execute > pageLoad > options > type | 選項類型。反映「內容」欄位的類型。支援的類型為: html、重新導向、JSON、動態和動作。 |
+| response > execute > pageLoad > options > type | 選項類型。 反映「內容」欄位的類型。 支援的類型為: html、重新導向、JSON、動態和動作。 |
 | response > execute > pageLoad > options | 未依檢視分組的選項 (target-global-mbox + 含有未依檢視分組的檢視之活動選項)。 |
 | response > execute > pageLoad > metrics | 未設定為屬於特定檢視的點擊量度。 |
 | response > execute > pageLoad > trace | 包含 PageLoad 要求之所有追蹤資料的物件。 |

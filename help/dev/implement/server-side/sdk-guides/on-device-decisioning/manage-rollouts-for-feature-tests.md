@@ -3,10 +3,15 @@ title: 管理功能測試的轉出
 description: 瞭解如何使用[!UICONTROL on-device decisioning]管理功能測試的轉出。
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -22,7 +27,7 @@ ht-degree: 0%
 1. 啟用您的A/B活動
 1. 視需要調整轉出和流量分配
 
-## 1.為您的組織啟用[!UICONTROL on-device decisioning]
+## &#x200B;1. 為您的組織啟用[!UICONTROL on-device decisioning]
 
 啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，並啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換按鈕。
 
@@ -30,11 +35,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用[!UICONTROL On-Device Decisioning]切換功能。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用[!UICONTROL On-Device Decisioning]切換功能。
 
 啟用[!UICONTROL On-Device Decisioning]切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
 
-## 2.建立[!UICONTROL A/B Test]活動
+## &#x200B;2. 建立[!UICONTROL A/B Test]活動
 
 1. 在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
@@ -44,7 +49,7 @@ ht-degree: 0%
 
    ![替代影像](assets/asset-form.png)
 
-## 3.定義您的功能和轉出設定
+## &#x200B;3. 定義您的功能和轉出設定
 
 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動(1)的名稱。 輸入應用程式中要管理功能轉出的位置名稱(2)。 例如，`ondevice-rollout`或`homepage-addtocart-rollout`是位置名稱，指出管理功能轉出的目的地。 在下列範例中，`ondevice-rollout`是為體驗A定義的位置。您可以選擇新增對象細分(4)，以限制活動的資格。
 
@@ -74,7 +79,7 @@ ht-degree: 0%
 
    ![替代影像](assets/asset-conv-rollout.png)
 
-## 4.在您的應用程式中實作及呈現功能
+## &#x200B;4. 在您的應用程式中實作及演算功能
 
 >[!BEGINTABS]
 
@@ -103,7 +108,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5.針對應用程式中的事件實作追蹤
+## &#x200B;5. 實施應用程式中事件的追蹤
 
 讓功能標幟變數在應用程式中可用後，您就可以用它來啟用任何已是應用程式一部分的功能。 如果訪客不符合活動的資格，表示他們未包含在定義為對象的10%貯體中。
 
@@ -155,11 +160,11 @@ else {
 
 >[!ENDTABS]
 
-## 6.啟用您的轉出活動
+## &#x200B;6. 啟用您的轉出活動
 
 ![替代影像](assets/asset-activate-rollout.png)
 
-## 7.視需要調整轉出和流量分配
+## &#x200B;7. 視需要調整轉出和流量分配
 
 啟動活動後，請隨時編輯活動，以視需要增加或減少流量分配。
 

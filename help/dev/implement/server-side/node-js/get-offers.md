@@ -3,10 +3,13 @@ title: 使用Node.js SDK時，在 [!DNL Adobe Target] 中使用[!UICONTROL getOf
 description: 瞭解如何使用[!UICONTROL getOffers()]執行決定並從 [!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 21%
+source-wordcount: 326
+ht-degree: 20%
 
 ---
 
@@ -35,8 +38,8 @@ TargetClient.getOffers(options: Object): Promise
 | visitorCookie | 字串 | 無 | 無 | ECID (VisitorId) Cookie |
 | targetCookie | 字串 | 無 | 無 | [!DNL Target] Cookie |
 | targetLocationHint | 字串 | 無 | 無 | [!DNL Target]位置提示 |
-| consumerId | 字串 | 否 | 無 | [!UICONTROL Analytics for Target] (A4T)拼接的consumerIds |
-| CustomerIds | 陣列 | 否 | 無 | VisitorId相容格式的客戶ID |
+| consumerId | 字串 | 無 | 無 | [!UICONTROL Analytics for Target] (A4T)拼接的consumerIds |
+| CustomerIds | 陣列 | 無 | 無 | VisitorId相容格式的客戶ID |
 | sessionId | 字串 | 無 | 無 | 用於連結多個[!DNL Target]請求 |
 | 訪客 | 物件 | 無 | 新VisitorId | 提供外部VisitorId例項 |
 
@@ -52,7 +55,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | 物件 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 物件 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 陣列 | 使用使用者端Analytics時的Analytics裝載 |
-| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant&)的清單。 |
+| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html？)的清單。 |
 | trace | 陣列 | 所有請求mbox/檢視的彙總追蹤資料 |
 | 狀態 | 物件 | 包含回應狀態的物件。 |
 | 決策方法 | 字串 | 決定要使用的決策方法（[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、伺服器端、混合式） |

@@ -4,10 +4,14 @@ description: 如何識別 [!DNL Adobe Target]中的使用者？
 keywords: 傳送api
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 7%
+source-wordcount: 789
+ht-degree: 9%
 
 ---
 
@@ -21,8 +25,8 @@ Target使用三個識別碼：
 | --- | --- |
 | `tntId` | `tntId`是使用者[!DNL Target]中的主要識別碼。 您可以提供此ID，或如果請求未包含此ID，則[!DNL Target]將自動產生此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司可透過每次呼叫傳送之使用者的識別碼。 使用者登入公司網站時，公司通常會建立ID，此ID會連結至訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 |
-| `marketingCloudVisitorId` | `marketingCloudVisitorId`用於合併和共用不同Adobe解決方案之間的資料。 必須有`marketingCloudVisitorId`才能與Adobe Analytics和Adobe Audience Manager整合。 |
-| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)以及每個訪客的已驗證狀態。 |
+| `marketingCloudVisitorId` | `marketingCloudVisitorId`用於在不同的Adobe解決方案之間合併和共用資料。 必須有`marketingCloudVisitorId`才能與Adobe Analytics和Adobe Audience Manager整合。 |
+| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每位訪客的已驗證狀態。 |
 
 ## [!DNL Target] ID
 
@@ -77,7 +81,7 @@ curl -X POST \
 
 ## Marketing Cloud 訪客 ID
 
-`marketingCloudVisitorId`是通用的永久ID，可識別Experience Cloud中所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案(如Adobe Target、Adobe Analytics或Adobe Audience Manager)中識別相同的網站訪客及其資料。 請注意，當運用並與Analytics和Audience Manager整合時，需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是通用的永久ID，可識別Experience Cloud中所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（如Adobe Target、Adobe Analytics或Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，當運用並與Analytics和Audience Manager整合時，需要`marketingCloudVisitorId`。
 
 ```
 curl -X POST \
@@ -112,7 +116,7 @@ curl -X POST \
 }'
 ```
 
-上述範例呼叫示範如何將從Experience CloudID服務擷取的`marketingCloudVisitorId`傳遞至Adobe Target。 在此案例中，[!DNL Target]會產生`tntId`，因為它未傳入原始呼叫，而原始呼叫將會對應到提供的`marketingCloudVisitorId`，如下面的回應所示。
+上述範例呼叫示範如何將從Experience Cloud ID服務擷取的`marketingCloudVisitorId`傳遞至Adobe Target。 在此案例中，[!DNL Target]會產生`tntId`，因為它未傳入原始呼叫，而原始呼叫將會對應到提供的`marketingCloudVisitorId`，如下面的回應所示。
 
 ## 第三方ID
 
@@ -169,13 +173,13 @@ curl -X POST \
 
 ## Customer ID
 
-可以新增[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)，並將其與Experience Cloud的訪客ID建立關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可考慮的驗證狀態如下：
+可以新增[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)，並將其與Experience Cloud訪客ID建立關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可考慮的驗證狀態如下：
 
 | 驗證狀態 | 使用者狀態 |
 | --- | --- |
-| `unknown` | 未知或從未驗證。 此狀態適用於訪客按一下顯示廣告而登陸您的網站等情況。 |
+| `unknown` | 未知或從未驗證 此狀態適用於訪客按一下顯示廣告而登陸您的網站等情況。 |
 | `authenticated` | 使用者目前是以您網站或應用程式上使用中的工作階段驗證。 |
-| `logged_out` | 使用者通過驗證，但主動登出。使用者有意且確定中斷驗證狀態的連結。使用者不希望具有驗證身分。 |
+| `logged_out` | 使用者通過驗證，但主動登出。 使用者有意且確定中斷驗證狀態的連結。 使用者不希望具有驗證身分。 |
 
 請注意，只有當客戶ID處於`authenticated`狀態時，Target才會參考已儲存並連結至客戶ID的使用者設定檔資料。 如果客戶ID處於`unknown`或`logged_out`狀態，將忽略客戶ID，並且不會將任何可能與其相關聯的使用者設定檔資料用於對象定位。
 
@@ -220,11 +224,11 @@ curl -X POST \
     }'
 ```
 
-上述呼叫範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=zh-Hant&?lang=zh-Hant)的別名。
+上述呼叫範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html??lang=zh-Hant)的別名。
 
 ## 合併的設定檔
 
-您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，Adobe Target將維護這些ID的對應，並將其釘選至訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hant)。
+您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，Adobe Target將維護這些ID的對應，並將其釘選至訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 ```
 curl -X POST \

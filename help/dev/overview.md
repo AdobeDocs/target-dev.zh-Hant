@@ -5,16 +5,22 @@ description: 如何實作和管理 [!DNL Adobe Target] ，以及如何使用其A
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 599aa4c965e331bb2681523d50708a03fc933875
+TQID: https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0id: c93393a4-e558-47e1-992e-c91ed4d480ceid: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101eid: c011fe9c-b94b-4a88-93d8-f2acece55112id: c5abb976-5170-45d6-bcac-66d15d10a4d4id: cd7b6938-5837-4ee0-9790-5840997133d9id: e22d67ea-317b-44f8-abd1-52e07f636ca8id: fc9c2184-9102-403f-bd6c-0055021e4beaid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: 501
+ht-degree: 11%
 
 ---
 
 # [!DNL Adobe Target] 開發人員指南
 
-**（[檢視 [!DNL Target] 檔案更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=zh-Hant){target=_blank}）**
+**（[檢視 [!DNL Target] 檔案更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
 此&#x200B;*[!DNL Adobe Target]開發人員指南*&#x200B;為[!DNL Target]開發人員提供資源和指南，包括實施和管理[!DNL Target]的API和SDK檔案。
 
@@ -24,9 +30,9 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target]商務從業者指南&#x200B;*](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant){target=_blank}
 >
->* [*[!DNL Adobe Target]教學課程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hant){target=_blank}
+>* [*[!DNL Adobe Target]教學課程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html){target=_blank}
 >
->如需版本資訊，請參閱[商業從業者指南](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hant){target=_blank}中的&#x200B;*[!DNL Adobe Target]Target發行說明（最新）*。
+>如需版本資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[Target發行說明（最新）](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}。
 
 ## 實作快速入門
 
@@ -34,7 +40,7 @@ ht-degree: 6%
 
 ## 使用者端實施
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)： [!DNL Adobe Experience Platform Web SDK]可讓您透過[!DNL Experience Cloud]與[!DNL Target] （包括[!UICONTROL Adobe Experience Edge Network]）中的各種服務互動。
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)： [!DNL Adobe Experience Platform Web SDK]可讓您透過[!UICONTROL Adobe Experience Edge Network]與[!DNL Experience Cloud] （包括[!DNL Target]）中的各種服務互動。
 
 [**Target at.js JavaScript資料庫**](/help/dev/implement/client-side/overview.md)： at.js JavaScript資料庫可改善Web實施的頁面載入時間、改善安全性，以及為單頁應用程式提供更好的實施選項。
 
@@ -60,9 +66,9 @@ ht-degree: 6%
 
 ## 行動應用程式實施
 
-[**AEP Mobile SDK總覽**](implement/mobile/overview.md)：如何使用[!DNL Adobe Target] Mobile SDK實作[!DNL Adobe Experience Platform]的總覽。
+[**AEP Mobile SDK總覽**](implement/mobile/overview.md)：如何使用[!DNL Adobe Experience Platform] Mobile SDK實作[!DNL Adobe Target]的總覽。
 
-[**AEP Mobile SDK參考**](https://developer.adobe.com/client-sdks/documentation/)：使用[!DNL Adobe Target] Mobile SDK實作[!DNL Adobe Experience Platform]。
+[**AEP Mobile SDK參考**](https://developer.adobe.com/client-sdks/documentation/)：使用[!DNL Adobe Experience Platform] Mobile SDK實作[!DNL Adobe Target]。
 
 ## 電子郵件實作
 
@@ -86,18 +92,18 @@ ht-degree: 6%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/)：透過Adobe「使用者管理」和「使用者同步API」來管理使用者和產品權益。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hant)：將[!DNL Adobe Experience Platform Edge Network Server] API用於各種資料收集、個人化、廣告和行銷使用案例。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：將[!DNL Adobe Experience Platform Edge Network Server] API用於各種資料收集、個人化、廣告和行銷使用案例。
 
 ## 資源
 
 * [Adobe開放原始碼存放庫](https://github.com/adobe)
 * [目標節點JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
-* [目標節點JS SDK範例存放庫](https://github.com/adobe/target-nodejs-sdk-samples)
+* [Target節點JS SDK範例存放庫](https://github.com/adobe/target-nodejs-sdk-samples)
 * [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
 * [Target Java SDK範例存放庫](https://github.com/adobe/target-java-sdk-samples)
 * [Target實作](./before-implement/prepare-to-implement-target.md)
 * [Target管理](./before-administer/target-api-overview.md)
 * [Adobe Target開發檔案GitHub存放庫](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target發行說明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hant)
+* [Adobe Target發行說明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Adobe Target商業使用手冊](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant)
 

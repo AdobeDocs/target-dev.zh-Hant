@@ -3,9 +3,13 @@ title: 如何在 [!DNL Adobe Target] Node.js SDK中使用非同步要求
 description: 瞭解 [!DNL Target] Node.js SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/cIoEnAinSLl-TO2vunG164i97Y2h-9NdE487ZyXJSzs
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: 116
 ht-degree: 18%
 
 ---
