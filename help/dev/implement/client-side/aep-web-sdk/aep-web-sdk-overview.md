@@ -5,11 +5,22 @@ title: 如何使用[!UICONTROL Experience Platform Web SDK]實作？
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
 TQID: https://experienceleague.adobe.com/j3-KSuCkcyyTB2KG4Icm2E7xpAfcuPkaOlhxitd5q-4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 714
@@ -32,7 +43,7 @@ ht-degree: 11%
 
 ### 使用[!DNL Platform Web SDK]實作[!DNL Adobe Experience Cloud]
 
-瞭解如何使用[!DNL Adobe Experience Platform Web SDK]搭配[本教學課程](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)實作[!DNL Experience Cloud]應用程式。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Platform Web SDK設定 [!DNL Target] ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
+瞭解如何使用[!DNL Adobe Experience Platform Web SDK]搭配[本教學課程](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)實作[!DNL Experience Cloud]應用程式。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Platform Web SDK設定 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
 
 ### 將[!DNL Target]從at.js 2.*x*&#x200B;移轉至[!DNL Platform Web SDK]
 
@@ -49,7 +60,7 @@ ht-degree: 11%
 | [客群](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) | [!DNL Target]中的對象會決定哪些人可以看到鎖定目標活動中的內容與體驗。<p>請參閱[使用對象清單](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#use-list)和[結合多個對象](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html)。 |
 | [建立客群](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html??lang=zh-Hant) | 使用在[!DNL Adobe Experience Platform]中建立的對象可提供更豐富的客戶資料，從而帶來更具影響力的個人化。<p>請參閱[使用來自Adobe Experience Platform](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#aep)的對象。 |
 | [優惠決定](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html) | 將在[!DNL Adobe Journey Optimizer]中建立的報價決定新增至[!DNL Target]個活動（手動A/B測試或體驗鎖定目標），以決定並為您的網路和行動裝置上的訪客提供下一個最佳報價。 |
-| [重新導向產品建議 - A4T 常見問答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | 重新導向選件會使訪客的瀏覽器重新導向至新頁面。<p>請參閱[ [!UICONTROL Adobe Experience Platform Web SDK]是否支援A4T的重新導向選件？](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform) |
+| [重新導向產品建議 - A4T 常見問答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | 重新導向選件會使訪客的瀏覽器重新導向至新頁面。<p>請參閱[&#x200B; [!UICONTROL Adobe Experience Platform Web SDK]是否支援A4T的重新導向選件？](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform) |
 | [回應權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) | 回應Token可讓您將[!DNL Target]資料傳送至Google Analytics和其他協力廠商整合。<p>請參閱[透過Platform Web SDK傳送資料至Google Analytics](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html#sending-data-to-google-analytics-via-platform-web-sdk)，檢視如何完成此工作的程式碼範例。 |
 | 在&#x200B;*[!UICONTROL Platform Web SDK]總覽*&#x200B;指南中的[單頁應用程式實作](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html)。 | [!UICONTROL Adobe Experience Platform Web SDK]提供豐富的功能，讓貴公司能以新世代使用者端技術(例如單頁應用程式(SPA))為基礎進行個人化。 |
 | [TLS (傳輸層安全性) 加密變更](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS （傳輸層安全性）可協助您維持最高安全性標準，提升客戶資料的安全性。 |

@@ -6,11 +6,16 @@ feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 611
@@ -22,7 +27,7 @@ ht-degree: 0%
 
 本文分享在行動應用程式中實作[!DNL Adobe Target]的最佳作法，該應用程式使用原生程式碼，並使用[!DNL Adobe Experience Platform Mobile SDK]搭配Web檢視。
 
-本文使用GitHub存放庫](https://github.com/adobe/aep-sdk-app/){target=_blank}以[Swift撰寫的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}及[!DNL Target]整合範例，作為iOS應用程式。
+本文使用GitHub存放庫[&#128279;](https://github.com/adobe/aep-sdk-app/){target=_blank}以Swift撰寫的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}及[!DNL Target]整合範例，作為iOS應用程式。
 
 在真實世界中，您的企業應用程式可能會使用行動應用程式中的網頁檢視。 網頁檢視是使用URL載入網頁的容器。 此容器類似於沒有控制項的瀏覽器視窗。 在iOS中，處理網頁時， Web檢視容器會當作Safari瀏覽器運作。
 
