@@ -40,8 +40,8 @@ ht-degree: 52%
 
 | 整合 | 詳細資料 |
 |--- |--- |
-| [!UICONTROL Analytics for Target] (A4T) | 請參閱 [Adobe Analytics 做為 Adobe Target (A4T) 的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)。 |
-| [!UICONTROL Profiles & Audiences] (P&amp;A) | 請參閱&#x200B;*核心服務使用手冊*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html??lang=zh-Hant)。 |
+| [!UICONTROL Analytics for Target] (A4T) | 請參閱 [Adobe Analytics 做為 Adobe Target (A4T) 的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)。 |
+| [!UICONTROL Profiles & Audiences] (P&amp;A) | 請參閱&#x200B;*核心服務使用手冊*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html?lang=zh-Hant&?lang=zh-Hant)。 |
 | [!UICONTROL Experience Cloud ID Service] | 請參閱 [Adobe Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html)。 |
 | [!UICONTROL Tags in Adobe Experience Platform] | [!UICONTROL Tags in Adobe Experience Platform]是新一代[!DNL Adobe]標籤管理功能。 [!UICONTROL Tags]可讓客戶透過簡單的方式部署及管理必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。 請參閱[使用Adobe Experience Platform](../how-to-deployatjs/implement-target-using-adobe-launch.md)實作 [!DNL Target] 。 |
 | [!UICONTROL Adobe Experience Manager] (AEM) Cloud Service | [!UICONTROL AEM Cloud Service]可讓您在AEM工作流程中建立[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting]活動。 支援at.js (含[!UICONTROL Adobe Experience Manager] 6.2 (含FP-11577 （或更新版本）)。 如需詳細資訊，請參閱[與 [!DNL Adobe Target]整合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)，並選取您的AEM版本。 |
