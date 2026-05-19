@@ -3,10 +3,15 @@ title: 在 [!DNL Adobe Target] Java SDK中實作Proxy設定
 description: 瞭解如何在 [!DNL Adobe Target] Java SDK中設定TargetClient Proxy設定。
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
+TQID: https://experienceleague.adobe.com/Vo8KrM-3AGIvoO-E-iAQcAPqzXE24BM30LX7ji5E2Nk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 1%
+source-wordcount: 170
+ht-degree: 2%
 
 ---
 
@@ -14,7 +19,7 @@ ht-degree: 1%
 
 ## 基本代理伺服器
 
-如果執行SDK的應用程式需要Proxy才能存取網際網路，則`TargetClient`必須設定為Proxy設定，如下所示。
+如果執行SDK的應用程式需要Proxy來存取網際網路，則`TargetClient`必須設定如下Proxy設定。
 
 ### 基本Proxy設定
 

@@ -5,10 +5,23 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -18,7 +31,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->如果您在&#x200B;*初始化SDK*&#x200B;中的[設定自動頁面載入要求步驟](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic)期間啟用了自動頁面載入要求，除非您想要呼叫Adobe Target SDK以使用地區位置要求呈現其他體驗，否則可以略過此活動。
+>如果您在&#x200B;*初始化SDKS*&#x200B;的[設定自動頁面載入要求步驟](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic)期間啟用了自動頁面載入要求，除非您想要呼叫Adobe Target SDK以使用地區位置要求呈現其他體驗，否則可以略過此活動。
 
 >[!TIP]
 >
@@ -44,7 +57,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 * [3.6：自訂條件](#custom)
 * [3.7：提供包含規則中使用的屬性](#inclusion)
 * [3.8：提供excludedIds](#exclude)
-* [3.9：提供實體屬性以更新Recommendations的產品目錄](#entity-attributes)
+* [3.9：提供實體屬性，以更新Recommendations的產品目錄](#entity-attributes)
 * [3.10：提供用來作為包含規則索引鍵的設定檔屬性](#keys)
 * [3.11：引發頁面載入請求](#fire)
 * [3.12：引發地區位置要求](#location)
@@ -53,7 +66,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 建立活動時，在[!DNL Target] UI中選擇「前面」或「後面」促銷活動，以新增促銷專案並控制其在建議設計中的放置位置。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用選項**
 
@@ -77,7 +90,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 根據使用者的購物車內容提供建議。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用的條件**
 
@@ -101,7 +114,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 根據您的網站上專案的整體人氣或根據訪客最喜愛或檢視次數最多的類別、品牌、型別等內的專案人氣提供建議。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用的條件**
 
@@ -120,7 +133,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [以熱門程度為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -130,7 +143,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 根據找到使用者正在檢視或最近檢視的專案的類似專案提供建議。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用的條件**
 
@@ -146,7 +159,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* 以[專案為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -156,7 +169,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 根據使用者的行為提供建議。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用的條件**
 
@@ -169,7 +182,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [以使用者為基礎](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -179,7 +192,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 根據您上傳的自訂檔案提出建議。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **可用的條件**
 
@@ -199,7 +212,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 ## 3.7：提供包含規則中使用的屬性 {#inclusion}
 
-+++查看詳細資料
++++檢視詳細資料
 
 **讀數**
 
@@ -213,11 +226,11 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 傳遞要從建議中排除之實體的實體ID。 例如，您可以排除已在購物車中的項目。
 
-+++查看詳細資料
++++檢視詳細資料
 
 **讀數**
 
-* [我可以動態排除實體嗎？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hant#exclude){target=_blank}
+* [是否可以動態地排除實體?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hant#exclude){target=_blank}
 
 +++
 
@@ -225,7 +238,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 ## 3.9：提供實體屬性以更新[!DNL Recommendations]的產品目錄 {#entity-attributes}
 
-+++查看詳細資料
++++檢視詳細資料
 
 **讀數**
 
@@ -245,7 +258,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [設定檔屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant){target=_blank}
+* [輪廓屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant){target=_blank}
 
 +++
 
@@ -255,7 +268,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant){target=_blank} (VEC)中編寫的體驗。
 
-+++查看詳細資料
++++檢視詳細資料
 
 ![引發頁面載入要求圖表](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
@@ -280,7 +293,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 此步驟會在其要求中觸發具有`execute` > `mboxes`裝載的[!DNL Delivery API]呼叫。 `getOffers`方法會擷取體驗，而`applyOffers`會將體驗呈現至頁面。 您可以在`execute` > `mboxes`裝載下傳送多個mbox。
 
-+++查看詳細資料
++++檢視詳細資料
 
 ![引發區域位置要求圖表](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 

@@ -3,16 +3,21 @@ title: 開始使用 [!DNL Adobe Target] .NET SDK
 description: 瞭解 [!DNL Adobe Target] 客戶如何安裝、初始化及使用.NET SDK。
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: 140
 ht-degree: 2%
 
 ---
 
-# .NET SDK總覽
+# .NET SDK概觀
 
-本參考指南說明[!DNL Adobe Target]客戶如何安裝、初始化和使用.NET SDK。
+本參考指南說明[!DNL Adobe Target]客戶如何安裝、初始化及使用.NET SDK。
 
 ## 先決條件
 
@@ -25,7 +30,7 @@ ht-degree: 2%
 
 ## 範例應用程式
 
-測試方案the.NET SDK：
+試用方案the.NET SDK：
 
 * 造訪[[!DNL Adobe Target] [!UICONTROL on-device decisioning]示範網站](https://github.com/adobe/on-device-decisioning-demo-site)
 * 在[範例應用程式](../sdk-guides/sample-apps/sample-apps.md)中。

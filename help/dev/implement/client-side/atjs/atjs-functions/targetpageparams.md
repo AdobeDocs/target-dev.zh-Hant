@@ -4,10 +4,22 @@ description: 使用適用於 [!DNL Adobe Target] at.js JavaScript程式庫的[!U
 title: 如何使用[!UICONTROL targetPageParams()]函式？
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/xaSxd1biZ8G-LmgYN4YW9BZ2lDyjZyPHOOlfnbXC2jU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 68%
+source-wordcount: 162
+ht-degree: 69%
 
 ---
 
@@ -15,7 +27,7 @@ ht-degree: 68%
 
 此方法允許您將參數從要求程式碼外部附加至全域 mbox。
 
-對於要在多個 mbox 呼叫上併入相同的一組參數，此函數很實用。函數需要由客戶定義。它應該傳回僅會傳遞至全域 mbox 要求的參數陣列。可以在at.js載入前或在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]**&#x200B;中定義此函式。
+對於要在多個 mbox 呼叫上併入相同的一組參數，此函數很實用。 函數需要由客戶定義。 它應該傳回僅會傳遞至全域 mbox 要求的參數陣列。 可以在at.js載入前或在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]**&#x200B;中定義此函式。
 
 您可以使用 `[!UICONTROL targetPageParams()]` 函數，透過下列任何方式將參數傳入 target-global-mbox 中:
 

@@ -3,10 +3,20 @@ title: 如何設定 [!DNL Adobe Target] API的驗證
 description: 如何產生成功與 [!DNL Adobe Target] API互動所需的驗證權杖？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1785'
-ht-degree: 0%
+source-wordcount: 1937
+ht-degree: 1%
 
 ---
 
@@ -36,13 +46,13 @@ ht-degree: 0%
 | 資源 | 詳細資料 |
 | --- | --- |
 | Postman | 為了成功完成這些步驟，請取得您作業系統的[Postman應用程式](https://www.postman.com/downloads/)。 Postman basic可免費建立帳戶。 雖然一般而言使用[!DNL Adobe Target] API並不需要，但Postman可讓API工作流程更輕鬆，[!DNL Adobe Target]提供多個Postman集合以協助執行其API並瞭解其運作方式。 本指南的其餘部分假設您具備Postman的工作知識。 如需協助，請參閱[Postman檔案](https://learning.getpostman.com/)。 |
-| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<ul><li>[Adobe I/O的Github](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
+| 參考 | 在本指南的其餘部分中假設您熟悉以下資源：<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理員和設定檔API檔案](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API檔案](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## 建立Adobe I/O專案
 
 在此區段中，您將存取[!DNL Adobe Developer Console]並建立[!DNL Adobe Target]的專案。 如需詳細資訊，請參考專案[&#128279;](https://developer.adobe.com/developer-console/docs/guides/projects/)上的檔案。
 
-&lt;！—(1. 根據有關驗證[&#128279;](https://developer.adobe.com/developer-console/docs/guides/authentication/)的檔案產生您的私密金鑰和公開憑證。 // [//]： # （如[的&#x200B;**步驟1**&#x200B;中所述）如何設定AdobeIO：驗證 — 逐步進行](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步驟1後，請返回本指南並繼續執行以下步驟2。//此步驟的結果應該是建立`private.key`檔案和`certificate_pub.crt`檔案。 產生這兩個檔案之後，請回到本指南。)—>
+&lt;!---(1. 根據有關驗證[&#128279;](https://developer.adobe.com/developer-console/docs/guides/authentication/)的檔案，產生您的私密金鑰和公開憑證。 // [//]： # （如[的&#x200B;**步驟1**&#x200B;中所述）如何設定Adobe IO：驗證 — 逐步進行](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步驟1後，請返回本指南並繼續執行以下步驟2。 //此步驟的結果應該是建立`private.key`檔案和`certificate_pub.crt`檔案。 產生這兩個檔案之後，請回到本指南。)—>
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)層級存取權。
 
@@ -74,28 +84,28 @@ ht-degree: 0%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-products-and-profiles.html)。 (如果您未使用屬性，請選取「預設Workspace」選項)。 按一下 **[!UICONTROL Save configured API]**。
+1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用屬性，請選取「預設Workspace」選項）。 按一下 **[!UICONTROL Save configured API]**。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
-1. 按一下&#x200B;**[!UICONTROL Create Integration]**。 您應該會收到暫時訊息，指出您的API已成功設定。
+1. 按一下 **[!UICONTROL Create Integration]**。 您應該會收到暫時訊息，指出您的API已成功設定。
 1. 最後一個步驟，請將專案重新命名為比原始`Project 1`更有意義的名稱。 若要這麼做，請使用導覽路徑顯示來導覽至專案，按一下&#x200B;**[!UICONTROL Edit project]**&#x200B;以存取&#x200B;**[!UICONTROL Edit Project]**&#x200B;強制回應視窗，然後重新命名專案。
 
    ![configure-io-target-createproject11](assets/configure-io-target-createproject11.png)
 
 >[!NOTE]
 >
->在此範例中，我們將專案命名為「[!DNL Target]整合」。 如果您預計使用專案的時間會超過[!DNL Adobe Target]，建議您據以命名。 例如，您可能會選擇將其命名為「AdobeAPI」或「Experience CloudAPI」，因為它可與Adobe Experience Cloud中的其他解決方案搭配使用。
+>在此範例中，我們將專案命名為「[!DNL Target]整合」。 如果您預計使用專案的時間會超過[!DNL Adobe Target]，建議您據以命名。 例如，您可選擇將其命名為「Adobe APIs」或「Experience Cloud APIs」，因為可與Adobe Experience Cloud中的其他解決方案搭配使用。
 
 ## 匯出專案詳細資料
 
-現在您已擁有可用於存取[!DNL Target]的Adobe專案，您必須確定已連同您的AdobeAPI要求一起傳送該專案的詳細資料。 需要這些詳細資料才能與多個AdobeAPI互動，包括多個[!DNL Target] API。 例如，整合詳細資料包含[!DNL Target] Admin API所需的授權和驗證資訊。 因此，若要搭配Postman使用API，您必須將這些詳細資料帶入Postman。
+現在您擁有可用於存取[!DNL Target]的Adobe專案，您必須確定已傳送該專案的詳細資訊以及Adobe API請求。 需要這些詳細資料才能與多個Adobe API互動，包括多個[!DNL Target] API。 例如，整合詳細資料包含[!DNL Target] Admin API所需的授權和驗證資訊。 因此，若要搭配Postman使用API，您必須將這些詳細資料帶入Postman。
 
-有許多方式可在Postman中指定您專案的詳細資料，但在本節中，我們利用了某些預先建立的功能和集合。 首先（在本節中），您會將整合的詳細資訊匯出至Postman環境。 接下來（在以下區段中），您將產生持有者存取權杖，以授予您存取必要Adobe資源的許可權。
+有許多方式可在Postman中指定您專案的詳細資料，但在本節中，我們利用了某些預先建立的功能和集合。 首先（在本節中），您會將整合的詳細資訊匯出至Postman環境。 接下來（在以下小節中），您將產生持有者存取權杖，以授予您存取必要Adobe資源的許可權。
 
 >[!NOTE]
 >
->如需適用於任何Experience Cloud解決方案（包括[!DNL Target]）的視訊指示，請參閱[使用Postman搭配Experience PlatformAPI](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant)。 以下區段與[!DNL Target] API有關： 1. 建立Experience Platform API並將其匯出至Postman 2。 使用Postman產生存取權杖。 以下也提供這些步驟。
+>如需適用於任何Experience Cloud解決方案（包括[!DNL Target]）的視訊指示，請參閱[將Postman與Experience Platform API搭配使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant)。 以下區段與[!DNL Target] API有關： 1. 建立Experience Platform API並將其匯出至Postman 2。 使用Postman產生存取權杖。 以下也提供這些步驟。
 
 1. 仍然在[Adobe Developer Console](https://developer.adobe.com/console/home)中，瀏覽以檢視您新專案的&#x200B;**[!UICONTROL Service Account (JWT)]**&#x200B;認證。 使用左側導覽或&#x200B;**[!UICONTROL Credentials]**&#x200B;區段，如圖所示。
 
@@ -129,7 +139,7 @@ ht-degree: 0%
 
    ![JWT6](assets/configure-io-target-jwt6.png)
 
-1. 注意`CLIENT_SECRET`和`API_KEY` （以及其他變數）已預先填入其值，取自您在Adobe Developer Console中定義的整合。 (Postman `CLIENT_SECRET`變數應符合Developer Console中顯示的`CLIENT SECRET`個Adobe認證，而Postman中的`API_KEY`也應符合Developer Console中的`CLIENT ID`。) 相較之下，`PRIVATE_KEY`、`JWT_TOKEN`和`ACCESS_TOKEN`則為空白。 讓我們從提供`PRIVATE_KEY`值開始。
+1. 注意`CLIENT_SECRET`和`API_KEY` （以及其他變數）已預先填入其值，取自您在Adobe Developer Console中定義的整合。 （Postman `CLIENT_SECRET`變數應符合Developer Console中顯示的`CLIENT SECRET` Adobe認證，而Postman中的`API_KEY`也應符合Developer Console中的`CLIENT ID`。） 相較之下，`PRIVATE_KEY`、`JWT_TOKEN`和`ACCESS_TOKEN`則為空白。 讓我們從提供`PRIVATE_KEY`值開始。
 
    ![JWT7](assets/configure-io-target-jwt7.png)
 
@@ -149,9 +159,9 @@ ht-degree: 0%
 
 ## 產生持有者存取權杖
 
-在本節中，您會產生持有者存取權杖，這是驗證您與[!DNL Adobe Target] API的互動所需的權杖。 若要產生持有者存取權杖，您必須將整合詳細資訊（建立於上述章節）傳送至[AdobeIdentity Management服務(IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)。 有幾種方法可以達成此目的，但在本指南中，我們利用了包含預先建立IMS呼叫的Postman集合，讓程式簡單明瞭。 匯入集合後，您可以視需要重複使用，不僅為[!DNL Adobe Target]產生新權杖，也為其他AdobeAPI產生新權杖。
+在本節中，您會產生持有者存取權杖，這是驗證您與[!DNL Adobe Target] API的互動所需的權杖。 若要產生持有者存取權杖，您必須將整合詳細資訊（建立於上述章節）傳送至[Adobe Identity Management服務(IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)。 有幾種方法可以達成此目的，但在本指南中，我們利用了包含預先建立IMS呼叫的Postman集合，讓程式簡單明瞭。 匯入集合後，您可以視需要重複使用，不僅為[!DNL Adobe Target]產生新權杖，也為其他Adobe API產生新權杖。
 
-1. 導覽至[AdobeIdentity Management服務API範例呼叫](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)。
+1. 導覽至[Adobe Identity Management Service API範例呼叫](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)。
 
    ![語彙基元1](assets/configure-io-target-generatetoken1.png)
 
@@ -167,7 +177,7 @@ ht-degree: 0%
 
    ![語彙基元4](assets/configure-io-target-generatetoken4.png)
 
-1. 在Adobe I/O存取權杖產生Postman集合中選取&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;要求，確定已選取您的環境，然後按一下&#x200B;**[!UICONTROL Send]**&#x200B;以產生權杖。
+1. 在Adobe I/O存取權杖產生Postman集合中選取&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;請求，確定已選取您的環境，然後按一下&#x200B;**[!UICONTROL Send]**&#x200B;以產生權杖。
 
    ![語彙基元5](assets/configure-io-target-generatetoken5.png)
 
@@ -185,7 +195,7 @@ ht-degree: 0%
 
 問題：我是否必須使用Adobe I/O存取權杖產生Postman集合來產生JSON Web權杖(JWT)和持有者存取權杖？
 
-答案：否。 Adobe I/O存取權杖產生Postman集合可方便在Postman中更輕鬆地產生JWT和持有者存取權杖。 或者，您可以使用Adobe Developer Console中的功能來手動產生持有者存取權杖。
+答案：否。 Adobe I/O存取權杖產生Postman集合可讓您在Postman中更輕鬆地產生JWT和持有者存取權杖。 或者，您可以使用Adobe Developer Console中的功能來手動產生持有者存取權杖。
 
 ## 測試持有者存取權杖
 
@@ -199,7 +209,7 @@ ht-degree: 0%
 
    ![testtoken1](assets/configure-io-target-testtoken1.png)
 
-1. 請注意，變數（例如`{{access_token}}`）一開始無法解析。 您可以用數種不同的方式解決此問題 — 例如，您可以定義稱為`{{access_token}}`的新集合變數 — 但在本指南中，您將改為變更API請求，以運用您先前使用的Postman環境。 如此一來，環境就能繼續以單一、一致的方式整合AdobeAPI間所有通用變數。
+1. 請注意，變數（例如`{{access_token}}`）一開始無法解析。 您可以用數種不同的方式解決此問題 — 例如，您可以定義稱為`{{access_token}}`的新集合變數 — 但在本指南中，您將改為變更API請求，以運用您先前使用的Postman環境。 這可讓環境繼續以Adobe API通用所有變數的單一、一致合併方式運作。
 
    ![testtoken2](assets/configure-io-target-testtoken2.png)
 
@@ -231,4 +241,4 @@ ht-degree: 0%
 
    ![testtoken6](assets/configure-io-target-testtoken6.png)
 
-現在您已驗證Adobe驗證，您可以用它與[!DNL Adobe Target] API (以及其他AdobeAPI)互動。 例如，您可以[使用Recommendations API](recs-api/overview.md)來建立或管理建議，或者可搭配[Target傳送API](/help/dev/implement/delivery-api/overview.md)使用。
+現在您已驗證Adobe驗證，您可以用它與[!DNL Adobe Target] API （以及其他Adobe API）互動。 例如，您可以[使用Recommendations API](recs-api/overview.md)來建立或管理建議，也可以搭配[Target傳送API](/help/dev/implement/delivery-api/overview.md)使用。

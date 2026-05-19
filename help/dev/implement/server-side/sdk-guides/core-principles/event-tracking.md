@@ -3,9 +3,18 @@ title: 事件追蹤
 description: 使用 [!DNL Adobe Target]的事件追蹤功能，有效測量對您的業務與使用案例而言最重要的量度。
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: 528
 ht-degree: 1%
 
 ---
@@ -30,11 +39,11 @@ ht-degree: 1%
 | --- | --- |
 | 轉換 | 已檢視頁面、已檢視mbox，以及按一下mbox |
 | 收入 | 已檢視mbox並按一下mbox |
-| 參與 | 頁面檢視、客戶評分和網站逗留時間 |
+| 參與度 | 頁面檢視、客戶評分和網站逗留時間 |
 
 ## 閱聽的觸發方式
 
-Target SDK會呼叫基礎[傳送API](/help/dev/implement/delivery-api/overview.md)。 當具有必要引數的執行物件位於請求本身中時，曝光會自動遞增以用於合格活動。 自動增加曝光次數的SDK方法為：
+Target SDK會呼叫基礎[傳送API](/help/dev/implement/delivery-api/overview.md)。 當具有必要引數的執行物件位於請求本身中時，曝光會自動遞增以用於合格活動。 自動增加曝光次數的SDK方法如下：
 
 * getOffers()
 * getAttributes()

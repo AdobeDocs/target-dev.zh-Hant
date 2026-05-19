@@ -1,13 +1,31 @@
 ---
-keywords: serverstate， targetGlobalSettings， targetglobalsettings， globalSettings， globalsettings，全域設定， at.js，函式，函式， clientCode， clientcode， serverDomain， serverdomain， cookieDomain， serverstate5， serverstate6， serverstate7， serverstate8， serverstate9， targetGlobalSettings0， targetGlobalSettings1， targetGlobalSettings2， targetGlobalSettings5， cookiedomain， crossCrossDomain， crocrossDomain， cross， globalMboxAutoCreate， visitorApiTimeout， defaultContentHiddenStyle， defaultContentVisibleStyle， bodyHiddenStyle， bodyHidingEnabled， imsOrgId， secureOnly， overrideMboxEdgeServerTimeout， cookiedomain5， cookiedomain6， cookiedomain7， cookiomain8， cookiomain9， crossDomain0， crossCrossCroadDomain1， crossCrossDomain1， crossCrossCrossCrossDomain1， cross2， crossCrossDomain2， cross3， cross Domain4、crossDomain5、optoutEnabled、optout、opt out、selectorsPollingTimeout、dataProviders、Hybrid Personalization、deviceIdLifetime
+keywords: serverstate， targetGlobalSettings， targetglobalsettings， globalSettings， globalsettings，全域設定， at.js，函式，函式， clientCode， clientcode， serverDomain， serverdomain， cookieDomain， serverstate5， serverstate6， serverstate8， serverstate9， targetGlobalSettings0， targetGlobalSettings1， targetGlobalSettings2， targetGlobalSettings3， target4， cookiedomain5， cookies， cookiedomain， crossCross， cross timeout， globalMboxAutoCreate， visitorApiTimeout， defaultContentHiddenStyle， defaultContentVisibleStyle， bodyHidingEnabled， imsOrgId， secureOnly， overrideMboxEdgeServerTimeout， cookiedomain5， cookiedomain6， cookiedomain7， cookiedomain8， cookiomain9， crossDomain0， crossCrossDomain1， crossCrossDomain1， crossCrossDomain2， crossCrossCrossDomain3， cross crossDomain4， crossDomain5， optoutEnabled， optout， opt out， selectorsPollingTimeout， dataProviders， Hybrid Personalization， deviceIdLifetime
 description: 使用 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL targetGlobalSettings()]函式來覆寫設定，而不使用 [!DNL Target] UI或REST API。
 title: 如何使用[!UICONTROL targetGlobalSettings()]函式？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
+TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 18%
+source-wordcount: 2702
+ht-degree: 17%
 
 ---
 
@@ -67,7 +85,7 @@ ht-degree: 18%
 
 * **類型:** 字串
 * **預設值**：透過UI設定的值。
-* **描述**：指出是否啟用跨網域追蹤。 允許的值取決於您的at.js版本。 針對at.js v1。*x*，藉由選取`enabled` （瀏覽器同時設定第一方和第三方Cookie），指定跨網域功能是`disabled` (僅瀏覽器在您的網域中設定Cookie （第一方Cookie）)、`x only` （僅瀏覽器在[!DNL Target]的網域中設定Cookie）或兩者皆有。 針對at.js v2.10和更新版本，請指定跨網域功能是`enabled` （瀏覽器同時設定第一方和第三方Cookie）還是`disabled` （瀏覽器未設定第三方Cookie）。
+* **描述**：指出是否啟用跨網域追蹤。 允許的值取決於您的at.js版本。 針對at.js v1.*x*，藉由選取`enabled` （瀏覽器同時設定第一方和第三方Cookie），指定跨網域功能是`disabled` (瀏覽器在您的網域中設定Cookie （僅限第一方Cookie）)、`x only` （瀏覽器僅在[!DNL Target]的網域中設定Cookie）或兩者皆有。 針對at.js v2.10和更新版本，請指定跨網域功能是`enabled` （瀏覽器同時設定第一方和第三方Cookie）還是`disabled` （瀏覽器未設定第三方Cookie）。
 
 ### cspScriptNonce
 
@@ -102,7 +120,7 @@ ht-degree: 18%
 
   僅伺服器端是預設的決策方法，可在您的Web屬性上實作和部署at.js 2.5以上版本時立即使用。
 
-  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant)活動。
+  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[建議](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活動。
 
   此外，使用[!DNL Target]的使用者設定檔來增強您的個人化體驗（此設定檔會跨工作階段和管道儲存），可為您的業務提供強大的成果。
 
@@ -172,7 +190,7 @@ ht-degree: 18%
 
 * **型別**：布林值
 * **預設值**： false
-* **說明**： [!DNL Target]透過Adobe Experience Platform提供選擇加入功能支援，以協助支援您的同意管理策略。 選擇加入功能可讓客戶控制引發 [!DNL Target] 標記的方法和時機。也可選擇透過Adobe Experience Platform預先核准[!DNL Target]標籤。 若要啟用在[!DNL Target] at.js資料庫中使用選擇加入的功能，請新增`optinEnabled=true`設定。 在Adobe Experience Platform中，您必須在擴充功能安裝檢視中，從「GDPR選擇加入」下拉式清單選取「啟用」。 如需詳細資訊，請參閱[Adobe Experience Platform檔案](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)。 如需此設定與隱私權及資料保護規範(包括歐盟一般資料保護規範(GDPR)及加州消費者隱私保護法(CCPA))相關的詳細資訊，請參閱[隱私權及資料保護規範](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)。
+* **說明**： [!DNL Target]透過Adobe Experience Platform提供選擇加入功能支援，以協助支援您的同意管理策略。 選擇加入功能可讓客戶控制引發 [!DNL Target] 標記的方法和時機。 也可選擇透過Adobe Experience Platform預先核准[!DNL Target]標籤。 若要啟用在[!DNL Target] at.js資料庫中使用選擇加入的功能，請新增`optinEnabled=true`設定。 在Adobe Experience Platform中，您必須在擴充功能安裝檢視中，從「GDPR選擇加入」下拉式清單選取「啟用」。 如需詳細資訊，請參閱[Adobe Experience Platform檔案](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)。 如需此設定與隱私權及資料保護規範(包括歐盟一般資料保護規範(GDPR)及加州消費者隱私保護法(CCPA))相關的詳細資訊，請參閱[隱私權及資料保護規範](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)。
 
 ### optoutEnabled
 
@@ -186,7 +204,7 @@ ht-degree: 18%
 * **預設值**： true （從at.js 1.6.2版開始true）
 * **描述**：指出應使用`<clientCode>.tt.omtrdc.net`網域或`mboxedge<clusterNumber>.tt.omtrdc.net`網域。
 
-  如果此值為true，則會將`mboxedge<clusterNumber>.tt.omtrdc.net`網域儲存至Cookie。 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本時，目前無法使用[CNAME](/help/dev/before-implement/implement-cname-support-in-target.md)。如果您有此問題，請考慮將[at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)更新至較新且支援的版本。
+  如果此值為true，則會將`mboxedge<clusterNumber>.tt.omtrdc.net`網域儲存至Cookie。 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本時，目前無法使用[CNAME](/help/dev/before-implement/implement-cname-support-in-target.md)。 如果您有此問題，請考慮將[at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)更新至較新且支援的版本。
 
 ### overrideMboxEdgeServerTimeout
 
@@ -220,7 +238,7 @@ ht-degree: 18%
 
   `selectorsPollingTimeout`設定代表使用者端願意等候選取器所識別的所有元素出現在頁面上的時間。
 
-  透過可視化體驗撰寫器 (VEC) 建立的活動，其具有的選件包含選取器。
+  透過可視化體驗撰寫器 (VEC) 建立的活動，其具有的產品建議包含選取器。
 
 ### serverDomain
 
@@ -238,7 +256,7 @@ ht-degree: 18%
 
 * **型別**：布林值
 * **預設值**： true
-* **描述**：啟用時，Adobe會收集SDK功能使用情況和效能遙測資料。 不會收集個人資料。
+* **說明**：啟用時，Adobe會收集SDK功能使用情況和效能遙測資料。 不會收集個人資料。
 
 ### timeout
 
@@ -250,7 +268,7 @@ ht-degree: 18%
 
 * **型別**：布林值
 * **預設值**： true
-* **描述**：啟用時，頁面載入時會自動擷取檢視。 呼叫`triggerView`時，瀏覽器中會顯示適用的檢視。 如果停用此選項，頁面載入時將不會擷取檢視，`triggerView`不會執行任何動作。 at.js 2.*x* 中受到支援。
+* **描述**：啟用時，頁面載入時會自動擷取檢視。 呼叫`triggerView`時，瀏覽器中會顯示適用的檢視。 如果停用此選項，頁面載入時將不會擷取檢視，`triggerView`不會執行任何動作。 只有at.js 2.*x*&#x200B;才支援檢視。
 
 ### visitorApiTimeout
 
@@ -258,11 +276,11 @@ ht-degree: 18%
 * **預設值**： 2000毫秒= 2秒
 * **描述**：代表訪客API要求逾時。
 
-## 使用狀況
+## 使用情況
 
 可以在at.js載入前或在&#x200B;**管理** > **實作** > **編輯at.js設定** > **程式碼設定** > **資料庫標題**&#x200B;中定義此函式。
 
-資料庫標頭欄位允許輸入自由格式的 JavaScript。自訂程式碼看起來應該類似於下列範例:
+資料庫標頭欄位允許輸入自由格式的 JavaScript。 自訂程式碼看起來應該類似於下列範例:
 
 ```javascript {line-numbers="true"}
 window.targetGlobalSettings = {
@@ -274,7 +292,7 @@ window.targetGlobalSettings = {
 
 ## 資料提供者 {#data-providers}
 
-此設定可讓客戶收集來自協力廠商資料提供者（例如Demandbase、BlueKai和自訂服務）的資料，並在全域mbox要求中以mbox引數的形式傳遞資料至[!DNL Target]。 它透過非同步和同步要求，以支援來自多個提供者的資料收集。使用此方法可讓您方便管理預設頁面內容的忽隱忽現情形，同時對每個提供者包含獨立的逾時計算，以限制對頁面效能的影響
+此設定可讓客戶收集來自協力廠商資料提供者（例如Demandbase、BlueKai和自訂服務）的資料，並在全域mbox要求中以mbox引數的形式傳遞資料至[!DNL Target]。 它透過非同步和同步要求，以支援來自多個提供者的資料收集。 使用此方法可讓您方便管理預設頁面內容的忽隱忽現情形，同時對每個提供者包含獨立的逾時計算，以限制對頁面效能的影響
 
 >[!NOTE]
 >
@@ -284,8 +302,8 @@ window.targetGlobalSettings = {
 
 | 影片 | 說明 |
 |--- |--- |
-| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
-| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 實作詳細資料和範例，說明如何使用Adobe[!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
+| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。 第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。 接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
+| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 實作詳細資料和範例，說明如何使用Adobe [!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
 
 `window.targetGlobalSettings.dataProviders` 設定是資料提供者的陣列。
 
@@ -294,9 +312,9 @@ window.targetGlobalSettings = {
 | 索引鍵 | 類型 | 說明 |
 |--- |--- |--- |
 | 名稱 | 字串 | 提供者的名稱。 |
-| version | 字串 | 提供者版本。此機碼將用於提供者演進。 |
-| timeout | 數字 | 如果這是網路要求，則代表提供者逾時。此機碼為選用。 |
-| provider | 函數 | 包括提供者資料擷取邏輯的函數。<p>函式有單一必要引數： `callback`。 callback 參數為函數，僅應該在成功擷取資料或發生錯誤時叫用。<p>callback 預期兩個參數:<ul><li>error: 指出是否發生錯誤。如果各項都正常，則此參數應該設為 null。</li><li>params： JSON物件，代表將在[!DNL Target]要求中傳送的引數。</li></ul> |
+| version | 字串 | 提供者版本。 此機碼將用於提供者演進。 |
+| timeout | 數字 | 如果這是網路要求，則代表提供者逾時。  此機碼為選用。 |
+| provider | 函數 | 包括提供者資料擷取邏輯的函數。<p>函式有單一必要引數： `callback`。 callback 參數為函數，僅應該在成功擷取資料或發生錯誤時叫用。<p>callback 預期兩個參數:<ul><li>error: 指出是否發生錯誤。 如果各項都正常，則此參數應該設為 null。</li><li>params： JSON物件，代表將在[!DNL Target]要求中傳送的引數。</li></ul> |
 
 下列範例顯示的資料提供者正在使用同步執行:
 
@@ -386,8 +404,8 @@ var weatherProvider = {
 
 使用 `dataProviders` 設定時，請考慮下列各項:
 
-* 如果新增至 `window.targetGlobalSettings.dataProviders` 的資料提供者非同步，則會並行執行。訪客 API 要求將與新增至 `window.targetGlobalSettings.dataProviders` 的函數並行執行，以允許最低的等候時間。
-* at.js 不會嘗試將資料快取。如果資料提供者擷取資料一次，則資料提供者應該確定已將該資料快取，並且當叫用該提供者函數時，可做為第二個叫用的快取資料。
+* 如果新增至 `window.targetGlobalSettings.dataProviders` 的資料提供者非同步，則會並行執行。 訪客 API 要求將與新增至 `window.targetGlobalSettings.dataProviders` 的函數並行執行，以允許最低的等候時間。
+* at.js 不會嘗試將資料快取。 如果資料提供者擷取資料一次，則資料提供者應該確定已將該資料快取，並且當叫用該提供者函數時，可做為第二個叫用的快取資料。
 
 ## 內容安全性政策
 
@@ -537,7 +555,7 @@ const PAGE_TEMPLATE = `
    * VEC建立的活動，會在頁面載入時執行。
    * 預先擷取的檢視。
 
-     若是SPA在at.js API中使用[!DNL Target]檢視和`triggerView()`，at.js v2.2會快取伺服器端預先擷取之所有檢視的內容，並在透過`triggerView()`觸發每個檢視時套用這些內容，如此一來，就不會觸發對[!DNL Target]的任何其他內容擷取呼叫。
+     若是SPA使用at.js API中的[!DNL Target]檢視和`triggerView()`，at.js v2.2會快取伺服器端預先擷取之所有檢視的內容，並在透過`triggerView()`觸發每個檢視時立即套用這些內容，而不會再次引發對[!DNL Target]的任何其他內容擷取呼叫。
 
    * **注意**： `serverState`目前不支援伺服器端擷取的mbox。
 
@@ -547,11 +565,11 @@ const PAGE_TEMPLATE = `
 
   ![已啟用頁面載入設定](../../assets/page-load-enabled-setting.png)
 
-* 如果您使用`serverState`並在傳回的內容中使用`<script>`標籤，請確定您的HTML內容使用`<\/script>`而非`</script>`。 如果您使用`</script>`，瀏覽器會將`</script>`解譯為內嵌SCRIPT的結尾，而且可能會中斷HTML頁面。
+* 如果您使用`serverState`並在傳回的內容中使用`<script>`標籤，請確定您的HTML內容使用`<\/script>`而非`</script>`。 如果您使用`</script>`，瀏覽器會將`</script>`解譯為內嵌SCRIPT上的結尾，而且可能會中斷HTML頁面。
 
 ### 其他資源
 
 若要深入瞭解`serverState`的運作方式，請參閱下列資源：
 
 * [範常式式碼](https://github.com/Adobe-Marketing-Cloud/target-node-client-samples/tree/master/advanced-atjs-integration-serverstate)。
-* [具有`serverState`](https://github.com/Adobe-Marketing-Cloud/target-node-client-samples/tree/master/react-shopping-cart-demo)的單頁應用程式(SPA)範例應用程式。
+* [具有`serverState`的單頁應用程式(SPA)範例應用程式](https://github.com/Adobe-Marketing-Cloud/target-node-client-samples/tree/master/react-shopping-cart-demo)。

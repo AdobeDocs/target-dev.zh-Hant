@@ -3,10 +3,17 @@ title: 使用裝置上決策時的最佳實務
 description: 瞭解在 [!DNL Adobe Target]中使用[!UICONTROL on-device decisioning]的最佳實務
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 0%
+source-wordcount: 393
+ht-degree: 3%
 
 ---
 
@@ -21,7 +28,7 @@ ht-degree: 0%
 * 停用不在成品中的具有「裝置上」功能的活動。
 * 如果您有Target Premium，可以使用[屬性/工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)為不同的工作區建立不同的成品檔案。
 * 如果您的成品檔案由於合法原因變得非常大，您可以使用「混合」決策方法。 此方法可讓您平行下載成品，所有Target API呼叫都會線上上進行，直到下載成品為止。 請閱讀以下「混合」決策模式的最佳實務區段，以進一步瞭解此方法。
-* 如果您有單頁應用程式(SPA)，[!DNL Adobe]建議您先載入並初始化at.js，然後再於第一個頁面載入期間載入應用程式的主要JavaScript檔案。 此方法可更早啟動成品下載，提供更快速的體驗呈現。
+* 如果您有單頁應用程式(SPA)，[!DNL Adobe]建議您先載入並初始化at.js，再於第一個頁面載入期間載入應用程式的主要JavaScript檔案。 此方法可更早啟動成品下載，提供更快速的體驗呈現。
 
 ## 決策方法為「混合」時的最佳實務
 

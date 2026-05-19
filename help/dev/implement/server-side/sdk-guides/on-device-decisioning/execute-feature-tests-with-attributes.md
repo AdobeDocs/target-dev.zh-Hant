@@ -3,10 +3,21 @@ title: 使用屬性執行功能測試
 description: 使用屬性執行功能測試
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/y2Mwmnn2k91-LKBy1UmZ5a1s6dZeb5VMyHdyJc2lc34
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: 891
+ht-degree: 1%
 
 ---
 
@@ -30,7 +41,7 @@ ht-degree: 0%
 >
 >假設您是一間零售電子商務公司。 當客戶瀏覽及排序您的產品目錄時，您想要提高轉換率。 您有假設認為，某些排序演演算法和分頁策略會產生比其他演演算法更好的結果。 為了測試此理論，您決定執行功能測試，該測試涉及使用一般使用者的不同排序選項來重新設計排序Widget。 您想要確保此功能測試會在幾乎零延遲的情況下執行，以免對使用者體驗造成負面影響，並扭曲結果。
 
-## 1.為您的組織啟用[!UICONTROL on-device decisioning]
+## &#x200B;1. 為您的組織啟用[!UICONTROL on-device decisioning]
 
 啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，並啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換按鈕。
 
@@ -42,7 +53,7 @@ ht-degree: 0%
 
 啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
 
-## 2.建立[!UICONTROL A/B Test]活動
+## &#x200B;2. 建立[!UICONTROL A/B Test]活動
 
 1. 在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
@@ -52,9 +63,9 @@ ht-degree: 0%
 
    ![替代影像](assets/asset-form.png)
 
-## 3.定義您的A和B
+## &#x200B;3. 定義您的A和B
 
-1. 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，即體驗B，方法是按一下&#x200B;**[!UICONTROL Add Experience]** (2)按鈕。 輸入應用程式中要使用屬性執行特徵測試的位置(3)名稱。 在下列範例中，`product-results-page`是為體驗A定義的位置。（也是為體驗B定義的位置。）
+1. 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，即體驗B，方法是按一下&#x200B;**[!UICONTROL Add Experience]** (2)按鈕。 輸入應用程式中要使用屬性執行特徵測試的位置(3)名稱。 在下列範例中，`product-results-page`是為體驗A定義的位置。 （此位置也是為體驗B定義的位置。）
 
    ![替代影像](assets/asset-location.png)
 
@@ -88,35 +99,35 @@ ht-degree: 0%
 
    ![替代影像](assets/asset-sorting-b.png)
 
-## 4.新增對象
+## &#x200B;4. 新增對象
 
 在&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟中，保留&#x200B;**[!UICONTROL All Visitors]**&#x200B;對象。 這可讓您瞭解排序功能的影響，以及哪個演演算法和專案數量對結果影響最大。
 
 ![替代影像](assets/asset-audience-b.png)
 
-## 5.設定流量分配
+## &#x200B;5. 設定流量分配
 
 定義訪客百分比，以用來測試排序演演算法和分頁策略。 換言之，您要將這個測試轉出到您的使用者中哪個百分比？ 在此範例中，若要將此測試部署給所有登入的使用者，請將流量分配維持在100%。
 
 ![替代影像](assets/asset-allocation-100.png)
 
-## 6.將流量分佈設為變數
+## &#x200B;6. 將流量分佈設為變數
 
 定義會看見建議與最暢銷商品排序演演算法的訪客百分比，限製為每頁50項產品。 在此範例中，流量分配在體驗A和B之間維持50/50的分割比例。
 
 ![替代影像](assets/asset-variations-50.png)
 
-## 7.設定報告
+## &#x200B;7. 設定報告
 
 在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟中，選擇&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作為&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中檢視您的A/B測試結果，或選擇&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;以便在Adobe Analytics UI中檢視這些結果。
 
 ![替代影像](assets/asset-reporting-b.png)
 
-## 8.新增追蹤KPI的量度
+## &#x200B;8. 新增追蹤KPI的量度
 
 選擇&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以使用屬性測量功能測試。 在此範例中，成功取決於使用者是否購買產品，取決於他們看到的排序演演算法和分頁策略。
 
-## 9.使用屬性實施功能測試至您的應用程式
+## &#x200B;9. 在您的應用程式中使用屬性實作功能測試
 
 >[!BEGINTABS]
 
@@ -173,7 +184,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 10.實作程式碼以追蹤轉換事件
+## &#x200B;10. 實作程式碼以追蹤轉換事件
 
 >[!BEGINTABS]
 
@@ -242,6 +253,6 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 11.使用屬性啟用功能測試
+## &#x200B;11. 使用屬性啟用功能測試
 
 ![替代影像](assets/asset-activate.png)

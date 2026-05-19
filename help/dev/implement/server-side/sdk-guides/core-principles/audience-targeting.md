@@ -1,25 +1,36 @@
 ---
 title: 對象目標定位
-description: 受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target] 現成可支援多種強大的對象目標定位功能。
+description: 對象可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target] 支援各種現成的強大對象鎖定功能。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 22%
+source-wordcount: 1069
+ht-degree: 15%
 
 ---
 
 # 對象目標定位
 
-## 總覽
+## 概觀
 
 受眾可用於鎖定您的實驗和個人化活動。 [!DNL Adobe Target]現成可支援多種強大的受眾目標定位功能。 下列屬性適用於[對象目標定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=zh-Hant)：
 
 ### [!DNL Target]資料庫
 
 如需詳細資訊，請參閱[[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hant)。
-&#x200B;URL
+&#x200B;
 * 從Bing反向連結
 * Chrome瀏覽器
 * Firefox瀏覽器
@@ -37,7 +48,7 @@ ht-degree: 22%
 ### 地理
 
 如需詳細資訊，請參閱[地理](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant)。
-「&#x200B;&#x200B;」
+「&#x200B;」
 * 國家/地區
 * 狀態
 * 城市
@@ -100,7 +111,7 @@ ht-degree: 22%
 * 語言
 * 版本
 
-### 訪客設定檔
+### 訪客輪廓
 
 如需詳細資訊，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant)。
 
@@ -130,7 +141,7 @@ ht-degree: 22%
 
 ### 如何將使用者端提示傳遞至[!DNL Adobe Target]
 
-從Node.js SDK v2.4.0和Java SDK v2.3.0開始，使用者端提示可以透過`getOffers()`呼叫傳送至[!DNL Target]。 `request.context`物件上應包含使用者端提示和使用者代理。
+從Node.js SDK v2.4.0和Java SDK v2.3.0開始，可以透過`getOffers()`呼叫將使用者端提示傳送至[!DNL Target]。 `request.context`物件上應包含使用者端提示和使用者代理。
 
 >[!BEGINTABS]
 
@@ -211,7 +222,7 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 
 ### 裝置上決策的地理定位
 
-為了維持具有地理型對象的裝置上決策活動幾乎零延遲，Adobe建議您在`getOffers`呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者(例如Google Cloud)會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
+為了維持具有地理型對象的裝置上決策活動幾乎零延遲，Adobe建議您在`getOffers`呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者（例如Google Cloud）會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
 
 >[!BEGINTABS]
 

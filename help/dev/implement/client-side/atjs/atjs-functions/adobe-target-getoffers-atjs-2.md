@@ -1,30 +1,43 @@
 ---
 keywords: adobe.target.getOffers， getOffers， getoffers， get offers， at.js，函式，函式， $8
-description: 使用[!UICONTROL adobe.target.getOffers()]at.js程式庫的 [!DNL Adobe Target] 函式及其選項來觸發要求，以取得多個 [!DNL Target] 選件。 (at.js 2.x)
+description: 使用 [!DNL Adobe Target] at.js程式庫的[!UICONTROL adobe.target.getOffers()]函式及其選項來觸發要求，以取得多個 [!DNL Target] 選件。 (at.js 2.x)
 title: 如何使用[!UICONTROL adobe.target.getOffers()]函式？
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 62%
+source-wordcount: 1340
+ht-degree: 60%
 
 ---
 
 # [!UICONTROL adobe.target.getOffers()] - at.js 2.x
 
-此函數可讓您透過傳入多個 mbox 來擷取多個產品建議。此外，還可針對使用中活動內的所有檢視擷取多個產品建議。
+此函數可讓您透過傳入多個 mbox 來擷取多個產品建議。 此外，還可針對使用中活動內的所有檢視擷取多個產品建議。
 
 >[!NOTE]
 >
->此函數於 at.js 2.x 推出。此函數不適用於 at.js 版本 1。*x* 版本不支援此函數。
+>此函式於at.js 2.x推出。 此函式不適用於at.js 1.*x*&#x200B;版。
 
 | 索引鍵 | 類型 | 必要? | 說明 |
 | --- | --- | --- | --- |
-| `consumerId` | 字串 | 無 | 如果未提供，預設值為用戶端的全域 mbox。此機碼可用來產生用於A4T整合的增補資料ID (SDID)。<P>使用`getOffers()`時，每個呼叫都會產生新的SDID。 如果您在相同頁面上有多個mbox要求，且想要保留SDID （以便它符合target-global-mbox中的SDID和[!DNL Adobe Analytics] SDID），請使用`consumerId`引數。<P>如果`getOffers()`包含三個mbox （名為「mbox1」、「mbox2」和「mbox3」），請在`consumerId: "mbox1, mbox2, mbox3"`呼叫中包含： `getOffers()`。 |
+| `consumerId` | 字串 | 無 | 如果未提供，預設值為用戶端的全域 mbox。 此機碼可用來產生用於A4T整合的增補資料ID (SDID)。<P>使用`getOffers()`時，每個呼叫都會產生新的SDID。 如果您在相同頁面上有多個mbox要求，且想要保留SDID （以便它符合target-global-mbox中的SDID和[!DNL Adobe Analytics] SDID），請使用`consumerId`引數。<P>如果`getOffers()`包含三個mbox （名為「mbox1」、「mbox2」和「mbox3」），請在`getOffers()`呼叫中包含： `consumerId: "mbox1, mbox2, mbox3"`。 |
 | `decisioningMethod` | 字串 | 無 | &quot;server-side&quot;、&quot;on-device&quot;、&quot;hybrid&quot; |
 | `request` | 物件 | 是 | 請參閱下方的「要求」表格。 |
-| `timeout` | 數字 | 無 | 請求逾時。如果未指定，則會使用預設的 at.js 逾時。 |
+| `timeout` | 數字 | 無 | 請求逾時。 如果未指定，則會使用預設的 at.js 逾時。 |
 
 ## 請求
 
@@ -38,7 +51,7 @@ ht-degree: 62%
 | request > id > thirdPartyId | 無 | 大小上限= 128。 |  |
 | Request > experienceCloud | 無 |  |  |
 | Request > experienceCloud > analytics | 無 |  | Adobe Analytics 整合 |
-| Request > experienceCloud > analytics > logging | 無 | 必須在頁面上實作下列項目:<ul><li>訪客 ID 服務</li><li>Appmeasurement.js</li></ul> | 支援下列值：<P>**client_side**：指定後，會傳回分析裝載給呼叫者，呼叫者應將其用來透過[!UICONTROL Adobe Analytics]傳送給[!UICONTROL Data Insertion API]。<P>**server_side**：這是預設值，其中[!DNL Target]和[!DNL Analytics]後端會使用SDID將呼叫拼接在一起以用於報表用途。 |
+| Request > experienceCloud > analytics > logging | 無 | 必須在頁面上實作下列項目:<ul><li>訪客 ID 服務</li><li>Appmeasurement.js</li></ul> | 支援下列值：<P>**client_side**：指定後，會傳回分析裝載給呼叫者，呼叫者應將其用來透過[!UICONTROL Data Insertion API]傳送給[!UICONTROL Adobe Analytics]。<P>**server_side**：這是預設值，其中[!DNL Target]和[!DNL Analytics]後端會使用SDID將呼叫拼接在一起以用於報表用途。 |
 | request > prefetch | 無 |  |  |
 | request > prefetch > views | 無 | 最大計數50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>值長度`<=` 5000。<P>名稱不得以「profile」開頭。<P>不允許的名稱： 「orderId」、「orderTotal」、「productPurchasedId」。 | 傳遞參數以用於擷取使用中活動內的相關檢視。 |
 | request > prefetch > views > profileParameters | 無 | 計數上限50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>值長度`<=` 5000。<P>僅接受字串值。<P>名稱不得以「profile」開頭。 | 傳入輪廓參數以用於擷取使用中活動內的相關檢視。 |
@@ -58,11 +71,11 @@ ht-degree: 62%
 | request > execute > pageLoad > product > categoryId | 無 | 不得空白。<P>大小上限= 128。 | 頁面載入時使用指定的類別 ID 擷取產品建議。 |
 | request > execute > pageLoad > order | 無 |  |  |
 | request > execute > pageLoad > order > id | 無 | 長度上限= 250。 | 頁面載入時使用指定的訂單 ID 擷取產品建議。 |
-| request > execute > pageLoad > order > total | 無 | `>=` 0。 | 頁面載入時使用指定的訂單總金額擷取產品建議。 |
+| request > execute > pageLoad > order > total | 無 | `>=` 0. | 頁面載入時使用指定的訂單總金額擷取產品建議。 |
 | request > execute > pageLoad > order > purchasedProductIds | 無 | 沒有空白值。<P>每個值的長度上限為50。<P>串連並以逗號分隔。<P>產品識別碼總長度`<=` 250。 | 頁面載入時使用指定的已購產品 ID 擷取產品建議。 |
 | request > execute > mboxes | 無 | 大小上限= 50。<P>沒有null元素。 |  |
 | request > execute > mboxes>mbox | 是 | 不得空白。<P>沒有&#39;-clicked&#39;尾碼。<P>大小上限= 250。<P>允許的字元： mbox的`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|名稱。 |
-| request > execute > mboxes>mbox>index | 是 | 不是Null。<P>獨特。<P>`>=` 0。 | 請注意，索引不代表處理 mbox 的順序。與含有數個區域 mbox 的網頁相同，無法指定處理 mbox 的順序。 |
+| request > execute > mboxes>mbox>index | 是 | 不是Null。<P>獨特。<P>`>=` 0. | 請注意，索引不代表處理 mbox 的順序。 與含有數個區域 mbox 的網頁相同，無法指定處理 mbox 的順序。 |
 | request > execute > mboxes > mbox > parameters | 無 | 最大計數= 50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>僅接受字串值。<P>值長度`<=` 5000。<P>名稱不得以「設定檔」開頭。<P>不允許的名稱： 「orderId」、「orderTotal」、「productPurchasedId」。 | 使用指定的參數為特定 mbox 擷取產品建議。 |
 | request > execute > mboxes>mbox>profileParameters | 無 | 最大計數= 50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>僅接受字串值。<P>值長度`<=`256。<P>名稱不得以「設定檔」開頭。 | 使用指定的輪廓參數為特定 mbox 擷取產品建議。 |
 | request > execute > mboxes>mbox > product | 無 |  |  |
@@ -70,7 +83,7 @@ ht-degree: 62%
 | request > execute > mboxes > mbox > product > categoryId | 無 | 不得空白。<P>大小上限= 128。 | 使用指定的類別 ID 為特定 mbox 擷取產品建議。 |
 | request > execute > mboxes > mbox > order | 無 |  |  |
 | request > execute > mboxes>mbox > order > id | 無 | 長度上限= 250。 | 使用指定的訂單 ID 為特定 mbox 擷取產品建議。 |
-| request > execute > mboxes > mbox > order > total | 無 | `>=` 0。 | 使用指定的訂單總金額為特定 mbox 擷取產品建議。 |
+| request > execute > mboxes > mbox > order > total | 無 | `>=` 0. | 使用指定的訂單總金額為特定 mbox 擷取產品建議。 |
 | request > execute > mboxes > mbox > order > purchasedProductIds | 無 | 沒有空白值。<P>每個值的長度上限= 50。<P>串連並以逗號分隔。<P>產品ID總長度`<=` 250。 | 使用指定的已購產品 ID 為特定 mbox 擷取產品建議。 |
 
 ## 為所有檢視呼叫 [!UICONTROL getOffers()]
@@ -204,11 +217,11 @@ adobe.target.getOffers({
 }
 ```
 
-然後可透過[!DNL Adobe Analytics]資料插入API[將裝載轉送至](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)。
+然後可透過[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)將裝載轉送至[!DNL Adobe Analytics]。
 
 ## 透過[!UICONTROL getOffers()]和[!UICONTROL applyOffers()]從多個mbox擷取及呈現資料
 
-at.js 2.x 可讓您透過 `[!UICONTROL getOffers()]` API 擷取多個 mbox。您也可以擷取多個 mbox 的資料，然後使用 `[!UICONTROL applyOffers()]` 在 CSS 選取器所識別的不同位置中呈現資料。
+at.js 2.x 可讓您透過 `[!UICONTROL getOffers()]` API 擷取多個 mbox。 您也可以擷取多個 mbox 的資料，然後使用 `[!UICONTROL applyOffers()]` 在 CSS 選取器所識別的不同位置中呈現資料。
 
 下列範例顯示已實作 at.js 2.x 的單一 HTML 頁面:
 
@@ -230,7 +243,7 @@ at.js 2.x 可讓您透過 `[!UICONTROL getOffers()]` API 擷取多個 mbox。您
 </html>
 ```
 
-假設您有三個要透過從 [!DNL Target] 收到的內容修改的容器。您可為三個 mbox 建構單一要求，其中每個 mbox 都有要呈現於個別容器中的一些內容。
+假設您有三個要透過從 [!DNL Target] 收到的內容修改的容器。 您可為三個 mbox 建構單一要求，其中每個 mbox 都有要呈現於個別容器中的一些內容。
 
 要求和呈現的程式碼可能如下列範例所示:
 
@@ -275,19 +288,19 @@ adobe.target.getOffers({
 });
 ```
 
-在 `request > prefetch > mboxes` 區段中，有三個不同的 mbox。如果已成功完成要求，您會從 `response > prefetch > mboxes` 收到每個 mbox 的回應。有了回應和您要用於呈現的位置之後，您可以叫用 `applyOffers()`，呈現從 [!DNL Target] 擷取的內容。在此範例中，我們有下列對應:
+在 `request > prefetch > mboxes` 區段中，有三個不同的 mbox。 如果已成功完成要求，您會從 `response > prefetch > mboxes` 收到每個 mbox 的回應。 有了回應和您要用於呈現的位置之後，您可以叫用 `applyOffers()`，呈現從 [!DNL Target] 擷取的內容。 在此範例中，我們有下列對應:
 
 * mbox1 > CSS 選取器 #container1
 * mbox2 > CSS 選取器 #container2
 * mbox3 > CSS 選取器 #container3
 
-此範例使用計數變數來建構 CSS 選取器。在實際情況中，您可以在 CSS 選取器和 mbox 之間使用不同的對應。
+此範例使用計數變數來建構 CSS 選取器。 在實際情況中，您可以在 CSS 選取器和 mbox 之間使用不同的對應。
 
-請注意，此範例使用 `prefetch > mboxes`，但您也可以使用 `execute > mboxes`。請務必確認，如果您在 `getOffers()` 中使用預先擷取，則在 `applyOffers()` 叫用中也應使用預先擷取。
+請注意，此範例使用 `prefetch > mboxes`，但您也可以使用 `execute > mboxes`。 請務必確認，如果您在 `getOffers()` 中使用預先擷取，則在 `applyOffers()` 叫用中也應使用預先擷取。
 
 ## 呼叫[!UICONTROL getOffers()]以執行pageLoad
 
-下列範例說明如何使用[!UICONTROL getOffers()]搭配at.js 2.*x*
+下列範例說明如何使用[!UICONTROL getOffers()]搭配at.js 2.*x*&#x200B;執行pageLoad
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

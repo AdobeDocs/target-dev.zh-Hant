@@ -3,10 +3,22 @@ title: Target SDK快速入門
 description: 如何使用Adobe Target SDK？
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
@@ -29,7 +41,7 @@ ht-degree: 0%
 1. 實施應用程式中事件的追蹤
 1. 啟用您的[!UICONTROL A/B Test]活動
 
-## 1.為您的組織啟用裝置上決策
+## &#x200B;1. 為您的組織啟用裝置上決策
 
 啟用裝置上決策可確保在幾乎零延遲的情況下執行[!UICONTROL A/B Test]活動。 若要啟用此功能，請瀏覽至「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**」並啟用「**[!UICONTROL On-Device Decisioning]**」切換按鈕。
 
@@ -41,7 +53,7 @@ ht-degree: 0%
 
 啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生[規則成品](../on-device-decisioning/rule-artifact-overview.md)。
 
-## 2.安裝SDK
+## &#x200B;2. 安裝SDK
 
 對於Node.js、Java和Python，請在終端機的專案目錄中執行以下命令。 針對.NET，請由[從NuGet](https://www.nuget.org/packages/Adobe.Target.Client)安裝以將其新增為相依性。
 
@@ -77,7 +89,7 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3.初始化SDK
+## &#x200B;3. 初始化SDK
 
 規則成品會在SDK初始化步驟期間下載。 您可以自訂初始化步驟，以決定如何下載及使用成品。
 
@@ -146,7 +158,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4.在[!DNL Adobe Target] [!UICONTROL A/B Test]活動中設定功能標幟
+## &#x200B;4. 在[!DNL Adobe Target] [!UICONTROL A/B Test]活動中設定功能標幟
 
 1. 在[!DNL Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
@@ -196,7 +208,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代影像](assets/asset-next_2_t.png)
 
-1. 在下方所示的&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟範例中，為了簡單起見，「對象鎖定目標」(2)會維持在「所有訪客」的預設集。 這表示活動未定位。 不過，附註Adobe建議您一律將目標定位為生產活動的對象。 按一下&#x200B;**[!UICONTROL Next]** (3)以進入建立活動的&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟。
+1. 在下方所示的&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟範例中，為了簡單起見，「對象鎖定目標」(2)會維持在「所有訪客」的預設集。 這表示活動未定位。 不過，請注意，Adobe建議您一律將目標定位為生產活動的對象。 按一下&#x200B;**[!UICONTROL Next]** (3)以進入建立活動的&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next_2_g.png)
 
@@ -204,7 +216,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代影像](assets/asset-conv.png)
 
-## 5.在您的應用程式中實作及呈現功能
+## &#x200B;5. 在您的應用程式中實作及演算功能
 
 在[!DNL Target]中設定功能標幟變數後，請修改您的應用程式程式碼以使用這些變數。 例如，在應用程式中取得功能標幟後，您可使用它來啟用功能並轉譯訪客符合資格的體驗。
 
@@ -272,7 +284,7 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6.針對應用程式中的事件實作其他追蹤
+## &#x200B;6. 對應用程式中的事件實作其他追蹤
 
 您可以選擇使用sendNotification()函式傳送額外的事件以追蹤轉換。
 
@@ -382,7 +394,7 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7.啟用您的[!UICONTROL A/B Test]活動
+## &#x200B;7. 啟用您的[!UICONTROL A/B Test]活動
 
 1. 按一下&#x200B;**[!UICONTROL Activate]** (1)以啟用您的[!UICONTROL A/B Test]活動。
 

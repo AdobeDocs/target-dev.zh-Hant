@@ -5,9 +5,18 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
+TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: 368
 ht-degree: 0%
 
 ---
@@ -51,7 +60,7 @@ ht-degree: 0%
    * `orderTotal`：購買的訂單總計。
    * `orderId`：購買的訂單識別碼。
 
-  下圖顯示[&#x200B; [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}規則，此規則只應在[!UICONTROL Confirmation]頁面上觸發。
+  下圖顯示 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}中 [!DNL tags] 的規則，此規則只應在[!UICONTROL Confirmation]頁面上觸發。
 
   ![動作設定頁面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -60,7 +69,7 @@ ht-degree: 0%
 **讀數**
 
 * [adobe.target.trackEvent()方法](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* 購物車型條件的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hant#cart-based){target=_blank}
+* [適用於購物車型標準的cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hant#cart-based){target=_blank}
 
 **動作**
 

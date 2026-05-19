@@ -4,9 +4,14 @@ description: Adobe Target傳送API概觀
 keywords: 傳送api
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
-source-git-commit: 413b16ed0b098de6914558fa29b9ca59aaba958e
+TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: 184
 ht-degree: 0%
 
 ---

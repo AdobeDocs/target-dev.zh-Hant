@@ -4,9 +4,18 @@ description: 使用[!UICONTROL Bulk Profile Update API]將資料匯入 [!DNL Tar
 title: 如何使用[!UICONTROL Bulk Profile Update API]將資料匯入 [!DNL Target] ？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
+TQID: https://experienceleague.adobe.com/vBcIsBR6wwYr7MbRh7UJvt71ULDEq6iXVZ5spZlif-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: 221
 ht-degree: 7%
 
 ---
@@ -23,7 +32,7 @@ ht-degree: 7%
 
 此選項與[[!UICONTROL customer attributes]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md)類似，但有一些差異：
 
-* [!UICONTROL Customer attributes]使用FTP上傳。 [!UICONTROL Target Bulk Profile Update API]使用HTTPPOSTAPI。
+* [!UICONTROL Customer attributes]使用FTP上傳。 [!UICONTROL Target Bulk Profile Update API]使用HTTP POST API。
 * [!UICONTROL Customer attribute]資料可以與[!DNL Analytics]共用。 [!UICONTROL Bulk Profile Update]只能在[!DNL Target]中使用。
 * [!UICONTROL Customer attributes]支援為使用者[!DNL Target]建立設定檔，目前尚未顯示。
    * [!UICONTROL Bulk Profile Update API] v2：您不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。

@@ -1,13 +1,24 @@
 ---
-keywords: at.js，除錯at.js， adobeExperience Cloud除錯程式， experience cloud除錯程式， mbox追蹤， mbox醒目提示，除錯，除錯， $9
+keywords: at.js，除錯at.js， adobe Experience Cloud debugger， experience cloud debugger， mbox trace， mbox highlight，除錯，除錯， $9
 description: 使用[!UICONTROL Adobe Experience Cloud Debugger]檢視您的程式庫組態、檢查要求、開啟主控台記錄、停用 [!DNL Target] 呼叫要求等等。
-title: 如何使用[!UICONTROL Adobe Experience Cloud Debugger]除錯at.Js？
+title: 我如何在上除錯。與[!UICONTROL Adobe Experience Cloud Debugger]的Js？
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 7%
+source-wordcount: 162
+ht-degree: 6%
 
 ---
 

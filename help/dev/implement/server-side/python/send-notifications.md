@@ -3,9 +3,18 @@ title: '使用Python SDK傳送顯示或按一下通知給 [!DNL Adobe Target] '
 description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: 411
 ht-degree: 8%
 
 ---
@@ -155,7 +164,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-請注意，我們已在預先擷取回應中納入對應至已傳遞[!DNL Target]選件的mbox狀態和事件權杖。 建立通知要求後，我們可以透過[!DNL Target] API方法將其傳送至`send_notifications()`：
+請注意，我們已在預先擷取回應中納入對應至已傳遞[!DNL Target]選件的mbox狀態和事件權杖。 建立通知要求後，我們可以透過`send_notifications()` API方法將其傳送至[!DNL Target]：
 
 ### Python
 

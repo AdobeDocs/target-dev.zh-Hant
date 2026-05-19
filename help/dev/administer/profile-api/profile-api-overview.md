@@ -4,9 +4,20 @@ description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
+TQID: https://experienceleague.adobe.com/jclCuF4pe3JwAN-2RhQ9NfA5KtEfKUuawlmrE3aS0bQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: 217
 ht-degree: 1%
 
 ---
@@ -17,9 +28,9 @@ ht-degree: 1%
 
 每位訪客的設定檔資訊會儲存在Cookie或協力廠商應用程式中。
 
-如果您的網頁實作[!DNL Target]程式碼([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)或[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md))，則會使用設定檔引數將Cookie中的設定檔資訊傳遞至[!DNL Target]。 [!DNL Target]會透過在訪客的Cookie中產生的`pcID`唯一識別每個訪客。 不過，您可以使用`mbox3rdPartyIds`，透過mbox呼叫從外部應用程式傳遞設定檔引數。
+如果您的網頁實作[!DNL Target]程式碼（[at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)或[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)），則會使用設定檔引數將Cookie中的設定檔資訊傳遞至[!DNL Target]。 [!DNL Target]會透過在訪客的Cookie中產生的`pcID`唯一識別每個訪客。 不過，您可以使用`mbox3rdPartyIds`，透過mbox呼叫從外部應用程式傳遞設定檔引數。
 
-當您有訪客的設定檔資料要傳送至[!DNL Adobe Target]時，使用[!DNL Target]設定檔API，您無法或不想傳送這些資料作為您與[!DNL Target]的頁面式整合的一部分。 這可能是來自客戶關係管理(CRM)或銷售點(POS)系統的資料，但頁面上未提供。 或者，此資料可能屬於較敏感性質，沒有必要在頁面上傳遞。
+當您有訪客的設定檔資料要傳送至[!DNL Target]時，使用[!DNL Adobe Target]設定檔API，您無法或不想傳送這些資料作為您與[!DNL Target]的頁面式整合的一部分。 這可能是來自客戶關係管理(CRM)或銷售點(POS)系統的資料，但頁面上未提供。 或者，此資料可能屬於較敏感性質，沒有必要在頁面上傳遞。
 
 透過API更新設定檔有兩種方式：
 

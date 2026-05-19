@@ -3,9 +3,20 @@ title: 裝置上決策疑難排解
 description: 瞭解如何疑難排解[!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
+TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: 1158
 ht-degree: 0%
 
 ---
@@ -20,15 +31,15 @@ ht-degree: 0%
 1. 確保已啟用[!DNL Target]追蹤
 1. 驗證是否已根據定義的輪詢間隔擷取及快取[!UICONTROL on-device decisioning] *規則成品*。
 1. 透過表單式體驗撰寫器建立測試[!UICONTROL on-device decisioning]活動，以透過快取規則成品驗證內容傳遞。
-1. Inspect傳送通知錯誤
+1. 檢查傳送通知錯誤
 
-## 1.確認已設定記錄器
+## &#x200B;1. 確認已設定記錄器
 
-初始化SDK時，請務必啟用記錄功能。
+初始化SDK時，請確定您啟用記錄功能。
 
 **Node.js**
 
-應該為Node.js SDK提供`logger`物件。
+對於Node.js SDK，應該提供`logger`物件。
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -40,7 +51,7 @@ const CONFIG = {
 
 **Java SDK**
 
-應該啟用`ClientConfig`上的Java SDK `logRequests`。
+適用於Java的SDK `logRequests` （在`ClientConfig`上）應啟用。
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,7 +67,7 @@ ClientConfig config = ClientConfig.builder()
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2.確認已啟用[!DNL Target]追蹤
+## &#x200B;2. 請確定已啟用[!DNL Target]追蹤
 
 啟用追蹤將會從[!DNL Adobe Target]輸出有關規則成品的額外資訊。
 
@@ -113,7 +124,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3.確認已根據定義的輪詢間隔擷取並快取[!UICONTROL on-device decisioning] *規則成品*。
+## &#x200B;3. 驗證是否已根據定義的輪詢間隔擷取及快取[!UICONTROL on-device decisioning] *規則成品*。
 
 1. 等候輪詢間隔的持續時間（預設為20分鐘），並確定SDK正在擷取成品。 將會輸出相同的終端機記錄。
 
@@ -135,7 +146,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## 4.透過表單式體驗撰寫器建立測試[!UICONTROL on-device decisioning]活動，以透過快取規則成品驗證內容傳遞
+## &#x200B;4. 透過表單式體驗撰寫器建立測試[!UICONTROL on-device decisioning]活動，以透過快取規則成品驗證內容傳遞
 
 1. 導覽至Experience Cloud中的[!DNL Target]UI
 
@@ -201,7 +212,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
    Response:  <div>test</div>
    ```
 
-## Inspect傳送通知錯誤
+## 檢查傳送通知錯誤
 
 使用裝置上決策時，會自動傳送getOffers執行要求的通知。 這些請求會在背景以無訊息方式傳送。 訂閱名稱為`sendNotificationError`的事件即可檢查任何錯誤。 以下程式碼範例說明如何使用Node.js SDK訂閱通知錯誤。
 

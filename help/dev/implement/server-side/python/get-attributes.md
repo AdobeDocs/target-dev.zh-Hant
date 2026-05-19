@@ -3,10 +3,17 @@ title: 如何在 [!DNL Adobe Target] Python SDK中使用非同步要求
 description: 瞭解 [!DNL Target] Python SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CFfT7Amoca2yqYkkt9AviTmWi-RCjGdABYYuWHxvqC8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 16%
+source-wordcount: 130
+ht-degree: 15%
 
 ---
 
@@ -30,7 +37,7 @@ target_client_instance.get_attributes(mbox_names, options)
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
 | mbox_names | 清單[str] | 是 | 無 | mbox名稱清單 |
-| options | dict | 否 | 無 | 與[取得選件](get-offers.md)使用的選項相同 |
+| options | dict | 無 | 無 | 與[取得選件](get-offers.md)使用的選項相同 |
 
 ## 屬性提供者
 

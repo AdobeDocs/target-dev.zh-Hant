@@ -1,11 +1,19 @@
 ---
-title: 使用.NET SDK傳送顯示或按一下通知給 [!DNL Adobe Target]
+title: '使用.NET SDK傳送顯示或按一下通知給 [!DNL Adobe Target] '
 description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 724e787c-af53-4152-8b20-136f7b5452e1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/4lJvfqWv6vDehZ-CmO7xj61-ZFS9-3nOAcA7vlbg-3c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: 230
 ht-degree: 1%
 
 ---
@@ -20,7 +28,7 @@ ht-degree: 1%
 >
 >當具有必要引數的`Execute`物件位於請求本身中時，曝光將自動遞增以符合活動資格。
 
-會自動增加曝光次數的SDK方法為：
+會自動增加曝光次數的SDK方法如下：
 
 * `GetOffers()`
 * `GetAttributes()`

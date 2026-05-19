@@ -3,9 +3,14 @@ title: 如何在 [!DNL Adobe Target] .NET SDK中使用非同步要求
 description: 瞭解 [!DNL Target] Java SDK如何支援非同步要求，將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: 91
 ht-degree: 4%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 4%
 
 ## 說明
 
-伺服器端整合的好處之一，就是可以利用伺服器端可用的大量頻寬和運算資源，透過使用平行功能。 [!DNL Target] .NET SDK支援非同步要求，可輕鬆將[!DNL Target]整合至應用程式現有的非同步工作流程。
+伺服器端整合的好處之一，就是可以利用伺服器端可用的大量頻寬和運算資源，透過使用平行功能。[!DNL Target] .NET SDK支援非同步要求，可輕鬆將[!DNL Target]整合至應用程式現有的非同步工作流程。
 
 ## 支援的方法
 

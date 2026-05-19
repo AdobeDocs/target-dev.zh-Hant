@@ -3,18 +3,23 @@ title: 訂閱 [!DNL Adobe Target] Java SDK中的事件
 description: 瞭解如何使用[!UICONTROL OnDeviceDecisioningHandler]物件來訂閱Java SDK中發生的各種事件。
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: 134
 ht-degree: 5%
 
 ---
 
-# SDK事件(Java)
+# SDK Events (Java)
 
 ## 說明
 
-當[初始化SDK](initialize-sdk.md)時，`ClientConfig`物件上可提供選用的`OnDeviceDecisioningHandler`物件。 可用來訂閱SDK內發生的各種事件。 例如，`onDeviceDecisioningReady`事件可與SDK準備好進行方法呼叫時將叫用的回呼函式搭配使用。
+當[初始化SDK](initialize-sdk.md)時，可在`ClientConfig`物件上提供選用的`OnDeviceDecisioningHandler`物件。 它可用來訂閱SDK內發生的各種事件。 例如，`onDeviceDecisioningReady`事件可與回呼函式搭配使用，當SDK準備好進行方法呼叫時，將會叫用該回呼函式。
 
 ## 事件
 

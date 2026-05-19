@@ -4,16 +4,34 @@ description: 瞭解如何使用[!UICONTROL on-device decisioning]在伺服器上
 title: 什麼是裝置上決策？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: ff0becf3fe3a6fd6694e13243b6a93b910316434
+TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 9%
+source-wordcount: 1233
+ht-degree: 8%
 
 ---
 
-# 裝置上決策概覽
+# 裝置上決策概觀
 
-新一代[!DNL Adobe Target] SDK現在提供[!UICONTROL on-device decisioning]，可讓您在伺服器上快取您的A/B和體驗鎖定目標(XT)行銷活動，並在幾乎零延遲的情況下執行記憶體內決策，而不會封鎖對[!DNL Adobe Target]Edge Network的網路要求。
+新一代[!DNL Adobe Target] SDK現在提供[!UICONTROL on-device decisioning]，可讓您在伺服器上快取您的A/B和體驗鎖定目標(XT)行銷活動，並在幾乎零延遲的情況下執行記憶體內決策，而不會封鎖對[!DNL Adobe Target]的Edge Network的網路要求。
 
 [!DNL Adobe Target]也能透過即時伺服器呼叫，靈活地從您的實驗和ML驅動的個人化行銷活動中，提供最相關和最新的體驗。 換言之，當效能最重要的時候，您可以選擇使用[!UICONTROL on-device decisioning]，但是當需要最相關且最新的體驗時，可以改用伺服器呼叫。 檢視[何時使用裝置上決策與邊緣決策](../../sdk-guides/on-device-decisioning/supported-features.md)，以瞭解有關使用其中一個優先於另一個的使用案例。
 
@@ -23,7 +41,7 @@ ht-degree: 9%
 
 ## 如何運作？
 
-當您安裝及初始化已啟用[!UICONTROL on-device decisioning]的[!DNL Adobe Target] SDK時，會從最靠近伺服器的Akamai CDN下載&#x200B;*規則成品*&#x200B;並快取至伺服器本機。 在您的伺服器端應用程式中提出擷取[!DNL Adobe Target]體驗的請求時，系統會根據快取規則成品中編碼的中繼資料（定義所有[!UICONTROL on-device decisioning] A/B和XT活動），在記憶體中決定要傳回哪些內容。
+當您安裝及初始化已啟用[!UICONTROL on-device decisioning]的[!DNL Adobe Target] SDK時，會從最靠近伺服器的Akamai CDN下載&#x200B;*規則成品*&#x200B;並在伺服器上本機快取。 在您的伺服器端應用程式中提出擷取[!DNL Adobe Target]體驗的請求時，系統會根據快取規則成品中編碼的中繼資料（定義所有[!UICONTROL on-device decisioning] A/B和XT活動），在記憶體中決定要傳回哪些內容。
 
 下圖顯示[!UICONTROL on-device decisioning]架構。 按一下以展開影像。
 
@@ -33,10 +51,10 @@ ht-degree: 9%
 
 ## 有哪些優點？
 
-* **提供幾乎零延遲的決策。**&#x200B;在記憶體和裝置上執行分組和決策，以避免封鎖網路要求。
-* **增強應用程式效能。**&#x200B;執行實驗並向您的客戶和使用者提供個人化，而不會損害一般使用者體驗。
-* **提升Google網站品質分數。**&#x200B;由於決策是在記憶體中與伺服器端進行，請改善您線上業務的Google網站品質分數，讓消費者更容易發現它。
-* **向即時分析學習。**&#x200B;透過[!DNL Adobe Target]或A4T報表即時取得活動績效的深入分析，讓您在關鍵時刻樞紐分析策略。
+* **提供幾乎零延遲的決策。** 在記憶體和裝置上執行分組和決策，以避免封鎖網路請求。
+* **增強應用程式效能。** 執行實驗並為您的客戶和使用者提供個人化，而不會損害一般使用者體驗。
+* **改善Google網站品質分數。** 透過在記憶體和伺服器端進行決策，可改善您線上業務的Google網站品質分數，讓消費者更容易發現它。
+* **向即時分析學習。** 透過[!DNL Adobe Target]或A4T報表即時取得活動績效的深入分析，讓您在關鍵時刻樞紐分析策略。
 
 ## 支援的功能
 
@@ -123,7 +141,7 @@ ht-degree: 9%
 
 ### 網路研討會影片：利用 [!DNL Adobe Target] 的裝置上決策在零延遲的情況下進行個人化和測試
 
-市場人員、產品擁有者和開發人員被要求在網站、應用程式，以及與客戶連結的任何地方最佳化整體客戶體驗，此情況更勝以往。具有資料獨立單位和複雜實作的多種工具是不夠的。
+市場人員、產品擁有者和開發人員被要求在網站、應用程式，以及與客戶連結的任何地方最佳化整體客戶體驗，此情況更勝以往。 具有資料獨立單位和複雜實作的多種工具是不夠的。
 
 在這個錄製的網路研討會中，[!DNL Adobe Target]產品專家會討論將關鍵體驗最佳化決策移到裝置上，以便在幾乎無延遲的情況下於本機執行，可以促成令人興奮的新使用案例，同時為客戶改善網站效能。
 
@@ -139,14 +157,14 @@ ht-degree: 9%
 * 說明[!UICONTROL on-device decisioning]，包括它與[!DNL Target]實作的其他方法的比較
 * 示範如何在Target中啟用[!UICONTROL on-device decisioning]
 * 檢查已設定JSON內容的表單式撰寫器活動範例
-* 顯示Node.JS SDK程式碼範例，其中包含[!UICONTROL on-device decisioning]所需的索引鍵組態
+* 顯示Node.JS SDK程式碼範例，其中包含[!UICONTROL on-device decisioning]所需的金鑰組態
 * 在瀏覽器中示範結果
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)
 
-如需更多影片和教學課程，請參閱[[!DNL Adobe Target] Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hant)。
+如需更多影片和教學課程，請參閱[[!DNL Adobe Target] 教學課程](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hant)。
 
-### Adobe技術部落格 — 第1部分：在Edge平台上執行[!DNL Adobe Target] NodeJS SDK以進行測試和個人化(Akamai Edge工作者)
+### Adobe技術部落格 — 第1部分：在Edge平台上執行[!DNL Adobe Target] NodeJS SDK以進行測試和個人化（Akamai Edge工作者）
 
 [按一下這裡以存取部落格](https://medium.com/adobetech/part-1-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-4d8660964ed9)。
 

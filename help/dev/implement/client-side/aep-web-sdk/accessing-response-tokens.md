@@ -3,9 +3,20 @@ title: 使用Adobe Experience Platform Web SDK存取回應Token
 description: 瞭解如何使用 [!DNL Adobe Experience Platform Web SDK]存取回應權杖。
 keywords: 個人化；target；adobe target；renderDecisions；sendEvent；decisionScopes；result.decisions，回應Token；
 feature: AEP Web SDK
-source-git-commit: f010ca54aac3c2a644a77fb2f88aff1996f6ddfe
+exl-id: b125017c-c257-4f2f-a479-dd0f20e76a9a
+TQID: https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: 273
 ht-degree: 0%
 
 ---
@@ -27,7 +38,7 @@ alloy("sendEvent", {
   });
 ```
 
-在此範例中，`result.propositions` （如果存在）是包含與事件相關之個人化主張的陣列。 如需有關[內容的詳細資訊，請參閱](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)呈現個人化內容`result.propositions.`
+在此範例中，`result.propositions` （如果存在）是包含與事件相關之個人化主張的陣列。 如需有關`result.propositions.`內容的詳細資訊，請參閱[呈現個人化內容](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 假設您想從網頁SDK自動轉譯的所有主張中收集所有活動名稱，並將其推入單一陣列。 然後，您可以將單一陣列傳送給第三方。 在此案例中：
 
