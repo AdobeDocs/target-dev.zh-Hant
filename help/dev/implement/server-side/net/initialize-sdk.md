@@ -4,11 +4,9 @@ description: 瞭解如何使用create方法初始化Java SDK並將[!UICONTROL Ta
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
 TQID: https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
 source-wordcount: 359
 ht-degree: 15%
@@ -29,8 +27,7 @@ ht-degree: 15%
 
 `TargetClient`已使用`TargetClient.Create`建立。
 
-## C\
-&#x200B;#
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -38,8 +35,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig`是使用ClientConfig.Builder建立的。
 
-## C\
-&#x200B;#
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -73,8 +69,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## 範例
 
-## C\
-&#x200B;#
+## C#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")
