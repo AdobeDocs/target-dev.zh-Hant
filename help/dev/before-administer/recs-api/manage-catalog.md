@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 905
+source-wordcount: 901
 ht-degree: 0%
 
 ---
@@ -156,7 +153,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明確指定任何環境，則取得實體只會嘗試從您的[預設環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hant)取得實體。 如果您想從預設環境以外的任何環境提取，則必須指定環境ID。
+   >如果未明確指定任何環境，則取得實體只會嘗試從您的[預設環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)取得實體。 如果您想從預設環境以外的任何環境提取，則必須指定環境ID。
 
 1. 如有必要，請新增`environmentId`引數，然後重新傳送要求。
 
@@ -208,4 +205,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 恭喜！ 您現在可以使用Recommendations API來建立、更新、刪除及取得有關目錄中實體的詳細資訊。 在下一節中，您將瞭解如何管理自訂條件。
 
-&lt;！— [下堂課「管理自訂條件」>](manage-custom-criteria.md) —>
+<!-- [Next "Manage Custom Criteria" >](manage-custom-criteria.md) -->

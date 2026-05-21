@@ -4,19 +4,13 @@ description: 瞭解如何使用規則成品，這是 [!DNL Adobe Target] [!UICON
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 TQID: https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
 workflow-type: tm+mt
-source-wordcount: 278
+source-wordcount: 266
 ht-degree: 0%
 
 ---
@@ -38,12 +32,12 @@ ht-degree: 0%
 
 1. 導覽至Target UI。
 
-   &lt;！ — 插入image-target-ui-1.png —>
+   <!-- Insert image-target-ui-1.png -->
    ![替代影像](assets/asset-rule-artifact-1.png)
 
 1. 導覽至&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;並按一下&#x200B;**[!UICONTROL Generate New Authorization Token]**。
 
-   &lt;！ — 插入image-target-ui-2.png —>
+   <!-- Insert image-target-ui-2.png -->
    ![替代影像](assets/asset-rule-artifact-2.png)
 
 1. 將新產生的授權權杖複製到剪貼簿，並將其新增到您的Target請求。

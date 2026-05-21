@@ -7,18 +7,13 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1449
+source-wordcount: 1366
 ht-degree: 1%
 
 ---
@@ -48,13 +43,13 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 1. 使用表單式撰寫器（而非視覺化體驗撰寫器）建立Target活動（A/B、XT、AP或Recommendations）。
 1. 使用傳送API針對您剛建立的Target活動所產生的請求，取得回應。
 
-&lt;！—！ — 問：為什麼需要執行這兩個步驟？ 如果您有為mbox定義的表單式建議，有中同時具有傳送API步驟以擷取結果又有什麼好處？ 為什麼不能讓表單式記錄將結果傳送到目的地裝置……?? 答：請參閱以下使用案例……這是您想要「攔截」暫止結果，以便在顯示結果之前執行更多作業的時間。 例如，庫存水準的即時比較。 --->
+<!-- Q: Why are BOTH steps necessary for this? If you have a Form-based recommendation defined for an mbox, what's the point/benefit of ALSO having the Delivery API step in to retrieve results? Why can't you just have the Form-based Rec deliver the results in the destination device...?? A: See use case below... it's when you want to "intercept" the pending results in order to do more stuff prior to displaying the results. Things like real-time comparisons to inventory levels. -->
 
 ## 使用表單式體驗撰寫器建立建議
 
-若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)。
+若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
 
-1. 首先，建立並儲存JSON型設計以用於您的建議。 如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hant)的相關檔案。 在此範例中，設計名為&#x200B;*簡單JSON。*
+1. 首先，建立並儲存JSON型設計以用於您的建議。 如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的相關檔案。 在此範例中，設計名為&#x200B;*簡單JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，導覽至&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然後選取&#x200B;**[!UICONTROL Form]**。
@@ -64,7 +59,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 1. 選取屬性，然後按一下&#x200B;**[!UICONTROL Next]**。
 1. 定義您想要使用者收到建議回應的位置。 下列範例使用名為&#x200B;*api_charter*&#x200B;的位置。 選取您先前建立且名為&#x200B;*簡單JSON的JSON型設計。*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hant)，您可以使用傳送API來擷取結果。
+1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用傳送API來擷取結果。
 
 ## 使用傳送API
 
@@ -72,7 +67,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**&#x200B;值。
+1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**值。
    ![client-code.png](assets/client-code.png)
 1. 取得使用者端代碼後，請建構您的傳送API呼叫。 以下範例以[傳送API Postman集合](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;開始，並進行相關修改。 例如：
    * 已從&#x200B;**內文**&#x200B;移除&#x200B;**瀏覽器**&#x200B;和&#x200B;**位址**&#x200B;物件，因為非HTML使用案例不需要它們
@@ -125,7 +120,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 ## 參考檔案
 
 * [Adobe Target Delivery API檔案](/help/dev/implement/delivery-api/overview.md)
-* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hant)
+* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## 摘要與評論
 
