@@ -14,9 +14,9 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
 workflow-type: tm+mt
-source-wordcount: 278
+source-wordcount: 266
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ ht-degree: 0%
 
 1. 導覽至Target UI。
 
-   &lt;！ — 插入image-target-ui-1.png —>
+   <!-- Insert image-target-ui-1.png -->
    ![替代影像](assets/asset-rule-artifact-1.png)
 
 1. 導覽至&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;並按一下&#x200B;**[!UICONTROL Generate New Authorization Token]**。
 
-   &lt;！ — 插入image-target-ui-2.png —>
+   <!-- Insert image-target-ui-2.png -->
    ![替代影像](assets/asset-rule-artifact-2.png)
 
 1. 將新產生的授權權杖複製到剪貼簿，並將其新增到您的Target請求。

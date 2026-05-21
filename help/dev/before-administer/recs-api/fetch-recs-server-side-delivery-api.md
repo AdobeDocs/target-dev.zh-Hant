@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1449
+source-wordcount: 1366
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 1. 使用表單式撰寫器（而非視覺化體驗撰寫器）建立Target活動（A/B、XT、AP或Recommendations）。
 1. 使用傳送API針對您剛建立的Target活動所產生的請求，取得回應。
 
-&lt;！—！ — 問：為什麼需要執行這兩個步驟？ 如果您有為mbox定義的表單式建議，有中同時具有傳送API步驟以擷取結果又有什麼好處？ 為什麼不能讓表單式記錄將結果傳送到目的地裝置……?? 答：請參閱以下使用案例……這是您想要「攔截」暫止結果，以便在顯示結果之前執行更多作業的時間。 例如，庫存水準的即時比較。 --->
+<!-- Q: Why are BOTH steps necessary for this? If you have a Form-based recommendation defined for an mbox, what's the point/benefit of ALSO having the Delivery API step in to retrieve results? Why can't you just have the Form-based Rec deliver the results in the destination device...?? A: See use case below... it's when you want to "intercept" the pending results in order to do more stuff prior to displaying the results. Things like real-time comparisons to inventory levels. -->
 
 ## 使用表單式體驗撰寫器建立建議
 

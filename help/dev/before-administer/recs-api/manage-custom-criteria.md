@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: 921
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ ht-degree: 0%
 
 恭喜！ 您現在可以使用Recommendations API建立、列出、編輯、刪除自訂條件並取得詳細資訊。 在下一節中，您將使用Target Delivery API來擷取建議。
 
-&lt;！— [下堂課「使用伺服器端傳送API擷取建議」>](fetch-recs-server-side-delivery-api.md) —>
+<!-- [Next "Fetch Recommendations with the Server-side Delivery API" >](fetch-recs-server-side-delivery-api.md) -->

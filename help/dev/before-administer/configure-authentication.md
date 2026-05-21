@@ -13,9 +13,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
 workflow-type: tm+mt
-source-wordcount: 1937
+source-wordcount: 1849
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 在此區段中，您將存取[!DNL Adobe Developer Console]並建立[!DNL Adobe Target]的專案。 如需詳細資訊，請參考專案[&#128279;](https://developer.adobe.com/developer-console/docs/guides/projects/)上的檔案。
 
-&lt;!---(1. 根據有關驗證[&#128279;](https://developer.adobe.com/developer-console/docs/guides/authentication/)的檔案，產生您的私密金鑰和公開憑證。 // [//]： # （如[的&#x200B;**步驟1**&#x200B;中所述）如何設定Adobe IO：驗證 — 逐步進行](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步驟1後，請返回本指南並繼續執行以下步驟2。 //此步驟的結果應該是建立`private.key`檔案和`certificate_pub.crt`檔案。 產生這兩個檔案之後，請回到本指南。)—>
+<!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)層級存取權。
 

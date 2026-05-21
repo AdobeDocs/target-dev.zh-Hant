@@ -14,9 +14,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4131354373a42c475db9a4f8dcf8090dd0cbdfcd
 workflow-type: tm+mt
-source-wordcount: 298
+source-wordcount: 294
 ht-degree: 1%
 
 ---
@@ -126,7 +126,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. 使用者端和`organizationId`均可透過導覽至&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;從[!DNL Adobe Target]擷取，如下所示。
 
-   &lt;！ — 插入image-client-code.png —>
+   <!-- Insert image-client-code.png -->
    ![替代影像](assets/asset-rule-artifact-3.png)
 
 ## &#x200B;3. 儲存並回覆JSON裝載
