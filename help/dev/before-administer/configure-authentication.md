@@ -54,7 +54,7 @@ ht-degree: 1%
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html)層級存取權。
+1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)層級存取權。
 
 1. 在[Adobe Developer Console](https://developer.adobe.com/console/home)中，選取您要建立此整合的[!UICONTROL Experience Cloud Organization]。 （請注意，您可能只能存取單一[!UICONTROL Experience Cloud Organization]。）
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用屬性，請選取「預設Workspace」選項）。 按一下 **[!UICONTROL Save configured API]**。
+1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用屬性，請選取「預設Workspace」選項）。 按一下 **[!UICONTROL Save configured API]**。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
@@ -105,7 +105,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需適用於任何Experience Cloud解決方案（包括[!DNL Target]）的視訊指示，請參閱[將Postman與Experience Platform API搭配使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html)。 以下區段與[!DNL Target] API有關： 1. 建立Experience Platform API並將其匯出至Postman 2。 使用Postman產生存取權杖。 以下也提供這些步驟。
+>如需適用於任何Experience Cloud解決方案（包括[!DNL Target]）的視訊指示，請參閱[將Postman與Experience Platform API搭配使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant)。 以下區段與[!DNL Target] API有關： 1. 建立Experience Platform API並將其匯出至Postman 2。 使用Postman產生存取權杖。 以下也提供這些步驟。
 
 1. 仍然在[Adobe Developer Console](https://developer.adobe.com/console/home)中，瀏覽以檢視您新專案的&#x200B;**[!UICONTROL Service Account (JWT)]**&#x200B;認證。 使用左側導覽或&#x200B;**[!UICONTROL Credentials]**&#x200B;區段，如圖所示。
 
