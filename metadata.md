@@ -8,7 +8,7 @@ product: target
 type: Documentation
 feature-set: Target
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/target-dev.en
+git-repo: https://github.com/AdobeDocs/target-dev.zh-Hant
 index: true
 role: Developer
 source-git-commit: f8c7878268cb49c34b0b317f63326c97055ec95f
