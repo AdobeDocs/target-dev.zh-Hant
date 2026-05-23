@@ -30,7 +30,7 @@ ht-degree: 56%
 
 若要在用戶端實作 [!DNL Adobe Target]，您必須使用 at.js JavaScript 程式庫。
 
-在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，建立您的測試和個人化體驗。
+在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，建立您的測試和個人化體驗。
 
 ## 什麼是 at.js?
 
@@ -89,7 +89,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
+如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
 ## at.js 1.x 圖表
 
