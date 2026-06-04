@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
 source-wordcount: 361
 ht-degree: 4%
@@ -46,15 +46,15 @@ ht-degree: 4%
 
 若要更新`pcId`的設定檔，請使用：
 
-``````
+```
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+```
 
 若要更新`mbox3rdPartyId`的設定檔，請使用：
 
-``````
+```
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+```
 
 [!UICONTROL Single Profile Update API]僅供更新。 如果未找到任何專案，則不會建立設定檔。
 
@@ -65,7 +65,7 @@ shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPa
 * 並非所有pcIds和mbox3rdPartyIds都必須存在所有引數值。
 * 參數和值會區分大小寫。
 * 同時支援GET和POST。
-* GET目前的大小限製為8 KB，POST為60 KB。
+* 目前的大小限製為GET為8 KB，POST為60 KB。
 
 ## 回應
 
