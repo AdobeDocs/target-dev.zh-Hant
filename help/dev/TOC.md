@@ -3,10 +3,10 @@ user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
 nudge: true
-source-git-commit: 2a992af7a1a8bbc6dba4ce23263d7af7db773333
+source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
 workflow-type: tm+mt
 source-wordcount: '854'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -43,8 +43,7 @@ ht-degree: 40%
    + [TLS (傳輸層安全性) 加密變更](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME 與 Adobe Target](before-implement/implement-cname-support-in-target.md)
 + 使用者端實施 {#client-side}
-   + [總覽：為使用者端Web實作Target](implement/client-side/overview.md)
-     <!--+ Prehide SDK {#prehide-sdk}-->
+   + [概觀: 為用戶端 Web 實作 Target](implement/client-side/overview.md)
    + {hide-from-toc}[預先隱藏SDK整合指南](implement/client-side/prehide-sdk/prehide-sdk.md)
    + Adobe Experience Platform Web SDK實作 {#aep}
       + [Adobe Experience Platform Web SDK實作概觀](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
