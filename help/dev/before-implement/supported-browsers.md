@@ -18,7 +18,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 19%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 19%
 
 ## 視覺化編輯需求
 
-若要在[!UICONTROL Visual Experience Composer] (VEC)中以可靠的方式開啟、製作及預覽網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL Enhanced Experience Composer (EEC)]。
+若要在[!UICONTROL 視覺化體驗撰寫器] (VEC)中以可靠的方式開啟、編寫及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL 增強體驗撰寫器(EEC)]。
 
 >[!NOTE]
 >

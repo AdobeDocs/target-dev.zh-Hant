@@ -27,8 +27,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 5144
-ht-degree: 60%
+source-wordcount: 5174
+ht-degree: 59%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 60%
 
 ## at.js 2.11.6版（2024年9月29日）
 
-* 已修正導致[!DNL Target]無法在[!UICONTROL Visual Experience Composer] (VEC)或[!UICONTROL Form-Based Experience Composer]內以重新導向選件正確運作的問題。
+* 已修正導致[!DNL Target]無法在[!UICONTROL 視覺化體驗撰寫器] (VEC)或[!UICONTROL 表單式體驗撰寫器]中使用重新導向選件正常運作的問題。
 
 ## at.js 2.11.5版（2024年8月14日）
 
@@ -141,7 +141,7 @@ ht-degree: 60%
 * 當 at.js 設定 `secureOnly` 設為 `true` 時，為 Cookie 新增安全屬性。
 * 現在可以在使用 `triggerView()` 時使用回應 Token。
 * 修正了與 `CONTENT_RENDERING_NO_OFFERS` 事件相關的問題。 現在，只要沒有從 [!DNL Target] 傳回內容，就會正確觸發此事件。
-* 使用 `prefetch` 請求時會正確傳回 [!UICONTROL Analytics for Target] (A4T) 點擊量度詳細資料。
+* 使用`prefetch`要求時，[!UICONTROL 正確傳回Analytics for Target] (A4T)點選量度詳細資料。
 * UUID 產生不再使用 `Math.random()`，但須依賴 `window.crypto`。
 * `sessionId` Cookie 過期在每次網路呼叫時會正確延長。
 * 單頁應用程式(SPA)檢視快取初始化現在可以正確處理並接受`viewsEnabled`設定。 將`viewsEnabled`設定為`false`值現在會停用`triggerView()`函式。 檢視初始頁面載入[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的作業順序。
@@ -447,7 +447,7 @@ at.js版本1.2現在已包括多數錯誤修正的維護版本形式提供。
 * 修正在具有`target="_blank"`的連結上點選追蹤防止[!DNL Target]在新索引標籤中開啟連結的問題。 (TNT-28072)
 * 可以用作 Cookie 網域的 IP 位址。 (TNT-28002)
 * 已修正在具有全域 mbox 或其他地區 mbox 的重新導向產品建議中造成閃爍的問題。 (TNT-27978)
-* 修正在瀏覽和撰寫之間切換時， VEC內的[!UICONTROL Experience Targeting]活動設定失敗的問題。 (TNT-27942)
+* 修正當在瀏覽和撰寫之間切換時，[!UICONTROL 體驗鎖定目標]活動設定在VEC內失敗的問題。 (TNT-27942)
 * 已修正點擊追蹤元素閃爍樣式類別上的不正確處理。 (TNT-27896)
 * 已修正造成全域 mbox 參數變得與所有 mbox 參數混合的問題。 (TNT-27846)
 * 進行變更以確保at.js已正確處理Handlebars、Mustache和其他使用者端範本資料庫。 (TNT-27831)
@@ -494,7 +494,7 @@ at.js版本0.9.7中包括下列增強功能和修正：
 
 at.js版本0.9.6中包括下列增強功能和修正：
 
-* 重新導向產品建議支援 A4T。 下載並安裝at.js 0.9.6版後，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活動中使用重新導向選件。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向產品建議 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant)。
+* 重新導向產品建議支援 A4T。 下載並安裝at.js 0.9.6版後，您可以在使用[!UICONTROL Adobe Analytics做為Target] (A4T)報表Source的活動中使用重新導向選件。 除了at.js版本0.9.6，還有您的實作必須符合以便使用重新導向選件和A4T的其他基本需求。 如需詳細資訊和須知的其他重要資訊，請參閱[重新導向產品建議 - A4T 常見問題集](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant)。
 * 在at.js 0.9.6之前，當頁面上存在訪客API，且`visitorApiTimeout`設定太積極時，可能會發生[!DNL Target]在[!DNL Target]要求中未傳送任何MCID資料的情況。 這可能在使用 A4T 時導致 [!DNL Analytics] 中的問題，例如散亂的點擊。
 
   at.js 0.9.6已變更此行為，即便`visitorApiTimeout`設為假設1毫秒，[!DNL Target]將嘗試收集SDID、追蹤伺服器和客戶ID資料，並在[!DNL Target]要求中傳送那些資料。
@@ -583,7 +583,7 @@ at.js 包含 target.js 所附元件，因此不再需要呼叫 target.js。
 實作 at.js 時，請注意以下事項:
 
 * 不支援 Internet Explorer 8 版之前的舊版。
-* 非同步實施表示舊版整合（例如[!UICONTROL Test&Target to SiteCatalyst]外掛程式）可能無法運作。
+* 非同步實作表示舊版整合（例如[!UICONTROL Test&amp;Target到SiteCatalyst]外掛程式）可能無法運作。
 * 不支援參考mbox.js物件與方法的[!DNL Target]外掛程式。
 * 所有對 [!DNL Target] 的呼叫都是透過 XMLHTTPRequest，而內容是透過 JSON 傳回。
 

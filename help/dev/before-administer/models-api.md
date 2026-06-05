@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 模型API （也稱為Blocklist API）可讓使用者檢視和管理機器學習模型中用於[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活動的功能清單。 如果使用者想排除模型用於AP或AT活動的功能，他們可以使用模型API將該功能新增到「封鎖清單」。
 
-**[!UICONTROL blocklist]**&#x200B;定義將由[!DNL Adobe Target]從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
+**[!UICONTROL blocklist]**&#x200B;定義了[!DNL Adobe Target]將從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
 
 封鎖清單可依活動（活動層級）定義，或針對[!DNL Target]帳戶（全域層級）內的所有活動定義。
 
@@ -154,7 +154,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ## 步驟3：將功能新增至活動的封鎖清單 {#step3}
 
-若要新增功能至封鎖清單，請將請求從GET變更為PUT，並修改請求內文以視需要指定`blockedFeatureSources`或`blockedFeatures`。
+若要新增功能至封鎖清單，請將請求從GET變更為PUT，並修改請求內文，以視需要指定`blockedFeatureSources`或`blockedFeatures`。
 
 * 要求的主體需要`blockedFeatures`或`blockedFeatureSources`。 兩者皆可納入。
 * 將識別自`internalName`的值填入`blockedFeatures`。 請參閱[步驟1](#step1)。
@@ -212,7 +212,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步驟 3](assets/models-api-step-3.png)
 
-請注意，將功能加入封鎖清單後，建議您再次執行[步驟2](#step2)以驗證更新的封鎖清單（GET為封鎖清單）。 確認結果如預期般顯示（確認結果包含最新PUT請求新增的功能）。
+請注意，將功能加入封鎖清單後，建議您再次執行[步驟2](#step2)以驗證更新的封鎖清單（取得封鎖清單）。 確認結果如預期般顯示（確認結果包含從最新PUT請求新增的功能）。
 
 ## 步驟4：（選擇性）解除封鎖 {#step4}
 
@@ -246,7 +246,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步驟 4](assets/models-api-step-4.png)
 
-一如既往，在修改封鎖清單後，建議您再次執行[步驟2](#step2) （GET封鎖清單，以驗證清單是否如預期包含功能）。 在此處的範例中，使用者正在驗證其封鎖清單現在是否為空。
+一如既往，在修改封鎖清單後，建議您再次執行[步驟2](#step2) （取得封鎖清單，以驗證清單是否如預期包含功能）。 在此處的範例中，使用者正在驗證其封鎖清單現在是否為空。
 
 ![步驟4b](assets/models-api-step-4b.png)
 

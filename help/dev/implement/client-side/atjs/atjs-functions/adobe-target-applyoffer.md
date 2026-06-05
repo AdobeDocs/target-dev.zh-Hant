@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.applyOffer， applyOffer， applyoffer，套用選件， at.js，函式，函式， $8
-description: 對 [!DNL Adobe Target] at.js JavaScript資料庫使用[!UICONTROL adobe.target.applyOffer()]函式以套用回應內容。
+description: 使用適用於 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL adobe.target.applyOffer()]函式來套用回應內容。
 title: 如何使用[!UICONTROL adobe.target.applyOffer()]函式？
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 169
-ht-degree: 69%
+source-wordcount: 173
+ht-degree: 68%
 
 ---
 

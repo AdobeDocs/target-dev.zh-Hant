@@ -1,6 +1,6 @@
 ---
 title: Adobe Target傳送API通知
-description: 如何使用[!UICONTROL Adobe Target Delivery API]觸發通知？
+description: 如何使用[!UICONTROL Adobe Target Delivery API]引發通知？
 keywords: 傳送api
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
@@ -13,7 +13,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 預先擷取Mbox的通知
 
-可透過單一傳遞呼叫傳送一或多個通知。 判斷每個mbox需要追蹤的量度是`click`還是`display`，以便正確反映通知的`type`。 此外，請將每個通知傳入`id`，以便判斷是否透過[!UICONTROL &#x200B; Adobe Target Delivery API]正確傳送了通知。 `timestamp`也需轉送至[!DNL Target]，以指出指定mbox的`click`或`display`何時發生以用於報表用途。
+可透過單一傳遞呼叫傳送一或多個通知。 判斷每個mbox需要追蹤的量度是`click`還是`display`，以便正確反映通知的`type`。 此外，請針對每個通知傳入`id`，以便判斷是否透過[!UICONTROL &#x200B; Adobe Target傳送API]正確傳送了通知。 `timestamp`也需轉送至[!DNL Target]，以指出指定mbox的`click`或`display`何時發生以用於報表用途。
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 
 ## 預先擷取檢視的通知
 
-可透過單一傳遞呼叫傳送一或多個通知。 判斷每個mbox需要追蹤的量度是`click`還是`display`，以便正確反映通知的型別。 此外，請將每個通知傳入`id`，以便判斷是否透過[!UICONTROL Adobe Target Delivery API]正確傳送了通知。 時間戳記也很重要以轉送至[!DNL Target]，以指出`click`或`display`何時針對特定檢視發生，以用於報表用途。
+可透過單一傳遞呼叫傳送一或多個通知。 判斷每個mbox需要追蹤的量度是`click`還是`display`，以便正確反映通知的型別。 此外，請針對每個通知傳入`id`，以便判斷是否透過[!UICONTROL Adobe Target傳送API]正確傳送了通知。 時間戳記也很重要以轉送至[!DNL Target]，以指出`click`或`display`何時針對特定檢視發生，以用於報表用途。
 
 ```
 curl -X POST \

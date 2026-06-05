@@ -14,8 +14,8 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 652
-ht-degree: 13%
+source-wordcount: 664
+ht-degree: 12%
 
 ---
 
@@ -72,10 +72,10 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 | tntId | 字串 | 無 | [!DNL Target]中使用者的主要識別碼。 已從targetCookies擷取。 若未提供，則為自動產生。 |
 | mcId | 字串 | 無 | 用來合併及共用不同[!DNL Adobe]解決方案(ECID)之間的資料。 已從targetCookies擷取。 若未提供，則為自動產生。 |
 | trackingServer | 字串 | 無 | Adobe Analytics伺服器，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地彙整資料。 |
-| trackingServerSecure | 字串 | 無 | [!UICONTROL Adobe Analytics Secure Server]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地將資料彙整在一起。 |
+| trackingServerSecure | 字串 | 否 | [!UICONTROL Adobe Analytics Secure Server]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地將資料彙整在一起。 |
 | 決策方法 | 決策方法 | 否 | 可用於針對裝置上決策明確設定ON_DEVICE或HYBRID決策方法 |
 
-每個欄位的值都應符合&#x200B;*[!UICONTROL Target View Delivery API]*&#x200B;要求規格。 若要進一步瞭解&#x200B;*[!UICONTROL Target View Delivery API]*，請參閱[http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
+每個欄位的值都應符合&#x200B;*[!UICONTROL 目標檢視傳送API]*&#x200B;要求規格。 若要深入瞭解&#x200B;*[!UICONTROL 目標檢視傳送API]*，請參閱[http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
 
 
 ## 回應

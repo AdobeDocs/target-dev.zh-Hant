@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1173
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 使用者識別
 
-在[!DNL Adobe Target]內有多種方式可用來識別使用者。 [!UICONTROL Target]使用以下識別碼：
+在[!DNL Adobe Target]內有多種方式可用來識別使用者。 [!UICONTROL Target]使用下列識別碼：
 
 | 欄位名稱 | 說明 |
 | --- | --- |
@@ -175,7 +175,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Marketing Cloud訪客ID (marketingCloudVisitorId)
 
-`marketingCloudVisitorId`是通用的永久ID，可識別Adobe Experience Cloud中所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，將[!DNL Target]與[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]整合時需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是通用的永久ID，可識別Adobe Experience Cloud所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，將[!DNL Target]與[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]整合時需要`marketingCloudVisitorId`。
 
 下列範例呼叫示範如何將從Experience Cloud ID服務擷取的`marketingCloudVisitorId`傳遞至[!DNL Target]。
 
@@ -241,7 +241,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 客戶ID (customerIds)
 
-[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)可新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
+[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)可以新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
 
 | 驗證狀態 | 使用者狀態 |
 | --- | --- |

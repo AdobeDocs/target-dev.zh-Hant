@@ -18,13 +18,13 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 119
 ht-degree: 7%
 
 ---
 
 # 混合實施
 
-[!DNL Adobe Target]提供獨特的混合部署模型，用於個人化 — 混合使用者端和伺服器端實作。 此混合模型可讓非技術使用者使用WYSIWYG [!UICONTROL Visual Experience Composer] (VEC)編寫實驗或個人化活動，並讓伺服器端執行、傳送及轉譯體驗，以進行高效能傳遞。
+[!DNL Adobe Target]提供獨特的混合部署模型，用於個人化 — 混合使用者端和伺服器端實作。 此混合模型可讓非技術使用者使用WYSIWYG [!UICONTROL 視覺化體驗撰寫器] (VEC)來撰寫實驗或個人化活動，並讓伺服器端執行、傳送及轉譯體驗，以進行高效能傳遞。
 
 如需詳細資訊，請參閱[Adobe教學課程](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hant)中的[Adobe Target混合部署](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=zh-Hant)。

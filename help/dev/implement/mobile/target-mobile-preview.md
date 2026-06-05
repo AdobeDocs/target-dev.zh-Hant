@@ -11,8 +11,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 552
-ht-degree: 18%
+source-wordcount: 578
+ht-degree: 24%
 
 ---
 
@@ -43,15 +43,15 @@ ht-degree: 18%
 
 ## 產生預覽連結
 
-1. 在[!DNL Target] UI中，按一下&#x200B;**[!UICONTROL More Options]**&#x200B;圖示（垂直省略符號），然後選取&#x200B;**[!UICONTROL Create Mobile Preview Link]**。
+1. 在[!DNL Target] UI中，按一下&#x200B;**[!UICONTROL 更多選項]**&#x200B;圖示（垂直省略符號），然後選取&#x200B;**[!UICONTROL 建立行動裝置預覽連結]**。
 
    ![替代影像](assets/mobile-preview-create.png)
 
-1. 選取您要預覽的活動，然後按一下&#x200B;**[!UICONTROL Generate Mobile Preview Link]**。
+1. 選取您要預覽的活動，然後按一下[產生行動裝置預覽連結]。**&#x200B;**
 
    >[!NOTE]
    >
-   >您只能選取表單式[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活動。
+   >您只能選取表單式[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動。
 
    ![替代影像](assets/mobile-preview-select-activities.png)
 
@@ -61,7 +61,7 @@ ht-degree: 18%
 
    ![替代影像](assets/mobile-preview-enter-url-scheme.png)
 
-1. 按一下&#x200B;**[!UICONTROL Generate Mobile Preview Link]**，然後複製連結。
+1. 按一下&#x200B;**[!UICONTROL 「產生行動裝置預覽連結」]**，然後複製連結。
 
    ![替代影像](assets/mobile-preview-generate-and-copy.png)
 
@@ -75,14 +75,14 @@ ht-degree: 18%
 
    |![預覽深層連結 1](assets/mobile-preview-open-deeplink.png)|![預覽深層連結 2](assets/mobile-preview-open-app.png)|
 
-   您的應用程式隨即開啟並啟動[!DNL Target] [!UICONTROL Mobile Preview Mode]。
+   您的應用程式會開啟並啟動[!DNL Target] [!UICONTROL 行動裝置預覽模式]。
 
-1. 選取您要檢視的體驗組合，然後按一下&#x200B;**[!UICONTROL Launch Experiences]**。
+1. 選取您要查看的體驗組合，然後按一下&#x200B;**[!UICONTROL 「啟動體驗」]**。
 
    |![行動裝置預覽1](assets/mobile-preview-experience-selection-1.png)|![行動裝置預覽2](assets/mobile-preview-experience-result-1-france.png)|![行動裝置預覽3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![行動裝置預覽4](assets/mobile-preview-experience-selection-2.png)|![行動裝置預覽5](assets/mobile-preview-experience-result-2-aus.png)|![行動裝置預覽6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 限制
 
-* 按一下&#x200B;**[!UICONTROL Launch Experiences]**&#x200B;按鈕後，必須重新載入檢視才能顯示新內容。 最容易的方式是切換至不同畫面，然後回到您預期會發生變更的畫面。
+* 按一下&#x200B;**[!UICONTROL 「啟動體驗」]**&#x200B;按鈕之後，必須重新載入檢視新內容才會顯示。 最容易的方式是切換至不同畫面，然後回到您預期會發生變更的畫面。
 * Android 早於 API-19 (KitKat) 的版本不支援行動裝置預覽。

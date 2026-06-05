@@ -1,6 +1,6 @@
 ---
 keywords: mboxCreate， mboxcreate， mbox create， at.js，函式，函式
-description: 對 [!DNL Adobe Target] at.js JavaScript程式庫使用[!UICONTROL mboxCreate()]函式，將選件套用至具有mboxDefault類別名稱的最接近DIV。 (at.js 1.x)
+description: 對 [!DNL Adobe Target] at.js JavaScript資料庫使用[!UICONTROL mboxCreate()]函式，將選件套用至具有mboxDefault類別名稱的最接近DIV。 (at.js 1.x)
 title: 如何使用[!UICONTROL mboxCreate()]函式？
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 211
-ht-degree: 41%
+source-wordcount: 216
+ht-degree: 40%
 
 ---
 
-# [!UICONTROL mboxCreate(mbox,params)] - at.js 1.x
+# [!UICONTROL mboxCreate(mbox，params)] - at.js 1.x
 
 執行要求並將產品建議套用至具有 mboxDefault 類別名稱的最接近 DIV。
 

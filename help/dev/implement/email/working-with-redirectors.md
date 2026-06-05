@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 63%
 
    * 其中 `yourclientcode` 代表貴公司的用戶端代碼。 您的公司用戶端代碼為全部小寫並且不帶特殊字元。
 
-     您的使用者端代碼可在[!DNL Target]介面的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;頁面最上方取得。
+     您的使用者端代碼可在[!DNL Target]介面的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**&#x200B;頁面最上方取得。
 
    * `redirectorlink_456` 代表重新導向程式 mbox 的名稱，會顯示在您用於促銷活動和測試的帳戶中。
 
@@ -107,7 +107,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->最佳實務是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;參與量度來決定成本值。
+>最佳實務是使用每次造訪的&#x200B;**[!UICONTROL 分數]**&#x200B;參與量度來判斷成本值。
 
 將 `&mboxPageValue=-value` 新增至 URL 中。 請注意負值。
 
@@ -124,7 +124,7 @@ https://<your_clientcode>.tt.omtrdc.net/​m2/yourclientcode/ubox/​page?mbox=r
 
 >[!NOTE]
 >
->最佳實務是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;參與量度來判斷收入值。
+>最佳實務是使用&#x200B;**[!UICONTROL 每次造訪得分]**&#x200B;參與量度來判斷收入值。
 
 將 `&mboxPageValue=value` 新增至 URL 中。
 

@@ -17,14 +17,14 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: 731
 ht-degree: 9%
 
 ---
 
 # 支援的功能概述
 
-[!DNL Adobe Target]的伺服器端SDK可讓開發人員在效能與資料新鮮度之間做出選擇，進而做出決策。 換言之，如果透過機器學習提供最相關且最吸引人的個人化內容對您而言至關重要，則應進行即時伺服器呼叫。 但是，當效能較重要時，則應該進行裝置上決策。 若要讓[!UICONTROL on-device decisioning]運作，請參閱下列支援功能清單：
+[!DNL Adobe Target]的伺服器端SDK可讓開發人員在效能與資料新鮮度之間做出選擇，進而做出決策。 換言之，如果透過機器學習提供最相關且最吸引人的個人化內容對您而言至關重要，則應進行即時伺服器呼叫。 但是，當效能較重要時，則應該進行裝置上決策。 若要讓[!UICONTROL 裝置上決策]運作，請參閱下列支援功能清單：
 
 * 活動類型
 * 對象目標定位
@@ -32,7 +32,7 @@ ht-degree: 9%
 
 ## 活動類型
 
-下表指出[!UICONTROL on-device decisioning]支援或不支援使用[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant？)建立的[活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hant)。
+下表指出[!UICONTROL 裝置上決策]支援或不支援使用[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant？)建立的[活動型別](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hant)。
 
 | 活動類型 | 支援 |
 | --- | --- |
@@ -48,7 +48,7 @@ ht-degree: 9%
 
 ## 對象目標定位
 
-下表指出[!UICONTROL on-device decisioning]支援或不支援的對象規則。
+下表指出[!UICONTROL 裝置上決策]支援或不支援的對象規則。
 
 | 對象規則 | 裝置上決策 |
 | --- | --- |
@@ -62,11 +62,11 @@ ht-degree: 9%
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 否 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 否 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
+| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) （來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受眾） | 否 |
 
-### [!UICONTROL on-device decisioning]的地理定位
+### [!UICONTROL 裝置上決策]的地理定位
 
-為了維持具有地理型對象的[!UICONTROL on-device decisioning]活動近乎零延遲，Adobe建議您在`getOffers`呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者（例如Google Cloud）會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
+為了針對具有地理型對象的[!UICONTROL 裝置上決策]活動維持幾乎零延遲，Adobe建議您在`getOffers`的呼叫中自行提供地理值。 若要這麼做，請在要求的`Context`中設定`Geo`物件。 這表示您的伺服器需要一種方式來確定每個一般使用者的位置。 例如，您的伺服器可能會使用您設定的服務，執行IP對地理位置的查詢。 某些託管提供者（例如Google Cloud）會透過每個`HttpServletRequest`中的自訂標頭提供此功能。
 
 >[!BEGINTABS]
 
@@ -126,7 +126,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-不過，如果您無法在伺服器上執行IP對地理位置的查詢，但您仍想要針對包含地理位置型對象的`getOffers`要求執行[!UICONTROL on-device decisioning]，也支援此功能。 此方法的缺點在於它將使用遠端IP對地理的查閱，這會增加每個`getOffers`呼叫的延遲。 此延遲應低於遠端`getOffers`呼叫，因為它點選了位於伺服器附近的CDN。 您必須在要求的`Context`中的`Geo`物件中僅提供`ipAddress`欄位，SDK才能擷取您使用者IP位址的地理位置。 如果提供除了`ipAddress`之外的任何其他欄位，[!DNL Target] SDK將不會擷取地理位置中繼資料以進行解析。
+不過，如果您無法在伺服器上執行IP對地理的查詢，但您仍想要針對包含地理型受眾的`getOffers`請求執行[!UICONTROL 裝置上決策]，也支援此功能。 此方法的缺點在於它將使用遠端IP對地理的查閱，這會增加每個`getOffers`呼叫的延遲。 此延遲應低於遠端`getOffers`呼叫，因為它點選了位於伺服器附近的CDN。 您必須在要求的`Context`中的`Geo`物件中僅提供`ipAddress`欄位，SDK才能擷取您使用者IP位址的地理位置。 如果提供除了`ipAddress`之外的任何其他欄位，[!DNL Target] SDK將不會擷取地理位置中繼資料以進行解析。
 
 
 >[!BEGINTABS]
@@ -177,7 +177,7 @@ public class TargetRequestUtils {
 
 ## 配置方法
 
-下表指出[!UICONTROL on-device decisioning]支援或不支援的配置方法。
+下表指出[!UICONTROL 裝置上決策]支援或不支援的配置方法。
 
 | 配置方法 | 支援 |
 | --- | --- |

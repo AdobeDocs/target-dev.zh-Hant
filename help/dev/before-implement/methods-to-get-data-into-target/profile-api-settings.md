@@ -17,8 +17,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 347
-ht-degree: 33%
+source-wordcount: 363
+ht-degree: 31%
 
 ---
 
@@ -32,12 +32,12 @@ ht-degree: 33%
 
 **若要要求驗證，並使用[!DNL Target] UI產生存取權杖：**
 
-1. 按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
-1. 在「**[!UICONTROL Profile API]**」下方，將「**[!UICONTROL Require Authentication]**」切換至「啟用」或「停用」位置。
+1. 按一下&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**。
+1. 在&#x200B;**[!UICONTROL 設定檔API]**&#x200B;底下，將&#x200B;**[!UICONTROL 需要驗證]**&#x200B;切換至啟用或停用的位置。
 
    ![替代影像](assets/profile_api_settings.png)
 
-1. （視條件而定）如果您已啟用驗證需求，請按一下&#x200B;**[!UICONTROL Generate New Profile Authentication Token]**。
+1. （視條件而定）如果您已啟用驗證需求，請按一下&#x200B;**[!UICONTROL 產生新的設定檔驗證Token]**。
 
    ![替代影像](assets/profile_api_settings_2.png)
 
@@ -59,7 +59,7 @@ ht-degree: 33%
 
 1. 複製權杖，並將其加入請求標頭的格式： &quot;Authorization&quot; ： &quot;Bearer&quot;。
 
-1. 按一下&#x200B;**[!UICONTROL Generate New Profile Authentication Token]**&#x200B;以視需要重新產生權杖。
+1. 按一下&#x200B;**[!UICONTROL 產生新的設定檔驗證Token]**，視需要重新產生Token。
 
 >[!WARNING]
 >

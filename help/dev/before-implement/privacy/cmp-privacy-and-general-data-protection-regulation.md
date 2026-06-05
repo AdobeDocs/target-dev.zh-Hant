@@ -131,7 +131,7 @@ window.targetGlobalSettings = {
 
 否，Adobe會以集中的方式協助資料控管者符合其GDPR和CCPA規定。 資料控管者無需直接處理每個解決方案。
 
-Experience Cloud解決方案（包括Target）的所有GDPR和CCPA要求，都是透過目前稱為GDPR API的中央Adobe API來執行。 此API接著會完成資料控管者的Experience Cloud解決方案套件上的要求。
+Experience Cloud解決方案（包括Target）的所有GDPR和CCPA要求，都是透過目前稱為GDPR API的中央Adobe API來執行。 此API接著會完成資料控管者的Experience Cloud解決方案套裝上的所有要求。
 
 ### Adobe會讓客戶刪除哪些資訊來回應資料主體/使用者要求？
 

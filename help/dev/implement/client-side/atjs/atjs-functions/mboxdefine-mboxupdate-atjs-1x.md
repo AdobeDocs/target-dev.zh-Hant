@@ -1,6 +1,6 @@
 ---
 keywords: mboxDefine， mboxdefine， mbox define， mboxUpdate， mboxupdate， mbox更新， at.js，函式，函式， mboxDefine0
-description: 使用 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL mboxDefine()]和[!UICONTROL mboxUpdate()]函式來定義或更新mbox。 (at.js 1.x)
+description: 使用適用於 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL mboxDefine()]和[!UICONTROL mboxUpdate()]函式來定義或更新mbox。 (at.js 1.x)
 title: 如何使用[!UICONTROL mboxDefine()]和[!UICONTROL mboxUpdate()]函式？
 feature: at.js
 exl-id: 0a7dbea2-1cbd-4a5b-ba68-4c76a88d65c4
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 202
-ht-degree: 47%
+source-wordcount: 208
+ht-degree: 46%
 
 ---
 

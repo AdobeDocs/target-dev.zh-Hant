@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 352
-ht-degree: 3%
+source-wordcount: 424
+ht-degree: 1%
 
 ---
 
@@ -38,10 +38,10 @@ ht-degree: 3%
 
 84.0.4147.105 版
 
-1. 按一下&#x200B;**[!UICONTROL Chrome]**&#x200B;功能表> **[!UICONTROL Preferences]**。
-1. 按一下「**[!UICONTROL Privacy and Security]**」標籤。
-1. 按一下 **[!UICONTROL Cookies and other site data]**。
-1. 按一下 **[!UICONTROL See all cookies and site data]**。
+1. 按一下&#x200B;**[!UICONTROL Chrome]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
+1. 按一下「**[!UICONTROL 隱私權與安全性]**」標籤。
+1. 按一下&#x200B;**[!UICONTROL Cookie與其他網站資料]**。
+1. 按一下&#x200B;**[!UICONTROL 檢視所有Cookie和網站資料]**。
 1. 展開`adobe.com`區段，選取&#x200B;**mbox** Cookie，然後按一下刪除圖示(X)。
 
 ## 從Mozilla Firefox刪除[!DNL Target] Cookie
@@ -50,10 +50,10 @@ ht-degree: 3%
 
 ### 刪除與`adobe.com`相關聯的所有Cookie
 
-1. 按一下&#x200B;**[!UICONTROL Firefox]**&#x200B;功能表> **[!UICONTROL Preferences]**。
-1. 按一下「**[!UICONTROL Privacy and Security]**」標籤。
-1. 在&#x200B;**&#x200B; Cookie和網站資料*底下，按一下&#x200B;**&#x200B;[!UICONTROL Manage Data]**。
-1. 選取`adobe.com`網站，然後按一下&#x200B;**[!UICONTROL Remove Selected]**。
+1. 按一下&#x200B;**[!UICONTROL Firefox]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
+1. 按一下「**[!UICONTROL 隱私權與安全性]**」標籤。
+1. 在&#x200B;**&#x200B; Cookie和網站資料*底下，按一下&#x200B;**&#x200B;[!UICONTROL 管理資料]**。
+1. 選取`adobe.com`網站，然後按一下[移除選取的專案]。**&#x200B;**
 
 >[!WARNING]
 >
@@ -61,20 +61,20 @@ ht-degree: 3%
 
 ### 刪除個別Cookie (mbox)
 
-1. 在Firefo中，按一下&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Web Developer]** > **[!UICONTROL Storage Inspector]**。
-1. 按一下「**[!UICONTROL Advanced]**」標籤。
+1. 在Firefo中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 網頁開發人員]** > **[!UICONTROL 儲存檢測器]**。
+1. 按一下「**[!UICONTROL 進階]**」標籤。
 1. 導覽至內含您要刪除Cookie的網頁。
-1. 展開&#x200B;**[!UICONTROL Cookies]**&#x200B;區段，然後按一下`https://experience.adobe.com`。
-1. 以滑鼠右鍵按一下&#x200B;**[!UICONTROL mbox]** Cookie，然後按一下&#x200B;**[!UICONTROL Delete]**。
+1. 展開&#x200B;**[!UICONTROL Cookie]**&#x200B;區段，然後按一下`https://experience.adobe.com`。
+1. 以滑鼠右鍵按一下&#x200B;**[!UICONTROL mbox]** Cookie，然後按一下&#x200B;**[!UICONTROL 刪除]**。
 
 ## 從Microsoft Edge刪除[!DNL Target] Cookie
 
 84.0.522.52版
 
-1. 按一下&#x200B;**[!UICONTROL Microsoft Edge]**&#x200B;功能表> **[!UICONTROL Preferences]**。
-1. 按一下「**[!UICONTROL Site Permissions]**」標籤。
-1. 按一下 **[!UICONTROL Cookies and site data]**。
-1. 按一下 **[!UICONTROL See all cookies and site data]**。
+1. 按一下&#x200B;**[!UICONTROL Microsoft Edge]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
+1. 按一下「**[!UICONTROL 網站許可權]**」標籤。
+1. 按一下&#x200B;**[!UICONTROL Cookie和網站資料]**。
+1. 按一下&#x200B;**[!UICONTROL 檢視所有Cookie和網站資料]**。
 1. 展開`adobe.com`區段，選取&#x200B;**mbox** Cookie，然後按一下刪除圖示(X)。
 
 ## 從Apple Safari刪除[!DNL Target] Cookie
@@ -83,10 +83,10 @@ ht-degree: 3%
 
 ### 刪除與`adobe.com`相關聯的所有Cookie
 
-1. 按一下&#x200B;**[!UICONTROL Safari]**&#x200B;功能表> **[!UICONTROL Preferences]**。
-1. 按一下「**[!UICONTROL Privacy]**」標籤。
-1. 按一下 **[!UICONTROL Manage Website Data]**。
-1. 選取您要刪除Cookie的網站，然後按一下&#x200B;**[!UICONTROL Remove]**。
+1. 按一下&#x200B;**[!UICONTROL Safari]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
+1. 按一下「**[!UICONTROL 隱私權]**」標籤。
+1. 按一下&#x200B;**[!UICONTROL 管理網站資料]**。
+1. 選取您要刪除Cookie的網站，然後按一下[移除]。**&#x200B;**
 
 >[!WARNING]
 >
@@ -94,11 +94,11 @@ ht-degree: 3%
 
 ### 刪除個別Cookie (mbox)
 
-1. 按一下&#x200B;**[!UICONTROL Safari]**&#x200B;功能表> **[!UICONTROL Preferences]**。
-1. 按一下「**[!UICONTROL Advanced]**」標籤。
-1. 選取&#x200B;**[!UICONTROL Show Develop menu in menu bar]**&#x200B;選項。
+1. 按一下&#x200B;**[!UICONTROL Safari]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
+1. 按一下「**[!UICONTROL 進階]**」標籤。
+1. 選取&#x200B;**[!UICONTROL 在功能表列]**&#x200B;中顯示開發功能表選項。
 1. 導覽至內含您要刪除Cookie的網頁。
-1. 按一下&#x200B;**[!UICONTROL Develop]**&#x200B;功能表> **[!UICONTROL Show Web Inspector]**。
-1. 按一下「**[!UICONTROL Storage]**」標籤。
-1. 展開&#x200B;**[!UICONTROL Cookies]**&#x200B;區段，然後按一下`www.adobe.com`。
-1. 以滑鼠右鍵按一下&#x200B;**mbox** Cookie，然後按一下&#x200B;**[!UICONTROL Delete]**。
+1. 按一下&#x200B;**[!UICONTROL 開發]**&#x200B;功能表> **[!UICONTROL 顯示網頁檢測器]**。
+1. 按一下「**[!UICONTROL 儲存空間]**」標籤。
+1. 展開&#x200B;**[!UICONTROL Cookie]**&#x200B;區段，然後按一下`www.adobe.com`。
+1. 以滑鼠右鍵按一下&#x200B;**mbox** Cookie，然後按一下&#x200B;**[!UICONTROL 刪除]**。

@@ -37,7 +37,7 @@ ht-degree: 67%
 
 at.js 會產生一個工作階段 ID 並將其儲存於 Cookie 中。 第一個回應包含任何活動資訊，以及 [!DNL Target] 伺服器產生的 `TNT` 或 `PC ID`。 然後 at.js 會將 `TNT/PC ID` 寫入 Cookie 中。
 
-`AMCV_###@AdobeOrg`第一方Cookie一律由Experience Cloud ID Service設定，不過在[!DNL Target]要求中會傳遞`ECID`。
+`AMCV_###@AdobeOrg`第一方Cookie一律由Experience Cloud ID Service設定，不過會在[!DNL Target]要求中傳遞`ECID`。
 
 >[!NOTE]
 >

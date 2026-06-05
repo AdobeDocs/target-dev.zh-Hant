@@ -1,6 +1,6 @@
 ---
 title: 與Experience Cloud AAM區段整合
-description: 與Experience Cloud整合，Audience Manager整合
+description: 與Experience Cloud整合、Audience Manager整合
 keywords: 傳送api，伺服器端，伺服器端，整合， audience manager， aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side

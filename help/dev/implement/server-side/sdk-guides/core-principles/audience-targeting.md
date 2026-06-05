@@ -30,7 +30,7 @@ ht-degree: 15%
 ### [!DNL Target]資料庫
 
 如需詳細資訊，請參閱[[!DNL Target] 資料庫](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hant)。
-&#x200B;
+&#x200B;URL
 * 從Bing反向連結
 * Chrome瀏覽器
 * Firefox瀏覽器
@@ -218,7 +218,7 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 否 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 否 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 否 |
+| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) （來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受眾） | 否 |
 
 ### 裝置上決策的地理定位
 
@@ -345,4 +345,4 @@ public class TargetRequestUtils {
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant) | 是 |
 | [流量來源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hant) | 是 |
 | [時間範圍](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hant) | 是 |
-| [Experience Cloud對象](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) (來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的對象 | 是 |
+| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hant) （來自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受眾） | 是 |

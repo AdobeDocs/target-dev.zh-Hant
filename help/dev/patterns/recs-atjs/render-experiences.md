@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 ## 演算體驗圖表 {#diagram}
 
-at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automatic Page Load Request]時才有意義。 此選項會隱藏整個HTML內文，同時從[!DNL Target]擷取體驗。 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
+只有當您啟用[!UICONTROL 自動頁面載入請求]時，at.js提供的自動現成閃爍處理才有意義。 此選項會隱藏整個HTML內文，同時從[!DNL Target]擷取體驗。 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL 瀏覽過這些專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過這些專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買這些專案、也購買這些專案的使用者]
 
 **需要實體引數**
 
@@ -118,13 +118,13 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* 整個網站檢視次數最多
+* 依類別檢視次數最多
+* [!UICONTROL 檢視次數最多的專案屬性]
+* 整個網站[!UICONTROL 最暢銷商品]
+* [!UICONTROL 依類別排名的最暢銷商品]
+* [!UICONTROL 依專案屬性的最暢銷商品]
+* [!UICONTROL Analytics量度排名最前]
 
 **需要實體引數**
 
@@ -147,10 +147,10 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL 瀏覽過此專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過此專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買了此專案、也購買了其他專案的使用者]
+* [!UICONTROL 具有類似屬性的專案]
 
 **需要實體引數**
 
@@ -173,8 +173,8 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近查看的項目]
+* [!UICONTROL 為您推薦]
 
 **需要實體引數**
 
@@ -196,7 +196,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL 自訂演演算法]
 
 **需要實體引數**
 

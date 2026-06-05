@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 188
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 [!DNL Adobe Target Delivery API]是以REST為基礎。 本檔案說明構成[!DNL Adobe Target] [!DNL Delivery API]的資源。 HTTP方法可用來對這些資源執行作業。
 
-使用[!UICONTROL Adobe Target's Delivery API]，您可以：
+使用[!UICONTROL Adobe Target的傳送API]，您可以：
 
 * 跨網路提供體驗，包括SPA和行動頻道，以及非瀏覽器型IoT裝置，例如連線電視、資訊站或店內數位熒幕。
 * 從任何可進行HTTP/s呼叫的伺服器端平台或應用程式提供體驗。

@@ -19,8 +19,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 233
-ht-degree: 28%
+source-wordcount: 252
+ht-degree: 26%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 28%
 
 * [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
 
-  [!UICONTROL Adobe Experience Platform Web SDK]可讓您透過[!UICONTROL Adobe Experience Edge Network]與[!DNL Adobe Experience Cloud] （包括[!DNL Target]）中的各種服務互動。 如果您選擇移轉至[!UICONTROL Adobe Experience Platform Web SDK]，請參閱[什麼是[!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)。
+  [!UICONTROL Adobe Experience Platform Web SDK]可讓您透過[!UICONTROL Adobe Experience Edge Network]，與[!DNL Adobe Experience Cloud] （包括[!DNL Target]）中的各種服務互動。 如果您選擇移轉至[!UICONTROL Adobe Experience Platform Web SDK]，請參閱[什麼是[!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)。
 
 * [[!DNL Target] at.js JavaScript資料庫](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 

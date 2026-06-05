@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 297
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ URL看起來像下面的範例：
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-將`<clientCode>`取代為您的[!DNL Target] [!UICONTROL Client Code]，並將`<ECID>`取代為您的[!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID])。
+將`<clientCode>`取代為您的[!DNL Target] [!UICONTROL 使用者端代碼]，並將`<ECID>`取代為您的[!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID])。
 
 ## 使用tntid
 

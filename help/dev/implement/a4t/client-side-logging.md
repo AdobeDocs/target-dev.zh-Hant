@@ -20,7 +20,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ ht-degree: 0%
 }
 ```
 
-[!UICONTROL Form-based Experience Composer]活動的主張可以同時包含相同主張下的內容和點按量度專案。 因此，不是在`scopeDetails.characteristics.analyticsToken`屬性中顯示內容的單一分析權杖，這些屬性可以相應地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`屬性中同時指定顯示和點按分析權杖。
+[!UICONTROL 表單式體驗撰寫器]活動的主張可在相同主張下同時包含內容和點按量度專案。 因此，不是在`scopeDetails.characteristics.analyticsToken`屬性中顯示內容的單一分析權杖，這些屬性可以相應地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`屬性中同時指定顯示和點按分析權杖。
 
 ```json
 {
@@ -236,13 +236,13 @@ ht-degree: 0%
 
 下列小節示範如何針對常見使用案例實作[!DNL Analytics]使用者端記錄。
 
-### [!UICONTROL Form-Based Experience Composer]個活動 {#form-based-composer}
+### [!UICONTROL 表單式體驗撰寫器]活動 {#form-based-composer}
 
 您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)活動的建議執行。
 
 當您請求特定決定範圍的建議時，傳回的建議包含其適當的[!DNL Analytics]權杖。 最佳實務是鏈結[!DNL Experience Platform Web SDK] `sendEvent`命令並重複處理傳回的主張，以便在同時收集[!DNL Analytics]權杖時執行這些建議。
 
-您可以為[!UICONTROL Form-Based Experience Composer]活動範圍觸發`sendEvent`命令，如下所示：
+您可以為[!UICONTROL 表單式體驗撰寫器]活動範圍觸發`sendEvent`命令，如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +402,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-主張可以有不同型別的專案，如相關專案的`schema`屬性所指示。 [!UICONTROL Form-Based Experience Composer]活動支援四個主張專案結構描述：
+主張可以有不同型別的專案，如相關專案的`schema`屬性所指示。 [!UICONTROL 表單式體驗撰寫器]活動支援四個主張專案結構描述：
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +432,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 實作摘要 {#implementation-summary}
 
-總而言之，使用[!DNL Experience Platform Web SDK]套用[!UICONTROL Form-Based Experience Composer]活動時，必須執行下列步驟：
+總而言之，使用[!DNL Experience Platform Web SDK]套用[!UICONTROL 表單式體驗撰寫器]活動時，必須執行下列步驟：
 
-1. 傳送擷取[!UICONTROL Form-Based Experience Composer]活動選件的事件；
+1. 傳送擷取[!UICONTROL 表單式體驗撰寫器]活動選件的事件；
 1. 將內容變更套用至頁面；
 1. 傳送`decisioning.propositionDisplay`通知事件；
 1. 從SDK回應中收集[!DNL Analytics]顯示權杖，並建構點選[!DNL Analytics]的裝載；
@@ -476,7 +476,7 @@ alloy("sendEvent", {
 });
 ```
 
-### [!UICONTROL Visual Experience Composer] (VEC)活動 {#visual-experience-composer-acitivties}
+### [!UICONTROL 視覺化體驗撰寫器] (VEC)活動 {#visual-experience-composer-acitivties}
 
 [!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)編寫的選件。
 

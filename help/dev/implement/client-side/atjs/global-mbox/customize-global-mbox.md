@@ -1,6 +1,6 @@
 ---
 keywords: 全域mbox，自訂全域mbox，編輯at.js， at.js，實作at.js
-description: 瞭解如何在 [!DNL Adobe Target]的[!UICONTROL Administration]-[!UICONTROL Implementation]頁面上自訂at.js的全域mbox。
+description: 瞭解如何在 [!DNL Adobe Target]中的[!UICONTROL 管理]-[!UICONTROL 實作]頁面上自訂at.js的全域mbox。
 title: 如何自訂全域mbox？
 feature: at.js
 exl-id: f7809c3d-6e77-4bbe-8da3-4ab0a448c801
@@ -18,8 +18,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 209
-ht-degree: 17%
+source-wordcount: 227
+ht-degree: 16%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 17%
 
 可協助您為at.js自訂[!DNL Adobe Target]全域mbox的資訊。
 
-1. 按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
+1. 按一下&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**。
 
-1. 停用&#x200B;**[!UICONTROL Page load enabled (Auto create global mbox)]**，然後新增您要用來從[!DNL Target]傳送活動的自訂全域mbox的名稱。
+1. 停用&#x200B;**[!UICONTROL 已啟用頁面載入（自動建立全域mbox）]**，然後新增您要用來從[!DNL Target]傳送活動的自訂全域mbox名稱。
 
 >[!WARNING]
 >
@@ -52,4 +52,4 @@ ht-degree: 17%
 
 >[!WARNING]
 >
->您帳戶中的所有活動都會與此mbox同步。 確認您的網站上存在全域mbox，讓活動可繼續運作。 請務必編輯並重新儲存使用與此mbox同步的[!UICONTROL Visual Experience Composer] (VEC)所建立的受影響活動。 不需要重新儲存在[!UICONTROL Form-Based Experience Composer]中或透過API建立的活動。
+>您帳戶中的所有活動都會與此mbox同步。 確認您的網站上存在全域mbox，讓活動可繼續運作。 請務必編輯並重新儲存使用與此mbox同步的[!UICONTROL 視覺化體驗撰寫器] (VEC)建立的受影響活動。 不需要重新儲存在[!UICONTROL 表單式體驗撰寫器]中或透過API建立的活動。

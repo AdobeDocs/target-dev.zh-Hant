@@ -17,7 +17,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1747
+source-wordcount: 1836
 ht-degree: 2%
 
 ---
@@ -38,43 +38,43 @@ ht-degree: 2%
 
 * 可在頁面載入時快取所有產品建議，以減少對單一伺服器呼叫發出的多個伺服器呼叫。
 * 改善網站上的使用者體驗，因為選件會透過快取立即顯示，而不會出現傳統伺服器呼叫造成的延遲時間。
-* 一行程式碼和一次性開發人員設定可讓行銷人員透過SPA上的[!UICONTROL Visual Experience Composer] (VEC)建立及執行[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活動。
+* 一行程式碼和一次性開發人員設定可讓行銷人員透過SPA上的[!UICONTROL 視覺化體驗撰寫器] (VEC)建立及執行[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動。
 
 ## xdm檢視和單頁應用程式
 
-適用於SPA的[!UICONTROL Adobe Target] VEC利用了名為[!UICONTROL Views]的概念：視覺化元素的邏輯群組，這些元素共同構成SPA體驗。 因此，單頁應用程式可視為根據使用者互動轉換檢視，而不是轉換URL。 [!UICONTROL View]通常可以代表整個網站或網站內的分組視覺元素。
+適用於SPA的[!UICONTROL Adobe Target] VEC利用了名為[!UICONTROL 檢視]的概念：視覺化元素的邏輯群組，共同構成SPA體驗。 因此，單頁應用程式可視為根據使用者互動轉換檢視，而不是轉換URL。 [!UICONTROL 檢視]通常可以代表整個網站或網站內的分組視覺元素。
 
-為了進一步說明檢視是什麼，下列範例使用在[!DNL React]中實作的假想線上電子商務網站來探索範例[!UICONTROL Views]。
+為了進一步說明檢視是什麼，下列範例使用在[!DNL React]中實作的假想線上電子商務網站來探索範例[!UICONTROL 檢視]。
 
-導覽至首頁後，主圖影像會宣傳復活節特賣以及網站上提供的最新產品。 在這種情況下，可以為整個主畫面定義[!UICONTROL View]。 此[!UICONTROL View]可以簡單地稱為「home」。
+導覽至首頁後，主圖影像會宣傳復活節特賣以及網站上提供的最新產品。 在這種情況下，可以為整個主畫面定義[!UICONTROL 檢視]。 此[!UICONTROL 檢視]可以簡單地稱為「home」。
 
 ![瀏覽器視窗中單頁應用程式的範例影像。](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
 
-當客戶對該企業所銷售的產品越來越感興趣時，他們決定按一下&#x200B;**產品**&#x200B;連結。 與主網站類似，產品網站的整體可定義為[!UICONTROL View]。 此[!UICONTROL View]可命名為「products-all」。
+當客戶對該企業所銷售的產品越來越感興趣時，他們決定按一下&#x200B;**產品**&#x200B;連結。 與主網站類似，產品網站的整體可定義為[!UICONTROL 檢視]。 此[!UICONTROL 檢視]可命名為「products-all」。
 
 ![瀏覽器視窗中單頁應用程式的範例影像，其中顯示所有產品。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
 
-因為[!UICONTROL View]可以定義為整個網站或網站上的一組視覺元素。 產品網站上顯示的四個產品可分組並視為[!UICONTROL View]。 此檢視可命名為「products」。
+因為[!UICONTROL 檢視]可以定義為整個網站或網站上的一組視覺元素。 產品網站上顯示的四個產品可分組並視為[!UICONTROL 檢視]。 此檢視可命名為「products」。
 
 ![瀏覽器視窗中單頁應用程式的範例影像，顯示範例產品。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
 
-當客戶決定按一下「**載入更多**」按鈕來探索網站上更多產品時，在此情況下，網站URL不會變更。 不過，您可以在此處建立[!UICONTROL View]，以僅代表顯示的第二列產品。 [!UICONTROL View]名稱可以是&quot;products-page-2&quot;。
+當客戶決定按一下「**載入更多**」按鈕來探索網站上更多產品時，在此情況下，網站URL不會變更。 不過，您可以在此處建立[!UICONTROL 檢視]，以僅代表顯示的第二列產品。 [!UICONTROL 檢視]名稱可以是&quot;products-page-2&quot;。
 
 ![瀏覽器視窗中單頁應用程式的範例影像，其他頁面上會顯示範例產品。](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)
 
-客戶決定從網站購買一些產品，然後進入結帳畫面。 在結帳網站上，客戶可選擇一般配送或快捷配送。 [!UICONTROL View]可以是網站上的任何一組視覺元素，因此可以為傳遞偏好設定建立[!UICONTROL View]，並稱為「傳遞偏好設定」。
+客戶決定從網站購買一些產品，然後進入結帳畫面。 在結帳網站上，客戶可選擇一般配送或快捷配送。 [!UICONTROL 檢視]可以是網站上的任何一組視覺元素，因此可以為傳遞偏好設定建立[!UICONTROL 檢視]，並稱為「傳遞偏好設定」。
 
 ![瀏覽器視窗中單頁應用程式簽出頁面的範例影像。](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
 
-[!UICONTROL Views]的概念可以延伸至比此案例更遠的地方。 這些案例只是可在網站上定義的一些[!UICONTROL Views]範例。
+[!UICONTROL 檢視]的概念可以延伸至比此案例更遠的地方。 這些案例只是可在網站上定義的一些[!UICONTROL 檢視]範例。
 
-## 正在實作[!UICONTROL XDM Views]
+## 正在實作[!UICONTROL XDM檢視]
 
-在[!DNL Target]中可運用[!UICONTROL XDM Views]，讓行銷人員透過[!UICONTROL Visual Experience Composer]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
+[!UICONTROL XDM檢視]可在[!DNL Target]中使用，讓行銷人員透過[!UICONTROL 視覺化體驗撰寫器]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
 
 1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/install/overview)。
-2. 決定單頁應用程式中要個人化的所有[!UICONTROL XDM Views]。
-3. 定義[!UICONTROL XDM Views]後，若要傳遞A/B或XT VEC活動，請在您的單頁應用程式中實作`sendEvent()`函式，並將`renderDecisions`設為`true`以及對應的[!UICONTROL XDM View]。 [!UICONTROL XDM View]必須在`xdm.web.webPageDetails.viewName`中傳遞。 此步驟可讓行銷人員運用[!UICONTROL Visual Experience Composer]為這些XDM啟動A/B和XT測試。
+2. 決定您要個人化的單頁應用程式中的所有[!UICONTROL XDM檢視]。
+3. 定義[!UICONTROL XDM檢視]後，若要傳遞A/B或XT VEC活動，請在您的單頁應用程式中實作`sendEvent()`函式，並將`renderDecisions`設為`true`以及對應的[!UICONTROL XDM檢視]。 必須在`xdm.web.webPageDetails.viewName`中傳遞[!UICONTROL XDM檢視]。 此步驟可讓行銷人員運用[!UICONTROL 視覺化體驗撰寫器]，針對這些XDM啟動A/B和XT測試。
 
    ```javascript
    alloy("sendEvent", { 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在第一個`sendEvent()`呼叫中，所有應呈現給使用者的[!UICONTROL XDM Views]都會被擷取並快取。 後續的`sendEvent()`呼叫（已傳入[!UICONTROL XDM Views]）會從快取讀取並轉譯，而不需要伺服器呼叫。
+>在第一個`sendEvent()`呼叫中，所有應該呈現給使用者的[!UICONTROL XDM檢視]都會被擷取並快取。 後續的`sendEvent()`呼叫與[!UICONTROL XDM檢視]已傳入，會從快取讀取並轉譯，而不需要伺服器呼叫。
 
 ## `sendEvent()`函式範例
 
@@ -185,7 +185,7 @@ class Products extends Component {
 
 ![瀏覽器視窗中單頁應用程式的範例影像（含A/B測試）。](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
 
-若要根據選取的傳遞偏好設定個人化網站內容，可以為每個傳遞偏好設定建立[!UICONTROL View]。 選取&#x200B;**一般傳遞**&#x200B;時，可將[!UICONTROL View]命名為「checkout-normal」。 如果選取&#x200B;**快速運送**，則可將[!UICONTROL View]命名為「checkout-express」。
+若要根據選取的傳遞偏好設定個人化網站內容，可以為每個傳遞偏好設定建立[!UICONTROL 檢視]。 選取&#x200B;**一般傳遞**&#x200B;時，可將[!UICONTROL 檢視]命名為「checkout-normal」。 如果選取&#x200B;**快速運送**，則可將[!UICONTROL 檢視]命名為「checkout-express」。
 
 ```jsx
 function onViewChange(viewName) { 
@@ -226,37 +226,37 @@ class Checkout extends Component {
 } 
 ```
 
-## 針對SPA使用[!UICONTROL Visual Experience Composer]
+## 使用適用於SPA的[!UICONTROL 視覺化體驗撰寫器]
 
-當您完成定義[!UICONTROL XDM Views]並實作`sendEvent()`，且傳入了那些[!UICONTROL XDM Views]時，VEC就能夠偵測這些[!UICONTROL Views]，並允許使用者建立A/B或XT活動的動作或修改。
+當您完成定義[!UICONTROL XDM檢視]並實作`sendEvent()` （已傳入[!UICONTROL XDM檢視]）時，VEC能夠偵測這些[!UICONTROL 檢視]，並允許使用者建立A/B或XT活動的動作或修改。
 
 >[!NOTE]
 >
 >若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
 
-### [!UICONTROL Modifications]面板
+### [!UICONTROL 修改]面板
 
-[!UICONTROL Modifications]面板擷取為特定[!UICONTROL View]建立的動作。 [!UICONTROL View]的所有動作都會分組在該[!UICONTROL View]下。
+[!UICONTROL 修改]面板擷取為特定[!UICONTROL 檢視]建立的動作。 [!UICONTROL 檢視]的所有動作都會分組在該[!UICONTROL 檢視]下。
 
 ### 動作
 
-按一下動作會醒目顯示套用此動作之網站上的元素。 在[!UICONTROL View]下建立的每個VEC動作都有下列圖示： **資訊**、**編輯**、**複製**、**移動**&#x200B;和&#x200B;**刪除**。 下表會詳細說明這些圖示。
+按一下動作會醒目顯示套用此動作之網站上的元素。 在[!UICONTROL 檢視]下建立的每個VEC動作都有下列圖示： **資訊**、**編輯**、**複製**、**移動**&#x200B;以及&#x200B;**刪除**。 下表會詳細說明這些圖示。
 
 | 圖示 | 說明 |
 |---|---|
 | 資訊 | 顯示此動作的詳細資料。 |
 | 編輯 | 可讓您直接編輯該動作的屬性。 |
-| 原地複製 | 將動作原地複製至一或多個存在於[!UICONTROL Modifications]面板上的[!UICONTROL Views]，或原地複製至一或多個您已在VEC中瀏覽及導覽到的[!UICONTROL Views]。 動作不一定存在於[!UICONTROL Modifications]面板中。<br/><br/>**注意：**&#x200B;進行復製作業後，您必須透過[!UICONTROL Browse]導覽至VEC中的[!UICONTROL View]，以檢視複製動作是否為有效的作業。 如果無法將動作套用至[!UICONTROL View]，您會看到錯誤。 |
-| 移動 | 將動作移動到[!UICONTROL Page Load Event]或[!UICONTROL Modifications]面板中已存在的任何其他[!UICONTROL View]。<br/><br/>**頁面載入事件：**&#x200B;任何對應至頁面載入事件的動作，都會套用到網頁應用程式的初始頁面載入上。 <br/><br/>**注意：**&#x200B;執行移動作業後，您必須透過[!UICONTROL Browse]導覽至VEC中的[!UICONTROL View]，以檢視移動作業是否有效。 如果無法將動作套用至[!UICONTROL View]，請參閱錯誤。 |
+| 原地複製 | 將動作複製至一或多個存在於[!UICONTROL 修改]面板上的[!UICONTROL 檢視]，或複製至一或多個您已在VEC中瀏覽及導覽的[!UICONTROL 檢視]。 動作不一定存在於[!UICONTROL 修改]面板中。<br/><br/>**注意：**&#x200B;進行復製作業後，您必須透過[!UICONTROL 瀏覽]導覽至VEC中的[!UICONTROL 檢視]，以檢視複製動作是否為有效的作業。 如果無法將動作套用至[!UICONTROL 檢視]，您會看到錯誤。 |
+| 移動 | 將動作移動到[!UICONTROL 頁面載入事件]或[!UICONTROL 修改]面板中已存在的任何其他[!UICONTROL 檢視]。<br/><br/>**頁面載入事件：**&#x200B;任何對應至頁面載入事件的動作，都會套用到網頁應用程式的初始頁面載入上。 <br/><br/>**注意：**&#x200B;執行移動作業後，您必須透過[!UICONTROL 瀏覽]導覽至VEC中的[!UICONTROL 檢視]，以檢視移動作業是否有效。 如果無法將動作套用至[!UICONTROL 檢視]，請參閱錯誤。 |
 | 刪除 | 刪除動作。 |
 
 ## 使用適用於SPA的VEC範例
 
-本節概述使用[!UICONTROL Visual Experience Composer]建立A/B或XT活動之動作和修改的三個範例。
+本節概述使用[!UICONTROL 視覺化體驗撰寫器]建立A/B或XT活動之動作和修改的三個範例。
 
 ### 範例1：更新「首頁」檢視
 
-本文稍早前，已針對整個首頁網站定義名為「home」的[!UICONTROL View]。 現在，行銷團隊想要以下列方式更新「首頁」檢視：
+本文稍早前，已針對整個首頁網站定義名為「home」的[!UICONTROL 檢視]。 現在，行銷團隊想要以下列方式更新「首頁」檢視：
 
 * 將&#x200B;**加入購物車**&#x200B;和&#x200B;**類似**&#x200B;按鈕變更為較淺的藍色。 此變更應在頁面載入期間發生，因為它涉及變更標題的元件。
 * 將&#x200B;**2026年最新產品**&#x200B;標籤變更為&#x200B;**2026年最暢銷產品**，並將文字顏色變更為紫色。
@@ -267,7 +267,7 @@ class Checkout extends Component {
 
 ### 範例2：變更產品標籤
 
-針對「products-page-2」[!UICONTROL View]，行銷團隊想要將&#x200B;**Price**&#x200B;標籤變更為&#x200B;**Sale Price**，並將標籤顏色變更為紅色。
+針對「products-page-2」[!UICONTROL 檢視]，行銷團隊想要將&#x200B;**Price**&#x200B;標籤變更為&#x200B;**Sale Price**，並將標籤顏色變更為紅色。
 
 若要在VEC中進行這些更新，需執行下列步驟：
 
@@ -281,7 +281,7 @@ class Checkout extends Component {
 
 ### 範例3：個人化傳送偏好設定樣式
 
-[!UICONTROL Views]可以在精細層次定義，例如單選按鈕的狀態或選項。 本文前面的[!UICONTROL Views]是針對傳遞偏好設定、「checkout-normal」和「checkout-express」定義的。 行銷團隊想要將「checkout-express」檢視的按鈕顏色變更為紅色。
+[!UICONTROL 檢視]可以在精細層次定義，例如狀態或選項按鈕的選項。 本文前面的[!UICONTROL 檢視]是針對傳遞偏好設定、「checkout-normal」和「checkout-express」定義的。 行銷團隊想要將「checkout-express」檢視的按鈕顏色變更為紅色。
 
 若要在VEC中進行這些更新，需執行下列步驟：
 
@@ -295,6 +295,6 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->在選取&#x200B;**快速運送**&#x200B;選項按鈕之前，「checkout-express」[!UICONTROL View]不會出現在[!UICONTROL Modifications]面板中。 這是因為選取&#x200B;**快速運送**&#x200B;選項按鈕時會執行`sendEvent()`函式，因此在選取選項按鈕之前，VEC不會察覺「checkout-express」[!UICONTROL View]。
+>在選取&#x200B;**快速運送**&#x200B;選項按鈕之前，「checkout-express」檢視[!UICONTROL 檢視]不會出現在[!UICONTROL 修改]面板中。 這是因為選取&#x200B;**快速運送**&#x200B;選項按鈕時會執行`sendEvent()`函式，因此在選取選項按鈕之前，VEC不會察覺「checkout-express」[!UICONTROL 檢視]。
 
 ![視覺化體驗撰寫器顯示傳遞偏好設定選擇器。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

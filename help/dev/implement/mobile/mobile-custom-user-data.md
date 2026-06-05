@@ -6,7 +6,7 @@ feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 55%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 >
->支援[!DNL Adobe Mobile]版本4。*x* SDK已於2021年8月31日結束，不建議再供[!DNL Adobe Target]個行動使用者使用。
+>對[!DNL Adobe Mobile]版本4.*x* SDK的支援已於2021年8月31日終止，不建議再為[!DNL Adobe Target]行動使用者提供。
 >
->[適用於行動應用程式的Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是支援行動應用程式中[!DNL Adobe Experience Cloud]解決方案和服務的建議解決方案。
+>適用於行動應用程式的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是建議的解決方案，可支援[!DNL Adobe Experience Cloud]解決方案與行動應用程式中的服務。
 
 此資訊可用來建立自訂對象 (例如，大於 25000 英里的使用者) 以及在報表中使用。
 
@@ -34,7 +34,7 @@ ht-degree: 55%
 
    首先，使用您傳送以傳遞至[!DNL Target]的值建立字典。 為了方便，請在 `welcomeMessageCampaign` 方法內新增此項目，因此您不需擔心範圍。
 
-   下列是樣本字典。您可以在 `(void)welcomeMessageCampaign` 內複製貼上這個。在此範例中，`userLevel` 和 `userMiles` 之類金鑰的值會加上硬式編碼。一般來說，您會傳入對應的變數。
+   下列是樣本字典。 您可以在 `(void)welcomeMessageCampaign` 內複製貼上這個。 在此範例中，`userLevel` 和 `userMiles` 之類金鑰的值會加上硬式編碼。 一般來說，您會傳入對應的變數。
 
    ```
    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys: 
@@ -50,7 +50,7 @@ ht-degree: 55%
 
    * 具有 profile 字首的金鑰 (例如，`profile.persona`) 會儲存在使用者的設定檔上。
 
-     您可以在不同活動和通道間使用這些設定檔屬性。
+     您可以在不同活動和通道間使用這些輪廓屬性。
 
    * 沒有任何字首的金鑰 (例如，`userMiles`) 為 mbox 參數。
 
@@ -65,7 +65,7 @@ ht-degree: 55%
    1. 建置應用程式。
    1. 驗證參數已傳入目標呼叫中。
 
-      在您的偵錯主控台搜尋您的目標位置名稱。您將看到對 `YOUR-CLIENT-CODE.tt.omtrdc.net` 的呼叫包含剛才傳入的所有參數。
+      在您的偵錯主控台搜尋您的目標位置名稱。 您將看到對 `YOUR-CLIENT-CODE.tt.omtrdc.net` 的呼叫包含剛才傳入的所有參數。
 
       （按一下影像可展開至完整寬度。）
 

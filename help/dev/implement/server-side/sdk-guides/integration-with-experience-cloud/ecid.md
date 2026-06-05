@@ -1,6 +1,6 @@
 ---
-title: Experience Cloud ID (ECID)服務
-description: 雖然使用 [!DNL Target] SDK從 [!DNL Target] 擷取內容可能很強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的額外價值超出Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 產品和功能，例如A4T報告和 [!DNL Adobe Audience Manager]  (AAM)區段。
+title: Experience Cloud ID (ECID) Service
+description: 雖然使用 [!DNL Target] SDK從 [!DNL Target] 擷取內容可能很強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的附加價值不僅限於Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 產品和功能，例如A4T報告和 [!DNL Adobe Audience Manager]  (AAM)區段。
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
@@ -17,7 +17,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 261
+source-wordcount: 273
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Experience Cloud ID] (ECID)整合
 
-雖然使用[!DNL Target] SDK從[!DNL Target]擷取內容功能強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的增加值超出[!DNL Adobe Target]。 ECID可讓您運用[!DNL Adobe Experience Cloud]產品和功能，例如A4T報告和[!DNL Adobe Audience Manager] (AAM)區段。
+雖然使用[!DNL Target] SDK從[!DNL Target]擷取內容可能很強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的增加值超出[!DNL Adobe Target]。 ECID可讓您運用[!DNL Adobe Experience Cloud]產品和功能，例如A4T報告和[!DNL Adobe Audience Manager] (AAM)區段。
 
 ECID是由`visitor.js`產生並維護的，它會維持自己的狀態。 `visitor.js`檔案會建立名為`AMCV_{organizationId}`的Cookie，由[!DNL Target] SDK用於ECID整合。 傳回[!DNL Target]回應時，您需要使用[!DNL Target] SDK傳回的`thevisitorState`更新使用者端上的Visitor執行個體。
 

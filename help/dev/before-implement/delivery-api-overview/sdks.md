@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 262
+source-wordcount: 265
 ht-degree: 9%
 
 ---
 
 # SDK
 
-[!DNL Adobe Target]提供[伺服器端SDK](../../implement/server-side/server-side-overview.md)，以便與[!DNL Target Delivery API]互動，並協助[!UICONTROL Target]與其他[!DNL Adobe Experience Cloud]解決方案（例如[!UICONTROL Adobe Analytics]和[!DNL Adobe Audience Manager]）輕鬆整合。
+[!DNL Adobe Target]提供[伺服器端SDK](../../implement/server-side/server-side-overview.md)以與[!DNL Target Delivery API]互動，並協助簡化[!UICONTROL Target]與其他[!DNL Adobe Experience Cloud]解決方案（例如[!UICONTROL Adobe Analytics]和[!DNL Adobe Audience Manager]）的整合。
 
 SDK可協助您遵循管理工作階段和Cookie的最佳實務。 強烈建議您善用SDK來消除任何複雜性，並防止錯誤使用API。
 

@@ -15,8 +15,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
-ht-degree: 18%
+source-wordcount: 332
+ht-degree: 17%
 
 ---
 
@@ -40,9 +40,9 @@ TargetClient.create(options: Object): TargetClient
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| 使用者端 | 字串 | 是 | 無 | [!UICONTROL Adobe Target Client ID] |
-| organizationId | 字串 | 是 | 無 | [!UICONTROL Experience Cloud Organization ID] |
-| 環境 | 字串 | 否 | 生產 | 目標環境名稱。 在[!DNL Target] UI中，[!UICONTROL Administration] > [!UICONTROL Environments]。 |
+| 使用者端 | 字串 | 是 | 無 | [!UICONTROL Adobe Target使用者端ID] |
+| organizationId | 字串 | 是 | 無 | [!UICONTROL Experience Cloud組織ID] |
+| 環境 | 字串 | 否 | 生產 | 目標環境名稱。 在[!DNL Target] UI中，[!UICONTROL 管理] > [!UICONTROL 環境]。 |
 | timeout | 數字 | 否 | 3000 | 逾時（毫秒） |
 | serverDomain | 字串 | 無 | `*client*.tt.omtrdc.net` | 覆寫預設主機名稱 |
 | secure | 布林值 | 無 | true | 取消設定以強制執行HTTP配置 |

@@ -53,4 +53,4 @@ Apple ITP 2.x會在以下方面影響[!DNL Target]：
 
 ## 我目前的 [!DNL Target] 實施是否會受到影響?
 
-如果您除了[!DNL Target] JavaScript程式庫以外還使用Experience Cloud ID (ECID)程式庫，您的實施會以本文列出的方式受到影響： [Safari ITP 2.1對Adobe Experience Cloud和Experience Platform客戶的影響](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。
+如果您除了[!DNL Target] JavaScript資料庫以外還使用Experience Cloud ID (ECID)資料庫，您的實施會以本文列出的方式受到影響： [Safari ITP 2.1對Adobe Experience Cloud和Experience Platform客戶的影響](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。

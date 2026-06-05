@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
 workflow-type: tm+mt
-source-wordcount: 1849
+source-wordcount: 1927
 ht-degree: 1%
 
 ---
@@ -56,27 +56,27 @@ ht-degree: 1%
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，確定您的[!DNL Adobe]使用者帳戶已同時授予[!DNL Target]的[產品管理員](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)和[開發人員](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)層級存取權。
 
-1. 在[Adobe Developer Console](https://developer.adobe.com/console/home)中，選取您要建立此整合的[!UICONTROL Experience Cloud Organization]。 （請注意，您可能只能存取單一[!UICONTROL Experience Cloud Organization]。）
+1. 在[Adobe Developer Console](https://developer.adobe.com/console/home)中，選取您要建立此整合的[!UICONTROL Experience Cloud組織]。 （請注意，您可能只能存取單一[!UICONTROL Experience Cloud組織]。）
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
-1. 按一下 **[!UICONTROL Create new project]**。
+1. 按一下&#x200B;**[!UICONTROL 建立新專案]**。
 
    ![configure-io-target-createproject3.png](assets/configure-io-target-createproject3.png)
 
-1. 按一下&#x200B;**[!UICONTROL Add API]**&#x200B;將REST API新增至您的專案，以存取[!DNL Adobe]服務和產品。
+1. 按一下&#x200B;**[!UICONTROL 新增API]**&#x200B;將REST API新增至您的專案，以存取[!DNL Adobe]服務和產品。
 
    ![新增API](assets/configure-io-target-createproject4.png)
 
-1. 選取&#x200B;**[!DNL Adobe Target]**&#x200B;作為您想要整合的[!DNL Adobe]服務。 按一下出現的&#x200B;**[!UICONTROL Next]**&#x200B;按鈕。
+1. 選取&#x200B;**[!DNL Adobe Target]**&#x200B;作為您想要整合的[!DNL Adobe]服務。 按一下出現的&#x200B;**[!UICONTROL 下一步]**&#x200B;按鈕。
 
    ![configure-io-target-createproject5](assets/configure-io-target-createproject5.png)
 
-1. 選取將公開金鑰和私密金鑰與您要為[!DNL Target]建立的服務帳戶整合建立關聯的選項。 在此範例中，選取&#x200B;**[!UICONTROL Option 1: Generate a key pair]**&#x200B;並按一下&#x200B;**[!UICONTROL Generate keypair]**。
+1. 選取將公開金鑰和私密金鑰與您要為[!DNL Target]建立的服務帳戶整合建立關聯的選項。 在此範例中，選取&#x200B;**[!UICONTROL 選項1：產生金鑰組]**&#x200B;並按一下&#x200B;**[!UICONTROL 產生金鑰組]**。
 
    ![configure-io-target-createproject6](assets/configure-io-target-createproject6.png)
 
-1. 依照指示，記下自動下載的組態檔(`config`)，其中包含您的私密金鑰。 按一下 **[!UICONTROL Next]**。
+1. 依照指示，記下自動下載的組態檔(`config`)，其中包含您的私密金鑰。 按一下&#x200B;**[!UICONTROL 下一步]**。
 
    ![configure-io-target-createproject7](assets/configure-io-target-createproject7.png)
 
@@ -84,18 +84,18 @@ ht-degree: 1%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用屬性，請選取「預設Workspace」選項）。 按一下 **[!UICONTROL Save configured API]**。
+1. 返回Adobe Developer Console，選取與您使用Adobe Recommendations的屬性相對應的[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用屬性，請選取「預設Workspace」選項）。 按一下&#x200B;**[!UICONTROL 儲存設定的API]**。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
-1. 按一下 **[!UICONTROL Create Integration]**。 您應該會收到暫時訊息，指出您的API已成功設定。
-1. 最後一個步驟，請將專案重新命名為比原始`Project 1`更有意義的名稱。 若要這麼做，請使用導覽路徑顯示來導覽至專案，按一下&#x200B;**[!UICONTROL Edit project]**&#x200B;以存取&#x200B;**[!UICONTROL Edit Project]**&#x200B;強制回應視窗，然後重新命名專案。
+1. 按一下&#x200B;**[!UICONTROL 建立整合]**。 您應該會收到暫時訊息，指出您的API已成功設定。
+1. 最後一個步驟，請將專案重新命名為比原始`Project 1`更有意義的名稱。 若要這麼做，請以導覽路徑顯示來導覽至專案，按一下&#x200B;**[!UICONTROL 編輯專案]**&#x200B;以存取&#x200B;**[!UICONTROL 編輯專案]**&#x200B;強制回應視窗，然後重新命名專案。
 
    ![configure-io-target-createproject11](assets/configure-io-target-createproject11.png)
 
 >[!NOTE]
 >
->在此範例中，我們將專案命名為「[!DNL Target]整合」。 如果您預計使用專案的時間會超過[!DNL Adobe Target]，建議您據以命名。 例如，您可選擇將其命名為「Adobe APIs」或「Experience Cloud APIs」，因為可與Adobe Experience Cloud中的其他解決方案搭配使用。
+>在此範例中，我們將專案命名為「[!DNL Target]整合」。 如果您預計使用專案的時間會超過[!DNL Adobe Target]，建議您據以命名。 例如，您可選擇將其命名為「Adobe API」或「Experience Cloud API」，因為可與Adobe Experience Cloud中的其他解決方案搭配使用。
 
 ## 匯出專案詳細資料
 
@@ -107,11 +107,11 @@ ht-degree: 1%
 >
 >如需適用於任何Experience Cloud解決方案（包括[!DNL Target]）的視訊指示，請參閱[將Postman與Experience Platform API搭配使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant)。 以下區段與[!DNL Target] API有關： 1. 建立Experience Platform API並將其匯出至Postman 2。 使用Postman產生存取權杖。 以下也提供這些步驟。
 
-1. 仍然在[Adobe Developer Console](https://developer.adobe.com/console/home)中，瀏覽以檢視您新專案的&#x200B;**[!UICONTROL Service Account (JWT)]**&#x200B;認證。 使用左側導覽或&#x200B;**[!UICONTROL Credentials]**&#x200B;區段，如圖所示。
+1. 仍在[Adobe Developer Console](https://developer.adobe.com/console/home)中，瀏覽以檢視您新專案的&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;認證。 使用左側導覽或&#x200B;**[!UICONTROL 認證]**&#x200B;區段（如圖所示）。
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
-   在&#x200B;**[!UICONTROL Credential details]**&#x200B;中，請注意，您可以檢視您的&#x200B;**[!UICONTROL Public key(s)]**、**[!UICONTROL Client ID]**&#x200B;以及與您的服務帳戶相關的其他資訊。
+   在&#x200B;**[!UICONTROL 認證詳細資料]**&#x200B;中，請注意，您可以檢視您的&#x200B;**[!UICONTROL 公開金鑰]**、**[!UICONTROL 使用者端識別碼]**&#x200B;以及與您的服務帳戶相關的其他資訊。
 
    ![JWT1a](assets/configure-io-target-jwt1a.png)
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 
    ![JWT2](assets/configure-io-target-jwt2.png)
 
-1. 按一下「**[!UICONTROL Download for Postman]** > **[!UICONTROL Service Account (JWT)]**」以建立擷取Postman環境驗證資訊的JSON檔案。
+1. 按一下&#x200B;**[!UICONTROL 下載Postman]** > **[!UICONTROL 服務帳戶(JWT)]**，建立擷取Postman環境驗證資訊的JSON檔案。
 
    ![JWT3](assets/configure-io-target-jwt3.png)
 
@@ -127,11 +127,11 @@ ht-degree: 1%
 
    ![JWT3a](assets/configure-io-target-jwt3a.png)
 
-1. 在Postman中，按一下齒輪圖示來管理您的環境，然後按一下&#x200B;**[!UICONTROL Import]**&#x200B;匯入JSON檔案（環境）。
+1. 在Postman中，按一下齒輪圖示以管理您的環境，然後按一下&#x200B;**[!UICONTROL 匯入]**&#x200B;以匯入JSON檔案（環境）。
 
    ![JWT4](assets/configure-io-target-jwt4.png)
 
-1. 選擇您的檔案並按一下&#x200B;**[!UICONTROL Open]**。
+1. 選擇您的檔案，然後按一下&#x200B;**[!UICONTROL 開啟]**。
 
    ![JWT5](assets/configure-io-target-jwt5.png)
 
@@ -155,7 +155,7 @@ ht-degree: 1%
 
    ![JWT10](assets/configure-io-target-jwt10.png)
 
-1. 按一下&#x200B;**[!UICONTROL Update]**，然後關閉環境強制回應視窗。
+1. 按一下&#x200B;**[!UICONTROL 更新]**，然後關閉環境強制回應視窗。
 
 ## 產生持有者存取權杖
 
@@ -165,19 +165,19 @@ ht-degree: 1%
 
    ![語彙基元1](assets/configure-io-target-generatetoken1.png)
 
-1. 按一下&#x200B;**[!UICONTROL Adobe I/O Access Token Generation Postman collection]**。
+1. 按一下&#x200B;**[!UICONTROL 產生Postman集合的Adobe I/O存取權杖]**。
 
    ![語彙基元2](assets/configure-io-target-generatetoken2.png)
 
-1. 按一下&#x200B;**[!UICONTROL Raw]**，然後將產生的JSON複製到剪貼簿，以取得此集合的原始JSON。 （您也可以將原始JSON儲存為.json檔案。）
+1. 按一下&#x200B;**[!UICONTROL 原始]**，然後將產生的JSON複製到剪貼簿，以取得此集合的原始JSON。 （您也可以將原始JSON儲存為.json檔案。）
 
    ![語彙基元3](assets/configure-io-target-generatetoken3.png)
 
-1. 在Postman中，透過貼上並從剪貼簿提交原始JSON來匯入集合。 （您也可以上傳已儲存的.json檔案）。 按一下 **[!UICONTROL Continue]**。
+1. 在Postman中，透過貼上並從剪貼簿提交原始JSON來匯入集合。 （您也可以上傳已儲存的.json檔案）。 按一下&#x200B;**[!UICONTROL 「繼續」]**。
 
    ![語彙基元4](assets/configure-io-target-generatetoken4.png)
 
-1. 在Adobe I/O存取權杖產生Postman集合中選取&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;請求，確定已選取您的環境，然後按一下&#x200B;**[!UICONTROL Send]**&#x200B;以產生權杖。
+1. 在Adobe I/O存取權杖產生Postman集合中，選取&#x200B;**[!UICONTROL IMS： JWT產生+透過使用者權杖驗證]**&#x200B;請求，確定已選取您的環境，然後按一下&#x200B;**[!UICONTROL 傳送]**&#x200B;以產生權杖。
 
    ![語彙基元5](assets/configure-io-target-generatetoken5.png)
 
@@ -205,7 +205,7 @@ ht-degree: 1%
 
    ![testtoken1](assets/configure-io-target-testtoken0.png)
 
-1. 展開集合，並記下&#x200B;**[!UICONTROL List activities]**&#x200B;請求。
+1. 展開集合，並記下&#x200B;**[!UICONTROL 列出活動]**&#x200B;請求。
 
    ![testtoken1](assets/configure-io-target-testtoken1.png)
 
@@ -229,7 +229,7 @@ ht-degree: 1%
 
    ![JWT11](assets/configure-io-target-jwt11.png)
 
-1. 輸入以新增新的`{{TENANT_ID}}`環境變數。 將您的租使用者ID值複製並貼到新`TENANT_ID`環境變數的&#x200B;**[!UICONTROL INITIAL VALUE]**&#x200B;和&#x200B;**[!UICONTROL CURRENT VALUE]**&#x200B;欄位中。
+1. 輸入以新增新的`{{TENANT_ID}}`環境變數。 將您的租使用者ID值複製並貼到新`TENANT_ID`環境變數的&#x200B;**[!UICONTROL INITIAL VALUE]**&#x200B;和&#x200B;**[!UICONTROL CURRENT VALUE]**&#x200B;欄位。
 
    ![testtoken5](assets/configure-io-target-testtoken5.png)
 

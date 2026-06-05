@@ -1,6 +1,6 @@
 ---
 title: 使用裝置上決策時的最佳實務
-description: 瞭解在 [!DNL Adobe Target]中使用[!UICONTROL on-device decisioning]的最佳實務
+description: 瞭解在 [!DNL Adobe Target]中使用[!UICONTROL 裝置上決策]的最佳實務
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
 TQID: https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY
@@ -12,14 +12,14 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 393
+source-wordcount: 399
 ht-degree: 3%
 
 ---
 
 # 最佳做法
 
-[!DNL Adobe]建議使用[!UICONTROL on-device decisioning]時遵循下列最佳實務：
+[!DNL Adobe]建議使用[!UICONTROL 裝置上決策]時遵循下列最佳實務：
 
 ## 決策方法為「裝置上」時的最佳實務
 

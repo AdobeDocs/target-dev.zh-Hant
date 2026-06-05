@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 4%
 
 **必要條件**
 
-* 若要使用訪客ID/API服務，貴公司必須啟用[!DNL Adobe Experience Cloud]並擁有[!UICONTROL Organization ID]。 如需詳細資訊，請參閱&#x200B;*身分識別服務說明*&#x200B;指南中的[Experience Cloud需求：組織ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hant？){target=_blank}。
+* 若要使用訪客ID/API服務，貴公司必須啟用[!DNL Adobe Experience Cloud]並擁有[!UICONTROL 組織ID]。 如需詳細資訊，請參閱&#x200B;*身分識別服務說明*&#x200B;指南中的[Experience Cloud需求：組織ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hant？){target=_blank}。
 * 您需要`VisitorAPI.js`檔案。 如果您已實作[!DNL Adobe Analytics]，則應該已有此檔案。 您也可以透過[[!DNL Adobe Experience Platform] 標籤擴充功能](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}新增此檔案，或從[Adobe Analytics代碼管理員](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=zh-Hant){target=_blank}下載此檔案。
 
 **設定並參考VisitorAPI.js**
@@ -255,9 +255,9 @@ ht-degree: 4%
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL 瀏覽過這些專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過這些專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買這些專案、也購買這些專案的使用者]
 
 **需要實體引數**
 
@@ -279,13 +279,13 @@ ht-degree: 4%
 
 **可用的條件**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* 整個網站檢視次數最多
+* 依類別檢視次數最多
+* [!UICONTROL 檢視次數最多的專案屬性]
+* 整個網站[!UICONTROL 最暢銷商品]
+* [!UICONTROL 依類別排名的最暢銷商品]
+* [!UICONTROL 依專案屬性的最暢銷商品]
+* [!UICONTROL Analytics量度排名最前]
 
 **需要實體引數**
 
@@ -308,10 +308,10 @@ ht-degree: 4%
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL 瀏覽過此專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過此專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買了此專案、也購買了其他專案的使用者]
+* [!UICONTROL 具有類似屬性的專案]
 
 **需要實體引數**
 
@@ -333,8 +333,8 @@ ht-degree: 4%
 
 **可用的條件**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近查看的項目]
+* [!UICONTROL 為您推薦]
 
 **需要實體引數**
 
@@ -356,7 +356,7 @@ ht-degree: 4%
 
 **可用的條件**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL 自訂演演算法]
 
 **需要實體引數**
 

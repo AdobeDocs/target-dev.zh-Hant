@@ -3,8 +3,8 @@ title: 支援 — Adobe Analytics
 description: 這是Adobe Analytics的支援頁面
 source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '97'
+ht-degree: 8%
 
 ---
 

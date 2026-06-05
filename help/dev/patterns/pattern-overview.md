@@ -19,7 +19,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 383
+source-wordcount: 398
 ht-degree: 0%
 
 ---
@@ -54,19 +54,19 @@ ht-degree: 0%
    >
    >您必須登入`github.com`才能在[!DNL Experience League]中開啟問題。 如果您是第一次開啟問題，請檢閱貢獻准則與行為準則指示。
 
-1. （視條件而定）若要建議新模式或現有模式的改進想法，請按一下&#x200B;**[!UICONTROL Detailed feedback options]**，然後按一下&#x200B;**[!UICONTROL Report an issue]**。
+1. （視條件而定）若要建議新模式或現有模式的改進想法，請按一下&#x200B;**[!UICONTROL 詳細意見選項]**，然後按一下&#x200B;**[!UICONTROL 報告問題]**。
 
    1. 提供標題，然後在文字方塊中輸入註解。
 
       視需要附加檔案或熒幕擷取畫面。
 
-   1. 完成時，請按一下&#x200B;**[!UICONTROL Submit new issue]**。
+   1. 完成時，按一下&#x200B;**[!UICONTROL 提交新問題]**。
 
-1. （視條件而定）若要編輯現有模式的文字，請從相關文章的意見選項模式中，按一下&#x200B;**[!UICONTROL Suggest an edit]**，然後按一下&#x200B;**[!UICONTROL Edit]**&#x200B;圖示（鉛筆圖示）。
+1. （視條件而定）若要編輯現有模式的文字，請從相關文章的意見選項模型中，按一下&#x200B;**[!UICONTROL 建議編輯]**，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;圖示（鉛筆圖示）。
 
    1. 使用Markdown語法進行編輯。
 
-   1. 完成時，請按一下&#x200B;**[!UICONTROL Commit changes]**。
+   1. 完成時，按一下&#x200B;**[!UICONTROL 認可變更]**。
 
 [!DNL Target]團隊可以檢閱您的評論或編輯內容，並使用此功能與您溝通，以收集其他資訊或取得進一步說明（如有必要）。
 

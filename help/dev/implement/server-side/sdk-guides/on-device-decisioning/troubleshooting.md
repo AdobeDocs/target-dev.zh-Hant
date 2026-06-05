@@ -1,6 +1,6 @@
 ---
 title: 裝置上決策疑難排解
-description: 瞭解如何疑難排解[!UICONTROL on-device decisioning]
+description: 瞭解如何疑難排解[!UICONTROL 裝置上決策]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
@@ -16,12 +16,12 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# 疑難排解 [!UICONTROL on-device decisioning]
+# 疑難排解[!UICONTROL 裝置上決策]
 
 ## 正在驗證設定
 
@@ -29,8 +29,8 @@ ht-degree: 0%
 
 1. 確定`logger`已設定
 1. 確保已啟用[!DNL Target]追蹤
-1. 驗證是否已根據定義的輪詢間隔擷取及快取[!UICONTROL on-device decisioning] *規則成品*。
-1. 透過表單式體驗撰寫器建立測試[!UICONTROL on-device decisioning]活動，以透過快取規則成品驗證內容傳遞。
+1. 確認已根據定義的輪詢間隔擷取並快取[!UICONTROL 裝置上決策] *規則成品*。
+1. 透過表單式體驗撰寫器建立測試[!UICONTROL 裝置上決策]活動，以透過快取規則成品驗證內容傳遞。
 1. 檢查傳送通知錯誤
 
 ## &#x200B;1. 確認已設定記錄器
@@ -75,7 +75,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
    ![替代影像](assets/asset-target-ui-1.png)
 
-1. 導覽至&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;並按一下&#x200B;**[!UICONTROL Generate New Authorization Token]**。
+1. 瀏覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**，然後按一下&#x200B;**[!UICONTROL 產生新的授權權杖]**。
 
    ![替代影像](assets/asset-target-ui-2.png)
 
@@ -124,7 +124,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. 驗證是否已根據定義的輪詢間隔擷取及快取[!UICONTROL on-device decisioning] *規則成品*。
+## &#x200B;3. 確認已根據定義的輪詢間隔擷取並快取[!UICONTROL 裝置上決策] *規則成品*。
 
 1. 等候輪詢間隔的持續時間（預設為20分鐘），並確定SDK正在擷取成品。 將會輸出相同的終端機記錄。
 
@@ -146,7 +146,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## &#x200B;4. 透過表單式體驗撰寫器建立測試[!UICONTROL on-device decisioning]活動，以透過快取規則成品驗證內容傳遞
+## &#x200B;4. 透過表單式體驗撰寫器建立測試[!UICONTROL 裝置上決策]活動，以透過快取規則成品驗證內容傳遞
 
 1. 導覽至Experience Cloud中的[!DNL Target]UI
 
@@ -250,11 +250,11 @@ client = TargetClient.create({
 
 ## 常見疑難排解案例
 
-發生問題時，請務必檢閱[!UICONTROL on-device decisioning]的[支援功能](supported-features.md)。
+發生問題時，請務必檢閱[!UICONTROL 裝置上決策]的[支援功能](supported-features.md)。
 
 ### 由於不支援的對象或活動，裝置上決策活動未執行
 
-一個常見問題是由於使用中的對象或活動型別不受支援，[!UICONTROL on-device decisioning]個活動無法執行。
+可能發生的一個常見問題是[!UICONTROL 裝置上決策]活動由於使用中的對象或活動型別不受支援而無法執行。
 
 (1)使用記錄器輸出，檢閱回應物件中追蹤屬性的專案。 具體識別行銷活動屬性：
 

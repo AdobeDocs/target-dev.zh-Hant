@@ -1,6 +1,6 @@
 ---
 title: Adobe Target單一設定檔更新API
-description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL Single Profile Update API]將單一訪客的個人資料傳送至 [!DNL Target]。
+description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]，將單一訪客的設定檔資料傳送至 [!DNL Target]。
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
@@ -15,30 +15,30 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 396
 ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-[!DNL Adobe Target] [!UICONTROL Single Profile Update API]可讓您傳送單一使用者的設定檔更新。 [!UICONTROL Single Profile Update API]幾乎與[!UICONTROL Bulk Profile Update API]相同，但一次會更新一個訪客設定檔，內嵌於API呼叫而非.cvs檔案。
+[!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]可讓您傳送單一使用者的設定檔更新。 [!UICONTROL 單一設定檔更新API]幾乎與[!UICONTROL 大量設定檔更新API]相同，但一次更新一個訪客設定檔，與API呼叫內嵌，而非.cvs檔案。
 
-[!UICONTROL Single Profile Update API]和通常用於必須發生與尚未實作[!DNL Target]的管道中發生的交易相關的更新時。 例如，您想要更新執行某些離線動作之單一訪客的設定檔。 動作包括聯絡客服中心、提供貸款、在商店中使用忠誠卡、存取資訊站等。
+[!UICONTROL 單一設定檔更新API]，通常用於必須發生與尚未實作[!DNL Target]的管道中發生的交易相關的更新時。 例如，您想要更新執行某些離線動作之單一訪客的設定檔。 動作包括聯絡客服中心、提供貸款、在商店中使用忠誠卡、存取資訊站等。
 
-[!UICONTROL Single Profile Update API]的優點包括：
+[!UICONTROL 單一設定檔更新API]的優點包括：
 
 * 設定檔屬性的數量不限。
 * 透過網站傳送的設定檔屬性可以透過API更新，反之亦然。
 
 ## 注意事項
 
-* [!UICONTROL Single Profile Update API]受限於在任何連續24小時的期間內執行100萬項更新。
+* [!UICONTROL 單一設定檔更新API]受限於在任何滾動的24小時期間內執行100萬項更新。
 * 更新通常在一小時內發生，但可能需要長達24小時的時間才會反映。
 
   如果您必須傳送更多更新，或需要在較短的時間範圍內處理更新，請考慮透過使用者端更新（偏好設定）或透過[!DNL Adobe Target]伺服器端[傳送API](/help/dev/implement/delivery-api/overview.md)傳送異動設定檔更新。
 
-* [!UICONTROL Single Profile Update API]是伺服器對伺服器的API，並非設計成可在網頁內運作。 若要從您的網頁更新訪客設定檔，您可以使用[trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)函式或[傳送API](/help/dev/implement/delivery-api/overview.md)。
+* [!UICONTROL 單一設定檔更新API]是伺服器對伺服器的API，並非設計可在網頁內運作。 若要從您的網頁更新訪客設定檔，您可以使用[trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)函式或[傳送API](/help/dev/implement/delivery-api/overview.md)。
 
 ## 格式
 
@@ -56,7 +56,7 @@ https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
 ```
 
-[!UICONTROL Single Profile Update API]僅供更新。 如果未找到任何專案，則不會建立設定檔。
+[!UICONTROL 單一設定檔更新API]僅供更新。 如果未找到任何專案，則不會建立設定檔。
 
 ## 附註
 

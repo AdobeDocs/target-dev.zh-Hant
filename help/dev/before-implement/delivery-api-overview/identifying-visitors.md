@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 789
+source-wordcount: 797
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Target使用三個識別碼：
 | `tntId` | `tntId`是使用者[!DNL Target]中的主要識別碼。 您可以提供此ID，或如果請求未包含此ID，則[!DNL Target]將自動產生此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司可透過每次呼叫傳送之使用者的識別碼。 使用者登入公司網站時，公司通常會建立ID，此ID會連結至訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`用於在不同的Adobe解決方案之間合併和共用資料。 必須有`marketingCloudVisitorId`才能與Adobe Analytics和Adobe Audience Manager整合。 |
-| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)以及每位訪客的已驗證狀態。 |
+| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用每個訪客的其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)和已驗證狀態。 |
 
 ## [!DNL Target] ID
 
@@ -81,11 +81,11 @@ curl -X POST \
 }
 ```
 
-產生的`tntId`為`10abf6304b2714215b1fd39a870f01afc.28_20`。 請注意，跨工作階段呼叫相同使用者的[!UICONTROL Adobe Target Delivery API]時，需要使用此`tntId`。
+產生的`tntId`為`10abf6304b2714215b1fd39a870f01afc.28_20`。 請注意，跨工作階段呼叫相同使用者的[!UICONTROL Adobe Target傳送API]時，需要使用此`tntId`。
 
 ## Marketing Cloud 訪客 ID
 
-`marketingCloudVisitorId`是通用的永久ID，可識別Experience Cloud中所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（如Adobe Target、Adobe Analytics或Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，當運用並與Analytics和Audience Manager整合時，需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是通用的永久ID，可識別Experience Cloud所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（例如Adobe Target、Adobe Analytics或Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，當運用並與Analytics和Audience Manager整合時，需要`marketingCloudVisitorId`。
 
 ```
 curl -X POST \
@@ -124,7 +124,7 @@ curl -X POST \
 
 ## 第三方ID
 
-如果您的組織使用ID來識別訪客，您可以使用`thirdPartyID`來傳遞內容。 不過，您必須為每[!UICONTROL Adobe Target Delivery API]次呼叫提供`thirdPartyID`。
+如果您的組織使用ID來識別訪客，您可以使用`thirdPartyID`來傳遞內容。 不過，您必須為發出的每[!UICONTROL 個Adobe Target傳送API]呼叫提供`thirdPartyID`。
 
 ```
 curl -X POST \

@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
 workflow-type: tm+mt
-source-wordcount: 350
+source-wordcount: 352
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 使用者端和organizationId均可透過導覽至「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**」從[!DNL Adobe Target]擷取，如下所示。
+1. 您可以導覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**，從[!DNL Adobe Target]擷取使用者端和organizationId，如下所示。
 
    <!-- Insert image-client-code.png -->
    在Target![&#128279;](assets/asset-rule-artifact-3.png)中管理下的實作頁面

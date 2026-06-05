@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 11%
 
 ## 使用者端實施
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)： [!DNL Adobe Experience Platform Web SDK]可讓您透過[!UICONTROL Adobe Experience Edge Network]與[!DNL Experience Cloud] （包括[!DNL Target]）中的各種服務互動。
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)： [!DNL Adobe Experience Platform Web SDK]可讓您透過[!UICONTROL Adobe Experience Edge Network]，與[!DNL Experience Cloud] （包括[!DNL Target]）中的各種服務互動。
 
 [**Target at.js JavaScript資料庫**](/help/dev/implement/client-side/overview.md)： at.js JavaScript資料庫可改善Web實施的頁面載入時間、改善安全性，以及為單頁應用程式提供更好的實施選項。
 
@@ -104,7 +104,7 @@ ht-degree: 11%
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md)：擷取[!DNL Adobe Target]使用者設定檔資訊。
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：擷取[!UICONTROL A/B Test]和[!UICONTROL Automated Personalization]活動報告資料。
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：擷取[!UICONTROL A/B測試]和[!UICONTROL Automated Personalization]活動報告資料。
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/)：使用[!DNL Target Recommendations] API。
 

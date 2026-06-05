@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.sendNotifications， sendNotifications， sendnotifications，傳送通知，通知， at.js，函式，函式， $9
-description: 使用at.js的[!UICONTROL adobe.target.sendNotifications()]，在體驗呈現時傳送通知給 [!DNL Target] edge，而不使用[!UICONTROL applyOffer]。 (at.js.2.1 +)
+description: 若體驗呈現時未使用[!UICONTROL applyOffer]，請使用at.js的[!UICONTROL adobe.target.sendNotifications()]將通知傳送至 [!DNL Target] edge。 (at.js.2.1 +)
 title: 如何使用adobe.target.sendNotifications()函式？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 638
+source-wordcount: 642
 ht-degree: 83%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 83%
 | Request > notifications > order | 物件 | 無 |  | 說明訂單詳細資料的物件。 |
 | Request > notifications > order > id | 字串 | 無 | `<=` 250 個字元。 | 訂購 ID. |
 | Request > notifications > order > total | 字串 | 無 | `>=` 0 | 訂購總計. |
-| Request > notifications > order > purchasedProductIds | 字串陣列 | 否 | <ul><li>不允許使用任何空白值。</li><li>每個產品 ID 長度上限為 50。</li><li>產品 ID，以逗號分隔並串連，總長度不得超過 250。</li></ul> | 訂購產品 ID。 |
+| Request > notifications > order > purchasedProductIds | 字串陣列 | 無 | <ul><li>不允許使用任何空白值。</li><li>每個產品 ID 長度上限為 50。</li><li>產品 ID，以逗號分隔並串連，總長度不得超過 250。</li></ul> | 訂購產品 ID。 |
 | Request > notifications > product | 物件 | 無 |  |  |
 | Request > notifications > product > id | 字串 | 無 | `<=` 128 個字元；不得空白。 | 產品 ID. |
 | Request > notifications > product > categoryId | 字串 | 無 | `<=` 128 個字元；不得空白。 | 類別 ID。 |

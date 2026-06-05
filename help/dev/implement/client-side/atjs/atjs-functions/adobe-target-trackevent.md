@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 61%
+source-wordcount: 336
+ht-degree: 59%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 61%
 
 | 索引鍵 | 類型 | 必要 | 說明 |
 |--- |--- |--- |--- |
-| mbox | 字串 | 是 | Mbox 名稱<P>**注意**：如果[!UICONTROL trackEvent()]呼叫是以已在頁面上觸發的mbox名稱觸發，則[!UICONTROL trackEvent()]的SDID會重設，且將與頁面上的[!DNL Target]呼叫不同。 不過，以不同的mbox名稱引發[!UICONTROL trackEvent()]呼叫，可讓[!UICONTROL trackEvent()]呼叫的SDID與頁面上的[!UICONTROL Page Load Request]/[!UICONTROL triggerView()]呼叫一致。 |
+| mbox | 字串 | 是 | Mbox 名稱<P>**注意**：如果[!UICONTROL trackEvent()]呼叫是以已在頁面上觸發的mbox名稱觸發，則[!UICONTROL trackEvent()]的SDID會重設，且將與頁面上的[!DNL Target]呼叫不同。 不過，以不同的mbox名稱引發[!UICONTROL trackEvent()]呼叫，可讓[!UICONTROL trackEvent()]呼叫的SDID與頁面上的[!UICONTROL 頁面載入請求]/[!UICONTROL triggerView()]呼叫一致。 |
 | selector | 字串 | 無 | 用來尋找 HTML 元素的 CSS 選取器。 事件接聽程式將附加至找到的元素。 |
 | type | 字串 | 無 | 代表已註冊的事件類型。 它可以是 HTML 已知事件，如: 按一下、按下滑鼠等等，也可以是自訂 HTML 事件。 |
 | preventDefault | 布林值 | 無 | 指出是否在事件接聽程式回呼中使用 `[!UICONTROL event.preventDefault()]`。 預設值設為 false。<P>**附註**：只支援`[!UICONTROL form[submit]]`和`a[click]`。 由於複雜度和要支援的案例數量太大，不支援其他案例。 |

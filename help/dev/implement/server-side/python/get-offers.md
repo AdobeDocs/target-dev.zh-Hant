@@ -12,7 +12,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,7 +53,7 @@ target_client_instance.get_offers(options)
 
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
-| 回應 | DeliveryResponse | 符合[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)回應 |
+| 回應 | DeliveryResponse | 符合[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)回應 |
 | target_cookie | dict | [!DNL Target] Cookie |
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端Analytics使用狀況下的Analytics裝載 |
@@ -74,8 +74,8 @@ target_client_instance.get_offers(options)
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
 | decisioning_method | str | 使用的決策方法：裝置上或伺服器端 |
-| remote_mboxes | 清單`[str]` | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)要求。 |
-| remote_views | 清單`[str]` | 當決定方法為裝置上時，會提供無法完全決定裝置上的檢視名稱陣列。 換句話說，需要[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)要求。 |
+| remote_mboxes | 清單`[str]` | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求。 |
+| remote_views | 清單`[str]` | 當決定方法為裝置上時，會提供無法完全決定裝置上的檢視名稱陣列。 換句話說，需要[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求。 |
 
 ## 範例
 

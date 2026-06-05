@@ -23,7 +23,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 5%
 
 ### 安裝at.js
 
-[!DNL Adobe]可讓客戶直接從[!DNL Adobe Experience Cloud]，[!UICONTROL Implementation]索引標籤下載程式庫。 at.js程式庫已根據客戶的下列設定加以自訂： clientCode、imsOrgId等。
+[!DNL Adobe]可讓客戶直接從[!DNL Adobe Experience Cloud]，[!UICONTROL 實作]索引標籤下載程式庫。 at.js程式庫已根據客戶的下列設定加以自訂： clientCode、imsOrgId等。
 
 ### 安裝Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 
 ### 使用[!DNL Platform Web SDK]
 
-您可以使用`sendEvent`命令，並在`decisionScopes`選項下傳遞mbox名稱，擷取[!UICONTROL Form-Based Composer]型活動。 `sendEvent`命令會傳回Promise，此承諾會以包含請求之活動/主張的物件來解析：
+您可以使用`sendEvent`命令並傳遞`decisionScopes`選項下的mbox名稱，擷取[!UICONTROL 表單式撰寫器]式活動。 `sendEvent`命令會傳回Promise，此承諾會以包含請求之活動/主張的物件來解析：
 
 此程式碼片段是`propositions`陣列的外觀：
 
@@ -670,7 +670,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用`adobe.target.triggerView`函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。 `adobe.target.triggerView()`函式應為單頁應用程式(SPA)實作，以使用[!UICONTROL Visual Experience Composer] (VEC)來建立[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活動。 如果未在網站上實作`adobe.target.triggerView()`，VEC就無法用於SPA。
+使用`adobe.target.triggerView`函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。 應該針對單頁應用程式(SPA)實作`adobe.target.triggerView()`函式，以使用[!UICONTROL 視覺化體驗撰寫器] (VEC)來建立[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動。 如果未在網站上實作`adobe.target.triggerView()`，VEC就無法用於SPA。
 
 **範例**
 
@@ -682,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### 使用[!DNL Platform Web SDK]
 
-若要觸發或訊號單頁應用程式[!UICONTROL View Change]，請在`sendEvent`命令的`xdm`選項下設定`web.webPageDetails.viewName`屬性。 [!DNL Platform Web SDK]會檢查檢視快取，如果`sendEvent`中指定的`viewName`有選件，則會執行它們並傳送顯示通知事件。
+若要觸發或訊號單頁應用程式[!UICONTROL 檢視變更]，請在`sendEvent`命令的`xdm`選項下設定`web.webPageDetails.viewName`屬性。 [!DNL Platform Web SDK]會檢查檢視快取，如果`sendEvent`中指定的`viewName`有選件，則會執行它們並傳送顯示通知事件。
 
 **範例**
 
@@ -701,7 +701,7 @@ alloy("sendEvent", {
 
 [了解更多](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## 如何善用[!UICONTROL Response Tokens]
+## 如何運用[!UICONTROL 回應Token]
 
 從[!DNL Target]傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/zh-hant/docs/target/using/administer/response-tokens)。 回應Token包括有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資訊。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應權杖可在[!DNL Target]使用者介面中設定。
 

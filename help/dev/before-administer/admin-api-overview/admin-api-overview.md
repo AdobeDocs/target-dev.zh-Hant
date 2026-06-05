@@ -42,7 +42,7 @@ ht-degree: 2%
 
 如果要求包含裝載（POST或PUT），則會使用要求的`Content-Type`標頭來指定版本。
 
-如果請求不包含裝載（GET、DELETE或OPTIONS），則會使用`Accept`標頭來指定版本。
+如果要求不包含裝載（GET、DELETE或OPTIONS），則會使用`Accept`標頭來指定版本。
 
 如果未提供版本，呼叫將預設為V1 (application/vnd.adobe.target.v1+json)。
 
@@ -104,7 +104,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 
 批次處理可讓您傳遞單一HTTP請求中數個作業的指示。 您也可以指定相關作業之間的相依性（如下節所述）。 TNT將處理每個獨立的作業（可能同時進行），並將依序處理您的相依作業。 完成所有操作後，將傳回整合的回應，並關閉HTTP連線。
 
-批次API採用以JSON陣列表示的邏輯HTTP要求陣列 — 每個要求都有方法（對應至HTTP方法GET/PUT/POST/DELETE等）、relativeUrl （admin/rest/之後URL的部分）、選用標頭陣列（對應至HTTP標頭）和選用內文（適用於POST和PUT要求）。 批次API會傳回以JSON陣列表示的邏輯HTTP回應陣列 — 每個回應都有狀態代碼、選用的標頭陣列和選用的內文（這是JSON編碼字串）。 若要進行批次要求，請建置JSON物件，以說明要執行的各個作業。 允許的最大運算元為256 （從0到255）。
+批次API採用以JSON陣列表示的邏輯HTTP要求陣列 — 每個要求都有一個方法（對應於HTTP方法GET/PUT/POST/DELETE等）、relativeUrl （admin/rest/之後URL的部分）、選用的標頭陣列（對應於HTTP標頭）和一個選用的內文（適用於POST和PUT要求）。 批次API會傳回以JSON陣列表示的邏輯HTTP回應陣列 — 每個回應都有狀態代碼、選用的標頭陣列和選用的內文（這是JSON編碼字串）。 若要進行批次要求，請建置JSON物件，以說明要執行的各個作業。 允許的最大運算元為256 （從0到255）。
 
 指定要求中作業之間的相依性依預設，批次API要求中指定的作業是獨立的 — 它們可以在伺服器上以任意順序執行，而且一個作業中的錯誤不會影響其他作業的執行。
 
@@ -122,7 +122,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 
 | 屬性 | 說明 | 限制 | 預設值 |
 | --- | --- | --- | --- |
-| 內文 | HTTP批次作業的內文。 將會在所有動作中忽略，除了POST和PUT。 可參考先前批次動作的ID，例如：「offerId」：「{operationIdResponse:0}」、「segmentId」：「{operationIdResponse:1}」 | 應為有效的JSON；若是參照operationIdResponse，則參照的operationId回應應為有效的ID，且該動作上的方法應為POST | 空白物件{} |
+| 內文 | HTTP批次作業的內文。 除了POST和PUT以外的所有動作都會被忽略。 可參考先前批次動作的ID，例如：「offerId」：「{operationIdResponse:0}」、「segmentId」：「{operationIdResponse:1}」 | 應為有效的JSON；若是參照operationIdResponse，則參照的operationId回應應為有效的ID，且該動作上的方法應為POST | 空白物件{} |
 | dependsOnOperationIds | 條件約束ID的清單，可保證目前的作業只有在指定的作業順利完成時才執行。 可用於實現作業的鏈結。 | 最多允許255個操作；只允許唯一值；應指向陣列中的有效operationId；不允許循環相依性 |  |
 | 標頭 | 要連同特定操作一起傳送的鍵值標頭陣列。 如果批次API的驗證已透過「授權」標頭執行，其也將針對個別作業複製。 | 陣列中允許的標頭數上限為50 | Content-Type： application/json |
 | 標題 — >名稱 | 標頭名稱 | 與其他標頭名稱之間應是唯一的。 rfc的標頭不區分大小寫，否則值會相互覆寫。 |  |

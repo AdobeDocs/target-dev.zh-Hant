@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 891
+source-wordcount: 960
 ht-degree: 1%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 ## 步驟摘要
 
-1. 為您的組織啟用[!UICONTROL on-device decisioning]
-1. 建立[!UICONTROL A/B Test]活動
+1. 為您的組織啟用[!UICONTROL 裝置上決策]
+1. 建立[!UICONTROL A/B測試]活動
 1. 定義您的A和B
 1. 新增對象
 1. 設定流量分配
@@ -41,41 +41,41 @@ ht-degree: 1%
 >
 >假設您是一間零售電子商務公司。 當客戶瀏覽及排序您的產品目錄時，您想要提高轉換率。 您有假設認為，某些排序演演算法和分頁策略會產生比其他演演算法更好的結果。 為了測試此理論，您決定執行功能測試，該測試涉及使用一般使用者的不同排序選項來重新設計排序Widget。 您想要確保此功能測試會在幾乎零延遲的情況下執行，以免對使用者體驗造成負面影響，並扭曲結果。
 
-## &#x200B;1. 為您的組織啟用[!UICONTROL on-device decisioning]
+## &#x200B;1. 為您的組織啟用[!UICONTROL 裝置上決策]
 
-啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，並啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換按鈕。
+啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 帳戶詳細資料]**，並啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
 
 ![替代影像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換功能。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
 
-啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
+啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
 
-## &#x200B;2. 建立[!UICONTROL A/B Test]活動
+## &#x200B;2. 建立[!UICONTROL A/B測試]活動
 
-1. 在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
+1. 在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL 活動]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL 建立活動]** > **[!UICONTROL A/B測試]**。
 
    ![替代影像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL Web]**&#x200B;選項為已選取(1)、選取&#x200B;**[!UICONTROL Form]**&#x200B;作為您的體驗撰寫器(2)、選取具有&#x200B;**[!UICONTROL No Property Restrictions]** (3)的&#x200B;**[!UICONTROL Default Workspace]**，然後按一下&#x200B;**[!UICONTROL Next]** (4)。
+1. 在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)，選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)，選取&#x200B;**[!UICONTROL 預設Workspace]**&#x200B;搭配&#x200B;**[!UICONTROL 無屬性限制]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
 
    ![替代影像](assets/asset-form.png)
 
 ## &#x200B;3. 定義您的A和B
 
-1. 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，即體驗B，方法是按一下&#x200B;**[!UICONTROL Add Experience]** (2)按鈕。 輸入應用程式中要使用屬性執行特徵測試的位置(3)名稱。 在下列範例中，`product-results-page`是為體驗A定義的位置。 （此位置也是為體驗B定義的位置。）
+1. 在活動建立的&#x200B;**[!UICONTROL 體驗]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，體驗B，方法是按一下&#x200B;**[!UICONTROL 新增體驗]** (2)按鈕。 輸入應用程式中要使用屬性執行特徵測試的位置(3)名稱。 在下列範例中，`product-results-page`是為體驗A定義的位置。 （此位置也是為體驗B定義的位置。）
 
    ![替代影像](assets/asset-location.png)
 
-   **[!UICONTROL Experience A]**&#x200B;將包含代表您商業邏輯執行下列動作的JSON：
+   **[!UICONTROL 體驗A]**&#x200B;將包含代表您的商業邏輯執行下列動作的JSON：
 
    * 透過`test_sorting`功能標幟啟動排序演演算法功能
    * 執行`sorting_algorithm _**_attribute`中定義的建議排序演演算法
    * 依`pagination_limit`中定義的分頁策略所定義，每頁傳回50項產品
 
-1. 在體驗A中，按一下以選取&#x200B;**[!UICONTROL Create JSON Offer]**，將內容從&#x200B;**[!UICONTROL Default Content]**&#x200B;變更為JSON，如下所示(1)。
+1. 在體驗A中，按一下以選取&#x200B;**[!UICONTROL 建立JSON選件]**，將內容從&#x200B;**[!UICONTROL 預設內容]**&#x200B;變更為JSON，如下所示(1)。
 
    ![替代影像](assets/asset-offer.png)
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 
    ![替代影像](assets/asset-sorting.png)
 
-   **[!UICONTROL Experience B]**&#x200B;將定義代表您的商業邏輯執行下列動作的JSON：
+   **[!UICONTROL 體驗B]**&#x200B;將定義代表您商業邏輯執行下列動作的JSON：
 
    * 透過test_sorting功能旗標啟動排序演演算法功能
    * 執行`sorting_algorithm _**_attribute`中定義的`best_sellers`排序演演算法
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 ## &#x200B;4. 新增對象
 
-在&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟中，保留&#x200B;**[!UICONTROL All Visitors]**&#x200B;對象。 這可讓您瞭解排序功能的影響，以及哪個演演算法和專案數量對結果影響最大。
+在&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟中，保留&#x200B;**[!UICONTROL 所有訪客]**&#x200B;對象。 這可讓您瞭解排序功能的影響，以及哪個演演算法和專案數量對結果影響最大。
 
 ![替代影像](assets/asset-audience-b.png)
 
@@ -119,13 +119,13 @@ ht-degree: 1%
 
 ## &#x200B;7. 設定報告
 
-在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟中，選擇&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作為&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中檢視您的A/B測試結果，或選擇&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;以便在Adobe Analytics UI中檢視這些結果。
+在&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟中，選擇&#x200B;**[!UICONTROL Adobe Target]**&#x200B;做為&#x200B;**[!UICONTROL 報告Source]**，以便在[!DNL Adobe Target] UI中檢視您的A/B測試結果，或選擇&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中檢視這些結果。
 
 ![替代影像](assets/asset-reporting-b.png)
 
 ## &#x200B;8. 新增追蹤KPI的量度
 
-選擇&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以使用屬性測量功能測試。 在此範例中，成功取決於使用者是否購買產品，取決於他們看到的排序演演算法和分頁策略。
+選擇&#x200B;**[!UICONTROL 目標量度]**&#x200B;以測量具有屬性的功能測試。 在此範例中，成功取決於使用者是否購買產品，取決於他們看到的排序演演算法和分頁策略。
 
 ## &#x200B;9. 在您的應用程式中使用屬性實作功能測試
 

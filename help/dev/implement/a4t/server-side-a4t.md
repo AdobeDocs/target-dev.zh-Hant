@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 153
+source-wordcount: 161
 ht-degree: 1%
 
 ---
 
 # [!DNL Experience Platform Web SDK]中A4T資料的伺服器端記錄
 
-[!DNL Adobe Experience Platform Web SDK]可讓您在[!UICONTROL Experience Platform Edge Network]上實作[!UICONTROL Adobe Analytics for Target] (A4T)功能。 啟用伺服器端記錄時，所有透過Edge Network傳送的[!DNL Analytics]點選都會在伺服器端以[!DNL Target]詳細資料增加，不必經過點選拼接程式。
+[!DNL Adobe Experience Platform Web SDK]可讓您在[!UICONTROL Adobe Analytics Edge Network]上實作[!UICONTROL Experience Platform for Target] (A4T)功能。 啟用伺服器端記錄時，所有透過Edge Network傳送的[!DNL Analytics]點選都會在伺服器端以[!DNL Target]詳細資料增加，不必經過點選拼接程式。
 
 在資料流設定中啟用[!DNL Analytics]時，[!DNL Analytics]的伺服器端記錄已啟用：
 

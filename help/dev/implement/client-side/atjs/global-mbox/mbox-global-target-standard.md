@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 285
-ht-degree: 20%
+source-wordcount: 304
+ht-degree: 19%
 
 ---
 
@@ -34,15 +34,15 @@ ht-degree: 20%
 
 若想同時在 [!DNL Target] 和您的舊版實施中使用現有的全域 mbox，您必須設定幾個參數。
 
-1. 前往[!DNL Target]，然後按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
+1. 移至[!DNL Target]，然後按一下&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**。
 
-   預設會啟用&#x200B;**[!UICONTROL Page load enabled (Auto-create global mbox]**，而自訂全域mbox的名稱為`target-global-mbox`。
+   依預設，**[!UICONTROL 已啟用頁面載入(已啟用自動建立全域mbox]**，且自訂全域mbox名為`target-global-mbox`。
 
-1. 如果您想使用現有的mbox，請停用&#x200B;**[!UICONTROL Page load enabled (Auto-create global mbox]**，並在&#x200B;**[!UICONTROL Global Mbox]**&#x200B;欄位中指定先前建立之全域mbox的名稱。
+1. 如果您想使用現有的mbox，請停用&#x200B;**[!UICONTROL 已啟用頁面載入（自動建立全域mbox]**），並在&#x200B;**[!UICONTROL 全域mbox]**&#x200B;欄位中指定先前建立之全域mbox的名稱。
 
    全域mbox下拉式清單會列出您帳戶中的所有mbox。 如果您想使用尚未存在的mbox，請建立mbox。
 
-1. 按一下 **[!UICONTROL Save]**。
+1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
    您的帳戶設定已更新。
 

@@ -14,7 +14,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -75,7 +75,7 @@ target_client.send_notifications(options)
 
 ## 範例
 
-首先，讓我們建置[!UICONTROL Target Delivery API]要求，以預先擷取`home`和`product1` mbox的內容。
+首先，讓我們建置[!UICONTROL Target傳送API]要求，以預先擷取`home`和`product1` mbox的內容。
 
 ### Python
 
@@ -89,7 +89,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-成功的回應將包含[!UICONTROL Target Delivery API]回應物件，其中包含要求mbox的預先擷取內容。 範例`target_response["response"]`物件（格式為dict）可能如下所示：
+成功的回應將包含[!UICONTROL Target傳送API]回應物件，其中包含已要求mbox的預先擷取內容。 範例`target_response["response"]`物件（格式為dict）可能如下所示：
 
 ### Python
 

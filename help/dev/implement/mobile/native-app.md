@@ -18,7 +18,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 
 * TS=1660667205：目前的時間戳記。 此時間戳記可確保網頁檢視不會收到過期的值。
 * MCMID=69624092487065093697422606480535692677： [!UICONTROL Experience Cloud ID] (ECID)。 也稱為[!DNL Adobe]跨解決方案訪客身分識別所需的MID或[!UICONTROL Marketing Cloud ID]。
-* mcorgid=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe Organization ID]。
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe組織識別碼]。
 
 `Identity.getUrlVariables`是替代[!DNL Adobe Experience Platform Mobile SDK]方法，可傳回包含[!DNL Experience Cloud Identity Service] URL變數的適當格式字串。 如需詳細資訊，請參閱&#x200B;*身分API參考*&#x200B;中的[getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank}。
 
@@ -90,7 +90,7 @@ Target.getSessionId { (id, err) in
 
 ## 在網頁檢視中測試
 
-在[!UICONTROL Activity detail]頁面上按一下[[!UICONTROL Adobe QA]連結](/help/dev/implement/mobile/target-mobile-preview.md)以顯示快顯視窗來複製每個體驗預覽連結，會產生網頁預覽連結，如下所示：
+在[!UICONTROL 活動詳細資料]頁面上按一下[[!UICONTROL Adobe QA]連結](/help/dev/implement/mobile/target-mobile-preview.md)以顯示快顯視窗來複製每個體驗預覽連結，會產生網頁預覽連結，如下所示：
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

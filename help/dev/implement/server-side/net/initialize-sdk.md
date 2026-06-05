@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
-source-wordcount: 359
+source-wordcount: 369
 ht-degree: 15%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 ## 說明
 
-使用`Create`方法，以初始化.NET SDK並具現化[!UICONTROL Target Client]以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
+使用`Create`方法，以初始化.NET SDK並將[!UICONTROL Target使用者端]例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
 
 使用.NET相依性插入時，只要在服務設定步驟中呼叫`services.AddTargetLibrary()`來新增SDK，然後將`ITargetClient targetClient`插入應用程式的建構函式。
 
@@ -49,8 +49,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| 用戶端 | string | 是 | 無 | [!UICONTROL Target Client Id] |
-| OrganizationId | string | 是 | 無 | [!UICONTROL Experience Cloud Organization ID] |
+| 用戶端 | string | 是 | 無 | [!UICONTROL 目標使用者端識別碼] |
+| OrganizationId | string | 是 | 無 | [!UICONTROL Experience Cloud組織ID] |
 | 逾時 | int | 否 | 10000 | 所有要求的逾時（以毫秒為單位） |
 | Proxy | WebProxy | 否 | null | 所有[!DNL Target]要求的Proxy |
 | 重試原則 | 原則 | 否 | null | 重試所有[!DNL Target]要求的原則 |

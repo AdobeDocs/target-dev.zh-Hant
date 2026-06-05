@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 134
-ht-degree: 5%
+source-wordcount: 144
+ht-degree: 4%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 5%
 
 | 名稱 | 引數 | 說明 |
 | --- | --- | --- |
-| DevicedecisioningReady | 無 | 使用者端第一次準備好[!UICONTROL on-device decisioning]時只呼叫一次 |
-| artifactDownloadSucceeded | 成品檔案的位元組[]內容 | 每次下載[!UICONTROL on-device decisioning]成品時呼叫 |
-| artifactDownloadFailed | 例外 | 每次無法下載[!UICONTROL on-device decisioning]成品時呼叫 |
+| DevicedecisioningReady | 無 | 使用者端第一次準備好進行[!UICONTROL 裝置上決策]時，只呼叫一次 |
+| artifactDownloadSucceeded | 成品檔案的位元組[]內容 | 每次下載[!UICONTROL 裝置上決策]成品時呼叫 |
+| artifactDownloadFailed | 例外 | 每次無法下載[!UICONTROL 裝置上決策]成品時呼叫 |
 
 ## 範例
 

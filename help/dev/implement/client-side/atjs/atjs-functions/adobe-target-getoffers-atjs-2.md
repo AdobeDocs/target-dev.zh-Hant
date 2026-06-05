@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.getOffers， getOffers， getoffers， get offers， at.js，函式，函式， $8
-description: 使用 [!DNL Adobe Target] at.js程式庫的[!UICONTROL adobe.target.getOffers()]函式及其選項來觸發要求，以取得多個 [!DNL Target] 選件。 (at.js 2.x)
+description: 使用適用於 [!DNL Adobe Target] at.js資料庫的[!UICONTROL adobe.target.getOffers()]函式及其選項，引發要求以取得多個 [!DNL Target] 選件。 (at.js 2.x)
 title: 如何使用[!UICONTROL adobe.target.getOffers()]函式？
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
@@ -19,8 +19,8 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 60%
+source-wordcount: 1357
+ht-degree: 57%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 60%
 | request > id > thirdPartyId | 無 | 大小上限= 128。 |  |
 | Request > experienceCloud | 無 |  |  |
 | Request > experienceCloud > analytics | 無 |  | Adobe Analytics 整合 |
-| Request > experienceCloud > analytics > logging | 無 | 必須在頁面上實作下列項目:<ul><li>訪客 ID 服務</li><li>Appmeasurement.js</li></ul> | 支援下列值：<P>**client_side**：指定後，會傳回分析裝載給呼叫者，呼叫者應將其用來透過[!UICONTROL Data Insertion API]傳送給[!UICONTROL Adobe Analytics]。<P>**server_side**：這是預設值，其中[!DNL Target]和[!DNL Analytics]後端會使用SDID將呼叫拼接在一起以用於報表用途。 |
+| Request > experienceCloud > analytics > logging | 無 | 必須在頁面上實作下列項目:<ul><li>訪客 ID 服務</li><li>Appmeasurement.js</li></ul> | 支援下列值：<P>**client_side**：指定後，會傳回分析裝載給呼叫者，呼叫者應將其用來透過[!UICONTROL 資料插入API]傳送給[!UICONTROL Adobe Analytics]。<P>**server_side**：這是預設值，其中[!DNL Target]和[!DNL Analytics]後端會使用SDID將呼叫拼接在一起以用於報表用途。 |
 | request > prefetch | 無 |  |  |
 | request > prefetch > views | 無 | 最大計數50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>值長度`<=` 5000。<P>名稱不得以「profile」開頭。<P>不允許的名稱： 「orderId」、「orderTotal」、「productPurchasedId」。 | 傳遞參數以用於擷取使用中活動內的相關檢視。 |
 | request > prefetch > views > profileParameters | 無 | 計數上限50。<P>名稱不得空白。<P>名稱長度`<=` 128。<P>值長度`<=` 5000。<P>僅接受字串值。<P>名稱不得以「profile」開頭。 | 傳入輪廓參數以用於擷取使用中活動內的相關檢視。 |
@@ -86,7 +86,7 @@ ht-degree: 60%
 | request > execute > mboxes > mbox > order > total | 無 | `>=` 0. | 使用指定的訂單總金額為特定 mbox 擷取產品建議。 |
 | request > execute > mboxes > mbox > order > purchasedProductIds | 無 | 沒有空白值。<P>每個值的長度上限= 50。<P>串連並以逗號分隔。<P>產品ID總長度`<=` 250。 | 使用指定的已購產品 ID 為特定 mbox 擷取產品建議。 |
 
-## 為所有檢視呼叫 [!UICONTROL getOffers()]
+## 為所有檢視呼叫[!UICONTROL getOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -117,7 +117,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## 呼叫 [!UICONTROL getOffers()] 以使用傳入的參數和輪廓參數擷取最新的檢視
+## 呼叫[!UICONTROL getOffers()]以使用傳入的引數和設定檔引數擷取最新的檢視
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -138,7 +138,7 @@ adobe.target.getOffers({
 });
 ```
 
-## 呼叫 [!UICONTROL getOffers()] 以使用傳入的參數和輪廓參數擷取 mbox。
+## 呼叫[!UICONTROL getOffers()]以使用傳入的引數和設定檔引數擷取mbox。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

@@ -13,7 +13,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 246
+source-wordcount: 249
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ const prefetchMboxesRequest = {
 const targetResponse = await targetClient.getOffers({ request: prefetchMboxesRequest });
 ```
 
-成功的回應將包含[!UICONTROL Target Delivery API]回應物件，其中包含要求mbox的預先擷取內容。 範例`targetResponse.response`物件可能顯示如下：
+成功的回應將包含[!UICONTROL Target傳送API]回應物件，其中包含已要求mbox的預先擷取內容。 範例`targetResponse.response`物件可能顯示如下：
 
 ### Node.js
 

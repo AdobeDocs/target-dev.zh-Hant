@@ -13,12 +13,12 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 29
+source-wordcount: 33
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Adobe Target Admin API]
+# [!UICONTROL Adobe Target管理API]
 
 您可在下列位置找到[!DNL Adobe Target]管理和報告API：
 

@@ -1,6 +1,6 @@
 ---
 keywords: 全域mbox引數， targetPageParams，查詢字串，陣列， json， dtm
-description: 瞭解如何使用[!UICONTROL targetPageParams]函式將其他目標定位或內容資訊傳遞至 [!DNL Adobe Target] 全域mbox。
+description: 瞭解如何使用[!UICONTROL targetPageParams]函式，將其他目標定位或內容資訊傳遞至 [!DNL Adobe Target] 全域mbox。
 title: 如何將引數傳遞至全域mbox？
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 377
-ht-degree: 61%
+source-wordcount: 378
+ht-degree: 60%
 
 ---
 

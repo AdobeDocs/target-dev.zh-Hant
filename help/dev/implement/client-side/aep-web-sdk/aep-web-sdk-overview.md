@@ -1,7 +1,7 @@
 ---
 keywords: Adobe Experience Platform Web SDK， aep web sdk， web sdk， sdk， adobe experience cloud，平台邊緣網路， adobe experience platform edge network， edge network， aep edge network， Adobe Experience Platform Web SDK0
-description: 瞭解如何使用[!UICONTROL Adobe Experience Platform Web SDK]透過[!UICONTROL AEP Edge Network]與[!UICONTROL Adobe Experience Cloud]中的各種服務互動。
-title: 如何使用[!UICONTROL Experience Platform Web SDK]實作？
+description: 瞭解如何使用[!UICONTROL Adobe Experience Platform Web SDK]，透過[!UICONTROL AEP Edge Network]與[!UICONTROL Adobe Experience Cloud]中的各種服務互動。
+title: 如何透過[!UICONTROL Experience Platform Web SDK]實作？
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
 TQID: https://experienceleague.adobe.com/j3-KSuCkcyyTB2KG4Icm2E7xpAfcuPkaOlhxitd5q-4
@@ -23,8 +23,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 714
-ht-degree: 11%
+source-wordcount: 786
+ht-degree: 9%
 
 ---
 
@@ -56,11 +56,11 @@ ht-degree: 11%
 | 功能 | 說明/連結 |
 | --- | --- |
 | [活動 QA](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hant) | 在[!DNL Target]中使用QA URL來執行簡易的端對端活動QA，同時具有永不變更的預覽連結、可選對象鎖定目標以及與即時活動資料保持分段的QA報表。 活動QA可讓您在啟動[!DNL Target]活動之前，完整測試這些活動。<p>請參閱[Target JavaScript資料庫QA模式相容性](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hant#compatibility)和[預覽URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hant#preview)。 |
-| [[!UICONTROL Analytics for Target] (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) | [!UICONTROL Adobe Analytics for Target] (A4T) 是一種跨解決方案的整合，可讓您根據 [!DNL Analytics] 轉換量度和客群區段來建立活動。 A4T整合可讓您使用Analytics報表來檢查結果。<p>請參閱[支援的活動型別](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant#section_F487896214BF4803AF78C552EF1669AA)和[Adobe Experience Platform Web SDK實作的實作步驟](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hant#platform)。 |
+| [[!UICONTROL 目標分析] (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) | [!UICONTROL 適用於Target] (A4T)的Adobe Analytics是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。 A4T整合可讓您使用Analytics報表來檢查結果。<p>請參閱[支援的活動型別](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant#section_F487896214BF4803AF78C552EF1669AA)和[Adobe Experience Platform Web SDK實作的實作步驟](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hant#platform)。 |
 | [客群](https://experienceleague.adobe.com/docs/target/using/audiences/target.html?lang=zh-Hant) | [!DNL Target]中的對象會決定哪些人可以看到鎖定目標活動中的內容與體驗。<p>請參閱[使用對象清單](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=zh-Hant#use-list)和[結合多個對象](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html?lang=zh-Hant)。 |
 | [建立客群](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=zh-Hant&?lang=zh-Hant) | 使用在[!DNL Adobe Experience Platform]中建立的對象可提供更豐富的客戶資料，從而帶來更具影響力的個人化。<p>請參閱[使用來自Adobe Experience Platform](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=zh-Hant#aep)的對象。 |
 | [優惠決定](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html?lang=zh-Hant) | 將在[!DNL Adobe Journey Optimizer]中建立的報價決定新增至[!DNL Target]個活動（手動A/B測試或體驗鎖定目標），以決定並為您的網路和行動裝置上的訪客提供下一個最佳報價。 |
-| [重新導向產品建議 - A4T 常見問答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant) | 重新導向選件會使訪客的瀏覽器重新導向至新頁面。<p>請參閱[&#x200B; [!UICONTROL Adobe Experience Platform Web SDK]是否支援A4T的重新導向選件？](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant#platform) |
+| [重新導向產品建議 - A4T 常見問答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant) | 重新導向選件會使訪客的瀏覽器重新導向至新頁面。<p>請參閱[[!UICONTROL Adobe Experience Platform Web SDK]是否支援A4T的重新導向選件？](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hant#platform) |
 | [回應權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant) | 回應Token可讓您將[!DNL Target]資料傳送至Google Analytics和其他協力廠商整合。<p>請參閱[透過Platform Web SDK傳送資料至Google Analytics](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant#sending-data-to-google-analytics-via-platform-web-sdk)，檢視如何完成此工作的程式碼範例。 |
 | 在&#x200B;*[!UICONTROL Platform Web SDK]總覽*&#x200B;指南中的[單頁應用程式實作](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=zh-Hant)。 | [!UICONTROL Adobe Experience Platform Web SDK]提供豐富的功能，讓貴公司能以新世代使用者端技術(例如單頁應用程式(SPA))為基礎進行個人化。 |
 | [TLS (傳輸層安全性) 加密變更](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS （傳輸層安全性）可協助您維持最高安全性標準，提升客戶資料的安全性。 |
