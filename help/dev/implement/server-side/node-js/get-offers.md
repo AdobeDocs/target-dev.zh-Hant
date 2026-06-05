@@ -1,21 +1,19 @@
 ---
-title: 使用Node.js SDK時，在 [!DNL Adobe Target] 中使用[!UICONTROL getOffers()]
+title: 使用Node.js SDK時，請在 [!DNL Adobe Target] 中使用[!UICONTROL getOffers()]
 description: 瞭解如何使用[!UICONTROL getOffers()]執行決定並從 [!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
 TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 326
-ht-degree: 20%
+source-wordcount: 342
+ht-degree: 19%
 
 ---
 
-# [!UICONTROL Get Offers] (Node.js)
+# [!UICONTROL 取得選件] (Node.js)
 
 ## 說明
 
@@ -51,13 +49,13 @@ TargetClient.getOffers(options: Object): Promise
 
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
-| 請求 | 物件 | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)個要求 |
-| 回應 | 物件 | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)個回應 |
+| 請求 | 物件 | [[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求 |
+| 回應 | 物件 | [[!UICONTROL 目標傳送API]](/help/dev/implement/delivery-api/overview.md)回應 |
 | visitorState | 物件 | 應傳遞給訪客API `getInstance()`的物件 |
 | targetCookie | 物件 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 物件 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 陣列 | 使用使用者端Analytics時的Analytics裝載 |
-| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant？)的清單。 |
+| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html？)的清單。 |
 | trace | 陣列 | 所有請求mbox/檢視的彙總追蹤資料 |
 | 狀態 | 物件 | 包含回應狀態的物件。 |
 | 決策方法 | 字串 | 決定要使用的決策方法（[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、伺服器端、混合式） |
@@ -76,7 +74,7 @@ TargetClient.getOffers(options: Object): Promise
 | --- | --- | --- |
 | 狀態 | 數字 | HTTP狀態代碼 |
 | 訊息 | 字串 | 有關回應的訊息。 例如，它可以指出回應是決定[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)還是伺服器端 |
-| remoteMboxes | 陣列 | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)要求。 |
+| remoteMboxes | 陣列 | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求。 |
 
 ## 範例
 

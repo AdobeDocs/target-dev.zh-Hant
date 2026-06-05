@@ -6,59 +6,52 @@ feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
 TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 1644
-ht-degree: 18%
+source-wordcount: 1734
+ht-degree: 17%
 
 ---
 
-# 計畫和實作[!UICONTROL Recommendations]
+# 計畫和實作[!UICONTROL 建議]
 
 協助您計畫和實作[!DNL Adobe Target Recommendations]的資訊。
 
 >[!NOTE]
 >
->除了本文章之外，[Adobe Target商業從業者指南](https://experienceleague.adobe.com/zh-hant/docs/target/using/target-home){target=_blank}也包含有關[Target Recommendations](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/recommendations){target=_blank}的深入資訊。
+>除了本文章之外，[Adobe Target商業從業者指南](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}也包含有關[Target Recommendations](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}的深入資訊。
 
-在[!DNL Adobe Target]中設定第一個[!UICONTROL Recommendations]活動之前，請先完成下列步驟：
+在[!DNL Adobe Target]中設定第一個[!UICONTROL Recommendations]活動之前，請完成下列步驟：
 
-1. [在您要用來擷取使用者行為並傳遞建議的網頁和行動應用程式介面上實作[!UICONTROL Target]](#implement-target)。
-1. [設定您想要推薦給使用者的產品或內容的[!UICONTROL Recommendations]目錄](#set-up-your-recommendations-catalog)。
+1. 在您要用來擷取使用者行為並傳遞建議的網頁和行動應用程式介面上[實作[!UICONTROL Target]](#implement-target)。
+1. [設定您要推薦給使用者的產品或內容的[!UICONTROL 建議]目錄](#set-up-your-recommendations-catalog)。
 1. [將行為資訊和內容](#pass-behavioral-information-and-context)傳遞給[!DNL Target Recommendations]，讓其提供個人化建議。
 1. [設定全域排除專案](#configure-global-exclusions)。
-1. [設定[!UICONTROL Recommendations]設定](#configure-recommendations-settings)。
-1. （選用） [使用Admin API管理[!UICONTROL Recommendations]](#administer-recommendations-using-admin-apis)。
+1. [設定[!UICONTROL 建議]設定](#configure-recommendations-settings)。
+1. （選擇性） [使用管理API管理[!UICONTROL 建議]](#administer-recommendations-using-admin-apis)。
 
-## &#x200B;1. 實作[!UICONTROL Target]
+## &#x200B;1. 實作[!UICONTROL 目標]
 
 [!DNL Target Recommendations]需要您實作[!DNL Adobe Experience Platform Web SDK]或at.js 0.9.2 （或更新版本）。 如需詳細資訊，請參閱[[!UICONTROL Target]使用者端實作指南](../client-side/overview.md)。
 
 ## &#x200B;2. 設定您的[!UICONTROL Recommendations]目錄
 
-若要提供高品質的建議，[!UICONTROL Target]必須瞭解您想要建議的產品或內容。 目錄通常包含三種關於建議專案的資訊。 假設您正在推薦電影。 包含下列專案：
+若要提供高品質的建議，[!UICONTROL Target]必須知道您要建議的產品或內容。 目錄通常包含三種關於建議專案的資訊。 假設您正在推薦電影。 包含下列專案：
 
 1. 您要向收到建議的使用者顯示的資料。 例如，您可以顯示影片名稱以及影片海報縮圖影像的URL。
 1. 適合用於套用行銷和推銷控制的資料。 例如，您可以顯示電影分級，這樣就不會建議NC-17電影。
 1. 適合用於判斷專案與其他專案之相似度的資料。 例如，您可以顯示電影的型別以及電影的導演。
 
-[!UICONTROL Target]提供多個整合選項來填入您的目錄。 這些選項可結合使用，以更新目錄中的不同專案，或更新不同頻率上的不同專案屬性。
+[!UICONTROL Target]提供多個整合選項以填入您的目錄。 這些選項可結合使用，以更新目錄中的不同專案，或更新不同頻率上的不同專案屬性。
 
 | 方法 | 內容 | 使用時機 | 其他資訊 |
 | --- | --- | --- | --- |
-| 目錄摘要 | 排程要每天上傳和擷取的摘要（CSV、[!DNL Google]產品XML或[!UICONTROL Analytics Product Classifications]）。 | 用於一次傳送多個專案的相關資訊。 用於傳送不常變更的資訊。 | 請參閱[摘要](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/entities/feeds)。 |
+| 目錄摘要 | 排程要每天上傳和擷取的摘要（CSV、[!DNL Google]產品XML或[!UICONTROL Analytics產品分類]）。 | 用於一次傳送多個專案的相關資訊。 用於傳送不常變更的資訊。 | 請參閱[摘要](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)。 |
 | 實體API | 呼叫API以傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱[Entities API開發人員檔案](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 傳遞頁面上的更新 | 使用頁面上的JavaScript或使用傳送API，傳送單一專案的最新更新。 | 用於一次傳送一個專案的更新。 用於傳送經常變更的資訊（例如價格、存貨/存貨層次）。 | 請參閱下方的[專案檢視/產品頁面](#item-views-or-product-pages)。 |
 
@@ -121,7 +114,7 @@ function targetPageParams() {
 }
 ```
 
-如需有關購物車型推薦的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[購物車型](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
+如需有關購物車型推薦的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[購物車型](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
 
 ### 排除已經在訪客購物車中的項目
 
@@ -143,27 +136,27 @@ function targetPageParams() {
 
 ## &#x200B;4. 設定全域排除專案
 
-排除您絕不建議給訪客使用的全域層級任何專案。 請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[排除專案](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/entities/exclusions)。
+排除您絕不建議給訪客使用的全域層級任何專案。 請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[排除專案](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)。
 
-## &#x200B;5. 設定[!UICONTROL Recommendations]設定
+## &#x200B;5. 設定[!UICONTROL 建議]設定
 
 使用設定來管理您的 [!UICONTROL Recommendations] 實作。
 
-若要存取&#x200B;**[!UICONTROL Recommendations Settings]**&#x200B;選項，請在[!DNL Adobe Experience Cloud]中開啟[!DNL Target]，然後按一下&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]**。
+若要存取&#x200B;**[!UICONTROL 建議設定]**&#x200B;選項，請在[!DNL Adobe Experience Cloud]中開啟[!DNL Target]，然後按一下&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 建議]**。
 
 ![Recommendations設定頁面](/help/dev/implement/recommendations/assets/recs-settings-new.png)
 
 設定以下選項:
 
-### [!UICONTROL Recommendations API Token]
+### [!UICONTROL 建議API Token]
 
 [!UICONTROL Recommendations API Token]區段中提供下列選項：
 
-#### [!UICONTROL Client code]
+#### [!UICONTROL 使用者端代碼]
 
-[!DNL Target] [!UICONTROL client code]。
+[!DNL Target] [!UICONTROL 使用者端代碼]。
 
-如果您不知道您的[!UICONTROL client code]，請在[!DNL Target]使用者介面中按一下「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**」。 [!UICONTROL client code]會顯示在[!UICONTROL Account Details]區段中。
+如果您不知道您的[!UICONTROL 使用者端代碼]，請在[!DNL Target]使用者介面中按一下&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**。 [!UICONTROL 使用者端代碼]會顯示在[!UICONTROL 帳戶詳細資料]區段中。
 
 #### 驗證Token
 
@@ -181,11 +174,11 @@ function targetPageParams() {
 
 [!DNL Recommendations]中的條件即為一種規則，用來根據預先決定的一組訪客行為決定要建議的產品或內容。 條件可以基於人氣趨勢、訪客的目前和過去行為，或類似的產品和內容。 您可以新增多個條件，將多個建議類型彼此測試。
 
-如需詳細資訊，請參閱&#x200B;*Adobe Target商業從業者指南*&#x200B;中的[條件](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
+如需詳細資訊，請參閱&#x200B;*Adobe Target商業從業者指南*&#x200B;中的[條件](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
 
-[!UICONTROL Criteria]區段中提供下列設定：
+下列設定可在[!UICONTROL 條件]區段中取得：
 
-#### [!UICONTROL Industry/Vertical]
+#### [!UICONTROL 產業/垂直]
 
 行業別用於協助將建議條件分類。 此資訊可協助您的團隊成員找到適合特定頁面的條件，例如最適合購物車頁面或媒體頁面的條件。
 
@@ -196,7 +189,7 @@ function targetPageParams() {
 * 潛在客戶開發/B2B/金融服務
 * 媒體/出版
 
-#### [!UICONTROL Filter Incompatible Criteria]
+#### [!UICONTROL 篩選不相容的條件]
 
 啟用此選項只會顯示讓所選頁面傳遞必要資料的條件。 不是每個條件都能在每個頁面上正確執行。 頁面或mbox必須傳入`entity.id`或`entity.categoryId`，目前專案/目前類別建議才能相容。
 
@@ -204,13 +197,13 @@ function targetPageParams() {
 
 如果使用標籤管理解決方案，Adobe建議您停用此選項。
 
-如需此選項的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[[!UICONTROL Recommendations]常見問題集](https://experienceleague.adobe.com/zh-hant/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
+如需此選項的詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[[!UICONTROL Recommendations]常見問題集](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
 
-### [!UICONTROL Product Catalog]
+### [!UICONTROL 產品目錄]
 
-[!UICONTROL Product Catalog]區段中提供下列選項：
+[!UICONTROL 產品目錄]區段中提供下列選項：
 
-#### [!UICONTROL Default Host Group]
+#### [!UICONTROL 預設主機群組]
 
 選取預設主機群組。
 
@@ -220,20 +213,20 @@ function targetPageParams() {
 
 >[!NOTE]
 >
->變更選取的環境後，您必須按一下&#x200B;**[!UICONTROL Search]**&#x200B;以更新傳回的結果。
+>變更選取的環境後，您必須按一下&#x200B;**[!UICONTROL 搜尋]**&#x200B;來更新傳回的結果。
 
-**[!UICONTROL Environment]**&#x200B;篩選器可從Target UI中的下列位置取得：
+**[!UICONTROL 環境]**&#x200B;篩選器可從Target UI中的下列位置取得：
 
-* 目錄搜尋(**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)
-* 集合(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]**)
-* 建立集合對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create collection]**)
-* 更新集合對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)
-* 建立排除專案對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create exclusion]**)
-* 更新排除專案對話方塊(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)
+* 目錄搜尋（**[!UICONTROL Recommendations]** > **[!UICONTROL 目錄搜尋]**）
+* 集合（**[!UICONTROL Recommendations]** > **[!UICONTROL 集合]**）
+* 建立集合對話方塊（**[!UICONTROL Recommendations]** > **[!UICONTROL 集合]** > **[!UICONTROL 建立集合]**）
+* 更新集合對話方塊（**[!UICONTROL Recommendations]** > **[!UICONTROL 集合]** > **[!UICONTROL 編輯]**）
+* 建立排除專案對話方塊（**[!UICONTROL 建議]** > **[!UICONTROL 排除專案]** > **[!UICONTROL 建立排除專案]**）
+* 更新排除專案對話方塊（**[!UICONTROL 建議]** > **[!UICONTROL 排除專案]** > **[!UICONTROL 編輯]**）
 
-如需詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[主機](https://experienceleague.adobe.com/zh-hant/docs/target/using/administer/hosts){target=_blank}。
+如需詳細資訊，請參閱&#x200B;*[!DNL Adobe Target]商業從業者指南*&#x200B;中的[主機](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}。
 
-#### [!UICONTROL Thumbnail Base]
+#### [!UICONTROL 縮圖基底]
 
 設定產品目錄的基底 URL 可讓您在傳入縮圖 URL 時，使用相對 URL 來指定產品的縮圖。
 
@@ -243,12 +236,12 @@ function targetPageParams() {
 
 設定相對於縮圖基底 URL 的 URL。
 
-### [!UICONTROL Custom Attribute Key Configuration]
+### [!UICONTROL 自訂屬性金鑰組態]
 
 讓您的建議以儲存在訪客設定檔中的專案為依據。 例如，「最後加入購物車的專案」或「最後觀看的影片佔90%或以上」。
 
-按一下&#x200B;**[!UICONTROL Add]**&#x200B;以建立新組態、指定組態的名稱、選取想要的設定檔屬性，然後按一下&#x200B;**[!UICONTROL Save]**。
+按一下[新增]****&#x200B;以建立新組態、指定組態的名稱、選取想要的設定檔屬性，然後按一下[儲存]****。
 
-## &#x200B;6. （選用）使用Admin API管理[!UICONTROL Recommendations]
+## &#x200B;6. （選用）使用Admin API管理[!UICONTROL 建議]
 
-請參閱[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)實作指南，瞭解如何設定和使用[!UICONTROL Recommendations]的[!UICONTROL Target]管理和傳遞API。
+請參閱[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)實作指南，瞭解如何設定和使用[!UICONTROL Recommendations]的[!UICONTROL Target]管理及傳送API。

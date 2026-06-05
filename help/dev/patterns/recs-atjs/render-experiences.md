@@ -6,21 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
 TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +32,7 @@ ht-degree: 3%
 
 ## 演算體驗圖表 {#diagram}
 
-at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automatic Page Load Request]時才有意義。 此選項會隱藏整個HTML內文，同時從[!DNL Target]擷取體驗。 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
+只有當您啟用[!UICONTROL 自動頁面載入請求]時，at.js提供的自動現成閃爍處理才有意義。 此選項會隱藏整個HTML內文，同時從[!DNL Target]擷取體驗。 在此情況下，您有責任處理忽隱忽現的情形。 搜尋可用於處理忽隱忽現情況的實作模式，以取得指引。
 
 >[!NOTE]
 >
@@ -71,8 +64,8 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 **可用選項**
 
 * 依ID促銷
-* [依集合促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=zh-Hant){target=_blank}
-* [依屬性促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hant){target=_blank}
+* [依集合促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [依屬性促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **需要實體引數**
 
@@ -80,7 +73,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [新增促銷活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=zh-Hant){target=_blank}
+* [新增促銷活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -94,9 +87,9 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL 瀏覽過這些專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過這些專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買這些專案、也購買這些專案的使用者]
 
 **需要實體引數**
 
@@ -104,7 +97,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [購物車型](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [購物車型](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -118,13 +111,13 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* 整個網站檢視次數最多
+* 依類別檢視次數最多
+* [!UICONTROL 檢視次數最多的專案屬性]
+* 整個網站[!UICONTROL 最暢銷商品]
+* [!UICONTROL 依類別排名的最暢銷商品]
+* [!UICONTROL 依專案屬性的最暢銷商品]
+* [!UICONTROL Analytics量度排名最前]
 
 **需要實體引數**
 
@@ -133,7 +126,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -147,10 +140,10 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL 瀏覽過此專案、也瀏覽了其他專案的使用者]
+* [!UICONTROL 瀏覽過此專案、但購買了其他專案的使用者]
+* [!UICONTROL 購買了此專案、也購買了其他專案的使用者]
+* [!UICONTROL 具有類似屬性的專案]
 
 **需要實體引數**
 
@@ -159,7 +152,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -173,8 +166,8 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近查看的項目]
+* [!UICONTROL 為您推薦]
 
 **需要實體引數**
 
@@ -182,7 +175,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -196,7 +189,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **可用的條件**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL 自訂演演算法]
 
 **需要實體引數**
 
@@ -204,7 +197,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [自訂條件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [自訂條件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +209,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [使用動態和靜態包含規則](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=zh-Hant){target=_blank}
+* [使用動態和靜態包含規則](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +223,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [是否可以動態地排除實體?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hant#exclude){target=_blank}
+* [是否可以動態地排除實體?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +235,9 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hant){target=_blank}
+* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您也可以使用[!DNL Target] UI建立[產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hant){target=_blank}，以更新[!DNL Recommendations]的產品目錄，進而完成此步驟。
+您也可以使用[!DNL Target] UI建立[產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}，以更新[!DNL Recommendations]的產品目錄，進而完成此步驟。
 
 +++
 
@@ -258,7 +251,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 **讀數**
 
-* [輪廓屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant){target=_blank}
+* [輪廓屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,7 +259,7 @@ at.js提供的自動現成閃爍處理功能只有在您啟用[!UICONTROL Automa
 
 ## 3.11：引發頁面載入請求 {#fire}
 
-此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant){target=_blank} (VEC)中編寫的體驗。
+此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)中編寫的體驗。
 
 +++檢視詳細資料
 

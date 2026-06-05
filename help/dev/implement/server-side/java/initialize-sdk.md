@@ -4,16 +4,13 @@ description: 瞭解如何使用create方法初始化Java SDK並將[!UICONTROL Ta
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
 TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 460
-ht-degree: 17%
+source-wordcount: 471
+ht-degree: 16%
 
 ---
 
@@ -21,11 +18,11 @@ ht-degree: 17%
 
 ## 說明
 
-使用`create`方法，以初始化Java SDK並將[!UICONTROL Target Client]例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
+使用`create`方法，以初始化Java SDK並將[!UICONTROL Target使用者端]例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
 
 ## 方法
 
-[!UICONTROL TargetClient]已使用`TargetClient.create`建立。
+[!UICONTROL TargetClient]是使用`TargetClient.create`建立的。
 
 ### 建立
 
@@ -45,8 +42,8 @@ ClientConfigBuilder ClientConfig.builder()
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| 使用者端 | 字串 | 是 | 無 | [!UICONTROL Target Client Id] |
-| organizationId | 字串 | 是 | 無 | [!UICONTROL Experience Cloud Organization ID] |
+| 使用者端 | 字串 | 是 | 無 | [!UICONTROL 目標使用者端識別碼] |
+| organizationId | 字串 | 是 | 無 | [!UICONTROL Experience Cloud組織ID] |
 | connectTimeout | 數字 | 無 | 10000 | 所有要求的連線逾時（以毫秒為單位） |
 | socketTimeout | 數字 | 無 | 10000 | 所有請求的通訊端逾時（以毫秒為單位） |
 | maxConnectionsPerHost | 數字 | 無 | 100 | 每個[!DNL Target]主機的最大連線數 |

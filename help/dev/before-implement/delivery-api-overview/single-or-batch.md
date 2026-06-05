@@ -1,30 +1,28 @@
 ---
 title: Adobe Target傳送API單一或批次傳送
-description: 如何使用[!UICONTROL Adobe Target Delivery API]單一或批次傳遞呼叫？
+description: 如何使用[!UICONTROL Adobe Target傳送API]單一或批次傳送呼叫？
 keywords: 傳送api
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # 單一或批次傳遞
 
-[!UICONTROL Adobe Target Delivery API]支援單一或批次傳遞呼叫。 您可以對單一或多個mbox的內容提出伺服器請求。
+[!UICONTROL Adobe Target傳遞API]支援單一或批次傳遞呼叫。 您可以對單一或多個mbox的內容提出伺服器請求。
 
 在決定進行單一呼叫與批次呼叫時，權衡效能成本。 如果您知道需要為使用者顯示的所有內容，最佳實務是使用單一批次傳遞呼叫為所有mbox擷取內容，以避免進行多個單一傳遞呼叫。
 
 ## 單一傳遞呼叫
 
-您可以透過[!UICONTROL Adobe Target Delivery API]擷取要向使用者顯示一個mbox的體驗。 請注意，如果您進行單一傳遞呼叫，則需要起始另一個伺服器呼叫，以便為使用者擷取mbox的其他內容。 隨著時間推移，這可能會變得非常昂貴，因此，請務必在使用單一「傳送API」呼叫時評估您的方法。
+您可以透過[!UICONTROL Adobe Target傳送API]，擷取要顯示給使用者的一個mbox體驗。 請注意，如果您進行單一傳遞呼叫，則需要起始另一個伺服器呼叫，以便為使用者擷取mbox的其他內容。 隨著時間推移，這可能會變得非常昂貴，因此，請務必在使用單一「傳送API」呼叫時評估您的方法。
 
 ```
 curl -X POST \

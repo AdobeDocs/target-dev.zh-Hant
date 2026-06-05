@@ -5,15 +5,10 @@ title: 如何使用頁面引數將資料匯入 [!DNL Target] ？
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
 TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: f6df325aff4a2eb9321b86778d102737493e63bb
 workflow-type: tm+mt
 source-wordcount: 397
@@ -78,8 +73,8 @@ targetPageParams (將參數附加至頁面上的全域 mbox):
 
 ## 相關資訊的連結
 
-建議: [根據頁面類型實作](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=zh-Hant)
+建議: [根據頁面類型實作](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
 
 訂單確認: [追蹤轉換](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-類別相關性: [類別相關性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=zh-Hant)
+類別相關性: [類別相關性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)

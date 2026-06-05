@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
 TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 890
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
 
 有時，Recommendations提供的演演算法無法呈現您想要促銷的特定專案。 在這種情況下，自訂條件提供了一種方法，可讓您為指定的關鍵專案或類別傳送一組特定的建議專案。
 
-若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
+若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
 
 >[!WARNING]
 >
@@ -38,11 +35,11 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
+>使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
 
 閱讀上述警告並熟悉如何建立後續無法從UI刪除的新自訂條件後，才可繼續下列步驟。
 
-1. 驗證&#x200B;**[!UICONTROL Create custom criteria]**&#x200B;的`TENANT_ID`和`API_KEY`參考先前建立的Postman環境變數。 使用下圖來比較。
+1. 驗證&#x200B;**[!UICONTROL 的`TENANT_ID`和`API_KEY`建立自訂條件]**&#x200B;參考先前建立的Postman環境變數。 使用下圖來比較。
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
@@ -54,11 +51,11 @@ ht-degree: 0%
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. 若要確認您的自訂條件已建立，請在Adobe Target中導覽至&#x200B;**[!UICONTROL Recommendations > Criteria]**&#x200B;並按名稱搜尋條件，或在下一個步驟中使用&#x200B;**[!UICONTROL List Custom Criteria API]**。
+1. 若要確認您的自訂條件已建立，請在Adobe Target中導覽至&#x200B;**[!UICONTROL Recommendations >條件]**，並按名稱搜尋您的條件，或在下一個步驟使用&#x200B;**[!UICONTROL 清單自訂條件API]**。
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 
-在此案例中，我們有一個錯誤。 讓我們使用&#x200B;**[!UICONTROL List Custom Criteria API]**&#x200B;更仔細地檢查自訂條件來調查錯誤。
+在此案例中，我們有一個錯誤。 讓我們使用&#x200B;**[!UICONTROL 清單自訂條件API]**，更密切地檢查自訂條件，以調查錯誤。
 
 ## 清單自訂條件
 
@@ -66,7 +63,7 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 像之前一樣驗證`TENANT_ID`和`API_KEY`，並傳送要求。 在回應中，請記下自訂條件ID以及有關先前所述錯誤訊息的詳細資訊。
+1. 像之前一樣驗證`TENANT_ID`和`API_KEY`，並傳送要求。在回應中，請記下自訂條件ID以及有關先前所述錯誤訊息的詳細資訊。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 在此情況下，發生錯誤是因為伺服器資訊不正確，表示Target無法存取包含自訂條件定義的CSV檔案。 讓我們編輯自訂條件來更正這個問題。
@@ -83,13 +80,13 @@ ht-degree: 0%
 1. 指定要編輯的（單一）自訂條件的條件ID。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. 在Body中，提供更新的JSON以及正確的伺服器資訊。 （對於此步驟，請指定您可存取之伺服器的FTP存取權。）
+1. 在Body中，提供更新的JSON以及正確的伺服器資訊。（對於此步驟，請指定您可存取之伺服器的FTP存取權。）
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. 傳送要求並記下回應。
    ![EditCustomCriteria4](assets/EditCustomCriteria4.png)
 
-讓我們使用&#x200B;**[!UICONTROL Get Custom Criteria API]**&#x200B;驗證更新後的自訂條件是否成功。
+讓我們使用&#x200B;**[!UICONTROL 取得自訂條件API]**，確認更新的自訂條件是否成功。
 
 ## 取得自訂條件
 
@@ -97,9 +94,9 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要取得其詳細資訊之自訂條件的條件ID。 傳送要求並檢閱回應。
+1. 指定要取得其詳細資訊之自訂條件的條件ID。傳送要求並檢閱回應。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 驗證成功。 （在此情況下，請確認沒有進一步的FTP錯誤。）
+1. 驗證成功。（在此情況下，請確認沒有進一步的FTP錯誤。）
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
 1. （選用）驗證更新是否正確反映在UI中。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
@@ -110,7 +107,7 @@ ht-degree: 0%
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定您要刪除的（單一）自訂條件的條件ID。 按一下 **[!UICONTROL Send]**。
+1. 指定您要刪除的（單一）自訂條件的條件ID。按一下&#x200B;**[!UICONTROL 傳送]**。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. 使用「取得自訂條件」確認已刪除條件。

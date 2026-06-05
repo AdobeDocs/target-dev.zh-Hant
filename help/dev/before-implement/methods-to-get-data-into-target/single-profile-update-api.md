@@ -1,32 +1,28 @@
 ---
 keywords: 實作、實施、設定、設定、單一設定檔更新
 description: 使用單一設定檔更新API將資料匯入 [!DNL Target] 。
-title: 如何使用[!UICONTROL Single Profile Update API]將資料匯入 [!DNL Target] ？
+title: 如何使用[!UICONTROL 單一設定檔更新API]將資料匯入 [!DNL Target] ？
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
 TQID: https://experienceleague.adobe.com/tkh7YEJ9Vr5eMynNYYxYKZZDOXZTVJNxwUSCxiwPfzI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 132
+source-wordcount: 160
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Single Profile Update API]
+# [!UICONTROL 單一設定檔更新API]
 
-[!DNL Adobe Target] [!UICONTROL Single Profile Update API]可讓您傳送單一使用者的設定檔更新。 [!UICONTROL Single Profile Update API]幾乎與[!UICONTROL Bulk Profile Update API]相同，但一次會更新一個訪客設定檔，內嵌於API呼叫而非.cvs檔案。
+[!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]可讓您傳送單一使用者的設定檔更新。 [!UICONTROL 單一設定檔更新API]幾乎與[!UICONTROL 大量設定檔更新API]相同，但一次更新一個訪客設定檔，與API呼叫內嵌，而非.cvs檔案。
 
-[!UICONTROL Single Profile Update API]和通常用於必須發生與尚未實作[!DNL Target]的管道中發生的交易相關的更新時。 例如，您想要更新執行某些離線動作之單一訪客的設定檔。 動作包括聯絡客服中心、提供貸款、在商店中使用忠誠卡、存取資訊站等。
+[!UICONTROL 單一設定檔更新API]，通常用於必須發生與尚未實作[!DNL Target]的管道中發生的交易相關的更新時。 例如，您想要更新執行某些離線動作之單一訪客的設定檔。 動作包括聯絡客服中心、提供貸款、在商店中使用忠誠卡、存取資訊站等。
 
-將[!UICONTROL Single Profile Update API]與[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)對照。
+將[!UICONTROL 單一設定檔更新API]與[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)對照。
 
 ## 資源
 

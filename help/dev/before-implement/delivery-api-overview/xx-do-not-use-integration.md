@@ -4,7 +4,7 @@ description: 與Experience Cloud整合
 keywords: 傳送api
 source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '482'
 ht-degree: 7%
 
 ---
@@ -176,7 +176,7 @@ curl -X POST \
 }
 ```
 
-如果來自Target的回應在`analytics` -> `payload`屬性中包含任何內容，請將其轉寄給Adobe Analytics。 Analytics知道如何處理此裝載。 您可在GET請求中，使用下列格式完成此作業：
+如果來自Target的回應在`analytics` -> `payload`屬性中包含任何內容，請將其轉寄給Adobe Analytics。 Analytics知道如何處理此裝載。 這可以在GET要求中完成，使用下列格式：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -195,7 +195,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 
 | 標頭名稱 | 標頭值 |
 | --- | --- |
-| 主機 | Analytics資料收集伺服器(如： adobeags421.sc.omtrdc.net) |
+| 主機 | Analytics資料收集伺服器（如： adobeags421.sc.omtrdc.net） |
 
 ### 範例A4T資料插入HTTP Get呼叫
 

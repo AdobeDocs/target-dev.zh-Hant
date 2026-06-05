@@ -5,20 +5,13 @@ keywords: 傳送api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 548
+source-wordcount: 578
 ht-degree: 0%
 
 ---
@@ -37,7 +30,7 @@ ht-degree: 0%
 
 ## 預先擷取Mbox
 
-使用者端（例如行動應用程式和伺服器）可以在一個工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免對[!UICONTROL Adobe Target Delivery API]發出多次呼叫。
+使用者端（例如行動應用程式和伺服器）可在工作階段中，預先擷取特定訪客的多個mbox，並加以快取，以避免對[!UICONTROL Adobe Target傳送API]發出多次呼叫。
 
 ```shell shell-session
 curl -X POST \
@@ -132,11 +125,11 @@ curl -X POST \
 }
 ```
 
-在回應中，您會看到包含要向訪客顯示特定`mbox`之體驗的`content`欄位。 快取到您的伺服器上時，這非常有用，這樣當訪客在工作階段中與您的網頁或行動應用程式互動，並在您應用程式的任何特定頁面上造訪`mbox`時，可以從快取中提供體驗，而不是進行另一個[!UICONTROL Adobe Target Delivery API]呼叫。 不過，當體驗從`mbox`傳遞至訪客時，會透過傳送API呼叫傳送`notification`，以進行曝光記錄。 這是因為已快取`prefetch`個呼叫的回應，這表示訪客在發生`prefetch`呼叫時尚未看到體驗。 若要進一步瞭解`notification`程式，請參閱[通知](notifications.md)。
+在回應中，您會看到包含要向訪客顯示特定`mbox`之體驗的`content`欄位。 快取到您的伺服器上時，這個功能非常有用，這樣當訪客在工作階段中與您的網頁或行動應用程式互動，並在您應用程式的任何特定頁面上造訪`mbox`時，便可以從快取中提供體驗，而不是進行另一個[!UICONTROL Adobe Target傳送API]呼叫。 不過，當體驗從`mbox`傳遞至訪客時，會透過傳送API呼叫傳送`notification`，以進行曝光記錄。 這是因為已快取`prefetch`個呼叫的回應，這表示訪客在發生`prefetch`呼叫時尚未看到體驗。 若要進一步瞭解`notification`程式，請參閱[通知](notifications.md)。
 
 ## 使用[!UICONTROL Analytics for Target] (A4T)時具有`clickTrack`個量度的預先擷取mbox
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant){target=_blank} (A4T)是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。
+[[!UICONTROL 適用於Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)的Adobe Analytics是跨解決方案的整合，可讓您根據[!DNL Analytics]轉換量度和受眾區段來建立活動。
 
 下列程式碼片段是預先擷取包含`clickTrack`個量度的mbox的回應，以通知[!DNL Analytics]已點按選件：
 
@@ -181,7 +174,7 @@ curl -X POST \
 
 ## 預先擷取檢視
 
-檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC建立的[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant){target=_blank}和[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant){target=_blank} (X)T活動現在可以預先擷取在SPA [&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的檢視上進行修改。
+檢視可更順暢地支援單頁應用程式(SPA)和行動應用程式。 檢視可視為視覺元素的邏輯群組，這些元素共同構成SPA或行動體驗。 現在，透過傳送API，VEC建立的[[!UICONTROL A/B測試]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}和[[!UICONTROL 體驗鎖定目標]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活動現在可以預先擷取在SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的[檢視上進行修改。
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -211,7 +204,7 @@ curl -X POST \
 }'
 ```
 
-上述範例呼叫會預先擷取透過SPA VEC為[!UICONTROL A/B Test]建立的所有檢視，以及要針對網頁`channel`顯示的XT活動。 請注意，呼叫會預先擷取有`tntId`：`84e8d0e211054f18af365d65f45e902b.28_131`的訪客造訪`url`：`https://target.enablementadobe.com/react/demo/#/`時符合資格的[!UICONTROL A/B Test]或XT活動的所有檢視。
+上述範例呼叫會預先擷取透過SPA VEC為[!UICONTROL A/B測試]建立的所有檢視，以及要針對網頁`channel`顯示的XT活動。 請注意，呼叫會預先擷取有`tntId`：`84e8d0e211054f18af365d65f45e902b.28_131`的訪客造訪`url`：`https://target.enablementadobe.com/react/demo/#/`時符合資格的[!UICONTROL A/B測試]或XT活動的所有檢視。
 
 ```JSON  {line-numbers="true"}
 {

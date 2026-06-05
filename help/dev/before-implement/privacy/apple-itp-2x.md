@@ -5,20 +5,11 @@ title: ' [!DNL Target] 如何處理Apple ITP支援？'
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
 TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 681
@@ -48,9 +39,9 @@ Apple ITP 2.x會在以下方面影響[!DNL Target]：
 | --- | --- |
 | 獨特訪客計數可能會增加 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），您可能會看到來自Safari瀏覽器的不重複訪客增加。 如果您的訪客在七天後(ITP 2.1)或一天後（ITP 2.2和ITP 2.3）重新造訪網域，[!DNL Target]會強制將新的[!DNL Target] Cookie放在您的網域上，來取代過期的Cookie。 即使是相同的使用者，新的 [!DNL Target] Cookie 會將其轉譯為新的獨特訪客。 |
 | 縮短 [!DNL Target] 活動的回顧期 | [!DNL Target] 活動的訪客輪廓可能已針對決策功能縮短回顧期間。 系統會運用 [!DNL Target] Cookie 來識別訪客，並針對個人化儲存使用者輪廓屬性。 鑑於[!DNL Target] Cookie可以在七天(ITP 2.1)或一天（ITP 2.2和2.3）後於Safari上過期，繫結至已永久刪除[!DNL Target] Cookie的使用者設定檔資料無法用於決策。 |
-| 基於 3rdPartyID 的輪廓指令碼 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），基於3rdPartyID Cookie的[個人資料指令碼](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant)將在過期時停止運作。 |
-| iOS 裝置內的 QA/Preview URL | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），[QA/預覽URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hant)將在過期時停止運作，因為這些URL是以3rdPartyID Cookie為基礎。 |
+| 基於 3rdPartyID 的輪廓指令碼 | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），基於3rdPartyID Cookie的[個人資料指令碼](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)將在過期時停止運作。 |
+| iOS 裝置內的 QA/Preview URL | 由於過期時間設為七天（若是ITP 2.1）和一天（若是ITP 2.2和ITP 2.3），[QA/預覽URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)將在過期時停止運作，因為這些URL是以3rdPartyID Cookie為基礎。 |
 
 ## 我目前的 [!DNL Target] 實施是否會受到影響?
 
-如果您除了[!DNL Target] JavaScript程式庫以外還使用Experience Cloud ID (ECID)程式庫，您的實施會以本文列出的方式受到影響： [Safari ITP 2.1對Adobe Experience Cloud和Experience Platform客戶的影響](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。
+如果您除了[!DNL Target] JavaScript資料庫以外還使用Experience Cloud ID (ECID)資料庫，您的實施會以本文列出的方式受到影響： [Safari ITP 2.1對Adobe Experience Cloud和Experience Platform客戶的影響](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。

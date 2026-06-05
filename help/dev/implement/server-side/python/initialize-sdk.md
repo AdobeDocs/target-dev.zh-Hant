@@ -1,24 +1,22 @@
 ---
 title: 使用create方法初始化Python SDK
-description: 瞭解如何使用create方法初始化Python SDK並將[!UICONTROL TargetClient]例項化，以呼叫 [!DNL Adobe Target] 進行實驗和個人化體驗。
+description: 瞭解如何使用create方法初始化Python SDK並將[!UICONTROL TargetClient]例項化，以呼叫 [!DNL Adobe Target] 進行實驗與個人化體驗。
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
 TQID: https://experienceleague.adobe.com/la4hiAeSKSTgV7-WPLuW-MudsVJAm3qbq1vT7rnzymQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 17%
+source-wordcount: 287
+ht-degree: 16%
 
 ---
 
 # 初始化Python SDK
 
 說明
-使用`create`方法，以初始化Python SDK並將[!UICONTROL Target Client]例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
+使用`create`方法，以初始化Python SDK並將[!UICONTROL Target使用者端]例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
 
 ## 方法
 
@@ -34,8 +32,8 @@ TargetClient.create(options)
 
 | 名稱 | 類型 | 必要 | 預設值 | 說明 |
 | --- | --- | --- | --- | --- |
-| 使用者端 | str | 是 | 無 | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | 是 | 無 | [!UICONTROL Experience Cloud Organization ID] |
+| 使用者端 | str | 是 | 無 | [!UICONTROL Adobe Target使用者端ID] |
+| organization_id | str | 是 | 無 | [!UICONTROL Experience Cloud組織ID] |
 | timeout | int | 否 | 3000 | 逾時（毫秒） |
 | server_domain | str | 否 | `client.tt.omtrdc.net` | 覆寫預設主機名稱 |
 | secure | 布林值 | 否 | true | 取消設定以強制執行HTTP配置 |

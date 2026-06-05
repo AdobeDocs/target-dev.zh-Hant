@@ -5,12 +5,9 @@ title: 如何在iOS應用程式中建立 [!DNL Target] 位置和成功量度？
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 469
@@ -28,11 +25,11 @@ ht-degree: 63%
 >
 >適用於行動應用程式的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是建議的解決方案，可支援[!DNL Adobe Experience Cloud]解決方案與行動應用程式中的服務。
 
-此區段包括可用作您的應用程式範本的樣本代碼。 此區段中的樣本包含 iOS 的代碼。 Android 適用相同的模式。 您可以在[適用於Android解決方案的Android SDK 4.x &#x200B;](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=zh-Hant)指南中找到Experience Cloud的特定語法。
+此區段包括可用作您的應用程式範本的樣本代碼。 此區段中的樣本包含 iOS 的代碼。 Android 適用相同的模式。 您可以在[適用於Experience Cloud解決方案的Android SDK 4.x}指南](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)中找到Android的特定語法。
 
 >[!NOTE]
 >
->請參閱[行動檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=zh-Hant)，以取得所有可用[!DNL Target]方法的清單。
+>請參閱[行動檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html)，以取得所有可用[!DNL Target]方法的清單。
 
 若要在您的應用程式中建立[!DNL Target]位置並進行要求，有兩個主要方法：
 

@@ -2,33 +2,34 @@
 title: 使用 [!DNL Adobe Target] 搭配 [!DNL Web SDK] 進行個人化。
 description: 瞭解如何使用 [!DNL Experience Platform Web SDK] 使用 [!DNL Adobe Target]呈現個人化內容。
 feature: AEP Web SDK
-source-git-commit: 1fe6adc25604612ed9fa090f1f68c18b9c0bdf63
+exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
+source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
 
 # 使用[!DNL Adobe Target]和[!DNL Web SDK]進行個人化
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Target]中管理的個人化體驗至Web Channel。 您可以使用稱為[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC)的WYSIWYG編輯器，或是非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，來建立、啟用及傳遞您的活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Target]中管理的個人化體驗至Web Channel。 您可以使用稱為[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)的WYSIWYG編輯器，或是非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，來建立、啟用及傳遞您的活動和個人化體驗。
 
 >[!IMPORTANT]
 >
->瞭解如何使用[!DNL Target]將Target從at.js 2.x移轉至Experience Platform Web SDK[!DNL Experience Platform Web SDK]教學課程，將您的[實作移轉至](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=zh-Hant)。
+>瞭解如何使用[將Target從at.js 2.x移轉至Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教學課程，將您的[!DNL Target]實作移轉至[!DNL Experience Platform Web SDK]。
 >
->瞭解如何透過[!DNL Target]使用Web SDK實作Adobe Experience Cloud[教學課程來第一次實作](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hant)的部分。
+>瞭解如何使用[使用Web SDK實作Adobe Experience Cloud ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)教學課程來首次實作[!DNL Target]。 如需[!DNL Target]的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
 
 下列功能已經過測試，目前在[!DNL Target]中支援：
 
-* [A/B 測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)
-* [A4T曝光和轉換報告](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)
-* [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
-* [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
-* [多變數測試 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hant)
-* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)
-* [原生目標印象和轉換報告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=zh-Hant)
-* [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)
+* [A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [A4T曝光和轉換報告](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [原生目標印象和轉換報告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Web SDK]系統圖表
 
@@ -41,37 +42,37 @@ ht-degree: 5%
 | 1 | 裝置載入[!DNL Web SDK]。 [!DNL Web SDK]傳送要求至Edge Network並包含XDM資料、資料串流環境ID、傳入引數和客戶ID （選用）。 頁面（或容器）已預先隱藏。 |
 | 2 | Edge Network會傳送要求給Edge服務，以使用訪客ID、同意和其他訪客內容資訊（例如地理位置和方便使用的裝置名稱）來擴充要求。 |
 | 3 | Edge Network會使用訪客ID和傳入的引數將擴充的個人化要求傳送至[!DNL Target]邊緣。 |
-| 4 | 設定檔指令碼執行，然後注入至[!DNL Target]設定檔儲存體。 設定檔儲存體會從[!UICONTROL Audience Library]擷取區段（例如，從[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共用的區段）。 |
+| 4 | 設定檔指令碼執行，然後注入至[!DNL Target]設定檔儲存體。 設定檔存放區會從[!UICONTROL 對象庫]擷取區段（例如從[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共用的區段）。 |
 | 5 | 根據URL要求引數和設定檔資料，[!DNL Target]會決定要針對目前頁面檢視和未來預先擷取檢視，為訪客顯示哪些活動和體驗。 [!DNL Target]然後將此資料傳回Edge Network。 |
-| 6 | a. Edge Network會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快出現，不會有忽隱忽現的預設內容。<br>b。作為使用者在單頁應用程式(SPA)中的動作結果而針對檢視顯示的個人化內容會進行快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>c。Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
+| 6 | a. Edge Network會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快顯示，不會有忽隱忽現的預設內容。<br>b. 作為使用者在單頁應用程式(SPA)中的動作結果而針對檢視顯示的個人化內容會進行快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>c. Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
 | 7 | 網頁SDK會將通知從裝置傳送至Edge Network。 |
-| 8 | Edge Network將[!UICONTROL Analytics for Target] (A4T)詳細資料（活動、體驗和轉換中繼資料）轉送到[!DNL Analytics]邊緣。 |
+| 8 | Edge Network將[!UICONTROL Analytics for Target] (A4T)詳細資料（活動、體驗和轉換中繼資料）轉送至[!DNL Analytics]邊緣。 |
 
 ## 正在啟用[!DNL Adobe Target]
 
 若要啟用[!DNL Target]，請執行下列動作：
 
-1. 使用適當的使用者端代碼啟用[!DNL Target]資料流[中的](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)。
+1. 使用適當的使用者端代碼啟用[資料流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中的[!DNL Target]。
 1. 將`renderDecisions`選項新增至您的事件。
 
 然後，您也可選擇新增下列選項：
 
 * **`decisionScopes`**：將此選項新增至您的事件，以擷取特定活動（適用於使用表單式撰寫器建立的活動）。
-* **[預先隱藏程式碼片段](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/manage-flicker)**：僅隱藏頁面的某些部分。
+* **[預先隱藏程式碼片段](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**：僅隱藏頁面的某些部分。
 
 ## 使用[!UICONTROL Adobe Target] VEC
 
-若要搭配[!DNL Web SDK]實作使用VEC，請安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper擴充功能。
+若要搭配[!DNL Web SDK]實作使用VEC，請安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper擴充功能。
 
-如需詳細資訊，請參閱[Adobe Target指南](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=zh-Hant)中的&#x200B;*視覺化體驗撰寫器Helper擴充功能*。
+如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[視覺化體驗撰寫器Helper擴充功能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)。
 
 ## 呈現個人化內容
 
-如需詳細資訊，請參閱[呈現個人化內容](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
+如需詳細資訊，請參閱[呈現個人化內容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
 
 ## XDM中的受眾
 
-為透過[!DNL Target]傳遞的[!DNL Web SDK]活動定義對象時，必須定義並使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)。 定義XDM結構描述、類別和結構描述欄位群組後，您可以建立由XDM資料定義的[!DNL Target]對象規則以用於目標定位。 在[!DNL Target]內，XDM資料會在[!UICONTROL Audience Builder]中顯示為自訂引數。 XDM是使用點標籤法序列化（例如，`web.webPageDetails.name`）。
+為透過[!DNL Web SDK]傳遞的[!DNL Target]活動定義對象時，必須定義並使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)。 定義XDM結構描述、類別和結構描述欄位群組後，您可以建立由XDM資料定義的[!DNL Target]對象規則以用於目標定位。 在[!DNL Target]內，XDM資料會在[!UICONTROL 對象產生器]中顯示為自訂引數。 XDM是使用點標籤法序列化（例如，`web.webPageDetails.name`）。
 
 如果您的[!DNL Target]活動具有使用自訂引數或使用者設定檔的預定義對象，則無法透過SDK正確傳送這些對象。 您必須改用XDM，而不是使用自訂引數或使用者設定檔。 不過，有透過[!DNL Web SDK]支援的現成受眾目標定位欄位不需要XDM。 這些欄位可在[!DNL Target] UI中使用，不需要XDM：
 
@@ -84,12 +85,12 @@ ht-degree: 5%
 * 流量來源
 * 時間段
 
-如需詳細資訊，請參閱[Adobe Target指南](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=zh-Hant)中的&#x200B;*對象*&#x200B;類別。
+如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)類別。
 
 ### 回應 Token
 
 回應Token可用來將中繼資料傳送給第三方，例如Google或Facebook。 傳回回應Token
-在`meta` > `propositions`內的`items`欄位中。
+在`propositions` > `items`內的`meta`欄位中。
 
 範例如下：
 
@@ -148,7 +149,7 @@ alloy("sendEvent",
 
 #### 在頁面載入時：
 
-* 以`propositions`旗標設為`renderAttempted`的表單式撰寫器式`false`
+* 以`renderAttempted`旗標設為`false`的表單式撰寫器式`propositions`
 * 以`renderAttempted`旗標設為`true`的視覺化體驗撰寫器型建議
 * 單一頁面應用程式檢視的視覺化體驗撰寫器式主張，其中`renderAttempted`旗標設為`true`
 
@@ -287,7 +288,7 @@ alloy("sendEvent", {
 
 ## 除錯
 
-已棄用mboxTrace和mboxDebug。 請改用[Web SDK偵錯](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
+已棄用mboxTrace和mboxDebug。 請改用[Web SDK偵錯](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
 
 ## 術語
 

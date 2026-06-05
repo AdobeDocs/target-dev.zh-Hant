@@ -4,17 +4,12 @@ description: 瞭解如何使用sendNotifications()將顯示通知或點選通知
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
 TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -70,12 +65,12 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端[!DNL Analytics]使用狀況下的[!DNL Analytics]承載 |
 | trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
+| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 ## 範例
 
-首先，讓我們建置[!UICONTROL Target Delivery API]要求，以預先擷取`home`和`product1` mbox的內容。
+首先，讓我們建置[!UICONTROL Target傳送API]要求，以預先擷取`home`和`product1` mbox的內容。
 
 ### Python
 
@@ -89,7 +84,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-成功的回應將包含[!UICONTROL Target Delivery API]回應物件，其中包含要求mbox的預先擷取內容。 範例`target_response["response"]`物件（格式為dict）可能如下所示：
+成功的回應將包含[!UICONTROL Target傳送API]回應物件，其中包含已要求mbox的預先擷取內容。 範例`target_response["response"]`物件（格式為dict）可能如下所示：
 
 ### Python
 

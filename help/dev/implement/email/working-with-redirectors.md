@@ -5,22 +5,15 @@ title: 如何使用重新導向程式？
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +50,7 @@ ht-degree: 63%
 
    * 其中 `yourclientcode` 代表貴公司的用戶端代碼。 您的公司用戶端代碼為全部小寫並且不帶特殊字元。
 
-     您的使用者端代碼可在[!DNL Target]介面的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;頁面最上方取得。
+     您的使用者端代碼可在[!DNL Target]介面的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**&#x200B;頁面最上方取得。
 
    * `redirectorlink_456` 代表重新導向程式 mbox 的名稱，會顯示在您用於促銷活動和測試的帳戶中。
 
@@ -69,13 +62,13 @@ ht-degree: 63%
 
    >[!WARNING]
    >
-   >請注意，有了重新導向程式，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，Adobe建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hant#allowlist)的主機。
+   >請注意，有了重新導向程式，您可能會面臨「開啟重新導向弱點」的風險。 為避免第三方未授權使用重新導向程式連結，Adobe建議您使用「已授權的主機」來允許列出預設的重新導向URL網域。 [!DNL Target]使用主機來允許列出您要允許重新導向的網域。 如需詳細資訊，請參閱[建立允許清單，指定在&#x200B;*主機*&#x200B;中授權傳送mbox呼叫至 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主機。
 
 1. 驗證重新導向程式。
    1. *安全性最佳實務*：確定重新導向程式中使用的網域已加入允許清單，如上所述。 如果您使用未加入允許清單的網域，Adobe會封鎖對該網域的任何呼叫，以防止惡意行為者使用重新導向程式來重新導向至潛在的惡意網域。
    2. 請將「重新導向程式 URL」插入到瀏覽器中，然後重新整理。
    3. 登入您的帳戶，重新整理您的 mbox 清單，然後確認新的「重新導向程式」是否已列為 mbox。
-1. 如果要測試某個廣告的不同目的地，請分別為每個版本建立[重新導向產品建議](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=zh-Hant)。
+1. 如果要測試某個廣告的不同目的地，請分別為每個版本建立[重新導向產品建議](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html)。
 1. 建立促銷活動。
 
    請參閱[非 JavaScript 型實作](/help/dev/implement/email/overview.md)，以瞭解符合您目標的正確設定。
@@ -107,7 +100,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->最佳實務是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;參與量度來決定成本值。
+>最佳實務是使用每次造訪的&#x200B;**[!UICONTROL 分數]**&#x200B;參與量度來判斷成本值。
 
 將 `&mboxPageValue=-value` 新增至 URL 中。 請注意負值。
 
@@ -124,7 +117,7 @@ https://<your_clientcode>.tt.omtrdc.net/​m2/yourclientcode/ubox/​page?mbox=r
 
 >[!NOTE]
 >
->最佳實務是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;參與量度來判斷收入值。
+>最佳實務是使用&#x200B;**[!UICONTROL 每次造訪得分]**&#x200B;參與量度來判斷收入值。
 
 將 `&mboxPageValue=value` 新增至 URL 中。
 

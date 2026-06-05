@@ -5,28 +5,15 @@ title: 如何從at.js 1.x版升級至2.x版？
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 TQID: https://experienceleague.adobe.com/JGsuogzhCvThr4QGHJ5g4d8ZqGVZ8ClAf7hXuoh7X0Q
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 3037
-ht-degree: 48%
+source-wordcount: 3100
+ht-degree: 47%
 
 ---
 
@@ -38,7 +25,7 @@ ht-degree: 48%
 
 * 可在頁面載入時快取所有產品建議，以減少對單一伺服器呼叫發出的多個伺服器呼叫。
 * 大幅改善一般使用者在網站上的體驗，因為產品建議能透過快取立即顯示，避免傳統伺服器呼叫引發的延遲時間。
-* 簡單的單行程式碼和一次性開發人員設定，讓行銷人員可透過VEC在SPA上建立和執行[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活動。
+* 簡單的單行程式碼和一次性開發人員設定，讓行銷人員可透過VEC在SPA上建立和執行[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動。
 
 ## at.js 2.*x*&#x200B;系統圖表
 
@@ -50,14 +37,14 @@ ht-degree: 48%
 
 | 呼叫 | 詳細資料 |
 | --- | --- |
-| 1 | 如果使用者已通過驗證，呼叫會傳回 [!UICONTROL Experience Cloud ID]，而另一個呼叫會同步客戶 ID。 |
+| 1 | 如果使用者已通過驗證，呼叫會傳回[!UICONTROL Experience Cloud ID]；另一個呼叫會同步客戶ID。 |
 | 2 | at.js 程式庫會同步載入並隱藏文件本文。<P>也能使用將頁面上實作的程式碼片段預先隱藏的選項，以非同步方式載入at.js。 |
 | 3 | 提出頁面載入要求，包含所有已設定的參數 (MCID、SDID 和客戶 ID)。 |
 | 4 | 個人資料指令碼執行，然後注入個人資料存放區。 存放區會從對象資料庫中要求合格對象（例如從[!DNL Adobe Analytics]、[!DNL Audience Manager]等共用的對象）。<P>客戶屬性會透過批次程序傳送至設定檔存放區。 |
 | 5 | [!DNL Target] 會根據 URL 要求參數和個人資料，決定可針對目前頁面和未來檢視傳回哪些活動和體驗給訪客。 |
 | 6 | 目標內容會傳回至頁面，選擇性地包括其他個人化的個人資料值。<P>目前頁面上目標內容會儘快出現，不會有忽隱忽現的預設內容。<P>在瀏覽器中快取的使用者SPA動作顯示檢視的目標內容，以便在透過`triggerView()`觸發檢視時立刻套用，不需額外的伺服器呼叫。 |
 | 7 | [!UICONTROL Analytics] 資料傳送至「資料收集」伺服器。 |
-| 8 | 目標資料透過SDID符合[!UICONTROL Analytics]資料，且已處理至[!UICONTROL Analytics]報表儲存體。<P>然後就可以在[!UICONTROL Analytics]與[!DNL Target]中，透過[!UICONTROL Analytics for Target] (A4T)報表來檢視[!UICONTROL Analytics]資料。 |
+| 8 | 目標資料透過SDID與[!UICONTROL Analytics]資料相符，並處理至[!UICONTROL Analytics]報表儲存體。<P>然後就可以透過[!UICONTROL Analytics for Target] (A4T)報表，在[!UICONTROL Analytics]和[!DNL Target]中檢視[!UICONTROL Analytics]資料。 |
 
 現在，SPA 上只要是有實作 `triggerView()` 的位置，系統都會從快取擷取檢視和動作並向使用者顯示，不需要伺服器呼叫。 `triggerView()` 也會對 [!DNL Target] 後端發出通知要求，以便增加和記錄曝光計數。
 
@@ -72,7 +59,7 @@ ht-degree: 48%
 | 3 | 目標內容會儘快出現，不會有忽隱忽現的預設內容。 |
 | 4 | 通知要求會傳送至 [!DNL Target] 個人資料存放區，以計算活動中的訪客數和增加量度。 |
 | 5 | [!UICONTROL Analytics]資料已傳送至資料收集伺服器。 |
-| 6 | [!DNL Target]資料透過SDID與[!UICONTROL Analytics]資料相符，並且已處理至[!UICONTROL Analytics]報表儲存體。 然後就可以透過A4T報表在[!UICONTROL Analytics]和[!DNL Target]中檢視[!UICONTROL Analytics]資料。 |
+| 6 | [!DNL Target]資料透過SDID與[!UICONTROL Analytics]資料相符，並處理至[!UICONTROL Analytics]報表儲存體。 然後就可以在[!UICONTROL Analytics]與[!DNL Target]中透過A4T報表檢視[!UICONTROL Analytics]資料。 |
 
 ## 部署at.js 2.*x*
 
@@ -271,7 +258,7 @@ at.js 2.*x*&#x200B;使用新的API，我們稱之為「傳送API」。 若要針
 
 ### at.js 中的全域 mbox 名稱仍重要嗎?
 
-客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為 [!DNL Target] UI 中顯示的全域 mbox 名稱。 這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、輪廓指令碼，以及使用全域 mbox 名稱建立客群。 強烈建議您也務必在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**&#x200B;頁面上設定相同的全域mbox名稱，以防仍有頁面使用at.js 1.*x*，如下列圖例所示。
+客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 編輯at.js設定]**&#x200B;來指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為 [!DNL Target] UI 中顯示的全域 mbox 名稱。 這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、輪廓指令碼，以及使用全域 mbox 名稱建立客群。 強烈建議您也務必在&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 視覺化體驗撰寫器]**&#x200B;頁面上設定相同的全域mbox名稱，以防仍有頁面使用at.js 1.*x*，如下列圖例所示。
 
 ![修改 at.js 對話方塊](../assets/modify-atjs.png)
 
@@ -313,9 +300,9 @@ at.js 2.*x*&#x200B;使用新的API，我們稱之為「傳送API」。 若要針
 
 若要針對at.js v2.10或更新版本使用跨網域追蹤，您可以執行下列其中一項作業：
 
-1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=zh-Hant&?lang=zh-Hant)和at.js 2.*x*。 ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。 安裝ECID資料庫v4.3.0+和at.js 2.*x*&#x200B;後，您將能夠建立橫跨多個唯一網域的活動以及追蹤使用者。 請務必注意，此功能僅適用於工作階段過期之後。
+1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html??lang=zh-Hant)和at.js 2.*x*。 ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。 安裝ECID資料庫v4.3.0+和at.js 2.*x*&#x200B;後，您將能夠建立橫跨多個唯一網域的活動以及追蹤使用者。 請務必注意，此功能僅適用於工作階段過期之後。
 
-1. 如果您有at.js v2.10或更新版本，您不必安裝ECID程式庫，而是可以在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;的[!DNL Target] UI中啟用跨網域設定。 （或者，您可以在at.js程式碼中將&#x200B;_crossDomain_&#x200B;選項設為&#x200B;_enabled_。）
+1. 如果您有at.js v2.10或更新版本，您不必安裝ECID程式庫，而是可以在&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**&#x200B;的[!DNL Target] UI中啟用跨網域設定。 （或者，您可以在at.js程式碼中將&#x200B;_crossDomain_&#x200B;選項設為&#x200B;_enabled_。）
 
 若要對2.10之前的at.js v2.*x*&#x200B;版本使用跨網域追蹤，您可以實作上述選項#1 （安裝ECID程式庫）。
 
@@ -325,7 +312,7 @@ at.js 2.*x*&#x200B;使用新的API，我們稱之為「傳送API」。 若要針
 
 ### 支援全域 mbox 名稱
 
-客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為輸入的全域 mbox 名稱。 這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、輪廓指令碼，以及建立鎖定全域 mbox 為目標的客群。
+客戶可以透過&#x200B;**[!UICONTROL Target]** > **[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 編輯]**&#x200B;指定全域mbox名稱。 此設定供 [!DNL Target] Edge 伺服器用來將 execute > pageLoad 轉譯為輸入的全域 mbox 名稱。 這麼做可讓客戶繼續使用伺服器端 API、表單式撰寫器、輪廓指令碼，以及建立鎖定全域 mbox 為目標的客群。
 
 ### 以下 at.js 自訂事件適用於 `triggerView()`，還是僅適用於 `applyOffer()` 或 `applyOffers()`?
 
@@ -370,17 +357,17 @@ at.js 1.*x*&#x200B;的客戶可以使用vst.* mbox引數建立對象。 這是at
 
 | 類型 | 支援? |
 | --- | --- |
-| [!UICONTROL A/B Test] | 是 |
-| [!UICONTROL Auto-Allocate] | 是 |
-| [!UICONTROL Auto-Target] | 是 |
-| [!UICONTROL Experience Targeting] | 是 |
-| [!UICONTROL Multivariate Test] | 是 |
-| [!UICONTROL Automated Personalization] | 是 |
+| [!UICONTROL A/B 測試] | 是 |
+| [!UICONTROL 自動分配] | 是 |
+| [!UICONTROL 自動鎖定目標] | 是 |
+| [!UICONTROL 體驗鎖定目標] | 是 |
+| [!UICONTROL 多變數測試] | 是 |
+| [!UICONTROL 自動個人化] | 是 |
 | [!DNL Recommendations] | 是 |
 
 >[!NOTE]
 >
->所有修改皆已套用至`Page Load Event`時，可透過at.js 2.*x*&#x200B;和VEC支援[!UICONTROL Auto-Target]活動。 將修改新增至特定檢視時，僅支援[!UICONTROL A/B Test]、[!UICONTROL Auto-Allocate]和[!UICONTROL Experience Targeting] (XT)活動。
+>當所有修改皆已套用至`Page Load Event`時，可透過at.js 2.*x*&#x200B;和VEC支援[!UICONTROL 自動鎖定目標]活動。 將修改新增至特定檢視時，僅支援[!UICONTROL A/B測試]、[!UICONTROL 自動分配]和[!UICONTROL 體驗鎖定目標] (XT)活動。
 
 ### 整合
 
@@ -424,7 +411,7 @@ at.js 1.*x*&#x200B;的客戶可以使用vst.* mbox引數建立對象。 這是at
 
 ## 回應 Token
 
-at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request-succeeded`來顯示回應Token。 如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)。
+at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request-succeeded`來顯示回應Token。 如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)。
 
 ## at.js 1.*x*&#x200B;引數至at.js 2.*x*&#x200B;裝載對應
 
@@ -447,7 +434,7 @@ at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request
 
 （at.js 1.*x*&#x200B;引數）
 
-用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)。
+用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)。
 
 ```json {line-numbers="true"}
 {
@@ -707,7 +694,7 @@ at.js 2.*x* JSON裝載：
 
 （at.js 1.*x*&#x200B;引數）
 
-[!UICONTROL Analytics]追蹤伺服器。 應傳遞至 `experienceCloud > analytics > trackingServer`。
+[!UICONTROL Analytics]追蹤伺服器 應傳遞至 `experienceCloud > analytics > trackingServer`。
 
 at.js 2.*x* JSON裝載：
 
@@ -791,5 +778,5 @@ at.js 2.*x*&#x200B;增強了Adobe [!DNL Target]對SPA的支援，並與其他Exp
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[瞭解at.js 2.*x*&#x200B;的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[瞭解at.js 2.*x*&#x200B;的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
 

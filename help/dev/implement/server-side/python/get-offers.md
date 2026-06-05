@@ -4,15 +4,12 @@ description: 瞭解如何使用getOffers()執行決定並從 [!DNL Adobe Target]
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
 TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,12 +50,12 @@ target_client_instance.get_offers(options)
 
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
-| 回應 | DeliveryResponse | 符合[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)回應 |
+| 回應 | DeliveryResponse | 符合[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)回應 |
 | target_cookie | dict | [!DNL Target] Cookie |
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端Analytics使用狀況下的Analytics裝載 |
 | trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
+| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 用來將資料傳回瀏覽器的`target_cookie`和`target_location_hint_cookie`物件具有以下結構：
@@ -74,8 +71,8 @@ target_client_instance.get_offers(options)
 | 名稱 | 類型 | 說明 |
 | --- | --- | --- |
 | decisioning_method | str | 使用的決策方法：裝置上或伺服器端 |
-| remote_mboxes | 清單`[str]` | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)要求。 |
-| remote_views | 清單`[str]` | 當決定方法為裝置上時，會提供無法完全決定裝置上的檢視名稱陣列。 換句話說，需要[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)要求。 |
+| remote_mboxes | 清單`[str]` | 當決定方法為`on-device`時，會提供無法完全決定裝置上的mbox名稱陣列。 換句話說，需要[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求。 |
+| remote_views | 清單`[str]` | 當決定方法為裝置上時，會提供無法完全決定裝置上的檢視名稱陣列。 換句話說，需要[[!UICONTROL Target傳送API]](/help/dev/implement/delivery-api/overview.md)要求。 |
 
 ## 範例
 

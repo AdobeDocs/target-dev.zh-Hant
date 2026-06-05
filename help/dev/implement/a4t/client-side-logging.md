@@ -7,33 +7,26 @@ keywords: target；a4t；記錄；Web SDK；體驗；平台；
 feature: Implementation
 exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
 TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
 
 # [!DNL Experience Platform Web SDK]中A4T資料的使用者端記錄
 
-[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)的Adobe Analytics資料。
+[!DNL Adobe Experience Platform Web SDK]可讓您在網頁應用程式的使用者端上收集[Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)的Adobe Analytics資料。
 
-使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hant)手動將資料傳送至Analytics，則應啟用此選項。
+使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與[!DNL Analytics]共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動將資料傳送至Analytics，則應啟用此選項。
 
 >[!NOTE]
 >
->使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)執行此工作的方法目前正在開發中，將於不久的將來提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)執行此工作的方法目前正在開發中，將於不久的將來提供。
 
 本文介紹為[!DNL Platform Web SDK]設定使用者端A4T記錄的步驟，並提供常見使用案例的實施範例。
 
@@ -41,9 +34,9 @@ ht-degree: 0%
 
 本教學課程假設您熟悉有關使用[!DNL Platform Web SDK]進行個人化目的的基本概念和程式。 如果您需要簡介，請檢閱下列檔案：
 
-* [設定網頁SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/configure/overview)
-* [傳送事件](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [呈現個人化內容](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [設定網頁SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
+* [傳送事件](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [呈現個人化內容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 設定[!DNL Analytics]使用者端記錄 {#set-up-client-side-logging}
 
@@ -51,13 +44,13 @@ ht-degree: 0%
 
 ### 啟用[!DNL Analytics]使用者端記錄 {#enable-analytics-client-side-logging}
 
-若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[資料流](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)中的[!DNL Adobe Analytics]設定。
+若要考慮為您的實作啟用[!DNL Analytics]使用者端記錄，您必須停用[資料流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中的[!DNL Adobe Analytics]設定。
 
 ![已停用Analytics資料流設定](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### 從SDK擷取[!DNL A4T]資料並將其傳送到[!DNL Analytics] {#a4t-to-analytics}
 
-為了讓此報告方法正常運作，您必須傳送從[!DNL Analytics]點選中的[`sendEvent`](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL A4T]相關資料。
+為了讓此報告方法正常運作，您必須傳送從[!DNL Analytics]點選中的[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)命令擷取的[!DNL A4T]相關資料。
 
 當[!DNL Target] Edge計算主張回應時，它會檢查是否已啟用[!DNL Analytics]使用者端記錄（例如，在您的資料流中是否已停用[!DNL Analytics]）。 如果啟用使用者端記錄，則系統會在回應中為每個主張新增[!DNL Analytics]權杖。
 
@@ -147,7 +140,7 @@ ht-degree: 0%
 }
 ```
 
-[!UICONTROL Form-based Experience Composer]活動的主張可以同時包含相同主張下的內容和點按量度專案。 因此，不是在`scopeDetails.characteristics.analyticsToken`屬性中顯示內容的單一分析權杖，這些屬性可以相應地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`屬性中同時指定顯示和點按分析權杖。
+[!UICONTROL 表單式體驗撰寫器]活動的主張可在相同主張下同時包含內容和點按量度專案。 因此，不是在`scopeDetails.characteristics.analyticsToken`屬性中顯示內容的單一分析權杖，這些屬性可以相應地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`屬性中同時指定顯示和點按分析權杖。
 
 ```json
 {
@@ -236,13 +229,13 @@ ht-degree: 0%
 
 下列小節示範如何針對常見使用案例實作[!DNL Analytics]使用者端記錄。
 
-### [!UICONTROL Form-Based Experience Composer]個活動 {#form-based-composer}
+### [!UICONTROL 表單式體驗撰寫器]活動 {#form-based-composer}
 
-您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)活動的建議執行。
+您可以使用[!DNL Platform Web SDK]控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活動的建議執行。
 
 當您請求特定決定範圍的建議時，傳回的建議包含其適當的[!DNL Analytics]權杖。 最佳實務是鏈結[!DNL Experience Platform Web SDK] `sendEvent`命令並重複處理傳回的主張，以便在同時收集[!DNL Analytics]權杖時執行這些建議。
 
-您可以為[!UICONTROL Form-Based Experience Composer]活動範圍觸發`sendEvent`命令，如下所示：
+您可以為[!UICONTROL 表單式體驗撰寫器]活動範圍觸發`sendEvent`命令，如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +395,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-主張可以有不同型別的專案，如相關專案的`schema`屬性所指示。 [!UICONTROL Form-Based Experience Composer]活動支援四個主張專案結構描述：
+主張可以有不同型別的專案，如相關專案的`schema`屬性所指示。 [!UICONTROL 表單式體驗撰寫器]活動支援四個主張專案結構描述：
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +425,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 實作摘要 {#implementation-summary}
 
-總而言之，使用[!DNL Experience Platform Web SDK]套用[!UICONTROL Form-Based Experience Composer]活動時，必須執行下列步驟：
+總而言之，使用[!DNL Experience Platform Web SDK]套用[!UICONTROL 表單式體驗撰寫器]活動時，必須執行下列步驟：
 
-1. 傳送擷取[!UICONTROL Form-Based Experience Composer]活動選件的事件；
+1. 傳送擷取[!UICONTROL 表單式體驗撰寫器]活動選件的事件；
 1. 將內容變更套用至頁面；
 1. 傳送`decisioning.propositionDisplay`通知事件；
 1. 從SDK回應中收集[!DNL Analytics]顯示權杖，並建構點選[!DNL Analytics]的裝載；
@@ -476,9 +469,9 @@ alloy("sendEvent", {
 });
 ```
 
-### [!UICONTROL Visual Experience Composer] (VEC)活動 {#visual-experience-composer-acitivties}
+### [!UICONTROL 視覺化體驗撰寫器] (VEC)活動 {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)編寫的選件。
+[!DNL Platform Web SDK]可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)編寫的選件。
 
 >[!NOTE]
 >

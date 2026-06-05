@@ -1,20 +1,16 @@
 ---
 title: 與Experience Cloud A4T報告整合
-description: 與Experience Cloud、A4T報告、Analytics for Target整合的整合
+description: 與Experience Cloud、A4T報表、Analytics for Target整合的整合
 keywords: 傳送api，伺服器端，伺服器端，整合， a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 6%
 
 ---
@@ -33,7 +29,7 @@ ht-degree: 6%
 ## 先決條件
 
 1. 在[!DNL Adobe Target] UI中設定活動，將[!DNL Adobe Analytics]設為報表來源，並確定已啟用A4T帳戶。
-1. API使用者會產生Adobe [!UICONTROL Marketing Cloud Visitor ID]，並確保此ID在執行[!DNL Target]要求時可供使用。
+1. API使用者會產生Adobe [!UICONTROL Marketing Cloud訪客ID]，並確保此ID在執行[!DNL Target]要求時可供使用。
 
 ## [!DNL Adobe Target]自動轉送[!DNL Analytics]裝載
 
@@ -199,7 +195,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 指定`logging = client_side`後，您將會在mbox欄位中接收裝載。
 
-如果來自[!DNL Target]的回應在`analytics -> payload`屬性中包含任何內容，請將它轉寄給[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何處理此承載。 您可在GET請求中，使用下列格式完成此作業：
+如果來自[!DNL Target]的回應在`analytics -> payload`屬性中包含任何內容，請將它轉寄給[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何處理此承載。 這可以在GET要求中完成，使用下列格式：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_ver}/{session}?pe=tnt&tnta={payload}&c.&a.&target.&sessionId={sessionId}&.target&.a&.c&mid={mid}

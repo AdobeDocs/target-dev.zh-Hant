@@ -4,20 +4,13 @@ description: 如何使用Adobe Target SDK？
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 622
+source-wordcount: 702
 ht-degree: 1%
 
 ---
@@ -36,22 +29,22 @@ ht-degree: 1%
 1. 為您的組織啟用裝置上決策
 1. 安裝SDK
 1. 初始化SDK
-1. 在[!DNL Adobe Target] [!UICONTROL A/B Test]活動中設定功能標幟
+1. 在[!DNL Adobe Target] [!UICONTROL A/B測試]活動中設定功能標幟
 1. 在您的應用程式中實作及演算功能
 1. 實施應用程式中事件的追蹤
-1. 啟用您的[!UICONTROL A/B Test]活動
+1. 啟用您的[!UICONTROL A/B測試]活動
 
 ## &#x200B;1. 為您的組織啟用裝置上決策
 
-啟用裝置上決策可確保在幾乎零延遲的情況下執行[!UICONTROL A/B Test]活動。 若要啟用此功能，請瀏覽至「**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**」並啟用「**[!UICONTROL On-Device Decisioning]**」切換按鈕。
+啟用裝置上決策可確保在幾乎零延遲的情況下執行[!UICONTROL A/B測試]活動。 若要啟用此功能，請瀏覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 帳戶詳細資料]**，並啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
 
 ![替代影像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必須擁有&#x200B;**[!UICONTROL Admin]**&#x200B;或&#x200B;**[!UICONTROL Approver]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換功能。
+>您必須擁有&#x200B;**[!UICONTROL 管理員]**&#x200B;或&#x200B;**[!UICONTROL 核准者]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
 
-啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生[規則成品](../on-device-decisioning/rule-artifact-overview.md)。
+啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生[規則成品](../on-device-decisioning/rule-artifact-overview.md)。
 
 ## &#x200B;2. 安裝SDK
 
@@ -158,25 +151,25 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## &#x200B;4. 在[!DNL Adobe Target] [!UICONTROL A/B Test]活動中設定功能標幟
+## &#x200B;4. 在[!DNL Adobe Target] [!UICONTROL A/B測試]活動中設定功能標幟
 
-1. 在[!DNL Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
+1. 在[!DNL Target]中，導覽至&#x200B;**[!UICONTROL 活動]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL 建立活動]** > **[!UICONTROL A/B測試]**。
 
    ![替代影像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;強制回應視窗中，保留預設的Web選項為已選取(1)、選取&#x200B;**[!UICONTROL Form]**&#x200B;作為您的體驗撰寫器(2)、選取具有&#x200B;**[!UICONTROL No Property Restrictions]**(3)的&#x200B;**[!UICONTROL Default Workspace]**，然後按一下&#x200B;**[!UICONTROL Next]** (4)。
+1. 在「**[!UICONTROL 建立A/B測試活動]**」強制回應視窗中，保留預設的Web選項為已選取(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為體驗撰寫器(2)、選取&#x200B;**[!UICONTROL 預設Workspace]**&#x200B;搭配&#x200B;**[!UICONTROL 無屬性限制]**(3)，然後按一下「**[!UICONTROL 下一步]**」(4)。
 
    ![替代影像](assets/asset-form.png)
 
-1. 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，體驗B，方法是按一下&#x200B;**[!UICONTROL Add Experience]** (2)。 輸入您選擇的地點名稱(3)。 例如，`ondevice-featureflag`或`homepage-addtocart-featureflag`是表示功能標幟測試目的地的位置名稱。  在下列範例中，`ondevice-featureflag`是為體驗B定義的位置。您可以選擇新增對象細分(4)，以限制活動的資格。
+1. 在活動建立的&#x200B;**[!UICONTROL 體驗]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，體驗B，方法是按一下&#x200B;**[!UICONTROL 新增體驗]** (2)。 輸入您選擇的地點名稱(3)。 例如，`ondevice-featureflag`或`homepage-addtocart-featureflag`是表示功能標幟測試目的地的位置名稱。  在下列範例中，`ondevice-featureflag`是為體驗B定義的位置。您可以選擇新增對象細分(4)，以限制活動的資格。
 
    ![替代影像](assets/asset-location.png)
 
-1. 在相同頁面的&#x200B;**[!UICONTROL CONTENT]**&#x200B;區段中，選取下拉式清單(1)中的&#x200B;**[!UICONTROL Create JSON Offer]**，如圖所示。
+1. 在相同頁面的&#x200B;**[!UICONTROL CONTENT]**&#x200B;區段中，選取下拉式清單(1)中的&#x200B;**[!UICONTROL 建立JSON選件]**，如下所示。
 
    ![替代影像](assets/asset-offer.png)
 
-1. 在出現的&#x200B;**[!UICONTROL JSON Data]**&#x200B;文字方塊中，使用有效的JSON物件(2)為每個體驗(1)輸入您的功能標幟變數。
+1. 在出現的&#x200B;**[!UICONTROL JSON資料]**&#x200B;文字方塊中，使用有效的JSON物件(2)為每個體驗(1)輸入您的功能標幟變數。
 
    輸入體驗A的功能標幟變數。
 
@@ -204,15 +197,15 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-1. 按一下&#x200B;**[!UICONTROL Next]** (1)以進入建立活動的&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟。
+1. 按一下「下一步」**** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next_2_t.png)
 
-1. 在下方所示的&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟範例中，為了簡單起見，「對象鎖定目標」(2)會維持在「所有訪客」的預設集。 這表示活動未定位。 不過，請注意，Adobe建議您一律將目標定位為生產活動的對象。 按一下&#x200B;**[!UICONTROL Next]** (3)以進入建立活動的&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟。
+1. 在下方所示的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟範例中，為了簡單起見，對象目標(2)仍會保留在「所有訪客」的預設集中。 這表示活動未定位。 不過，請注意，Adobe建議您一律將目標定位為生產活動的對象。 按一下「下一步」**** (3)以進入建立活動的&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next_2_g.png)
 
-1. 在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟中，將&#x200B;**[!UICONTROL Reporting Source]**&#x200B;設為&#x200B;**[!UICONTROL Adobe Target]** (1)。 將&#x200B;**[!UICONTROL Goal Metric]**&#x200B;定義為&#x200B;**[!UICONTROL Conversion]**，根據您網站的轉換量度(2)指定詳細資料。 按一下&#x200B;**[!UICONTROL Save & Close]** (3)以儲存活動。
+1. 在&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟中，將&#x200B;**[!UICONTROL 報告Source]**&#x200B;設定為&#x200B;**[!UICONTROL Adobe Target]** (1)。 將&#x200B;**[!UICONTROL 目標量度]**&#x200B;定義為&#x200B;**[!UICONTROL 轉換]**，根據您網站的轉換量度指定詳細資料(2)。 按一下&#x200B;**[!UICONTROL 儲存並關閉]** (3)以儲存活動。
 
    ![替代影像](assets/asset-conv.png)
 
@@ -394,12 +387,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## &#x200B;7. 啟用您的[!UICONTROL A/B Test]活動
+## &#x200B;7. 啟用您的[!UICONTROL A/B測試]活動
 
-1. 按一下&#x200B;**[!UICONTROL Activate]** (1)以啟用您的[!UICONTROL A/B Test]活動。
+1. 按一下&#x200B;**[!UICONTROL 啟動]** (1)以啟動您的[!UICONTROL A/B測試]活動。
 
    >[!NOTE]
    >
-   >您必須有&#x200B;**[!UICONTROL Approver]**&#x200B;或&#x200B;**[!UICONTROL Publisher]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)才能執行此步驟。
+   >您必須有&#x200B;**[!UICONTROL 核准者]**&#x200B;或&#x200B;**[!UICONTROL 發行者]** [使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能執行此步驟。
 
    ![替代影像](assets/asset-activate.png)

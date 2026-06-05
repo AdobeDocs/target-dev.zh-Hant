@@ -4,16 +4,12 @@ description: 使用者識別與分組
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1173
 ht-degree: 4%
 
 ---
@@ -22,14 +18,14 @@ ht-degree: 4%
 
 ## 使用者識別
 
-在[!DNL Adobe Target]內有多種方式可用來識別使用者。 [!UICONTROL Target]使用以下識別碼：
+在[!DNL Adobe Target]內有多種方式可用來識別使用者。 [!UICONTROL Target]使用下列識別碼：
 
 | 欄位名稱 | 說明 |
 | --- | --- |
 | `tntID` | `tntId`是使用者[!DNL Target]中的主要識別碼。 您可以提供此ID，或如果請求未包含此ID，[!DNL Target]將自動產生此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的使用者識別碼，您可以透過每次呼叫傳送該識別碼。 使用者登入公司網站時，公司通常會建立ID，此ID會連結至訪客的帳戶、熟客卡、會員編號或適用於該公司的其他識別碼。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`用於在不同的Adobe解決方案之間合併和共用資料。 與Adobe Analytics和Adobe Audience Manager整合需要marketingCloudVisitorId。 |
-| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)以及每位訪客的已驗證狀態。 |
+| `customerIds` | 除了Experience Cloud訪客ID之外，還可以使用其他[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每位訪客的已驗證狀態。 |
 
 ## [!DNL Target]識別碼(tntID)
 
@@ -175,7 +171,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Marketing Cloud訪客ID (marketingCloudVisitorId)
 
-`marketingCloudVisitorId`是通用的永久ID，可識別Adobe Experience Cloud中所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，將[!DNL Target]與[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]整合時需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是通用的永久ID，可識別Adobe Experience Cloud所有解決方案的訪客。 當您的組織實作ID服務時，此ID可讓您在不同的Experience Cloud解決方案（包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager）中識別相同的網站訪客及其資料。 請注意，將[!DNL Target]與[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]整合時需要`marketingCloudVisitorId`。
 
 下列範例呼叫示範如何將從Experience Cloud ID服務擷取的`marketingCloudVisitorId`傳遞至[!DNL Target]。
 
@@ -241,7 +237,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 客戶ID (customerIds)
 
-[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hant)可新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
+[客戶ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)可以新增至Experience Cloud訪客ID或與其相關聯。 每當您傳送`customerIds`時，也必須提供`marketingCloudVisitorId`。 此外，可以為每個訪客提供驗證狀態，以及每個`customerId`。 可以使用以下驗證狀態：
 
 | 驗證狀態 | 使用者狀態 |
 | --- | --- |
@@ -319,11 +315,11 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-上述範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=zh-Hant&?lang=zh-Hant)的別名。
+上述範例示範如何傳送含有`authenticatedState`的`customerId`。 傳送`customerId`時，需要`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`。 `integrationCode`是您透過CRS提供的[客戶屬性檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html??lang=zh-Hant)的別名。
 
 ## 合併的設定檔
 
-您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，[!DNL Adobe Target]將維護所有這些ID的對應，並將其釘選到訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hant)。
+您可以在同一個要求中合併`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此案例中，[!DNL Adobe Target]將維護所有這些ID的對應，並將其釘選到訪客。 瞭解如何使用不同的識別碼[即時合併及同步設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 >[!BEGINTABS]
 

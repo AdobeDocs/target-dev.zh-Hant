@@ -5,24 +5,15 @@ title: at.js Javascript 程式庫如何運作？
 feature: at.js
 exl-id: 9183797c-857b-4b7f-a573-6bb1d583f7b1
 TQID: https://experienceleague.adobe.com/ZyfwRiSeZDL-gFA-3MehXoNO5XhdANPaAmHqDxVeQ-g
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1190
-ht-degree: 56%
+source-wordcount: 1220
+ht-degree: 54%
 
 ---
 
@@ -30,15 +21,15 @@ ht-degree: 56%
 
 若要在用戶端實作 [!DNL Adobe Target]，您必須使用 at.js JavaScript 程式庫。
 
-在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，建立您的測試和個人化體驗。
+在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，建立您的測試和個人化體驗。
 
 ## 什麼是 at.js?
 
 at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.js 程式庫可加快網頁實作的頁面載入速度，並為單頁應用程式提供更好的實作選項。 at.js 為建議的實作程式庫，且經常更新功能。 我們建議所有客戶實作或移轉至[最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
-如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hant#libraries)。
+如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)。
 
-在下圖所示的[!DNL Target]實作中，已實作下列Adobe Experience Cloud解決方案： [!DNL Analytics]、Target和[!DNL Audience Manager]。 此外，已實作下列[!DNL Experience Cloud]個核心服務： [!DNL Adobe Experience Platform]、[!UICONTROL Audiences]和[!UICONTROL Visitor ID Service]。
+在下圖所示的[!DNL Target]實作中，已實作下列Adobe Experience Cloud解決方案： [!DNL Analytics]、Target和[!DNL Audience Manager]。 此外，已實作下列[!DNL Experience Cloud]個核心服務： [!DNL Adobe Experience Platform]、[!UICONTROL 對象]和[!UICONTROL 訪客ID服務]。
 
 ## at.js 1.*x*&#x200B;和at.js 2.x工作流程圖表之間有何差異？
 
@@ -47,11 +38,11 @@ at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.j
 從高階角度來看，兩個版本之間存在幾項差異:
 
 * at.js 2.x 沒有全域 mbox 要求概念，而是採用頁面載入要求。 頁面載入要求可視為要求擷取網站初始頁面載入時應套用的內容。
-* at.js 2.x可管理稱為[!UICONTROL Views]的概念，這些概念用於單頁應用程式(SPA)。 at.js 1.*x*&#x200B;不知道此概念。
+* at.js 2.x可管理稱為[!UICONTROL 檢視]的概念，這些檢視會用於單頁應用程式(SPA)。 at.js 1.*x*&#x200B;不知道此概念。
 
 ## at.js 2.x 圖表
 
-下列圖表可協助您瞭解使用[!UICONTROL Views]的at.js 2.x工作流程，以及如何藉由這套工作流程增強SPA整合。 如需 at.js 2.x 中所使用概念的詳細介紹，請參閱[實作單頁應用程式](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
+下列圖表可協助您瞭解含有[!UICONTROL 檢視]的at.js 2.x工作流程，以及如何藉由這套工作流程增強SPA整合。 如需 at.js 2.x 中所使用概念的詳細介紹，請參閱[實作單頁應用程式](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
 
 （按一下影像可展開至完整寬度。）
 
@@ -59,16 +50,16 @@ at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.j
 
 | 步驟 | 詳細資料 |
 | --- | --- |
-| 1 | 如果使用者已通過驗證，呼叫會傳回 [!UICONTROL Experience Cloud ID]，而另一個呼叫會同步客戶 ID。 |
+| 1 | 如果使用者已通過驗證，呼叫會傳回[!UICONTROL Experience Cloud ID]；另一個呼叫會同步客戶ID。 |
 | 2 | at.js程式庫會同步載入，並隱藏檔案本文。您也可以選擇將頁面上實作的程式碼片段預先隱藏，以非同步方式載入<br />at.js。 |
 | 3 | 提出頁面載入要求，包含所有已設定的參數 (MCID、SDID 和客戶 ID)。 |
-| 4 | 設定檔指令碼執行，然後注入至[!UICONTROL Profile Store]。 Sto會從[!UICONTROL Audience Library]重新要求合格對象（例如，從[!DNL Adobe Analytics]、[!DNL Audience Manager]等共用的對象）。<br />客戶屬性會透過批次程式傳送至[!UICONTROL Profile Store]。 |
+| 4 | 設定檔指令碼執行，然後注入至[!UICONTROL 設定檔存放區]。 Sto會從[!UICONTROL 對象庫]重新要求合格對象（例如，從[!DNL Adobe Analytics]、[!DNL Audience Manager]等共用的對象）。<br />客戶屬性會透過批次程式傳送至[!UICONTROL 個人資料存放區]。 |
 | 5 | [!DNL Target] 會根據 URL 要求參數和個人資料，決定可針對目前頁面和未來檢視傳回哪些活動和體驗給訪客。 |
 | 6 | 目標內容會傳回至頁面，選擇性地包括其他個人化的個人資料值。<br />目前頁面上目標內容會儘快出現，不會有忽隱忽現的預設內容。<br />作為使用者在 SPA 中的操作結果而針對檢視顯示的內容將快取在瀏覽器中，這樣便可在透過 `triggerView()` 觸發檢視時立即套用，而不需要額外的伺服器呼叫。 |
-| 7 | Analytics資料傳送至[!UICONTROL Data Collection]伺服器。 |
+| 7 | Analytics資料傳送至[!UICONTROL 資料收集]伺服器。 |
 | 8 | 目標資料會透過SDID來比對Analytics資料，然後經過處理放入[!DNL Analytics]報表儲存體中。<br />[!DNL Analytics] 然後就可以透過(A4T)報表在[!DNL Analytics]和[!DNL Target]中檢視資料。 |
 
-現在，只要在SPA上實作`triggerView()`，系統就會從快取擷取[!UICONTROL Views]和動作並向使用者顯示，不需要伺服器呼叫。 `triggerView()` 也會對 [!DNL Target] 後端發出通知要求，以便增加和記錄曝光計數。 如需針對採用檢視的 SPA 瞭解 at.js 的詳細資訊，請參閱[實作單頁應用程式](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
+現在，只要在SPA上實作`triggerView()`，系統就會從快取擷取[!UICONTROL 檢視]和動作並向使用者顯示，不需要伺服器呼叫。 `triggerView()` 也會對 [!DNL Target] 後端發出通知要求，以便增加和記錄曝光計數。 如需針對採用檢視的 SPA 瞭解 at.js 的詳細資訊，請參閱[實作單頁應用程式](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
 
 （按一下影像可展開至完整寬度。）
 
@@ -76,11 +67,11 @@ at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.j
 
 | 步驟 | 詳細資料 |
 | --- | --- |
-| 1 | 在SPA中呼叫`triggerView()`以轉譯[!UICONTROL View]並套用動作來修改視覺元素。 |
+| 1 | 在SPA中呼叫`triggerView()`以轉譯[!UICONTROL 檢視]並套用動作來修改視覺元素。 |
 | 2 | 從快取讀取檢視的目標內容。 |
 | 3 | 目標內容會儘快出現，不會有忽隱忽現的預設內容。 |
-| 4 | 通知要求已傳送至[!DNL Target] [!UICONTROL Profile Store]，以計算活動中的訪客數並增加量度。 |
-| 5 | [!DNL Analytics]資料已傳送至[!UICONTROL Data Collection Servers]。 |
+| 4 | 通知要求已傳送至[!DNL Target] [!UICONTROL 設定檔存放區]，以計算活動中的訪客數和增加量度。 |
+| 5 | [!DNL Analytics]資料已傳送至[!UICONTROL 資料收集伺服器]。 |
 | 6 | [!DNL Target]資料透過SDID與[!DNL Analytics]資料相符，並且已處理至[!DNL Analytics]報表儲存體。 然後就可以透過A4T報表在[!DNL Analytics]和[!DNL Target]中檢視[!DNL Analytics]資料。 |
 
 ### 影片 - at.js 2.x 架構圖表
@@ -89,7 +80,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
 
 ## at.js 1.x 圖表
 
@@ -108,7 +99,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 ### 影片 - 辦公時間：at.js 提示與概觀 (2019 年 6 月 26 日)
 
-這支影片記錄了「辦公時間」，「辦公時間」是一項由[!UICONTROL Adobe Customer Care]團隊主導的計畫。
+這支影片記錄了「營業時間」，「營業時間」是一項由[!UICONTROL Adobe客戶服務]團隊主導的計畫。
 
 * 使用 at.js 的好處
 * at.js 設定

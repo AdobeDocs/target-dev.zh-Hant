@@ -4,20 +4,13 @@ description: 使用裝置上決策執行具有功能標幟的A/B測試。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
 TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 749
+source-wordcount: 813
 ht-degree: 1%
 
 ---
@@ -26,8 +19,8 @@ ht-degree: 1%
 
 ## 步驟摘要
 
-1. 為您的組織啟用[!UICONTROL on-device decisioning]
-1. 建立[!UICONTROL A/B Test]活動
+1. 為您的組織啟用[!UICONTROL 裝置上決策]
+1. 建立[!UICONTROL A/B測試]活動
 1. 定義您的A和B
 1. 新增對象
 1. 設定流量分配
@@ -41,32 +34,32 @@ ht-degree: 1%
 >
 >假設您想要判斷使用者能否順利接受您首頁的秋季主題重新設計。 您決定在[!DNL Adobe Target]中執行A/B實驗以測試它。 您也想要確保提供最佳效能的實驗，以免負面或緩慢的使用者體驗扭曲結果。
 
-## &#x200B;1. 為您的組織啟用[!UICONTROL on-device decisioning]
+## &#x200B;1. 為您的組織啟用[!UICONTROL 裝置上決策]
 
-啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，並啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換按鈕。
+啟用裝置上決策可確保在幾乎零延遲的情況下執行A/B活動。 若要啟用此功能，請瀏覽至[!DNL Adobe Target]中的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 帳戶詳細資料]**，並啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
 
 &lt;！ — 插入image-odd4.png —>
 ![替代影像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用「裝置上決策」切換。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用「裝置上決策」切換。
 
-啟用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生規則成品。
+啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生規則成品。
 
-## &#x200B;2. 建立[!UICONTROL A/B Test]活動
+## &#x200B;2. 建立[!UICONTROL A/B測試]活動
 
-在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL Activities]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
+在[!DNL Adobe Target]中，導覽至&#x200B;**[!UICONTROL 活動]**&#x200B;頁面，然後選取&#x200B;**[!UICONTROL 建立活動]** > **[!UICONTROL A/B測試]**。
 
 ![替代影像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL Web]**&#x200B;選項為已選取(1)，選取&#x200B;**[!UICONTROL Form]**&#x200B;作為您的體驗撰寫器(2)，選取沒有&#x200B;**[!UICONTROL Property Restrictions]**&#x200B;的&#x200B;**[!UICONTROL Default Workspace]** (3)，然後按一下&#x200B;**[!UICONTROL Next]** (4)。
+在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**[!UICONTROL &#x200B;預設Workspace ]**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代影像](assets/asset-form.png)
 
 ## &#x200B;3. 定義您的A和B
 
-1. 在活動建立的&#x200B;**[!UICONTROL Experiences]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，即體驗B，方法是按一下&#x200B;**[!UICONTROL Add Experience]** (2)按鈕。 輸入應用程式中要執行A/B測試之位置(3)的名稱。 在下列範例中，「首頁」是為體驗A定義的位置。 （此位置也是為體驗B定義的位置。）
+1. 在活動建立的&#x200B;**[!UICONTROL 體驗]**&#x200B;步驟中，提供活動的名稱(1)並新增第二個體驗，體驗B，方法是按一下&#x200B;**[!UICONTROL 新增體驗]** (2)按鈕。 輸入應用程式中要執行A/B測試之位置(3)的名稱。 在下列範例中，「首頁」是為體驗A定義的位置。 （此位置也是為體驗B定義的位置。）
 
    體驗A會定義控制項，這是目前的首頁設計。
 
@@ -76,7 +69,7 @@ ht-degree: 1%
 
    ![替代影像](assets/asset-exp-b.png)
 
-1. 在體驗B中，按一下以選取&#x200B;**[!UICONTROL Create JSON Offer]**，將內容從&#x200B;**[!UICONTROL Default Content]**&#x200B;變更為重新設計的內容，如下所示(1)。
+1. 在體驗B中，按一下以選取&#x200B;**[!UICONTROL 建立JSON選件]**，將內容從&#x200B;**[!UICONTROL 預設內容]**&#x200B;變更為重新設計的內容，如下所示(1)。
 
    ![替代影像](assets/asset-offer.png)
 
@@ -93,11 +86,11 @@ ht-degree: 1%
 
 假設您想先對您的忠實客戶測試重新設計，可以根據他們是否已登入來識別這些客戶。
 
-1. 在&#x200B;**[!UICONTROL Targeting]**&#x200B;步驟中，按一下以取代&#x200B;**[!UICONTROL All Visitors]**&#x200B;對象，如所示。
+1. 在&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟中，按一下以取代&#x200B;**[!UICONTROL 所有訪客]**&#x200B;對象，如圖所示。
 
    ![替代影像](assets/asset-all-audiences.png)
 
-1. 在&#x200B;**[!UICONTROL Create Audience]**&#x200B;模式中，定義`logged-in = true`的自訂規則。 這會定義已登入的使用者群組。 在您的活動中使用這個對象。
+1. 在&#x200B;**[!UICONTROL 建立對象]**&#x200B;模式中，定義`logged-in = true`的自訂規則。 這會定義已登入的使用者群組。 在您的活動中使用這個對象。
 
    ![替代影像](assets/asset-audience.png)
 
@@ -115,13 +108,13 @@ ht-degree: 1%
 
 ## &#x200B;7. 設定報告
 
-在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步驟中，選擇&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作為&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中檢視活動結果，或選擇&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中檢視這些結果。
+在&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟中，選擇&#x200B;**[!UICONTROL Adobe Target]**&#x200B;做為&#x200B;**[!UICONTROL 報告Source]**，以便在[!DNL Adobe Target] UI中檢視活動結果，或選擇&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中檢視這些結果。
 
 ![替代影像](assets/asset-reporting.png)
 
 ## &#x200B;8. 新增追蹤KPI的量度
 
-選擇&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以測量A/B測試。 在此範例中，成功的轉換是根據使用者是否到達頁面底部，表示參與。 因此，會根據使用者是否檢視名為bottom-of-the-page的位置來判斷&#x200B;**[!UICONTROL Conversion]**。
+選擇&#x200B;**[!UICONTROL 目標量度]**&#x200B;來測量A/B測試。 在此範例中，成功的轉換是根據使用者是否到達頁面底部，表示參與。 因此，會根據使用者是否檢視名為bottom-of-the-page的位置來判斷&#x200B;**[!UICONTROL 轉換]**。
 
 ## &#x200B;9. 實作程式碼，以在您的應用程式中使用功能標幟執行A/B測試
 
