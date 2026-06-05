@@ -7,10 +7,15 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
 source-wordcount: 1284
@@ -67,7 +72,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 請注意，使用者端代碼為必要項。提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL 設定]**，在Adobe Target中找到您的使用者端代碼。請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**值。
+1. 請注意，使用者端代碼為必要項。提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL 設定]**，在Adobe Target中找到您的使用者端代碼。請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**&#x200B;值。
    ![client-code.png](assets/client-code.png)
 1. 取得使用者端代碼後，請建構您的傳送API呼叫。 以下範例以[傳送API Postman集合](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL 網頁批次Mbox傳送API呼叫]**&#x200B;開始，並進行相關修改。 例如：
    * 已從&#x200B;**內文**&#x200B;移除&#x200B;**瀏覽器**&#x200B;和&#x200B;**位址**&#x200B;物件，因為非HTML使用案例不需要它們

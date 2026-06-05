@@ -5,10 +5,14 @@ title: 什麼是行動應用程式的常見問題 [!DNL About Target] ？
 feature: Implement Mobile
 exl-id: 06cae3de-83a4-4018-a832-66fb292a1d0f
 TQID: https://experienceleague.adobe.com/DvyEuK-o-3qAJDKVI3tSe9ZirSQa0my6vbIhJQP9EU4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 316
@@ -22,7 +26,7 @@ ht-degree: 3%
 
 ## 我應該使用[!DNL Adobe Experience Platform]中的標籤來部署SDK，還是可以不使用Launch部署SDK？
 
-[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}提供SDK。 如果您未使用Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html){target=_blank}中的[標籤，則必須在您的應用程式中管理您自己的設定檔案並管理它。
+[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}提供SDK。 如果您未使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html){target=_blank}中的標籤，則必須在您的應用程式中管理您自己的設定檔案並管理它。
 
 ## 目前提供哪些SDK？
 

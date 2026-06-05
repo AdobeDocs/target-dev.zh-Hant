@@ -4,10 +4,17 @@ description: 如何使用Adobe Target SDK？
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 702
@@ -197,11 +204,11 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-1. 按一下「下一步」**** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
+1. 按一下「下一步」**&#x200B;** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next_2_t.png)
 
-1. 在下方所示的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟範例中，為了簡單起見，對象目標(2)仍會保留在「所有訪客」的預設集中。 這表示活動未定位。 不過，請注意，Adobe建議您一律將目標定位為生產活動的對象。 按一下「下一步」**** (3)以進入建立活動的&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟。
+1. 在下方所示的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟範例中，為了簡單起見，對象目標(2)仍會保留在「所有訪客」的預設集中。 這表示活動未定位。 不過，請注意，Adobe建議您一律將目標定位為生產活動的對象。 按一下「下一步」**&#x200B;** (3)以進入建立活動的&#x200B;**[!UICONTROL 目標與設定]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next_2_g.png)
 

@@ -4,10 +4,17 @@ description: 使用裝置上決策執行具有功能標幟的A/B測試。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
 TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 813
@@ -53,7 +60,7 @@ ht-degree: 1%
 
 ![替代影像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**[!UICONTROL &#x200B;預設Workspace ]**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
+在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**&#x200B;[!UICONTROL &#x200B;預設Workspace &#x200B;]&#x200B;**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代影像](assets/asset-form.png)
 

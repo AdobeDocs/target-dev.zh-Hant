@@ -5,10 +5,17 @@ title: 該如何準備實作Target？
 feature: Implementation
 exl-id: cd2a1016-e085-4b61-8680-c0cc176c8277
 TQID: https://experienceleague.adobe.com/OQPsRkPPjMRMcbUwK11lRMmZyB7yLUgpH8qb1zrpmiE
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 266
@@ -33,7 +40,7 @@ ht-degree: 45%
 * 瞭解客戶的業務目標
 * 瞭解客戶的最佳化目標
 
-下載[](assets/business-rfi.docx)商業要求資訊文件。
+下載[&#128279;](assets/business-rfi.docx)商業要求資訊文件。
 
 ## [!DNL Adobe Target]技術要求資訊
 
@@ -44,4 +51,4 @@ ht-degree: 45%
 * 瞭解技術平台和任何限制
 * 瞭解與人員和程序有關的技術環境。
 
-下載[](assets/technical-rfi.docx)技術要求資訊文件。
+下載[&#128279;](assets/technical-rfi.docx)技術要求資訊文件。

@@ -4,10 +4,17 @@ description: ' [!DNL Adobe Target Admin API]的總覽'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1400
@@ -21,7 +28,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理區段。
+>如果您想要透過UI管理[!DNL Target]，請參閱&#x200B;*Adobe Target商業從業者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的管理區段。
 >
 >管理員API和設定檔API通常是整體參照（「管理員和設定檔API」），但也可能單獨參照（「管理員API」和「設定檔API」）。 Recommendations API是[!DNL Target] Admin API的特定實作。
 
@@ -73,7 +80,7 @@ Postman是應用程式，可讓您輕鬆引發API呼叫。 此[Target Admin API 
 | 400 | [錯誤請求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 錯誤的請求。 請求中提供的資料很可能無效。 |
 | 401 | [未獲授權](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允許使用者執行此作業。 |
 | 403 | [禁止存取](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止存取此資源。 |
-| 404 | 找不到[](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
+| 404 | 找不到[&#128279;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 找不到參照的資源。 |
 
 ## 活動
 

@@ -4,9 +4,12 @@ description: 瞭解 [!DNL Target] Python SDK如何支援非同步要求，將有
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 TQID: https://experienceleague.adobe.com/CFfT7Amoca2yqYkkt9AviTmWi-RCjGdABYYuWHxvqC8
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 130
