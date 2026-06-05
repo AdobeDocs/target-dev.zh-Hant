@@ -72,7 +72,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM檢視]可在[!DNL Target]中使用，讓行銷人員透過[!UICONTROL 視覺化體驗撰寫器]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
 
-1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)。
+1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/install/overview)。
 2. 決定您要個人化的單頁應用程式中的所有[!UICONTROL XDM檢視]。
 3. 定義[!UICONTROL XDM檢視]後，若要傳遞A/B或XT VEC活動，請在您的單頁應用程式中實作`sendEvent()`函式，並將`renderDecisions`設為`true`以及對應的[!UICONTROL XDM檢視]。 必須在`xdm.web.webPageDetails.viewName`中傳遞[!UICONTROL XDM檢視]。 此步驟可讓行銷人員運用[!UICONTROL 視覺化體驗撰寫器]，針對這些XDM啟動A/B和XT測試。
 
@@ -232,7 +232,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
+>若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
 
 ### [!UICONTROL 修改]面板
 

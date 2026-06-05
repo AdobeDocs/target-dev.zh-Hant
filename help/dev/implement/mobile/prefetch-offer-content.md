@@ -26,9 +26,9 @@ ht-degree: 37%
 搭配iOS和Android Mobile SDK使用預先擷取方法時，請考量下列限制：
 
 * 預先擷取內容不會在跨啟動之間持續有效。 只要應用程式仍然存在，或直到呼叫 `clearPrefetchCache()` 方法為止，則會快取預先擷取內容。
-* [!UICONTROL 自動分配]和[!UICONTROL 自動鎖定目標]流量分配方法不支援預先擷取功能，適用於[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動中的[建議選件](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)。
+* [!UICONTROL 自動分配]和[!UICONTROL 自動鎖定目標]流量分配方法不支援預先擷取功能，適用於[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動中的[建議選件](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=zh-Hant)。
 
 如需詳細資訊，包括預先提取方法、公用類別和程式碼範例，請參閱:
 
-* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html)。
-* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html)。
+* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=zh-Hant)。
+* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=zh-Hant)。
