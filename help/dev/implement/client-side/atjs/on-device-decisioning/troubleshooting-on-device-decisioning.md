@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 281
 ht-degree: 0%
@@ -78,3 +78,4 @@ document.addEventListener(adobe.target.event.ARTIFACT_DOWNLOAD_FAILED, function(
   console.log("Artifact failed to download", e.detail);
 }, false);
 ```
+

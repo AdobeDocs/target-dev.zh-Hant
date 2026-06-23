@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 336
 ht-degree: 59%
@@ -71,3 +71,4 @@ adobe.target.trackEvent({
 >[!WARNING]
 >
 >如果未設定強制欄位，則不會執行任何要求，且會擲回錯誤。
+

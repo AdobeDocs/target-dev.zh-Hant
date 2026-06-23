@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 203
 ht-degree: 37%
@@ -37,4 +37,5 @@ ht-degree: 37%
 at.js JavaScript程式庫會使用Cookie來追蹤使用者，以確保[!DNL [!DNL Target]]一律呈現一致的體驗。 如果[!DNL Target] JavaScript程式庫無法儲存Cookie，Target請求會停用。
 
 **解決方案:**&#x200B;如果您想要搭配「公用尾碼清單」上包含的網域來使用雲端式例項，最佳做法是自訂 `cookieDomain` 設定。 如需詳細資訊，請參閱 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
+
 

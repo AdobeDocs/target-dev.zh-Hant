@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 3100
 ht-degree: 47%
@@ -792,4 +792,3 @@ at.js 2.*x*&#x200B;增強了Adobe [!DNL Target]對SPA的支援，並與其他Exp
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
 如需詳細資訊，請參閱[瞭解at.js 2.*x*&#x200B;的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
-
