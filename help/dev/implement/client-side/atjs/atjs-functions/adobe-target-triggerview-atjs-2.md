@@ -5,17 +5,12 @@ title: 如何使用adobe.target.triggerView()函式？
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 19%
@@ -83,7 +78,7 @@ adobe.target.getOffers({
 
 ## 範例： `triggerView()`與[!UICONTROL Adobe Visual Editing Helper擴充功能]的最佳相容性
 
-使用[Adobe Visual Editing Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}時，請考量下列事項：
+使用[Adobe Visual Editing Helper擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}時，請考量下列事項：
 
 由於[!DNL Googl]e針對[!DNL Chrome]擴充功能新增了V3資訊清單原則，[!UICONTROL Visual Editing Helper擴充功能]必須等待`DOMContentLoaded`事件，才能在VEC中載入[!DNL Target]資料庫。 此延遲可能會導致網頁在編寫程式庫準備就緒前引發`triggerView()`呼叫，導致檢視未在載入時填入。
 
@@ -104,5 +99,6 @@ if (document.readyState === "complete") {
     window.addEventListener("load", triggerViewIfLoaded);
 }
 ```
+
 
 

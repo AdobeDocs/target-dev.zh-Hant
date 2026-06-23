@@ -5,19 +5,12 @@ title: 如何使用[!UICONTROL adobe.target.getOffer()]函式？
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 472
 ht-degree: 71%
@@ -141,3 +134,4 @@ adobe.target.getOffer({
 |--- |--- |--- |
 | 狀態 | 字串 | 代表錯誤狀態。 此參數可具備下列值:<ul><li>timeout：表示要求逾時。</li><li>parseerror: 指出無法剖析回應，例如收到 HTML 或純文字而非 JSON。</li><li>error: 指出一般錯誤，例如收到 200 OK 以外的其他 HTTP 狀態</li></ul> |
 | error | 字串 | 包含其他資料 (例如例外訊息) 或對於疑難排解可能實用的任何項目。 |
+

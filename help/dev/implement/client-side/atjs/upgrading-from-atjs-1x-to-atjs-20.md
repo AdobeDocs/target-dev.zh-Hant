@@ -5,25 +5,12 @@ title: 如何從at.js 1.x版升級至2.x版？
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 TQID: https://experienceleague.adobe.com/JGsuogzhCvThr4QGHJ5g4d8ZqGVZ8ClAf7hXuoh7X0Q
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 3100
 ht-degree: 47%
@@ -313,7 +300,7 @@ at.js 2.*x*&#x200B;使用新的API，我們稱之為「傳送API」。 若要針
 
 若要針對at.js v2.10或更新版本使用跨網域追蹤，您可以執行下列其中一項作業：
 
-1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=zh-Hant&?lang=zh-Hant)和at.js 2.*x*。 ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。 安裝ECID資料庫v4.3.0+和at.js 2.*x*&#x200B;後，您將能夠建立橫跨多個唯一網域的活動以及追蹤使用者。 請務必注意，此功能僅適用於工作階段過期之後。
+1. 安裝[ECID程式庫v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html??lang=zh-Hant)和at.js 2.*x*。 ECID 資料庫的存在是為了管理可用來識別訪客 (甚至是跨網域) 的持續 ID。 安裝ECID資料庫v4.3.0+和at.js 2.*x*&#x200B;後，您將能夠建立橫跨多個唯一網域的活動以及追蹤使用者。 請務必注意，此功能僅適用於工作階段過期之後。
 
 1. 如果您有at.js v2.10或更新版本，您不必安裝ECID程式庫，而是可以在&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**&#x200B;的[!DNL Target] UI中啟用跨網域設定。 （或者，您可以在at.js程式碼中將&#x200B;_crossDomain_&#x200B;選項設為&#x200B;_enabled_。）
 
@@ -424,7 +411,7 @@ at.js 1.*x*&#x200B;的客戶可以使用vst.* mbox引數建立對象。 這是at
 
 ## 回應 Token
 
-at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request-succeeded`來顯示回應Token。 如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)。
+at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request-succeeded`來顯示回應Token。 如需使用 `at-request-succeeded` 自訂事件的程式碼範例，請參閱[回應 Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)。
 
 ## at.js 1.*x*&#x200B;引數至at.js 2.*x*&#x200B;裝載對應
 
@@ -447,7 +434,7 @@ at.js 2.*x*，就像at.js 1.*x*&#x200B;一樣，會使用自訂事件`at-request
 
 （at.js 1.*x*&#x200B;引數）
 
-用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hant&?lang=zh-Hant)。
+用於[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html??lang=zh-Hant)。
 
 ```json {line-numbers="true"}
 {
@@ -791,5 +778,4 @@ at.js 2.*x*&#x200B;增強了Adobe [!DNL Target]對SPA的支援，並與其他Exp
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[瞭解at.js 2.*x*&#x200B;的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
-
+如需詳細資訊，請參閱[瞭解at.js 2.*x*&#x200B;的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
