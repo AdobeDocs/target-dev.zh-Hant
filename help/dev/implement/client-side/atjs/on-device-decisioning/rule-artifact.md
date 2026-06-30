@@ -17,7 +17,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 0%
@@ -30,4 +30,5 @@ ht-degree: 0%
 
 * 按一下[這裡](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)以取得規則成品的詳細資訊。
 * 按一下[這裡](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md)以檢視JSON規則成品的範例。
+
 

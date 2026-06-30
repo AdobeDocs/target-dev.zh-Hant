@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 642
 ht-degree: 83%
@@ -130,4 +130,5 @@ adobe.target.getOffers({
 >[!NOTE]
 >
 >如果您使用[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]`且僅具有預先擷取，而且使用`[!UICONTROL sendNotifications()]`，則必須在執行`[!UICONTROL sendNotifications()]`之後觸發[!DNL Analytics]要求。 其目的在於確保`[!UICONTROL sendNotifications()]`產生的SDID符合傳送給[!DNL Analytics]和[!DNL Target]的SDID。
+
 

@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 38%
@@ -43,4 +43,5 @@ ht-degree: 38%
 | [[!UICONTROL registerExtension(options)]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>(at.js 1.x) | 提供標準方式來註冊特定的延伸模組。<P>**注意：**&#x200B;此函式僅適用於at.js 1.*x*&#x200B;版。 此函式已在at.js 2.x版本中棄用。 如果與at.js 2.x搭配使用，此函式會傳回預設內容。 |
 | [[!UICONTROL at.js自訂事件]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | at.js 自訂事件可讓您知道 mbox 要求或產品建議失敗或成功。 |
 | [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>(at.js 2.1.0) | 此函式會在體驗呈現時傳送通知給[!DNL Target]邊緣，而不需要使用`[!UICONTROL adobe.target.applyOffer()]`或`[!UICONTROL adobe.target.applyOffers()]`。<P>**注意**：此函式已在at.js 2.1.0中推出，且將適用於2.1.0以上的任何版本。 |
+
 

@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 4%
@@ -51,4 +51,5 @@ ht-degree: 4%
   >在[!DNL Adobe Analytics]擴充功能中使用「傳送信標」動作，讓[!DNL Analytics]呼叫等待[!DNL Target]呼叫。 如果您使用自訂程式碼直接呼叫`s.t()`或`s.tl()`，[!DNL Analytics]呼叫不會等到[!DNL Target]呼叫完成。
 
 * **防止不正確的重新導向選件處理：**&#x200B;如果頁面上有[!DNL Target]和[!DNL Analytics]，而且有Target執行的重新導向選件，可能會發生[!DNL Analytics]追蹤器觸發不應觸發之要求的情況（因為系統正在將使用者重新導向至不同的URL）。 如果您透過[!DNL Adobe Experience Platform]中的標籤實作[!DNL Target]和[!DNL Analytics]，則不會遇到此問題。 使用[!DNL Adobe Experience Platform]中的標籤，[!DNL Target]指示[!DNL Analytics]中止[!DNL Analytics]指標要求。
+
 
