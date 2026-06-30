@@ -5,23 +5,12 @@ title: 我可以不使用標籤管理員實作 [!DNL Target] 嗎？
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
 TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -76,7 +65,7 @@ ht-degree: 32%
 | [!UICONTROL 已啟用頁面載入（自動建立全域mbox）] | 選擇是否將全域 mbox 呼叫嵌入在 at.js 檔案中，以便每次載入頁面時自動觸發。 |
 | [!UICONTROL 全域 mbox] | 選取全域 mbox 的名稱。 依預設，此名稱為 target-global-mbox。<p>對於at.js，mbox名稱中可以使用特殊字元（包括&amp;）。 |
 | [!UICONTROL 逾時（秒）] | 如果 [!DNL Target] 在已定義的期間內沒有回應內容，伺服器呼叫會逾時，並顯示預設內容。 在訪客工作階段期間會繼續嘗試其他呼叫。 預設值為 5 秒。<p>at.js程式庫使用`XMLHttpRequest`中的逾時設定。 逾時是在觸發要求時開始，並在[!DNL Target]從伺服器收到回應時停止。 如需詳細資訊，請參閱Mozilla開發人員網路上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在收到回應之前就發生指定的逾時，則會顯示預設內容，而訪客可能算為活動的參與者，因為所有資料收集都發生在[!DNL Target]邊緣。 如果請求到達[!DNL Target]邊緣，訪客即納入計算。<p>設定逾時設定時，請考量下列事項:<ul><li>如果值太低，即使訪客應該算為活動的參與者，使用者還是可能幾乎都看到預設內容。</li><li>如果值太高，而如果您長時間使用本文隱藏，訪客可能會在網頁上看到空白區域或空白頁面。</li></ul>若要充分瞭解 mbox 回應時間，請在瀏覽器的開發人員工具中查看「網路」標籤。 您也可以使用第三方 Web 效能監控工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定可確保[!DNL Target]不會為了訪客API回應而等待太久。 此設定和這裡說明的 at.js 逾時設定不影響彼此。 |
-| [!UICONTROL 設定檔存留期] | 此設定會決定訪客設定檔儲存多久。 依預設，訪客設定檔會儲存兩週。 此設定最多可增加90天。<p>若要變更設定檔存留期設定，請連絡[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant#reference_ACA3391A00EF467B87930A450050077C)。 |
+| [!UICONTROL 設定檔存留期] | 此設定會決定訪客設定檔儲存多久。 依預設，訪客設定檔會儲存兩週。 此設定最多可增加90天。<p>若要變更設定檔存留期設定，請連絡[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)。 |
 
 ### 主要實作方法
 
@@ -90,7 +79,7 @@ ht-degree: 32%
 
 >[!WARNING]
 >
->在變更這些預設設定之前，請先洽詢[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant#reference_ACA3391A00EF467B87930A450050077C)，以免影響您目前的實作。
+>在變更這些預設設定之前，請先洽詢[客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)，以免影響您目前的實作。
 
 除了上述設定以外，您也可以使用下列特定的at.js設定：
 
@@ -295,4 +284,5 @@ at.js 應實作於網站上每個頁面的 `<head>` 元素中。
 | orderId | 要進行轉換計算之訂單的唯一識別值。<p>`orderId` 必須是唯一的。 報表中會忽略重複的訂單。 |
 | orderTotal | 購買貨幣值。<p>請勿傳遞貨幣符號。 請使用小數點 (而非逗點) 表示小數值。 |
 | productPurchasedId (選用) | 訂單中購買之產品 ID 的逗點分隔清單。<p>這些產品 ID 會顯示在稽核報表中，以支援其他報表分析。 |
+
 
