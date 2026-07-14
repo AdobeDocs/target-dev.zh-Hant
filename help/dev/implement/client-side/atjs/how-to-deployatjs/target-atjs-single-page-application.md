@@ -5,24 +5,12 @@ title: 我可以針對單頁應用程式(SPA)實作 [!DNL Target] 嗎？
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
 TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 2851
 ht-degree: 53%
@@ -238,7 +226,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 ## 單一頁面應用程式可視化體驗撰寫器
 
-安裝 at.js 2.x 並將 `triggerView()` 新增至您的網站後，請使用 VEC 執行 A/B 和 XT 活動。 如需詳細資訊，請參閱[單頁應用程式 (SPA) 可視化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=zh-Hant)。
+安裝 at.js 2.x 並將 `triggerView()` 新增至您的網站後，請使用 VEC 執行 A/B 和 XT 活動。 如需詳細資訊，請參閱[單頁應用程式 (SPA) 可視化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)。
 
 >[!NOTE]
 >
@@ -246,7 +234,7 @@ at.js 2.x 提供豐富的功能，讓貴公司能以新世代用戶端技術為�
 
 ## 使用TriggerView，確保A4T可搭配at.js 2.x和SPA正常運作
 
-若要確保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant) (A4T)可搭配at.js 2.x正常運作，請務必在[!DNL Target]要求和[!DNL Analytics]要求中傳送相同的SDID。
+若要確保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)可搭配at.js 2.x正常運作，請務必在[!DNL Target]要求和[!DNL Analytics]要求中傳送相同的SDID。
 
 SPA 相關最佳實務如下:
 
@@ -329,18 +317,19 @@ at.js 2.x API可讓您以多種方式自訂您的[!DNL Target]實作，但在此
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
 
 ### 在 SPA 中實作 at.js 2.x
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[在單頁應用程式(SPA)中實作Adobe Target的at.js 2.x ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
 
 ### 在[!DNL Adobe Target]中使用SPA的VEC
 
 >[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-如需詳細資訊，請參閱[在Adobe Target中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC) &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[在Adobe Target中使用適用於單頁應用程式的視覺化體驗撰寫器(SPA VEC) ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
+
 
 
