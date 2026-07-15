@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 2994
 ht-degree: 38%
@@ -314,6 +314,7 @@ HTML 5 doctype 可確保頁面以標準模式載入。 使用怪異模式載入�
 ## at.js是否適用於Ionic應用程式環境。
 
 此實作從未進行過測試，因為at.js的用途並非在非Web環境中運作。 [!DNL Adobe]建議將其[SDK用於行動實作](/help/dev/implement/mobile/overview.md)。
+
 
 
 

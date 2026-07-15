@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 825
 ht-degree: 78%
@@ -145,5 +145,6 @@ then(response => adobe.target.applyOffers({ response: response }))
 .then(() => console.log("Success"))
 .catch(error => console.log("Error", error));
 ```
+
 
 

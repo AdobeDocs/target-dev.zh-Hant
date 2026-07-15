@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 216
 ht-degree: 40%
@@ -57,5 +57,6 @@ ht-degree: 40%
 * 不建議將空白的 top-of-page `[!UICONTROL mboxCreate()]` 函數用作全域 mbox。
 
   at.js中自動建立的全域mbox是較好的選項，因為它從`<head>`引發，而且可能較早傳回內容。
+
 
 
