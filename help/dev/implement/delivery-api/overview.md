@@ -5,13 +5,11 @@ keywords: 傳送api
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 188
+source-wordcount: 244
 ht-degree: 0%
 
 ---
@@ -19,6 +17,10 @@ ht-degree: 0%
 # 傳送API總覽
 
 [!DNL Adobe Target Delivery API]是以REST為基礎。 本檔案說明構成[!DNL Adobe Target] [!DNL Delivery API]的資源。 HTTP方法可用來對這些資源執行作業。
+
+>[!IMPORTANT]
+>
+>此處記錄的[!DNL Delivery API]適用於[!DNL at.js]和直接伺服器端實作。 如果您使用[!DNL Adobe Experience Platform Web SDK]實作[!DNL Target]，請使用Interact API （透過[!UICONTROL Experience Platform Edge Network]的`sendEvent`命令存取），而不是直接呼叫[!DNL Delivery API]。 如需詳細資訊，請參閱[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)和[比較at.js資料庫與Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)。
 
 使用[!UICONTROL Adobe Target的傳送API]，您可以：
 
