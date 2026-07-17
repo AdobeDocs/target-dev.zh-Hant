@@ -14,14 +14,18 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 132
+source-wordcount: 180
 ht-degree: 0%
 
 ---
 
 # 開始使用[!UICONTROL Adobe Target Delivery API]
+
+>[!IMPORTANT]
+>
+>本指南適用於直接呼叫[!UICONTROL Target傳送API]的[!DNL at.js]和直接伺服器端實作。 如果您使用[!UICONTROL Adobe Experience Platform Web SDK]實作[!DNL Target]，請改用Interact API （[!UICONTROL Experience Platform Edge Network]上的`sendEvent`命令）。 如需詳細資訊，請參閱[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)。
 
 [!UICONTROL Target傳送API]呼叫看起來像這樣：
 

@@ -21,16 +21,20 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 786
-ht-degree: 9%
+source-wordcount: 844
+ht-degree: 8%
 
 ---
 
 # [!UICONTROL Adobe Experience Platform Web SDK]
 
 [!UICONTROL Adobe Experience Platform Web SDK] (AEP Web SDK)是使用者端的JavaScript資料庫，可讓[!UICONTROL Adobe Experience Cloud]的客戶透過[!UICONTROL Adobe Experience Platform Edge Network]與[!DNL Adobe Experience Cloud] （包括[!DNL Target]）中的各種服務互動。 除了JavaScript程式庫，還有[!UICONTROL Adobe Experience Platform]擴充功能可協助處理您的Web SDK設定。
+
+>[!IMPORTANT]
+>
+>使用[!UICONTROL Adobe Experience Platform Web SDK]實作[!DNL Target]時，要求與回應會透過Interact API （透過[!UICONTROL Experience Platform Edge Network]上的`sendEvent`命令），而非[!DNL Target] [傳送API](/help/dev/implement/delivery-api/overview.md)。 [!DNL Delivery API]僅適用於[!DNL at.js]和直接伺服器端實作。 請參閱[比較at.js資料庫與Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)，瞭解兩種方法有何不同。
 
 如需詳細資訊，請參閱&#x200B;*[!UICONTROL Adobe Experience Platform Web SDK]*&#x200B;說明中的下列連結：
 

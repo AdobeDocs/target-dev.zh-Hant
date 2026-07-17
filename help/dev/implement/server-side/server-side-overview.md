@@ -20,10 +20,10 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
 workflow-type: tm+mt
-source-wordcount: 618
-ht-degree: 12%
+source-wordcount: 825
+ht-degree: 9%
 
 ---
 
@@ -91,3 +91,26 @@ ht-degree: 12%
 連結： [Target Recommendations API](https://developers.adobetarget.com/api/recommendations)和[Adobe Recommendations API總覽](../../before-administer/recs-api/overview.md)。
 
 Recommendations API可讓您以程式設計方式與[!DNL Target]個推薦伺服器互動。 這些API可與一系列應用程式棧疊整合，以執行您通常透過[!DNL Target]使用者介面執行的功能。
+
+## 不含SDK的[!DNL Platform Edge Network]個API呼叫 {#platform-edge-api-user-agent}
+
+[!UICONTROL Adobe Experience Platform Web SDK]和其他支援的SDK整合在呼叫[!DNL Experience Platform Edge Network]時，會在HTTP要求標頭中包含類似瀏覽器的`User-Agent`值。 使用公用[Interact API](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank} （不含SDK）的伺服器端整合必須明確提供此標頭。
+
+對於非SDK Interact API呼叫，請遵循下列需求：
+
+* 在HTTP要求標頭中包含有效的類似瀏覽器的`User-Agent`。 僅JSON要求內文中的訪客或使用者代理程式值不符合此整合模式的機器人偵測需求。
+* 請勿使用預留位置或非瀏覽器值，例如`MyApp/1.0`，這類值可能會導致機器人分類。
+* 公開SDK API呼叫不需要Edge名稱或SDK版本。 對於此案例，有效的`User-Agent` HTTP標頭是必要的元素。
+
+當[!DNL Target]將請求分類為機器人流量時，個人化可能會失敗或看起來間歇性，因為類似[!UICONTROL Recommendations]和[!UICONTROL 自動鎖定目標]等活動的設定檔查詢、區段評估和個人化內容都已隱藏，如下所述。
+
+在[[!DNL Adobe Experience Platform Web SDK] 總覽](https://experienceleague.adobe.com/zh-hant/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中進一步瞭解如何使用SDK進行實作。
+
+**Interact API要求範例（標頭必須包含`User-Agent`）：**
+
+```http
+POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+Accept: */*
+Content-Type: text/plain; charset=UTF-8
+```
