@@ -3,7 +3,7 @@ user-guide-title: Adobe Target開發人員指南
 breadcrumb-title: Target開發人員指南
 user-guide-description: 了解如何量身打造客戶體驗並將其個人化，以便在您的網站和行動網站、應用程式、社交媒體及其他數位頻道上獲得最大收入。
 nudge: true
-source-git-commit: 72b19deb10f2e0d0c38f76317b1e8fee19ae0be1
+source-git-commit: 5c19d83d1ba84165dee064183ec04a9803dd1a61
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 41%
@@ -87,10 +87,10 @@ ht-degree: 41%
     + [at.js 自訂事件](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
     + [使用 Adobe Experience Cloud Debugger 除錯 at.js](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
     + [使用雲端型例項搭配 Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-  + [at.js 常見問答](implement/client-side/atjs/target-atjs-faq.md)
-  + [at.js 版本詳細資料](implement/client-side/atjs/target-atjs-versions.md)
-  + [從 at.js 1.x 升級為 at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-  + [at.js Cookie](implement/client-side/atjs/atjs-cookies.md)
+    + [at.js 常見問答](implement/client-side/atjs/target-atjs-faq.md)
+    + [at.js 版本詳細資料](implement/client-side/atjs/target-atjs-versions.md)
+    + [從 at.js 1.x 升級為 at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+    + [at.js Cookie](implement/client-side/atjs/atjs-cookies.md)
   + [使用者代理和使用者端提示](implement/client-side/atjs/user-agent-and-client-hints.md)
   + 瞭解全域 mbox {#global-mbox}
     + [了解全域 mbox 概觀](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
