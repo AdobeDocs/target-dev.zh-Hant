@@ -35,7 +35,7 @@ ht-degree: 9%
 >
 >如果您的實作在使用者端使用at.js和[!DNL AppMeasurement]，您應該使用下述的[!UICONTROL Target傳送API]和伺服器端SDK。
 >
->如果您的實作使用[!UICONTROL Adobe Experience Platform Web SDK]，您應該使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network伺服器API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的實作使用[!UICONTROL Adobe Experience Platform Web SDK]，您應該使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network伺服器API]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 下列程序會發生在 [!DNL Target] 的伺服器端實作中:
 
@@ -104,7 +104,7 @@ Recommendations API可讓您以程式設計方式與[!DNL Target]個推薦伺服
 
 當[!DNL Target]將請求分類為機器人流量時，個人化可能會失敗或看起來間歇性，因為已隱藏[!UICONTROL Recommendations]和[!UICONTROL 自動鎖定目標]等活動的設定檔查詢、區段評估和個人化內容。
 
-在[[!DNL Adobe Experience Platform Web SDK] 總覽](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中進一步瞭解如何使用SDK進行實作。
+在[[!DNL Adobe Experience Platform Web SDK] 總覽](https://experienceleague.adobe.com/zh-hant/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中進一步瞭解如何使用SDK進行實作。
 
 **Edge API要求範例（標頭必須包含`User-Agent`）：**
 
