@@ -90,7 +90,7 @@ batch=pcId,param1,param2,param3,param4
 >
 >所有引數名稱和值都必須是URL編碼(UTF-8)，您才能提交隨`Content-Type: application/x-www-form-urlencoded`傳送的批次，且主體以`batch=`開頭。 未編碼的保留字元會讀取為請求語法，而非資料，這可能會導致批次被拒絕、截斷或損壞。
 >
->如果您收到未發出`batchId`的「非預期錯誤」回應，請參閱[大量設定檔更新API傳回「非預期錯誤」](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)以取得疑難排解步驟。
+>如果您收到未發出`batchId`的「非預期錯誤」回應，請參閱[大量設定檔更新API傳回「非預期錯誤」](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-24281)以取得疑難排解步驟。
 
 下列字元通常存在於設定檔值中，但在`application/x-www-form-urlencoded`資料中具有特殊意義。 如果您以未編碼方式傳送資料，請求會失敗或資料已損毀，而不會出現明顯錯誤：
 
