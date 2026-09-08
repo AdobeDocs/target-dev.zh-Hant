@@ -5,21 +5,14 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
@@ -79,10 +72,31 @@ batch=pcId,param1,param2,param3,param4
 * 第一個標頭應該是`pcId`或`thirdPartyId`。 不支援[!UICONTROL Marketing Cloud訪客識別碼]。 [!UICONTROL pcId]是[!DNL Target]產生的visitorID。 `thirdPartyId`是使用者端應用程式所指定的ID，它是透過mbox呼叫傳遞至[!DNL Target]做為`mbox3rdPartyId`。 它必須在這裡稱為`thirdPartyId`。
 * 基於安全理由，您在批次檔案中指定的引數和值必須使用UTF-8進行URL編碼。 引數和值可以轉送至其他邊緣節點，以透過HTTP請求處理。
 * 引數只能使用`paramName`格式。 引數在[!DNL Target]中顯示為`profile.paramName`。
-* 如果您使用[!UICONTROL 大量設定檔更新API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。 如需詳細資訊，請參閱下列 [!DNL Bulk Profile Update API][&#128279;](#empty)中的處理空白值。
+* 如果您使用[!UICONTROL 大量設定檔更新API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。 如需詳細資訊，請參閱下列 [!DNL Bulk Profile Update API]](#empty)中的[處理空白值。
 * 批次檔的大小必須小於 50 MB。 此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
 * 您可以上傳的屬性數目沒有限制。 不過，外部設定檔資料的總計大小不得超過64 KB，其中包括客戶屬性、設定檔API、In-Mbox設定檔引數以及設定檔指令碼輸出。
 * 參數和值會區分大小寫。
+
+### URL編碼需求 {#url-encoding}
+
+>[!IMPORTANT]
+>
+>所有引數名稱和值都必須是URL編碼(UTF-8)，您才能提交隨`Content-Type: application/x-www-form-urlencoded`傳送的批次，且主體以`batch=`開頭。 未編碼的保留字元會讀取為請求語法，而非資料，這可能會導致批次被拒絕、截斷或損壞。
+>
+>如果您收到未發出`batchId`的「非預期錯誤」回應，請參閱[大量設定檔更新API傳回「非預期錯誤」](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)以取得疑難排解步驟。
+
+下列字元通常存在於設定檔值中，但在`application/x-www-form-urlencoded`資料中具有特殊意義。 如果您以未編碼方式傳送資料，請求會失敗或資料已損毀，而不會出現明顯錯誤：
+
+| 字元 | 編碼為 | 如果傳送時未編碼 |
+|---|---|---|
+| `%` | `%25` | 整個批次都會被拒絕。 回應傳回含`success=false`的HTTP 200，並傳回「非預期錯誤」訊息，且未發出任何`batchId`。 |
+| `&` | `%26` | 該批次在前`&`自動截斷。 其餘的列會被捨棄，這可能會導致部分更新或「批次是空的」回應。 |
+| `+` | `%2B` | 字元會自動轉換為空格，因此會損毀儲存的值。 |
+| `=` | `%3D` | 字元可能會誤解為欄位邊界。 |
+
+_例如，值`50% off & more`必須以`50%25 off %26 more`傳送。_
+
+請注意，字母、數字、UTF-8重音字元和字元`- . ! ~ _ * ( )`不需要編碼。 但是，[!DNL Adobe]建議將所有值編碼以避免模稜兩可。
 
 ## HTTP POST要求
 
