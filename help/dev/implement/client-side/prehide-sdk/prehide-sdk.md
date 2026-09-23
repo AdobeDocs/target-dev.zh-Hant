@@ -1,16 +1,13 @@
 ---
 keywords: 預先隱藏SDK，忽隱忽現，防忽隱忽現，預先隱藏，預先隱藏， alloy， at.js，實作，同意， CMP，指令碼位置，內嵌，外部， SDK選擇
-description: 瞭解如何整合 [!DNL Adobe Target] 預先隱藏SDK以消除頁面載入期間非個人化內容的閃爍（閃爍）。 SDK可與Adobe Alloy （網頁SDK）和at.js搭配使用。
+description: 瞭解如何整合[!DNL Adobe Target]預先隱藏SDK以在頁面載入期間消除非個人化內容的閃爍（閃爍）。 SDK可與Adobe Alloy （網頁SDK）和at.js搭配使用。
 title: 預先隱藏SDK整合指南
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # 預先隱藏SDK整合指南
 
@@ -62,8 +59,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->預先隱藏SDK必須在Alloy/at.js之前執行。如果Alloy先載入，頁面會呈現非個人化內容，然後重新呈現。這正是此SDK設計用來防止的閃爍。
-></br>>請勿將`async`或`defer`新增至「預先隱藏SDK」指令碼標籤。需要同步執行，以便在瀏覽器開始佈局頁面之前插入隱藏規則。
+>預先隱藏SDK必須在Alloy/at.js之前執行。 如果Alloy先載入，頁面會呈現非個人化內容，然後重新呈現。 這正是此SDK設計用來防止的閃爍。
+></br>
+>請勿將`async`或`defer`新增至預先隱藏SDK指令碼標籤。 需要同步執行，以便在瀏覽器開始佈局頁面之前插入隱藏規則。
 
 預先隱藏SDK在檔案中出現的時間必須早於在其之後清理的[!DNL Adobe Target] SDK。 載入順序不可協商：
 
