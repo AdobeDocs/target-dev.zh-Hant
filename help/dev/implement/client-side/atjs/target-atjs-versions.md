@@ -1,37 +1,50 @@
 ---
 keywords: at.js版本、at.js版本、發行說明
-description: 檢視 [!DNL Adobe Target] at.js JavaScript程式庫每個版本中變更的詳細資料。
+description: 檢視[!DNL Adobe Target] at.js JavaScript程式庫每個版本中的變更詳細資料。
 title: 每個at.js版本包含什麼？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 235baadf4059d2c363368408012630d6619aef99
+    internal-label: Privacy
+source-git-commit: 1e9b96361fd11095248b8fcae6f7a185f74a39c8
 workflow-type: tm+mt
-source-wordcount: 5174
+source-wordcount: '5217'
 ht-degree: 59%
-
 ---
-
 # at.js 版本詳細資料
 
 有關 [!DNL Adobe Target] at.js JavaScript 程式庫每個版本中的變更的詳細資料。
@@ -47,6 +60,10 @@ ht-degree: 59%
 >您應該升級至1.*x*&#x200B;或2.*x*&#x200B;的最新版本，以取得錯誤修正和安全性修補程式，解決相關主要版本先前次要版本發現的問題。
 
 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的標籤是升級at.js的偏好方法。 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。 這些更新會封裝成新版本的擴充功能，並可在Adobe Experience Platform目錄中提供作為升級版本。 如需詳細資訊，請參閱&#x200B;*標籤總覽*&#x200B;指南中的[擴充功能升級](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=zh-Hant)。
+
+## at.js 2.11.9版（2026年2月）
+
+* 解決At.js applyOffers函式無法正確偵測及修改Lightning Web Components (LWC)的問題。 At.js程式庫已更新，以偵測LWC元件並套用適當的修改。 (TGT-54478)
 
 ## at.js 2.11.8版（2025年3月31日）
 
