@@ -1,30 +1,39 @@
 ---
 keywords: 客戶服務； CNAME；憑證程式；正式名稱； Cookie；憑證； AMC； Adobe Managed憑證； Digicert；網域控制驗證； DCV
-description: 與 [!DNL Adobe] 客戶服務合作，在 [!DNL Adobe Target] 中實作CNAME （規範名稱）支援，以處理廣告封鎖問題。
+description: 與[!DNL Adobe]客戶服務合作，在[!DNL Adobe Target]中實作CNAME （正式名稱）支援，以處理廣告封鎖問題。
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+TQID: 'https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 78ca638b097a9d3f3028353c80f4929e036e2f49
 workflow-type: tm+mt
-source-wordcount: 1255
+source-wordcount: '1326'
 ht-degree: 1%
-
 ---
-
 # CNAME和[!DNL Target]
 
 使用[!DNL Adobe] Client Care在[!DNL Adobe Target]中實作CNAME （規範名稱）支援的說明。 使用CNAME來處理廣告封鎖問題或ITP相關（智慧型追蹤預防） Cookie政策。 使用CNAME時，會呼叫客戶擁有的網域，而非[!DNL Adobe]擁有的網域。
@@ -32,18 +41,18 @@ ht-degree: 1%
 ## 在[!DNL Target]中要求CNAME支援
 
 1. 決定您的SSL憑證所需的主機名稱清單（請參閱底下的常見問題集）。
-1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/zh-hant/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
+1. [填寫此表單](/help/dev/implement/assets/FPC_Request_Form.xlsx)，並在您[開啟要求CNAME支援的 [!DNL Adobe] 客戶服務票證](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)時加入它：
 
    * [!DNL Adobe Target]使用者端代碼：
    * SSL憑證主機名稱（範例： `target.example.com target.example.org`）：
    * SSL憑證購買者（[!DNL Adobe]強烈建議使用，請參閱常見問題集）： Adobe/customer
    * 如果客戶購買憑證（也稱為「自帶憑證」，BYOC），請填寫以下其他詳細資料：
 
-      * 憑證組織（範例：範例Company Inc）：
-      * 憑證組織單位（選用，例如：行銷）：
-      * 憑證國家/地區（範例：美國）：
-      * 憑證州/地區（範例：加州）：
-      * 憑證城市（範例：聖荷西）：
+     * 憑證組織（範例：範例Company Inc）：
+     * 憑證組織單位（選用，例如：行銷）：
+     * 憑證國家/地區（範例：美國）：
+     * 憑證州/地區（範例：加州）：
+     * 憑證城市（範例：聖荷西）：
 
 1. 對於每個主機名稱要求，Adobe會建立實作，並傳回CNAME記錄名稱供您建立，該名稱將包含尾碼為`tt.omtrdc.net`的隨機字串
 
