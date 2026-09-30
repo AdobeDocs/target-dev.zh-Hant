@@ -1,24 +1,30 @@
 ---
-title: '使用Python SDK傳送顯示或按一下通知給 [!DNL Adobe Target] '
-description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
+title: 使用Python SDK傳送顯示或按一下通知給[!DNL Adobe Target]
+description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至[!DNL Adobe Target]以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
+TQID: 'https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Measurement
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 420
+source-wordcount: '422'
 ht-degree: 8%
-
 ---
-
 # 傳送通知(Python)
 
 ## 說明
@@ -70,7 +76,7 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端[!DNL Analytics]使用狀況下的[!DNL Analytics]承載 |
 | trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
+| response_tokens | 清單[dict] | [回應&#x200B;權杖](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 ## 範例

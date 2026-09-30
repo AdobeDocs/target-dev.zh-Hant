@@ -1,20 +1,23 @@
 ---
-title: 在 [!DNL Adobe Target] Java SDK中實作Proxy設定
-description: 瞭解如何在 [!DNL Adobe Target] Java SDK中設定TargetClient Proxy設定。
+title: 在[!DNL Adobe Target] Java SDK中實作Proxy設定
+description: 瞭解如何在[!DNL Adobe Target] Java SDK中設定TargetClient Proxy設定。
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-TQID: https://experienceleague.adobe.com/Vo8KrM-3AGIvoO-E-iAQcAPqzXE24BM30LX7ji5E2Nk
+TQID: 'https://experienceleague.adobe.com/Vo8KrM-3AGIvoO-E-iAQcAPqzXE24BM30LX7ji5E2Nk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 170
+source-wordcount: '172'
 ht-degree: 2%
-
 ---
-
 # Proxy設定(Java)
 
 ## 基本代理伺服器

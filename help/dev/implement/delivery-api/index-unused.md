@@ -2,13 +2,17 @@
 title: Adobe Target傳送API
 description: Adobe Target傳送API
 openAPISpec: https://raw.githubusercontent.com/AdobeDocs/target-developers/main/src/delivery-api.json
-source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '9'
 ht-degree: 0%
-
 ---
-
 
 # 預留位置
 

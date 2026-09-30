@@ -3,25 +3,32 @@ title: 使用功能標幟和裝置上決策執行A/B測試
 description: 使用裝置上決策執行具有功能標幟的A/B測試。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+TQID: 'https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 813
+source-wordcount: '813'
 ht-degree: 1%
-
 ---
-
 # 使用功能標幟執行A/B測試
 
 ## 步驟摘要
@@ -50,7 +57,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用「裝置上決策」切換。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用「裝置上決策」切換。
 
 啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換後，[!DNL Adobe Target]會開始為您的使用者端產生規則成品。
 
@@ -60,7 +67,7 @@ ht-degree: 1%
 
 ![替代影像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**&#x200B;[!UICONTROL &#x200B;預設Workspace &#x200B;]&#x200B;**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
+在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**[!UICONTROL &#x200B;預設Workspace ]**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代影像](assets/asset-form.png)
 

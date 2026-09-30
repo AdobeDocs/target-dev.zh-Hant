@@ -3,7 +3,16 @@ keywords: 預先隱藏SDK，忽隱忽現，防忽隱忽現，預先隱藏，預�
 description: 瞭解如何整合[!DNL Adobe Target]預先隱藏SDK以在頁面載入期間消除非個人化內容的閃爍（閃爍）。 SDK可與Adobe Alloy （網頁SDK）和at.js搭配使用。
 title: 預先隱藏SDK整合指南
 feature: Implementation
-source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 1%

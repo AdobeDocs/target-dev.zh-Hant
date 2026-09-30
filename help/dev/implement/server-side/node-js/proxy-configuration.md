@@ -1,20 +1,23 @@
 ---
-title: 在 [!DNL Adobe Target] Node.js SDK中實作Proxy設定
-description: 瞭解如何在 [!DNL Adobe Target] Node.js SDK中設定[!UICONTROL TargetClient] Proxy設定。
+title: 在[!DNL Adobe Target] Node.js SDK中實作Proxy設定
+description: 瞭解如何在[!DNL Adobe Target] Node.js SDK中設定[!UICONTROL TargetClient] Proxy設定。
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
-TQID: https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA
+TQID: 'https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 84
+source-wordcount: '100'
 ht-degree: 0%
-
 ---
-
 # Proxy設定(Node.js)
 
 若要為SDK節點的HTTP請求設定Proxy，請覆寫SDK在初始化期間使用的擷取API。

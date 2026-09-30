@@ -3,26 +3,38 @@ title: 如何使用傳送API擷取建議
 description: 本文會引導開發人員完成使用Adobe Target Delivery API擷取建議內容所需的步驟。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
+TQID: 'https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1284
+source-wordcount: '1380'
 ht-degree: 1%
-
 ---
-
 # 使用傳送API擷取建議
 
 Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應，也可用於非HTML型體驗，包括應用程式、熒幕、主控台、電子郵件、資訊站和其他顯示裝置。 換言之，當無法使用Target資料庫和JavaScript時，[Target傳送API](/help/dev/implement/delivery-api/overview.md)仍可讓您存取所有的Target功能，以提供個人化的體驗。
@@ -52,9 +64,9 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 ## 使用表單式體驗撰寫器建立建議
 
-若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)。
+若要建立可與傳送API搭配使用的建議，請使用[表單式撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
 
-1. 首先，建立並儲存JSON型設計以用於您的建議。如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hant)的相關檔案。在此範例中，設計名為&#x200B;*簡單JSON。*
+1. 首先，建立並儲存JSON型設計以用於您的建議。 如需範例JSON，以及有關設定表單式活動時如何傳回JSON回應的背景資訊，請參閱[建立建議設計](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的相關檔案。 在此範例中，設計名為&#x200B;*簡單JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，導覽至&#x200B;**[!UICONTROL 活動]** > **[!UICONTROL 建立活動]** > **[!UICONTROL 建議]**，然後選取&#x200B;**[!UICONTROL 表單]**。
@@ -62,9 +74,9 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
 1. 選取屬性，然後按一下&#x200B;**[!UICONTROL 下一步]**。
-1. 定義您想要使用者收到建議回應的位置。下列範例使用名為&#x200B;*api_charter*&#x200B;的位置。選取您先前建立且名為&#x200B;*簡單JSON.*的JSON型設計
+1. 定義您想要使用者收到建議回應的位置。 下列範例使用名為&#x200B;*api_charter*&#x200B;的位置。 選取您先前建立且名為&#x200B;*簡單JSON的JSON型設計。*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hant)，您可以使用傳送API來擷取結果。
+1. 儲存並啟用建議。 它會產生結果。 [結果就緒後](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用傳送API來擷取結果。
 
 ## 使用傳送API
 
@@ -72,19 +84,19 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 請注意，使用者端代碼為必要項。提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL 設定]**，在Adobe Target中找到您的使用者端代碼。請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**&#x200B;值。
+1. 請注意，使用者端代碼為必要項。 提醒您，您可以導覽至&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL 設定]**，在Adobe Target中找到您的使用者端代碼。 請注意&#x200B;**建議API Token**&#x200B;區段中的&#x200B;**使用者端代碼**值。
    ![client-code.png](assets/client-code.png)
 1. 取得使用者端代碼後，請建構您的傳送API呼叫。 以下範例以[傳送API Postman集合](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL 網頁批次Mbox傳送API呼叫]**&#x200B;開始，並進行相關修改。 例如：
    * 已從&#x200B;**內文**&#x200B;移除&#x200B;**瀏覽器**&#x200B;和&#x200B;**位址**&#x200B;物件，因為非HTML使用案例不需要它們
    * 此範例中將&#x200B;*api_charter*&#x200B;列為位置名稱
    * 會指定entity.id，因為此推薦是根據內容相似度，而內容相似度需要傳遞目前的專案索引鍵至Target。
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-請記得正確設定查詢引數。例如，請務必視需要指定`{{CLIENT_CODE}}`。<!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
+請記得正確設定查詢引數。 例如，請務必視需要指定`{{CLIENT_CODE}}`。 <!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![client-code3](assets/client-code3.png)
 1. 傳送要求。 這會針對&#x200B;*api_charter*&#x200B;位置執行，該位置上執行有效建議，並使用您的JSON設計定義，這將輸出建議實體清單。
 1. 根據JSON設計接收回應。
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
-回應包括索引鍵ID以及建議實體的實體ID。
+   回應包括索引鍵ID以及建議實體的實體ID。
 
 以這種方式搭配建議使用傳送API，可讓您在非HTML裝置上向訪客顯示建議之前，先執行其他步驟。 例如，您可以在顯示最終結果之前，從傳送API取得回應，從其他系統（例如CMS、PIM或電子商務平台）執行實體屬性詳細資訊（詳細目錄、價格、評等專案）的額外即時查詢。
 
@@ -125,7 +137,7 @@ Adobe Target和Adobe Target Recommendations API可用於針對網頁提供回應
 ## 參考檔案
 
 * [Adobe Target Delivery API檔案](/help/dev/implement/delivery-api/overview.md)
-* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hant)
+* [將推薦與電子郵件整合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## 摘要與評論
 

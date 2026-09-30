@@ -5,26 +5,36 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+TQID: 'https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1144
+source-wordcount: '1144'
 ht-degree: 3%
-
 ---
-
 # 演算體驗
 
 請依照&#x200B;*轉譯器體驗*&#x200B;圖表中的步驟來確保轉譯器體驗所需的所有必要工作都以正確的順序執行。
@@ -71,8 +81,8 @@ ht-degree: 3%
 **可用選項**
 
 * 依ID促銷
-* [依集合促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=zh-Hant){target=_blank}
-* [依屬性促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hant){target=_blank}
+* [依集合促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [依屬性促銷](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **需要實體引數**
 
@@ -80,7 +90,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [新增促銷活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=zh-Hant){target=_blank}
+* [新增促銷活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -104,7 +114,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [購物車型](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [購物車型](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -133,7 +143,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於人氣](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -159,7 +169,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於專案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -182,7 +192,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基於使用者](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -204,7 +214,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [自訂條件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hant#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [自訂條件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +226,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [使用動態和靜態包含規則](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=zh-Hant){target=_blank}
+* [使用動態和靜態包含規則](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +240,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [是否可以動態地排除實體?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hant#exclude){target=_blank}
+* [是否可以動態地排除實體?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +252,9 @@ ht-degree: 3%
 
 **讀數**
 
-* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hant){target=_blank}
+* [實體屬性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您也可以使用[!DNL Target] UI建立[產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hant){target=_blank}，以更新[!DNL Recommendations]的產品目錄，進而完成此步驟。
+您也可以使用[!DNL Target] UI建立[產品摘要](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}，以更新[!DNL Recommendations]的產品目錄，進而完成此步驟。
 
 +++
 
@@ -258,7 +268,7 @@ ht-degree: 3%
 
 **讀數**
 
-* [輪廓屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant){target=_blank}
+* [輪廓屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,7 +276,7 @@ ht-degree: 3%
 
 ## 3.11：引發頁面載入請求 {#fire}
 
-此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant){target=_blank} (VEC)中編寫的體驗。
+此步驟會觸發要求中具有`execute` > `pageLoad`裝載的[!DNL Delivery API]呼叫。 `getOffers()`方法會擷取體驗，而`applyOffers()`會轉譯頁面上的體驗。 需要`pageLoad`要求，才能轉譯在[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)中編寫的體驗。
 
 +++檢視詳細資料
 

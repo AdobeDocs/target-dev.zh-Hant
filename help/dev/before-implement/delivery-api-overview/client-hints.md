@@ -1,26 +1,32 @@
 ---
 title: Adobe Target Delivery API使用者端提示
-description: 如何在 [!DNL Adobe Target] 傳送API中使用使用者端提示？
+description: 如何在[!DNL Adobe Target]傳送API中使用使用者端提示？
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/ijbOsWitZdNHpjNduh8xtPyEYdw2tsWz2rB6jZ5JbQA
+TQID: 'https://experienceleague.adobe.com/ijbOsWitZdNHpjNduh8xtPyEYdw2tsWz2rB6jZ5JbQA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Audience segmentation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 282
+source-wordcount: '283'
 ht-degree: 0%
-
 ---
-
 # 使用者端提示和[!UICONTROL Adobe Target Delivery API]
 
 使用者端提示必須傳送至優惠方案請求上的[!DNL Adobe Target]。

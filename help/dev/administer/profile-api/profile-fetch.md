@@ -1,21 +1,24 @@
 ---
 title: 擷取設定檔
-description: 瞭解如何使用Adobe Target設定檔API來擷取訪客資料，以用於 [!DNL Target]。
+description: 瞭解如何使用Adobe Target設定檔API來擷取訪客資料，以用於[!DNL Target]。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+TQID: 'https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 297
+source-wordcount: '297'
 ht-degree: 0%
-
 ---
-
 # 擷取設定檔
 
 可透過三種方式擷取[!DNL Target]設定檔：使用`[!DNL Experience Cloud Visitor ID]` (`ECID`)、`tntid`或`thirdPartyId`。

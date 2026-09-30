@@ -3,29 +3,44 @@ title: Adobe模型API概觀
 description: 模型API的概觀，使用者可透過該API阻擋將功能納入機器學習模型中。
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+TQID: 'https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1321
+source-wordcount: '1321'
 ht-degree: 2%
-
 ---
-
 # 模型API概觀
 
 模型API （也稱為Blocklist API）可讓使用者檢視和管理機器學習模型中用於[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活動的功能清單。 如果使用者想排除模型用於AP或AT活動的功能，他們可以使用模型API將該功能新增到「封鎖清單」。
 
-**[!UICONTROL blocklist]**&#x200B;定義了[!DNL Adobe Target]將從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hant)。
+**[!UICONTROL blocklist]**&#x200B;定義了[!DNL Adobe Target]將從其機器學習模型中排除的功能集。 如需功能的詳細資訊，請參閱[機器學習演演算法使用的資料 [!DNL Target] ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
 
 封鎖清單可依活動（活動層級）定義，或針對[!DNL Target]帳戶（全域層級）內的所有活動定義。
 
@@ -111,7 +126,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >若要尋找您的活動識別碼，請導覽至[!DNL Target] UI中的活動清單。 按一下感興趣的活動。 活動ID會顯示在產生的「活動概覽」頁面內文中，以及該頁面的URL結尾處。
 
-**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hant)中檢視這些好記的名稱。
+**[!UICONTROL externalName]**&#x200B;是功能的好記名稱。 由[!DNL Target]建立，此值可能會隨著時間而改變。 使用者可以在[Personalization前瞻分析報表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中檢視這些好記的名稱。
 
 **[!UICONTROL internalName]**&#x200B;是功能的實際識別碼。 [!DNL Target]也建立了它，但無法變更。 這是您需要參考的值，以識別要加入封鎖清單的功能。
 

@@ -1,31 +1,42 @@
 ---
 keywords: tls， tls 1.0，傳輸層安全性，加密， tls 1.1， tls 1.2
-description: 瞭解 [!DNL Target] 如何使用TLS （傳輸層安全性）通訊協定來維持最高安全性標準，提升客戶資料的安全性。
-title: ' [!DNL Target] 如何使用TLS來提供安全性？'
+description: 瞭解[!DNL Target]如何使用TLS （傳輸層安全性）通訊協定來維持最高安全性標準，提升客戶資料的安全性。
+title: '[!DNL Target]如何使用TLS來提供安全性？'
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
-TQID: https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E
+TQID: 'https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1231
+source-wordcount: '1233'
 ht-degree: 41%
-
 ---
-
 # TLS (傳輸層安全性) 加密變更
 
 有關[!DNL Adobe]和[!DNL Adobe Target]如何使用TLS （傳輸層安全性）維持最高安全性標準及提升客戶資料安全性的變更資訊。
@@ -44,7 +55,7 @@ ht-degree: 41%
 
 Adobe會分階段將客戶移至TLS 1.2。 對於網域已符合1.2規範的訪客，我們會將其移至TLS 1.2，您無需進行任何變更。 大部分的客戶網域已支援TLS 1.2；不過，如果您的網域不支援TLS 1.2，我們會像今天一樣將這些網域保留在TLS 1.1上（直到2020年3月）。
 
-在此移轉階段，您應該不會遇到任何問題。 如果VEC已停止載入先前正常運作的網站，請[開啟Client Care票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hant&#reference_ACA3391A00EF467B87930A450050077C)，說明移轉作業可能為背後原因。
+在此移轉階段，您應該不會遇到任何問題。 如果VEC已停止載入先前正常運作的網站，請[開啟Client Care票證](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)，說明移轉作業可能為背後原因。
 
 然而，如果您是使用TSL 1.1但不支援TLS 1.2的客戶之一，則您應規劃網域/基礎架構到TLS 1.2的移動。 我們將繼續支援TLS 1.1通訊協定，直到2020年3月1日。 自2020年3月1日起，[!DNL Target]將不支援透過增強體驗撰寫器功能用於VEC的TLS 1.1通訊協定。
 

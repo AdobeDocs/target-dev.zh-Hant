@@ -1,16 +1,26 @@
 ---
 keywords: 選件，預先擷取， iOS， android， sdk，行動，行動sdk， 8美元
-description: 使用iOS和Android Mobile SDK中的 [!DNL Adobe Target] 預先擷取功能，透過快取伺服器回應，儘量以最少次數擷取選件。
+description: 使用iOS和Android Mobile SDK中的[!DNL Adobe Target]預先擷取功能，透過快取伺服器回應，儘量以最少次數擷取選件。
 title: 我可以預先擷取行動應用程式的選件內容嗎？
 feature: Implement Mobile
 exl-id: 6f8e8298-f1e9-46f0-828f-717c7d632077
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '318'
 ht-degree: 37%
-
 ---
-
 # 預先擷取產品建議內容
 
 [!DNL Target] 預先擷取功能會使用 iOS 和 Android Mobile SDK，透過快取伺服器回應盡量以最少次數擷取產品建議。
@@ -26,9 +36,9 @@ ht-degree: 37%
 搭配iOS和Android Mobile SDK使用預先擷取方法時，請考量下列限制：
 
 * 預先擷取內容不會在跨啟動之間持續有效。 只要應用程式仍然存在，或直到呼叫 `clearPrefetchCache()` 方法為止，則會快取預先擷取內容。
-* [!UICONTROL 自動分配]和[!UICONTROL 自動鎖定目標]流量分配方法不支援預先擷取功能，適用於[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動中的[建議選件](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=zh-Hant)。
+* [!UICONTROL 自動分配]和[!UICONTROL 自動鎖定目標]流量分配方法不支援預先擷取功能，適用於[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活動型別，或A/B或XT活動中的[建議選件](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)。
 
 如需詳細資訊，包括預先提取方法、公用類別和程式碼範例，請參閱:
 
-* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=zh-Hant)。
-* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=zh-Hant)。
+* **iOS：** [在&#x200B;*Mobile Services iOS SDK說明*&#x200B;中，預先擷取iOS中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html)。
+* **Android：** [在&#x200B;*Mobile Services Android SDK說明*&#x200B;中，預先擷取Android中的選件內容](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html)。

@@ -1,22 +1,26 @@
 ---
-title: 如何在 [!DNL Adobe Target] Node.js SDK中使用非同步要求
-description: 瞭解 [!DNL Target] Node.js SDK如何支援非同步要求，將有效目標時間減少為零。
+title: 如何在[!DNL Adobe Target] Node.js SDK中使用非同步要求
+description: 瞭解[!DNL Target] Node.js SDK如何支援非同步要求，這可以將有效目標時間減少為零。
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
-TQID: https://experienceleague.adobe.com/cIoEnAinSLl-TO2vunG164i97Y2h-9NdE487ZyXJSzs
+TQID: 'https://experienceleague.adobe.com/cIoEnAinSLl-TO2vunG164i97Y2h-9NdE487ZyXJSzs'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Experimentation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 116
-ht-degree: 18%
-
+source-wordcount: '118'
+ht-degree: 17%
 ---
-
 # 取得屬性(Node.js)
 
 ## 說明

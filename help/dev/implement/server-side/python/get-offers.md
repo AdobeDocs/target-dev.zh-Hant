@@ -1,22 +1,26 @@
 ---
-title: 使用Python SDK時，請在 [!DNL Adobe Target] 中使用getOffers()
-description: 瞭解如何使用getOffers()執行決定並從 [!DNL Adobe Target]擷取體驗。
+title: 使用Python SDK時，請在[!DNL Adobe Target]中使用getOffers()
+description: 瞭解如何使用getOffers()執行決定並從[!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
-TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
+TQID: 'https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Metadata
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 366
-ht-degree: 12%
-
+source-wordcount: '367'
+ht-degree: 11%
 ---
-
 # 取得選件(Python)
 
 ## 說明
@@ -58,7 +62,7 @@ target_client_instance.get_offers(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 清單[AnalyticsResponse] | 使用者端Analytics使用狀況下的Analytics裝載 |
 | trace | 清單[dict] | 所有請求mbox/檢視的彙總追蹤資料 |
-| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)的清單 |
+| response_tokens | 清單[dict] | [回應Token&#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的清單 |
 | meta | dict | 用於裝置上決策的其他決策中繼資料 |
 
 用來將資料傳回瀏覽器的`target_cookie`和`target_location_hint_cookie`物件具有以下結構：

@@ -1,24 +1,32 @@
 ---
-description: 瞭解如何使用 [!DNL Adobe Mobile SDK] 向行動應用程式訪客顯示最佳體驗。
-title: ' [!DNL Target] 在行動應用程式中如何運作？'
+description: 瞭解如何使用[!DNL Adobe Mobile SDK]向您的行動應用程式訪客顯示最佳體驗。
+title: '[!DNL Target]在行動應用程式中如何運作？'
 feature: Implement Mobile
 exl-id: 33001f01-fde6-48cb-ac02-d1a632b2150d
-TQID: https://experienceleague.adobe.com/R3B-i9BFKaoTkbfzVLOU-j8VV2K-MpNrf0WTCkMceT8
+TQID: 'https://experienceleague.adobe.com/R3B-i9BFKaoTkbfzVLOU-j8VV2K-MpNrf0WTCkMceT8'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 237
-ht-degree: 21%
-
+source-wordcount: '239'
+ht-degree: 20%
 ---
-
 # [!DNL Target]在行動應用程式中如何運作
 
 [!DNL Adobe Mobile SDK]連絡[!DNL Target]伺服器以取得內容以及其他資料點，向使用者顯示正確的體驗。
@@ -33,7 +41,7 @@ ht-degree: 21%
 
 *目標位置*&#x200B;又稱為 mbox。 應用程式中識別的位置可供測試或個人化 (例如，主畫面的歡迎訊息)。 測試建立程序期間會識別這些位置。
 
-*[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)*&#x200B;是使用者執行的動作，可識別特定活動是否成功（例如註冊、購物、訂票等）。
+*[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)*&#x200B;是使用者執行的動作，可識別特定活動是否成功（例如註冊、購物、訂票等）。
 
 ![替代影像](assets/mobile-target-location.png)
 

@@ -1,27 +1,33 @@
 ---
 keywords: 實作， api，設定檔，設定檔api設定，驗證token
-description: 瞭解如何透過 [!DNL Adobe Target] API設定批次更新的驗證，並產生設定檔驗證Token。
+description: 瞭解如何透過[!DNL Adobe Target] API設定批次更新的驗證，並產生設定檔驗證Token。
 title: 如何使用設定檔API設定來啟用或停用批次更新？
 feature: APIs/SDKs
 exl-id: 968f33d0-296b-4248-8c9a-8e6f3077bdfa
-TQID: https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM
+TQID: 'https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 363
+source-wordcount: '364'
 ht-degree: 31%
-
 ---
-
 # 輪廓 API 設定
 
 啟用或停用透過[!DNL Adobe Target] API批次更新的驗證，並產生設定檔驗證Token。
@@ -47,11 +53,11 @@ ht-degree: 31%
 
    * 管理員角色或至少擁有核准者許可權
 
-     如需Target Standard客戶的詳細資訊，請參閱&#x200B;*使用者*&#x200B;中的[指定角色和許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=zh-Hant#roles-permissions)。 如需有關 [!DNL Target Premium] 客戶的詳細資訊，請參閱[設定企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hant)。
+     如需Target Standard客戶的詳細資訊，請參閱&#x200B;*使用者*&#x200B;中的[指定角色和許可權](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions)。 如需有關 [!DNL Target Premium] 客戶的詳細資訊，請參閱[設定企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
 
    * 工作區/產品設定檔層級的管理員角色
 
-     工作區僅適用於 [!DNL Target Premium] 客戶。 如需詳細資訊，請參閱[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hant)。
+     工作區僅適用於 [!DNL Target Premium] 客戶。 如需詳細資訊，請參閱[企業使用者權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
 
    * [!DNL Adobe Target] 產品層級的管理員權限 (Sysadmin 權限)
 

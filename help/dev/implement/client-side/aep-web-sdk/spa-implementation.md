@@ -1,27 +1,36 @@
 ---
 title: '[!DNL Adobe Experience Platform Web SDK]的單頁應用程式實作'
-description: 瞭解如何使用 [!DNL Target]建立 [!DNL Adobe Experience Platform Web SDK]的單頁應用程式(SPA)實作。
+description: 瞭解如何使用[!DNL Target]建立[!DNL Adobe Experience Platform Web SDK]的單頁應用程式(SPA)實作。
 keywords: target；adobe target；xdm檢視；檢視；單頁應用程式；SPA；SPA生命週期；使用者端；AB測試；AB；體驗鎖定目標；XT；VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # 實作單頁應用程式
 
 [!DNL Adobe Experience Platform Web SDK]提供豐富的功能，讓貴公司能以新世代使用者端技術(例如單頁應用程式(SPA))為基礎進行個人化。
@@ -72,7 +81,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM檢視]可在[!DNL Target]中使用，讓行銷人員透過[!UICONTROL 視覺化體驗撰寫器]在SPA上執行A/B和XT測試。 若要這麼做，必須執行下列步驟，以完成一次性開發人員設定：
 
-1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/install/overview)。
+1. 安裝[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)。
 2. 決定您要個人化的單頁應用程式中的所有[!UICONTROL XDM檢視]。
 3. 定義[!UICONTROL XDM檢視]後，若要傳遞A/B或XT VEC活動，請在您的單頁應用程式中實作`sendEvent()`函式，並將`renderDecisions`設為`true`以及對應的[!UICONTROL XDM檢視]。 必須在`xdm.web.webPageDetails.viewName`中傳遞[!UICONTROL XDM檢視]。 此步驟可讓行銷人員運用[!UICONTROL 視覺化體驗撰寫器]，針對這些XDM啟動A/B和XT測試。
 
@@ -232,7 +241,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
+>若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC Helper擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
 
 ### [!UICONTROL 修改]面板
 

@@ -1,23 +1,30 @@
 ---
 keywords: 行動應用程式, 行動應用程式位置, target mobile 應用程式, mobile target 位置, 行動應用程式成功量度
-description: 檢視程式碼範例，協助您瞭解如何在iOS應用程式中建立位置和成功量度，以便使用 [!DNL Adobe Target] 個人化和最佳化您的應用程式。
-title: 如何在iOS應用程式中建立 [!DNL Target] 位置和成功量度？
+description: 檢視程式碼範例，協助您瞭解如何在iOS應用程式中建立位置和成功量度，以便使用[!DNL Adobe Target]個人化和最佳化您的應用程式。
+title: 如何在iOS應用程式中建立[!DNL Target]位置和成功量度？
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+TQID: 'https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Beginner
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 469
-ht-degree: 63%
-
+source-wordcount: '471'
+ht-degree: 62%
 ---
-
 # iOS — 建立[!DNL Target]位置和成功量度
 
 若要在您的行動應用程式中使用[!DNL Target]，請建立位置和成功量度。
@@ -28,11 +35,11 @@ ht-degree: 63%
 >
 >適用於行動應用程式的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是建議的解決方案，可支援[!DNL Adobe Experience Cloud]解決方案與行動應用程式中的服務。
 
-此區段包括可用作您的應用程式範本的樣本代碼。 此區段中的樣本包含 iOS 的代碼。 Android 適用相同的模式。 您可以在[適用於Experience Cloud解決方案的Android SDK 4.x&rbrace;指南](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=zh-Hant)中找到Android的特定語法。
+此區段包括可用作您的應用程式範本的樣本代碼。 此區段中的樣本包含 iOS 的代碼。 Android 適用相同的模式。 您可以在[適用於Experience Cloud解決方案的Android SDK 4.x}指南](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)中找到Android的特定語法。
 
 >[!NOTE]
 >
->請參閱[行動檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=zh-Hant)，以取得所有可用[!DNL Target]方法的清單。
+>請參閱[行動檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html)，以取得所有可用[!DNL Target]方法的清單。
 
 若要在您的應用程式中建立[!DNL Target]位置並進行要求，有兩個主要方法：
 

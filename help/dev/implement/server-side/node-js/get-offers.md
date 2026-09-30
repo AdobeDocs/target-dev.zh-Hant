@@ -1,20 +1,23 @@
 ---
-title: 使用Node.js SDK時，請在 [!DNL Adobe Target] 中使用[!UICONTROL getOffers()]
-description: 瞭解如何使用[!UICONTROL getOffers()]執行決定並從 [!DNL Adobe Target]擷取體驗。
+title: 使用Node.js SDK時，請在[!DNL Adobe Target]中使用[!UICONTROL getOffers()]
+description: 瞭解如何使用[!UICONTROL getOffers()]執行決定並從[!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+TQID: 'https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 342
+source-wordcount: '343'
 ht-degree: 19%
-
 ---
-
 # [!UICONTROL 取得選件] (Node.js)
 
 ## 說明
@@ -57,7 +60,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | 物件 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 物件 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 陣列 | 使用使用者端Analytics時的Analytics裝載 |
-| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant？)的清單。 |
+| responseTokens | 陣列 | [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html？)的清單。 |
 | trace | 陣列 | 所有請求mbox/檢視的彙總追蹤資料 |
 | 狀態 | 物件 | 包含回應狀態的物件。 |
 | 決策方法 | 字串 | 決定要使用的決策方法（[裝置上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、伺服器端、混合式） |

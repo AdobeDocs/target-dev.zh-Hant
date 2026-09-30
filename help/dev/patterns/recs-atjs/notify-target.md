@@ -1,26 +1,33 @@
 ---
 title: 通知Target
-description: 請確定所有需要由 [!DNL Target] 追蹤的事件都是使用trackEvent方法傳送。
+description: 請確定所有需要由[!DNL Target]追蹤的事件都是使用trackEvent方法傳送。
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # 通知[!DNL Target]
 
 完成此步驟可確保所有必須傳送至[!DNL Adobe Target]的事件都會使用`trackEvent`方法傳送。
@@ -56,11 +63,11 @@ ht-degree: 0%
 * 與您的業務團隊會面，以識別所有可視為轉換或成功量度的事件。 您也必須識別產生收入的轉換事件，以便將這些詳細資料連同事件資料一起傳送給[!DNL Target]。
 * 確定資料層中可以使用下列屬性，以便您在傳送時能夠包含轉換事件。 轉換事件會產生收入，例如產品購買或加入購物車事件。
 
-   * `productPurchaseId`：訂單中已購買的產品ID。 請使用逗號分隔多個產品。
-   * `orderTotal`：購買的訂單總計。
-   * `orderId`：購買的訂單識別碼。
+  * `productPurchaseId`：訂單中已購買的產品ID。 請使用逗號分隔多個產品。
+  * `orderTotal`：購買的訂單總計。
+  * `orderId`：購買的訂單識別碼。
 
-  下圖顯示 [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hant){target=_blank}的規則，此規則僅應在[!UICONTROL Confirmation]頁面上引發。
+  下圖顯示 [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank}的[規則，此規則僅應在[!UICONTROL Confirmation]頁面上引發。
 
   ![動作設定頁面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -69,7 +76,7 @@ ht-degree: 0%
 **讀數**
 
 * [adobe.target.trackEvent()方法](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [適用於購物車型標準的cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hant#cart-based){target=_blank}
+* [適用於購物車型標準的cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **動作**
 

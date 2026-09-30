@@ -1,25 +1,30 @@
 ---
 title: 自動下載、儲存和更新裝置上決策規則成品
-description: 瞭解如何在初始化 [!DNL Adobe Target] SDK時使用裝置上決策規則成品。
+description: 瞭解如何在初始化[!DNL Adobe Target] SDK時使用裝置上決策規則成品。
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
-TQID: https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8
+TQID: 'https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 352
+source-wordcount: '353'
 ht-degree: 0%
-
 ---
-
 # 透過[!DNL Adobe Target] SDK自動下載、儲存和更新規則成品
 
 當您能夠同時初始化[!DNL Adobe Target] SDK並啟動Web伺服器時，此方法將最理想。 規則成品將由[!DNL Adobe Target] SDK下載，並在您的Web伺服器應用程式開始提供請求之前快取到記憶體中。 一旦您的Web應用程式啟動並執行，所有[!DNL Adobe Target]決定都將使用記憶體中的規則成品來執行。 快取規則成品將會根據您在SDK初始化步驟中指定的`pollingInterval`更新。
@@ -105,7 +110,7 @@ npm i @adobe/target-nodejs-sdk -P
 1. 您可以導覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**，從[!DNL Adobe Target]擷取使用者端和organizationId，如下所示。
 
    <!-- Insert image-client-code.png -->
-   在Target![&#128279;](assets/asset-rule-artifact-3.png)中管理下的實作頁面
+   在Target](assets/asset-rule-artifact-3.png)中管理下的![實作頁面
 
 ## &#x200B;3. 儲存並使用規則成品
 

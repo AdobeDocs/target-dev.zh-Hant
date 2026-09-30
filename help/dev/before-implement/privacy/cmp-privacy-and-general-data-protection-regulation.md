@@ -4,36 +4,48 @@ description: 瞭解Target和歐盟一般資料保護規範(GDPR)、加州消費�
 title: Target如何處理隱私權與資料保護規範？
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+TQID: 'https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2432
+source-wordcount: '2432'
 ht-degree: 61%
-
 ---
-
 # 隱私權與資料保護規範
 
 有關歐盟一般資料保護規範 (GDPR)、加州消費者隱私保護法 (CCPA) 及其他國際隱私規定的資訊。 瞭解這些規範如何影響您的組織和Adobe Target。
 
 ## 隱私權與一般資料保護規範 (GDPR) 概觀
 
-自 2018 年 5 月 25 日起，歐盟的 GDPR 已正式生效。 如需有關此規範對您有何意義的詳細資訊，請參閱 [GDPR 和您的企業](https://business.adobe.com/tw/privacy/general-data-protection-regulation.html)。
+自 2018 年 5 月 25 日起，歐盟的 GDPR 已正式生效。 如需有關此規範對您有何意義的詳細資訊，請參閱 [GDPR 和您的企業](https://business.adobe.com/privacy/general-data-protection-regulation.html)。
 
 當 Adobe 提供軟體和服務給企業時，Adobe 為了提供這些服務，會以資料處理者的角色處理和儲存任何個人資料。 身為資料處理者，Adobe 會根據貴公司的權限和指示 (例如，依照您與 Adobe 的合約規定) 處理個人資料。
 
@@ -46,9 +58,9 @@ Adobe Experience Cloud為資料控管者提供GDPR完備的API，可讓資料控
 
 如需詳細資訊，請參閱：
 
-* [Adobe Privacy Service概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hant)
-* [Privacy Service API指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=zh-Hant)
-* [Privacy Service UI總覽](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=zh-Hant)
+* [Adobe Privacy Service概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html)
+* [Privacy Service API指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html)
+* [Privacy Service UI總覽](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html)
 
 ## 加州消費者隱私保護法 (CCPA) 概觀
 
@@ -89,7 +101,7 @@ window.targetGlobalSettings = {
 
 1. **已透過Adobe Experience Platform預先核准Target標籤（或資料主體先前核准的Target）：** Target標籤不會為同意保留，且會如預期運作。
 1. **Target 標記「不會」預先核准且 `bodyHidingEnabled` 為「FALSE」:** Target 標記僅在向客戶取得同意後觸發。 取得同意前，僅可使用預設內容。 收到同意後，系統會呼叫 Target，資料主體 (訪客) 即可使用個人化內容。 由於知情同意前只能使用預設內容，因此使用適當的策略很重要，例如蓋住頁面任何部分的啟動顯示畫面或可個人化的內容。 此程序可確保資料主體 (訪客) 的體驗保持一致。
-1. **Target 標記「不會」預先核准且 `bodyHidingEnabled` 為「TRUE」:** Target 標記僅在向客戶取得同意後觸發。 取得同意前，僅可使用預設內容。 但由於 `bodyHidingEnabled` 設為 True，`bodyHiddenStyle` 會指定在觸發 Target 標記前隱藏的頁面內容 (或資料主體拒絕選擇加入，而顯示預設內容)。 根據預設，`bodyHiddenStyle` 設定為 `body { opacity:0;}`，這會隱藏 HTML 內文標記。 Adobe 建議的頁面設定如下，以便將頁面內容放入一個容器，並將知情同意管理程式對話框放入另一個容器，即可隱藏頁面的整個內文，而不是知情同意管理程式對話框。 這項設定會將 Target 設定為只隱藏頁面內容容器。 請參閱 [Privacy Service 概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hant？)。
+1. **Target 標記「不會」預先核准且 `bodyHidingEnabled` 為「TRUE」:** Target 標記僅在向客戶取得同意後觸發。 取得同意前，僅可使用預設內容。 但由於 `bodyHidingEnabled` 設為 True，`bodyHiddenStyle` 會指定在觸發 Target 標記前隱藏的頁面內容 (或資料主體拒絕選擇加入，而顯示預設內容)。 根據預設，`bodyHiddenStyle` 設定為 `body { opacity:0;}`，這會隱藏 HTML 內文標記。 Adobe 建議的頁面設定如下，以便將頁面內容放入一個容器，並將知情同意管理程式對話框放入另一個容器，即可隱藏頁面的整個內文，而不是知情同意管理程式對話框。 這項設定會將 Target 設定為只隱藏頁面內容容器。 請參閱 [Privacy Service 概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html？)。
 
    情況 3 的建議頁面設定如下:
 
@@ -135,7 +147,7 @@ Experience Cloud解決方案（包括Target）的所有GDPR和CCPA要求，都�
 
 ### Adobe會讓客戶刪除哪些資訊來回應資料主體/使用者要求？
 
-有關 Target 中的個別訪客資訊會包含在 Target 訪客設定檔中。 Target可讓客戶刪除與其訪客設定檔中之ID相關的所有資料。 如需Target儲存的設定檔資料範例，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hant)。
+有關 Target 中的個別訪客資訊會包含在 Target 訪客設定檔中。 Target可讓客戶刪除與其訪客設定檔中之ID相關的所有資料。 如需Target儲存的設定檔資料範例，請參閱[訪客設定檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 不會識別特定個人的彙總或匿名資料 (例如報告資料)，或與特定個人不相關的資料 (例如內容資料)，則不在使用者刪除要求的範圍之內。
 
@@ -163,7 +175,7 @@ Adobe 目前並未提供同意管理解決方案，但市場中已開發各種�
 
 Target透過Adobe Experience Platform支援選擇加入功能，可支援您的同意管理策略。 選擇加入功能可讓客戶控制觸發 Target 標記的方法和時機。 也可選擇透過Adobe Experience Platform預先核准Target標籤。 建議使用Adobe Experience Platform管理選擇加入。 Adobe Experience Platform中有更精細的控制功能，可在Target引發前隱藏選取的頁面元素，可能利於用於知情同意策略的一部分。
 
-如需GDPR、CCPA和Adobe Experience Platform的詳細資訊，請參閱[Adobe隱私權JavaScript程式庫和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hant？)。 另請參閱上面的 *Adobe Target 和 Adobe Experience Platform 選擇加入*&#x200B;一節。
+如需GDPR、CCPA和Adobe Experience Platform的詳細資訊，請參閱[Adobe隱私權JavaScript程式庫和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html？)。 另請參閱上面的 *Adobe Target 和 Adobe Experience Platform 選擇加入*&#x200B;一節。
 
 ### `AdobePrivacy.js` 會將資訊提交至 GDPR API 嗎？
 
@@ -302,7 +314,7 @@ Target 設定檔 JSON 的範例看起來可能像下面的例子:
 | Sample_Parameter | Target 設定檔中的許多資訊都是由資料控管者上傳或直接提供。 在此範例中，參數是使用「設定檔更新 API」上傳到 Target 設定檔中。 如需詳細資訊，請參閱[將資料傳入 Target 的方法](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md)。 |
 | user.ReturnTimeOfDay | 此標準欄位包含使用者最近回訪的時間。 |
 | firstSessionStart | 此標準欄位包含使用者首次工作階段開始的時間。 |
-| user.sessionCountScript | Target 設定檔中的許多資訊都是由資料控管者上傳或直接提供。 在此範例中，個人資料指令碼會遞增此訪客對資料控制方網站執行工作階段的次數。 如需詳細資訊，請參閱[輪廓指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant)。 |
+| user.sessionCountScript | Target 設定檔中的許多資訊都是由資料控管者上傳或直接提供。 在此範例中，個人資料指令碼會遞增此訪客對資料控制方網站執行工作階段的次數。 如需詳細資訊，請參閱[輪廓指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)。 |
 
 >[!NOTE]
 >

@@ -3,28 +3,39 @@ title: 如何管理自訂條件
 description: 使用Adobe Target API來管理、建立、列出、編輯、取得和刪除Adobe Target Recommendations條件所需的步驟。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+TQID: 'https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 890
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # 管理自訂條件
 
 有時，Recommendations提供的演演算法無法呈現您想要促銷的特定專案。 在這種情況下，自訂條件提供了一種方法，可讓您為指定的關鍵專案或類別傳送一組特定的建議專案。
 
-若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
+若要建立自訂條件，請定義並匯入關鍵專案或類別與建議專案之間的所需對應。 此程式在[自訂條件檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中說明。 如檔案中所述，您可以透過Target使用者介面(UI)建立、編輯和刪除自訂條件。 不過，Target也提供一組自訂條件API，讓您能夠對自訂條件進行更詳細的管理。
 
 >[!WARNING]
 >
@@ -38,7 +49,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hant)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
+>使用建立自訂條件API建立的自訂條件（如本練習所述）將會顯示在UI中，且會持續存在。 您將無法從UI編輯或刪除它們。 您可以透過API **編輯或刪除它們**，但無論如何它們將繼續出現在Target UI中。 若要保留從UI編輯或刪除的選項，請使用[檔案](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中的UI來建立自訂條件，而不是使用「建立自訂條件API」。
 
 閱讀上述警告並熟悉如何建立後續無法從UI刪除的新自訂條件後，才可繼續下列步驟。
 
@@ -66,7 +77,7 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 像之前一樣驗證`TENANT_ID`和`API_KEY`，並傳送要求。在回應中，請記下自訂條件ID以及有關先前所述錯誤訊息的詳細資訊。
+1. 像之前一樣驗證`TENANT_ID`和`API_KEY`，並傳送要求。 在回應中，請記下自訂條件ID以及有關先前所述錯誤訊息的詳細資訊。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 在此情況下，發生錯誤是因為伺服器資訊不正確，表示Target無法存取包含自訂條件定義的CSV檔案。 讓我們編輯自訂條件來更正這個問題。
@@ -83,7 +94,7 @@ ht-degree: 0%
 1. 指定要編輯的（單一）自訂條件的條件ID。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. 在Body中，提供更新的JSON以及正確的伺服器資訊。（對於此步驟，請指定您可存取之伺服器的FTP存取權。）
+1. 在Body中，提供更新的JSON以及正確的伺服器資訊。 （對於此步驟，請指定您可存取之伺服器的FTP存取權。）
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. 傳送要求並記下回應。
@@ -97,9 +108,9 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要取得其詳細資訊之自訂條件的條件ID。傳送要求並檢閱回應。
+1. 指定要取得其詳細資訊之自訂條件的條件ID。 傳送要求並檢閱回應。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 驗證成功。（在此情況下，請確認沒有進一步的FTP錯誤。）
+1. 驗證成功。 （在此情況下，請確認沒有進一步的FTP錯誤。）
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
 1. （選用）驗證更新是否正確反映在UI中。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
@@ -110,12 +121,12 @@ ht-degree: 0%
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定您要刪除的（單一）自訂條件的條件ID。按一下&#x200B;**[!UICONTROL 傳送]**。
+1. 指定您要刪除的（單一）自訂條件的條件ID。 按一下「**[!UICONTROL 傳送]**」。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. 使用「取得自訂條件」確認已刪除條件。
    ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
-在這種情況下，預期的404錯誤表示找不到已刪除的條件。
+   在這種情況下，預期的404錯誤表示找不到已刪除的條件。
 
 >[!NOTE]
 >

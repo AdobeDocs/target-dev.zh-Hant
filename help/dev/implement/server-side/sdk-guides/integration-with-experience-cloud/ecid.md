@@ -1,27 +1,33 @@
 ---
 title: Experience Cloud ID (ECID) Service
-description: 雖然使用 [!DNL Target] SDK從 [!DNL Target] 擷取內容可能很強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的附加價值不僅限於Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 產品和功能，例如A4T報告和 [!DNL Adobe Audience Manager]  (AAM)區段。
+description: 雖然使用[!DNL Target] SDK從[!DNL Target]擷取內容可能很強大，但使用[!UICONTROL Experience Cloud ID] (ECID)進行使用者追蹤的新增價值已延伸至Adobe [!DNL Target]之外。 ECID可讓您運用[!DNL Adobe Experience Cloud]產品和功能，例如A4T報告和[!DNL Adobe Audience Manager] (AAM)區段。
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
+TQID: 'https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Measurement
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 273
+source-wordcount: '282'
 ht-degree: 0%
-
 ---
-
 # [!UICONTROL Experience Cloud ID] (ECID)服務
 
 ## [!UICONTROL Experience Cloud ID] (ECID)整合

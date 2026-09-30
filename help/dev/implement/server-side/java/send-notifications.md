@@ -1,23 +1,28 @@
 ---
-title: '使用Java SDK傳送顯示或按一下通知給 [!DNL Adobe Target] '
-description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至 [!DNL Adobe Target] 以進行測量和報告。
+title: 使用Java SDK傳送顯示或按一下通知給[!DNL Adobe Target]
+description: 瞭解如何使用sendNotifications()將顯示通知或點選通知傳送至[!DNL Adobe Target]以進行測量和報告。
 feature: APIs/SDKs
 exl-id: 9231b480-f50f-40d1-ab06-0b9f2a2d79e3
-TQID: https://experienceleague.adobe.com/aoa6x9BkuaC-6XaqU03mvWXqWucNSF9eJAk41Bk0-nE
+TQID: 'https://experienceleague.adobe.com/aoa6x9BkuaC-6XaqU03mvWXqWucNSF9eJAk41Bk0-nE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Measurement
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 232
+source-wordcount: '234'
 ht-degree: 2%
-
 ---
-
 # 傳送通知(Java)
 
 ## 說明

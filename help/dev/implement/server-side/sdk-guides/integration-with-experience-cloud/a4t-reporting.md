@@ -4,21 +4,26 @@ description: 與Experience Cloud、A4T報表、Analytics for Target整合的整�
 keywords: 傳送api，伺服器端，伺服器端，整合， a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
+TQID: 'https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 399
+source-wordcount: '399'
 ht-degree: 6%
-
 ---
-
 # [!UICONTROL Analytics for Target] (A4T)報告
 
 [!DNL Adobe Target]支援裝置上決策和伺服器端[!DNL Target]活動的A4T報告。 啟用A4T報表時有兩個設定選項：

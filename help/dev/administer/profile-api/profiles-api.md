@@ -1,21 +1,24 @@
 ---
 title: Adobe Target設定檔API
-description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至 [!DNL Target]。
+description: 瞭解如何使用Adobe Target設定檔API將訪客資料傳送至[!DNL Target]。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 480cbbbe-4822-48c3-80d4-53628dee57b0
-TQID: https://experienceleague.adobe.com/zmA1vGqBRL8gD-cFjJC0idogx7UF1e22iLEfNT9OHZ4
+TQID: 'https://experienceleague.adobe.com/zmA1vGqBRL8gD-cFjJC0idogx7UF1e22iLEfNT9OHZ4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 105
+source-wordcount: '105'
 ht-degree: 2%
-
 ---
-
 # [!DNL Adobe Target Profiles API] 概覽
 
 [!DNL Adobe Target]會為每個個別使用者建立和維護設定檔。 此設定檔儲存在[!DNL Target]邊緣叢集上，並在每次造訪後即時更新。

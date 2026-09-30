@@ -1,16 +1,26 @@
 ---
 keywords: 行動應用程式, 行動應用程式傳送資料, target 行動應用程式, 行動自訂使用者資料, 行動應用程式自訂資料
-description: 瞭解如何以名稱 — 值組的形式將關於位置或使用者的其他資訊傳送至 [!DNL Adobe Target] ，以協助您建立自訂對象。
+description: 瞭解如何以名稱 — 值組的形式將關於位置或使用者的其他資訊傳送到[!DNL Adobe Target]，以幫助您建立自訂對象。
 title: 如何在iOS應用程式中傳送自訂使用者資料？
 feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '418'
 ht-degree: 55%
-
 ---
-
 # iOS - 傳送自訂使用者資料
 
 您可以以名稱 — 值組的方式將關於位置或使用者的其他資訊傳送到[!DNL Target]。

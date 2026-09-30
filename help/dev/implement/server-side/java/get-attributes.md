@@ -1,22 +1,26 @@
 ---
-title: 透過Java SDK在 [!DNL Adobe Target] 中使用getAttributes
-description: 瞭解如何使用getAttributes()從 [!DNL Target] 擷取實驗性和個人化體驗，並擷取屬性值。
+title: 透過Java SDK在[!DNL Adobe Target]中使用getAttributes
+description: 瞭解如何使用getAttributes()從[!DNL Target]擷取實驗性和個人化體驗，並擷取屬性值。
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
-TQID: https://experienceleague.adobe.com/ZZy9nUXiyR-qwBmOgv-TPS6ZuilvAuW850gH1Doqquo
+TQID: 'https://experienceleague.adobe.com/ZZy9nUXiyR-qwBmOgv-TPS6ZuilvAuW850gH1Doqquo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Experimentation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 169
+source-wordcount: '171'
 ht-degree: 13%
-
 ---
-
 # 取得屬性(Java)
 
 ## 說明

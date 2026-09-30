@@ -4,18 +4,21 @@ description: Adobe Target傳送API概觀
 keywords: 傳送api
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
+TQID: 'https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 244
+source-wordcount: '244'
 ht-degree: 0%
-
 ---
-
 # 傳送API總覽
 
 [!DNL Adobe Target Delivery API]是以REST為基礎。 本檔案說明構成[!DNL Adobe Target] [!DNL Delivery API]的資源。 HTTP方法可用來對這些資源執行作業。
