@@ -77,7 +77,7 @@ ht-degree: 1%
 
    ![替代影像](assets/asset-json-a-rollout.png)
 
-1. 按一下「下一步」**** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
+1. 按一下「下一步」**&#x200B;** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next-2-t-rollout.png)
 

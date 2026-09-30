@@ -110,7 +110,7 @@ npm i @adobe/target-nodejs-sdk -P
 1. 您可以導覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]**，從[!DNL Adobe Target]擷取使用者端和organizationId，如下所示。
 
    <!-- Insert image-client-code.png -->
-   在Target](assets/asset-rule-artifact-3.png)中管理下的![實作頁面
+   在Target![&#128279;](assets/asset-rule-artifact-3.png)中管理下的實作頁面
 
 ## &#x200B;3. 儲存並使用規則成品
 

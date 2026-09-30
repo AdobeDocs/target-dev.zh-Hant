@@ -61,8 +61,8 @@ ht-degree: 1%
 
 1. 按一下&#x200B;**[!UICONTROL Firefox]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
 1. 按一下「**[!UICONTROL 隱私權與安全性]**」標籤。
-1. 在&#x200B;** Cookie和網站資料*底下，按一下&#x200B;**[!UICONTROL 管理資料]**。
-1. 選取`adobe.com`網站，然後按一下[移除選取的專案]。****
+1. 在&#x200B;**&#x200B; Cookie和網站資料*底下，按一下&#x200B;**&#x200B;[!UICONTROL 管理資料]**。
+1. 選取`adobe.com`網站，然後按一下[移除選取的專案]。**&#x200B;**
 
 >[!WARNING]
 >
@@ -95,7 +95,7 @@ ht-degree: 1%
 1. 按一下&#x200B;**[!UICONTROL Safari]**&#x200B;功能表> **[!UICONTROL 偏好設定]**。
 1. 按一下「**[!UICONTROL 隱私權]**」標籤。
 1. 按一下&#x200B;**[!UICONTROL 管理網站資料]**。
-1. 選取您要刪除Cookie的網站，然後按一下[移除]。****
+1. 選取您要刪除Cookie的網站，然後按一下[移除]。**&#x200B;**
 
 >[!WARNING]
 >

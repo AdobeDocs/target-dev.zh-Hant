@@ -94,7 +94,7 @@ ht-degree: 8%
 | [網路](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
 | [行動](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
 | [自訂引數](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
-| [作業系統 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
+| [作業系統 &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
 | [網頁](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
 | [瀏覽器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
 | [訪客資料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
@@ -141,7 +141,7 @@ ht-degree: 8%
 ## 為確保我的[!UICONTROL 裝置上決策]活動透過[!DNL Adobe Target]的伺服器端SDK成功傳送，所需遵循的步驟摘要為何？
 
 1. 存取[!DNL Adobe Target] UI並導覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 實作]** > **[!UICONTROL 帳戶詳細資料]**&#x200B;以啟用&#x200B;**[!UICONTROL 裝置上決策]**&#x200B;切換功能。
-1. 啟用成品&#x200B;]**切換中的**[!UICONTROL &#x200B;包含所有現有的[!UICONTROL 裝置上決策]合格活動。
+1. 啟用成品&#x200B;**切換中的**&#x200B;包含所有現有的[!UICONTROL 裝置上決策]合格活動。
 1. 建立並啟用[!UICONTROL 裝置上決策]支援的活動型別，並驗證該活動的&#x200B;**[!UICONTROL 決策方法]**&#x200B;是&#x200B;**[!UICONTROL 裝置上決策]**。
 1. 使用`decisioningMethod = on-device`安裝並初始化[Node.js](../../node-js/overview.md)或[Java](../../java/overview.md) SDK。
 1. 在您的程式碼中實作`getOffers()`或`getAttributes()`以擷取裝置上的體驗。

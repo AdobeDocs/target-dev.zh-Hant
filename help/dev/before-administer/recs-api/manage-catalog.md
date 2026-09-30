@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->每當您需要重新整理存取權杖以進行驗證時，請透過使用者權杖&#x200B;]**請求傳送**[!UICONTROL  IMS： JWT產生+驗證，因為它在24小時後過期。 如需指示，請參閱[設定Adobe API驗證](../configure-authentication.md)。
+>每當您需要重新整理存取權杖以進行驗證時，請透過使用者權杖&#x200B;**請求傳送** IMS： JWT產生+驗證，因為它在24小時後過期。 如需指示，請參閱[設定Adobe API驗證](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 

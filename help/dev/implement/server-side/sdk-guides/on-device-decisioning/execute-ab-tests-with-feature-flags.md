@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ![替代影像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**[!UICONTROL &#x200B;預設Workspace ]**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
+在&#x200B;**[!UICONTROL 建立A/B測試活動]**&#x200B;強制回應視窗中，保留預設的&#x200B;**[!UICONTROL 網頁]**&#x200B;選項(1)、選取&#x200B;**[!UICONTROL 表單]**&#x200B;作為您的體驗撰寫器(2)、選取沒有&#x200B;**[!UICONTROL 屬性限制的**&#x200B;[!UICONTROL &#x200B;預設Workspace &#x200B;]&#x200B;**]** (3)，然後按一下&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代影像](assets/asset-form.png)
 
