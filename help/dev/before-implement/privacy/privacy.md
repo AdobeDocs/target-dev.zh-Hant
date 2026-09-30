@@ -69,7 +69,7 @@ Adobe已開發「設計隱私權」設定，使用者可為Adobe [!DNL Target]�
 
 使用[!DNL Platform Web SDK] （23.4版或更新版本）時，資料流層級IP模糊化設定的優先順序高於[!DNL Target]中設定的任何IP模糊化選項。 例如，如果資料流層級IP模糊化選項設為[!UICONTROL Full]，而[!DNL Target] IP模糊化選項設為[!UICONTROL 最後一個八位元模糊化]，[!DNL Target]會收到完全模糊化的IP。
 
-如需詳細資訊，請參閱&#x200B;*[!DNL Adobe Experience Platfrom]資料串流指南*&#x200B;中[設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank}中的[!UICONTROL IP模糊化]。
+如需詳細資訊，請參閱&#x200B;*[!DNL Adobe Experience Platfrom]資料串流指南*&#x200B;中[設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant){target=_blank}中的[!UICONTROL IP模糊化]。
 
 ## 地域劃分
 
