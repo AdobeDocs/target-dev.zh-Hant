@@ -1,15 +1,25 @@
 ---
-title: 使用 [!DNL Adobe Target] 搭配 [!DNL Web SDK] 進行個人化。
-description: 瞭解如何使用 [!DNL Experience Platform Web SDK] 使用 [!DNL Adobe Target]呈現個人化內容。
+title: 使用[!DNL Adobe Target]搭配[!DNL Web SDK]進行個人化。
+description: 瞭解如何使用[!DNL Adobe Target]向[!DNL Experience Platform Web SDK]呈現個人化內容。
 feature: AEP Web SDK
 exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
-source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 5%
-
 ---
-
 # 使用[!DNL Adobe Target]和[!DNL Web SDK]進行個人化
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Target]中管理的個人化體驗至Web Channel。 您可以使用稱為[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC)的WYSIWYG編輯器，或是非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，來建立、啟用及傳遞您的活動和個人化體驗。

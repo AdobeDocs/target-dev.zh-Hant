@@ -1,21 +1,27 @@
 ---
 keywords: qa，預覽，預覽連結，行動裝置，行動裝置預覽
 description: 使用行動裝置預覽連結來為行動應用程式活動執行端對端品質保證。
-title: 如何在 [!DNL Adobe Target] 行動裝置中使用行動裝置預覽連結？
+title: 如何在[!DNL Adobe Target]行動裝置中使用行動裝置預覽連結？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # [!DNL Target]行動裝置預覽
 
 使用行動裝置預覽連結可針對行動應用程式活動執行簡單的端對端品質保證，並且無需任何特殊測試裝置，即可在使用裝置的情況下註冊不同的體驗。
@@ -80,7 +86,7 @@ ht-degree: 24%
 1. 選取您要查看的體驗組合，然後按一下&#x200B;**[!UICONTROL 「啟動體驗」]**。
 
    |![行動裝置預覽1](assets/mobile-preview-experience-selection-1.png)|![行動裝置預覽2](assets/mobile-preview-experience-result-1-france.png)|![行動裝置預覽3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![行動裝置預覽4](assets/mobile-preview-experience-selection-2.png)|![行動裝置預覽5](assets/mobile-preview-experience-result-2-aus.png)|![行動裝置預覽6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![行動裝置預覽4](assets/mobile-preview-experience-selection-2.png)|![行動裝置預覽5](assets/mobile-preview-experience-result-2-aus.png)|![行動裝置預覽6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 限制
 

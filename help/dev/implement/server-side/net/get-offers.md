@@ -1,24 +1,28 @@
 ---
-title: 使用.NET SDK時，請在 [!DNL Adobe Target] 中使用getOffers()
-description: 瞭解如何使用getOffers()執行決定並從 [!DNL Adobe Target]擷取體驗。
+title: 使用.NET SDK時，請在[!DNL Adobe Target]中使用getOffers()
+description: 瞭解如何使用getOffers()執行決定並從[!DNL Adobe Target]擷取體驗。
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
-TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
+TQID: 'https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Metadata
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 576
+source-wordcount: '577'
 ht-degree: 13%
-
 ---
-
 # 取得選件(.NET)
 
 ## 說明
@@ -70,7 +74,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | tntId | 字串 | 無 | [!DNL Target]中使用者的主要識別碼。 已從targetCookies擷取。 若未提供，則為自動產生。 |
 | mcId | 字串 | 無 | 用於合併和共用不同Adobe解決方案(ECID)之間的資料。 已從targetCookies擷取。 若未提供，則為自動產生。 |
 | trackingServer | 字串 | 無 | Adobe Analytics伺服器，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地彙整資料。 |
-| trackingServerSecure | 字串 | 否 | [!UICONTROL Adobe Analytics Secure Server]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地將資料彙整在一起。 |
+| trackingServerSecure | 字串 | 無 | [!UICONTROL Adobe Analytics Secure Server]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]正確地將資料彙整在一起。 |
 | 決策方法 | 決策方法 | 否 | 可用於針對裝置上決策明確設定ON_DEVICE或HYBRID決策方法 |
 
 每個欄位的值都應符合[Target傳送API](/help/dev/implement/delivery-api/overview.md)要求規格。

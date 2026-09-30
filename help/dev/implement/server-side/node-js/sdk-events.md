@@ -1,20 +1,23 @@
 ---
-title: 訂閱 [!DNL Adobe Target] Node.js SDK中的事件
+title: 訂閱[!DNL Adobe Target] Node.js SDK中的事件
 description: 瞭解如何使用[!UICONTROL OnDeviceDecisioningHandler]物件來訂閱Node.js SDK中發生的各種事件。
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
-TQID: https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U
+TQID: 'https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 164
+source-wordcount: '165'
 ht-degree: 2%
-
 ---
-
 # SDK事件(Node.js)
 
 ## 說明

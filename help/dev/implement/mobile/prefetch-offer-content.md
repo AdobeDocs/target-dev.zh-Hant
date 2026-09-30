@@ -1,16 +1,26 @@
 ---
 keywords: 選件，預先擷取， iOS， android， sdk，行動，行動sdk， 8美元
-description: 使用iOS和Android Mobile SDK中的 [!DNL Adobe Target] 預先擷取功能，透過快取伺服器回應，儘量以最少次數擷取選件。
+description: 使用iOS和Android Mobile SDK中的[!DNL Adobe Target]預先擷取功能，透過快取伺服器回應，儘量以最少次數擷取選件。
 title: 我可以預先擷取行動應用程式的選件內容嗎？
 feature: Implement Mobile
 exl-id: 6f8e8298-f1e9-46f0-828f-717c7d632077
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '318'
 ht-degree: 37%
-
 ---
-
 # 預先擷取產品建議內容
 
 [!DNL Target] 預先擷取功能會使用 iOS 和 Android Mobile SDK，透過快取伺服器回應盡量以最少次數擷取產品建議。

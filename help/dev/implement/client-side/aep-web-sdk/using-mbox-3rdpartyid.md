@@ -1,25 +1,32 @@
 ---
 title: mbox3rdPartyId 的即時輪廓同步
-description: 瞭解如何搭配 [!DNL Adobe Experience Platform Web SDK]使用mbox3rdPartyId。
+description: 瞭解如何搭配[!DNL Adobe Experience Platform Web SDK]使用mbox3rdPartyId。
 keywords: 個人化；target；adobe target；renderDecisions；sendEvent；mbox3rdPartyId；
 feature: AEP Web SDK
 exl-id: 1c5067ef-38b3-4bf1-bd39-ea0f2cbd1074
-TQID: https://experienceleague.adobe.com/Ej2sYVnBD9orRTlsMQG85JJV7dvn-9gnABDa0b8uBlM
+TQID: 'https://experienceleague.adobe.com/Ej2sYVnBD9orRTlsMQG85JJV7dvn-9gnABDa0b8uBlM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 165
-ht-degree: 24%
-
+source-wordcount: '181'
+ht-degree: 22%
 ---
-
 # 使用mbox3rdPartyId
 
 [!DNL Adobe Target]中的`mbox3rdPartyId`是您公司的訪客ID，例如您公司的忠誠度計畫的會員ID。

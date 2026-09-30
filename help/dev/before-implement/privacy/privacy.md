@@ -1,30 +1,42 @@
 ---
 keywords: 隱私， ip位址，地域劃分，選擇退出，選擇退出，資料隱私權，政府法規，法規， gdpr， ccpa，隱私，個人識別資訊， PII
-description: 瞭解 [!DNL Adobe Target] 如何遵守適用的資料隱私法，包括IP位址、PII和選擇退出指示的收集和處理。
+description: 瞭解[!DNL Adobe Target]如何遵守適用的資料隱私法，包括收集和處理IP位址、PII和選擇退出指示。
 title: Target如何處理隱私權問題，包括PII？
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+TQID: 'https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
+subfeature_v2:
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 814
-ht-degree: 43%
-
+source-wordcount: '820'
+ht-degree: 44%
 ---
-
 # 隱私權
 
 [!DNL Adobe Target] 已啟用程序和設定，好讓您在遵守適用的資料隱私法的情況下使用 [!DNL Target]。

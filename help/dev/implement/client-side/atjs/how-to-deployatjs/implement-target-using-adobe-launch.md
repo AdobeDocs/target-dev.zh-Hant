@@ -1,29 +1,36 @@
 ---
 keywords: 實作，實作， adobe launch， launch，競爭，重新導向， experience platform launch， platform launch，標籤， adobe platform，實作2
-description: 瞭解如何使用 [!DNL Adobe Experience Platform] （實作Target的偏好方法）實作 [!DNL Adobe Target] at.js資料庫。
-title: 如何使用 [!DNL Adobe Experience Platform]實作 [!DNL Target] ？
+description: 瞭解如何使用[!DNL Adobe Experience Platform] （實作Target的偏好方法）實作[!DNL Adobe Target] at.js資料庫。
+title: 如何使用[!DNL Adobe Experience Platform]實作[!DNL Target]？
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
-TQID: https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo
+TQID: 'https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 446
+source-wordcount: '448'
 ht-degree: 4%
-
 ---
-
 # 使用[!DNL Adobe Experience Platform]實作[!DNL Target]
 
 [!DNL Adobe Experience Platform]中的標籤是新一代[!DNL Adobe]的標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。

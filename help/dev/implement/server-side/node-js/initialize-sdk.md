@@ -1,25 +1,30 @@
 ---
 title: 使用create方法初始化Node.js SDK
-description: 瞭解如何使用create方法初始化Node.js SDK並例項化 [!DNL Target] 使用者端以呼叫 [!DNL Adobe Target] 進行實驗與個人化體驗。
+description: 瞭解如何使用create方法初始化Node.js SDK並將[!DNL Target]使用者端例項化，以呼叫[!DNL Adobe Target]進行實驗與個人化體驗。
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
-TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
+TQID: 'https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 332
+source-wordcount: '334'
 ht-degree: 17%
-
 ---
-
 # 初始化Node.js SDK
 
 ## 說明

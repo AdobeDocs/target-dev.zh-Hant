@@ -1,33 +1,46 @@
 ---
 title: 初始化SDK
-description: 請確定以正確的順序執行載入 [!DNL Adobe Target] at.js JavaScript程式庫的所有必要步驟。
+description: 請確定以正確的順序執行載入[!DNL Adobe Target] at.js JavaScript程式庫的所有必要步驟。
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+TQID: 'https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1879
+source-wordcount: '1880'
 ht-degree: 4%
-
 ---
-
 # 初始化SDK
 
 請依照&#x200B;*初始化SDK*&#x200B;圖表中的步驟操作，以確保載入[!DNL Adobe Target] at.js JavaScript程式庫所需的所有必要工作皆以正確順序執行。
@@ -202,12 +215,12 @@ ht-degree: 4%
 
 * 資料層應準備好所有必須傳送給[!DNL Target]的資料。
 * Recommendations：豐富設定檔。
-   * 傳遞`entity.id`以根據根據上次檢視產品的條件，擷取最近檢視條件與專案的資料。
-   * 傳遞`entity.id`以根據最喜愛的類別來擷取熱門度條件的資料。
-   * 如果自訂條件以該設定檔屬性為基礎，或用於任何條件中的包含規則篩選，請傳遞該設定檔屬性。
+  * 傳遞`entity.id`以根據根據上次檢視產品的條件，擷取最近檢視條件與專案的資料。
+  * 傳遞`entity.id`以根據最喜愛的類別來擷取熱門度條件的資料。
+  * 如果自訂條件以該設定檔屬性為基礎，或用於任何條件中的包含規則篩選，請傳遞該設定檔屬性。
 * 建議：擷取產品資料。
-   * 其他實體引數（保留和自訂）可傳遞以擷取或更新[!DNL Recommendations]中的產品目錄。
-   * 也可以使用[!DNL Target] UI或API的實體摘要來更新產品目錄。
+  * 其他實體引數（保留和自訂）可傳遞以擷取或更新[!DNL Recommendations]中的產品目錄。
+  * 也可以使用[!DNL Target] UI或API的實體摘要來更新產品目錄。
 
 **將資料對應至[!DNL Target]**
 

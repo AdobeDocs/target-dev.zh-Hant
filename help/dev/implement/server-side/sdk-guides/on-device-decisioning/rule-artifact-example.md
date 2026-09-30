@@ -3,18 +3,21 @@ title: 決策上規則成品範例
 description: 檢視裝置上決策的規則成品範例。
 feature: APIs/SDKs
 exl-id: 0e138b78-4ea9-4d17-a6fa-609ad23c4ca8
-TQID: https://experienceleague.adobe.com/W8rQSpPwRrSbS3vCx6Kn4gtI9cKpfz7FVWBqr-fsHMM
+TQID: 'https://experienceleague.adobe.com/W8rQSpPwRrSbS3vCx6Kn4gtI9cKpfz7FVWBqr-fsHMM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 17
+source-wordcount: '17'
 ht-degree: 0%
-
 ---
-
 # 規則成品範例
 
 ```json {line-numbers="true"}

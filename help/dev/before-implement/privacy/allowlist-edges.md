@@ -1,29 +1,38 @@
 ---
 keywords: 實作，實施，白名單，白名單，允許清單，允許清單，邊緣， edges， $9
-description: 檢視主機清單，協助您將 [!DNL Adobe Target] 個邊緣（地理上分散的服務節點，可確保使用者的最佳回應時間）列入允許清單。
-title: 我要如何將 [!DNL Target] Edge節點加入允許清單？
+description: 檢視主機清單，協助您將[!DNL Adobe Target]個邊緣加入允許清單（地理上分散的服務節點，可確保使用者的最佳回應時間）。
+title: 如何將[!DNL Target]個Edge節點加入允許清單？
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
+TQID: 'https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: a94ced60-8199-4549-b453-ede2acb4101e
+    internal-label: Hybrid implementation
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 373
+source-wordcount: '375'
 ht-degree: 0%
-
 ---
-
 # 允許列出[!DNL Target]個邊緣節點
 
 協助您將[!DNL Adobe Target]邊緣列入允許清單的資訊和最新的主機清單。

@@ -1,25 +1,29 @@
 ---
 title: Adobe Target單一設定檔更新API
-description: 瞭解如何使用 [!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]，將單一訪客的設定檔資料傳送至 [!DNL Target]。
+description: 瞭解如何使用[!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]，將單一訪客的設定檔資料傳送至[!DNL Target]。
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
-TQID: https://experienceleague.adobe.com/HEjGkrgixufe9wQvaPAljSlZRSaF-idgwKYWs3cuoJ0
+TQID: 'https://experienceleague.adobe.com/HEjGkrgixufe9wQvaPAljSlZRSaF-idgwKYWs3cuoJ0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 396
+source-wordcount: '397'
 ht-degree: 4%
-
 ---
-
 # [!DNL Adobe Target Single Profile Update API]
 
 [!DNL Adobe Target] [!UICONTROL 單一設定檔更新API]可讓您傳送單一使用者的設定檔更新。 [!UICONTROL 單一設定檔更新API]幾乎與[!UICONTROL 大量設定檔更新API]相同，但一次更新一個訪客設定檔，與API呼叫內嵌，而非.cvs檔案。

@@ -1,16 +1,26 @@
 ---
 keywords: 行動應用程式, 行動應用程式 sdk, target 行動應用程式, 行動 target sdk, 行動應用程式 sdk, 在 sdk 中啟用 target
 description: 瞭解如何將Adobe Mobile Services SDK新增至您的行動應用程式。
-title: 如何在 [!DNL Adobe Mobile SDK]中啟用 [!DNL Target] ？
+title: 如何在[!DNL Adobe Mobile SDK]中啟用[!DNL Target]？
 feature: Implement Mobile
 exl-id: 4263b96a-23c8-4513-8302-00080122181d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '303'
 ht-degree: 38%
-
 ---
-
 # 在SDK中啟用[!DNL Target]
 
 將[!UICONTROL Adobe Mobile Services SDK]新增至您的應用程式。

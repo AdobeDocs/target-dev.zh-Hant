@@ -1,20 +1,23 @@
 ---
-title: 開始使用 [!DNL Adobe Target] Java SDK
-description: 瞭解 [!DNL Adobe Target] 客戶如何安裝、初始化和使用Java SDK。
+title: 開始使用[!DNL Adobe Target] Java SDK
+description: 瞭解[!DNL Adobe Target]客戶如何安裝、初始化及使用Java SDK。
 feature: APIs/SDKs
 exl-id: ccdd33f5-a9c7-4832-beba-b9692203d42c
-TQID: https://experienceleague.adobe.com/BtTvCc3i4bYN5rujWFkp-h6TNewSovwrxC8UKvEYZpI
+TQID: 'https://experienceleague.adobe.com/BtTvCc3i4bYN5rujWFkp-h6TNewSovwrxC8UKvEYZpI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 123
+source-wordcount: '125'
 ht-degree: 7%
-
 ---
-
 # Java SDK概觀
 
 本參考指南說明[!DNL Adobe Target]客戶如何安裝、初始化及使用Java SDK。
