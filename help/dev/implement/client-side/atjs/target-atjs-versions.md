@@ -40,7 +40,7 @@ topic_v2:
     internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
-source-git-commit: 1e9b96361fd11095248b8fcae6f7a185f74a39c8
+source-git-commit: 66be5581ccfa04cd31ca2406ac8ebf03cf54e432
 workflow-type: tm+mt
 source-wordcount: '5217'
 ht-degree: 59%
