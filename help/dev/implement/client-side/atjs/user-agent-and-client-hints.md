@@ -7,26 +7,34 @@ exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 TQID: https://experienceleague.adobe.com/7-Kr0OwJ4o780zkFL2EIQ0vJUqVyQp-RuoJOaBNYrQg
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Audience segmentation
+source-git-commit: 09c7444b7ed70521cfd01caf5c996643d0a27547
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 73%
-
+source-wordcount: '1460'
+ht-degree: 67%
 ---
-
 # 使用者代理和用戶端提示
 
 Adobe Target會使用使用者代理來決定訪客的細分和個人化資格。
@@ -57,6 +65,14 @@ Mozilla/5.0 (Linux; Android 12; SM-S908E) AppleWebKit/537.36 (KHTML, like Gecko)
 | 裝置 | SM-S908E (Samsung Galaxy S22 Ultra) |
 
 這些年來，使用者代理字串所含的瀏覽器和裝置的數量一直在增加。
+
+## 覆寫使用者代理的自訂指令碼 {#custom-scripts-overwrite-user-agent}
+
+由於行動裝置目標定位需仰賴使用者代理字串，因此頁面上任何在[!DNL Target]讀取前修改`navigator.userAgent`的自訂指令碼都可能導致裝置目標定位失敗。
+
+如果您的網站有自訂指令碼，可監聽所有事件，而不是它需要的特定事件，則可能會無意間攔截[!DNL Web SDK]事件並覆寫`navigator.userAgent`。 因此，[!DNL Target]會收到錯誤的裝置資訊，而不是訪客的實際裝置，而且不會提供預期的體驗。
+
+如果行動裝置目標定位未如預期般運作，請檢查頁面上的任何自訂指令碼或事件接聽程式是否修改`navigator.userAgent`，並儘可能縮小這些接聽程式的範圍，以免無意間攔截[!DNL Target]或Web SDK事件。
 
 ## 使用者代理的使用案例
 
