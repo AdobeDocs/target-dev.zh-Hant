@@ -3,6 +3,7 @@ cloud: Experience Cloud
 solution: Target
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: "Target"
 usetq: true
 product: target
 type: Documentation
@@ -13,11 +14,9 @@ index: true
 role: Developer
 source-git-commit: f8c7878268cb49c34b0b317f63326c97055ec95f
 workflow-type: tm+mt
-source-wordcount: 69
+source-wordcount: '64'
 ht-degree: 0%
-
 ---
-
 
 # 內部使用的中繼資料
 
