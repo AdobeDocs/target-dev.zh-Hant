@@ -49,7 +49,7 @@ ht-degree: 61%
 
 當 Adobe 提供軟體和服務給企業時，Adobe 為了提供這些服務，會以資料處理者的角色處理和儲存任何個人資料。 身為資料處理者，Adobe 會根據貴公司的權限和指示 (例如，依照您與 Adobe 的合約規定) 處理個人資料。
 
-身為資料控管者，您可以決定 Adobe 代表您處理和儲存的個人資料。 如果使用 Adobe Experience Cloud 解決方案，則 Adobe 可能會根據您使用的解決方案，以及您選擇傳送到 Adobe Experience Cloud 帳戶的資訊，為您託管個人資料。 如需範例的詳細清單，請參閱 [Adobe Experience Cloud 隱私權](https://www.adobe.com/privacy/experience-cloud.html#collect)。
+身為資料控管者，您可以決定 Adobe 代表您處理和儲存的個人資料。 如果使用 Adobe Experience Cloud 解決方案，則 Adobe 可能會根據您使用的解決方案，以及您選擇傳送到 Adobe Experience Cloud 帳戶的資訊，為您託管個人資料。 如需範例的詳細清單，請參閱 [Adobe Experience Cloud 隱私權](https://www.adobe.com/tw/privacy/experience-cloud.html#collect)。
 
 Adobe Experience Cloud為資料控管者提供GDPR完備的API，可讓資料控管者完成下列工作：
 
