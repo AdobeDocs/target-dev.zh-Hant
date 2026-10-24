@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hant)，才能啟用或停用[!UICONTROL 裝置上決策]切換功能。
+>您必須擁有管理員或核准者[使用者角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)，才能啟用或停用[!UICONTROL 裝置上決策]切換功能。
 
 啟用[!UICONTROL 裝置上決策]切換後，[!DNL Adobe Target]會開始為您的使用者端產生&#x200B;*規則成品*。
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
    ![替代影像](assets/asset-json-a-rollout.png)
 
-1. 按一下「下一步」**&#x200B;** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
+1. 按一下「下一步」**** (1)以進入活動建立的&#x200B;**[!UICONTROL 鎖定目標]**&#x200B;步驟。
 
    ![替代影像](assets/asset-next-2-t-rollout.png)
 
