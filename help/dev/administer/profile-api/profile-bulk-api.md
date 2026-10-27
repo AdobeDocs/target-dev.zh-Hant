@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -86,7 +86,7 @@ batch=pcId,param1,param2,param3,param4
 * 第一個標頭應該是`pcId`或`thirdPartyId`。 不支援[!UICONTROL Marketing Cloud訪客識別碼]。 [!UICONTROL pcId]是[!DNL Target]產生的visitorID。 `thirdPartyId`是使用者端應用程式所指定的ID，它是透過mbox呼叫傳遞至[!DNL Target]做為`mbox3rdPartyId`。 它必須在這裡稱為`thirdPartyId`。
 * 基於安全理由，您在批次檔案中指定的引數和值必須使用UTF-8進行URL編碼。 引數和值可以轉送至其他邊緣節點，以透過HTTP請求處理。
 * 引數只能使用`paramName`格式。 引數在[!DNL Target]中顯示為`profile.paramName`。
-* 如果您使用[!UICONTROL 大量設定檔更新API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。 如需詳細資訊，請參閱下列 [!DNL Bulk Profile Update API]&#x200B;[&#128279;](#empty)中的處理空白值。
+* 如果您使用[!UICONTROL 大量設定檔更新API] v2，則不需要為每個`pcId`指定所有引數值。 已為[!DNL Target]中找不到的任何`pcId`或`mbox3rdPartyId`建立設定檔。 如果您使用v1，則不會為遺失的pcIds或mbox3rdPartyIds建立設定檔。 如需詳細資訊，請參閱下列 [!DNL Bulk Profile Update API]](#empty)中的[處理空白值。
 * 批次檔的大小必須小於 50 MB。 此外，總列數不應超過500,000。 此限制可確保伺服器不會因太多請求而泛濫。
 * 您可以上傳的屬性數目沒有限制。 不過，外部設定檔資料的總計大小不得超過64 KB，其中包括客戶屬性、設定檔API、In-Mbox設定檔引數以及設定檔指令碼輸出。
 * 參數和值會區分大小寫。
@@ -97,7 +97,7 @@ batch=pcId,param1,param2,param3,param4
 >
 >所有引數名稱和值都必須是URL編碼(UTF-8)，您才能提交隨`Content-Type: application/x-www-form-urlencoded`傳送的批次，且主體以`batch=`開頭。 未編碼的保留字元會讀取為請求語法，而非資料，這可能會導致批次被拒絕、截斷或損壞。
 >
->如果您收到未發出`batchId`的「非預期錯誤」回應，請參閱[大量設定檔更新API傳回「非預期錯誤」](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-24281)以取得疑難排解步驟。
+>如果您收到未發出`batchId`的「非預期錯誤」回應，請參閱[大量設定檔更新API傳回「非預期錯誤」](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)以取得疑難排解步驟。
 
 下列字元通常存在於設定檔值中，但在`application/x-www-form-urlencoded`資料中具有特殊意義。 如果您以未編碼方式傳送資料，請求會失敗或資料已損毀，而不會出現明顯錯誤：
 
@@ -156,9 +156,9 @@ BATCH.TXT是檔案名稱。 CLIENTCODE是[!DNL Target]使用者端代碼。
 
 | 狀態 | 詳細資料 |
 | --- | --- |
-| [!UICONTROL complete] | 設定檔批次更新請求已成功完成。 |
-| [!UICONTROL 未完成] | 設定檔批次更新請求仍在處理中，尚未完成。 |
-| [!UICONTROL 卡住] | 設定檔批次更新請求卡住，無法完成。 |
+| [!UICONTROL complete] | 設定檔批次更新請求已成功完成。 不需要採取任何動作。 |
+| [!UICONTROL 未完成] | 設定檔批次更新請求仍在處理中，尚未完成。 不需要採取任何動作。 |
+| [!UICONTROL 卡住] | 設定檔批次更新請求卡住，無法完成。 如果批次在上傳24小時後仍然卡住，您必須再次上傳。 |
 
 ### 詳細批次狀態URL回應
 
