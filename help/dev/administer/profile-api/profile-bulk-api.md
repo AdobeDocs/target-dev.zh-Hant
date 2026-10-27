@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -156,9 +156,9 @@ BATCH.TXT是檔案名稱。 CLIENTCODE是[!DNL Target]使用者端代碼。
 
 | 狀態 | 詳細資料 |
 | --- | --- |
-| [!UICONTROL complete] | 設定檔批次更新請求已成功完成。 |
-| [!UICONTROL 未完成] | 設定檔批次更新請求仍在處理中，尚未完成。 |
-| [!UICONTROL 卡住] | 設定檔批次更新請求卡住，無法完成。 |
+| [!UICONTROL complete] | 設定檔批次更新請求已成功完成。 不需要採取任何動作。 |
+| [!UICONTROL 未完成] | 設定檔批次更新請求仍在處理中，尚未完成。 不需要採取任何動作。 |
+| [!UICONTROL 卡住] | 設定檔批次更新請求卡住，無法完成。 如果批次在上傳24小時後仍然卡住，您必須再次上傳。 |
 
 ### 詳細批次狀態URL回應
 
