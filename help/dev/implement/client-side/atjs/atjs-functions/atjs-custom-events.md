@@ -1,28 +1,32 @@
 ---
 keywords: 自訂事件， at.js，要求失敗，要求成功，內容呈現失敗，內容呈現成功，資料庫已載入，要求開始，內容呈現開始，內容呈現無選件，內容呈現重新導向，自訂事件2
-description: 使用自訂事件，在mbox要求或選件失敗或成功時通知 [!DNL Adobe Target] at.js JavaScript資料庫。
+description: 使用自訂事件，在mbox要求或選件失敗或成功時通知[!DNL Adobe Target] at.js JavaScript資料庫。
 title: 如何使用at.js自訂事件？
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
 TQID: https://experienceleague.adobe.com/gCjLJ-XBlMe-GE-gaTJ2wHkn1jmal6Ftbs1GDb0zURA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: '662'
 ht-degree: 70%
-
 ---
-
 # at.js 自訂事件
 
 關於 `at.js custom events` 的資訊，可讓您知道 mbox 要求或產品建議失敗或成功的時間。

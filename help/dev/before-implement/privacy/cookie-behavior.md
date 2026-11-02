@@ -1,40 +1,49 @@
 ---
 keywords: 概覽和參考資料、webkit、Cookie、第一方、第三方、第三方
-description: 瞭解 [!DNL Target] Cookie行為（第一方Cookie、具有第一方Cookie的第三方Cookie，或僅第三方Cookie）。
-title: 我可以在哪裡找到 [!DNL Target] Cookie的相關資訊？
+description: 瞭解[!DNL Target] Cookie行為（第一方Cookie、具有第一方Cookie的第三方Cookie，或僅第三方Cookie）。
+title: 我可以在哪裡找到有關[!DNL Target] Cookie的資訊？
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
 TQID: https://experienceleague.adobe.com/Uc9Gb06t9DIkvBvLQJ9ZhopE8pyJovjyrQdsUmFD9-o
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1692
+source-wordcount: '1694'
 ht-degree: 49%
-
 ---
-
 # [!DNL Target] Cookie
 
 Cookie 的行為取決於其屬於第一方 Cookie、具有第一方 Cookie 的第三方 Cookie，或是獨立的第三方 Cookie。
 
 >[!NOTE]
 >
->如需[!DNL Target]使用之不同Cookie的詳細資訊，請參閱&#x200B;*Experience Cloud中央介面元件指南*&#x200B;中的[[!DNL Adobe Target] Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=zh-Hant){target=_blank}。
+>如需[!DNL Target]使用之不同Cookie的詳細資訊，請參閱&#x200B;*Experience Cloud中央介面元件指南*&#x200B;中的[[!DNL Adobe Target] Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html){target=_blank}。
 >
 >本主題包含 `mboxSession` 和 `mboxPC` 的相關資訊。 實作最佳實務建議您不要使用Cookie資料連結或儲存敏感資訊： `mboxSession`或`mboxPC`。
 
@@ -42,7 +51,7 @@ Cookie 的行為取決於其屬於第一方 Cookie、具有第一方 Cookie 的�
 
 ## 何時使用第一方或第三方Cookie
 
-您的網站設定會決定您要使用何種 Cookie。 嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hant)。
+您的網站設定會決定您要使用何種 Cookie。 嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
 
 cookie 有三種主要的使用狀況:
 
@@ -157,4 +166,4 @@ Cookie會保留各種值，以管理訪客體驗行銷活動的方式：
 | 受影響的功能 | 詳細資料 |
 |--- |--- |
 | 支援選擇退出 | Apple 的 WebKit 追蹤變更會暫停選擇退出支援。<br />Target 選擇退出會在 `clientcode.tt.omtrdc.net` 網域中使用 Cookie。 如需更多詳細資料，請參閱[隱私權](privacy.md)。<br />Target支援兩種選擇退出：<ul><li>由用戶端決定 (用戶端管理選擇退出連結)。</li><li>一個透過[!DNL Adobe]選擇讓使用者退出所有客戶的所有[!DNL Target]功能。</li></ul>兩種方法都使用第三方 Cookie。 |
-| Target 活動 | 客戶可以選擇其[!DNL Target]帳戶的[設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=zh-Hant) （最長90天）。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則在Target的下列區域中，Safari訪客的行為會受影響：<br />**Target報表**：如果Safari使用者進入活動，30天之後回訪，然後轉換，則該使用者就算成兩個訪客和一次轉換。<br />對於使用Analytics作為報告來源(A4T)的活動，此行為是相同的。<br />**設定檔與活動會籍**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於使用第三方Cookie實作或第一方和第三方Cookie實作的帳戶，[!DNL Target]在Safari中無法運作。 這不是新的行為。 Safari已不允許第三方Cookie一段時間。</li></ul><br />**建議**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在Target中將設定檔存留期設為30天或更少。 此限制可確保在Safari和所有其他瀏覽器中以類似方式追蹤使用者。 |
+| Target 活動 | 客戶可以選擇其[!DNL Target]帳戶的[設定檔存留期長度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) （最長90天）。 問題是如果帳戶的設定檔存留期超過30天，且第一方Cookie因為客戶的網域已標示為跨網站追蹤而被清除，則在Target的下列區域中，Safari訪客的行為會受影響：<br />**Target報表**：如果Safari使用者進入活動，30天之後回訪，然後轉換，則該使用者就算成兩個訪客和一次轉換。<br />對於使用Analytics作為報告來源(A4T)的活動，此行為是相同的。<br />**設定檔與活動會籍**：<ul><li>第一方 Cookie 到期時會清除設定檔資料。</li><li>第一方 Cookie 到期時會清除活動成員資格。</li><li> 對於使用第三方Cookie實作或第一方和第三方Cookie實作的帳戶，[!DNL Target]在Safari中無法運作。 這不是新的行為。 Safari已不允許第三方Cookie一段時間。</li></ul><br />**建議**：如果擔心客戶網域可能標示為跨工作階段追蹤訪客，最好在Target中將設定檔存留期設為30天或更少。 此限制可確保在Safari和所有其他瀏覽器中以類似方式追蹤使用者。 |

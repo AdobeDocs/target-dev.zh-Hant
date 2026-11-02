@@ -1,42 +1,49 @@
 ---
 keywords: 系統圖表，忽隱忽現， at.js，實作， javascript資料庫， js， atjs， $8
-description: 了解  [!DNL Target] at.js JavaScript 程式庫如何運作，包括可幫助您了解頁面載入時的工作流程的系統圖。
+description: 瞭解[!DNL Target] at.js JavaScript程式庫如何運作，包括可幫助您瞭解頁面載入時的工作流程的系統圖。
 title: at.js Javascript 程式庫如何運作？
 feature: at.js
 exl-id: 9183797c-857b-4b7f-a573-6bb1d583f7b1
 TQID: https://experienceleague.adobe.com/ZyfwRiSeZDL-gFA-3MehXoNO5XhdANPaAmHqDxVeQ-g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1220
-ht-degree: 54%
-
+source-wordcount: '1221'
+ht-degree: 52%
 ---
-
 # at.js 如何運作
 
 若要在用戶端實作 [!DNL Adobe Target]，您必須使用 at.js JavaScript 程式庫。
 
-在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，建立您的測試和個人化體驗。
+在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[視覺體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) 或非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，建立您的測試和個人化體驗。
 
 ## 什麼是 at.js?
 
 at.js程式庫是使用者端實作[!DNL Adobe Target]的實作程式庫。 at.js 程式庫可加快網頁實作的頁面載入速度，並為單頁應用程式提供更好的實作選項。 at.js 為建議的實作程式庫，且經常更新功能。 我們建議所有客戶實作或移轉至[最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
-如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hant#libraries)。
+如需詳細資訊，請參閱 [Target JavaScript 程式庫](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)。
 
 在下圖所示的[!DNL Target]實作中，已實作下列Adobe Experience Cloud解決方案： [!DNL Analytics]、Target和[!DNL Audience Manager]。 此外，已實作下列[!DNL Experience Cloud]個核心服務： [!DNL Adobe Experience Platform]、[!UICONTROL 對象]和[!UICONTROL 訪客ID服務]。
 
@@ -89,7 +96,7 @@ at.js 2.x 增強了Adobe Target 對 SPA 的支援，並與其他 Experience Clou
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
+如需詳細資訊，請參閱[ 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
 
 ## at.js 1.x 圖表
 

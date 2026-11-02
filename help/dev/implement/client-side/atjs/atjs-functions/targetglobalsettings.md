@@ -1,34 +1,44 @@
 ---
 keywords: serverstate， targetGlobalSettings， targetglobalsettings， globalSettings， globalsettings，全域設定， at.js，函式，函式， clientCode， clientcode， serverDomain， serverdomain， cookieDomain， serverstate5， serverstate6， serverstate8， serverstate9， targetGlobalSettings0， targetGlobalSettings1， targetGlobalSettings2， targetGlobalSettings3， target4， cookiedomain5， cookies， cookiedomain， crossCross， cross timeout， globalMboxAutoCreate， visitorApiTimeout， defaultContentHiddenStyle， defaultContentVisibleStyle， bodyHidingEnabled， imsOrgId， secureOnly， overrideMboxEdgeServerTimeout， cookiedomain5， cookiedomain6， cookiedomain7， cookiedomain8， cookiomain9， crossDomain0， crossCrossDomain1， crossCrossDomain1， crossCrossDomain2， crossCrossCrossDomain3， cross crossDomain4， crossDomain5， optoutEnabled， optout， opt out， selectorsPollingTimeout， dataProviders， Hybrid Personalization， deviceIdLifetime
-description: 使用 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL targetGlobalSettings()]函式來覆寫設定，而不使用 [!DNL Target] UI或REST API。
+description: 使用[!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL targetGlobalSettings()]函式來覆寫設定，而不使用[!DNL Target] UI或REST API。
 title: 如何使用[!UICONTROL targetGlobalSettings()]函式？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 2705
+source-wordcount: '2707'
 ht-degree: 17%
-
 ---
-
 # [!UICONTROL targetGlobalSettings()]
 
 您可以使用`[!UICONTROL targetGlobalSettings()]`覆寫at.js資料庫中的設定，而非在[!DNL Target] UI中或使用REST API進行設定。
@@ -120,7 +130,7 @@ ht-degree: 17%
 
   僅伺服器端是預設的決策方法，可在您的Web屬性上實作和部署at.js 2.5以上版本時立即使用。
 
-  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[建議](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hant)活動。
+  僅使用伺服器端作為預設設定，表示所有決定都是在[!DNL Target]邊緣網路上做出，其中涉及封鎖伺服器呼叫。 此方法可增加延遲時間，但也有顯著的優點，例如可讓您套用[!DNL Target]的機器學習功能，包括[建議](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自動鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活動。
 
   此外，使用[!DNL Target]的使用者設定檔來增強您的個人化體驗（此設定檔會跨工作階段和管道儲存），可為您的業務提供強大的成果。
 
@@ -286,7 +296,7 @@ ht-degree: 17%
 window.targetGlobalSettings = {
    timeout: 200, // using custom timeout
    visitorApiTimeout: 500, // using custom API timeout
-   enabled: document.location.href.indexOf('https://www.adobe.com/tw') >= 0 // enabled ONLY on adobe.com
+   enabled: document.location.href.indexOf('https://www.adobe.com') >= 0 // enabled ONLY on adobe.com
 };
 ```
 
@@ -302,8 +312,8 @@ window.targetGlobalSettings = {
 
 | 影片 | 說明 |
 |--- |--- |
-| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。 第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。 接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
-| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=zh-Hant) | 實作詳細資料和範例，說明如何使用Adobe [!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
+| [使用 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | 資料提供者這項功能可以讓您輕鬆將資料從第三方傳入 Target。 第三方可能是氣象服務、DMP，甚至是您自己的 Web 服務。 接著，您就能使用此資料來建立對象、鎖定內容及擴充訪客設定檔。 |
+| [實作 Adobe Target 中的資料提供者](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | 實作詳細資料和範例，說明如何使用Adobe [!DNL Target]的dataProviders功能，從協力廠商資料提供者擷取資料，並在[!DNL Target]要求中傳遞。 |
 
 `window.targetGlobalSettings.dataProviders` 設定是資料提供者的陣列。
 
@@ -552,12 +562,12 @@ const PAGE_TEMPLATE = `
 
 * 目前，at.js v2.2僅支援透過serverState為以下專案提供體驗：
 
-   * VEC建立的活動，會在頁面載入時執行。
-   * 預先擷取的檢視。
+  * VEC建立的活動，會在頁面載入時執行。
+  * 預先擷取的檢視。
 
-     若是SPA使用at.js API中的[!DNL Target]檢視和`triggerView()`，at.js v2.2會快取伺服器端預先擷取之所有檢視的內容，並在透過`triggerView()`觸發每個檢視時立即套用這些內容，而不會再次引發對[!DNL Target]的任何其他內容擷取呼叫。
+    若是SPA使用at.js API中的[!DNL Target]檢視和`triggerView()`，at.js v2.2會快取伺服器端預先擷取之所有檢視的內容，並在透過`triggerView()`觸發每個檢視時立即套用這些內容，而不會再次引發對[!DNL Target]的任何其他內容擷取呼叫。
 
-   * **注意**： `serverState`目前不支援伺服器端擷取的mbox。
+  * **注意**： `serverState`目前不支援伺服器端擷取的mbox。
 
 * 套用`serverState`選件時，at.js會考慮`pageLoadEnabled`和`viewsEnabled`設定，例如，如果`pageLoadEnabled`設定為False，將不會套用頁面載入選件。
 

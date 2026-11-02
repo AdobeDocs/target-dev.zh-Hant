@@ -1,32 +1,35 @@
 ---
 keywords: adobe.target.trackEvent， trackEvent， trackevent，追蹤事件， at.js，函式，函式， preventDefault， preventdefault，防止預設， adobe.target.trackEvent
-description: 使用適用於 [!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL adobe.target.trackEvent()]函式來觸發要求，以報告使用者動作，例如您網站的點按和轉換。
+description: 使用適用於[!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL adobe.target.trackEvent()]函式來觸發要求，以報告使用者動作，例如您網站的點按和轉換。
 title: 如何使用[!UICONTROL adobe.target.trackEvent()]函式？
 feature: at.js
 exl-id: 9a55e4f1-d7f9-47c1-867c-2ce06fb26f9f
 TQID: https://experienceleague.adobe.com/Jib9C5FvmsgIF6CA-0UbdMdnMiXxQCkU2-O3Zys3vrY
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 336
+source-wordcount: '337'
 ht-degree: 59%
-
 ---
-
 # [!UICONTROL adobe.target.trackEvent(options)]
 
 此函數會觸發要求以報告使用者動作，例如點擊和轉換。 它不會在回應中傳遞活動。
 
-然後這些事件追蹤 mbox 呼叫可以用來定義活動中的量度。 如需詳細資訊，請參閱[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hant)和[追蹤轉換](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
+然後這些事件追蹤 mbox 呼叫可以用來定義活動中的量度。 如需詳細資訊，請參閱[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)和[追蹤轉換](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
 
 以下是 API 詳細資料:
 

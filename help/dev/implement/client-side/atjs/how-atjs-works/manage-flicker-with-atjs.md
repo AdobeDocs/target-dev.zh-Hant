@@ -1,28 +1,32 @@
 ---
 keywords: 忽隱忽現， at.js，實作，非同步，非同步，同步， $8
-description: 瞭解at.js和 [!DNL Target] 如何在頁面或應用程式載入期間防止忽隱忽現（預設內容在被活動內容取代之前暫時顯示）。
+description: 瞭解at.js和[!DNL Target]如何在頁面或應用程式載入期間防止閃爍（預設內容會在被活動內容取代之前暫時顯示）。
 title: at.js如何管理忽隱忽現的情形？
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 717
+source-wordcount: '718'
 ht-degree: 57%
-
 ---
-
 # At.js 處理忽隱忽現情況的方式
 
 有關[!DNL Adobe Target] at.js JavaScript資料庫如何在頁面或應用程式載入期間防止忽隱忽現的資訊。

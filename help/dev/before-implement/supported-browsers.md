@@ -1,28 +1,32 @@
 ---
 keywords: 瀏覽器，先決條件，需求， internet explorer， chrome， firefox， safari， android， surface，瀏覽器0
-description: 瞭解哪些網際網路瀏覽器 [!DNL Adobe Target] 支援其介面和內容傳送。
-title: ' [!DNL Target] 支援哪些瀏覽器？'
+description: 瞭解[!DNL Adobe Target]支援哪些網際網路瀏覽器用於介面和內容傳送。
+title: '[!DNL Target]支援哪些瀏覽器？'
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
 TQID: https://experienceleague.adobe.com/xYilaZkJzo4zLIJ4uvIxkuRkhl5E1D52OFmf1eZNtDs
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 443
+source-wordcount: '445'
 ht-degree: 19%
-
 ---
-
 # 受支援的瀏覽器
 
 [!DNL Adobe Target] 應用程式和內容傳遞已針對廣泛的瀏覽器和裝置進行測試。
@@ -45,7 +49,7 @@ ht-degree: 19%
 
 ## 視覺化編輯需求
 
-若要在[!UICONTROL 視覺化體驗撰寫器] (VEC)中以可靠的方式開啟、編寫及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL 增強體驗撰寫器(EEC)]。
+若要在[!UICONTROL 視覺化體驗撰寫器] (VEC)中以可靠的方式開啟、編寫及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL 增強體驗撰寫器(EEC)]。
 
 >[!NOTE]
 >

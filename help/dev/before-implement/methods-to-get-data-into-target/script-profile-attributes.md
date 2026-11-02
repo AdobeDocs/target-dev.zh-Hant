@@ -1,26 +1,29 @@
 ---
 keywords: 實作、實作、設定、設定、指令碼設定檔屬性
-description: 使用指令碼設定檔屬性將資料匯入 [!DNL Target] 。
-title: 如何使用指令碼設定檔屬性將資料帶入 [!DNL Target] ？
+description: 使用指令碼設定檔屬性將資料匯入[!DNL Target]。
+title: 如何使用指令碼設定檔屬性將資料匯入[!DNL Target]？
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 TQID: https://experienceleague.adobe.com/bRsl4ipgw0OeuVD0d69wmnHmrVvcGt9o0KmkhrEECZQ
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 292
+source-wordcount: '294'
 ht-degree: 71%
-
 ---
-
 # 指令碼輪廓屬性
 
 指令碼設定檔屬性是在[!DNL Adobe Target]解決方案中定義的名稱/值組。 值取決於每次伺服器呼叫在 Target 的伺服器上執行 JavaScript 片段。
@@ -64,4 +67,4 @@ user.purchase_recency: var dayInMillis = 3600 * 24 * 1000; if (mbox.name
 
 ### 相關資訊的連結
 
-[設定檔指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hant#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)
+[設定檔指令碼屬性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)
