@@ -28,15 +28,15 @@ ht-degree: 3%
 
 ## 我應該使用[!DNL Adobe Experience Platform]中的標籤來部署SDK，還是可以不使用Launch部署SDK？
 
-[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}提供SDK。 如果您未使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html){target=_blank}中的標籤，則必須在您的應用程式中管理您自己的設定檔案並管理它。
+[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}提供SDK。 如果您未使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hant){target=_blank}中的標籤，則必須在您的應用程式中管理您自己的設定檔案並管理它。
 
 ## 目前提供哪些SDK？
 
-Adobe Experience Platform Mobile SDK目前支援iOS、Android和React。 如需詳細資訊，請參閱[Adobe Experience Cloud Platform Mobile SDK指南](https://experienceleague.adobe.com/docs/mobile.html){target=_blank}。
+Adobe Experience Platform Mobile SDK目前支援iOS、Android和React。 如需詳細資訊，請參閱[Adobe Experience Cloud Platform Mobile SDK指南](https://experienceleague.adobe.com/docs/mobile.html?lang=zh-Hant){target=_blank}。
 
 ## 根據經緯度的驗證，以位置為基礎的功能頻率為何？
 
-如需詳細資訊，請參閱[Adobe Places檔案](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}。
+如需詳細資訊，請參閱[Adobe Places檔案](https://experienceleague.adobe.com/docs/places/using/home.html?lang=zh-Hant){target=_blank}。
 
 ## Adobe Experience Platform Mobile SDK是否需要at.js才能運作？
 
@@ -44,8 +44,8 @@ Adobe Experience Platform Mobile SDK目前支援iOS、Android和React。 如需�
 
 ## [!DNL Target] Mobile是否只是[!DNL Adobe Target] Premium Product SKU的功能？
 
-無. 對於[!DNL Adobe Target Standard]客戶，您只能將Mobile SDK用於[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動，與[!DNL Target Standard]行動應用程式附加元件搭配使用。 如果您想要在行動應用程式中使用[!UICONTROL Recommendations]或AI支援的功能，您需要[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium)授權。
+無. 對於[!DNL Adobe Target Standard]客戶，您只能將Mobile SDK用於[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動，與[!DNL Target Standard]行動應用程式附加元件搭配使用。 如果您想要在行動應用程式中使用[!UICONTROL Recommendations]或AI支援的功能，您需要[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=zh-Hant#premium)授權。
 
 ## [!DNL Adobe Experience Manager] (AEM)與[!DNL Target]個行動裝置活動之間是否有行動應用程式整合？
 
-目前，您可以從AEM將JSON [體驗片段](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank}共用給[!DNL Target]，然後可能將其用於行動應用程式活動。
+目前，您可以從AEM將JSON [體驗片段](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=zh-Hant){target=_blank}共用給[!DNL Target]，然後可能將其用於行動應用程式活動。

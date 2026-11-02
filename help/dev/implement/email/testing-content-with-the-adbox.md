@@ -53,7 +53,7 @@ AdBox 類似 mbox，不過它是由 URL 來控制，而非 JavaScript。 AdBox �
 
      此網址必須經過 URL 編碼，且必須為絕對參照。 您可以使用[HTML URL Encoding Reference](https://www.w3schools.com/tags/ref_urlencode.asp)快速將您的URL編碼。
 
-1. 為每個替代影像建立[重新導向產品建議](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)。
+1. 為每個替代影像建立[重新導向產品建議](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=zh-Hant)。
 
    >[!NOTE]
    >

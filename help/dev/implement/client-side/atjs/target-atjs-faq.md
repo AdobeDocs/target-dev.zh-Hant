@@ -166,7 +166,7 @@ at.js目前使用部分的jQuery，因此您在at.js頂端會看到MIT授權通�
 
 ## 我可以在單頁應用程式中使用Target [!UICONTROL 視覺化體驗撰寫器] (VEC)嗎？
 
-可以，若您使用at.js 2.x，便可針對SPA使用VEC。 如需詳細資訊，請參閱[單一頁面(SPA)視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)。
+可以，若您使用at.js 2.x，便可針對SPA使用VEC。 如需詳細資訊，請參閱[單一頁面(SPA)視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=zh-Hant)。
 
 ## 我可以對 at.js 實施使用 Adobe Experience Cloud Debugger 嗎?
 
@@ -257,7 +257,7 @@ Secure 只有在頁面是經由 HTTPS 來載入時，能透過 JavaScript 設定
 * 他們追蹤通訊工作階段
 * 由隨機字元組成
 * 工作階段ID的有效時間為30分鐘
-* 回應Token可以停用（[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
+* 回應Token可以停用（[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)）
 * 它們僅在Adobe解決方案的環境中有用。
 
 在at.js要求中，應該會看到值為「*」的`Access-Control-Allow-Origin`標頭，因為它們是公開的，不需要驗證，並且需要透過JavaScript呼叫從任何網域存取Adobe Edge Network。
