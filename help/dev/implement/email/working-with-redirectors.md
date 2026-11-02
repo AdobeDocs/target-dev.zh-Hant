@@ -1,29 +1,34 @@
 ---
 keywords: 實施, mbox.js 非 javascript, 重新導向器, 每次點擊的成本, 每次點擊的收入
-description: 瞭解如何在電子郵件實作中使用重新導向程式，就像您在 [!DNL Adobe Target] 活動中使用mbox一樣。
+description: 瞭解如何在電子郵件實作中使用重新導向程式，就像您在[!DNL Adobe Target]活動中使用mbox一樣。
 title: 如何使用重新導向程式？
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '698'
 ht-degree: 62%
-
 ---
-
 # 使用重導程式
 
 使用「重新導向程式」的方式和您在測試中使用 mbox 類似。

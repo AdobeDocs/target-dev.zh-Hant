@@ -1,28 +1,31 @@
 ---
 keywords: 行動應用程式，aep sdk，原生應用程式，網頁檢視，原生；swift，adobe experience platform mobile sdk，行動sdk，原生程式碼
-description: 瞭解如何在具有Web檢視的原生應用程式中使用 [!DNL AEP Mobile SDK] 實作 [!DNL Adobe Target] 。
-title: '在使用原生程式碼搭配Web檢視的行動應用程式中實作 [!DNL Adobe Target] '
+description: 瞭解如何在具有Web檢視的原生應用程式中使用[!DNL AEP Mobile SDK]實作[!DNL Adobe Target]。
+title: 在使用原生程式碼搭配Web檢視的行動應用程式中實作[!DNL Adobe Target]
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 624
+source-wordcount: '627'
 ht-degree: 0%
-
 ---
-
 # 透過Web檢視在原生應用程式中使用[!DNL AEP Mobile SDK]實作[!DNL Target]
 
 本文分享在行動應用程式中實作[!DNL Adobe Target]的最佳作法，該應用程式使用原生程式碼，並使用[!DNL Adobe Experience Platform Mobile SDK]搭配Web檢視。

@@ -7,22 +7,26 @@ exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 TQID: https://experienceleague.adobe.com/Ji3jAHC0Ek7FrVnabEEMm-KCtxJLJ5rSz4uyi6sWpiE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 281
+source-wordcount: '281'
 ht-degree: 0%
-
 ---
-
 # 疑難排解at.js的[!UICONTROL 裝置上決策]
 
 完成下列步驟，以使用at.js JavaScript程式庫疑難排解[!UICONTROL Adobe Target]中的[!UICONTROL 裝置上決策]：

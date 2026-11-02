@@ -1,28 +1,32 @@
 ---
 keywords: targetPageParamsAll， targetpageparamsall， PageParamsAll， pageparamsall，頁面引數，頁面引數， at.js，函式，函式， targetPageParamsAll0
-description: 對 [!DNL Adobe Target] at.js JavaScript資料庫使用[!UICONTROL targetPageParamsAll()]函式，從要求程式碼外部將引數附加至所有mbox。
+description: 使用適用於[!DNL Adobe Target] at.js JavaScript資料庫的[!UICONTROL targetPageParamsAll()]函式，從要求程式碼外部將引數附加至所有mbox。
 title: 如何使用[!UICONTROL targetPageParamsAll()]函式？
 feature: at.js
 exl-id: 32045e60-6904-42a1-bf71-fd7e167a829f
 TQID: https://experienceleague.adobe.com/A2sZYp7CeE3-zGcqfbvgo32auAtXBKN0dYNa84grs1Q
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 171
+source-wordcount: '172'
 ht-degree: 54%
-
 ---
-
 # [!UICONTROL targetPageParamsAll()]
 
 此方法允許您將參數從要求程式碼外部附加至所有 mbox。

@@ -1,32 +1,40 @@
 ---
 keywords: at.js、2.0、1.x、Cookie
-description: 有關 [!DNL Adobe Target] at.js 2.x和at.js 1.x如何處理Cookie的詳細資料
+description: 有關[!DNL Adobe Target] at.js 2.x和at.js 1.x如何處理Cookie的詳細資訊
 title: at.js Cookies
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
-source-wordcount: 1830
+source-wordcount: '1831'
 ht-degree: 67%
-
 ---
-
 # at.js Cookie
 
 有關at.js 2.x和at.js 1.*x* Cookie行為的資訊。

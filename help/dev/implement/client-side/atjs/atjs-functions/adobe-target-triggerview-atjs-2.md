@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.triggerView， triggerView， triggerview， trigger view， at.js，函式，函式， viewName， viewname，檢視名稱， adobe.target.triggerView1
-description: 針對 [!DNL Adobe Target] at.js JavaScript資料庫使用adobe.target.triggerView()函式，以用於單頁應用程式(SPA)。 (at.js 2.x)
+description: 針對[!DNL Adobe Target] at.js JavaScript資料庫使用adobe.target.triggerView()函式，以用於單頁應用程式(SPA)。 (at.js 2.x)
 title: 如何使用adobe.target.triggerView()函式？
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 446
+source-wordcount: '447'
 ht-degree: 19%
-
 ---
-
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。 應為單頁應用程式(SPA)實作`adobe.target.triggerView()`，以使用[!UICONTROL 視覺化體驗撰寫器] (VEC)來建立[!UICONTROL A/B測試]和[!UICONTROL 體驗鎖定目標] (XT)活動。 如果未在網站上實作`[!UICONTROL adobe.target.triggerView()]`，VEC就無法用於SPA。 如需詳細資訊，請參閱[實作單頁應用程式](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。

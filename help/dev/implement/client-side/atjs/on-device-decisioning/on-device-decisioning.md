@@ -7,30 +7,42 @@ exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
 TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 3835
+source-wordcount: '3835'
 ht-degree: 4%
-
 ---
-
 # 針對at.js的[!UICONTROL 裝置上決策]
 
 從2.5.0版開始，at.js提供[!UICONTROL 裝置上決策]。 [!UICONTROL 裝置上決策]可讓您在瀏覽器上快取您的[A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)和[體驗鎖定目標](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hant) (XT)活動，以執行記憶體中的決策，而不會封鎖對[!DNL Adobe Target] Edge Network的網路要求。
@@ -58,7 +70,7 @@ ht-degree: 4%
 * 對象目標定位
 * 配置方法
 
-如需詳細資訊，請參閱[!UICONTROL 裝置上決策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支援功能。
+如需詳細資訊，請參閱[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支援功能。
 
 ## [!UICONTROL 裝置上決策]如何運作？
 
@@ -113,7 +125,7 @@ ht-degree: 4%
 
 [!UICONTROL 裝置上決策]能以極快的速度提供您的體驗和個人化活動，因為決策是由包含您所有符合[!UICONTROL 裝置上決策]資格的活動的快取規則成品所產生。
 
-若要進一步瞭解哪些活動符合[!UICONTROL 裝置上決策]的資格，請參閱[!UICONTROL 裝置上決策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支援功能。
+若要進一步瞭解哪些活動符合[!UICONTROL 裝置上決策]的資格，請參閱[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支援功能。
 
 只有在需要Target做出決定的所有頁面中，效能高度關鍵時，才應使用此決策方法。 此外，請記住，選取此決策方法時，不會傳遞或執行您不符合「[!UICONTROL 裝置上決策]」資格的[!DNL Target]活動。 at.js資料庫2.5.0+已設定為僅尋找快取規則成品以做出決策。
 
@@ -354,7 +366,7 @@ Target代表您符合[!UICONTROL 裝置上決策]資格的活動，作為包含�
 
    首次JSON規則成品產生最多可能需要10分鐘。
 
-1. 建立並啟用[!UICONTROL 裝置上決策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援的活動型別，並確認其符合[!UICONTROL 裝置上決策]的資格。
+1. 建立並啟用[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援的活動型別，並確認其符合[!UICONTROL 裝置上決策]的資格。
 1. 透過at.js設定UI，將&#x200B;**[!UICONTROL 決策方法]**&#x200B;設定為&#x200B;**[!UICONTROL &quot;Hybrid&quot;]**&#x200B;或&#x200B;**[!UICONTROL &quot;On-device&quot;]**。
 1. 下載At.js 2.5.0+並部署至您的頁面。
 

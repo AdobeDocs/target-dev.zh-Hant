@@ -1,29 +1,34 @@
 ---
 keywords: 實作，實作， at.js， adobe experience platform web sdk， aep web sdk
-description: 瞭解如何使用 [!DNL Adobe Experience Platform Web SDK] (AEP Web SDK)或at.js JavaScript資料庫為使用者端Web實作 [!DNL Adobe Target] 。
-title: '如何為使用者端Web實作 [!DNL Target] '
+description: 瞭解如何使用[!DNL Adobe Experience Platform Web SDK] (AEP Web SDK)或at.js JavaScript資料庫為使用者端Web實作[!DNL Adobe Target]。
+title: 如何為使用者端Web實作[!DNL Target]
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
 TQID: https://experienceleague.adobe.com/KgJyhvTguS8EXbwELaApI1mcs5egnEKHKpnxVYGqT4I
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 252
-ht-degree: 26%
-
+source-wordcount: '254'
+ht-degree: 25%
 ---
-
 # 概觀：為使用者端Web實作[!DNL Target]
 
 在 [!DNL Adobe Target] 的用戶端實作中，[!DNL Target] 會將與活動相關聯的體驗直接提供給用戶端瀏覽器。 瀏覽器會決定要顯示哪個體驗，然後顯示其內容。 在用戶端實作中，您可以使用 WYSIWYG 編輯器、[可視化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC) 或非視覺化介面 ([表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant))，建立您的活動和個人化體驗。

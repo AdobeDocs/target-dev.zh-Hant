@@ -1,25 +1,27 @@
 ---
 keywords: 行動應用程式，常見問題集，常見問題集， target行動應用程式
-description: 檢視行動應用程式的常見問題及其關於 [!DNL Adobe Target] 的答案。
-title: 什麼是行動應用程式的常見問題 [!DNL About Target] ？
+description: 檢視行動應用程式的常見問題及其關於[!DNL Adobe Target]的答案。
+title: 行動應用程式的常見問題[!DNL About Target]有哪些？
 feature: Implement Mobile
 exl-id: 06cae3de-83a4-4018-a832-66fb292a1d0f
 TQID: https://experienceleague.adobe.com/DvyEuK-o-3qAJDKVI3tSe9ZirSQa0my6vbIhJQP9EU4
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 316
+source-wordcount: '318'
 ht-degree: 3%
-
 ---
-
 # 適用於行動應用程式的[!DNL Target]常見問題集
 
 關於行動應用程式[!DNL Target]常見問題的清單。

@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.sendNotifications， sendNotifications， sendnotifications，傳送通知，通知， at.js，函式，函式， $9
-description: 若體驗呈現時未使用[!UICONTROL applyOffer]，請使用at.js的[!UICONTROL adobe.target.sendNotifications()]將通知傳送至 [!DNL Target] edge。 (at.js.2.1 +)
+description: 使用適用於at.js的[!UICONTROL adobe.target.sendNotifications()]，在體驗呈現時傳送通知給[!DNL Target]邊緣，而不使用[!UICONTROL applyOffer]。 (at.js.2.1 +)
 title: 如何使用adobe.target.sendNotifications()函式？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 642
+source-wordcount: '643'
 ht-degree: 83%
-
 ---
-
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
 此函式會在體驗呈現時傳送通知給[!DNL Target]邊緣，而不需要使用`[!UICONTROL adobe.target.applyOffer()]`或`[!UICONTROL adobe.target.applyOffers()]`。
