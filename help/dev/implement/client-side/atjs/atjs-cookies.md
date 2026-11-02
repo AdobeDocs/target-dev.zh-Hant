@@ -66,7 +66,7 @@ at.js 會產生一個工作階段 ID 並將其儲存於 Cookie 中。 第一個�
 
 ### 何時使用第一方或第三方 Cookie
 
-您的網站設定會決定您要使用何種 Cookie。 嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe Target] ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
+您的網站設定會決定您要使用何種 Cookie。 嘗試瞭解第一方和第三方Cookie時，瞭解[!DNL Target]的運作方式會很有幫助。 如需詳細資訊，請參閱[運作方式 [!DNL Adobe Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
 
 cookie 有三種主要的使用狀況:
 

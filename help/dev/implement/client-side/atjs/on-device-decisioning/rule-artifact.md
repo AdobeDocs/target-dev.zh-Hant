@@ -1,6 +1,6 @@
 ---
 keywords: 實作， javascript資料庫， js， atjs，裝置上決策，裝置上決策，規則成品， $8
-description: 瞭解[!UICONTROL 裝置上決策]]所使用的JSON規則成品。
+description: 瞭解[!UICONTROL 裝置上決策]&rbrack;所使用的JSON規則成品。
 title: 「裝置上決策」中的JSON規則成品做什麼？
 feature: at.js
 exl-id: 14413ccf-b55e-48a8-a474-4401eb1b50fc

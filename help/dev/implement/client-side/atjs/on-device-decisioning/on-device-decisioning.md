@@ -70,7 +70,7 @@ ht-degree: 4%
 * 對象目標定位
 * 配置方法
 
-如需詳細資訊，請參閱[!UICONTROL 裝置上決策]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的[支援功能。
+如需詳細資訊，請參閱[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支援功能。
 
 ## [!UICONTROL 裝置上決策]如何運作？
 
@@ -125,7 +125,7 @@ ht-degree: 4%
 
 [!UICONTROL 裝置上決策]能以極快的速度提供您的體驗和個人化活動，因為決策是由包含您所有符合[!UICONTROL 裝置上決策]資格的活動的快取規則成品所產生。
 
-若要進一步瞭解哪些活動符合[!UICONTROL 裝置上決策]的資格，請參閱[!UICONTROL 裝置上決策]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的[支援功能。
+若要進一步瞭解哪些活動符合[!UICONTROL 裝置上決策]的資格，請參閱[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支援功能。
 
 只有在需要Target做出決定的所有頁面中，效能高度關鍵時，才應使用此決策方法。 此外，請記住，選取此決策方法時，不會傳遞或執行您不符合「[!UICONTROL 裝置上決策]」資格的[!DNL Target]活動。 at.js資料庫2.5.0+已設定為僅尋找快取規則成品以做出決策。
 
@@ -366,7 +366,7 @@ Target代表您符合[!UICONTROL 裝置上決策]資格的活動，作為包含�
 
    首次JSON規則成品產生最多可能需要10分鐘。
 
-1. 建立並啟用[!UICONTROL 裝置上決策]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援的[活動型別，並確認其符合[!UICONTROL 裝置上決策]的資格。
+1. 建立並啟用[!UICONTROL 裝置上決策]&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支援的活動型別，並確認其符合[!UICONTROL 裝置上決策]的資格。
 1. 透過at.js設定UI，將&#x200B;**[!UICONTROL 決策方法]**&#x200B;設定為&#x200B;**[!UICONTROL &quot;Hybrid&quot;]**&#x200B;或&#x200B;**[!UICONTROL &quot;On-device&quot;]**。
 1. 下載At.js 2.5.0+並部署至您的頁面。
 
