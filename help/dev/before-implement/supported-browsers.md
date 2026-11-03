@@ -22,9 +22,9 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '452'
 ht-degree: 19%
 ---
 # 受支援的瀏覽器
@@ -45,15 +45,15 @@ ht-degree: 19%
 | 裝置類型 | 瀏覽器版本 |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## 視覺化編輯需求
 
-若要在[!UICONTROL 視覺化體驗撰寫器] (VEC)中以可靠的方式開啟、編寫及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL 增強體驗撰寫器(EEC)]。
+若要在[!UICONTROL 視覺化體驗撰寫器] (VEC)中以可靠的方式開啟、編寫及預覽您的網頁，您必須在網頁瀏覽器上安裝[Adobe Experience Cloud Visual Editing Helper瀏覽器擴充功能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或使用[!UICONTROL 增強體驗撰寫器(EEC)]。
 
 >[!NOTE]
 >
->[!DNL Google Chrome]和[!DNL Microsoft Edge]目前是唯一支援[!DNL Adobe Target]網頁視覺化編輯的瀏覽器。
+>[!DNL Google Chrome]和[!DNL Microsoft Edge]目前是唯一支援[!DNL Adobe Target]網頁視覺化編輯的瀏覽器。 [!DNL Safari]不支援VEC或EEC。
 
 
 ## 內容傳遞
