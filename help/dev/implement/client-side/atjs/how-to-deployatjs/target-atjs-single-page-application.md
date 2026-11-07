@@ -339,7 +339,7 @@ at.js 2.x API可讓您以多種方式自訂您的[!DNL Target]實作，但在此
 
 ### 瞭解 at.js 2.x 的運作方式
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507934/?captions=chi_hant&quality=12)
 
 如需詳細資訊，請參閱[&#x200B; 了解 at.js 2.x 的運作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hant)。
 
