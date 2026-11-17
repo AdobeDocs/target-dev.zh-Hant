@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
+source-git-commit: 78a2ba4a9668cee9813788f03c81eb68f3a6af07
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1316'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -203,5 +203,3 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 此行為同時適用於[!DNL Bulk Profile Update API]的v1和v2。
 
 嘗試傳送空白值來清除或移除屬性沒有效果。
-
-已規劃為未來版本的API (v3)支援明確屬性移除，但目前尚未提供。
